@@ -21,4 +21,4 @@ frontend/node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/backend/package-lock.json
+backend/package-lock.json
