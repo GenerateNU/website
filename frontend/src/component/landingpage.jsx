@@ -46,4 +46,4 @@ export class landingpage extends Component {
   }
 }
 
-export default landingpage 
+export default landingpage
