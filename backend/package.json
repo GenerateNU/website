@@ -30,7 +30,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "c14e1e70-3984-4d51-bd0f-6161f5297412"
+    "uuid": "493debbe-510a-4543-b17f-4cfd14863616"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
