@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "applications",
   "info": {
-    "name": "application"
+    "name": "application",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -18,6 +19,34 @@
     },
     "description": {
       "type": "richtext",
+      "required": true
+    },
+    "team": {
+      "type": "string",
+      "required": true
+    },
+    "responsibilities": {
+      "type": "richtext",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "skills": {
+      "type": "richtext",
+      "required": true
+    },
+    "timeCommitment": {
+      "type": "string",
+      "required": true
+    },
+    "applicationLink": {
+      "type": "string",
+      "required": true
+    },
+    "applicationDeadline": {
+      "type": "date",
       "required": true
     }
   }
