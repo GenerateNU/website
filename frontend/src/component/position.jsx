@@ -10,8 +10,8 @@ const Position = ({id}) => {
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error :(</p>
   
+
     
-    let responsibilitiesAsBullets = data.responsibilities.split('\n');
     // {"id":2,
     // "title":"Community Development Lead",
     // "team":"communityteam",
@@ -40,63 +40,98 @@ const Position = ({id}) => {
                     "height": "auto",
 
                 }}/>
+                {/* <ImageBackground source={Placeholder} alt="placeholder" style={{width: '100%', height: '100%'}}>
+                    <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
+                        <Text>Centered text</Text>
+                    </View>
+                </ImageBackground> */}
             </div>
-           
-
-            
-
-            
-            
-            
 
             <div className="position-container">
                 <div className="position-title">
                     <h1>{data.title}</h1>
                 </div>
                 <div className="position-subtitle">
-                    <h2>{data.subTitle}</h2>
+                    <h2>
+                        {data.subTitle === null ? (
+                            ""
+                        ) : (
+                            data.subTitle
+                        )}        
+                    
+                    </h2>
                 </div>
                 <div className="position-description">
                     <h3>Description</h3>
-                    <p>{data.description}</p>
+                    <p>
+                        
+                    {data.description === null ? (
+                            "No description available"
+                        ) : (
+                            data.description
+                        )}  
+                        
+                    </p>
                 </div>
                 <div className="position-responsibilities">
                     <h3>Responsibilities</h3>
 
-                    {/* turn responsibilitiesAsBullets into a list of bullet points  */}
-                    {responsibilitiesAsBullets.map((bullet, index) => {
+                    
+                    {data.responsibilities === null ? (
+
+                        <p>No responsibilities available</p>
+                    ) :
+                    
+                    ( data.responsibilities.split('\n').map((bullet, index) => {
                         return <li key={index}>{bullet}</li>
-                    })}
+                    })
+
+                    )
+                    
+                    }
                     <p></p>
 
                 </div>
                 <div className="position-timeCommitment">
                     <h3>Time Commitment</h3>
-                    <p>{data.timeCommitment}</p>
+                    <p>
+                    {data.timeCommitment === null ? (
+                            "No time commitment available"
+                        ) : (
+                            data.timeCommitment
+                        )}  
+                    </p>
                 </div>
                 <div className="position-applicationDeadline">
                     <h3>Application Deadline</h3>
-                    <p>{data.applicationDeadline}</p>
+                    <p>
+                    {data.applicationDeadline === null ? (
+                            "No application deadline available"
+                        ) : (
+                            data.applicationDeadline
+                        )}  
+                    </p>
                 </div>
                 <div className="position-applicationLink" style={{
                     marginBottom: "1rem"
 
                 }}>
                     
-
-                    <button
-                        className="btn btn-lg btn-primary text-uppercase" 
-                        type="button"
-                        onClick={(e) => {
-                        e.preventDefault();
-                        window.open(data.applicationLink, "_blank");
-                        }}
-                    > Application Link </button>
+                    {data.applicationLink === null ? (
+                        <p>No application link available</p>
+                    ) : (
+                        
+                        <button
+                            className="btn btn-lg btn-primary text-uppercase" 
+                            type="button"
+                            onClick={(e) => {
+                            e.preventDefault();
+                            window.open(data.applicationLink, "_blank");
+                            }}
+                        > Application Link </button>
+                    )}
                     
                 </div>
-                
-                {/* add some space between the button and bottom of page*/}
-                <div className="position-space"></div>
                 
 
             </div>
