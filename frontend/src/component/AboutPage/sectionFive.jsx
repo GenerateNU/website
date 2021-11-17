@@ -4,8 +4,13 @@ export class sectionFive extends Component {
   render() {
     return (
       <div id="sectionFive">
-            <h1>Five</h1>
+        <div class="innerDiv" >
+        <span>CENTER</span>
         </div>
+        <div class="imageTest">
+      
+        </div>
+      </div>
     );
   }
 }
