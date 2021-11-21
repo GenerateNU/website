@@ -1,4 +1,4 @@
-/* landingpage */
+/* !!!!!!!!LANDING PAGE CSS START!!!!!!!!*/
 
 .border {
     margin-top: 150px;
@@ -7,4 +7,220 @@
        background-color: rgb(220,220,220);
   }
 
-/* landingpage */  
+/* !!!!!!!!LANDING PAGE CSS END HERE!!!!!!!!*/
+
+/* !!!!!!!!ABOUT PAGE CSS START!!!!!!!!*/
+
+.responsiveImages {
+    width: 100%;
+    height: auto;
+}
+
+/* Section One CSS */
+
+#sectionOne {
+    height: 85vh;
+    background: url(../images/test.jpg)no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.et_pb_row_0 {
+    max-width: 100%!important;
+    width: 100%!important;
+    background-size: cover;
+    padding-bottom: 10%;
+    padding-top: 0;
+    overflow: visible!important;
+    z-index: 3;
+    max-width: 100%!important;
+    width: 100%;
+}
+
+.et_pb_row_1 {
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15%;
+    z-index: 2;
+    max-width: 100%!important;
+    width: 100%;
+}
+
+.sectionMainImage {
+    position: absolute;
+    z-index: 10;
+    top: 11vh;
+    height: 89vh;
+    width: 64vw;
+    left: 30vw;
+}
+
+.sectionOneTitle {
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    z-index: 11;
+    left: 12%;
+    font-size: 5.5vw;
+    font-weight: bold;
+    color: #26A9E0;
+}
+
+/* Section Two CSS */
+
+#sectionTwo {
+    height: 100%;
+    background-color: #FFFFFF;
+    padding-top: 20vh;
+}
+
+#infoSection {
+    padding-left: 20%;
+}
+
+.sectionTwoImageContainer {
+    text-align: center;
+}
+
+.sectionTwoButton {
+    text-align: right;
+    padding-right: 5%;
+}
+
+#infoSection .col {
+    padding: 30px;
+}
+
+.headerRow {
+    padding: 20px;
+}
+
+.weAreSymbol {
+    font-family: Space mono, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: black;
+    position: absolute;
+    top: 85.5%;
+    left: 7.3%;
+    z-index: 3;
+}
+
+.generateSymbol {
+    writing-mode: vertical-lr;
+    font-family: Space mono, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13vw;
+    color: #A7A5A5;
+    position: absolute;
+    top: 85%;
+}
+
+/* Section Three CSS */
+
+#sectionThree {
+    height: 100vh;
+    background-color: #606060;
+    position: relative;
+}
+
+#myVideo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    left: 0px;
+    top: 0px;
+}
+
+.sectionThreeContent {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.sectionThreeContent h1 {
+    font-family: space mono, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15vw;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Section Four CSS */
+
+#sectionFour {
+    height: 2550px;
+    background-color: #FFFFFF;
+}
+
+/* Section Five CSS */
+
+#sectionFive {
+    background-color: #FF6660;
+    height: 100vh;
+    position: relative;
+}
+
+.innerDiv {
+    position: absolute;
+    left: 12.01%;
+    right: 11.88%;
+    top: 14.71%;
+    bottom: 14.71%;
+    background: #6C6B6B;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.imageTest {
+    position: absolute;
+    left: 12.01%;
+    right: 60.97%;
+    top: 27.88%;
+    bottom: 26.35%;
+    background: #C0C0C0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.innerDiv>span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10vw;
+    line-height: .75;
+    margin-left: -8px;
+    color: #FF6660;
+}
+
+/* Section Six CSS */
+
+#sectionSix {
+    height: 850px;
+    background-color: #FFFFFF;
+}
+
+/* ABOUT PAGE CSS END*/

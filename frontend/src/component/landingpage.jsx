@@ -171,4 +171,4 @@ COMMUNITY
   }
 }
 
-export default landingpage 
+export default landingpage
