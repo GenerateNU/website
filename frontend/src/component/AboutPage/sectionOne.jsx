@@ -14,8 +14,8 @@ export class sectionOne extends Component {
             <Col>
               <div className="et_pb_section_0">
 
-                <img src="../images/cloud.jpg" className="et_parallax_bg sectionMainImage responsiveImages" alt="cloud" width="800" height="300"></img>
-                <h1 className="sectionOneTitle" >A product development studio to empower innovative ventures.</h1>
+                <img src="../images/aboutPageMain.jpg" className="et_parallax_bg sectionMainImage responsiveImages" alt="cloud" width="800" height="300"></img>
+                <h1 className="sectionOneTitle" >HARDWARE SOFTWARE & EVERYTHING ELSE</h1>
               </div>
             </Col>
 

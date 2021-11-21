@@ -11,9 +11,9 @@ export class sectionTwo extends Component {
           <Row >
             <Col md="auto">
               <div>    
-                <span className="weAreSymbol">
+                {/* <span className="weAreSymbol">
                   WE ARE
-                </span>
+                </span> */}
                 <span className="generateSymbol">
                   GENERATE
                 </span>

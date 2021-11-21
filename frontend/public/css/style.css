@@ -44,19 +44,19 @@
     z-index: 10;
     top: 11vh;
     height: 89vh;
-    width: 66.75%;
+    width: 64vw;
     left: 30vw;
 }
 
 .sectionOneTitle {
     position: absolute;
-    width: 60%;
+    width: 40%;
     top: 20%;
     z-index: 11;
     left: 12%;
     font-size: 5.5vw;
     font-weight: bold;
-    color: white;
+    color: #26A9E0;
 }
 
 /* Section Two CSS */
