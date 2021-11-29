@@ -4,18 +4,17 @@ import SectionTwo from './sectionTwo'
 import SectionThree from './sectionThree'
 import SectionFour from './sectionFour'
 import SectionFive from './sectionFive'
-import SectionSix from './sectionSix'
+
 export class aboutPageMain extends Component {
   render() {
     return (
       <div id="aboutPage">
-            <SectionOne/>
-            <SectionTwo/>
-            <SectionThree/>
-            <SectionFour/>
-            <SectionFive/>
-            <SectionSix/>
-        </div>
+        <SectionOne />
+        <SectionTwo />
+        <SectionThree />
+        <SectionFour />
+        <SectionFive />
+      </div>
     );
   }
 }
