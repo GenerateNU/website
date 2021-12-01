@@ -1,10 +1,46 @@
 /* landingpage */
 
-.border {
-    margin-top: 150px;
+.border {margin-top: 150px;
        border: 4px solid black;
        height: 750px;
        background-color: rgb(220,220,220);
   }
+
+  .border2 {
+    margin-top: 80px;
+       border: 4px solid black;
+       height: 600px;
+       width: 38%;
+       margin-left: 5.5%;
+       background-color: rgb(220,220,220)
+  }
+
+  .border3 {
+    border: 4px solid rgb(220,220,220);
+    height: 278px;
+    width: 48%;
+    margin-left: 50%;
+    margin-top: -20%;
+    padding-left: 20px;
+    background-color: rgb(220,220,220);
+}
+
+.border4 {
+  margin-top: 150px;
+       border: 4px solid black;
+       height: 1250px;
+       background-color: rgb(220,220,220);
+}
+
+.herotext {
+  font-size: 90px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 13%;
+  padding-top: 150px;
+};
+
+
+
 
 /* landingpage */  
