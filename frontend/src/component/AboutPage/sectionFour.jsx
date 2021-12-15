@@ -7,18 +7,18 @@ export class sectionFour extends Component {
     return (
       <div id="sectionFour">
         <Container>
-          <Row>
-            <Col ></Col>
+          {/* <Row>
+            <Col md="auto" >TEAMS</Col>
             <Col md="auto">Variable width content</Col>
           </Row>
           <Row>
-            <Col ></Col>
+            <Col  md="auto">DIRECTORS</Col>
             <Col md="auto">Variable width content</Col>
           </Row>
           <Row>
-            <Col ></Col>
+            <Col  md="auto">CLIENTS</Col>
             <Col md="auto">Variable width content</Col>
-          </Row>
+          </Row> */}
         </Container>
       </div>
     );

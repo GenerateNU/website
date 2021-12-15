@@ -9,16 +9,13 @@ export class sectionOne extends Component {
       <div id="sectionOne">
         <Container>
           <Row className="et_pb_row_0">
-            <Col>
-            </Col>
+          
             <Col>
               <div className="et_pb_section_0">
-
-                <img src="../images/aboutPageMain.jpg" className="et_parallax_bg sectionMainImage responsiveImages" alt="cloud" width="800" height="300"></img>
-                <h1 className="sectionOneTitle" >HARDWARE SOFTWARE & EVERYTHING ELSE</h1>
+                <img src="../images/AboutPageImages/aboutPageMain.png" className="et_parallax_bg sectionMainImage responsiveImages" alt="cloud" width="800" height="300"></img>
+                <h1 className="sectionOneTitle" >ABOUT US</h1>
               </div>
             </Col>
-
           </Row>
         </Container>
 

@@ -1,11 +1,18 @@
+/* !!!!!!!!Whole Body CSS START!!!!!!!!*/
+/* body {
+    font-family: Space mono, sans-serif !important;
+} */
+
+/* !!!!!!!!Whole Body CSS START!!!!!!!!*/
+
 /* !!!!!!!!LANDING PAGE CSS START!!!!!!!!*/
 
 .border {
     margin-top: 150px;
-       border: 4px solid black;
-       height: 750px;
-       background-color: rgb(220,220,220);
-  }
+    border: 4px solid black;
+    height: 750px;
+    background-color: rgb(220, 220, 220);
+}
 
 /* !!!!!!!!LANDING PAGE CSS END HERE!!!!!!!!*/
 
@@ -20,22 +27,22 @@
 
 #sectionOne {
     height: 85vh;
-    background: url(../images/test.jpg)no-repeat center;
+    /* background: url(../images/test.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .et_pb_row_0 {
-    max-width: 100%!important;
-    width: 100%!important;
+    max-width: 100% !important;
+    width: 100% !important;
     background-size: cover;
     padding-bottom: 10%;
     padding-top: 0;
-    overflow: visible!important;
+    overflow: visible !important;
     z-index: 3;
-    max-width: 100%!important;
+    max-width: 100% !important;
     width: 100%;
 }
 
@@ -46,7 +53,7 @@
     left: 0;
     height: 15%;
     z-index: 2;
-    max-width: 100%!important;
+    max-width: 100% !important;
     width: 100%;
 }
 
@@ -79,7 +86,27 @@
 }
 
 #infoSection {
-    padding-left: 20%;
+    /* padding-left: 29%; */
+    padding-right: 5%;
+}
+
+.sectionTwoSubheader {
+    font-family: Space Mono;
+    font-weight: bold;
+    font-size: 4rem;
+    padding-left: 1.3%;
+}
+
+.sectionTwoHeader {
+    font-size: 7rem;
+    font-weight: bold;
+    padding-left: 1%;
+}
+
+.sectionTwoHeaderInfo {
+    font-weight: normal;
+    font-size: 1.5rem;
+    padding-left: 1.3%;
 }
 
 .sectionTwoImageContainer {
@@ -87,12 +114,12 @@
 }
 
 .sectionTwoButton {
-    text-align: right;
-    padding-right: 5%;
+    padding-left: 1%;
+
 }
 
 #infoSection .col {
-    padding: 30px;
+    padding: 50px 30px 70px 30px;
 }
 
 .headerRow {
@@ -116,54 +143,66 @@
     font-family: Space mono, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 13vw;
-    color: #A7A5A5;
-    position: absolute;
-    top: 85%;
+    font-size: 16vw;
+    color: #26A9E0;
+    position: relative;
+    /* top: 85%; */
+}
+
+.sectionTwoImageHeader {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.sectionTwoImageDescription {
+    font-size: 2rem;
 }
 
 /* Section Three CSS */
 
 #sectionThree {
     height: 100vh;
-    background-color: #606060;
+    /* background-color: #606060; */
     position: relative;
+    background: url(../images/AboutPageImages/sectionThreeBackground.png)no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-#myVideo {
+/* #myVideo {
     position: relative;
     width: 100%;
     height: 100vh;
     object-fit: cover;
     left: 0px;
     top: 0px;
-}
+} */
 
 .sectionThreeContent {
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, .7);
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
+    justify-content: center;
+
 }
 
 .sectionThreeContent h1 {
-    font-family: space mono, sans-serif;
-    color: #FFFFFF;
     text-align: center;
     font-size: 15vw;
     font-style: normal;
     font-weight: bold;
+    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+}
+
+.sectionThreeButtonDiv {
+    width: 55%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* Section Four CSS */
@@ -181,46 +220,81 @@
     position: relative;
 }
 
-.innerDiv {
-    position: absolute;
-    left: 12.01%;
-    right: 11.88%;
-    top: 14.71%;
-    bottom: 14.71%;
-    background: #6C6B6B;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
+
+/* ABOUT PAGE CSS END*/
+
+
+/* APPLY PAGE CSS START*/
+
+.applyPageButtonContainer {
+    display: flex;
+    flex-direction: column;
 }
 
-.imageTest {
-    position: absolute;
-    left: 12.01%;
-    right: 60.97%;
-    top: 27.88%;
-    bottom: 26.35%;
-    background: #C0C0C0;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
+.applyPageButtons {
+    background: none;
+    border: none;
 }
 
-.innerDiv>span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-family: Space Mono;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10vw;
-    line-height: .75;
-    margin-left: -8px;
+.applyPageButtons:hover {
     color: #FF6660;
 }
 
-/* Section Six CSS */
-
-#sectionSix {
-    height: 850px;
-    background-color: #FFFFFF;
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* ABOUT PAGE CSS END*/
+.cards {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin: 20px;
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    margin: 5px;
+    height: 20rem;
+    position: relative;
+    display: inline-block;
+}
+
+.cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.cardDescriptionLayer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(36, 62, 206, .5);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity .3s;
+}
+
+.cards:hover .cardDescriptionLayer {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* .img__description {
+    transition: .2s;
+    transform: translateY(1em);
+    text-align: center;
+  }
+   */
+/* .cards:hover .img__description {
+    transform: translateY(0);
+  } */
+
+/* APPLY PAGE CSS END*/

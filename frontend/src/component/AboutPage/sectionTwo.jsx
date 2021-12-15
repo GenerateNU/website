@@ -10,10 +10,7 @@ export class sectionTwo extends Component {
         <Container fluid>
           <Row >
             <Col md="auto">
-              <div>    
-                {/* <span className="weAreSymbol">
-                  WE ARE
-                </span> */}
+              <div>
                 <span className="generateSymbol">
                   GENERATE
                 </span>
@@ -24,13 +21,11 @@ export class sectionTwo extends Component {
 
             <Col id="infoSection">
               <Row className="headerRow">
-                <h1>ENIM AD LABORE</h1>
-                <h2>POR INDA CDAWD HURFG VBIUB AWD DPPR SIT AMET</h2>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm
-                  od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm
-                  od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco.
+                <h2 className="sectionTwoSubheader">WE ARE</h2>
+                <h1 className="sectionTwoHeader">GENEREATE</h1>
+                <h4 className="sectionTwoHeaderInfo">We provide leading engineering and software product design to Northeastern’s entrepreneurial
+                  ecosystem. Providing opportunities for ventures to elicit support from student product builders,
+                  and students to gain experinceing working on real ventures.
                 </h4>
                 <div className="sectionTwoButton">
                   <Button variant="primary" size="lg">
@@ -42,40 +37,36 @@ export class sectionTwo extends Component {
               <Row>
                 <Col>
                   <div className="sectionTwoImageContainer">
-                    <img src="../images/cloud.jpg" className="responsiveImages" alt="cloud" width="600" height="400"></img>
+                    <img src="../images/AboutPageImages/rethinkingTheSherm.png" className="responsiveImages" alt="cloud" width="600" height="400"></img>
                   </div>
                 </Col>
-
-
                 <Col >
                   <Row>
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                    <h1 className="sectionTwoImageHeader">RETHINKING THE SHERM</h1>
                   </Row>
                   <Row>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ddidunt ut labore et dolore magna aliqua.</span>
+                    <span className="sectionTwoImageDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum condimentum gravida.</span>
                   </Row>
                 </Col>
               </Row>
               <Row>
                 <Col>
                   <Row>
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                    <h1 className="sectionTwoImageHeader">VISIT OUR SHOWCASE</h1>
                   </Row>
                   <Row>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ddidunt ut labore et dolore magna aliqua.</span>
+                    <span className="sectionTwoImageDescription">Take a look at our showcase videos from previous semesters to see some of Generate's past projects!</span>
                   </Row>
                 </Col>
                 <Col>
                   <div className="sectionTwoImageContainer">
-                    <img src="../images/cloud.jpg" className="responsiveImages" alt="cloud" width="600" height="400"></img>
+                    <img src="../images/AboutPageImages/visitOurShowcase.png" className="responsiveImages" alt="cloud" width="600" height="400"></img>
                   </div>
                 </Col>
               </Row>
             </Col>
           </Row>
         </Container>
-
-
       </div>
     );
   }

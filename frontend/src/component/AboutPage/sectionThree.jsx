@@ -7,24 +7,24 @@ export class sectionThree extends Component {
   render() {
     return (
       <div id="sectionThree">
-        <video autoPlay muted loop id="myVideo">
+        {/* <video autoPlay muted loop id="myVideo">
           <source src="../images/testVideo.mp4" type="video/mp4"></source>
           Your browser does not support HTML5 video.
-        </video>
+        </video> */}
 
         <Container fluid className="sectionThreeContent">
-          <Row>
+
+
+          <div >
             <h1>CREATE IMPACT</h1>
-          </Row>
-          <Row>
+          </div>
 
+          <div className="sectionThreeButtonDiv">
+            <Button variant="primary" size="md" >
+              Join Us
+            </Button>{' '}
+          </div>
 
-            {/* <div>
-              <Button variant="primary" size="md">
-                Large button
-              </Button>{' '}
-            </div> */}
-          </Row>
         </Container>
 
       </div>
