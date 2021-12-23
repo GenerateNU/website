@@ -3,18 +3,14 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+/**
+ * This component is for section three of the page which is just the huge image background and a text and button.
+ */
 export class sectionThree extends Component {
   render() {
     return (
       <div id="abg_sectionThree">
-        {/* <video autoPlay muted loop id="myVideo">
-          <source src="../images/testVideo.mp4" type="video/mp4"></source>
-          Your browser does not support HTML5 video.
-        </video> */}
-
         <Container fluid className="abg_sectionThreeContent">
-
-
           <div >
             <h1>CREATE IMPACT</h1>
           </div>

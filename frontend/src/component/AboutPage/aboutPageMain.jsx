@@ -4,7 +4,12 @@ import SectionTwo from './sectionTwo'
 import SectionThree from './sectionThree'
 import SectionFour from './sectionFour'
 import SectionFive from './sectionFive'
-
+/**
+ * This is the main page for about page consisting of all components for the pages. 
+ * They are divided into sections for each of the sections on the ui/ux design.
+ * 
+ * Note: Bootstrap is used in component pages used for dividing pages up to row and columns.
+ */
 export class aboutPageMain extends Component {
   render() {
     return (
