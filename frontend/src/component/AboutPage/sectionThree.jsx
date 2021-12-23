@@ -6,20 +6,20 @@ import Button from 'react-bootstrap/Button'
 export class sectionThree extends Component {
   render() {
     return (
-      <div id="sectionThree">
+      <div id="abg_sectionThree">
         {/* <video autoPlay muted loop id="myVideo">
           <source src="../images/testVideo.mp4" type="video/mp4"></source>
           Your browser does not support HTML5 video.
         </video> */}
 
-        <Container fluid className="sectionThreeContent">
+        <Container fluid className="abg_sectionThreeContent">
 
 
           <div >
             <h1>CREATE IMPACT</h1>
           </div>
 
-          <div className="sectionThreeButtonDiv">
+          <div className="abg_sectionThreeButtonDiv">
             <Button variant="primary" size="md" >
               Join Us
             </Button>{' '}

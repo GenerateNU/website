@@ -8,7 +8,7 @@ import SectionFive from './sectionFive'
 export class aboutPageMain extends Component {
   render() {
     return (
-      <div id="aboutPage">
+      <div id="abg_aboutPage">
         <SectionOne />
         <SectionTwo />
         <SectionThree />

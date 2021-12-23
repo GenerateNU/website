@@ -1,31 +1,13 @@
-/* !!!!!!!!Whole Body CSS START!!!!!!!!*/
-/* body {
-    font-family: Space mono, sans-serif !important;
-} */
-
-/* !!!!!!!!Whole Body CSS START!!!!!!!!*/
-
-/* !!!!!!!!LANDING PAGE CSS START!!!!!!!!*/
-
-.border {
-    margin-top: 150px;
-    border: 4px solid black;
-    height: 750px;
-    background-color: rgb(220, 220, 220);
-}
-
-/* !!!!!!!!LANDING PAGE CSS END HERE!!!!!!!!*/
-
 /* !!!!!!!!ABOUT PAGE CSS START!!!!!!!!*/
 
-.responsiveImages {
+.abg_responsiveImages {
     width: 100%;
     height: auto;
 }
 
 /* Section One CSS */
 
-#sectionOne {
+#abg_sectionOne {
     height: 85vh;
     /* background: url(../images/test.jpg)no-repeat center;
     -webkit-background-size: cover;
@@ -34,7 +16,7 @@
     background-size: cover; */
 }
 
-.et_pb_row_0 {
+.abg_et_pb_row_0 {
     max-width: 100% !important;
     width: 100% !important;
     background-size: cover;
@@ -46,7 +28,7 @@
     width: 100%;
 }
 
-.et_pb_row_1 {
+.abg_et_pb_row_1 {
     background-color: #ffffff;
     position: absolute;
     bottom: 0;
@@ -57,7 +39,7 @@
     width: 100%;
 }
 
-.sectionMainImage {
+.abg_sectionMainImage {
     position: absolute;
     z-index: 10;
     top: 11vh;
@@ -66,7 +48,7 @@
     left: 30vw;
 }
 
-.sectionOneTitle {
+.abg_sectionOneTitle {
     position: absolute;
     width: 40%;
     top: 20%;
@@ -79,54 +61,54 @@
 
 /* Section Two CSS */
 
-#sectionTwo {
+#abg_sectionTwo {
     height: 100%;
     background-color: #FFFFFF;
     padding-top: 20vh;
 }
 
-#infoSection {
+#abg_infoSection {
     /* padding-left: 29%; */
     padding-right: 5%;
 }
 
-.sectionTwoSubheader {
+.abg_sectionTwoSubheader {
     font-family: Space Mono;
     font-weight: bold;
     font-size: 4rem;
     padding-left: 1.3%;
 }
 
-.sectionTwoHeader {
+.abg_sectionTwoHeader {
     font-size: 7rem;
     font-weight: bold;
     padding-left: 1%;
 }
 
-.sectionTwoHeaderInfo {
+.abg_sectionTwoHeaderInfo {
     font-weight: normal;
     font-size: 1.5rem;
     padding-left: 1.3%;
 }
 
-.sectionTwoImageContainer {
+.abg_sectionTwoImageContainer {
     text-align: center;
 }
 
-.sectionTwoButton {
+.abg_sectionTwoButton {
     padding-left: 1%;
 
 }
 
-#infoSection .col {
+#abg_infoSection .col {
     padding: 50px 30px 70px 30px;
 }
 
-.headerRow {
+.abg_headerRow {
     padding: 20px;
 }
 
-.weAreSymbol {
+.abg_weAreSymbol {
     font-family: Space mono, sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -138,7 +120,7 @@
     z-index: 3;
 }
 
-.generateSymbol {
+.abg_generateSymbol {
     writing-mode: vertical-lr;
     font-family: Space mono, sans-serif;
     font-style: normal;
@@ -149,18 +131,18 @@
     /* top: 85%; */
 }
 
-.sectionTwoImageHeader {
+.abg_sectionTwoImageHeader {
     font-size: 4rem;
     font-weight: bold;
 }
 
-.sectionTwoImageDescription {
+.abg_sectionTwoImageDescription {
     font-size: 2rem;
 }
 
 /* Section Three CSS */
 
-#sectionThree {
+#abg_sectionThree {
     height: 100vh;
     /* background-color: #606060; */
     position: relative;
@@ -180,7 +162,7 @@
     top: 0px;
 } */
 
-.sectionThreeContent {
+.abg_sectionThreeContent {
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, .7);
@@ -191,7 +173,7 @@
 
 }
 
-.sectionThreeContent h1 {
+.abg_sectionThreeContent h1 {
     text-align: center;
     font-size: 15vw;
     font-style: normal;
@@ -199,7 +181,7 @@
     -webkit-text-fill-color: rgba(255, 255, 255, 1);
 }
 
-.sectionThreeButtonDiv {
+.abg_sectionThreeButtonDiv {
     width: 55%;
     display: flex;
     justify-content: flex-end;
@@ -207,14 +189,14 @@
 
 /* Section Four CSS */
 
-#sectionFour {
+#abg_sectionFour {
     height: 2550px;
     background-color: #FFFFFF;
 }
 
 /* Section Five CSS */
 
-#sectionFive {
+#abg_sectionFive {
     background-color: #FF6660;
     height: 100vh;
     position: relative;
@@ -222,79 +204,3 @@
 
 
 /* ABOUT PAGE CSS END*/
-
-
-/* APPLY PAGE CSS START*/
-
-.applyPageButtonContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.applyPageButtons {
-    background: none;
-    border: none;
-}
-
-.applyPageButtons:hover {
-    color: #FF6660;
-}
-
-.cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.cards {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    margin: 20px;
-    flex: 0 0 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-    margin: 5px;
-    height: 20rem;
-    position: relative;
-    display: inline-block;
-}
-
-.cards:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-    padding: 2px 16px;
-}
-
-.cardDescriptionLayer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(36, 62, 206, .5);
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: opacity .3s;
-}
-
-.cards:hover .cardDescriptionLayer {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* .img__description {
-    transition: .2s;
-    transform: translateY(1em);
-    text-align: center;
-  }
-   */
-/* .cards:hover .img__description {
-    transform: translateY(0);
-  } */
-
-/* APPLY PAGE CSS END*/
