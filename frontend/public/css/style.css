@@ -1,210 +1,3 @@
-/* !!!!!!!!ABOUT PAGE CSS START!!!!!!!!*/
-
-.abg_responsiveImages {
-    width: 100%;
-    height: auto;
-}
-
-/* Section One CSS */
-
-#abg_sectionOne {
-    height: 85vh;
-    /* background: url(../images/test.jpg)no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
-}
-
-.abg_et_pb_row_0 {
-    max-width: 100% !important;
-    width: 100% !important;
-    background-size: cover;
-    padding-bottom: 10%;
-    padding-top: 0;
-    overflow: visible !important;
-    z-index: 3;
-    max-width: 100% !important;
-    width: 100%;
-}
-
-.abg_et_pb_row_1 {
-    background-color: #ffffff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 15%;
-    z-index: 2;
-    max-width: 100% !important;
-    width: 100%;
-}
-
-.abg_sectionMainImage {
-    position: absolute;
-    z-index: 10;
-    top: 11vh;
-    height: 89vh;
-    width: 64vw;
-    left: 30vw;
-}
-
-.abg_sectionOneTitle {
-    position: absolute;
-    width: 40%;
-    top: 20%;
-    z-index: 11;
-    left: 12%;
-    font-size: 5.5vw;
-    font-weight: bold;
-    color: #26A9E0;
-}
-
-/* Section Two CSS */
-
-#abg_sectionTwo {
-    height: 100%;
-    background-color: #FFFFFF;
-    padding-top: 20vh;
-}
-
-#abg_infoSection {
-    /* padding-left: 29%; */
-    padding-right: 5%;
-}
-
-.abg_sectionTwoSubheader {
-    font-family: Space Mono;
-    font-weight: bold;
-    font-size: 4rem;
-    padding-left: 1.3%;
-}
-
-.abg_sectionTwoHeader {
-    font-size: 7rem;
-    font-weight: bold;
-    padding-left: 1%;
-}
-
-.abg_sectionTwoHeaderInfo {
-    font-weight: normal;
-    font-size: 1.5rem;
-    padding-left: 1.3%;
-}
-
-.abg_sectionTwoImageContainer {
-    text-align: center;
-}
-
-.abg_sectionTwoButton {
-    padding-left: 1%;
-
-}
-
-#abg_infoSection .col {
-    padding: 50px 30px 70px 30px;
-}
-
-.abg_headerRow {
-    padding: 20px;
-}
-
-.abg_weAreSymbol {
-    font-family: Space mono, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.5vw;
-    color: black;
-    position: absolute;
-    top: 85.5%;
-    left: 7.3%;
-    z-index: 3;
-}
-
-.abg_generateSymbol {
-    writing-mode: vertical-lr;
-    font-family: Space mono, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16vw;
-    color: #26A9E0;
-    position: relative;
-    /* top: 85%; */
-}
-
-.abg_sectionTwoImageHeader {
-    font-size: 4rem;
-    font-weight: bold;
-}
-
-.abg_sectionTwoImageDescription {
-    font-size: 2rem;
-}
-
-/* Section Three CSS */
-
-#abg_sectionThree {
-    height: 100vh;
-    /* background-color: #606060; */
-    position: relative;
-    background: url(../images/AboutPageImages/sectionThreeBackground.png)no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-/* #myVideo {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    left: 0px;
-    top: 0px;
-} */
-
-.abg_sectionThreeContent {
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, .7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.abg_sectionThreeContent h1 {
-    text-align: center;
-    font-size: 15vw;
-    font-style: normal;
-    font-weight: bold;
-    -webkit-text-fill-color: rgba(255, 255, 255, 1);
-}
-
-.abg_sectionThreeButtonDiv {
-    width: 55%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* Section Four CSS */
-
-#abg_sectionFour {
-    height: 2550px;
-    background-color: #FFFFFF;
-}
-
-/* Section Five CSS */
-
-#abg_sectionFive {
-    background-color: #FF6660;
-    height: 100vh;
-    position: relative;
-}
-
-
-/* ABOUT PAGE CSS END*/
-
 /* LANDING PAGE CSS START HERE*/
 .ldp_margin {
     margin-top: 5%;
@@ -468,3 +261,211 @@
 }
 
 /* LANDING PAGE END HERE*/
+
+/* !!!!!!!!ABOUT PAGE CSS START!!!!!!!!*/
+
+.abg_responsiveImages {
+    width: 100%;
+    height: auto;
+}
+
+/* Section One CSS */
+
+#abg_sectionOne {
+    height: 85vh;
+    /* background: url(../images/test.jpg)no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+}
+
+.abg_et_pb_row_0 {
+    max-width: 100% !important;
+    width: 100% !important;
+    background-size: cover;
+    padding-bottom: 10%;
+    padding-top: 0;
+    overflow: visible !important;
+    z-index: 3;
+    max-width: 100% !important;
+    width: 100%;
+}
+
+.abg_et_pb_row_1 {
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15%;
+    z-index: 2;
+    max-width: 100% !important;
+    width: 100%;
+}
+
+.abg_sectionMainImage {
+    position: absolute;
+    z-index: 10;
+    top: 11vh;
+    height: 89vh;
+    width: 64vw;
+    left: 30vw;
+}
+
+.abg_sectionOneTitle {
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    z-index: 11;
+    left: 12%;
+    font-size: 5.5vw;
+    font-weight: bold;
+    color: #26A9E0;
+}
+
+/* Section Two CSS */
+
+#abg_sectionTwo {
+    height: 100%;
+    background-color: #FFFFFF;
+    padding-top: 20vh;
+}
+
+#abg_infoSection {
+    /* padding-left: 29%; */
+    padding-right: 5%;
+}
+
+.abg_sectionTwoSubheader {
+    font-family: Space Mono;
+    font-weight: bold;
+    font-size: 4rem;
+    padding-left: 1.3%;
+}
+
+.abg_sectionTwoHeader {
+    font-size: 7rem;
+    font-weight: bold;
+    padding-left: 1%;
+}
+
+.abg_sectionTwoHeaderInfo {
+    font-weight: normal;
+    font-size: 1.5rem;
+    padding-left: 1.3%;
+}
+
+.abg_sectionTwoImageContainer {
+    text-align: center;
+}
+
+.abg_sectionTwoButton {
+    padding-left: 1%;
+
+}
+
+#abg_infoSection .col {
+    padding: 50px 30px 70px 30px;
+}
+
+.abg_headerRow {
+    padding: 20px;
+}
+
+.abg_weAreSymbol {
+    font-family: Space mono, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: black;
+    position: absolute;
+    top: 85.5%;
+    left: 7.3%;
+    z-index: 3;
+}
+
+.abg_generateSymbol {
+    writing-mode: vertical-lr;
+    font-family: Space mono, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16vw;
+    color: #26A9E0;
+    position: relative;
+    /* top: 85%; */
+}
+
+.abg_sectionTwoImageHeader {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.abg_sectionTwoImageDescription {
+    font-size: 2rem;
+}
+
+/* Section Three CSS */
+
+#abg_sectionThree {
+    height: 100vh;
+    /* background-color: #606060; */
+    position: relative;
+    background: url(../images/AboutPageImages/sectionThreeBackground.png)no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* #myVideo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    left: 0px;
+    top: 0px;
+} */
+
+.abg_sectionThreeContent {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.abg_sectionThreeContent h1 {
+    text-align: center;
+    font-size: 15vw;
+    font-style: normal;
+    font-weight: bold;
+    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+}
+
+.abg_sectionThreeButtonDiv {
+    width: 55%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Section Four CSS */
+
+#abg_sectionFour {
+    height: 2550px;
+    background-color: #FFFFFF;
+}
+
+/* Section Five CSS */
+
+#abg_sectionFive {
+    background-color: #FF6660;
+    height: 100vh;
+    position: relative;
+}
+
+
+/* ABOUT PAGE CSS END*/
+
