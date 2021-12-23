@@ -1,24 +1,24 @@
 /* landingpage */
 
 
-.margin {
+.ldp_margin {
   margin-top: 5%;
   margin-left: 2%;
   margin-right: 2%;
 }
 
-.column {
+.ldp_column {
   float: left;
   width: 40%;
 }
 
-.row:after {
+.ldp_row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.Generate {
+.ldp_Generate {
   height: 400px;
   background-color: 
   #26A9E0;
@@ -26,7 +26,7 @@
   width: 140%
 }
 
-.GenerateText {
+.ldp_GenerateText {
   padding-top: 30px;
   font-size: 170px;
   font-weight: 700;
@@ -38,7 +38,7 @@
 }
 
 
-.GenerateText2 {
+.ldp_GenerateText2 {
   padding-top: 300px;
   font-size: 64px;
   text-align: left;
@@ -54,7 +54,7 @@
   
 }
 
-.GenerateText3 {
+.ldp_GenerateText3 {
   font-family: 'Outfit500';
   padding-left: 70px;
    padding-right: 60px;
@@ -66,7 +66,7 @@
      
 }
 
-.GenerateText4 {
+.ldp_GenerateText4 {
   padding-top: 30px;
    color: white;
     font-size: 56px;
@@ -76,7 +76,7 @@
 }
 
 
-.ourTeam {
+.ldp_ourTeam {
        border: 4px solid 
        #26A9E0;
        height: 1324px;
@@ -84,7 +84,7 @@
        #26A9E0;
 }
 
-.ourTeamText {
+.ldp_ourTeamText {
   padding-top: 30px;
   font-size: 130px;
   font-weight: 700;
@@ -94,28 +94,28 @@
   font-family: "commuters-sans700";
 }
 
-.TeamName {
+.ldp_TeamName {
   float: left; 
   color: white;
   font-size: 32px;
   font-family: "commuters-sans700";
 }
 
-.TeamDescription {
+.ldp_TeamDescription {
   font-family: 'Outfit400';
   text-align: left; 
   color: white;
   font-size: 18px;
 }
 
-.wrapper {
+.ldp_wrapper {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-gap: 60px;
   color: #444;
 }
 
-.ourCommunity {
+.ldp_ourCommunity {
   border: 4px solid 
   #FFBF3C;
        height: 1488px;
@@ -124,7 +124,7 @@
 
 }
 
-.ourCommunityText {
+.ldp_ourCommunityText {
   padding-top: 30px;
   font-size: 130px;
   font-weight: 700;
@@ -133,7 +133,7 @@
   font-family: "commuters-sans700";
 }
 
-.ourCommunityText2 {
+.ldp_ourCommunityText2 {
   border: 4px solid 
   #FFBF3C;
   margin-top: 400px;
@@ -148,7 +148,7 @@
 
 }
 
-.ourCommunityWhite {
+.ldp_ourCommunityWhite {
   border: 4px solid 
   white;
   width: 990px;
@@ -159,7 +159,7 @@
        white;
 }
 
-.applyText {
+.ldp_applyText {
   margin-top: 15%;
    font-size: 162px;
     position: absolute;
@@ -168,24 +168,24 @@
 
 }
 
-.student {
+.ldp_student {
   float: left;
   font-family: "commuters-sans700";
 }
 
-.client {
+.ldp_client {
   float: right;
   font-family: "commuters-sans700";
 }
 
 
 
-.container {
+.ldp_container {
   position: relative;
 
 }
 
-.overlay {
+.ldp_overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -198,11 +198,11 @@
   background-color: #FFBF3C;
 }
 
-.container:hover .overlay {
+.ldp_container:hover .ldp_overlay {
   opacity: 1;
 }
 
-.font {
+.ldp_font {
   font-family: 'Space Mono';
 }
 
