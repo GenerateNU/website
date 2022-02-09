@@ -26,13 +26,15 @@ export class sectionTwo extends Component {
               <Row className="abg_headerRow">
                 <h2 className="abg_sectionTwoSubheader">WE ARE</h2>
                 <h1 className="abg_sectionTwoHeader">GENEREATE</h1>
-                <h4 className="abg_sectionTwoHeaderInfo">We provide leading engineering and software product design to Northeastern’s entrepreneurial
-                  ecosystem. Providing opportunities for ventures to elicit support from student product builders,
-                  and students to gain experinceing working on real ventures.
+                <h4 className="abg_sectionTwoHeaderInfo">In 2015, Bailey Kane and Mina Iskarous found a hole in Northeastern 
+                University’s (NEU’s) entrepreneurial ecosystem; they identified a lack of opportunities for student ventures 
+                to elicit support from product builders. Generate was their answer. We provide engineering and software 
+                product design to Northeastern’s ecosystem. Providing opportunities for ventures to elicit support from 
+                student product builders, and for students to gain experince working on real ventures.
                 </h4>
                 <div className="abg_sectionTwoButton">
                   <Button variant="primary" size="lg">
-                    Large button
+                  Learn More
                   </Button>{' '}
                 </div>
 
@@ -48,7 +50,8 @@ export class sectionTwo extends Component {
                     <h1 className="abg_sectionTwoImageHeader">RETHINKING THE SHERM</h1>
                   </Row>
                   <Row>
-                    <span className="abg_sectionTwoImageDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum condimentum gravida.</span>
+                    <span className="abg_sectionTwoImageDescription">Inclusive Space Research Team joins the Sherman Center this year to identify ways for 
+                    us to be more incluseive.</span>
                   </Row>
                 </Col>
               </Row>
