@@ -1,11 +1,11 @@
 
 import './App.css';
-import LandingPage from './component/landingpage.jsx'
+import TeamsCarousel from './component/teamsCarousel'
 
 function App() {
   return (
     <div className="App">
-      <LandingPage/>
+      <TeamsCarousel/>
     </div>
   );
 }

@@ -260,4 +260,31 @@
 
 /* landingpage */
 
+/* teamsCarousel */
+.tc_team {
+  font-family: "commuters-sans800";
+  color: #424242;
+  font-size: 64px;
+  line-height: 64px;
+  transform: rotate(270deg);
+  float: left;
+  margin-top: 25%;
+  margin-left: -4%;
+}
+
+.tc_management {
+  font-family:'Outfit400';;
+  color: #00A7E1;;
+  font-size: 24px;
+  line-height: 48px;
+}
+
+
+.tc_links {
+  font-family:'Outfit400';
+  font-size: 24px;
+  line-height: 48px;
+}
+/* teamsCarousel */
+
 
