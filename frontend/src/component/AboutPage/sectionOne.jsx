@@ -26,8 +26,26 @@ export class sectionOne extends Component {
 
       // </div>
 
-      <div id="abg_sectionThree">
-              <Container fluid className="abg_sectionThreeContent">
+      // <div id="abg_sectionThree">
+      //         <Container fluid className="abg_sectionThreeContent">
+      //           {/* <video  loop autoPlay><source src='../../../public/images/AboutPageImages/videoplayback.mp4' type='video/mp4'/></video> */}
+      //           <video className='video' loop autoPlay muted><source src={videoCover}type="video/mp4"/>
+      //           Your browser does not support the video tag.
+      //           </video>
+      //           <div>
+      //             <h1>CREATE IMPACT</h1>
+      //           </div>
+      //           {/* <div className="abg_sectionThreeButtonDiv">
+      //             <Button variant="primary" size="md" >
+      //               Join Us
+      //             </Button>{' '}
+      //           </div> */}
+      //         </Container>
+      // </div>
+
+
+      <div id="abg_sectionOne">
+        <Container fluid className="abg_sectionOneContent">
                 {/* <video  loop autoPlay><source src='../../../public/images/AboutPageImages/videoplayback.mp4' type='video/mp4'/></video> */}
                 <video className='video' loop autoPlay muted><source src={videoCover}type="video/mp4"/>
                 Your browser does not support the video tag.
@@ -42,6 +60,8 @@ export class sectionOne extends Component {
                 </div> */}
               </Container>
       </div>
+
+
     );
   }
 }

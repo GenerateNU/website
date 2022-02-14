@@ -265,14 +265,20 @@
 /* !!!!!!!!ABOUT PAGE CSS START!!!!!!!!*/
 
 .abg_responsiveImages {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
+    /* position: absolute; */
+    width: 376px;
+    height: 298px;
+    left: 315px;
+    top: 830px;
+
 }
 
 /* Section One CSS */
 
 #abg_sectionOne {
-    height: 85vh;
+    height: 100vh;
     /* background: url(../images/test.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -336,18 +342,78 @@
     padding-right: 5%;
 }
 
-.abg_sectionTwoSubheader {
+/* .abg_sectionTwoSubheader {
     font-family: Space Mono;
     font-weight: bold;
     font-size: 4rem;
     padding-left: 1.3%;
+} */
+
+
+/* New */
+.abg_sectionTwoSubheader {
+    /* position: absolute; */
+    /* width: 135px; */
+    height: 36px;
+    left: 746px;
+    top: 194px;
+
+    font-family: Commuters Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 100%;
+/* identical to box height, or 36px */
+
+
+    color: #424242;
 }
 
-.abg_sectionTwoHeader {
+
+
+/* .abg_sectionTwoHeader {
     font-size: 7rem;
     font-weight: bold;
     padding-left: 1%;
+} */
+
+/* New */
+.abg_sectionTwoHeader {
+/* position: absolute; */
+    width: 442px;
+    height: 72px;
+    left: 740px;
+    top: 254px;
+
+    font-family: Commuters Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 100%;
+    /* identical to box height, or 72px */
+
+
+    /* Blue */
+
+    color: #00A7E1;
 }
+
+.abg_section_1{
+    display:flex;
+    flex-direction: row; 
+}
+
+
+.abg_sectionTwoImageContainer3{
+    
+}
+
+
+.abg_section_Header1{
+    display:flex;
+    flex-direction: column; 
+}
+
 
 .abg_sectionTwoHeaderInfo {
     font-weight: normal;
@@ -357,10 +423,12 @@
 
 .abg_sectionTwoImageContainer {
     text-align: center;
+    
 }
 
 .abg_sectionTwoButton {
     padding-left: 1%;
+    background-image: url(src/component/LearnMoreButton_Yellow.png);
 
 }
 
@@ -396,9 +464,53 @@
 }
 
 .abg_sectionTwoImageHeader {
-    font-size: 4rem;
+    /* font-size: 4rem;
+    font-weight: bold; */
+    /* position: absolute; */
+    width: 319px;
+    height: 80px;
+    left: 747px;
+    top: 1150px;
+
+    font-family: Commuters Sans;
+    font-style: normal;
     font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    text-transform: uppercase;
+
+    /* Grey */
+
+    color: #424242;
 }
+
+
+.abg_sectionTwoImageHeader2 {
+ /* VISIT OUR SHOWCASE */
+
+
+    /* position: absolute; */
+    width: 261px;
+    height: 80px;
+    left: 315px;
+    top: 1650px;
+
+    font-family: Commuters Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    text-transform: uppercase;
+
+    /* Grey */
+
+    color: #424242;
+}
+
 
 .abg_sectionTwoImageDescription {
     font-size: 2rem;
@@ -438,10 +550,10 @@
     top: 0px;
 } */
 
-.abg_sectionThreeContent {
+.abg_sectionOneContent {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, .7);
+    /* background: rgba(0, 0, 0, .7); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -459,7 +571,7 @@
 
 
 
-.abg_sectionThreeContent h1 {
+.abg_sectionOneContent h1 {
     /* text-align: center;
     font-size: 15vw;
     font-style: normal;
@@ -470,6 +582,7 @@
     height: 80%;
     left: 10%;
     top: 10%;
+    text-align: center;
 
     font-family: Space Mono;
     font-style: normal;
@@ -503,11 +616,11 @@
 
 
 
-.abg_sectionThreeButtonDiv {
+/* .abg_sectionThreeButtonDiv {
     width: 55%;
     display: flex;
     justify-content: flex-end;
-}
+} */
 
 /* Section Four CSS */
 
