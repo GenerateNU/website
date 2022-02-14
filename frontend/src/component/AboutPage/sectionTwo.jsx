@@ -40,7 +40,7 @@ export class sectionTwo extends Component {
               <Row>
                 <Col>
                   <div className="abg_sectionTwoImageContainer">
-                    <img src="../images/AboutPageImages/rethinkingTheSherm.png" className="abg_responsiveImages" alt="cloud" width="600" height="400"></img>
+                    <img src="../assets/images/rethinkingTheSherm.png" className="abg_responsiveImages" alt="cloud" width="600" height="400"></img>
                   </div>
                 </Col>
                 <Col >
@@ -63,7 +63,7 @@ export class sectionTwo extends Component {
                 </Col>
                 <Col>
                   <div className="abg_sectionTwoImageContainer">
-                    <img src="../images/AboutPageImages/visitOurShowcase.png" className="abg_responsiveImages" alt="cloud" width="600" height="400"></img>
+                    <img src="../assets/images/visitOurShowcase.png" className="abg_responsiveImages" alt="cloud" width="600" height="400"></img>
                   </div>
                 </Col>
               </Row>

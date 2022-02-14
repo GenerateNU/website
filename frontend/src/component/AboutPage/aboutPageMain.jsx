@@ -14,7 +14,7 @@ export class aboutPageMain extends Component {
   render() {
     return (
       <div id="abg_aboutPage">
-        <SectionOne />
+        <SectionOne/>
         <SectionTwo />
         <SectionThree />
         <SectionFour />

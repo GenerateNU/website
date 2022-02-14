@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Shape from '../component/TeamsShape.png'
-import Community from '../component/CommunitySection.JPG'
-import Blue from '../component/LearnMoreButton_Blue.png'
-import Yellow from '../component/LearnMoreButton_Yellow.png'
-import Student from '../component/StudentTriangle.png'
-import Client from '../component/ClientTriangle.png'
+import Shape from '../assets/images/TeamsShape.png'
+import Community from '../assets/images/CommunitySection.JPG'
+import Blue from '../assets/images/LearnMoreButton_Blue.png'
+import Yellow from '../assets/images/LearnMoreButton_Yellow.png'
+import Student from '../assets/images/StudentTriangle.png'
+import Client from '../assets/images/ClientTriangle.png'
 
 export class landingpage extends Component {
   render() {
