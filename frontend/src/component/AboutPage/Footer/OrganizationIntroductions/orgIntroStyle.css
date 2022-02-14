@@ -1,0 +1,103 @@
+/* Amy Landing Page footer styling */
+#landing-page-footer {
+    /* border: solid blue 1px; */
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+.footer-horizontal-margin {
+    /* background-color: yellow; */
+    height: 10%;
+}
+
+.footer-main-body {
+    /* background-color: orange; */
+    position: relative;
+    box-sizing: border-box;
+    height: 80%;
+}
+
+.vertical-header-style {
+    /* font-family: Commuters Sans; */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 100%;
+    white-space: nowrap;
+}
+
+.rotate-counter-clockwise-90 {
+    position: relative;
+    top: 185px;
+    transform: rotate(-90deg);
+}
+
+.image-wrapper-col {
+    display: inline-block;
+	overflow: hidden;
+}
+
+.footer-center-image {
+    position: absolute;
+    filter: brightness(55%);
+    width: 100%;
+}
+
+.image-text-overlay {
+    position: relative;
+}
+
+.overlay-main-body {
+    /* background-color: purple; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.footer-info-text-style {
+    font-family: Space Mono;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: white;
+}
+
+.logo-img-margin {
+    margin-right: 50px;
+}
+
+.triangle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, #FF6660 50%, #FF6660 100%);
+    top: 450px;
+}
+
+.learn-more-button {
+    margin: 0;
+    position: absolute;
+    top: 552px;
+    left: 877px;
+    background-color: #FFC539;
+    outline: none;
+}
+
+.footer-button-text-style {
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #111111;
+}
+
+.center-vertically {
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+}
