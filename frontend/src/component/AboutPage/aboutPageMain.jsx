@@ -4,6 +4,7 @@ import SectionTwo from './sectionTwo'
 import SectionThree from './sectionThree'
 import SectionFour from './sectionFour'
 import SectionFive from './sectionFive'
+import Teamscarousel from './teamsCarousel'
 /**
  * This is the main page for about page consisting of all components for the pages. 
  * They are divided into sections for each of the sections on the ui/ux design.
@@ -19,6 +20,7 @@ export class aboutPageMain extends Component {
         <SectionThree />
         <SectionFour />
         <SectionFive />
+        <Teamscarousel/>
       </div>
     );
   }
