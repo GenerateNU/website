@@ -10,7 +10,7 @@ export class sectionThree extends Component {
   render() {
     return (
       <div id="abg_sectionThree">
-        <Container fluid className="abg_sectionThreeContent">
+        {/* <Container fluid className="abg_sectionThreeContent">
           <div >
             <h1>CREATE IMPACT</h1>
           </div>
@@ -21,7 +21,7 @@ export class sectionThree extends Component {
             </Button>{' '}
           </div>
 
-        </Container>
+        </Container> */}
 
       </div>
     );

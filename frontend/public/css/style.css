@@ -272,8 +272,21 @@
     height: 298px;
     left: 315px;
     top: 830px;
+    padding: 5% 5% 5% 7%;
+}
+
+.abg_responsiveImages1 {
+    /* width: 100%;
+    height: auto; */
+    /* position: absolute; */
+    width: 550px;
+    height: 550px;
+    left: 315px;
+    top: 830px;
+    padding: 5% 5% 5% 7%;
 
 }
+
 
 /* Section One CSS */
 
@@ -358,7 +371,7 @@
     left: 746px;
     top: 194px;
 
-    font-family: Commuters Sans;
+    /* font-family: Commuters Sans; */
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -385,7 +398,7 @@
     left: 740px;
     top: 254px;
 
-    font-family: Commuters Sans;
+    /* font-family: Commuters Sans; */
     font-style: normal;
     font-weight: 800;
     font-size: 72px;
@@ -401,40 +414,111 @@
 .abg_section_1{
     display:flex;
     flex-direction: row; 
+    align-items: center;
+    /* align-self: flex-start; */
+}
+
+.abg_section_2{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    /* align-self: flex-start; */
 }
 
 
+.abg_section_3{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    /* align-self: flex-start; */
+
+}
+
+.bottom-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
 .abg_sectionTwoImageContainer3{
-    
+    padding: 0% 7% 5% 7%;
+    height: 550px;
+    width: 700px;
 }
 
 
 .abg_section_Header1{
     display:flex;
     flex-direction: column; 
+    justify-content: center;
+}
+
+.abg_section_Header1 Row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    padding-bottom: 5%;
 }
 
 
 .abg_sectionTwoHeaderInfo {
-    font-weight: normal;
+    /* font-weight: normal;
     font-size: 1.5rem;
-    padding-left: 1.3%;
+    padding-left: 1.3%; */
+    /* position: absolute; */
+    padding-top: 2%;
+    width: 595px;
+    /* height: 196px; */
+    /* left: 745px;
+    top: 347px; */
+    
+    /* Body 1 */
+    
+    /* font-family: Outfit; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+    
+    
+    color: #000000;
+
+
+
 }
 
 .abg_sectionTwoImageContainer {
     text-align: center;
-    
+    align-items: center;
 }
 
-.abg_sectionTwoButton {
+/* .abg_sectionTwoButton {
     padding-left: 1%;
-    background-image: url(src/component/LearnMoreButton_Yellow.png);
+    background-image: url(./src/component/LearnMoreButton_Yellow.png);
 
-}
+} */
 
 #abg_infoSection .col {
     padding: 50px 30px 70px 30px;
+    display: flex;
+    justify-content: center;
 }
+
+
+#abg_infoSection .col .row{
+    padding-bottom: 5%;
+}
+
 
 .abg_headerRow {
     padding: 20px;
@@ -468,11 +552,11 @@
     font-weight: bold; */
     /* position: absolute; */
     width: 319px;
-    height: 80px;
+    height: 110px;
     left: 747px;
     top: 1150px;
 
-    font-family: Commuters Sans;
+    /* font-family: Commuters Sans; */
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -480,10 +564,14 @@
     /* or 40px */
 
     text-transform: uppercase;
-
+    padding-bottom: 2%;
     /* Grey */
 
     color: #424242;
+
+    text-decoration: underline;
+    -webkit-text-decoration-color: #00A7E1; /* Safari */  
+    text-decoration-color: #00A7E1;
 }
 
 
@@ -493,27 +581,44 @@
 
     /* position: absolute; */
     width: 261px;
-    height: 80px;
+    height: 110px;
     left: 315px;
     top: 1650px;
-
-    font-family: Commuters Sans;
+    /* font-family: Commuters Sans; */
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
     line-height: 100%;
-    /* or 40px */
-
     text-transform: uppercase;
-
-    /* Grey */
-
     color: #424242;
+    padding-bottom: 2%;
+
+    text-decoration: underline;
+    -webkit-text-decoration-color: #FFC539; /* Safari */  
+    text-decoration-color: #FFC539;
+
 }
 
 
 .abg_sectionTwoImageDescription {
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    /* position: absolute; */
+    width: 314px;
+    height: 84px;
+    left: 315px;
+    top: 1462px;
+
+    /* Body 1 */
+
+    /* font-family: Outfit; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+
+
+color: #000000;
 }
 
 /* Section Three CSS */
@@ -640,3 +745,13 @@
 
 /* ABOUT PAGE CSS END*/
 
+.Rectangle {
+    /* position: absolute; */
+    width: 121.14px;
+    height: 121.14px;
+    left: 695.03px;
+    top: 629.41px;
+
+    background: #C4C4C4;
+    transform: matrix(0.71, 0.63, -0.79, 0.71, 0, 0);
+}

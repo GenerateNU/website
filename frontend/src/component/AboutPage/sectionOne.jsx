@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import videoCover from './videoplayback.mp4'
+// import videoCover from './src/component/assets/videos/videoplayback.mp4'
 // import videoCover from '/public/images/AboutPageImages/videoplayback.mp4'
 
 /**
@@ -46,19 +47,13 @@ export class sectionOne extends Component {
 
       <div id="abg_sectionOne">
         <Container fluid className="abg_sectionOneContent">
-                {/* <video  loop autoPlay><source src='../../../public/images/AboutPageImages/videoplayback.mp4' type='video/mp4'/></video> */}
-                <video className='video' loop autoPlay muted><source src={videoCover}type="video/mp4"/>
-                Your browser does not support the video tag.
-                </video>
-                <div>
-                  <h1>CREATE IMPACT</h1>
-                </div>
-                {/* <div className="abg_sectionThreeButtonDiv">
-                  <Button variant="primary" size="md" >
-                    Join Us
-                  </Button>{' '}
-                </div> */}
-              </Container>
+          <video className='video' loop autoPlay muted><source src={videoCover} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div>
+            <h1>CREATE IMPACT</h1>
+          </div>
+        </Container>
       </div>
 
 
