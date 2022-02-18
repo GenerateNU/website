@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ShermanCenterBg from '../../../assets/Sherman_Center_Bg.jpg';
-import ShermanCenterLogo from '../../../assets/Sherman_Center_Logo.png';
+import ShermanCenterBg from '../../../assets/images/Sherman_Center_Bg.jpg';
+import ShermanCenterLogo from '../../../assets/images/Sherman_Center_Logo.png';
 import OrganizationIntroduction from './organizationIntro';
 
 export class ShermanCenterIntro extends Component {

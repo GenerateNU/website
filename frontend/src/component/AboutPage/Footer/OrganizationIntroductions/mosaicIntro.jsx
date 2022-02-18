@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OrganizationIntroduction from './organizationIntro';
-import MosaicBg from '../../../assets/Mosaic_Bg.jpg';
-import MosaicLogo from '../../../assets/Mosaic_Logo.png';
+import MosaicBg from '../../../assets/images/Mosaic_Bg.jpg';
+import MosaicLogo from '../../../assets/images/Mosaic_Logo.png';
 
 export class MosaicIntro extends Component {
     render() {
