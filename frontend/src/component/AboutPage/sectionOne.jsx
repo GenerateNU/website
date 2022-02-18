@@ -15,8 +15,8 @@ export class sectionOne extends Component {
     return (
 
 
-      <div id="abg_sectionOne">
-        <Container fluid className="abg_sectionOneContent">
+      <div id="Aboutpage_Section1">
+        <Container fluid className="Hero_Video_Container">
           <video className='video' loop autoPlay muted><source src={videoCover} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
