@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+
 /**
  * This component if section two of website which consist of sideway GENERATE and some images and text about Generate.
  */
@@ -14,14 +15,13 @@ export class sectionTwo extends Component {
           <Row >
 
             <Col id="abg_infoSection">
+            <div className='bottom-container'>
+
               <Row className="abg_headerRow">
                 <div className='abg_section_1'>
                   <div className="abg_sectionTwoImageContainer3">
                     <img src="../images/AboutPageImages/We_Are_Gen.png" className="abg_responsiveImages1" alt="cloud" width="550" height="550"></img>
 
-                    {/* <div className='Rectangle'>
-                      <p>a</p>
-                    </div> */}
                   </div>
                   <div className='abg_section_Header1'>
                     <h2 className="abg_sectionTwoSubheader">WE ARE</h2>
@@ -35,11 +35,14 @@ export class sectionTwo extends Component {
                       student product builders, and for students to gain experince working on real ventures.
                     </p>
                     <div className="abg_sectionTwoButton">
-                    <img src="./LearnMoreButton_Yellow.png" alt="" />
-                      <Button variant="primary" size="lg">
+                      {/* <Button variant="primary" size="lg" img="./LearnMoreButton_Yellow.png">
                         
                         Learn More
-                      </Button>{' '}
+                      </Button>{' '} */}
+                      <a href="https://www.google.com">
+                        <img src="../images/AboutPageImages/LearnMoreButton_Yellow.png" alt="YelloButton" />
+                      </a>
+
                     </div>
                   </div>
 
@@ -49,7 +52,7 @@ export class sectionTwo extends Component {
 
 
 
-              <div className='bottom-container'>
+              
                 <div className='abg_section_2'>
                   <Row>
                     <Col>

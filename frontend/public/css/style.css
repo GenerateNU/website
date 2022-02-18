@@ -415,7 +415,11 @@
     display:flex;
     flex-direction: row; 
     align-items: center;
+    align-content: center;
     /* align-self: flex-start; */
+    justify-content: center;
+    width: 100%;
+
 }
 
 .abg_section_2{
@@ -446,7 +450,7 @@
 
 
 .abg_sectionTwoImageContainer3{
-    padding: 0% 7% 5% 7%;
+    padding: 0% 7% 5% 6%;
     height: 550px;
     width: 700px;
 }
