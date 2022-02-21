@@ -759,7 +759,51 @@ color: #000000;
 }
 
 .dc_links {
-    padding: 6% 20% 6% 20%;
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links:hover{
+    background: url("../images/AboutPageImages/Management_Yellow.png") no-repeat;
+}
+
+.dc_links_Outreach {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Outreach:hover{
+    background: url("../images/AboutPageImages/Outreach_Yellow.png") no-repeat;
+}
+
+.dc_links_Operations {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Operations:hover{
+    background: url("../images/AboutPageImages/Operations_Yellow.png") no-repeat;
+}
+
+.dc_links_Software {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Software:hover{
+    background: url("../images/AboutPageImages/Software_Yellow.png") no-repeat;
+}
+
+.dc_links_Hardware {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Hardware:hover{
+    background: url("../images/AboutPageImages/Hardware_Yellow.png") no-repeat;
+}
+
+.dc_links_Community {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Community:hover{
+    background: url("../images/AboutPageImages/Community_Yellow.png") no-repeat;
 }
 
 .dc_links_container {
@@ -770,10 +814,11 @@ color: #000000;
     height: 152px;
     width: 300px;
     position: relative;
-    padding: 1.5%;
-    margin-top: 15%;
+    padding: 8% 0 0 8%;
+    margin-top: 3%;
     right: 8%;
     background: #00A7E1;
+    text-align: start;
 
     /* Gen Blue */
 }
@@ -796,7 +841,7 @@ color: #000000;
 }
 
 .dc_image {
-    margin-left: 181px;
+    margin-left: 121px;
     width: 553px;
     height: 602px;
     align-items: center;
@@ -823,7 +868,7 @@ color: #000000;
     flex-direction: row; 
     align-content: center;
     justify-content: center;
-    padding: 5% 2% 5% 2%;
+    padding: 10% 2% 10% 2%;
 }
 
 .dc_opr_software{
@@ -831,7 +876,7 @@ color: #000000;
     flex-direction: row; 
     align-content: center;
     justify-content: center;
-    padding: 5% 2% 5% 2%;
+    padding: 10% 2% 10% 2%;
 }
 
 .dc_hardware_comm{
@@ -839,7 +884,7 @@ color: #000000;
     flex-direction: row; 
     align-content: center;
     justify-content: center;
-    padding: 5% 2% 5% 2%;
+    padding: 10% 2% 10% 2%;
 }
 /* 
 .Dir_Info{
@@ -848,6 +893,54 @@ color: #000000;
     text-align: start;
 } */
 
+.dc_text_position{
+
+    /* position: fixed; */
+    width: 245px;
+    height:112px;
+    right: 5%;
+    top: 50%;
+
+    font-family: "Outfit400";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 10% 0 0 35%;
+
+    color: #000000;
+}
+
+.dc_text_email{
+    /* position: absolute; */
+width: 236px;
+height: 34px;
+left: 860px;
+top: 666px;
+
+font-family: "Space Mono";
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+/* line-height: 93.25%; */
+/* or 22px */
+padding: 10% 0 0 35%;
+
+color: #000000;
+}
+
+
+.dc_box_container{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    height: 352px;
+    width: 300px;
+    position: relative;
+    padding: 1.5%;
+    margin-top: 12%;
+    right: 8%;
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 

@@ -29,10 +29,22 @@ export class directorsCarousel extends Component {
                     {/* management team text box */}
 
 
+                    <div className="dc_box_container">
                     <div className="dc_box">
                         <div className="dc_text">
                             <p>KATHRYN</p>
                             <p>MINOR</p>
+                        </div>
+                    </div>
+
+                    
+                        <div className="dc_text_position">
+                            <p>Executive</p>
+                            <p>Director</p> 
+                        </div>
+                        <div className="dc_text_email">
+                            <p>minor.k @ </p>
+                            <p>northeastern.edu</p>
                         </div>
                     </div>
 
@@ -47,27 +59,27 @@ export class directorsCarousel extends Component {
                                 <img src="../images/AboutPageImages/Management_Grey.png" alt="" />
                             </div>
 
-                            <div className="dc_links">
+                            <div className="dc_links_Outreach">
                                 <img src="../images/AboutPageImages/Outreach_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_opr_software'>
-                            <div className="dc_links">
+                            <div className="dc_links_Operations">
                                 <img src="../images/AboutPageImages/Operations_Grey.png" alt="" />
                             </div>
 
-                            <div className="dc_links">
+                            <div className="dc_links_Software">
                                 <img src="../images/AboutPageImages/Software_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_hardware_comm'>
-                            <div className="dc_links">
+                            <div className="dc_links_Hardware">
                                 <img src="../images/AboutPageImages/Hardware_Grey.png" alt="" />
                             </div>
 
-                            <div className="dc_links">
+                            <div className="dc_links_Community">
                                 <img src="../images/AboutPageImages/Community_Grey.png" alt="" />
                             </div>
                         </div>
@@ -99,6 +111,7 @@ export class directorsCarousel extends Component {
                     {/* management team text box */}
 
 
+                    <div className="dc_box_container">
                     <div className="dc_box">
                         <div className="dc_text">
                             <p>AVITAL</p>
@@ -106,6 +119,16 @@ export class directorsCarousel extends Component {
                         </div>
                     </div>
 
+                    
+                        <div className="dc_text_position">
+                            <p>Outreach</p>
+                            <p>Director</p> 
+                        </div>
+                        <div className="dc_text_email">
+                            <p>brodski.a @ </p>
+                            <p>northeastern.edu</p>
+                        </div>
+                    </div>
 
 
 
@@ -168,13 +191,22 @@ export class directorsCarousel extends Component {
 
                     {/* management team text box */}
 
+                    <div className="dc_box_container">
                     <div className="dc_box">
                         <div className="dc_text">
                             <p>ANDREW</p>
                             <p>CATALDO</p>
                         </div>
                     </div>
-
+                    <div className="dc_text_position">
+                            <p>Operations</p>
+                            <p>Director</p> 
+                        </div>
+                        <div className="dc_text_email">
+                            <p>cataldo.a @ </p>
+                            <p>northeastern.edu</p>
+                        </div>
+                    </div>
 
                     {/* management links */}
                     <div className="dc_links_container">
@@ -231,7 +263,7 @@ export class directorsCarousel extends Component {
 
                     {/* management team text box */}
 
-
+                    <div className="dc_box_container">
                     <div className="dc_box">
                         <div className="dc_text">
                             <p>THOMAS</p>
@@ -240,6 +272,15 @@ export class directorsCarousel extends Component {
                     </div>
 
 
+                    <div className="dc_text_position">
+                            <p>Software</p>
+                            <p>Director</p> 
+                        </div>
+                        <div className="dc_text_email">
+                            <p>keith.t @ </p>
+                            <p>northeastern.edu</p>
+                        </div>
+                    </div>
 
 
 
@@ -301,7 +342,7 @@ export class directorsCarousel extends Component {
 
                     {/* management team text box */}
 
-
+                    <div className="dc_box_container">
                     <div className="dc_box">
                         <div className="dc_text">
                             <p>JOSH</p>
@@ -309,6 +350,15 @@ export class directorsCarousel extends Component {
                         </div>
                     </div>
 
+                    <div className="dc_text_position">
+                            <p>Hardware</p>
+                            <p>Director</p> 
+                        </div>
+                        <div className="dc_text_email">
+                            <p>batra.j @ </p>
+                            <p>northeastern.edu</p>
+                        </div>
+                    </div>
 
 
 
@@ -371,6 +421,7 @@ export class directorsCarousel extends Component {
 
                     {/* management team text box */}
 
+                    <div className="dc_box_container">
                     <div className="dc_box">
                         <div className="dc_text">
                             <p>KYLE</p>
@@ -378,6 +429,15 @@ export class directorsCarousel extends Component {
                         </div>
                     </div>
 
+                    <div className="dc_text_position">
+                            <p>Community</p>
+                            <p>Director</p> 
+                        </div>
+                        <div className="dc_text_email">
+                            <p>janko.k @ </p>
+                            <p>northeastern.edu</p>
+                        </div>
+                    </div>
 
                     {/* management links */}
                     <div className="dc_links_container">
