@@ -4,7 +4,6 @@ import LandingPage from './component/landingpage.jsx'
 import AboutPage from './component/AboutPage/aboutPageMain.jsx'
 import ApplyPage from './component/ApplyPage/applyPageMain.jsx'
 
-
 /**
  * The app.js the routes to the different pages are located.
  * @returns 
@@ -18,7 +17,6 @@ function App() {
             <Route path="/" element={<LandingPage />}></Route>
             <Route path="/about" element={<AboutPage />}></Route>
             <Route path="/apply" element={<ApplyPage />}></Route>
-           
           </Routes>
         </div>
       </Router>

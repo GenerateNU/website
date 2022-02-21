@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
-
-export class teamscarousel extends Component {
-    render() { 
-        return ( 
-           
-            <div className="tc_container">
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+export default function teamscarousel() {
+    return (
+        <div class="carousel-wrapper">
+            <Carousel infiniteLoop useKeyboardArrows showStatus={false} showArrows={false} showThumbs={false} showIndicators={false}>
+                <div>
+                <div className="tc_container">
         {/* team font */}
        
        <div className="tc_team">
@@ -60,13 +62,14 @@ export class teamscarousel extends Component {
            
         </div>
         </div>
-
-        
-        
-        
-        )
-
-
-    }    }
-
-    export default teamscarousel 
+                </div>
+                <div>
+                    <img src="" />
+                </div>
+                <div>
+                    <img src="" />
+                </div>
+            </Carousel>
+        </div>
+    );
+}

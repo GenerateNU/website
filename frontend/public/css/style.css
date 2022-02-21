@@ -476,7 +476,7 @@
     color: #424242;
     writing-mode: vertical-lr; 
     transform: rotate(180deg);
-    margin-left: 47px;
+    margin-left: 4%;
     margin-top: 20%;
 }
 
@@ -509,7 +509,7 @@
 }
 
 .tc_links_container {
-    margin-left: 1165px;
+    margin-left: 80%;
     margin-top: -30%;
     
 }
@@ -535,16 +535,17 @@
 }
 
 .tc_image {
-    margin-left: 181px;
+    margin-left: 15%;
     margin-top: -30%;
 }
 
 .tc_button {
-    margin-left: 1100px;
+    margin-left: 80%;
 
 }
 
 
 
 /* ABOUT PAGE CSS END*/
+
 
