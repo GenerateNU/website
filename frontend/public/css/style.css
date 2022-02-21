@@ -708,6 +708,164 @@ color: #000000;
 
 }
 
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Director's Carousel */
+
+
+.dc_team {
+    font-family: "commuters-sans800";
+    font-size: 64px;
+    line-height: 64px;
+    color: #424242;
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
+    margin-left: 47px;
+    text-align: center;
+}
+
+
+.dc_container {
+
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(66, 66, 66, 0.1);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5% 0 0 0 ;
+
+}
+
+#dc_flex-box{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    text-align: center
+}
+
+.dc_management {
+    font-family: 'Outfit400';
+    font-size: 24px;
+    color: #00A7E1;
+    line-height: 48px;
+
+
+}
+
+.dc_links {
+    padding: 6% 20% 6% 20%;
+}
+
+.dc_links_container {
+    padding: 0 8% 0 0;
+}
+
+.dc_box {
+    height: 152px;
+    width: 300px;
+    position: relative;
+    padding: 1.5%;
+    margin-top: 15%;
+    right: 8%;
+    background: #00A7E1;
+
+    /* Gen Blue */
+}
+
+.dc_text {
+    width: 356px;
+    height: 142px;
+    left: 740px;
+    top: 360px;
+
+    font-family: "commuters-sans800";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 111.1%;
+    text-align: start;
+    /* White */
+
+    color: #FFFFFF;
+}
+
+.dc_image {
+    margin-left: 181px;
+    width: 553px;
+    height: 602px;
+    align-items: center;
+    align-content: center;
+    padding: 2% 0% 0% 0%;
+}
+
+/* .dc_dirInfo {
+    left: 44%;
+    top: -70%;
+
+} */
+
+
+.dc_links_container{
+    display:flex;
+    flex-direction: column; 
+    align-content: center;
+    justify-content: center;
+}
+
+.dc_mng_outreach{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 5% 2% 5% 2%;
+}
+
+.dc_opr_software{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 5% 2% 5% 2%;
+}
+
+.dc_hardware_comm{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 5% 2% 5% 2%;
+}
+/* 
+.Dir_Info{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+} */
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     #Aboutpage_Section1{

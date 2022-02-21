@@ -3,6 +3,7 @@ import SectionOne from './sectionOne'
 import SectionTwo from './sectionTwo'
 import SectionThree from './sectionThree'
 import SectionFour from './sectionFour'
+import Directorscarousel from './directorsCarousel'
 import SectionFive from './sectionFive'
 /**
  * This is the main page for about page consisting of all components for the pages. 
@@ -18,6 +19,7 @@ export class aboutPageMain extends Component {
         <SectionTwo />
         <SectionThree />
         <SectionFour />
+        <Directorscarousel/>
         <SectionFive />
       </div>
     );
