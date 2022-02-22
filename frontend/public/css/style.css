@@ -466,7 +466,7 @@
     position: relative;
 }
 
-/* teams carousel */
+/* teams carousel slide */
 
 
 .tc_team {
@@ -491,7 +491,7 @@
 
 }
 
-.tc_management {
+.tc_blue_link {
     font-family: 'Outfit400';
     font-size: 24px;
     color: #00A7E1;
@@ -509,7 +509,7 @@
 }
 
 .tc_links_container {
-    margin-left: 80%;
+    margin-left: 70%;
     margin-top: -30%;
     
 }
@@ -532,19 +532,38 @@
    color: white;
    white-space: normal;
   overflow: hidden;
-}
-
-.tc_image {
-    margin-left: 15%;
-    margin-top: -30%;
+  text-align: left;
 }
 
 .tc_button {
-    margin-left: 80%;
+    margin-left: 65%;
+    margin-top: 0.8%;
+    height: 52.42px !important;
+    width: 212.1px !important;
+
+}
+
+.tc_image {
+    height: 600px !important;
+    width: 867px !important;
+    margin-left: -15%;
+    margin-top: -30%;
+}
+
+
+.tc_container2 {
+    height: 850px;
+    width: 1440px;
+    background-color:
+    white;
+    overflow: hidden;
+    white-space: nowrap;
 
 }
 
 
+
+/* teams carousel slide */
 
 /* ABOUT PAGE CSS END*/
 
