@@ -2,8 +2,8 @@
     /* font-family: Commuters Sans; */
     font-style: normal;
     font-weight: bold;
-    font-size: 160px;
-    line-height: 200px;
+    font-size: 20vh;
+    line-height: 25vh;
 }
 
 .button-overflow {
@@ -15,8 +15,7 @@
     /* font-family: Commuters Sans; */
     font-style: normal;
     font-weight: bold;
-    font-size: 110px;
-    line-height: 137px;
+    font-size: 7vw;
 }
 
 .text-overflow-center {
@@ -29,8 +28,7 @@
     font-family: Space Mono;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 2.5vh;
     text-decoration-line: underline;
 }
 
