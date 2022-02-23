@@ -1,8 +1,8 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row'
-import Container from 'react-bootstrap/Container'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/esm/Button';
 import './orgIntroStyle.css';
 
@@ -18,43 +18,43 @@ export default function OrganizationIntroduction(props) {
     return (
         <Container fluid className='vh-100' style={{backgroundColor: propsBackgroundColor}}>
             <Row className='hm-15'></Row>
-            <Row className=''>
+            <Row className='main-body-height'>
                 <Col xs={2} className='position-relative'>
                     {/* TODO: Figure out how to anchor top of header to top of row */}
-                    <h1 className='header-text end-0 position-absolute'>
+                    {/* <h1 className='header-text end-0 position-absolute'>
                         {sideHeaderText}
-                    </h1>
+                    </h1> */}
                 </Col>
 
-                <Col xs={8} className='position-relative h-100'>
-                    <Row className='bg-secondary position-relative main-body-height p-0 overflow-hidden justify-content-center'>
+                <Col xs={8} className='position-relative'>
+                    <div className='bg-secondary position-relative h-100 overflow-hidden justify-content-center'>
                         {/* TODO: Remove horizontal margins around image */}
-                        <Image src={backgroundImage} className='h-auto tint m-0'></Image>
-                        <div className='position-absolute h-100'>
+                        <Image src={backgroundImage} className='fit-image tint'></Image>
+                        {/* <div className='position-absolute h-100'>
                             <Row className='hm-25'></Row>
                             <Row className='hm-34 px-10 align-items-center'>
-                                <Col className='h-100 align-self-center'>
+                                <Col className='h-100 align-self-center'> */}
                                     {/* TODO: Make image never alter aspect ratio */}
-                                    <Image src={organizationLogo} fluid className='h-100 img-responsive'></Image>
+                                    {/* <Image src={organizationLogo} fluid className='h-100 img-responsive'></Image>
                                 </Col>
-                                <Col xs={7} className='h-100 align-self-center'>
+                                <Col xs={7} className='h-100 align-self-center'> */}
                                     {/* TODO: Make text never spill out div */}
-                                    <p className='m-0 intro-paragraph-text'>{organizationIntro}</p>
+                                    {/* <p className='m-0 intro-paragraph-text'>{organizationIntro}</p>
                                 </Col>
                             </Row>
                             <Row className='hm-25'></Row>
-                        </div>
-                        <div className='triangle position-absolute start-0 bottom-0' 
+                        </div> */}
+                        {/* <div className='triangle position-absolute start-0 bottom-0' 
                                 style={{background: `linear-gradient(to bottom left, 
                                                     rgba(0, 0, 0, 0) 0%, 
                                                     rgba(0, 0, 0, 0) 50%, 
                                                     ${propsBackgroundColor} 50%, 
                                                     ${propsBackgroundColor} 100%)`}}>
-                        </div>
-                        <Button href='#' className='position-absolute learn-more-btn-color rounded-0 outline-none w-auto end-0 bottom-0 button-text'>
+                        </div> */}
+                        {/* <Button href='#' className='position-absolute learn-more-btn-color rounded-0 outline-none w-auto end-0 bottom-0 button-text'>
                             LEARN MORE
-                        </Button>
-                    </Row>
+                        </Button> */}
+                    </div>
                 </Col>
                 <Col xs={2}></Col>
             </Row>

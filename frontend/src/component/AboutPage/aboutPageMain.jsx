@@ -6,6 +6,8 @@ import SectionFour from './sectionFour'
 import SectionFive from './sectionFive'
 import ShermanCenterIntro from './Footer/OrganizationIntroductions/shermanCenterIntro'
 import MosaicIntro from './Footer/OrganizationIntroductions/mosaicIntro'
+import ApplySection from './Footer/ApplySection/applySection'
+
 /**
  * This is the main page for about page consisting of all components for the pages. 
  * They are divided into sections for each of the sections on the ui/ux design.
@@ -21,11 +23,12 @@ export class aboutPageMain extends Component {
         <SectionThree />
         <SectionFour />
         <SectionFive /> */}
-        <ShermanCenterIntro />
-        {/* <MosaicIntro /> */}
+        {/* <ShermanCenterIntro />
+        <MosaicIntro /> */}
+        <ApplySection />
       </div>
     );
   }
 }
 
-export default aboutPageMain
+export default aboutPageMain;
