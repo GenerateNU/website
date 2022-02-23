@@ -23,8 +23,8 @@ export class aboutPageMain extends Component {
         <SectionThree />
         <SectionFour />
         <SectionFive /> */}
-        {/* <ShermanCenterIntro />
-        <MosaicIntro /> */}
+        <ShermanCenterIntro />
+        <MosaicIntro />
         <ApplySection />
       </div>
     );

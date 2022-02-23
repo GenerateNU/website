@@ -17,82 +17,58 @@ export default function OrganizationIntroduction(props) {
     
     return (
         <Container fluid className='vh-100' style={{backgroundColor: propsBackgroundColor}}>
-            <Row className='hm-15'></Row>
-            <Row className='main-body-height'>
-                <Col xs={2} className='position-relative'>
-                    {/* TODO: Figure out how to anchor top of header to top of row */}
-                    {/* <h1 className='header-text end-0 position-absolute'>
+            {/* Place header in top left corner and rotate from that position */}
+            <Row className='hm-15 position-relative'>
+                <Col xs={2} className='p-0 position-relative'>
+                    {/* Horizontally center header in the left column */}
+                    <h1 className='m-0 text-uppercase header-text position-absolute bottom-0 end-50 vertical-text'>
                         {sideHeaderText}
-                    </h1> */}
+                    </h1>
                 </Col>
+            </Row>
 
-                <Col xs={8} className='position-relative'>
-                    <div className='bg-secondary position-relative h-100 overflow-hidden justify-content-center'>
-                        {/* TODO: Remove horizontal margins around image */}
+            {/* Main body with the image background */}
+            <Row className='main-body-height justify-content-center'>
+                <Col xs={8} className='position-relative p-0 h-100 overflow-hidden'>
+                    <div className='position-relative h-100 overflow-hidden justify-content-center'>
+                        {/* Background image */}
                         <Image src={backgroundImage} className='fit-image tint'></Image>
-                        {/* <div className='position-absolute h-100'>
-                            <Row className='hm-25'></Row>
-                            <Row className='hm-34 px-10 align-items-center'>
-                                <Col className='h-100 align-self-center'> */}
-                                    {/* TODO: Make image never alter aspect ratio */}
-                                    {/* <Image src={organizationLogo} fluid className='h-100 img-responsive'></Image>
-                                </Col>
-                                <Col xs={7} className='h-100 align-self-center'> */}
-                                    {/* TODO: Make text never spill out div */}
-                                    {/* <p className='m-0 intro-paragraph-text'>{organizationIntro}</p>
-                                </Col>
-                            </Row>
-                            <Row className='hm-25'></Row>
-                        </div> */}
-                        {/* <div className='triangle position-absolute start-0 bottom-0' 
+
+                        {/* Bottom-left triangle cover-up */}
+                        <div className='triangle position-absolute start-0 bottom-0' 
                                 style={{background: `linear-gradient(to bottom left, 
                                                     rgba(0, 0, 0, 0) 0%, 
                                                     rgba(0, 0, 0, 0) 50%, 
                                                     ${propsBackgroundColor} 50%, 
                                                     ${propsBackgroundColor} 100%)`}}>
-                        </div> */}
-                        {/* <Button href='#' className='position-absolute learn-more-btn-color rounded-0 outline-none w-auto end-0 bottom-0 button-text'>
-                            LEARN MORE
-                        </Button> */}
+                        </div>
+
+                        {/* Overlaying organization logo and text introduction */}
+                        <div className='position-absolute h-100 w-100 start-0 top-0'>
+                            <Row className='hm-25'></Row>
+                            <Row className='hm-34 px-10 align-items-center'>
+                                <Col className='h-100 align-self-center'>
+                                    {/* TODO: Make image never alter aspect ratio */}
+                                    <Image src={organizationLogo} fluid className='h-100 img-responsive'></Image>
+                                </Col>
+                                <Col xs={7} className='h-100 align-self-center'>
+                                    {/* TODO: Make text never spill out div */}
+                                    <p className='m-0 intro-paragraph-text'>{organizationIntro}</p>
+                                </Col>
+                            </Row>
+                            <Row className='hm-25'></Row>
+                        </div>
+
+                        {/* Learn more button */}
+                        <Button href='#' className='position-absolute learn-more-btn-color text-uppercase rounded-0 outline-none w-auto end-0 bottom-0 button-text'>
+                            Learn more
+                        </Button>
                     </div>
                 </Col>
-                <Col xs={2}></Col>
             </Row>
-            <Row className='hm-15'></Row>
-        </Container>
 
-        // <div className='org-intro-container' style={{backgroundColor: propsBackgroundColor}}>
-        //     <div class='horizontal-margin-placeholder'></div>
-        //     <Container fluid className='intro-main-body'>
-        //         <Row className='h-100'>
-        //             <Col xs={2} className='h-100'>
-        //                 <h1 className='header-text rotate-counter-clockwise-90'>{sideHeaderText}</h1>
-        //             </Col>
-        //             <Col className='mx-auto h-100 position-relative image-overflow-cover'>
-        //                 <div className='position-relative'>
-        //                     <Image src={backgroundImage} fluid className='background-center-image'></Image>
-        //                     <div className='overlay'>
-        //                         <div className='background-image-overlay center-vertically'>
-        //                             <Image src={organizationLogo} className='logo-margin'></Image>
-        //                             <p className='intro-paragraph-text-style'>{organizationIntro}</p>
-        //                         </div>
-        //                         <div className='triangle' 
-        //                              style={{background: `linear-gradient(to bottom left, 
-        //                                                     rgba(0, 0, 0, 0) 0%, 
-        //                                                     rgba(0, 0, 0, 0) 50%, 
-        //                                                     ${propsBackgroundColor} 50%, 
-        //                                                     ${propsBackgroundColor} 100%)`}}>
-        //                         </div>
-        //                         <Button href='#' className='rounded-0 learn-more-button button-text-style'>
-        //                             LEARN MORE
-        //                         </Button>
-        //                     </div>
-        //                 </div>
-        //             </Col>
-        //             <Col xs={2}></Col>
-        //         </Row>
-        //     </Container>
-        //     <div class='horizontal-margin-placeholder'></div>
-        // </div>
+            {/* Used to vertically center main body row */}
+            {/* <Row className='hm-15'></Row> */}
+        </Container>
     );
 }

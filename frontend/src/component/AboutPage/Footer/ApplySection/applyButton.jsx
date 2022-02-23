@@ -4,16 +4,16 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/esm/Button';
 import './applySectionStyle.css'
 
-// Abstract component for organization introductions. Consists of a vertical heading to the left,
-// a background center image, and the organization's logo and introduction paragraph in the front.
+// Page-height apply buttons oriented either to the left or right of the page 
+// with vertical headers and apply text on the bottom.
 export default function ApplyButton(props) {
     const header = props.header;
     const bgColor = props.bgColor;
     const textColor = props.textColor;
     const orientation = props.orientation;
+
     let textRot = '';
     let rowSide = ''
-
     if (orientation === 'left') {
         textRot = '270';
         rowSide = 'start';
@@ -27,11 +27,12 @@ export default function ApplyButton(props) {
             <Col xs={9} className={`h-100 p-0 position-absolute ${rowSide}-0`} style={{backgroundColor: bgColor}}>
                 <button href='#' className='w-100 h-100 rounded-0 p-0 border-0 position-relative text-center' 
                                  style={{backgroundColor: bgColor}}>
-                    <h1 className='header-style text-overflow-center w-auto'
+                    <h1 className='text-uppercase header-style text-overflow-center w-auto'
                         style={{color: textColor, transform: `rotate(${textRot}deg)`}}>
                             {header}
                     </h1>
-                    <p className='apply-style text-black position-absolute apply-position'>APPLY</p>
+                    <p className='text-uppercase apply-style text-black position-absolute apply-position'>Apply</p>
+                    {/* TODO: Turn to pointer / be able to click on button only when on visible part of triangle */}
                     <div className={`${orientation}-triangle`} style={{[`border-${orientation}-color`]: bgColor}}></div>
                 </button>
             </Col>
