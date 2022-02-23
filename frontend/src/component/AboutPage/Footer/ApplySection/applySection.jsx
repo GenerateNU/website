@@ -12,10 +12,7 @@ export class ApplySection extends Component {
         return (
             <Container fluid className='vh-100'>
                 <Row className='h-100'>
-                    {/* Student apply button */}
-                    <Col xs={3} className='p-0 position-relative'>
-                        <ApplyButton header='Student' bgColor='#00A7E1' textColor='white' orientation='left' />
-                    </Col>
+                    <ApplyButton header='Student' bgColor='#00A7E1' textColor='white' orientation='left' />
 
                     {/* I AM A center column */}
                     <Col xs={6} className='h-auto text-center my-auto'>
@@ -24,10 +21,7 @@ export class ApplySection extends Component {
                         </span>
                     </Col>
                     
-                    {/* Client apply button */}
-                    <Col xs={3} className='p-0 position-relative'>
-                        <ApplyButton header='Client' bgColor='#FFC539' textColor='black' orientation='right' />
-                    </Col>
+                    <ApplyButton header='Client' bgColor='#FFC539' textColor='black' orientation='right' />
                 </Row>
             </Container>
         );

@@ -18,10 +18,10 @@ export default function OrganizationIntroduction(props) {
     
     return (
         <Container fluid className='vh-100' style={{backgroundColor: propsBackgroundColor}}>
-            {/* Place header in top left corner and rotate from that position */}
+            {/* Places header in top left corner and rotates it from that position */}
             <Row className='hm-15 position-relative'>
                 <Col xs={2} className='p-0 position-relative'>
-                    {/* Horizontally center header in the left column */}
+                    {/* TODO: Horizontally center header in the left column */}
                     <h1 className='m-0 text-uppercase header-text position-absolute bottom-0 end-50 vertical-text'>
                         {sideHeaderText}
                     </h1>
@@ -44,17 +44,16 @@ export default function OrganizationIntroduction(props) {
                                                     ${propsBackgroundColor} 100%)`}}>
                         </div>
 
-                        {/* Overlaying organization logo and text introduction */}
+                        {/* Overlaying logo and introduction paragraph */}
                         <div className='position-absolute h-100 w-100 start-0 top-0'>
                             <Row className='hm-25'></Row>
-                            <Row className='hm-34 px-10 align-items-center'>
-                                <Col className='h-100 align-self-center'>
-                                    {/* TODO: Make image never alter aspect ratio */}
+                            <Row className='hm-34 m-0 px-5 align-items-center justify-content-between'>
+                                <Col className='p-0 h-100 d-flex justify-content-center me-3'>
                                     <Image src={organizationLogo} fluid className='h-100 img-responsive'></Image>
                                 </Col>
-                                <Col xs={7} className='h-100 align-self-center'>
+                                <Col xs={7} className='p-0 h-auto align-self-center'>
                                     {/* TODO: Make text never spill out div */}
-                                    <p className='m-0 intro-paragraph-text'>{organizationIntro}</p>
+                                    <p className='m-0 intro-paragraph-text text-overflow-center'>{organizationIntro}</p>
                                 </Col>
                             </Row>
                             <Row className='hm-25'></Row>
@@ -69,7 +68,7 @@ export default function OrganizationIntroduction(props) {
             </Row>
 
             {/* Used to vertically center main body row */}
-            {/* <Row className='hm-15'></Row> */}
+            <Row className='hm-15'></Row>
         </Container>
     );
 }

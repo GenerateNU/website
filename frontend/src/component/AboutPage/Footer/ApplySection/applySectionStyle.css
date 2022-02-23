@@ -42,6 +42,7 @@
     bottom: 2.5%;
 }
 
+/* TODO: Find way to re-use repeated */
 .left-triangle {
 	left: 100%;
 	top: 50%;
