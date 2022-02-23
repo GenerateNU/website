@@ -3,6 +3,7 @@ import ShermanCenterBg from '../../../assets/images/Sherman_Center_Bg.jpg';
 import ShermanCenterLogo from '../../../assets/images/Sherman_Center_Logo.png';
 import OrganizationIntroduction from './organizationIntro';
 
+// Component introducing the Sherman Center.
 export class ShermanCenterIntro extends Component {
     render() {
         const propsBackgroundColor = '#FF6660';

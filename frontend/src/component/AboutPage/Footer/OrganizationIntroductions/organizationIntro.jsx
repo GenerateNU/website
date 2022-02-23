@@ -8,6 +8,7 @@ import './orgIntroStyle.css';
 
 // Abstract component for organization introductions. Consists of a vertical heading to the left,
 // a background center image, and the organization's logo and introduction paragraph in the front.
+// Leads user to more information about the organization via the learn more button.
 export default function OrganizationIntroduction(props) {
     const propsBackgroundColor = props.bgColor;
     const backgroundImage = props.bgImage;

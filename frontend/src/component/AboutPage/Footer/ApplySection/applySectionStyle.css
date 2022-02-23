@@ -6,8 +6,9 @@
     line-height: 200px;
 }
 
-.overflow-y-hidden {
+.button-overflow {
     overflow-y: hidden;
+    overflow-x: visible;
 }
 
 .header-style {

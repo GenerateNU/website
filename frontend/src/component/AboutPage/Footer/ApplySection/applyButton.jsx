@@ -23,7 +23,7 @@ export default function ApplyButton(props) {
     }
     
     return (
-        <Row className='w-100 m-0 align-items-center position-relative overflow-y-hidden'>
+        <Row className='w-100 m-0 align-items-center position-relative'>
             <Col xs={9} className={`h-100 p-0 position-absolute ${rowSide}-0`} style={{backgroundColor: bgColor}}>
                 <button href='#' className='w-100 h-100 rounded-0 p-0 border-0 position-relative text-center' 
                                  style={{backgroundColor: bgColor}}>
@@ -33,7 +33,9 @@ export default function ApplyButton(props) {
                     </h1>
                     <p className='text-uppercase apply-style text-black position-absolute apply-position'>Apply</p>
                     {/* TODO: Turn to pointer / be able to click on button only when on visible part of triangle */}
-                    <div className={`${orientation}-triangle`} style={{[`border-${orientation}-color`]: bgColor}}></div>
+                    <div className={`${orientation}-triangle zindex-dropdown`} 
+                         style={{[`border-${orientation}-color`]: bgColor}}>
+                    </div>
                 </button>
             </Col>
         </Row>
