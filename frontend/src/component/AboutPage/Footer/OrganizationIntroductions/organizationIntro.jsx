@@ -49,10 +49,9 @@ export default function OrganizationIntroduction(props) {
                             <Row className='hm-25'></Row>
                             <Row className='hm-34 m-0 px-5 align-items-center justify-content-between'>
                                 <Col className='p-0 mh-100 d-flex justify-content-center me-3'>
-                                    <Image src={organizationLogo} fluid className='w-auto h-auto mw-100 mh-100 img-responsive'></Image>
+                                    <Image src={organizationLogo} fluid className='w-auto h-auto mw-100 mh-100'></Image>
                                 </Col>
                                 <Col xs={7} className='p-0 h-auto align-self-center'>
-                                    {/* TODO: Make text never spill out div */}
                                     <p className='m-0 intro-paragraph-text text-overflow-center'>{organizationIntro}</p>
                                 </Col>
                             </Row>
