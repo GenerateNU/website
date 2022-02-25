@@ -1,4 +1,12 @@
 /* LANDING PAGE CSS START HERE*/
+
+html, body{
+    overflow-x: hidden;
+    max-width: 100%;
+    /* min-width: fit-content; */
+}
+
+
 .ldp_margin {
     margin-top: 5%;
     margin-left: 2%;
@@ -265,19 +273,27 @@
 /* !!!!!!!!ABOUT PAGE CSS START!!!!!!!!*/
 
 .abg_responsiveImages {
-    width: 100%;
-    height: auto;
+    width: 105%;
+    height: 105%;
+    left: 60%;
+    top: 40%;
+    padding: 5% 5% 5% 7%;
 }
+
+.abg_responsiveImages1 {
+    width: 110%;
+    height: 110%;
+    left: 40%;
+    top: 20%;
+    padding: 5% 5% 5% 7%;
+
+}
+
 
 /* Section One CSS */
 
-#abg_sectionOne {
-    height: 85vh;
-    /* background: url(../images/test.jpg)no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
+#Aboutpage_Section1 {
+    height: 100vh;
 }
 
 .abg_et_pb_row_0 {
@@ -312,7 +328,7 @@
     left: 30vw;
 }
 
-.abg_sectionOneTitle {
+.Aboutpage_Section1Title {
     position: absolute;
     width: 40%;
     top: 20%;
@@ -325,48 +341,157 @@
 
 /* Section Two CSS */
 
-#abg_sectionTwo {
+#AboutPage_Section2 {
     height: 100%;
     background-color: #FFFFFF;
     padding-top: 20vh;
 }
 
-#abg_infoSection {
+#About_InfoSection {
     /* padding-left: 29%; */
     padding-right: 5%;
 }
 
-.abg_sectionTwoSubheader {
-    font-family: Space Mono;
+
+/* New */
+.AboutPage_Section2Subheader {
+    /* position: absolute; */
+    /* width: 135px; */
+    height: 36px;
+    left: 746px;
+    top: 194px;
+
+    /* font-family: Commuters Sans; */
+    font-style: normal;
     font-weight: bold;
-    font-size: 4rem;
-    padding-left: 1.3%;
+    font-size: 36px;
+    line-height: 100%;
+/* identical to box height, or 36px */
+
+
+    color: #424242;
 }
 
-.abg_sectionTwoHeader {
-    font-size: 7rem;
-    font-weight: bold;
-    padding-left: 1%;
+
+/* New */
+.AboutPage_Section2Header {
+/* position: absolute; */
+    width: 442px;
+    height: 72px;
+    left: 740px;
+    top: 254px;
+
+    /* font-family: Commuters Sans; */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 100%;
+    /* identical to box height, or 72px */
+
+
+    /* Blue */
+
+    color: #00A7E1;
 }
 
-.abg_sectionTwoHeaderInfo {
+.AboutPage_Section2_Top{
+    display:flex;
+    flex-direction: row; 
+    align-items: center;
+    align-content: center;
+    /* align-self: flex-start; */
+    justify-content: center;
+    width: 100%;
+
+}
+
+.AboutPage_Section2_Middle{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    /* align-self: flex-start; */
+}
+
+
+.AboutPage_Section2_Bottom{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    /* align-self: flex-start; */
+
+}
+
+.bottom-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+.Image-WeAreGenerate{
+    padding: 0% 7% 5% 6%;
+    height: 110%;
+    width: 100%;
+}
+
+
+.abg_section_Header1{
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+.abg_section_Header1 Row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    padding-bottom: 5%;
+}
+
+
+.AboutPage_Section2HeaderInfo {
+
+    padding-top: 2%;
+    width: 595px;
+
+    font-style: normal;
     font-weight: normal;
-    font-size: 1.5rem;
-    padding-left: 1.3%;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+    
+    
+    color: #000000;
+
+
+
 }
 
-.abg_sectionTwoImageContainer {
+.Image-RethinkTheSherm {
     text-align: center;
+    align-items: center;
 }
 
-.abg_sectionTwoButton {
-    padding-left: 1%;
 
-}
-
-#abg_infoSection .col {
+#About_InfoSection .col {
     padding: 50px 30px 70px 30px;
+    display: flex;
+    justify-content: center;
 }
+
+
+#About_InfoSection .col .row{
+    padding-bottom: 5%;
+}
+
 
 .abg_headerRow {
     padding: 20px;
@@ -395,63 +520,145 @@
     /* top: 85%; */
 }
 
-.abg_sectionTwoImageHeader {
-    font-size: 4rem;
+.AboutPage_Section2ImageHeader {
+
+    width: 70%;
+    height: 40%;
+    left: 60%;
+    top: 40%;
+
+    /* font-family: Commuters Sans; */
+    font-style: normal;
     font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    /* or 40px */
+
+    text-transform: uppercase;
+    padding-bottom: 2%;
+    /* Grey */
+
+    color: #424242;
+
+    text-decoration: underline;
+    -webkit-text-decoration-color: #00A7E1; /* Safari */  
+    text-decoration-color: #00A7E1;
 }
 
-.abg_sectionTwoImageDescription {
-    font-size: 2rem;
+
+.AboutPage_Section2ImageHeader2 {
+ /* VISIT OUR SHOWCASE */
+
+
+    /* position: absolute; */
+    width: 60%;
+    height: 40%;
+    left: 315px;
+    top: 1650px;
+    /* font-family: Commuters Sans; */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 250%;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #424242;
+    padding-bottom: 2%;
+
+    text-decoration: underline;
+    -webkit-text-decoration-color: #FFC539; /* Safari */  
+    text-decoration-color: #FFC539;
+
+}
+
+
+.AboutPage_Section2ImageDescription {
+    /* font-size: 2rem; */
+    /* position: absolute; */
+    width: 314px;
+    height: 84px;
+    left: 315px;
+    top: 1462px;
+
+    /* Body 1 */
+
+    /* font-family: Outfit; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130%;
+    line-height: 110%;
+    /* or 156% */
+
+
+color: #000000;
 }
 
 /* Section Three CSS */
 
+
 #abg_sectionThree {
     height: 100vh;
+    width: 100%;
     /* background-color: #606060; */
     position: relative;
-    background: url(../images/AboutPageImages/sectionThreeBackground.png)no-repeat center;
+    /* background: url(./images/AboutPageImages/videoplayback.mp4); */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-/* #myVideo {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    left: 0px;
-    top: 0px;
-} */
-
-.abg_sectionThreeContent {
+.Hero_Video_Container {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, .7);
+    /* background: rgba(0, 0, 0, .7); */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 
-.abg_sectionThreeContent h1 {
+
+
+
+
+.Hero_Video_Container h1 {
+ 
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
     text-align: center;
-    font-size: 15vw;
+
+    font-family: Space Mono;
     font-style: normal;
     font-weight: bold;
-    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+    font-size: 292.079px;
+    line-height: 259px;
+
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+
+
+
 }
 
-.abg_sectionThreeButtonDiv {
-    width: 55%;
-    display: flex;
-    justify-content: flex-end;
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: -1;
 }
 
-/* Section Four CSS */
+
+
 
 #abg_sectionFour {
     height: 2550px;
@@ -567,4 +774,313 @@
 
 /* ABOUT PAGE CSS END*/
 
+<<<<<<< HEAD
 
+=======
+.Rectangle {
+    /* position: absolute; */
+    width: 121.14px;
+    height: 121.14px;
+    left: 695.03px;
+    top: 629.41px;
+
+    background: #C4C4C4;
+    transform: matrix(0.71, 0.63, -0.79, 0.71, 0, 0);
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+    html, body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    #Aboutpage_Section1{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        overflow-x: hidden;
+        flex: 1;
+        text-align: center;
+        align-items: center;
+    }
+
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Director's Carousel */
+
+
+.dc_team {
+    font-family: "commuters-sans800";
+    font-size: 64px;
+    line-height: 64px;
+    color: #424242;
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
+    margin-left: 47px;
+    text-align: center;
+}
+
+
+.dc_container {
+
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(66, 66, 66, 0.1);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5% 0 0 0 ;
+
+}
+
+#dc_flex-box{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    text-align: center
+}
+
+.dc_management {
+    font-family: 'Outfit400';
+    font-size: 24px;
+    color: #00A7E1;
+    line-height: 48px;
+
+
+}
+
+.dc_links {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links:hover{
+    background: url("../images/AboutPageImages/Management_Yellow.png") no-repeat;
+}
+
+.dc_links_Outreach {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Outreach:hover{
+    background: url("../images/AboutPageImages/Outreach_Yellow.png") no-repeat;
+}
+
+.dc_links_Operations {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Operations:hover{
+    background: url("../images/AboutPageImages/Operations_Yellow.png") no-repeat;
+}
+
+.dc_links_Software {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Software:hover{
+    background: url("../images/AboutPageImages/Software_Yellow.png") no-repeat;
+}
+
+.dc_links_Hardware {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Hardware:hover{
+    background: url("../images/AboutPageImages/Hardware_Yellow.png") no-repeat;
+}
+
+.dc_links_Community {
+    padding: 6% 25% 6% 25%;
+}
+
+.dc_links_Community:hover{
+    background: url("../images/AboutPageImages/Community_Yellow.png") no-repeat;
+}
+
+.dc_links_container {
+    padding: 0 8% 0 0;
+}
+
+.dc_box {
+    height: 152px;
+    width: 300px;
+    position: relative;
+    padding: 8% 0 0 8%;
+    margin-top: 3%;
+    right: 8%;
+    background: #00A7E1;
+    text-align: start;
+
+    /* Gen Blue */
+}
+
+.dc_text {
+    width: 356px;
+    height: 142px;
+    left: 740px;
+    top: 360px;
+
+    font-family: "commuters-sans800";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 111.1%;
+    text-align: start;
+    /* White */
+
+    color: #FFFFFF;
+}
+
+.dc_image {
+    margin-left: 121px;
+    width: 553px;
+    height: 602px;
+    align-items: center;
+    align-content: center;
+    padding: 2% 0% 0% 0%;
+}
+
+/* .dc_dirInfo {
+    left: 44%;
+    top: -70%;
+
+} */
+
+
+.dc_links_container{
+    display:flex;
+    flex-direction: column; 
+    align-content: center;
+    justify-content: center;
+}
+
+.dc_mng_outreach{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 10% 2% 10% 2%;
+}
+
+.dc_opr_software{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 10% 2% 10% 2%;
+}
+
+.dc_hardware_comm{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 10% 2% 10% 2%;
+}
+/* 
+.Dir_Info{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+} */
+
+.dc_text_position{
+
+    /* position: fixed; */
+    width: 245px;
+    height:112px;
+    right: 5%;
+    top: 50%;
+
+    font-family: "Outfit400";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 10% 0 0 35%;
+
+    color: #000000;
+}
+
+.dc_text_email{
+    /* position: absolute; */
+width: 236px;
+height: 34px;
+left: 860px;
+top: 666px;
+
+font-family: "Space Mono";
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+/* line-height: 93.25%; */
+/* or 22px */
+padding: 10% 0 0 35%;
+
+color: #000000;
+}
+
+
+.dc_box_container{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    height: 352px;
+    width: 300px;
+    position: relative;
+    padding: 1.5%;
+    margin-top: 12%;
+    right: 8%;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #Aboutpage_Section1{
+        width: 100%;
+        height: 100vh;
+
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+>>>>>>> feature/mayan-mishra-Introductory-Banner
