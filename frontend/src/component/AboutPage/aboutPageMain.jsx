@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import SectionOne from './sectionOne'
-import SectionTwo from './sectionTwo'
-import SectionThree from './sectionThree'
-import SectionFour from './sectionFour'
-import SectionFive from './sectionFive'
+// import SectionOne from './sectionOne'
+// import SectionTwo from './sectionTwo'
+// import SectionThree from './sectionThree'
+// import SectionFour from './sectionFour'
+// import SectionFive from './sectionFive'
 import ShermanCenterIntro from './Footer/OrganizationIntroductions/shermanCenterIntro'
 import MosaicIntro from './Footer/OrganizationIntroductions/mosaicIntro'
 import ApplySection from './Footer/ApplySection/applySection'
+import Teamscarousel from './teamsCarousel'
+
 
 /**
  * This is the main page for about page consisting of all components for the pages. 
@@ -23,6 +25,7 @@ export class aboutPageMain extends Component {
         <SectionThree />
         <SectionFour />
         <SectionFive /> */}
+        <Teamscarousel/>
         <ShermanCenterIntro />
         <MosaicIntro />
         <ApplySection />
@@ -32,3 +35,5 @@ export class aboutPageMain extends Component {
 }
 
 export default aboutPageMain;
+
+
