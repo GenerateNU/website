@@ -25,15 +25,13 @@ export default function ApplyButton(props) {
         <Row className='h-100 w-100 m-0 align-items-center position-relative'>
             {/* Use columns to leave room for button arrow */}
             <Col xs={12} sm={9} className={`h-100 p-0 position-absolute ${rowSide}-0`} style={{backgroundColor: bgColor}}>
-                <button href='#' className='w-100 h-100 rounded-0 p-0 border-0 position-relative text-center button-overflow' 
-                                style={{backgroundColor: bgColor}}>
+                <button href='#' className='w-100 h-100 rounded-0 p-0 border-0 position-relative text-center button-overflow' style={{backgroundColor: bgColor}}>
                     <h1 className='text-uppercase apply-header-style apply-header-size text-overflow-center w-auto'
                         style={{color: textColor, transform: `rotate(${textRot}deg)`}}>
                             {header}
                     </h1>
                     <p className='text-uppercase apply-style text-black position-absolute start-50 bottom-0 translate-middle'>Apply</p>
 
-                    {/* Arrow */}
                     <div md className={`d-none d-sm-block ${orientation}-triangle`}
                         style={{[`border-${orientation}-color`]: bgColor}}>
                     </div>

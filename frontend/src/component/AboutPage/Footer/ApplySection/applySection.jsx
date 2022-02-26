@@ -18,7 +18,6 @@ export class ApplySection extends Component {
 
                     {/* I AM A center column */}
                     <Col xs={0} sm={6} className='d-none d-sm-block h-auto text-center my-auto'>
-                        {/*   */}
                         <span className='text-uppercase i-am-a-style i-am-a-size'>
                             I <br/> am <br/> a
                         </span>
