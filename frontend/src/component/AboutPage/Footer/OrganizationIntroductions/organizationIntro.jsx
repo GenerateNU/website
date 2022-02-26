@@ -30,25 +30,16 @@ export default function OrganizationIntroduction(props) {
                 <Col xs={8} className='position-relative p-0 h-100 overflow-hidden'>
                     <div className='position-relative h-100 overflow-hidden justify-content-center'>
                         {/* Background image */}
-                        <Image src={props.bgImage} className='fit-image tint'></Image>
+                        <Image src={props.bgImage} className='h-100 mw-100 mh-100 w-100 fit-image tint'></Image>
 
-                        {/* Bottom-left triangle cover-up */}
-                        {/* <div className='triangle position-absolute start-0 bottom-0' 
-                                style={{background: `linear-gradient(to bottom left, 
-                                                    rgba(0, 0, 0, 0) 0%, 
-                                                    rgba(0, 0, 0, 0) 50%, 
-                                                    ${propsBackgroundColor} 50%, 
-                                                    ${propsBackgroundColor} 100%)`}}>
-                        </div> */}
                         <RightTriangle bgColor={propsBackgroundColor} 
                                        height='25%' 
                                        orientation='bottom left' 
                                        className='start-0 bottom-0' />
 
                         {/* Overlaying logo and introduction paragraph */}
-                        <div className='position-absolute h-100 w-100 start-0 top-0'>
-                            <Row className='hm-25'></Row>
-                            <Row className='hm-34 m-0 px-5 align-items-center justify-content-between'>
+                        <div className='position-absolute h-100 w-100 start-0 top-0 d-flex align-items-center'>
+                            <Row className='mh-50 m-0 px-5 align-items-center justify-content-between'>
                                 <Col className='p-0 mh-100 d-flex justify-content-center me-3'>
                                     <Image src={props.orgLogo} fluid className='w-auto h-auto mw-100 mh-100'></Image>
                                 </Col>
@@ -56,11 +47,10 @@ export default function OrganizationIntroduction(props) {
                                     <p className='m-0 intro-paragraph-text text-overflow-center'>{props.intro}</p>
                                 </Col>
                             </Row>
-                            <Row className='hm-25'></Row>
                         </div>
 
                         {/* Learn more button */}
-                        <Button href='#' className='position-absolute learn-more-btn-color text-uppercase rounded-0 outline-none w-auto end-0 bottom-0 button-text'>
+                        <Button href='#' className='position-absolute learn-more-btn-color border-0 text-uppercase rounded-0 outline-none w-auto end-0 bottom-0 button-text'>
                             Learn more
                         </Button>
                     </div>

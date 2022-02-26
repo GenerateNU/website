@@ -1,24 +1,9 @@
-.row {
-    height: 100%;
-}
-.col {
-    width: 100%;
-}
-
 .main-body-height {
     height: 70%;
 }
 
 .hm-15 {
     height: 15%;
-}
-
-.hm-25 {
-    height: 25%;
-}
-
-.hm-34 {
-    height: 50%;
 }
 
 .px-5 {
@@ -32,10 +17,6 @@
 
 .fit-image {
     object-fit: cover;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
 }
 
 .intro-paragraph-text {
@@ -62,7 +43,6 @@
 
 .learn-more-btn-color {
     background-color: #FFC539;
-    border: 0;
 }
 
 .header-text {
