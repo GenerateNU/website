@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/esm/Button';
+import RightTriangle from '../../../RightTriangle/rightTriangle';
 import './orgIntroStyle.css';
 
 // Abstract component for organization introductions. Consists of a vertical heading to the left,
@@ -11,10 +12,6 @@ import './orgIntroStyle.css';
 // Leads user to more information about the organization via the learn more button.
 export default function OrganizationIntroduction(props) {
     const propsBackgroundColor = props.bgColor;
-    const backgroundImage = props.bgImage;
-    const sideHeaderText = props.header;
-    const organizationLogo = props.orgLogo;
-    const organizationIntro = props.intro;
     
     return (
         <Container fluid className='vh-100' style={{backgroundColor: propsBackgroundColor}}>
@@ -23,7 +20,7 @@ export default function OrganizationIntroduction(props) {
                 <Col xs={2} className='p-0 position-relative'>
                     {/* TODO: Horizontally center header in the left column */}
                     <h1 className='m-0 text-uppercase header-text position-absolute bottom-0 end-50 vertical-text'>
-                        {sideHeaderText}
+                        {props.header}
                     </h1>
                 </Col>
             </Row>
@@ -33,26 +30,30 @@ export default function OrganizationIntroduction(props) {
                 <Col xs={8} className='position-relative p-0 h-100 overflow-hidden'>
                     <div className='position-relative h-100 overflow-hidden justify-content-center'>
                         {/* Background image */}
-                        <Image src={backgroundImage} className='fit-image tint'></Image>
+                        <Image src={props.bgImage} className='fit-image tint'></Image>
 
                         {/* Bottom-left triangle cover-up */}
-                        <div className='triangle position-absolute start-0 bottom-0' 
+                        {/* <div className='triangle position-absolute start-0 bottom-0' 
                                 style={{background: `linear-gradient(to bottom left, 
                                                     rgba(0, 0, 0, 0) 0%, 
                                                     rgba(0, 0, 0, 0) 50%, 
                                                     ${propsBackgroundColor} 50%, 
                                                     ${propsBackgroundColor} 100%)`}}>
-                        </div>
+                        </div> */}
+                        <RightTriangle bgColor={propsBackgroundColor} 
+                                       height='25%' 
+                                       orientation='bottom left' 
+                                       className='start-0 bottom-0' />
 
                         {/* Overlaying logo and introduction paragraph */}
                         <div className='position-absolute h-100 w-100 start-0 top-0'>
                             <Row className='hm-25'></Row>
                             <Row className='hm-34 m-0 px-5 align-items-center justify-content-between'>
                                 <Col className='p-0 mh-100 d-flex justify-content-center me-3'>
-                                    <Image src={organizationLogo} fluid className='w-auto h-auto mw-100 mh-100'></Image>
+                                    <Image src={props.orgLogo} fluid className='w-auto h-auto mw-100 mh-100'></Image>
                                 </Col>
                                 <Col xs={7} className='p-0 h-auto align-self-center'>
-                                    <p className='m-0 intro-paragraph-text text-overflow-center'>{organizationIntro}</p>
+                                    <p className='m-0 intro-paragraph-text text-overflow-center'>{props.intro}</p>
                                 </Col>
                             </Row>
                             <Row className='hm-25'></Row>

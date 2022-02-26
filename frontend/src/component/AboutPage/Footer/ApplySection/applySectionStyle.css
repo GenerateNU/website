@@ -51,10 +51,10 @@
 	position: absolute;
 	border-color: rgba(0, 167, 225, 0);
     border-right-width: 0;
-	border-left-width: 80px;
-    border-top-width: 100px;
-    border-bottom-width: 100px;
-	margin-top: -100px;
+	border-left-width: 8vh;
+    border-top-width: 12vh;
+    border-bottom-width: 12vh;
+	margin-top: -12vh;
 }
 
 .right-triangle {
@@ -67,8 +67,8 @@
 	position: absolute;
 	border-color: rgba(0, 167, 225, 0);
     border-left-width: 0;
-	border-right-width: 80px;
-    border-top-width: 100px;
-    border-bottom-width: 100px;
-	margin-top: -100px;
+	border-right-width: 8vh;
+    border-top-width: 12vh;
+    border-bottom-width: 12vh;
+	margin-top: -12vh;
 }
