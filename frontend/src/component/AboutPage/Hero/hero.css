@@ -14,6 +14,10 @@
 
 .video{
     object-fit: cover;
-    opacity: 0.8;
     z-index: -1;
+}
+
+/* TODO: delete and move to public, copied from AffiliateOrgIntros */
+.tint {
+    filter: brightness(40%);
 }

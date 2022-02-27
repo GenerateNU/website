@@ -3,8 +3,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './applySectionStyle.css'
 
-// Page-height apply buttons oriented either to the left or right of the page 
-// with vertical headers and apply text on the bottom.
+/**
+ * Page-height apply buttons oriented either to the left or right of the page 
+ * with vertical headers and apply text on the bottom.
+ * @param {*} props 
+ * @returns 
+ */
 export default function ApplyButton(props) {
     const header = props.header;
     const bgColor = props.bgColor;

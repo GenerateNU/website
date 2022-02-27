@@ -5,8 +5,10 @@ import Col from 'react-bootstrap/esm/Col';
 import ApplyButton from './applyButton';
 import './applySectionStyle.css'
 
-// Apply page displaying two buttons for students and clients to be led to their
-// respective form pages for applying.
+/**
+ * Apply page displaying two buttons for students and clients to be led to their
+ * respective form pages for applying.
+ */
 export class ApplySection extends Component {
     render() {        
         return (

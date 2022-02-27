@@ -11,11 +11,17 @@
     padding-right: 5%;
 }
 
+/* TODO: delte after move to public */
 .tint {
     filter: brightness(40%);
 }
 
+/* TODO: delete after move to public */
 .fit-image {
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -26,23 +32,6 @@
     font-size: 1.3vw;
     line-height: 175%;
     color: white;
-}
-
-.triangle {
-    aspect-ratio: 1 / 1;
-    height: 25%;
-}
-
-.button-text {
-    font-family: Space Mono;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2vw;
-    color: #111111;
-}
-
-.learn-more-btn-color {
-    background-color: #FFC539;
 }
 
 .header-text {
