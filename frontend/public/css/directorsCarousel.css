@@ -1,0 +1,242 @@
+/* Director's Carousel */
+
+
+.dc_team {
+    font-family: "commuters-sans800";
+    font-size: 64px;
+    line-height: 64px;
+    color: #424242;
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
+    margin-left: 47px;
+    text-align: center;
+}
+
+
+.dc_container {
+
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(66, 66, 66, 0.1);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5% 0 0 0 ;
+
+}
+
+#dc_flex-box{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    text-align: center
+}
+
+.dc_management {
+    font-family: 'Outfit400';
+    font-size: 24px;
+    color: #00A7E1;
+    line-height: 48px;
+
+
+}
+
+
+.dc_links {
+    padding: 5% 12% 5% 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.dc_links:hover{
+    background: url("../images/AboutPageImages/Management_Yellow.png") no-repeat;
+}
+
+.dc_links_Outreach {
+    padding: 5% 0% 5% 12%;
+    height: 100%;
+    width: 100%;
+}
+
+.dc_links_Outreach:hover{
+    background: url("../images/AboutPageImages/Outreach_Yellow.png") no-repeat;
+}
+
+.dc_links_Operations {
+    padding: 5% 12% 5% 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.dc_links_Operations:hover{
+    background: url("../images/AboutPageImages/Operations_Yellow.png") no-repeat;
+}
+
+.dc_links_Software {
+    padding: 5% 0% 5% 12%;
+    height: 100%;
+    width: 100%;
+}
+
+.dc_links_Software:hover{
+    background: url("../images/AboutPageImages/Software_Yellow.png") no-repeat;
+}
+
+.dc_links_Hardware {
+    padding: 5% 12% 5% 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.dc_links_Hardware:hover{
+    background: url("../images/AboutPageImages/Hardware_Yellow.png") no-repeat;
+}
+
+.dc_links_Community {
+    padding: 5% 0% 5% 12%;
+    height: 100%;
+    width: 100%;
+}
+
+.dc_links_Community:hover{
+    background: url("../images/AboutPageImages/Community_Yellow.png") no-repeat;
+}
+
+.dc_links_container {
+    padding: 12% 7% 0 0;
+    height: 20%;
+    width: 18%;
+}
+
+.dc_box {
+    height: 152px;
+    width: 300px;
+    position: relative;
+    padding: 8% 0 0 8%;
+    margin-top: 3%;
+    right: 8%;
+    background: #00A7E1;
+    text-align: start;
+
+    /* Gen Blue */
+}
+
+.dc_text {
+    width: 356px;
+    height: 142px;
+    left: 250%;
+    top: 100%;
+
+    font-family: "commuters-sans800";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 111.1%;
+    text-align: start;
+    /* White */
+
+    color: #FFFFFF;
+}
+
+.dc_image {
+    margin-left: 121px;
+    width: 503px;
+    height: 602px;
+    align-items: center;
+    align-content: center;
+    padding: 2% 0% 0% 0%;
+}
+
+/* .dc_dirInfo {
+    left: 44%;
+    top: -70%;
+
+} */
+
+
+.dc_links_container{
+    display:flex;
+    flex-direction: column; 
+    align-content: center;
+    justify-content: center;
+}
+
+.dc_mng_outreach{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 10% 2% 10% 2%;
+}
+
+.dc_opr_software{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 10% 2% 10% 2%;
+}
+
+.dc_hardware_comm{
+    display:flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: center;
+    padding: 10% 2% 10% 2%;
+}
+/* 
+.Dir_Info{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+} */
+
+.dc_text_position{
+
+    /* position: fixed; */
+    width: 245px;
+    height:112px;
+    right: 5%;
+    top: 50%;
+
+    font-family: "Outfit400";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 10% 0 0 35%;
+
+    color: #000000;
+}
+
+.dc_text_email{
+    /* position: absolute; */
+width: 236px;
+height: 34px;
+left: 860px;
+top: 666px;
+
+font-family: "Space Mono";
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+/* line-height: 93.25%; */
+/* or 22px */
+padding: 10% 0 0 35%;
+
+color: #000000;
+}
+
+
+.dc_box_container{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    height: 352px;
+    width: 300px;
+    position: relative;
+    padding: 1.5%;
+    margin-top: 12%;
+    right: 7%;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------- */
