@@ -1,0 +1,23 @@
+.header-style {
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+.header-size {
+    font-size: 22vw;
+    line-height: 22vw; 
+}
+
+.video{
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* TODO: delete and move to public, copied from AffiliateOrgIntros */
+.tint {
+    filter: brightness(40%);
+}

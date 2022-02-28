@@ -1,0 +1,72 @@
+/* client carousel slide */
+
+.cl_container {
+    height: 850px;
+    width: 1440px;
+    background-color:
+    rgba(255, 197, 57, 0.1);
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+
+.cl_arrowup {
+    height: 31px !important;
+    width: 30px !important;
+    margin-left: 70%;
+    margin-top: -35%;
+}
+
+.cl_arrowdown {
+    height: 31px !important;
+    width: 30px !important;
+    margin-left: 70%;
+    transform: rotate(180deg);
+    margin-top: -10%;
+}
+
+.cl_button {
+    margin-left: 65%;
+    margin-top: 8.5%;
+    height: 52.42px !important;
+    width: 212.1px !important;
+
+}
+
+
+.cl_box {
+    background-color:
+    #FFC539;
+    height: 220px;
+    width: 616px;
+    position: relative;
+    padding: 25px;
+    margin-left: 50%;
+   margin-top: -31%;
+   position: relative;
+}
+
+
+.cl_rooted_text {
+   font-family: "commuters-sans700";
+   font-size: 48px;
+   line-height: 53.33px;
+   text-align: right;
+   float: left;
+   margin-top: 5%;
+   color: white;
+}
+
+
+.cl_text {
+    font-family: "Outfit400";
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    white-space: normal;
+  overflow: hidden;
+  padding: 35px;
+ }
+
+/* client carousel slide */
