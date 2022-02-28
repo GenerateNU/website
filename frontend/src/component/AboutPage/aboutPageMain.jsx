@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import SectionOne from './sectionOne'
-import SectionTwo from './sectionTwo'
-import SectionThree from './sectionThree'
-import SectionFour from './sectionFour'
-import Directorscarousel from './directorsCarousel'
-import SectionFive from './sectionFive'
-import ShermanCenterIntro from './Footer/OrganizationIntroductions/shermanCenterIntro'
-import MosaicIntro from './Footer/OrganizationIntroductions/mosaicIntro'
-import ApplySection from './Footer/ApplySection/applySection'
-import Teamscarousel from './teamsCarousel'
+import Hero from './Hero/hero'
+import GenerateIntro from './GenerateIntroBanner/generateIntroBanner'
+import DirectorsCarousel from './directorsCarousel'
+import ShermanCenterIntro from './AffiliateOrgIntros/shermanCenterIntro'
+import MosaicIntro from './AffiliateOrgIntros/mosaicIntro'
+import ApplySection from './ApplySection/applySection'
+import TeamsCarousel from './teamsCarousel'
 
 //  * This is the main page for about page consisting of all components for the pages. 
 //  * They are divided into sections for each of the sections on the ui/ux design.
@@ -18,20 +15,15 @@ import Teamscarousel from './teamsCarousel'
 export class aboutPageMain extends Component {
   render() {
     return (
-      <div id="abg_aboutPage">
-        <SectionOne />
-        <SectionTwo />
-        {/* <SectionThree /> */}
-        {/* <SectionFour /> */}
-        {/* <SectionFive /> */}
-        <Teamscarousel/>
-        <Directorscarousel/>
-        {/* <SectionFive /> */}
-        <ShermanCenterIntro />
-        <MosaicIntro />
-        <ApplySection />
-
-      </div>
+        <div id="abg_aboutPage">
+            <Hero />
+            <GenerateIntro />
+            <TeamsCarousel/>
+            <DirectorsCarousel/>
+            <ShermanCenterIntro />
+            <MosaicIntro />
+            <ApplySection />
+        </div>
     );
   }
 }
