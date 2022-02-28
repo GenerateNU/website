@@ -17,7 +17,7 @@ export default function teamscarousel() {
 
                 {/* image */}
                 <div>
-                <img className="tc_image" src="../images/AboutPageImages/Teams_Management.jpg"></img>
+                <img className="tc_image" src="../images/LandingPageImages/Teams_Management.jpg"></img>
                 </div>
 
 
@@ -59,7 +59,7 @@ export default function teamscarousel() {
 
                 {/* button */}
                 <div>
-                <img className="tc_button" src="../images/AboutPageImages/teamButton.png"></img>
+                <img className="tc_button" src="../images/LandingPageImages/teamButton.png"></img>
                 </div>
 
                 </div>
@@ -79,7 +79,7 @@ export default function teamscarousel() {
 
                 {/* image */}
                 <div>
-                <img className="tc_image" src="../images/AboutPageImages/Teams_Outreach.jpg"></img>
+                <img className="tc_image" src="../images/LandingPageImages/Teams_Outreach.jpg"></img>
                 </div>
 
 
@@ -132,7 +132,7 @@ export default function teamscarousel() {
 
                 {/* image */}
                 <div>
-                <img className="tc_image" src="../images/AboutPageImages/Teams_Operations.jpg"></img>
+                <img className="tc_image" src="../images/LandingPageImages/Teams_Operations.jpg"></img>
                 </div>
 
 
@@ -186,7 +186,7 @@ export default function teamscarousel() {
 
                 {/* image */}
                 <div>
-                <img className="tc_image" src="../images/AboutPageImages/Teams_Software.jpg"></img>
+                <img className="tc_image" src="../images/LandingPageImages/Teams_Software.jpg"></img>
                 </div>
 
 
@@ -240,7 +240,7 @@ export default function teamscarousel() {
 
                 {/* image */}
                 <div>
-                <img className="tc_image" src="../images/AboutPageImages/Teams_Hardware.jpg"></img>
+                <img className="tc_image" src="../images/LandingPageImages/Teams_Hardware.jpg"></img>
                 </div>
 
 
@@ -293,7 +293,7 @@ export default function teamscarousel() {
 
                 {/* image */}
                 <div>
-                <img className="tc_image" src="../images/AboutPageImages/Teams_Community.jpg"></img>
+                <img className="tc_image" src="../images/LandingPageImages/Teams_Community.jpg"></img>
                 </div>
 
 

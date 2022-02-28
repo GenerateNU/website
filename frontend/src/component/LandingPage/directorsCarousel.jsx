@@ -22,7 +22,7 @@ export class directorsCarousel extends Component {
 
                     {/* image */}
                     <div className="dc_image">
-                        <img src="../images/AboutPageImages/Director_Kat.JPG" width="90%" height="100%"></img>
+                        <img src="../images/LandingPageImages/Director_Kat.JPG" width="90%" height="100%"></img>
 
                     </div>
 
@@ -56,31 +56,31 @@ export class directorsCarousel extends Component {
                     <div className="dc_links_container">
                         <div className='dc_mng_outreach'>
                             <div className="dc_links">
-                                <img src="../images/AboutPageImages/Management_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Management_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Outreach">
-                                <img src="../images/AboutPageImages/Outreach_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Outreach_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_opr_software'>
                             <div className="dc_links_Operations">
-                                <img src="../images/AboutPageImages/Operations_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Operations_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Software">
-                                <img src="../images/AboutPageImages/Software_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Software_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_hardware_comm'>
                             <div className="dc_links_Hardware">
-                                <img src="../images/AboutPageImages/Hardware_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Hardware_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Community">
-                                <img src="../images/AboutPageImages/Community_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Community_Grey.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ export class directorsCarousel extends Component {
 
                     {/* image */}
                     <div className="dc_image">
-                        <img src="../images/AboutPageImages/Director_Avital.JPG" width="90%" height="100%"></img>
+                        <img src="../images/LandingPageImages/Director_Avital.JPG" width="90%" height="100%"></img>
 
                     </div>
 
@@ -137,31 +137,31 @@ export class directorsCarousel extends Component {
                     <div className="dc_links_container">
                         <div className='dc_mng_outreach'>
                             <div className="dc_links">
-                                <img src="../images/AboutPageImages/Management_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Management_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Outreach">
-                                <img src="../images/AboutPageImages/Outreach_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Outreach_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_opr_software'>
                             <div className="dc_links_Operations">
-                                <img src="../images/AboutPageImages/Operations_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Operations_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Software">
-                                <img src="../images/AboutPageImages/Software_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Software_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_hardware_comm'>
                             <div className="dc_links_Hardware">
-                                <img src="../images/AboutPageImages/Hardware_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Hardware_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Community">
-                                <img src="../images/AboutPageImages/Community_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Community_Grey.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -185,7 +185,7 @@ export class directorsCarousel extends Component {
 
                     {/* image */}
                     <div className="dc_image">
-                        <img src="../images/AboutPageImages/Director_Andrew.JPG" width="90%" height="100%"></img>
+                        <img src="../images/LandingPageImages/Director_Andrew.JPG" width="90%" height="100%"></img>
 
                     </div>
 
@@ -212,31 +212,31 @@ export class directorsCarousel extends Component {
                     <div className="dc_links_container">
                         <div className='dc_mng_outreach'>
                             <div className="dc_links">
-                                <img src="../images/AboutPageImages/Management_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Management_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Outreach">
-                                <img src="../images/AboutPageImages/Outreach_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Outreach_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_opr_software'>
                             <div className="dc_links_Operations">
-                                <img src="../images/AboutPageImages/Operations_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Operations_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Software">
-                                <img src="../images/AboutPageImages/Software_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Software_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_hardware_comm'>
                             <div className="dc_links_Hardware">
-                                <img src="../images/AboutPageImages/Hardware_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Hardware_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Community">
-                                <img src="../images/AboutPageImages/Community_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Community_Grey.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -257,7 +257,7 @@ export class directorsCarousel extends Component {
 
                     {/* image */}
                     <div className="dc_image">
-                        <img src="../images/AboutPageImages/Director_Thomas.JPG" width="90%" height="100%"></img>
+                        <img src="../images/LandingPageImages/Director_Thomas.JPG" width="90%" height="100%"></img>
 
                     </div>
 
@@ -288,31 +288,31 @@ export class directorsCarousel extends Component {
                     <div className="dc_links_container">
                         <div className='dc_mng_outreach'>
                             <div className="dc_links">
-                                <img src="../images/AboutPageImages/Management_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Management_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Outreach">
-                                <img src="../images/AboutPageImages/Outreach_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Outreach_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_opr_software'>
                             <div className="dc_links_Operations">
-                                <img src="../images/AboutPageImages/Operations_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Operations_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Software">
-                                <img src="../images/AboutPageImages/Software_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Software_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_hardware_comm'>
                             <div className="dc_links_Hardware">
-                                <img src="../images/AboutPageImages/Hardware_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Hardware_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Community">
-                                <img src="../images/AboutPageImages/Community_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Community_Grey.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -336,7 +336,7 @@ export class directorsCarousel extends Component {
 
                     {/* image */}
                     <div className="dc_image">
-                        <img src="../images/AboutPageImages/Director_Josh.JPG" width="90%" height="100%"></img>
+                        <img src="../images/LandingPageImages/Director_Josh.JPG" width="90%" height="100%"></img>
 
                     </div>
 
@@ -367,31 +367,31 @@ export class directorsCarousel extends Component {
                     <div className="dc_links_container">
                         <div className='dc_mng_outreach'>
                             <div className="dc_links">
-                                <img src="../images/AboutPageImages/Management_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Management_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Outreach">
-                                <img src="../images/AboutPageImages/Outreach_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Outreach_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_opr_software'>
                             <div className="dc_links_Operations">
-                                <img src="../images/AboutPageImages/Operations_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Operations_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Software">
-                                <img src="../images/AboutPageImages/Software_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Software_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_hardware_comm'>
                             <div className="dc_links_Hardware">
-                                <img src="../images/AboutPageImages/Hardware_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Hardware_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Community">
-                                <img src="../images/AboutPageImages/Community_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Community_Grey.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -415,7 +415,7 @@ export class directorsCarousel extends Component {
 
                     {/* image */}
                     <div className="dc_image">
-                        <img src="../images/AboutPageImages/Director_Andrew.JPG" width="90%" height="100%"></img>
+                        <img src="../images/LandingPageImages/Director_Andrew.JPG" width="90%" height="100%"></img>
 
                     </div>
 
@@ -443,31 +443,31 @@ export class directorsCarousel extends Component {
                     <div className="dc_links_container">
                         <div className='dc_mng_outreach'>
                             <div className="dc_links">
-                                <img src="../images/AboutPageImages/Management_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Management_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Outreach">
-                                <img src="../images/AboutPageImages/Outreach_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Outreach_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_opr_software'>
                             <div className="dc_links_Operations">
-                                <img src="../images/AboutPageImages/Operations_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Operations_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Software">
-                                <img src="../images/AboutPageImages/Software_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Software_Grey.png" alt="" />
                             </div>
                         </div>
 
                         <div className='dc_hardware_comm'>
                             <div className="dc_links_Hardware">
-                                <img src="../images/AboutPageImages/Hardware_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Hardware_Grey.png" alt="" />
                             </div>
 
                             <div className="dc_links_Community">
-                                <img src="../images/AboutPageImages/Community_Grey.png" alt="" />
+                                <img src="../images/LandingPageImages/Community_Grey.png" alt="" />
                             </div>
                         </div>
                     </div>
