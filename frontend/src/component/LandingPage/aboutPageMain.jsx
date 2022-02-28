@@ -6,6 +6,7 @@ import ShermanCenterIntro from './AffiliateOrgIntros/shermanCenterIntro'
 import MosaicIntro from './AffiliateOrgIntros/mosaicIntro'
 import ApplySection from './ApplySection/applySection'
 import TeamsCarousel from './teamsCarousel'
+import ClientCarousel from './clientCarousel'
 
 //  * This is the main page for about page consisting of all components for the pages. 
 //  * They are divided into sections for each of the sections on the ui/ux design.
@@ -19,6 +20,7 @@ export class aboutPageMain extends Component {
             <Hero />
             <GenerateIntro />
             <TeamsCarousel/>
+            <ClientCarousel/>
             <DirectorsCarousel/>
             <ShermanCenterIntro />
             <MosaicIntro />
