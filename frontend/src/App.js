@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 //import LandingPage from './component/landingpage.jsx'
-import LandingPage from './component/LandingPage/aboutPageMain.jsx'
+import LandingPage from './component/LandingPage/landingPage.jsx'
 import ApplyPage from './component/ApplyPage/applyPageMain.jsx'
 
 /**

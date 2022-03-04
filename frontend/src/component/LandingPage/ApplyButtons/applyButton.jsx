@@ -1,7 +1,7 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './applySectionStyle.css'
+import './applyButtons.css'
 
 /**
  * Page-height apply buttons oriented either to the left or right of the page 

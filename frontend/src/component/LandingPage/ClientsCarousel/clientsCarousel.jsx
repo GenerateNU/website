@@ -1,9 +1,10 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import './clientsCarousel.css';
 
 // npm install react-responsive-carousel --save
-export default function clientcarousel() {
+export default function ClientsCarousel() {
     return (
         <div class="carousel-wrapper">
             <Carousel infiniteLoop useKeyboardArrows showStatus={false} showArrows={false} showThumbs={false} showIndicators={false}>

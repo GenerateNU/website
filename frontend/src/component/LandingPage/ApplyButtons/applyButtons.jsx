@@ -3,13 +3,13 @@ import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import ApplyButton from './applyButton';
-import './applySectionStyle.css'
+import './applyButtons.css'
 
 /**
  * Apply page displaying two buttons for students and clients to be led to their
  * respective form pages for applying.
  */
-export class ApplySection extends Component {
+export class ApplyButtons extends Component {
     render() {        
         return (
             <Container fluid className='vh-100'>
@@ -34,4 +34,4 @@ export class ApplySection extends Component {
     }
 }
 
-export default ApplySection;
+export default ApplyButtons;

@@ -49,7 +49,7 @@
 }
 
 .dc_links:hover{
-    background: url("../images/LandingPageImages/Management_Yellow.png") no-repeat;
+    background: url("../../assets/images/Management_Yellow.png") no-repeat;
 }
 
 .dc_links_Outreach {
@@ -59,7 +59,7 @@
 }
 
 .dc_links_Outreach:hover{
-    background: url("../images/LandingPageImages/Outreach_Yellow.png") no-repeat;
+    background: url("../../assets/images/Outreach_Yellow.png") no-repeat;
 }
 
 .dc_links_Operations {
@@ -69,7 +69,7 @@
 }
 
 .dc_links_Operations:hover{
-    background: url("../images/LandingPageImages/Operations_Yellow.png") no-repeat;
+    background: url("../../assets/images/Operations_Yellow.png") no-repeat;
 }
 
 .dc_links_Software {
@@ -79,7 +79,7 @@
 }
 
 .dc_links_Software:hover{
-    background: url("../images/LandingPageImages/Software_Yellow.png") no-repeat;
+    background: url("../../assets/images/Software_Yellow.png") no-repeat;
 }
 
 .dc_links_Hardware {
@@ -89,7 +89,7 @@
 }
 
 .dc_links_Hardware:hover{
-    background: url("../images/LandingPageImages/Hardware_Yellow.png") no-repeat;
+    background: url("../../assets/images/Hardware_Yellow.png") no-repeat;
 }
 
 .dc_links_Community {
@@ -99,7 +99,7 @@
 }
 
 .dc_links_Community:hover{
-    background: url("../images/LandingPageImages/Community_Yellow.png") no-repeat;
+    background: url("../../assets/images/Community_Yellow.png") no-repeat;
 }
 
 .dc_links_container {
@@ -147,13 +147,6 @@
     padding: 2% 0% 0% 0%;
 }
 
-/* .dc_dirInfo {
-    left: 44%;
-    top: -70%;
-
-} */
-
-
 .dc_links_container{
     display:flex;
     flex-direction: column; 
@@ -184,12 +177,6 @@
     justify-content: center;
     padding: 10% 2% 10% 2%;
 }
-/* 
-.Dir_Info{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-} */
 
 .dc_text_position{
 
@@ -210,23 +197,19 @@
 }
 
 .dc_text_email{
-    /* position: absolute; */
-width: 236px;
-height: 34px;
-left: 860px;
-top: 666px;
+    width: 236px;
+    height: 34px;
+    left: 860px;
+    top: 666px;
 
-font-family: "Space Mono";
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-/* line-height: 93.25%; */
-/* or 22px */
-padding: 10% 0 0 35%;
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    padding: 10% 0 0 35%;
 
-color: #000000;
+    color: #000000;
 }
-
 
 .dc_box_container{
     display: flex;
@@ -239,4 +222,3 @@ color: #000000;
     margin-top: 12%;
     right: 7%;
 }
-/* ---------------------------------------------------------------------------------------------------------------------------- */

@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import Container from 'react-bootstrap/Container'
-import Col from 'react-bootstrap/Col'
-import Carousel from 'react-bootstrap/Carousel'
+import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Carousel from 'react-bootstrap/Carousel';
+import './directorsCarousel.css';
 
-export class directorsCarousel extends Component {
+class DirectorsCarousel extends Component {
     render() {
         return (
 
@@ -22,7 +23,7 @@ export class directorsCarousel extends Component {
 
                     {/* image */}
                     <div className="dc_image">
-                        <img src="../images/LandingPageImages/Director_Kat.JPG" width="90%" height="100%"></img>
+                        <img src="../../images/LandingPageImages/Director_Kat.JPG" width="90%" height="100%"></img>
 
                     </div>
 
@@ -487,4 +488,4 @@ export class directorsCarousel extends Component {
     }
 }
 
-export default directorsCarousel
+export default DirectorsCarousel;
