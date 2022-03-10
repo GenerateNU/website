@@ -15,14 +15,14 @@ export class LandingPage extends Component {
   render() {
     return (
         <div id="abg_aboutPage">
-            <Hero />
+            {/* <Hero />
             <GenerateIntro />
-            <TeamsCarousel/>
+            <TeamsCarousel/> */}
             <ClientsCarousel/>
-            <DirectorsCarousel/>
+            {/* <DirectorsCarousel/>
             <ShermanCenterIntro />
             <MosaicIntro />
-            <ApplyButtons />
+            <ApplyButtons /> */}
         </div>
     );
   }
