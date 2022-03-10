@@ -9,17 +9,19 @@ import PhotoCutOff from '../../../PhotoCutOff';
  * @returns 
  */
 export default function Client(props) {    
+    const data = props.data;
+
     return (
         <Row className='m-0 h-100'>
             <Col xs={9} className='p-0 pe-3 h-100 d-flex justify-content-center'>
-                <PhotoCutOff image={props.image} direction='back' cutOffBgColor='#FFF9EB' />
+                <PhotoCutOff image={data.image} direction='back' cutOffBgColor='#FFF9EB' />
                 <Row className='m-0 p-4 position-absolute text-box-style end-0 top-50 align-items-center'>
                     {/* TODO: Figure out how to center Rooted Living in left column */}
                     <Col xs={5} className='p-0 d-flex justify-content-center'> 
-                        <h1 className='m-0 text-uppercase client-name'>{props.clientProject}</h1>
+                        <h1 className='m-0 text-uppercase client-name'>{data.name}</h1>
                     </Col>
                     <Col xs={7} className='p-0 ps-4 d-flex justify-content-center client-text'>
-                        {props.text}
+                        {data.text}
                     </Col>
                 </Row>
             </Col>  

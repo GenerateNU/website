@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Hero from './Hero';
 import GenerateIntro from './GenerateIntroBanner';
-import TeamsCarousel from './Carousels/TeamsCarousel/teamsCarousel';
-import ClientsCarousel from './Carousels/ClientsCarousel/clientsCarousel';
-import DirectorsCarousel from './Carousels/DirectorsCarousel/directorsCarousel';
+import TeamsCarousel from './Carousels/TeamsCarousel';
+import ClientsCarousel from './Carousels/ClientsCarousel';
+import DirectorsCarousel from './Carousels/DirectorsCarousel';
 import ShermanCenterIntro from './AffiliateOrgIntros/shermanCenterIntro';
 import MosaicIntro from './AffiliateOrgIntros/mosaicIntro';
 import ApplyButtons from './ApplyButtons';
@@ -16,8 +16,8 @@ export class LandingPage extends Component {
     return (
         <div id="abg_aboutPage">
             {/* <Hero />
-            <GenerateIntro />
-            <TeamsCarousel/> */}
+            <GenerateIntro /> */}
+            <TeamsCarousel/>
             <ClientsCarousel/>
             {/* <DirectorsCarousel/>
             <ShermanCenterIntro />

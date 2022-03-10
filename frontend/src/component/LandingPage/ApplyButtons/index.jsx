@@ -9,7 +9,7 @@ import './style.css'
  * Apply page displaying two buttons for students and clients to be led to their
  * respective form pages for applying.
  */
-export class ApplyButtons extends Component {
+export default class ApplyButtons extends Component {
     render() {        
         return (
             <Container fluid className='vh-100'>
@@ -33,5 +33,3 @@ export class ApplyButtons extends Component {
         );
     }
 }
-
-export default ApplyButtons;

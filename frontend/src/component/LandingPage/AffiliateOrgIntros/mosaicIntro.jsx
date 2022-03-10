@@ -6,7 +6,7 @@ import mosaicLogo from '../../assets/images/Mosaic_Logo.png';
 /**
  * Component introducing Mosaic.
  */
-export class MosaicIntro extends Component {
+export default class MosaicIntro extends Component {
     render() {
         const introduction = <span><strong>MOSAIC</strong> is Northeastern’s diverse community of driven multidisciplinary individuals who share a passion for entrepreneurship, collaboration and leadership. Offering disciplines and skills that benefit the university’s entrepreneurship community. </span>;
         
@@ -19,5 +19,3 @@ export class MosaicIntro extends Component {
         );
     }
 }
-  
-export default MosaicIntro;
