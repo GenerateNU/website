@@ -3,8 +3,8 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import weAreGenerate from '../../assets/images/We_Are_Gen.png'
-import GenerateButton from '../../Buttons/buttons';
-import RightTriangle from '../../RightTriangle/rightTriangle';
+import GenerateButton from '../../Buttons';
+import RightTriangle from '../../RightTriangle';
 import './generateIntro.css';
 
 /**
@@ -28,7 +28,7 @@ export class GenerateSummary extends Component {
                     <p className="m-0 mb-4 generate-info-style ">
                         In 2015, Bailey Kane and Mina Iskarous found a hole in Northeastern University’s (NEU’s) entrepreneurial ecosystem; they identified a lack of opportunities for student ventures to elicit support from product builders. Generate was their answer. We provide engineering and software product design to Northeastern’s ecosystem. Providing opportunities for ventures to elicit support from student product builders, and for students to gain experince working on real ventures.
                     </p>
-                    <GenerateButton textColor='black' bgColor='#FFC539' text='Learn More' cutCorners cornerColor='white' />
+                    <GenerateButton textColor='black' bgColor='#FFC539' text='Learn More' cutOff cutOffBgColor='white' />
                 </Col>
             </Row>
         );

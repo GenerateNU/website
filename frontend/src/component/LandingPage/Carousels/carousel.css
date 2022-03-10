@@ -1,0 +1,10 @@
+.carousel-header {
+    font-family: "commuters-sans800";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 4.5vw;
+    line-height: 100%;
+    color: #424242;
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
-import RightTriangle from '../../RightTriangle/rightTriangle';
+import RightTriangle from '../../RightTriangle';
 import visitShowcase from '../../assets/images/Visit_Showcase.jpg';
 import './generateIntro.css';
 

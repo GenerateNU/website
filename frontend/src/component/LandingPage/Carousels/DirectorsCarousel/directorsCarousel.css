@@ -49,7 +49,7 @@
 }
 
 .dc_links:hover{
-    background: url("../../assets/images/Management_Yellow.png") no-repeat;
+    background: url("../../../assets/images/Management_Yellow.png") no-repeat;
 }
 
 .dc_links_Outreach {
@@ -59,7 +59,7 @@
 }
 
 .dc_links_Outreach:hover{
-    background: url("../../assets/images/Outreach_Yellow.png") no-repeat;
+    background: url("../../../assets/images/Outreach_Yellow.png") no-repeat;
 }
 
 .dc_links_Operations {
@@ -69,7 +69,7 @@
 }
 
 .dc_links_Operations:hover{
-    background: url("../../assets/images/Operations_Yellow.png") no-repeat;
+    background: url("../../../assets/images/Operations_Yellow.png") no-repeat;
 }
 
 .dc_links_Software {
@@ -79,7 +79,7 @@
 }
 
 .dc_links_Software:hover{
-    background: url("../../assets/images/Software_Yellow.png") no-repeat;
+    background: url("../../../assets/images/Software_Yellow.png") no-repeat;
 }
 
 .dc_links_Hardware {
@@ -89,7 +89,7 @@
 }
 
 .dc_links_Hardware:hover{
-    background: url("../../assets/images/Hardware_Yellow.png") no-repeat;
+    background: url("../../../assets/images/Hardware_Yellow.png") no-repeat;
 }
 
 .dc_links_Community {
@@ -99,7 +99,7 @@
 }
 
 .dc_links_Community:hover{
-    background: url("../../assets/images/Community_Yellow.png") no-repeat;
+    background: url("../../../assets/images/Community_Yellow.png") no-repeat;
 }
 
 .dc_links_container {

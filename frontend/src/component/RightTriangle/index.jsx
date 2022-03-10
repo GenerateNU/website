@@ -1,5 +1,5 @@
 import React from "react";
-import './rightTriangle.css';
+import './style.css';
 
 // A right triangle. Takes in the triangle's height, color,
 // and orientation (top left, top right, bottom left, bottom right).

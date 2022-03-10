@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Hero from './Hero/hero';
 import GenerateIntro from './GenerateIntroBanner/generateIntroBanner';
-import TeamsCarousel from './TeamsCarousel/teamsCarousel';
-import ClientsCarousel from './ClientsCarousel/clientsCarousel';
-import DirectorsCarousel from './DirectorsCarousel/directorsCarousel';
+import TeamsCarousel from './Carousels/TeamsCarousel/teamsCarousel';
+import ClientsCarousel from './Carousels/ClientsCarousel/clientsCarousel';
+import DirectorsCarousel from './Carousels/DirectorsCarousel/directorsCarousel';
 import ShermanCenterIntro from './AffiliateOrgIntros/shermanCenterIntro';
 import MosaicIntro from './AffiliateOrgIntros/mosaicIntro';
 import ApplyButtons from './ApplyButtons/applyButtons';

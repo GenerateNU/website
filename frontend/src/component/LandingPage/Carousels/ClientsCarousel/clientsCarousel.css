@@ -1,0 +1,83 @@
+/* .cl_container {
+    overflow: hidden;
+    white-space: nowrap;
+} */
+
+/* Important because bootstrap's carousel-inner does not
+set height to 100% itself
+*/
+.bg-color {
+    background-color: rgba(255, 197, 57, 0.1);
+}
+
+.carousel-inner, .carousel-item {
+    height: 100% !important;
+}
+
+.h-60 {
+    height: 60%;
+}
+
+.fit-content {
+    height: fit-content;
+    width: fit-content;
+}
+
+/* Copied from teams carousel tc_image */
+/* .cl_image {
+    height: 600px !important;
+    width: 867px !important;
+    margin-left: -15%;
+    margin-top: -30%;
+} */
+
+.arrow-style {
+    height: 4vh !important;
+    width: auto !important;
+}
+
+.cl_arrowup {
+    /* width: 30px !important; */
+    /* margin-left: 70%;
+    margin-top: -35%; */
+}
+
+.arrow-down {
+    /* width: 30px !important; */
+    /* margin-left: 70%; */
+    transform: rotate(180deg);
+    /* margin-top: -10%; */
+}
+
+.cl_button {
+    margin-left: 65%;
+    margin-top: 8.5%;
+    height: 52.42px !important;
+    width: 212.1px !important;
+
+}
+
+
+.text-box-style {
+    background-color: #FFC539;
+    height: 33%;
+    width: auto;
+    max-width: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.client-name {
+   font-family: "commuters-sans700";
+   font-size: 3vw;
+   text-align: right;
+   float: left;
+   color: white;
+}
+
+.client-text {
+    font-family: "Outfit400";
+    font-size: 1.2vw;
+    line-height: 156%;
+    text-align: left;
+ }
