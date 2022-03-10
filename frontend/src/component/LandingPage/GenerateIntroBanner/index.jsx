@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import GenerateSummary from './generateSummary';
 import TheSherm from './theSherm';
 import GenerateShowcase from './generateShowcase';
-import './generateIntro.css';
+import './style.css';
 
 /**
  * Introduction to Generate, the goals of the organization, and the work involved.

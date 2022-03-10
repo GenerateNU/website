@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/esm/Col';
 import weAreGenerate from '../../assets/images/We_Are_Gen.png'
 import GenerateButton from '../../Buttons';
 import RightTriangle from '../../RightTriangle';
-import './generateIntro.css';
+import './style.css';
 
 /**
  * Component explaining the conception of Generate, as well as the organization's goals 

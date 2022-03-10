@@ -3,6 +3,7 @@ import './style.css';
 
 // A right triangle. Takes in the triangle's height, color,
 // and orientation (top left, top right, bottom left, bottom right).
+// TODO: Figure out how to add transparent (but covers up corner still) triangle
 export default function RightTriangle(props) {
     return (
         <div className={`same-w-h position-absolute ${props.className}`}

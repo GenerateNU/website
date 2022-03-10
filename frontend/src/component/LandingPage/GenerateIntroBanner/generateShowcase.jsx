@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import RightTriangle from '../../RightTriangle';
 import visitShowcase from '../../assets/images/Visit_Showcase.jpg';
-import './generateIntro.css';
+import './style.css';
 
 // ...
 export class GenerateShowcase extends Component {

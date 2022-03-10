@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import RightTriangle from '../../RightTriangle';
 import rethinkingTheSherm from '../../assets/images/Rethinking_Sherm.jpg';
-import './generateIntro.css';
+import './style.css';
 
 // ...
 export class TheSherm extends Component {

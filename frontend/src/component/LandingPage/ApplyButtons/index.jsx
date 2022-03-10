@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import ApplyButton from './applyButton';
-import './applyButtons.css'
+import './style.css'
 
 /**
  * Apply page displaying two buttons for students and clients to be led to their

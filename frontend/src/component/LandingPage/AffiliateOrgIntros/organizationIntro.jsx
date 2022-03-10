@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import RightTriangle from '../../RightTriangle';
 import GenerateButton from '../../Buttons';
-import './organizationIntro.css';
+import './style.css';
 
 /**
  * 

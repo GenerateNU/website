@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Hero from './Hero/hero';
-import GenerateIntro from './GenerateIntroBanner/generateIntroBanner';
+import Hero from './Hero';
+import GenerateIntro from './GenerateIntroBanner';
 import TeamsCarousel from './Carousels/TeamsCarousel/teamsCarousel';
 import ClientsCarousel from './Carousels/ClientsCarousel/clientsCarousel';
 import DirectorsCarousel from './Carousels/DirectorsCarousel/directorsCarousel';
 import ShermanCenterIntro from './AffiliateOrgIntros/shermanCenterIntro';
 import MosaicIntro from './AffiliateOrgIntros/mosaicIntro';
-import ApplyButtons from './ApplyButtons/applyButtons';
+import ApplyButtons from './ApplyButtons';
 
 /**
  * Home page users will first land on upon arriving to the website.

@@ -2,13 +2,9 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import PhotoCutOff from '../../../PhotoCutOff';
-import RootedLiving from '../../../assets/images/Client_RootedLiving.jpg';
-import './clientsCarousel.css';
 
 /**
- * Abstract component for organization introductions. Consists of a vertical heading to the left,
- * a background center image, and the organization's logo and introduction paragraph in the front.
- * Leads user to more information about the organization via the learn more button.
+ * 
  * @param {*} props 
  * @returns 
  */

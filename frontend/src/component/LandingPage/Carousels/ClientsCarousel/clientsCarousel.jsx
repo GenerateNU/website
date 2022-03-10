@@ -22,7 +22,7 @@ import Arrow from '../../../assets/images/Client_Arrow.png';
 import '../carousel.css';
 import './clientsCarousel.css';
 
-
+// TODO: Figure out how to isolate this into a .json file or .js file (had issues importing images trying to do this)
 const clientData = [
     {
         'name': 'Rooted Living',
@@ -61,6 +61,7 @@ const clientData = [
     },
 ]
 
+// TODO: Figure out how to add slide autoplay
 export default function ClientsCarousel() {
     const [index, setIndex] = useState(0);
 
@@ -87,7 +88,6 @@ export default function ClientsCarousel() {
                     <h1 className='m-0 carousel-header'>CLIENTS</h1>
                 </Col>
                 <Col xs={11} className='h-75 ps-5 pe-0'>
-                    {/* TODO: Figure out how to get rid of empty slide at end */}
                     <Carousel controls={false} indicators={false}
                               className='position-relative w-100 h-100'
                               activeIndex={index}>
