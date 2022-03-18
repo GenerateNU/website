@@ -27,7 +27,7 @@
   }
   
   .ap_img {
-    background-image: url("http://2.bp.blogspot.com/-pATX0YgNSFs/VP-82AQKcuI/AAAAAAAALSU/Vet9e7Qsjjw/s1600/Cat-hd-wallpapers.jpg");
+    background-image: url("https://c0.wallpaperflare.com/preview/868/175/791/carrot-fake-toy-blue-background.jpg");
     height: 100%;
     width: 100%;
     position: fixed;
@@ -71,7 +71,7 @@
   }
 
    /*hover*/
-   .ap_link1:hover {
+   .accordion .toggle-btn:hover {
     -webkit-text-stroke: 2px white;
     color: transparent;
    }
@@ -88,3 +88,55 @@
     -webkit-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
    }
+
+
+   .accordion {
+    position: relative;
+    content: "";
+  display: table;
+  clear: both;
+  margin-left: 4%;
+  }
+  .accordion .accordion-content {
+      display:none;
+    height: 367px;
+    width: 1440px;
+    background-color:
+    white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 4%;
+    margin-left: -4%;
+    
+  }
+  .accordion input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    
+  }
+  .accordion .toggle-btn {
+      color: white;
+      font-family: 'Space Mono700';
+      font-size: 92px;
+      line-height: 130px;
+      cursor: pointer;
+  }
+  .accordion input[type="checkbox"]:checked ~ .accordion-content {
+    display: block;
+  }
+
+  .accordion_link {
+      color: #187DFF;
+      font-size: 20px;
+      line-height: 24px;
+      font-family: 'Outfit600';
+      padding: 1%;
+      float: left;
+      width: 25%;
+      padding-bottom: 3%;
+  }
+
+  
