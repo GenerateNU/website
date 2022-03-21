@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import GenerateCarousel from '../carousel';
+import Client from '../carousel';
 import './style.css';
 
 export default class DirectorsCarousel extends Component {
     render() {
         return (
-            <GenerateCarousel slideComponent={Client} slideData={clientData} bgColor='#FFF9EB' buttonColor='#FFC539' buttonText='Become A Client' />
+            <GenerateCarousel slideComponent={Client} slideData={GenerateCarousel} bgColor='#FFF9EB' buttonColor='#FFC539' buttonText='Become A Client' />
         );
     }
 //     render() {
