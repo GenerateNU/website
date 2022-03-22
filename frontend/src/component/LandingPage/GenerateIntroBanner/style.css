@@ -27,15 +27,15 @@
 }
 
 .we-are-style {
-    /* font-family: Commuters Sans; */
+    font-family: "Commuters Sans 700";
     font-style: normal;
     font-weight: bold;
     color: #424242;
-    font-size: 3.5vw;
+    font-size: 3.1vw;
 }
 
 .generate-text-header-style {
-    /* font-family: Commuters Sans; */
+    font-family: "Commuters Sans 800";
     font-style: normal;
     font-weight: 800;
     color: #00A7E1;
@@ -43,7 +43,7 @@
 }
 
 .generate-info-style {
-    /* font-family: Outfit; */
+    font-family: "Outfit 400";
     font-style: normal;
     font-weight: normal;
     color: #000000;
@@ -52,7 +52,7 @@
 }
 
 .subheader-style {
-    /* font-family: Commuters Sans; */
+    font-family: "Commuters Sans 700";
     font-style: normal;
     font-weight: bold;
     color: #424242;
@@ -65,7 +65,7 @@
 }
 
 .subheader-info-style {
-    /* font-family: Outfit; */
+    font-family: "Outfit 400";
     font-style: normal;
     font-weight: normal;
     color: #000000;

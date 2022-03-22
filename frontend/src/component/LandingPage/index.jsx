@@ -15,14 +15,14 @@ export class LandingPage extends Component {
     render() {
         return (
             <>
-                {/* <Hero />
-                <GenerateIntro /> */}
-                {/* <TeamsCarousel /> */}
-                {/* <ClientsCarousel /> */}
+                <Hero />
+                <GenerateIntro />
+                <TeamsCarousel />
+                <ClientsCarousel />
                 <DirectorsCarousel />
-                {/* <ShermanCenterIntro />
+                <ShermanCenterIntro />
                 <MosaicIntro />
-                <ApplyButtons /> */}
+                <ApplyButtons />
             </>
         );
     }

@@ -26,16 +26,17 @@
 }
 
 .intro-paragraph-text {
-    font-family: Space Mono;
+    font-family: "Space Mono";
     font-style: italic;
     font-weight: bold;
     font-size: 1.3vw;
     line-height: 175%;
-    color: white;
+    color: rgb(206, 202, 202);
 }
 
 .header-text {
     color: white;
+    font-family: "Commuters Sans 800";
     font-style: normal;
     font-weight: 800;
     font-size: 4.5vw;

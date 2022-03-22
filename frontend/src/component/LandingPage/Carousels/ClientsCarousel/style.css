@@ -33,7 +33,7 @@ set height to 100% itself
 }
 
 .client-name {
-   font-family: "commuters-sans700";
+   font-family: "Commuters Sans 700";
    font-size: 3vw;
    text-align: right;
    float: left;
@@ -41,7 +41,7 @@ set height to 100% itself
 }
 
 .client-text {
-    font-family: "Outfit400";
+    font-family: "Outfit 400";
     font-size: 1.2vw;
     line-height: 156%;
     text-align: left;

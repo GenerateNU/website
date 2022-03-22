@@ -1,5 +1,5 @@
 .i-am-a-style {
-    /* font-family: Commuters Sans; */
+    font-family: "Commuters Sans 700";
     font-style: normal;
     font-weight: bold;
 }
@@ -22,13 +22,13 @@
 }
 
 .apply-header-style {
-    /* font-family: Commuters Sans; */
+    font-family: "Commuters Sans 700";
     font-style: normal;
     font-weight: bold;
 }
 
 .apply-header-size {
-    font-size: 7vw;
+    font-size: 6.5vw;
 }
 
 @media (max-width: 575.5px) {
@@ -44,7 +44,7 @@
 }
 
 .apply-style {
-    font-family: Space Mono;
+    font-family: "Space Mono";
     font-style: normal;
     font-weight: bold;
     font-size: 2.5vh;

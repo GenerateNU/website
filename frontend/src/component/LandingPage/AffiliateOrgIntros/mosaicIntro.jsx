@@ -8,7 +8,7 @@ import mosaicLogo from '../../assets/images/Mosaic_Logo.png';
  */
 export default class MosaicIntro extends Component {
     render() {
-        const introduction = <span><strong>MOSAIC</strong> is Northeastern’s diverse community of driven multidisciplinary individuals who share a passion for entrepreneurship, collaboration and leadership. Offering disciplines and skills that benefit the university’s entrepreneurship community. </span>;
+        const introduction = <span><span className='text-white'>MOSAIC</span> is Northeastern’s diverse community of driven multidisciplinary individuals who share a passion for entrepreneurship, collaboration and leadership. Offering disciplines and skills that benefit the university’s entrepreneurship community. </span>;
         
         return (
             <OrganizationIntroduction bgColor='#1477F8'

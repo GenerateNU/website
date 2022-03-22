@@ -91,8 +91,6 @@ const directorData = [
 ];
 
 export default function DirectorsCarousel() {
-    // TODO: add changeSlide() method here to map clicked a tag to its respective director div
-    // map the director to its index
     const directorToIndex = {};
     directorData.map((data, index) => (directorToIndex[data.title] = index));
     const [index, setIndex] = useState(0);
@@ -107,17 +105,6 @@ export default function DirectorsCarousel() {
     const secondThird = directorData.slice(thirdLength, thirdLength * 2);
     const lastThird = directorData.slice(thirdLength * 2, directorData.length);
     const rows = [firstThird, secondThird, lastThird];
-    // const iconButton = (title, inactiveIcon, activeIcon) => {
-    //     return (
-    //         <Col xs={6} className='p-0'>
-    //             <Button value={title} 
-    //                 className='bg-transparent mx-3 fit-content p-0 border-0 rounded-0 shadow-none'
-    //                 onClick={changeSlide}>
-    //                 <Image className='team-icon' src={inactiveIcon} />
-    //             </Button>
-    //         </Col>
-    //     );
-    // }
     const iconsRow = (rowData) => {
         let marginInBetween = 'mb-3 ';
         if (rows.indexOf(rowData) === rows.length - 1) {
@@ -126,7 +113,6 @@ export default function DirectorsCarousel() {
 
         return (
             <Row className={`w-100 h-33 m-0 ${marginInBetween}align-items-center justify-space-between`}>
-                {/* {rowData.map(data => iconButton(data.title, data.inactiveIcon, data.activeIcon))} */}
                 {rowData.map(data => <DirectorIcon title={data.title} 
                                                    inactiveIcon={data.inactiveIcon} 
                                                    activeIcon={data.activeIcon}
