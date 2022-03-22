@@ -26,7 +26,7 @@ export default function Director(props) {
                     </div>
                 </div>
             </Col>
-            <div className='m-0 py-4 px-5 position-absolute director-box-style end-0 top-50 fit-content d-flex justify-content-center'>
+            <div className='m-0 me-2 py-4 px-5 position-absolute director-box-style end-0 top-50 fit-content d-flex justify-content-center'>
                 <h1 className='m-0 text-uppercase director-name'>
                     {data.name}
                 </h1>

@@ -9,8 +9,10 @@ export default function DirectorIcon(props) {
             <Button value={props.title} 
                 className='bg-transparent mx-3 fit-content p-0 border-0 rounded-0 shadow-none'
                 onClick={props.changeSlide}>
-                <Image className='team-icon' src={props.inactiveIcon} />
-                {/* <Image className='team-icon' src={props.activeIcon} /> */}
+                    <div className='position-relative'>
+                        <Image className='team-icon active-icon' src={props.activeIcon} />
+                        <Image className='position-absolute start-0 team-icon inactive-icon' src={props.inactiveIcon} />
+                    </div>
             </Button>
         </Col>
     );

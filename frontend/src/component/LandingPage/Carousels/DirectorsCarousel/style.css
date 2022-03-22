@@ -4,7 +4,7 @@
 
 .director-box-style {
     background-color: #00A7E1;
-    max-width: 40%;
+    max-width: 36%;
     z-index: 10;
     transform: translateY(-50%);
 }
@@ -45,3 +45,11 @@
     font-size: 1.4vw;
     line-height: 100%;
 }
+
+/* .inactive-icon, .active-icon:hover, .active-icon:active, .active-icon:focus {
+    display: inline;
+} */
+.inactive-icon:hover, .inactive-icon:active, .inactive-icon:focus {
+    display: none;
+}
+
