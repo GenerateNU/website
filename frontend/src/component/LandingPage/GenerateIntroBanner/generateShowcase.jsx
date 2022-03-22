@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/esm/Row';
-import Col from 'react-bootstrap/esm/Col';
-import RightTriangle from '../../RightTriangle/rightTriangle';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import RightTriangle from '../../RightTriangle';
 import visitShowcase from '../../assets/images/Visit_Showcase.jpg';
-import './generateIntro.css';
+import './style.css';
 
 // ...
 export class GenerateShowcase extends Component {

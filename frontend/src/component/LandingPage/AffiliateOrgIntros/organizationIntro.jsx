@@ -3,22 +3,19 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import RightTriangle from '../../RightTriangle/rightTriangle';
-import GenerateButton from '../../Buttons/buttons';
-import './organizationIntro.css';
+import RightTriangle from '../../RightTriangle';
+import GenerateButton from '../../Buttons';
+import './style.css';
 
 /**
- * Abstract component for organization introductions. Consists of a vertical heading to the left,
- * a background center image, and the organization's logo and introduction paragraph in the front.
- * Leads user to more information about the organization via the learn more button.
+ * 
  * @param {*} props 
  * @returns 
  */
-
 export default function OrganizationIntroduction(props) {    
     return (
         <Container fluid className='vh-100' style={{backgroundColor: props.bgColor}}>
-            {/* Places header in top left corner and rotates it from that position */}
+            {/* Places header in top left corner and rotates the text from that position */}
             <Row className='hm-15 position-relative'>
                 <Col xs={2} className='p-0 position-relative'>
                     {/* TODO: Horizontally center header in the left column */}
