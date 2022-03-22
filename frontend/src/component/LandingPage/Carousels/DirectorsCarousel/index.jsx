@@ -106,13 +106,8 @@ export default function DirectorsCarousel() {
     const lastThird = directorData.slice(thirdLength * 2, directorData.length);
     const rows = [firstThird, secondThird, lastThird];
     const iconsRow = (rowData) => {
-        let marginInBetween = 'mb-3 ';
-        if (rows.indexOf(rowData) === rows.length - 1) {
-            marginInBetween = '';
-        }
-
         return (
-            <Row className={`w-100 h-33 m-0 ${marginInBetween}align-items-center justify-space-between`}>
+            <Row className={`w-100 h-33 m-0 align-items-center justify-content-between`}>
                 {rowData.map(data => <DirectorIcon title={data.title} 
                                                    inactiveIcon={data.inactiveIcon} 
                                                    activeIcon={data.activeIcon}
@@ -144,8 +139,8 @@ export default function DirectorsCarousel() {
                     </Carousel>
                 </Col>
 
-                <Col xs={2} className='p-0 h-35 d-flex justify-content-center align-items-center'>
-                    <div className='fit-content'>
+                <Col xs={2} className='p-0 h-40 d-flex justify-content-end align-items-center'>
+                    <div className='h-100 w-80'>
                         {rows.map(row => iconsRow(row))}
                     </div>
                 </Col>

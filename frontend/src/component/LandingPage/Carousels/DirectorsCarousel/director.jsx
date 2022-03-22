@@ -17,7 +17,7 @@ export default function Director(props) {
                 <PhotoCutOff image={data.image} direction='back' cutOffBgColor='#E5F6FD' className='w-100 mirror' />
             </Col>
             <Col xs={3} className='position-relative p-0'>
-                <div className='px-4 pb-2 position-absolute bottom-0 h-33'>
+                <div className='px-4 pb-2 position-absolute bottom-0 h-30'>
                     <div className='title-style pb-3'>
                         {data.title}
                     </div>
