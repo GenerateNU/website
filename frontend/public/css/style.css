@@ -15,6 +15,14 @@
 }
 
 @font-face {
+    font-family: "Commuters Sans 600";
+    src: url("https://use.typekit.net/af/857ae9/00000000000000007735c460/30/l?subset_id=2&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/857ae9/00000000000000007735c460/30/d?subset_id=2&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/857ae9/00000000000000007735c460/30/a?subset_id=2&fvd=n7&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
     font-family: 'Space Mono';
     font-style: italic;
     font-weight: 400;

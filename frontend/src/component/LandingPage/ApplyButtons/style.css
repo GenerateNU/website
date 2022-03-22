@@ -9,6 +9,7 @@
     line-height: 18vh;
 }
 
+/* For at least medium-sized screens */
 @media (min-width: 768px) {
     .i-am-a-size {
         font-size: 20vh;
@@ -31,6 +32,7 @@
     font-size: 6.5vw;
 }
 
+/* For at most small-sized screens */
 @media (max-width: 575.5px) {
     .apply-header-size {
         font-size: 17vw;
