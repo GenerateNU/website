@@ -1,0 +1,48 @@
+/* Important because bootstrap's carousel-inner does not
+set height to 100% itself
+*/
+.carousel-inner, .carousel-item {
+    height: 100% !important;
+}
+
+.h-60 {
+    height: 60%;
+}
+
+.fit-content {
+    height: fit-content;
+    width: fit-content;
+}
+
+.arrow-style {
+    height: 4vh;
+    width: auto;
+}
+
+.arrow-down {
+    transform: rotate(180deg);
+}
+
+.client-box-style {
+    background-color: #FFC539;
+    height: 33%;
+    width: auto;
+    max-width: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.client-name {
+   font-family: "commuters-sans700";
+   font-size: 3vw;
+   text-align: right;
+   float: left;
+   color: white;
+}
+
+.client-text {
+    font-family: "Outfit400";
+    font-size: 1.2vw;
+    line-height: 156%;
+    text-align: left;
+}

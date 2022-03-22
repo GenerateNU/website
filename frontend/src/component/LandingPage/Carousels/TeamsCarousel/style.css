@@ -1,0 +1,33 @@
+.team-box-style {
+    background-color: #424242;
+    height: 33%;
+    width: auto;
+    max-width: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.team-text {
+    font-family: "Outfit400";
+    color: white;
+    font-size: 1.1vw;
+    line-height: 156%;
+    text-align: left;
+}
+
+.bottom-neg-10 {
+    bottom: -5%;
+}
+
+.team-nav-link {
+    font-family: 'Outfit400';
+    font-size: 3.4vh;
+    line-height: 6.5vh;
+    color: black;
+}
+
+.team-nav-links>a:hover, .team-nav-links>a:focus, .team-nav-links>a:active {
+    cursor: pointer;
+    color: #00A7E1;
+    transform: translateX(-10vw);
+}
