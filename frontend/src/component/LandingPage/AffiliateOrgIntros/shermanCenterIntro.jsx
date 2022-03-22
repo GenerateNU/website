@@ -6,9 +6,9 @@ import shermanCenterLogo from '../../assets/images/Sherman_Center_Logo.png';
 /**
  * Component introducing the Sherman Center.
  */
-export class ShermanCenterIntro extends Component {
+export default class ShermanCenterIntro extends Component {
     render() {
-        const introduction = <span><strong>The Sherman Center</strong>'s mission is to enable interdisciplinary student entrepreneurship by providing both education about tools, concepts, and resources to foster creativity and the ability to develop commercially viable ideas.</span>;
+        const introduction = <span><span className='text-white'>The Sherman Center</span>'s mission is to enable interdisciplinary student entrepreneurship by providing both education about tools, concepts, and resources to foster creativity and the ability to develop commercially viable ideas.</span>;
         
         return (
             <OrganizationIntroduction bgColor='#FF6660'
@@ -19,5 +19,3 @@ export class ShermanCenterIntro extends Component {
         );
     }
 }
-
-export default ShermanCenterIntro;
