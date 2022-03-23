@@ -15,7 +15,7 @@ import AvitalBrodski from '../../../assets/images/Director_AvitalBrodski.jpg';
 import AndrewCataldo from '../../../assets/images/Director_AndrewCataldo.jpg';
 import ThomasKeith from '../../../assets/images/Director_ThomasKeith.jpg';
 import JoshBatra from '../../../assets/images/Director_JoshBatra.jpg';
-import KyleJanko from '../../../assets/images/Director_JoshBatra.jpg';
+import KyleJanko from '../../../assets/images/Director_KyleJanko.jpg';
 // Team icons
 import ManagementActiveIcon from '../../../assets/images/Management_Icon.png';
 import OutreachActiveIcon from '../../../assets/images/Outreach_Icon.png';
@@ -50,7 +50,7 @@ const directorData = [
 
         'name': 'Avital Brodski',
         'image': AvitalBrodski,
-        'emailUsername': '???',
+        'emailUsername': 'brodski.a',
     },
     {
         'title': 'Operations Director',
@@ -59,7 +59,7 @@ const directorData = [
 
         'name': 'Andrew Cataldo',
         'image': AndrewCataldo,
-        'emailUsername': ':)',
+        'emailUsername': 'cataldo.a',
     },
     {
         'title': 'Software Director',
@@ -68,7 +68,7 @@ const directorData = [
 
         'name': 'Thomas Keith',
         'image': ThomasKeith,
-        'emailUsername': ':|',
+        'emailUsername': 'keith.t',
     },
     {
         'title': 'Hardware Director',
@@ -77,7 +77,7 @@ const directorData = [
 
         'name': 'Josh Batra',
         'image': JoshBatra,
-        'emailUsername': ':(',
+        'emailUsername': 'batra.j',
     },
     {
         'title': 'Community Director',
@@ -86,7 +86,7 @@ const directorData = [
 
         'name': 'Kyle Janko',
         'image': KyleJanko,
-        'emailUsername': ':((',
+        'emailUsername': 'janko.k',
     },
 ];
 
