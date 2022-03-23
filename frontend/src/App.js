@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPage from './component/LandingPage/';
-import ApplyPage from './component/ApplyPage/applyPageMain';
+import LandingPage from './components/LandingPage/';
+import ApplyPage from './components/ApplyPage/applyPageMain';
 
 /**
  * The app.js the routes to the different pages are located.
