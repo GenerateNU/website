@@ -1,8 +1,50 @@
 import React, { Component } from 'react'
 import {Link} from "react-router-dom";
+import Categories from "./categories";
 
 export class applyPageMain extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+        categories :[],
+        positions: []
+    }
+}
+
+
+  async componentWillMount() {
+    await  fetch('http://localhost:1337/api/categories').then((response) => {
+          if(response.status >= 400) {
+              throw new Error('Bad Response')
+          }
+          return response.json();
+      }).then((data) => {
+          console.log(data, "new");
+          // data.data.forEach(i => 
+          //     console.log(i.attributes.Category, "slllsls"))
+          this.setState({categories: data.data});
+      })
+  }
+
+
+  // async componentWillMount() {
+  //   await  fetch('http://localhost:1337/api/positions').then((response) => {
+  //         if(response.status >= 400) {
+  //             throw new Error('Bad Response')
+  //         }
+  //         return response.json();
+  //     }).then((data) => {
+  //         console.log(data, "new")
+  //         // data.data.forEach(i => 
+  //         //     console.log(i.attributes.PositionTitle, "positions"))
+  //         this.setState({positions: data.data});
+  //     })
+
+  // }
+
     render() {
+      console.log(this.state.categories, "cacha");
         return (
             <div>   
 
@@ -15,6 +57,8 @@ export class applyPageMain extends Component {
   We’re always looking for passionate individuals who are ready to learn and grow. 
   We have opportunities that run broad and deep. If you don’t see anything right now drop an email and we’ll let you know when posiitons open up again.
   </div>
+
+  <Categories categories={this.state.categories} />
 
 
   <form class="example" action="action_page.php">
