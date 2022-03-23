@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {Link} from "react-router-dom";
 
 export class applyPageMain extends Component {
     render() {
@@ -16,12 +16,19 @@ export class applyPageMain extends Component {
   We have opportunities that run broad and deep. If you don’t see anything right now drop an email and we’ll let you know when posiitons open up again.
   </div>
 
+
+  <form class="example" action="action_page.php">
+  <input type="text" placeholder="search position" name="search"></input>
+  <button type="submit"><i class="fa fa-search" style={{fontSize: "1.5em"}}></i></button>
+</form>
+
   <div className="accordion">
     <input type="checkbox" id="toggle" name="toggle"></input>
     <label className="toggle-btn" for="toggle">COMMUNITY</label>
     <p className="accordion-content">
         <div className="accordion_link">
-       Community Develepment <br></br> Lead
+        {/* <Link to={"././communityDevelopmentApply.jsx"}>  Community Develepment <br></br> Lead</Link> */}
+        Community Development  <br></br> Lead
         </div>
 
         <div className="accordion_link">
@@ -57,352 +64,362 @@ export class applyPageMain extends Component {
         </div>
     </p>
   </div>
-
-
-  <div className="accordion">
-    <input type="checkbox" id="toggle" name="toggle"></input>
-    <label className="toggle-btn" for="toggle">CONTENT CREATION</label>
-    <p className="accordion-content">
-        <div className="accordion_link">
+      
+  
+  <div className="accordion2">
+    <input type="checkbox" id="toggle2" name="toggle2"></input>
+    <label className="toggle-btn2" for="toggle2">CONTENT CREATION</label>
+    {/* <p className="accordion-content2">
+        <div className="accordion_link2">
        Community Develepment <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Development  <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Engagement <br></br>Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Events <br></br>Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Events <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Resource  <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        External Engagement <br></br> Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         External Development <br></br>Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Showcase Director
         </div>
-    </p>
-  </div>
-
-  <div className="accordion">
-    <input type="checkbox" id="toggle" name="toggle"></input>
-    <label className="toggle-btn" for="toggle">DATA SCIENCE</label>
-    <p className="accordion-content">
-        <div className="accordion_link">
-       Community Develepment <br></br> Lead
-        </div>
-
-        <div className="accordion_link">
-        Community Development  <br></br> Specialist
-        </div>
-
-        <div className="accordion_link">
-       Community Engagement <br></br>Lead
-        </div>
-
-        <div className="accordion_link">
-        Community Events <br></br>Coordinator
-        </div>
-
-        <div className="accordion_link">
-       Community Events <br></br> Specialist
-        </div>
-
-        <div className="accordion_link">
-        Community Resource  <br></br> Lead
-        </div>
-
-        <div className="accordion_link">
-       External Engagement <br></br> Coordinator
-        </div>
-
-        <div className="accordion_link">
-        External Development <br></br>Specialist
-        </div>
-
-        <div className="accordion_link">
-       Showcase Director
-        </div>
-    </p>
+    </p> */}
   </div>
 
 
 
-  <div className="accordion">
-    <input type="checkbox" id="toggle" name="toggle"></input>
-    <label className="toggle-btn" for="toggle">DESIGN</label>
-    <p className="accordion-content">
-        <div className="accordion_link">
+  <div className="accordion2">
+    <input type="checkbox" id="toggle2" name="toggle2"></input>
+    <label className="toggle-btn2" for="toggle2">DATA SCIENCE</label>
+    {/* <p className="accordion-content2">
+        <div className="accordion_link2">
        Community Develepment <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Development  <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Engagement <br></br>Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Events <br></br>Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Events <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Resource  <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        External Engagement <br></br> Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         External Development <br></br>Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Showcase Director
         </div>
-    </p>
-  </div>
-
-
-  <div className="accordion">
-    <input type="checkbox" id="toggle" name="toggle"></input>
-    <label className="toggle-btn" for="toggle">EVENT PLANNING</label>
-    <p className="accordion-content">
-        <div className="accordion_link">
-       Community Develepment <br></br> Lead
-        </div>
-
-        <div className="accordion_link">
-        Community Development  <br></br> Specialist
-        </div>
-
-        <div className="accordion_link">
-       Community Engagement <br></br>Lead
-        </div>
-
-        <div className="accordion_link">
-        Community Events <br></br>Coordinator
-        </div>
-
-        <div className="accordion_link">
-       Community Events <br></br> Specialist
-        </div>
-
-        <div className="accordion_link">
-        Community Resource  <br></br> Lead
-        </div>
-
-        <div className="accordion_link">
-       External Engagement <br></br> Coordinator
-        </div>
-
-        <div className="accordion_link">
-        External Development <br></br>Specialist
-        </div>
-
-        <div className="accordion_link">
-       Showcase Director
-        </div>
-    </p>
-  </div>
-
-
-  <div className="accordion">
-    <input type="checkbox" id="toggle" name="toggle"></input>
-    <label className="toggle-btn" for="toggle">HARDWARE</label>
-    <p className="accordion-content">
-        <div className="accordion_link">
-       Community Develepment <br></br> Lead
-        </div>
-
-        <div className="accordion_link">
-        Community Development  <br></br> Specialist
-        </div>
-
-        <div className="accordion_link">
-       Community Engagement <br></br>Lead
-        </div>
-
-        <div className="accordion_link">
-        Community Events <br></br>Coordinator
-        </div>
-
-        <div className="accordion_link">
-       Community Events <br></br> Specialist
-        </div>
-
-        <div className="accordion_link">
-        Community Resource  <br></br> Lead
-        </div>
-
-        <div className="accordion_link">
-       External Engagement <br></br> Coordinator
-        </div>
-
-        <div className="accordion_link">
-        External Development <br></br>Specialist
-        </div>
-
-        <div className="accordion_link">
-       Showcase Director
-        </div>
-    </p>
+    </p> */}
   </div>
 
 
 
-  <div className="accordion">
-    <input type="checkbox" id="toggle" name="toggle"></input>
-    <label className="toggle-btn" for="toggle">LEADERSHIP</label>
-    <p className="accordion-content">
-        <div className="accordion_link">
+
+
+  <div className="accordion2">
+    <input type="checkbox" id="toggle2" name="toggle2"></input>
+    <label className="toggle-btn2" for="toggle2">DESIGN</label>
+    {/* <p className="accordion-content2">
+        <div className="accordion_link2">
        Community Develepment <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Development  <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Engagement <br></br>Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Events <br></br>Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Events <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Resource  <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        External Engagement <br></br> Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         External Development <br></br>Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Showcase Director
         </div>
-    </p>
+    </p> */}
   </div>
 
 
 
-  <div className="accordion">
-    <input type="checkbox" id="toggle" name="toggle"></input>
-    <label className="toggle-btn" for="toggle">OPERATIONS</label>
-    <p className="accordion-content">
-        <div className="accordion_link">
+
+  <div className="accordion2">
+    <input type="checkbox" id="toggle2" name="toggle2"></input>
+    <label className="toggle-btn2" for="toggle2">EVENT PLANNING</label>
+    {/* <p className="accordion-content2">
+        <div className="accordion_link2">
        Community Develepment <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Development  <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Engagement <br></br>Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Events <br></br>Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Events <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Resource  <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        External Engagement <br></br> Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         External Development <br></br>Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Showcase Director
         </div>
-    </p>
+    </p> */}
   </div>
 
 
-  <div className="accordion">
-    <input type="checkbox" id="toggle" name="toggle"></input>
-    <label className="toggle-btn" for="toggle">SOFTWARE ENGINEERING</label>
-    <p className="accordion-content">
-        <div className="accordion_link">
+
+  <div className="accordion2">
+    <input type="checkbox" id="toggle2" name="toggle2"></input>
+    <label className="toggle-btn2" for="toggle2">HARDWARE ENGINEERING</label>
+    {/* <p className="accordion-content2">
+        <div className="accordion_link2">
        Community Develepment <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Development  <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Engagement <br></br>Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Events <br></br>Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Community Events <br></br> Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         Community Resource  <br></br> Lead
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        External Engagement <br></br> Coordinator
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
         External Development <br></br>Specialist
         </div>
 
-        <div className="accordion_link">
+        <div className="accordion_link2">
        Showcase Director
         </div>
-    </p>
+    </p> */}
   </div>
+
+
+
+  <div className="accordion2">
+    <input type="checkbox" id="toggle2" name="toggle2"></input>
+    <label className="toggle-btn2" for="toggle2">LEADERSHIP</label>
+    {/* <p className="accordion-content2">
+        <div className="accordion_link2">
+       Community Develepment <br></br> Lead
+        </div>
+
+        <div className="accordion_link2">
+        Community Development  <br></br> Specialist
+        </div>
+
+        <div className="accordion_link2">
+       Community Engagement <br></br>Lead
+        </div>
+
+        <div className="accordion_link2">
+        Community Events <br></br>Coordinator
+        </div>
+
+        <div className="accordion_link2">
+       Community Events <br></br> Specialist
+        </div>
+
+        <div className="accordion_link2">
+        Community Resource  <br></br> Lead
+        </div>
+
+        <div className="accordion_link2">
+       External Engagement <br></br> Coordinator
+        </div>
+
+        <div className="accordion_link2">
+        External Development <br></br>Specialist
+        </div>
+
+        <div className="accordion_link2">
+       Showcase Director
+        </div>
+    </p> */}
+  </div>
+
+
+
+  <div className="accordion2">
+    <input type="checkbox" id="toggle2" name="toggle2"></input>
+    <label className="toggle-btn2" for="toggle2">OPERATIONS</label>
+    {/* <p className="accordion-content2">
+        <div className="accordion_link2">
+       Community Develepment <br></br> Lead
+        </div>
+
+        <div className="accordion_link2">
+        Community Development  <br></br> Specialist
+        </div>
+
+        <div className="accordion_link2">
+       Community Engagement <br></br>Lead
+        </div>
+
+        <div className="accordion_link2">
+        Community Events <br></br>Coordinator
+        </div>
+
+        <div className="accordion_link2">
+       Community Events <br></br> Specialist
+        </div>
+
+        <div className="accordion_link2">
+        Community Resource  <br></br> Lead
+        </div>
+
+        <div className="accordion_link2">
+       External Engagement <br></br> Coordinator
+        </div>
+
+        <div className="accordion_link2">
+        External Development <br></br>Specialist
+        </div>
+
+        <div className="accordion_link2">
+       Showcase Director
+        </div>
+    </p> */}
+  </div>
+
+
+
+  <div className="accordion2">
+    <input type="checkbox" id="toggle2" name="toggle2"></input>
+    <label className="toggle-btn2" for="toggle2">SOFTWARE ENGINEERING</label>
+    {/* <p className="accordion-content2">
+        <div className="accordion_link2">
+       Community Develepment <br></br> Lead
+        </div>
+
+        <div className="accordion_link2">
+        Community Development  <br></br> Specialist
+        </div>
+
+        <div className="accordion_link2">
+       Community Engagement <br></br>Lead
+        </div>
+
+        <div className="accordion_link2">
+        Community Events <br></br>Coordinator
+        </div>
+
+        <div className="accordion_link2">
+       Community Events <br></br> Specialist
+        </div>
+
+        <div className="accordion_link2">
+        Community Resource  <br></br> Lead
+        </div>
+
+        <div className="accordion_link2">
+       External Engagement <br></br> Coordinator
+        </div>
+
+        <div className="accordion_link2">
+        External Development <br></br>Specialist
+        </div>
+
+        <div className="accordion_link2">
+       Showcase Director
+        </div>
+    </p> */}
+  </div>
+
+  
 
 </div>
 
