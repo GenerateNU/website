@@ -25,9 +25,9 @@
 .ap_container {
     height: 100vh;
   }
-  
+
   .ap_img {
-    background-image: url("https://c0.wallpaperflare.com/preview/868/175/791/carrot-fake-toy-blue-background.jpg");
+    background-image: url("../images/ApplyPageImages/applyPageImage.jpg");
     height: 100%;
     width: 100%;
     position: fixed;
@@ -58,6 +58,7 @@
     width: 40%;
     margin-top: 15%;
     margin-left: 4%;
+    padding-bottom: 3%;
   }
 
   .ap_link1 {
@@ -137,6 +138,125 @@
       float: left;
       width: 25%;
       padding-bottom: 3%;
+      text-decoration: none !important;
   }
 
   
+
+
+/* link2 */
+
+   /*hover*/
+   .accordion2 .toggle-btn2:hover {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+   }
+
+   * {
+    transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+   }
+
+
+   .accordion2 {
+    position: relative;
+    content: "";
+  display: table;
+  clear: both;
+  margin-left: 4%;
+  }
+  .accordion2 .accordion-content2 {
+      display:none;
+    height: 367px;
+    width: 1440px;
+    background-color:
+    white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 4%;
+    margin-left: -4%;
+    
+  }
+  .accordion2 input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    
+  }
+  .accordion2 .toggle-btn2 {
+      color: white;
+      font-family: 'Space Mono700';
+      font-size: 92px;
+      line-height: 130px;
+      cursor: pointer;
+  }
+  .accordion2 input[type="checkbox"]:checked ~ .accordion-content2 {
+    display: block;
+  }
+
+  .accordion_link2 {
+      color: #187DFF;
+      font-size: 20px;
+      line-height: 24px;
+      font-family: 'Outfit600';
+      padding: 1%;
+      float: left;
+      width: 25%;
+      padding-bottom: 3%;
+      text-decoration: none !important;
+  }
+
+  
+  /* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  float: left;
+  width: 30%;
+  background: none;
+  margin-left: 55%;
+  margin-top: -3%;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+  font-family: 'Space Mono';
+  font-size: 20px;
+  line-height: 29.62px;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  margin-top: -2%;
+  padding: 10px;
+  background: none;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
