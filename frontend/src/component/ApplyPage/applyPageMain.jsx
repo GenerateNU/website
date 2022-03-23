@@ -5,7 +5,7 @@ export class applyPageMain extends Component {
     render() {
         return (
             <div>   
-
+            
 
 <div className="ap_container">
   <div className="ap_img"></div>
@@ -15,7 +15,6 @@ export class applyPageMain extends Component {
   We’re always looking for passionate individuals who are ready to learn and grow. 
   We have opportunities that run broad and deep. If you don’t see anything right now drop an email and we’ll let you know when posiitons open up again.
   </div>
-
 
   <form class="example" action="action_page.php">
   <input type="text" placeholder="search position" name="search"></input>
