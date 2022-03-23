@@ -34,12 +34,11 @@ export default function ApplyButton(props) {
                         style={{color: textColor, transform: `rotate(${textRot}deg)`}}>
                             {header}
                     </h1>
-                    <p className='text-uppercase apply-style text-black position-absolute start-50 bottom-0 translate-middle'>Apply</p>
-
-                    <div md className={`d-none d-sm-block ${orientation}-triangle`}
-                        style={{[`border-${orientation}-color`]: bgColor}}>
-                    </div>
+                    <a href='/apply' className='text-uppercase apply-style text-black position-absolute start-50 bottom-0 translate-middle'>Apply</a>   
                 </button>
+                <div md className={`d-none d-sm-block ${orientation}-triangle`}
+                        style={{[`border-${orientation}-color`]: bgColor}}>
+                </div>
             </Col>
         </Row>
     );
