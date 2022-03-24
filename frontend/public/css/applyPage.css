@@ -100,7 +100,7 @@
   }
   .accordion .accordion-content {
     display:none;
-    height: 280px;
+    height: 350px;
     width: 1440px;
     background-color:white;
     overflow: hidden;

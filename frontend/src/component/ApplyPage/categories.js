@@ -22,8 +22,9 @@ async fetchPositions(currentCategory) {
           }
           return response.json();
       }).then((data) => {
-          console.log(data, "fetchPositions")
-          let positionTitles = data.data.filter(i => i.attributes.CategoryType === currentCategory);
+          //console.log(data, "fetchPositions")
+          //let positionTitles = data.data.filter(i => i.attributes.CategoryType === currentCategory);
+          let positionTitles = data.data;
           console.log(positionTitles, "xxxx"); 
           this.setState({positions: positionTitles});
           console.log(this.state.positions, "positions")
