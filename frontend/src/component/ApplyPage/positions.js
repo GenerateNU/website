@@ -15,9 +15,6 @@ class Positions extends React.Component {
             }
             return response.json();
         }).then((data) => {
-            console.log(data, "djsjdsjd")
-            // data.data.forEach(i => 
-            //     console.log(i.attributes.PositionTitle, "positions"))
             this.setState({positions: data.data});
         })
 
