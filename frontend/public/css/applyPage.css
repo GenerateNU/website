@@ -99,8 +99,8 @@
   margin-left: 4%;
   }
   .accordion .accordion-content {
-      display:none;
-    height: 367px;
+    display:none;
+    height: 280px;
     width: 1440px;
     background-color:
     white;
@@ -137,7 +137,7 @@
       font-family: 'Outfit600';
       padding: 1%;
       float: left;
-      width: 25%;
+      width: 30%;
       padding-bottom: 3%;
       text-decoration: none ;
   }
@@ -201,9 +201,9 @@
       line-height: 130px;
       cursor: pointer;
   }
-  .accordion2 input[type="checkbox"]:checked ~ .accordion-content2 {
+  /* .accordion2 input[type="checkbox"]:checked ~ .accordion-content2 {
     display: block;
-  }
+  } */
 
   .accordion_link2 {
       color: #187DFF;
@@ -371,8 +371,8 @@ body{
   font-size: 24px;
   font-style: normal;
   /* font-family: 'Outfit'; */
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 10%; 
+  margin-bottom: 10%; 
   font-family: 'Outfit 500';
   line-height: 34px;
   font-style: normal;
