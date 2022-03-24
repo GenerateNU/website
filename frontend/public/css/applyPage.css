@@ -124,10 +124,11 @@
       font-size: 92px;
       line-height: 130px;
       cursor: pointer;
+      text-transform: uppercase;
   }
-  .accordion input[type="checkbox"]:checked ~ .accordion-content {
+  /* .accordion input[type="checkbox"]:checked ~ .accordion-content {
     display: block;
-  }
+  } */
 
   .accordion_link {
       color: #187DFF;
