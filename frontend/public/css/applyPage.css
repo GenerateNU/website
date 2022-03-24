@@ -102,13 +102,11 @@
     display:none;
     height: 280px;
     width: 1440px;
-    background-color:
-    white;
+    background-color:white;
     overflow: hidden;
     white-space: nowrap;
     padding: 4%;
-    margin-left: -4%;
-    
+    /* margin-left: -4%; */
   }
   .accordion input[type="checkbox"] {
     position: absolute;
@@ -135,7 +133,7 @@
       font-size: 20px;
       line-height: 24px;
       font-family: 'Outfit600';
-      padding: 1%;
+      padding: 1.5%;
       float: left;
       width: 30%;
       padding-bottom: 3%;

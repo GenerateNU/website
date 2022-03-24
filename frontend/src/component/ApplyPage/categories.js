@@ -33,8 +33,10 @@ async fetchPositions(currentCategory) {
 
  handleSelection = (selectedCategory, id)=> {
     this.fetchPositions(selectedCategory);
+
     //Handled accordion logic with method rather than classes
     const content = document.getElementById(id);
+    console.log(content , "opens")
     if (content.style.display === "block") {
         content.style.display = "none";
       } else {
@@ -51,7 +53,7 @@ async fetchPositions(currentCategory) {
                
             <div className="toggle-btn" onClick={() => this.handleSelection(category.attributes.Category, category.id)} id="toggle" name="toggle"> {category.attributes.Category} </div>
             <div id={category.id} className="accordion-content">
-                {this.state.positions.map((cat,id) => <p > <div className='accordion_link'>  <Link style={{textDecoration: 'none'}}to={"/positionTitle/details"}>  {cat.attributes.PositionTitle}  </Link></div>  </p>)}
+                {this.state.positions.map((cat,id) => <div > <div className='accordion_link'>  <Link style={{textDecoration: 'none'}}to={"/positionTitle/details"}>  {cat.attributes.PositionTitle}  </Link></div>  </div>)}
                 
             </div>
           </div>
