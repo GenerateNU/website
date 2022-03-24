@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from './component/LandingPage/';
 import ApplyPage from './component/ApplyPage/applyPageMain';
+import PositionDetails from './component/ApplyPage/positionDetails'; 
 
 /**
  * The app.js the routes to the different pages are located.
@@ -16,6 +17,8 @@ export default function App() {
             {/* <Route path="/" element={<LandingPage />}></Route> */}
             <Route path="/" element={<LandingPage />}></Route>
             <Route path="/apply" element={<ApplyPage />}></Route>
+            <Route path="/positionTitle/details" element={<PositionDetails />}></Route>
+
           </Routes>
         </div>
       </Router>

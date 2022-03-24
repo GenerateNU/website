@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import Positions from "./positions";
 
 class Categories extends React.Component {
@@ -32,7 +34,6 @@ async fetchPositions(currentCategory) {
  handleSelection = (selectedCategory, id)=> {
     this.fetchPositions(selectedCategory);
     //Handled accordion logic with method rather than classes
-    console.log(document.getElementById(id), id, "09090909");
     const content = document.getElementById(id);
     if (content.style.display === "block") {
         content.style.display = "none";
@@ -47,9 +48,11 @@ async fetchPositions(currentCategory) {
         <div>
         {categories.map((category) =>
             <div className="accordion">
+               
             <div className="toggle-btn" onClick={() => this.handleSelection(category.attributes.Category, category.id)} id="toggle" name="toggle"> {category.attributes.Category} </div>
             <div id={category.id} className="accordion-content">
-                {this.state.positions.map((cat,id) => <p > <div className='accordion_link'> {cat.attributes.PositionTitle} </div> </p>)}
+                {this.state.positions.map((cat,id) => <p > <div className='accordion_link'>  <Link style={{textDecoration: 'none'}}to={"/positionTitle/details"}>  {cat.attributes.PositionTitle}  </Link></div>  </p>)}
+                
             </div>
           </div>
         )}
