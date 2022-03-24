@@ -35,7 +35,7 @@ export class applyPageMain extends Component {
         </div>
 
         <div className="accordion_link">
-       Community Engagement <br></br>Lead
+          <Link to={"/details"}>  Community Engagement  </Link><br></br>Lead
         </div>
 
         <div className="accordion_link">
