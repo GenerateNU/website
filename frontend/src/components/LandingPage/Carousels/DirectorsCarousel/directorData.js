@@ -4,7 +4,7 @@ import AvitalBrodski from '../../../assets/images/landingpage/directorscarousel/
 import AndrewCataldo from '../../../assets/images/landingpage/directorscarousel/AndrewCataldo.jpg';
 import ThomasKeith from '../../../assets/images/landingpage/directorscarousel/ThomasKeith.jpg';
 import JoshBatra from '../../../assets/images/landingpage/directorscarousel/JoshBatra.jpg';
-import KyleJanko from '../../../assets/images/landingpage/directorscarousel/JoshBatra.jpg';
+import KyleJanko from '../../../assets/images/landingpage/directorscarousel/KyleJanko.jpg';
 // Team icons
 import ManagementActiveIcon from '../../../assets/icons/teams/colored/Management.png';
 import OutreachActiveIcon from '../../../assets/icons/teams/colored/Outreach.png';
