@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/esm/Button';
-import Image from 'react-bootstrap/esm/Image';
+import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
 
 export default function DirectorIcon({title, inactiveIcon, activeIcon, changeSlide}) {
     return (

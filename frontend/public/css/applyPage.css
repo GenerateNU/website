@@ -27,7 +27,7 @@
   }
 
   .ap_img {
-    background-image: url("../images/ApplyPageImages/applyPageImage.jpg");
+    background-image: url("../../public/images/ApplyPageImages/applyPageImage.jpg");
     height: 100%;
     width: 100%;
     position: fixed;
