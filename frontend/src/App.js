@@ -13,10 +13,10 @@ export default function App() {
       <Router>
         <div>
           <Routes>
-            {/* <Route path="/" element={<LandingPage />}></Route> */}
-            <Route path="/" element={<LandingPage />}></Route>
-            <Route path="/apply" element={<ApplyPage />}></Route>
-            <Route path="/positionTitle/details" element={<Position />}></Route>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/apply" element={<ApplyPage />} />
+            {/* <Route path="/position/:id" element={<Position />} /> */}
+            <Route path="/position/:id" element={<Position />} />
           </Routes>
         </div>
       </Router>

@@ -9,7 +9,7 @@ class Positions extends React.Component {
     }
 
    async componentWillMount() {
-      await fetch('http://localhost:1337/api/positions').then((response) => {
+      await  fetch('http://localhost:1337/api/positions').then((response) => {
             if(response.status >= 400) {
                 throw new Error('Bad Response')
             }
@@ -17,22 +17,22 @@ class Positions extends React.Component {
         }).then((data) => {
             this.setState({positions: data.data});
         })
+
     }
 
     render() {
-        return (
-            this.state.positions.length > 0 &&
+        return this.state.positions.length > 0 && (
             <div>
                 {
-                    this.state.positions.map(position =>
-                        <div>
+                    this.state.positions.map((position) => {
+                        return(<div>
                             <h1>{position && position.attributes && position.attributes.PositionTitle}</h1>
-                        </div>
-                    )
+                        </div>)
+                    })
                 }
             </div>
-        );
+        )
+
     }
 }
-
 export default Positions;

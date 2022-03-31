@@ -17,10 +17,7 @@
     text-transform: uppercase;
     /* Text sizing */
     line-height: 105%;
-    font-size: 6vw;
-    /* Box style */
-    height: fit-content;
-    width: fit-content;
+    font-size: 5.5vw;
     margin: 0;
 }
 
@@ -28,7 +25,6 @@
     color: transparent;
     -webkit-text-stroke: .15vw white;
     line-height: 100%;
-    font-size: 6vw;
 }
 
 .position-summary {
@@ -44,14 +40,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 1.5vw;
-}
-
-.position-info h3 {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2vw;
-    margin: 0;
 }
 
 .fw-500 {
@@ -79,10 +67,26 @@
   margin-left: -1em;
 }
 
+.position-info h3 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    margin: 0;
+}
+
 .position-info h4 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    margin: 0;
+}
+
+.position-info h5 {
     color: rgba(17, 17, 17, 0.7);
     font-family: 'Outfit';
     font-weight: 300;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     margin-bottom: 2%;
 }
