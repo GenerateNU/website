@@ -15,8 +15,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/apply" element={<ApplyPage />} />
-            {/* <Route path="/position/:id" element={<Position />} /> */}
-            <Route path="/position/:id" element={<Position />} />
+            <Route path="/positions/:id" element={<Position />} />
           </Routes>
         </div>
       </Router>

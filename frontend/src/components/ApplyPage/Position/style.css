@@ -90,3 +90,8 @@
     font-size: 1.2vw;
     margin-bottom: 2%;
 }
+
+.link-copied-toast {
+    top: 1%;
+    right: 2em;
+}
