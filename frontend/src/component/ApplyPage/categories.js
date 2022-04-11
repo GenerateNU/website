@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import Positions from "./positions";
+// import Positions from "./positions";
 
 class Categories extends React.Component {
     
@@ -54,8 +54,20 @@ async fetchPositions(currentCategory) {
                
             <div className="toggle-btn" onClick={() => this.handleSelection(category.attributes.Category, category.id)} id="toggle" name="toggle"> {category.attributes.Category} </div>
             <div id={category.id} className="accordion-content">
-                {this.state.positions.map((cat,id) => <div > <div className='accordion_link'>  <Link style={{textDecoration: 'none'}}to={"/positionTitle/details"}>  {cat.attributes.PositionTitle}  </Link></div>  </div>)}
-                
+                {
+                    this.state.positions.map((cat,id) => 
+                        <div > 
+                            <div className='accordion_link'>  
+                                <Link style={{textDecoration: 'none'}}
+                                    // TODO: figure out how to get position id from category
+                                    //   to={`/position/${cat.attributes.id}`}>
+                                    to='/positions'>
+                                    {cat.attributes.positionTitle}
+                                </Link>
+                            </div>
+                        </div>
+                    )
+                }
             </div>
           </div>
         )}
