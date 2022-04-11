@@ -12,12 +12,12 @@ export class GenerateShowcase extends Component {
         return (
             <Row className='m-0 px-5 align-items-center justify-content-center'>
                 <Col xs={12} sm={6} className='position-relative p-0 pe-5'>
-                    <a href="">
+                    
                         <h1 className='text-uppercase subheader-style pb-4'
                             style={{'text-decoration-color': '#FFC539'}}>
                             Visit Our Showcase
                         </h1>
-                    </a>
+                    
                     <p className='subheader-info-style'>
                         Take a look at our showcase videos from previous semesters to see some of Generate's past projects!
                     </p>
