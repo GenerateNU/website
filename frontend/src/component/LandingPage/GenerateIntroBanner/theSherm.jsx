@@ -20,12 +20,12 @@ export class TheSherm extends Component {
                 </Col>
 
                 <Col xs={12} sm={6} className='p-0 ps-4 pe-4'>
-                    <a href="">
+                    
                         <h1 className='text-uppercase subheader-style pb-4'
                             style={{'text-decoration-underline': '#00A7E1'}}>
                             Rethinking the Sherm
                         </h1>
-                    </a>
+                    
                     <p className='subheader-info-style'>Inclusive Space Research Team joins the Sherman Center this year to identify ways for us to be more inclusive.</p>
                 </Col>
             </Row>

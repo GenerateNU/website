@@ -23,7 +23,8 @@
 } */
 
 .ap_container {
-    height: 100vh;
+    height: 200vh;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .ap_img {
@@ -39,19 +40,20 @@
 
  .ap_text {
     color: white;
-    font-family: 'Space Mono700';
+    font-family: 'Space Mono';
+    font-weight: 700;
     font-size: 36px;
     position: relative;
     background: #187DFF;
     padding: 0.02em;
     width: fit-content;
-    top: 20%;
+    top: 10%;
     margin-bottom: 1%;
     margin-left: 4%;
   }
 
   .ap_text2 {
-    font-family: 'Outfit400';
+    font-family: 'Outfit 400';
     font-size: 20px;
     line-height: 30px;
     color:white;
@@ -63,7 +65,8 @@
 
   .ap_link1 {
       color: white;
-      font-family: 'Space Mono700';
+      font-family: 'Space Mono';
+      font-weight: 700;
       font-size: 92px;
       line-height: 130px;
       cursor: pointer;
@@ -118,7 +121,8 @@
   }
   .accordion .toggle-btn {
       color: white;
-      font-family: 'Space Mono700';
+      font-family: 'Space Mono';
+      font-weight: 700;
       font-size: 92px;
       line-height: 130px;
       cursor: pointer;
@@ -194,7 +198,8 @@
   }
   .accordion2 .toggle-btn2 {
       color: white;
-      font-family: 'Space Mono700';
+      font-family: 'Space Mono';
+      font-weight: 700;
       font-size: 92px;
       line-height: 130px;
       cursor: pointer;
