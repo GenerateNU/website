@@ -62,7 +62,7 @@ async fetchPositions(currentCategory) {
                                     // TODO: figure out how to get position id from category
                                     //   to={`/position/${cat.attributes.id}`}>
                                     to='/positions'>
-                                    {cat.attributes.PositionTitle}
+                                    {cat.attributes.positionTitle}
                                 </Link>
                             </div>
                         </div>
