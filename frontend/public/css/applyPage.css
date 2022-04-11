@@ -23,7 +23,7 @@
 } */
 
 .ap_container {
-    height: 100vh;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.7);
   }
 
@@ -47,7 +47,7 @@
     background: #187DFF;
     padding: 0.02em;
     width: fit-content;
-    top: 20%;
+    top: 10%;
     margin-bottom: 1%;
     margin-left: 4%;
   }
