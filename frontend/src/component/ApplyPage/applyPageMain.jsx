@@ -41,10 +41,10 @@ export class applyPageMain extends Component {
   We have opportunities that run broad and deep. If you don’t see anything right now drop an email and we’ll let you know when posiitons open up again.
   </div>
 
-  {/* <form class="example" action="action_page.php">
-  <input type="text" placeholder="search position" name="search"></input>
+  <form class="example" action="action_page.php">
+  <input style={{color: "white"}}id="searchbar" type="text" placeholder="search position" name="search"></input>
   <button type="submit"><i class="fa fa-search" style={{fontSize: "1.5em"}}></i></button>
-</form> */}
+</form>
 
   <Categories categories={this.state.categories} />
 

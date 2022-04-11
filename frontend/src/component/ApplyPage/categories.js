@@ -22,7 +22,10 @@ async fetchPositions(currentCategory) {
           }
           return response.json();
       }).then((data) => {
-          //console.log(data, "fetchPositions")
+          console.log(data, "fetchPositions")
+          let input = document.getElementById('searchbar').value 
+          input=input.toLowerCase();
+        
           //let positionTitles = data.data.filter(i => i.attributes.CategoryType === currentCategory);
           let positionTitles = data.data;
           console.log(positionTitles, "xxxx"); 
@@ -54,7 +57,7 @@ async fetchPositions(currentCategory) {
                
             <div className="toggle-btn" onClick={() => this.handleSelection(category.attributes.Category, category.id)} id="toggle" name="toggle"> {category.attributes.Category} </div>
             <div id={category.id} className="accordion-content">
-                {this.state.positions.map((cat,id) => <div > <div className='accordion_link'>  <Link style={{textDecoration: 'none'}}to={"/positionTitle/details"}>  {cat.attributes.PositionTitle}  </Link></div>  </div>)}
+                {this.state.positions.map((cat,id) => <div > <div className='accordion_link'>  <Link style={{textDecoration: 'none'}}to={"/positionTitle/details"}>  {cat.attributes.positionTitle}  </Link></div>  </div>)}
                 
             </div>
           </div>

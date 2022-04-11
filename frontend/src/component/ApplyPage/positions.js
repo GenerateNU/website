@@ -15,6 +15,7 @@ class Positions extends React.Component {
             }
             return response.json();
         }).then((data) => {
+            console.log(data.data, 'check');
             this.setState({positions: data.data});
         })
 
@@ -26,7 +27,7 @@ class Positions extends React.Component {
                 {
                     this.state.positions.map((position) => {
                         return(<div>
-                            <h1>{position && position.attributes && position.attributes.PositionTitle}</h1>
+                            <h1>{position && position.attributes && position.attributes.positionTitle}</h1>
                         </div>)
                     })
                 }
