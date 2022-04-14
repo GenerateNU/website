@@ -52,7 +52,7 @@ async fetchPositions(currentCategory, id) {
             
             {this.state.positions.filter((i => i.attributes.categoryType === category.attributes.Category)).map((position,positionId) => 
               <div className='accordion_link'>  
-              <Link style={{textDecoration: 'none'}} to='/positions'>
+              <Link style={{textDecoration: 'none'}} to={`/positions/${position.id}`}>
               {position.attributes.positionTitle}
               </Link> 
               </div>
