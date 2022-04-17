@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import Positions from "./positions";
+// import Positions from "./positions";
 
 class Categories extends React.Component {
     
@@ -9,12 +9,16 @@ class Categories extends React.Component {
         super()
         this.state = {
             selectedCategory : '',
+            number: 787,
             positions: []
         }
     }
 
-async fetchPositions(currentCategory) {
-    console.log(currentCategory, "currentCategory")
+async fetchPositions(currentCategory, id) {
+    console.log(currentCategory, "currentCategory");
+    this.state.lastCategory = currentCategory;    
+    this.state.lastId = id;
+
     //change api call
     await  fetch('http://localhost:1337/api/positions').then((response) => {
           if(response.status >= 400) {
@@ -22,31 +26,22 @@ async fetchPositions(currentCategory) {
           }
           return response.json();
       }).then((data) => {
-          //console.log(data, "fetchPositions")
-          //let positionTitles = data.data.filter(i => i.attributes.CategoryType === currentCategory);
           let positionTitles = data.data;
-          console.log(positionTitles, "xxxx"); 
           this.setState({positions: positionTitles});
-          console.log(this.state.positions, "positions")
       });
 
   }
 
- handleSelection = (selectedCategory, id)=> {
-    this.fetchPositions(selectedCategory);
 
-    //Handled accordion logic with method rather than classes
+ handleSelection = (selectedCategory, id)=> {
+    this.fetchPositions(selectedCategory, id);
     const content = document.getElementById(id);
-    console.log(content , "opens")
-    if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-    }
+    content.classList.toggle("toggle-container");
 }
 
     render() {
         const { categories } = this.props;
+        
         return categories.length > 0 && 
         <div>
         {categories.map((category) =>
@@ -54,8 +49,15 @@ async fetchPositions(currentCategory) {
                
             <div className="toggle-btn" onClick={() => this.handleSelection(category.attributes.Category, category.id)} id="toggle" name="toggle"> {category.attributes.Category} </div>
             <div id={category.id} className="accordion-content">
-                {this.state.positions.map((cat,id) => <div > <div className='accordion_link'>  <Link style={{textDecoration: 'none'}}to={"/positionTitle/details"}>  {cat.attributes.PositionTitle}  </Link></div>  </div>)}
-                
+            
+            {this.state.positions.filter((i => i.attributes.categoryType === category.attributes.Category)).map((position,positionId) => 
+              <div className='accordion_link'>  
+              <Link style={{textDecoration: 'none'}} to={`/positions/${position.id}`}>
+              {position.attributes.positionTitle}
+              </Link> 
+              </div>
+            )}
+               
             </div>
           </div>
         )}

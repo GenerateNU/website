@@ -442,6 +442,10 @@ body{
   line-height: 34px;
 }
 
+.toggle-container {  
+    display: block !important;
+}
+
 /* .duration p{
   font-size: xx-large;
   font-weight: 900, lighter;
