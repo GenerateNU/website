@@ -23,8 +23,13 @@
 } */
 
 .ap_container {
+<<<<<<< Updated upstream
     height: 200vh;
     background-color: rgba(0, 0, 0, 0.7);
+=======
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+>>>>>>> Stashed changes
   }
 
   .ap_img {
@@ -32,6 +37,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

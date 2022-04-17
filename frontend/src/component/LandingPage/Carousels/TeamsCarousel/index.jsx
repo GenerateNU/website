@@ -92,6 +92,7 @@ export default function TeamsCarousel() {
                                             return (
                                                 <>
                                                     <a className='team-nav-link text-decoration-none'
+                                                        
                                                        onClick={changeSlide}>
                                                         {data.team}
                                                     </a>

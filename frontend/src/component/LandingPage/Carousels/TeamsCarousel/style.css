@@ -26,9 +26,13 @@
     color: black;
 }
 
-.team-nav-links>a:hover, .team-nav-links>a:focus, .team-nav-links>a:active, .team-nav-link>a:active{
+.team-nav-links>a:hover, .team-nav-links>a:focus{
     cursor: pointer;
     color: #00A7E1;
     transform: translateX(-10vw);
+}
+
+.team-nav-link a:active{
+    color: rgb(13, 94, 44);
 }
 

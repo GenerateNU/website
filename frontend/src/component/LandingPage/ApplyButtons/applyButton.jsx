@@ -2,6 +2,7 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './style.css'
+import ScrollToTop from './../../ScrollToTop.js' 
 
 /**
  * Page-height apply buttons oriented either to the left or right of the page 
@@ -28,7 +29,9 @@ export default function ApplyButton(props) {
     return (
         <Row className='h-100 w-100 m-0 align-items-center position-relative'>
             {/* Use columns to leave room for button arrow */}
+            
             <Col xs={12} sm={9} className={`h-100 p-0 position-absolute ${rowSide}-0`} style={{backgroundColor: bgColor}}>
+            
                 <a href="/apply">
                 <button href='/apply' className='w-100 h-100 rounded-0 p-0 border-0 position-relative text-center button-overflow' style={{backgroundColor: bgColor}}>
                     <h1 className='text-uppercase apply-header-style apply-header-size text-overflow-center w-auto'
