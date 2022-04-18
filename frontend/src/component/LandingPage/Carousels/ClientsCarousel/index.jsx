@@ -8,57 +8,51 @@ import Image from 'react-bootstrap/Image';
 import CarouselItem from 'react-bootstrap/CarouselItem';
 import Button from 'react-bootstrap/Button';
 import GenerateButton from '../../../Buttons';
-import Arrow from '../../../assets/images/Client_Arrow.png';
+import Arrow from '../../../assets/images/landingpage/clientscarousel/Nav_Arrow.png';
 import Client from './client';
-// Slide background images
-import RootedLiving from '../../../assets/images/Client_RootedLiving.jpg';
-import Phoenix from '../../../assets/images/Client_Phoenix.jpg';
-import Clickitz from '../../../assets/images/Client_Clickitz.jpg';
-import HapticPack from '../../../assets/images/Client_HapticPack.jpg';
-import Solon from '../../../assets/images/Client_Solon.jpg';
-import ShowNXT from '../../../assets/images/Client_ShowNXT.jpg';
-import ShortFall from '../../../assets/images/Client_ShortFall.jpg';
+// Slides data
+import { clientData } from './clientData';
 // Styling
 import '../carousel.css';
 import './style.css';
 
-const clientData = [
-    {
-        'name': 'Rooted Living',
-        'image': RootedLiving,
-        'text': 'Eco-friendly, plant-based snacks that allow you to shop, snack, and support your values.',
-    },
-    {
-        'name': 'Phoenix',
-        'image': Phoenix,
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim morbi et egestas purus urna eget.',
-    },
-    {
-        'name': 'Clickitz',
-        'image': Clickitz,
-        'text': 'Fostering children’s passion for making through modular playhouse toys.',
-    },
-    {
-        'name': 'Haptic Pack',
-        'image': HapticPack,
-        'text': 'Bringing VR gaming experiences closer to reality through haptic feedback.',
-    },
-    {
-        'name': 'Solon',
-        'image': Solon,
-        'text': 'Physical Cryptocurrency wallets for communities with unstable currencies.',
-    },
-    {
-        'name': 'Show NXT',
-        'image': ShowNXT,
-        'text': 'Collegiate sport recruiting social media app turning passion into opportunity.',
-    },
-    {
-        'name': 'Short Fall',
-        'image': ShortFall,
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim morbi et egestas purus urna eget.',
-    },
-];
+// const clientData = [
+//     {
+//         'name': 'Rooted Living',
+//         'image': RootedLiving,
+//         'text': 'Eco-friendly, plant-based snacks that allow you to shop, snack, and support your values.',
+//     },
+//     {
+//         'name': 'Phoenix',
+//         'image': Phoenix,
+//         'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim morbi et egestas purus urna eget.',
+//     },
+//     {
+//         'name': 'Clickitz',
+//         'image': Clickitz,
+//         'text': 'Fostering children’s passion for making through modular playhouse toys.',
+//     },
+//     {
+//         'name': 'Haptic Pack',
+//         'image': HapticPack,
+//         'text': 'Bringing VR gaming experiences closer to reality through haptic feedback.',
+//     },
+//     {
+//         'name': 'Solon',
+//         'image': Solon,
+//         'text': 'Physical Cryptocurrency wallets for communities with unstable currencies.',
+//     },
+//     {
+//         'name': 'Show NXT',
+//         'image': ShowNXT,
+//         'text': 'Collegiate sport recruiting social media app turning passion into opportunity.',
+//     },
+//     {
+//         'name': 'Short Fall',
+//         'image': ShortFall,
+//         'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim morbi et egestas purus urna eget.',
+//     },
+// ];
 
 export default function ClientsCarousel() {
     const [index, setIndex] = useState(0);

@@ -15,7 +15,7 @@ export class Hero extends Component {
                     Your browser does not support the video tag.
                 </video>
 
-                <h1 className='header-style header-size'>CREATE IMPACT</h1>
+                <h1 className='header-style header-size text-uppercase'>Create Impact</h1>
             </Container>
         );
     }

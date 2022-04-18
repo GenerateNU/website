@@ -12,13 +12,11 @@ export default function Position() {
     const { id } = useParams();
     // const id = 1;
     // const [showToast, setShowToast] = useState(false);
-    console.log("Inside Position");
     const data = useFetch(`http://localhost:1337/api/positions/${id}`);
 
     if (data === null) {
         return <></>;
     }
-    console.log("data.data.attributes", data);
     const position = data.data.attributes;
 
     const parseList = stringList => {
@@ -33,7 +31,6 @@ export default function Position() {
     }
 
     return (
-        
         <Container fluid className='position-relative p-0'>
             <Row className='vh-100 m-0'>
                 {/* Left */}

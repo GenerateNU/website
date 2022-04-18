@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OrganizationIntroduction from './organizationIntro';
-import mosaicBg from '../../assets/images/Mosaic_Bg.jpg';
-import mosaicLogo from '../../assets/images/Mosaic_Logo.png';
+import mosaicBg from '../../assets/images/landingpage/affiliateorgintros/Mosaic_Bg.jpg';
+import mosaicLogo from '../../assets/images/landingpage/affiliateorgintros/Mosaic_Logo.png';
 
 /**
  * Component introducing Mosaic.
