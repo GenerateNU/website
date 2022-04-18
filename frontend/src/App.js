@@ -4,6 +4,8 @@ import LandingPage from './component/LandingPage/';
 import ApplyPage from './component/ApplyPage/applyPageMain';
 import Position from './component/ApplyPage/Position';
 import ScrollToTop from './component/ScrollToTop';
+import AboutPage from './component/AboutPage/timeline.jsx';
+
 
 /**
  * The app.js the routes to the different pages are located.
@@ -20,7 +22,7 @@ export default function App() {
             <Route path="/" element={<LandingPage />}></Route>
             <Route path="/apply" element={<ApplyPage />}></Route>
             <Route path="/positions/:id" element={<Position />} />
-
+            <Route path="/about" element={<AboutPage />}></Route>
           </Routes>
         </div>
       </Router>
