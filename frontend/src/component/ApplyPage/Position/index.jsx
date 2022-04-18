@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Toast from 'react-bootstrap/Toast';
 import useFetch from '../../useFetch';
-import ShadowedButton from '../ShadowedButton';
+import ShadowedButton from '../../ShadowedButton';
 import './style.css';
 import { useParams } from 'react-router-dom';
 
