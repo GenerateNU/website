@@ -2,47 +2,70 @@
     background: rgb(255, 255, 255);
 } */
 
-.timeline-bg-image img{
-    margin-top: 80px;
-    margin-left: 80px;
-    height: 55vh;
-    width: 75%;
+.timeline-bg-image img {
+  margin-top: 80px;
+  margin-left: 80px;
+  height: 55vh;
+  width: 75%;
 }
 
-.Spring2016{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    text-size-adjust: 7px;
-    position: absolute;
-    width: 401px;
-    height: 150px;
-    left: 11%;
-    top: 44%;
-    
+.containerbackground p{
+  position: absolute;
+  width: 800px;
+  height: 200px;
+  left: 34.4px;
+  top: 10%;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 290px;
+  line-height: 230px;
+  /* or 72% */
+
+  text-transform: uppercase;
+
+  color: rgba(2, 2, 2, 0.04);
 }
 
-.Spring2016-text{
-    margin-top: -10%;
+.Spring2016 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 401px;
+  height: 150px;
+  left: 11%;
+  top: 44%;
 }
 
-.containerbackground {
-    position: absolute;
-    width: 1061px;
-    height: 472px;
-    left: 34.4px;
-    top: 10%;
+.Spring2016-text {
+  margin-top: -10%;
+}
 
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 400px;
-    line-height: 303px;
-    /* or 72% */
+.Spring2018 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;  
+  position: absolute;
+  width: 264px;
+  height: 60px;
+  left: 28.5%;
+  top: 15.5%;
 
-    text-transform: uppercase;
+  /* B2 */
 
-    color: rgba(2, 2, 2, 0.04);
+  /* font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px; */
+  /* line-height: 30px; */
+  /* or 150% */
 
+  color: #000000;
+}
 
+.Spring2018-text {
+  margin-top: 0%;
 }

@@ -8,7 +8,7 @@ export default function timeline() {
       <div id='container'>
         <div className='timeline-bg-image'>
             <div class="containerbackground">
-                Our Timeline
+                <p>Our Timeline</p>
             </div>
             <img src={TimelineImg} alt="" height='80vh' width='70%'/>
             <div className='Spring2016'>
@@ -20,6 +20,15 @@ export default function timeline() {
                     Iskarous, with the help of Ted Johnson, Assistant 
                     Program Manager of the Sherman Center, and Shashi 
                     Murthy, Director of the Sherman Center at the time.</p>
+                </div>
+            </div>
+
+            <div className='Spring2018'>
+                <div>
+                    <h1>&lt;</h1>
+                </div>
+                <div className='Spring2018-text'>
+                    <p>We take on our first software client, Malaria Free World</p>
                 </div>
             </div>
         </div>
