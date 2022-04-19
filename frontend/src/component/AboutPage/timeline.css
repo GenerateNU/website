@@ -4,16 +4,16 @@
 
 .timeline-bg-image img {
   margin-top: 80px;
-  margin-left: 80px;
+  margin-left: 30px;
   height: 55vh;
-  width: 75%;
+  width: 95%;
 }
 
 .containerbackground p{
   position: absolute;
   width: 800px;
   height: 200px;
-  left: 34.4px;
+  left: 32.4px;
   top: 10%;
 
   font-family: "Space Mono";
@@ -28,21 +28,39 @@
   color: rgba(2, 2, 2, 0.04);
 }
 
-.Spring2016 {
+.Spring2016-1 {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   text-size-adjust: 7px;
   position: absolute;
-  width: 401px;
+  width: 300px;
   height: 150px;
-  left: 11%;
+  left: 8%;
   top: 44%;
 }
 
 .Spring2016-text {
   margin-top: -10%;
+  font-size: smaller;
 }
+
+.Spring2016-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 8%;
+  top: 60.5%;
+}
+
+.Spring2016-text-2 {
+  margin-top: 0%;
+}
+
 
 .Spring2018 {
   display: flex;
@@ -51,7 +69,7 @@
   position: absolute;
   width: 264px;
   height: 60px;
-  left: 28.5%;
+  left: 30.2%;
   top: 15.5%;
 
   /* B2 */
@@ -68,4 +86,68 @@
 
 .Spring2018-text {
   margin-top: 0%;
+}
+
+.Fall2019-1{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;  
+  position: absolute;
+  width: 264px;
+  height: 60px;
+  left: 60%;
+  top: 7.5%;
+  color: #000000;
+}
+
+.Fall2019-text-1 {
+  margin-top: 0%;
+}
+
+.Fall2019-2{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;  
+  position: absolute;
+  width: 264px;
+  height: 60px;
+  left: 60%;
+  top: 22%;
+  color: #000000;
+}
+
+.Fall2019-text-2 {
+  margin-top: -8%;
+}
+
+.Spring2021-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  left: 80%;
+  top: 40%;
+}
+
+.Spring2021-text {
+  margin-top: 0%;
+}
+
+.Spring2021-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 80%;
+  top: 56.5%;
+}
+
+.Spring2021-text-2 {
+  margin-top: -4%;
 }
