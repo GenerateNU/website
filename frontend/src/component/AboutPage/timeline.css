@@ -2,6 +2,12 @@
     background: rgb(255, 255, 255);
 } */
 
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .timeline-bg-image img {
   margin-top: 80px;
   margin-left: 30px;
@@ -9,12 +15,12 @@
   width: 95%;
 }
 
-.containerbackground p{
+.containerbackground p {
   position: absolute;
   width: 800px;
   height: 200px;
   left: 32.4px;
-  top: 10%;
+  top: 20%;
 
   font-family: "Space Mono";
   font-style: normal;
@@ -61,11 +67,10 @@
   margin-top: 0%;
 }
 
-
 .Spring2018 {
   display: flex;
   flex-direction: row;
-  gap: 1rem;  
+  gap: 1rem;
   position: absolute;
   width: 264px;
   height: 60px;
@@ -88,10 +93,10 @@
   margin-top: 0%;
 }
 
-.Fall2019-1{
+.Fall2019-1 {
   display: flex;
   flex-direction: row;
-  gap: 1rem;  
+  gap: 1rem;
   position: absolute;
   width: 264px;
   height: 60px;
@@ -104,10 +109,10 @@
   margin-top: 0%;
 }
 
-.Fall2019-2{
+.Fall2019-2 {
   display: flex;
   flex-direction: row;
-  gap: 1rem;  
+  gap: 1rem;
   position: absolute;
   width: 264px;
   height: 60px;
@@ -150,4 +155,123 @@
 
 .Spring2021-text-2 {
   margin-top: -4%;
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+}
+
+.today {
+  /* today */
+
+  position: absolute;
+  width: 282px;
+  height: 0px;
+  left: 110%;
+  margin-top: 5%;
+  /* H1 */
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 600%;
+  line-height: 92px;
+  /* identical to box height, or 100% */
+
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.membersInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.membersInfo-Members,
+.membersInfo-Clients,
+.membersInfo-Teams,
+.membersInfo-Roles {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+.membersInfo-Members h1,
+.membersInfo-Clients h1,
+.membersInfo-Teams h1,
+.membersInfo-Roles h1 {
+  position: absolute;
+  width: 103px;
+  height: 34px;
+  left: 135%;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  /* identical to box height, or 142% */
+
+  text-align: right;
+  text-transform: capitalize;
+
+  /* Black */
+
+  color: #111111;
+}
+
+.membersInfo-Members p,
+.membersInfo-Clients p,
+.membersInfo-Teams p,
+.membersInfo-Roles p {
+  position: absolute;
+  width: 105px;
+  height: 110px;
+  left: 150%;
+
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 110px;
+  /* identical to box height, or 157% */
+
+  text-transform: uppercase;
+
+  /* Black */
+
+  color: #111111;
+}
+
+.membersInfo-Members h1 {
+  top: 90.73px;
+}
+
+.membersInfo-Members p {
+  top: 64px;
+}
+
+.membersInfo-Clients h1 {
+  top: 303px;
+}
+
+.membersInfo-Clients p {
+  top: 265px;
+}
+
+.membersInfo-Teams h1 {
+  top: 505.21px;
+}
+
+.membersInfo-Teams p {
+  top: 467px;
+}
+
+.membersInfo-Roles h1 {
+  top: 706.97px;
+}
+
+.membersInfo-Roles p {
+  top: 669px;
 }
