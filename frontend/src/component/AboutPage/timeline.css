@@ -8,6 +8,8 @@
   align-items: center;
 }
 
+
+
 .timeline-bg-image img {
   margin-top: 80px;
   margin-left: 30px;
@@ -48,8 +50,47 @@
 
 .Spring2016-text {
   margin-top: -10%;
-  font-size: smaller;
 }
+
+.Spring2016-text h1, .Spring2018-text h1, .Fall2019-text-1 h1, .Spring2021-text h1 {
+  position: absolute;
+  width: 10px;
+  height: 60px;
+  left: -13%;
+  
+
+  /* Timeline date */
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  /* or 125% */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Black */
+
+  color: #111111;
+}
+
+.Spring2016-text h1{
+  top: -90%;
+}
+
+.Spring2018-text h1{
+  top: 260%;
+}
+
+.Fall2019-text-1 h1{
+  top: 365%;
+}
+
+.Spring2021-text h1{
+  top: -70%;
+} 
 
 .Spring2016-2 {
   display: flex;
@@ -230,7 +271,7 @@
   height: 110px;
   left: 150%;
 
-  font-family: "Outfit";
+  font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
   font-size: 70px;

@@ -17,6 +17,7 @@ export default function timeline() {
                 <h1>&lt;</h1>
               </div>
               <div className="Spring2016-text">
+                <h1>Spring 2016</h1>
                 <p>
                   Generate is founded by students Bailey Kane and Mina Iskarous,
                   with the help of Ted Johnson, Assistant Program Manager of the
@@ -42,6 +43,7 @@ export default function timeline() {
                 <h1>&lt;</h1>
               </div>
               <div className="Spring2018-text">
+              <h1>Spring 2018</h1>
                 <p>We take on our first software client, Malaria Free World</p>
               </div>
             </div>
@@ -51,6 +53,7 @@ export default function timeline() {
                 <h1>&lt;</h1>
               </div>
               <div className="Fall2019-text-1">
+              <h1>Fall 2019</h1>
                 <p>The Makerspace opens for access in Hayden Hall.</p>
               </div>
             </div>
@@ -73,6 +76,7 @@ export default function timeline() {
               </div>
               <div className="Spring2021-text">
                 <p>
+                <h1>Spring 2021</h1>
                   Funding is acquired to allow the Executive Director to be paid
                   as a full time position.
                 </p>
