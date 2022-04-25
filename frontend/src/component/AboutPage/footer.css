@@ -1,0 +1,192 @@
+.Footer-body {
+    display: flex;
+    flex-direction: row;
+    float: right;
+  }
+  
+  .Social-links {
+    /* Footer / Verticle */
+  
+    position: static;
+    width: 210px;
+    height: 100vh;
+    /* left: 2479px; */
+    top: 0px;
+  
+    /* SFTWRE Blue */
+  
+    background: #187dff;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+  }
+  
+  .Apply-link {
+    /* Next Section CTA */
+  
+    position: static;
+    width: 210px;
+    height: 100vh;
+    /* left: 2689px; */
+    top: 0px;
+  
+    /* MNGMNT Yellow */
+  
+    background: #ffbf3c;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 0px;
+  }
+  
+  .border {
+    /* Rectangle 110 */
+  
+    float: left;
+    position: absolute;
+    width: 650px;
+    height: 150px;
+    left: 70.2%;
+    top: 40%;
+  
+    /* MNGMNT Yellow */
+  
+    background: #ffbf3c;
+    /* Black */
+  
+    border: 2px solid #111111;
+    box-sizing: border-box;
+    transform: rotate(-90deg);
+  }
+  
+  .apply-btn {
+    float: left;
+    position: absolute;
+    width: 650px;
+    height: 150px;
+    left: 2.4%;
+    top: 8%;
+  
+    /* Black */
+  
+    background: #111111;
+    /* MNGMNT Yellow */
+  
+    border: 1px solid #ffbf3c;
+    box-sizing: border-box;
+    transform: rotate(0deg);
+  }
+  
+  .apply-btn a {
+    float: left;
+    position: absolute;
+    width: 282px;
+    height: 92px;
+    right: 24.4%;
+    top: 15%;
+  
+    text-decoration: none;
+    /* H1 */
+  
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 92px;
+    line-height: 92px;
+    /* identical to box height, or 100% */
+  
+    text-align: center;
+    /* text-transform: uppercase; */
+  
+    /* White */
+  
+    color: #ffffff;
+  
+    transform: rotate(180deg);
+  }
+  
+  .logo-bg {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    left: 23%;
+    top: 5%;
+  
+    /* Black */
+  
+    background: #111111;
+  }
+  
+  .logo {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    right: 15%;
+    top: -15%;
+  }
+  
+  .text-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-left: 30%;
+    margin-top: 40%;
+  }
+  
+  .text-links a {
+    text-decoration: none;
+    position: static;
+    width: 98px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+  
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+  
+    /* White */
+  
+    color: #ffffff;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 6px 0px;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .link1, .link2, .link3, .link4, .link5, .link6, .link7{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    
+    border-radius: 50%;
+  
+    /* White */
+  
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    transform: rotate(90deg);
+  }
+  
+  .link2{
+    display: flex;
+    flex-direction: row;
+  }
