@@ -8,7 +8,7 @@ import CarouselItem from 'react-bootstrap/CarouselItem';
 import Director from './director';
 import DirectorIcon from './directorIcon';
 // Slides data
-import { directorData } from './directorData';
+import { directorData } from '../../../../data/directorData';
 // Styling
 import '../carousel.css';
 import './style.css';

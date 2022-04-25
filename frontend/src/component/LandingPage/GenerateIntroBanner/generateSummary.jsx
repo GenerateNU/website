@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import weAreGenerate from '../../assets/images/landingpage/introbanner/We_Are_Gen.png'
+import weAreGenerate from '../../../assets/images/landingpage/introbanner/We_Are_Gen.png'
 import GenerateButton from '../../Buttons';
 import RightTriangle from '../../RightTriangle';
 import './style.css';

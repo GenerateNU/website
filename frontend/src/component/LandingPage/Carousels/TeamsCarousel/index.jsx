@@ -8,7 +8,7 @@ import CarouselItem from 'react-bootstrap/CarouselItem';
 import GenerateButton from '../../../Buttons';
 import Team from './team';
 // Slides data
-import { teamData } from './teamData';
+import { teamData } from '../../../../data/teamData';
 // Styling
 import '../carousel.css';
 import './style.css';

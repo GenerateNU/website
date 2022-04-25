@@ -3,7 +3,7 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import RightTriangle from '../../RightTriangle';
-import visitShowcase from '../../assets/images/landingpage/introbanner/Visit_Showcase.jpg';
+import visitShowcase from '../../../assets/images/landingpage/introbanner/Visit_Showcase.jpg';
 import './style.css';
 
 // TODO: Abstract with TheSherm component

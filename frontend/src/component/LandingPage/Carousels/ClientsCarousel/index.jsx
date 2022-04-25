@@ -8,10 +8,10 @@ import Image from 'react-bootstrap/Image';
 import CarouselItem from 'react-bootstrap/CarouselItem';
 import Button from 'react-bootstrap/Button';
 import GenerateButton from '../../../Buttons';
-import Arrow from '../../../assets/images/landingpage/clientscarousel/Nav_Arrow.png';
+import Arrow from '../../../../assets/images/landingpage/clientscarousel/Nav_Arrow.png';
 import Client from './client';
 // Slides data
-import { clientData } from './clientData';
+import { clientData } from '../../../../data/clientData';
 // Styling
 import '../carousel.css';
 import './style.css';

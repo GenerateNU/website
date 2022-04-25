@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
-import videoBg from '../../assets/videos/videoplayback.mp4';
+import videoBg from '../../../assets/videos/videoplayback.mp4';
 import './style.css';
 
 /**

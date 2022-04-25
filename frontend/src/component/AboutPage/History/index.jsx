@@ -2,8 +2,8 @@ import React from 'react';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import ShermLogo from '../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png';
-import MosaicLogo from '../../assets/images/landingpage/affiliateorgintros/Mosaic_Logo.png';
+import ShermLogo from '../../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png';
+import MosaicLogo from '../../../assets/images/landingpage/affiliateorgintros/Mosaic_Logo.png';
 
 export default class History extends React.Component {
     render() {

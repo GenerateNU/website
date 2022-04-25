@@ -14,7 +14,7 @@ export default function Position() {
     // const [showToast, setShowToast] = useState(false);
     const data = useFetch(`http://localhost:1337/api/positions/${id}`);
 
-    if (data === null) {
+    if (!data) {
         return <></>;
     }
     const position = data.data.attributes;

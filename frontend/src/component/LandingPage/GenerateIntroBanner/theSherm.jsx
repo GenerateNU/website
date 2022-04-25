@@ -3,7 +3,7 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import RightTriangle from '../../RightTriangle';
-import rethinkingTheSherm from '../../assets/images/landingpage/introbanner/Rethinking_Sherm.jpg';
+import rethinkingTheSherm from '../../../assets/images/landingpage/introbanner/Rethinking_Sherm.jpg';
 import './style.css';
 
 // ...
