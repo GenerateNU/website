@@ -1,13 +1,10 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import { directorData } from '../../../data/directorData';
 import LeadershipCard from './leadershipCard';
 
 export default function Leadership() {
-    let zIndex = 1260;
-
     return (
         <Container fluid className='bg-black vh-100 vw-100'>
             <Row className='vh-25 p-5'>
@@ -21,11 +18,9 @@ export default function Leadership() {
             <div className='vh-75 p-5 d-flex flex-nowrap justify-content-center cards-display'>
                 {
                     directorData.map(dir => {
-                        zIndex -= 10;
                         return <LeadershipCard director={dir} 
-                                                key={dir.title}
-                                                zIndex={`${zIndex}`} />
-                    })
+                                                key={dir.title} />
+                    }).reverse()
                 }
             </div>
         </Container>
