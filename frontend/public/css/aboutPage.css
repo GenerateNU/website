@@ -418,3 +418,73 @@
 }
 
 
+
+
+
+/* mission css */
+.mission_whygenerate {
+  color: white;
+  font-size: 92px;
+  line-height: 92px;
+  font-family: 'Space Mono700';
+}
+
+.mission_goodies {
+  color: #FF5751;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Space Mono';
+  margin-left: 45%;
+}
+
+.mission_textbox {
+  height: 90px;
+  width: 382px;
+  float: left;
+  margin-top: 3%;
+  margin-left: 14%;
+}
+
+.mission_namebox {
+  height: 300px;
+  width: 382px;
+  float: right;
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+.mission_name {
+  font-size: 50px;
+  line-height: 92px;
+  font-family: 'Space Mono700';
+  margin-right: 20%;
+}
+
+.mission_text {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Outfit300';
+  margin-top: 8%;
+  text-align: left;
+}
+
+.mission_image {
+ width: 376px !important; 
+ height: 376px !important;
+ margin-top: 3%;
+}
+
+
+.mission_container {
+  height: 700px;
+}
+
+.mission_arrow {
+  font-family: 'Space Mono700';
+  font-size: 40px;
+  line-height: 50px;
+  color: white; 
+  margin-left: 15%;
+}

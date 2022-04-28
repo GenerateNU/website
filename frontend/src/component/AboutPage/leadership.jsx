@@ -33,11 +33,7 @@ export default function leadership() {
     
      
       });
-
-      
-   
-
-
+    
      
       
     return (
