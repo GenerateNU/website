@@ -37,16 +37,12 @@ export class applyPageMain extends Component {
   <div className="ap_img"></div>
   <div className="ap_text">WE VIBE HARD AND <br></br>  MAKE THINGS</div>
   {/* <div className="ap_text">MAKE THINGS</div> */}
-  <Search/>
   <div className="ap_text2">
   We’re always looking for passionate individuals who are ready to learn and grow. 
   We have opportunities that run broad and deep. If you don’t see anything right now drop an email and we’ll let you know when posiitons open up again.
   </div>
-
-  {/* <form class="example" action="action_page.php">
-  <input type="text" placeholder="search position" name="search"></input>
-  <button type="submit"><i class="fa fa-search" style={{fontSize: "1.5em"}}></i></button>
-</form> */}
+  <Search/>
+ 
 
   <Categories categories={this.state.categories} />
 
