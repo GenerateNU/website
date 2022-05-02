@@ -234,6 +234,7 @@ form.example input[type=text] {
   background: none;
   margin-left: 55%;
   margin-top: -3%;
+  color: white;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

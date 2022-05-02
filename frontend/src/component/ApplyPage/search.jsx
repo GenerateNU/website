@@ -43,11 +43,13 @@ export default function Search() {
     return (
         <> 
             <form class="example" action="action_page.php">
-                <input type="text" 
-                        placeholder="search position" 
-                        name="search"
-                        value={searchQuery}
-                        onChange={searchPositions}
+                
+            <input type="text"  class="example"
+                 placeholder="search position" 
+                 name="search"
+                //  value={searchQuery}
+                 onChange={searchPositions}
+                      
                 />
                 {/* <button type="submit" onClick={searchPostions}>
                     <i class="fa fa-search" style={{fontSize: "1.5em"}}></i>
