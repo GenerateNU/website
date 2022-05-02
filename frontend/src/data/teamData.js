@@ -5,7 +5,7 @@ import Operations from '../assets/images/landingpage/teamscarousel/Operations.jp
 import Outreach from '../assets/images/landingpage/teamscarousel/Outreach.jpg';
 import Software from '../assets/images/landingpage/teamscarousel/Software.jpg';
 
-export const teamData = [
+const teamData = [
     {
         'team': 'Management',
         'image': Management,
@@ -37,3 +37,5 @@ export const teamData = [
         'text': 'From mechanical systems to electrical development, our Build Studio helps entrepreneurs by overcoming technical hurdles in development to accelerate their ventures; all while providing an educational experience for the engineers and designers of Generate. Our teams navigate the development cycle to iterate innovative solutions.',
     },
 ];
+
+export default teamData;

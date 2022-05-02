@@ -5,7 +5,6 @@ import Image from 'react-bootstrap/esm/Image';
 import Row from 'react-bootstrap/esm/Row';
 import ShadowedButton from '../../ShadowedButton';
 import './style.css';
-import { directorData } from '../../../data/directorData';
 
 export default function LeadershipCard({
     director = {

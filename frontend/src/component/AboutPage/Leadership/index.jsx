@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/esm/Row';
-import { directorData } from '../../../data/directorData';
+import directorData from '../../../data/directorData';
 import LeadershipCard from './leadershipCard';
 
 export default function Leadership() {

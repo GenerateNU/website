@@ -3,6 +3,7 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Leadership from "./Leadership";
 import History from "./History";
+import MissionCarousel from "./MissionCarousel";
 import './style.css';
 
 export default class AboutPage extends React.Component {
@@ -12,6 +13,7 @@ export default class AboutPage extends React.Component {
                 <Row className='flex-nowrap'>
                     <Leadership />
                     <History />
+                    <MissionCarousel />
                 </Row>
             </Container>
         );

@@ -19,7 +19,7 @@ import SoftwareInactiveIcon from '../assets/icons/teams/gray/Software.png';
 import HardwareInactiveIcon from '../assets/icons/teams/gray/Hardware.png';
 import CommunityInactiveIcon from '../assets/icons/teams/gray/Community.png';
 
-export const directorData = [
+const directorData = [
     {
         'title': 'Executive Director',
         'team': 'Management',
@@ -93,3 +93,5 @@ export const directorData = [
         'emailUsername': ':((',
     },
 ];
+
+export default directorData;

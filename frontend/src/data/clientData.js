@@ -6,7 +6,7 @@ import Solon from '../assets/images/landingpage/clientscarousel/clientprojects/S
 import ShowNXT from '../assets/images/landingpage/clientscarousel/clientprojects/ShowNXT.jpg';
 import ShortFall from '../assets/images/landingpage/clientscarousel/clientprojects/ShortFall.jpg';
 
-export const clientData = [
+const clientData = [
     {
         'name': 'Rooted Living',
         'image': RootedLiving,
@@ -43,3 +43,5 @@ export const clientData = [
         'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim morbi et egestas purus urna eget.',
     },
 ];
+
+export default clientData;
