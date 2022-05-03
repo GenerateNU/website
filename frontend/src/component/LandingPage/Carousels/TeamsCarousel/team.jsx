@@ -8,9 +8,7 @@ import PhotoCutOff from '../../../PhotoCutOff';
  * @param {*} props 
  * @returns 
  */
-export default function Team(props) {    
-    const data = props.data;
-
+export default function Team({data}) {
     return (
         <Row className={`m-0 h-100 ${data.team}`}>
             <Col xs={9} className='p-0 pe-3 h-100 d-flex justify-content-center'>

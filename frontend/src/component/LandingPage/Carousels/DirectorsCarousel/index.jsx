@@ -4,91 +4,14 @@ import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/esm/Image';
 import CarouselItem from 'react-bootstrap/CarouselItem';
 import Director from './director';
 import DirectorIcon from './directorIcon';
-// Slide background images
-import KathrynMinor from '../../../assets/images/Director_KathrynMinor.jpg';
-import AvitalBrodski from '../../../assets/images/Director_AvitalBrodski.jpg';
-import AndrewCataldo from '../../../assets/images/Director_AndrewCataldo.jpg';
-import ThomasKeith from '../../../assets/images/Director_ThomasKeith.jpg';
-import JoshBatra from '../../../assets/images/Director_JoshBatra.jpg';
-import KyleJanko from '../../../assets/images/Director_KyleJanko.jpg';
-// Team icons
-import ManagementActiveIcon from '../../../assets/images/Management_Icon.png';
-import OutreachActiveIcon from '../../../assets/images/Outreach_Icon.png';
-import OperationsActiveIcon from '../../../assets/images/Operations_Icon.png';
-import SoftwareActiveIcon from '../../../assets/images/Software_Icon.png';
-import HardwareActiveIcon from '../../../assets/images/Hardware_Icon.png';
-import CommunityActiveIcon from '../../../assets/images/Community_Icon.png';
-import ManagementInactiveIcon from '../../../assets/images/Management_Grey.png';
-import OutreachInactiveIcon from '../../../assets/images/Outreach_Grey.png';
-import OperationsInactiveIcon from '../../../assets/images/Operations_Grey.png';
-import SoftwareInactiveIcon from '../../../assets/images/Software_Grey.png';
-import HardwareInactiveIcon from '../../../assets/images/Hardware_Grey.png';
-import CommunityInactiveIcon from '../../../assets/images/Community_Grey.png';
+// Slides data
+import directorData from '../../../../data/directorData';
 // Styling
 import '../carousel.css';
 import './style.css';
-
-const directorData = [
-    {
-        'title': 'Executive Director',
-        'activeIcon': ManagementActiveIcon,
-        'inactiveIcon': ManagementInactiveIcon,
-
-        'name': 'Kathryn Minor',
-        'image': KathrynMinor,
-        'emailUsername': 'minor.k',
-    },
-    {
-        'title': 'Outreach Director',
-        'activeIcon': OutreachActiveIcon,
-        'inactiveIcon': OutreachInactiveIcon,
-
-        'name': 'Avital Brodski',
-        'image': AvitalBrodski,
-        'emailUsername': 'brodski.a',
-    },
-    {
-        'title': 'Operations Director',
-        'activeIcon': OperationsActiveIcon,
-        'inactiveIcon': OperationsInactiveIcon,
-
-        'name': 'Andrew Cataldo',
-        'image': AndrewCataldo,
-        'emailUsername': 'cataldo.a',
-    },
-    {
-        'title': 'Software Director',
-        'activeIcon': SoftwareActiveIcon,
-        'inactiveIcon': SoftwareInactiveIcon,
-
-        'name': 'Thomas Keith',
-        'image': ThomasKeith,
-        'emailUsername': 'keith.t',
-    },
-    {
-        'title': 'Hardware Director',
-        'activeIcon': HardwareActiveIcon,
-        'inactiveIcon': HardwareInactiveIcon,
-
-        'name': 'Josh Batra',
-        'image': JoshBatra,
-        'emailUsername': 'batra.j',
-    },
-    {
-        'title': 'Community Director',
-        'activeIcon': CommunityActiveIcon,
-        'inactiveIcon': CommunityInactiveIcon,
-
-        'name': 'Kyle Janko',
-        'image': KyleJanko,
-        'emailUsername': 'janko.k',
-    },
-];
 
 export default function DirectorsCarousel() {
     const directorToIndex = {};
@@ -107,7 +30,7 @@ export default function DirectorsCarousel() {
     const rows = [firstThird, secondThird, lastThird];
     const iconsRow = (rowData) => {
         return (
-            <Row className={`w-100 h-33 m-0 align-items-center justify-content-between`}>
+            <Row className={`w-100 h-33 m-0 ps-3 align-items-center justify-content-between`}>
                 {rowData.map(data => <DirectorIcon title={data.title} 
                                                    inactiveIcon={data.inactiveIcon} 
                                                    activeIcon={data.activeIcon}

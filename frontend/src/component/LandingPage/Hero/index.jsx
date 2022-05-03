@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
-import videoBg from '../../assets/videos/videoplayback.mp4';
+import videoBg from '../../../assets/videos/videoplayback.mp4';
 import './style.css';
 
 /**
@@ -15,7 +15,7 @@ export class Hero extends Component {
                     Your browser does not support the video tag.
                 </video>
 
-                <h1 className='header-style header-size'>CREATE IMPACT</h1>
+                <h1 className='header-style header-size text-uppercase'>Create Impact</h1>
             </Container>
         );
     }

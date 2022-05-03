@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image';
 import CarouselItem from 'react-bootstrap/CarouselItem';
 import Button from 'react-bootstrap/Button';
 import GenerateButton from '../../Buttons';
-import Arrow from '../../assets/images/Client_Arrow.png';
+import Arrow from '../../../assets/images/Client_Arrow.png';
 // Styling
 import './carousel.css';
 

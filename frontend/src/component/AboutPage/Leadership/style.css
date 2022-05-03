@@ -1,0 +1,69 @@
+.card {
+    width: 27vw;
+    height: 62vh;
+    transition: all 0.6s ease;
+}
+
+/* Card animations */
+/* Move cards on top of each other */
+.react-card-flip:not(:first-child) {
+    margin-left: -22vw;
+}
+/* .react-card-flip:not(:last-child) {
+    margin-right: -22vw;
+} */
+/* Reveal all of the selected card */
+.react-card-flip:hover~.react-card-flip {
+    transform: translateX(22vw);
+}
+/* Move selected card up to distinguish from other cards */
+.react-card-flip:hover {
+    transform: translateY(-1rem);
+}
+
+.gen-card-header {
+    font-family: 'Space Mono';
+    font-size: 3.2vw;
+    line-height: 150%;
+    transform-origin: bottom right;
+    transform: rotate(270deg);
+    /* writing-mode: vertical-lr;
+    transform: rotate(180deg); */
+}
+
+.gen-card-body {
+    height: 85%;
+    font-family: 'Outfit300';
+    font-style: normal;
+    font-size: 1.2vw;
+    line-height: 150%;
+}
+
+.position-details {
+    font-family: 'Outfit 400';
+    font-size: 1.2vw;
+    line-height: 135%;
+}
+
+.h-15 {
+    height: 15%;
+}
+
+.no-right-margin {
+    margin-right: 0 !important;
+    float: right !important;
+}
+
+/* TODO: delete after move to public */
+.fit-image {
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cards-display {
+    display: flex;
+    flex-wrap: wrap !important;
+}

@@ -1,0 +1,65 @@
+.value-card-sizing {
+    height: 30vh;
+    aspect-ratio: 1.2 / 1;
+}
+
+.value-card-shadow {
+    box-shadow: .5rem .6rem;
+}
+
+.value-card-header {
+    color: white;
+    font-family: 'Space Mono700';
+    font-size: 200%;
+    line-height: 100%;
+    -webkit-text-stroke-width: 1.5px;
+    height: 20%;
+}
+
+.value-card-text {
+    color: white;
+    font-family: 'Outfit300';
+    font-size: 100%;
+    line-height: 140%;
+    height: 80%;
+}
+
+.value-card:not(:last-child) {
+    padding-right: 15%;
+}
+
+.value-card:last-child {
+    padding-right: 5%;
+}
+
+/* TODO: delete after move to public */
+.fit-image {
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* TODO: delete and move to public, copied from AffiliateOrgIntros */
+.tint {
+    filter: brightness(40%);
+}
+
+/* TODO: delete after move to public */
+.fit-content {
+    height: fit-content;
+    width: fit-content;
+}
+
+.mw-content {
+    width: max-content;
+}
+
+.we-are-header-space {
+    height: 20vh;
+}
+
+.cards-space {
+    width: 55vw;
+}

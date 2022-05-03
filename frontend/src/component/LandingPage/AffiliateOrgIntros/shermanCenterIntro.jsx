@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OrganizationIntroduction from './organizationIntro';
-import shermanCenterBg from '../../assets/images/Sherman_Center_Bg.jpg';
-import shermanCenterLogo from '../../assets/images/Sherman_Center_Logo.png';
+import shermanCenterBg from '../../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Bg.jpg';
+import shermanCenterLogo from '../../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png';
 
 /**
  * Component introducing the Sherman Center.

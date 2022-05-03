@@ -11,10 +11,10 @@ import './style.css';
 export class GenerateIntroBanner extends Component {
   render() {
     return (
-        <Container fluid className='py-7 px-6'>
+        <Container fluid className='px-6 py-7 px-md-6'>
             <GenerateSummary />
             <div className='dividing-margin'></div>
-            <div className='px-6'>
+            <div className='px-3 px-md-6'>
                 <TheSherm />
                 <div className='dividing-margin'></div>
                 <GenerateShowcase />
