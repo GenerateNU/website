@@ -1,4 +1,4 @@
-const missionData = [
+const whyGenerateData = [
     {
         'section': 'Workshops',
         'color': '#FF5751',
@@ -31,4 +31,4 @@ const missionData = [
     },
 ];
 
-export default missionData;
+export default whyGenerateData;

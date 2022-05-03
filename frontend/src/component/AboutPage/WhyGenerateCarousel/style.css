@@ -2,17 +2,11 @@
     background-color: black;
 }
 
-/* TODO: delete after move to public */
-.fit-content {
-    height: fit-content;
-    width: fit-content;
-}
-
-.mission-row-width {
+.why-gen-row-width {
     width: 60vw;
 }
   
-.mission-goodies {
+.why-gen-goodies {
     color: #FF5751;
     font-size: 1.7vw;
     line-height: 100%;
@@ -20,21 +14,21 @@
     margin-right: 8%;
 }
 
-.mission-why-generate {
+.why-gen-why-generate {
     color: white;
     font-size: 6vw;
     line-height: 100%;
     font-family: 'Space Mono700';
 }
 
-.mission-section {
+.why-gen-section {
     font-family: 'Space Mono700';
     color: white;
     font-size: 3.5vw;
     line-height: 75%;
 }
 
-.mission-fit-image {
+.why-gen-fit-image {
     max-height: 50%;
     max-width: 100%;
     width: 100%;
@@ -42,7 +36,7 @@
     object-fit: cover;
 }
 
-.mission-text {
+.why-gen-text {
     height: 50%;
     color: white;
     font-size: 1.4vw;

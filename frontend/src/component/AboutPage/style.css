@@ -11,8 +11,8 @@
     height: 30vh;
 }
 
-.vh-50 {
-    height: 50vh;
+.vh-40 {
+    height: 40vh;
 }
 
 .vh-75 {
@@ -27,13 +27,13 @@ h2 {
 
 h3 {
     font-family: 'Space Mono700';
-    font-size: 4.5vw;
+    font-size: 6.5vw;
     line-height: 100%;
 }
 
 h5 {
     font-family: 'Outfit300';
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     line-height: 85%;
 }
 
@@ -54,6 +54,8 @@ p {
     max-height: 75%;
 }
 
+
+/* TODO: delete after move to public */
 .fit-content {
     height: fit-content;
     width: fit-content;
@@ -67,6 +69,6 @@ p {
     word-spacing: 9999rem;
 }
 
-.our-history-style {
-    line-height: 122px;
+.our-history-text-style {
+    margin-top: -1rem;
 }
