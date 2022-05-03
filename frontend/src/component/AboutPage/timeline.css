@@ -44,7 +44,7 @@
   position: absolute;
   width: 300px;
   height: 150px;
-  left: 8%;
+  left: 12%;
   top: 44%;
 }
 
@@ -52,7 +52,7 @@
   margin-top: -10%;
 }
 
-.Spring2016-text h1, .Spring2018-text h1, .Fall2019-text-1 h1, .Spring2021-text h1 {
+.Spring2016-text h1, .Spring2018-text h1, .Spring2019-text-1 h1, .Fall2019-text-1 h1, .Spring2021-text h1 {
   position: absolute;
   width: 10px;
   height: 60px;
@@ -84,6 +84,10 @@
   top: 260%;
 }
 
+.Spring2019-text-1 h1{
+  top: 365%;
+}
+
 .Fall2019-text-1 h1{
   top: 365%;
 }
@@ -100,7 +104,7 @@
   position: absolute;
   width: 300px;
   height: 20px;
-  left: 8%;
+  left: 12%;
   top: 60.5%;
 }
 
@@ -115,7 +119,7 @@
   position: absolute;
   width: 264px;
   height: 60px;
-  left: 30.2%;
+  left: 38.5%;
   top: 15.5%;
 
   /* B2 */
@@ -134,6 +138,57 @@
   margin-top: 0%;
 }
 
+
+
+.Spring2019-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  left: 58%;
+  top: 39%;
+}
+
+.Spring2019-text {
+  margin-top: 0%;
+}
+
+.Spring2019-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 58%;
+  top: 49%;
+}
+
+.Spring2019-text-2 {
+  margin-top: -4%;
+}
+
+
+.Spring2019-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 58%;
+  top: 59%;
+}
+
+.Spring2019-text-3 {
+  margin-top: -4%;
+}
+
 .Fall2019-1 {
   display: flex;
   flex-direction: row;
@@ -141,7 +196,7 @@
   position: absolute;
   width: 264px;
   height: 60px;
-  left: 60%;
+  left: 80%;
   top: 7.5%;
   color: #000000;
 }
@@ -157,7 +212,7 @@
   position: absolute;
   width: 264px;
   height: 60px;
-  left: 60%;
+  left: 80%;
   top: 22%;
   color: #000000;
 }
@@ -174,7 +229,7 @@
   position: absolute;
   width: 300px;
   height: 150px;
-  left: 80%;
+  left: 102%;
   top: 40%;
 }
 
@@ -190,7 +245,7 @@
   position: absolute;
   width: 300px;
   height: 20px;
-  left: 80%;
+  left: 102%;
   top: 56.5%;
 }
 
@@ -209,8 +264,7 @@
   position: absolute;
   width: 282px;
   height: 0px;
-  left: 110%;
-  margin-top: 5%;
+  left: 130%;
   /* H1 */
 
   font-family: "Space Mono";
@@ -246,7 +300,7 @@
   position: absolute;
   width: 103px;
   height: 34px;
-  left: 135%;
+  left: 155%;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
@@ -269,7 +323,7 @@
   position: absolute;
   width: 105px;
   height: 110px;
-  left: 150%;
+  left: 165%;
 
   font-family: "Space Mono";
   font-style: normal;
@@ -315,4 +369,8 @@
 
 .membersInfo-Roles p {
   top: 669px;
+}
+
+.timeline-img {
+  width: auto !important;
 }

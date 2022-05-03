@@ -11,13 +11,15 @@ export default function timeline() {
             <div class="containerbackground">
               <p>Our Timeline</p>
             </div>
-            <img src={TimelineImg} alt="" height="80vh" width="70%" />
+            <img class="timeline-img" src={TimelineImg} 
+            // alt="" height="80vh" width="70%" 
+            />
             <div className="Spring2016-1">
               <div>
-                <h1>&lt;</h1>
+                {/* <h1>&lt;</h1> */}
               </div>
               <div className="Spring2016-text">
-                <h1>Spring 2016</h1>
+                {/* <h1>Spring 2016</h1> */}
                 <p>
                   Generate is founded by students Bailey Kane and Mina Iskarous,
                   with the help of Ted Johnson, Assistant Program Manager of the
@@ -28,7 +30,7 @@ export default function timeline() {
             </div>
             <div className="Spring2016-2">
               <div>
-                <h1>&lt;</h1>
+                {/* <h1>&lt;</h1> */}
               </div>
               <div className="Spring2016-text-2">
                 <p>
@@ -40,27 +42,68 @@ export default function timeline() {
 
             <div className="Spring2018">
               <div>
-                <h1>&lt;</h1>
+                {/* <h1>&lt;</h1> */}
               </div>
               <div className="Spring2018-text">
-              <h1>Spring 2018</h1>
+              {/* <h1>Spring 2018</h1> */}
                 <p>We take on our first software client, Malaria Free World</p>
               </div>
             </div>
 
             <div className="Fall2019-1">
               <div>
-                <h1>&lt;</h1>
+                {/* <h1>&lt;</h1> */}
               </div>
               <div className="Fall2019-text-1">
-              <h1>Fall 2019</h1>
+              {/* <h1>Fall 2019</h1> */}
+                <p>The Makerspace opens for access in Hayden Hall.</p>
+              </div>
+            </div>
+
+            <div className="Spring2019-1">
+              <div>
+                {/* <h1>&lt;</h1> */}
+              </div>
+              <div className="Spring2019-text-1">
+              {/* <h1>Fall 2019</h1> */}
+                <p>We grow to over 50 members.</p>
+              </div>
+            </div>
+
+            <div className="Spring2019-2">
+              <div>
+                {/* <h1>&lt;</h1> */}
+              </div>
+              <div className="Spring2019-text-2">
+                <p>
+                Software Build Studio introduces UX/UI  designers.
+                </p>
+              </div>
+            </div>
+
+            <div className="Spring2019-3">
+              <div>
+                {/* <h1>&lt;</h1> */}
+              </div>
+              <div className="Spring2019-text-3">
+              {/* <h1>Fall 2019</h1> */}
+                <p>Our client Cruz Control files for a provisional patent, allowing the project team who worked with them to have their names on a patent.</p>
+              </div>
+            </div>
+
+            <div className="Fall2019-1">
+              <div>
+                {/* <h1>&lt;</h1> */}
+              </div>
+              <div className="Fall2019-text-1">
+              {/* <h1>Fall 2019</h1> */}
                 <p>The Makerspace opens for access in Hayden Hall.</p>
               </div>
             </div>
 
             <div className="Fall2019-2">
               <div>
-                <h1>&lt;</h1>
+                {/* <h1>&lt;</h1> */}
               </div>
               <div className="Fall2019-text-2">
                 <p>
@@ -72,11 +115,11 @@ export default function timeline() {
 
             <div className="Spring2021-1">
               <div>
-                <h1>&lt;</h1>
+                {/* <h1>&lt;</h1> */}
               </div>
               <div className="Spring2021-text">
                 <p>
-                <h1>Spring 2021</h1>
+                {/* <h1>Spring 2021</h1> */}
                   Funding is acquired to allow the Executive Director to be paid
                   as a full time position.
                 </p>
@@ -84,7 +127,7 @@ export default function timeline() {
             </div>
             <div className="Spring2021-2">
               <div>
-                <h1>&lt;</h1>
+                {/* <h1>&lt;</h1> */}
               </div>
               <div className="Spring2021-text-2">
                 <p>
