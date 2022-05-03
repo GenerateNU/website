@@ -5,6 +5,8 @@ import ApplyPage from './component/ApplyPage/applyPageMain';
 import Position from './component/ApplyPage/Position';
 import AboutPage from './component/AboutPage';
 import ScrollToTop from './component/ScrollToTop';
+import TimeLine from './component/AboutPage/timeline.jsx';
+
 /**
  * The app.js the routes to the different pages are located.
  * @returns 

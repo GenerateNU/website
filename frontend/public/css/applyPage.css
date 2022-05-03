@@ -32,6 +32,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

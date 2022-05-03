@@ -1,0 +1,376 @@
+/* #container{
+    background: rgb(255, 255, 255);
+} */
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.timeline-bg-image img {
+  margin-top: 80px;
+  margin-left: 30px;
+  height: 55vh;
+  width: 95%;
+}
+
+.containerbackground p {
+  position: absolute;
+  width: 800px;
+  height: 200px;
+  left: 32.4px;
+  top: 20%;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 290px;
+  line-height: 230px;
+  /* or 72% */
+
+  text-transform: uppercase;
+
+  color: rgba(2, 2, 2, 0.04);
+}
+
+.Spring2016-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  left: 12%;
+  top: 44%;
+}
+
+.Spring2016-text {
+  margin-top: -10%;
+}
+
+.Spring2016-text h1, .Spring2018-text h1, .Spring2019-text-1 h1, .Fall2019-text-1 h1, .Spring2021-text h1 {
+  position: absolute;
+  width: 10px;
+  height: 60px;
+  left: -13%;
+  
+
+  /* Timeline date */
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  /* or 125% */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Black */
+
+  color: #111111;
+}
+
+.Spring2016-text h1{
+  top: -90%;
+}
+
+.Spring2018-text h1{
+  top: 260%;
+}
+
+.Spring2019-text-1 h1{
+  top: 365%;
+}
+
+.Fall2019-text-1 h1{
+  top: 365%;
+}
+
+.Spring2021-text h1{
+  top: -70%;
+} 
+
+.Spring2016-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 12%;
+  top: 60.5%;
+}
+
+.Spring2016-text-2 {
+  margin-top: 0%;
+}
+
+.Spring2018 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: absolute;
+  width: 264px;
+  height: 60px;
+  left: 38.5%;
+  top: 15.5%;
+
+  /* B2 */
+
+  /* font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px; */
+  /* line-height: 30px; */
+  /* or 150% */
+
+  color: #000000;
+}
+
+.Spring2018-text {
+  margin-top: 0%;
+}
+
+
+
+.Spring2019-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  left: 58%;
+  top: 39%;
+}
+
+.Spring2019-text {
+  margin-top: 0%;
+}
+
+.Spring2019-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 58%;
+  top: 49%;
+}
+
+.Spring2019-text-2 {
+  margin-top: -4%;
+}
+
+
+.Spring2019-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 58%;
+  top: 59%;
+}
+
+.Spring2019-text-3 {
+  margin-top: -4%;
+}
+
+.Fall2019-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: absolute;
+  width: 264px;
+  height: 60px;
+  left: 80%;
+  top: 7.5%;
+  color: #000000;
+}
+
+.Fall2019-text-1 {
+  margin-top: 0%;
+}
+
+.Fall2019-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: absolute;
+  width: 264px;
+  height: 60px;
+  left: 80%;
+  top: 22%;
+  color: #000000;
+}
+
+.Fall2019-text-2 {
+  margin-top: -8%;
+}
+
+.Spring2021-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  left: 102%;
+  top: 40%;
+}
+
+.Spring2021-text {
+  margin-top: 0%;
+}
+
+.Spring2021-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-size-adjust: 7px;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 102%;
+  top: 56.5%;
+}
+
+.Spring2021-text-2 {
+  margin-top: -4%;
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+}
+
+.today {
+  /* today */
+
+  position: absolute;
+  width: 282px;
+  height: 0px;
+  left: 130%;
+  /* H1 */
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 600%;
+  line-height: 92px;
+  /* identical to box height, or 100% */
+
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.membersInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.membersInfo-Members,
+.membersInfo-Clients,
+.membersInfo-Teams,
+.membersInfo-Roles {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+.membersInfo-Members h1,
+.membersInfo-Clients h1,
+.membersInfo-Teams h1,
+.membersInfo-Roles h1 {
+  position: absolute;
+  width: 103px;
+  height: 34px;
+  left: 155%;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  /* identical to box height, or 142% */
+
+  text-align: right;
+  text-transform: capitalize;
+
+  /* Black */
+
+  color: #111111;
+}
+
+.membersInfo-Members p,
+.membersInfo-Clients p,
+.membersInfo-Teams p,
+.membersInfo-Roles p {
+  position: absolute;
+  width: 105px;
+  height: 110px;
+  left: 165%;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 110px;
+  /* identical to box height, or 157% */
+
+  text-transform: uppercase;
+
+  /* Black */
+
+  color: #111111;
+}
+
+.membersInfo-Members h1 {
+  top: 90.73px;
+}
+
+.membersInfo-Members p {
+  top: 64px;
+}
+
+.membersInfo-Clients h1 {
+  top: 303px;
+}
+
+.membersInfo-Clients p {
+  top: 265px;
+}
+
+.membersInfo-Teams h1 {
+  top: 505.21px;
+}
+
+.membersInfo-Teams p {
+  top: 467px;
+}
+
+.membersInfo-Roles h1 {
+  top: 706.97px;
+}
+
+.membersInfo-Roles p {
+  top: 669px;
+}
+
+.timeline-img {
+  width: auto !important;
+}
