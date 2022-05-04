@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from './component/LandingPage/';
-import ApplyPage from './component/ApplyPage/applyPageMain';
+import ApplyPage from './component/ApplyPage';
 import Position from './component/ApplyPage/Position';
 import AboutPage from './component/AboutPage';
 import ScrollToTop from './component/ScrollToTop';
-import TimeLine from './component/AboutPage/timeline.jsx';
 
 /**
  * The app.js the routes to the different pages are located.
