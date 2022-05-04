@@ -4,7 +4,12 @@ import qs from 'qs';
 const API_URI = process.env.REACT_APP_API_URI;
 const POSITIONS_API = `${API_URI}/positions`;
 
-export const findPositions = async query => {
+export const findAllPositions = async () => {
+    const response = await axios.get(POSITIONS_API);
+    return response.data.data;
+};
+
+export const searchPositions = async query => {
     console.log(`query: ${query}`)
     const formattedQuery = qs.stringify({
         filters: {
@@ -16,8 +21,7 @@ export const findPositions = async query => {
         encodeValuesOnly: true,
     });
 
-    // const response = await axios.get(`${POSITIONS_API}?${formattedQuery}`);
-    const response = await axios.get(`${POSITIONS_API}/1`);
+    const response = await axios.get(`${POSITIONS_API}?${formattedQuery}`);
     const positions = response.data.data;
-    return [positions]; // return positions;
-}
+    return positions;
+};

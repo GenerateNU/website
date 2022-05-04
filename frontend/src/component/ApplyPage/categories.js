@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-// import Positions from "./positions";
+const POSITIONS_API = `${process.env.REACT_APP_API_URI}/positions`;
 
 class Categories extends React.Component {
     
@@ -20,7 +20,7 @@ async fetchPositions(currentCategory, id) {
     this.state.lastId = id;
 
     //change api call
-    await  fetch('http://localhost:1337/api/positions').then((response) => {
+    await  fetch(POSITIONS_API).then((response) => {
           if(response.status >= 400) {
               throw new Error('Bad Response')
           }

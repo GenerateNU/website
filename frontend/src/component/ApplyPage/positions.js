@@ -1,5 +1,7 @@
 import React from 'react';
 
+const POSITIONS_API = `${process.env.REACT_APP_API_URI}/positions`;
+
 class Positions extends React.Component {
     constructor() {
         super()
@@ -9,7 +11,7 @@ class Positions extends React.Component {
     }
 
    async componentWillMount() {
-      await  fetch('http://localhost:1337/api/positions').then((response) => {
+      await  fetch(POSITIONS_API).then((response) => {
             if(response.status >= 400) {
                 throw new Error('Bad Response')
             }

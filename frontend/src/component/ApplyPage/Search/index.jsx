@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { findPositions } from '../../../services/positionService';
+import { searchPositions } from '../../../services/positionService';
 import PositionListItem from './positionListItem';
 import './style.css';
 
@@ -13,7 +13,7 @@ export default function Search({className=''}) {
         const query = queryRef.current.value;
 
         if (query) {
-            const data = await findPositions(query);
+            const data = await searchPositions(query);
             setPositions(data);
         } else {
             setPositions([]);
@@ -27,9 +27,9 @@ export default function Search({className=''}) {
     }, [positions]);
 
     return (
-        <div id='search' className={`dropdown ${className}`}>
+        <div id='search' className={`dropdown search-field ${className}`}>
             {/* Search form */}
-            <div className='search-field d-flex align-items-center'>
+            <div className='d-flex align-items-center'>
                 <input ref={queryRef}
                         id='navbarDropdown'
                         className='form-control p-2 border-0 shadow-none bg-transparent border-bottom border-white rounded-0 text-white' 
@@ -42,8 +42,7 @@ export default function Search({className=''}) {
             {/* Search results dropdown */}
             {
                 positions.length > 0 &&
-                <ul id='search-results-menu'
-                    className='show dropdown-menu rounded-0 shadow-sm border-0'>
+                <ul className='show dropdown-menu rounded-0 shadow-sm border-top-0'>
                     {
                         positions.map(position =>
                             <li key={position.id} className='dropdown-item'>

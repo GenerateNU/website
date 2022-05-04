@@ -8,20 +8,21 @@ import ShadowedButton from '../../ShadowedButton';
 import './style.css';
 import { useParams } from 'react-router-dom';
 
+const POSITIONS_API = `${process.env.REACT_APP_API_URI}/positions`;
+
 export default function Position() {
     const { id } = useParams();
     // const id = 1;
     // const [showToast, setShowToast] = useState(false);
-    const data = useFetch(`http://localhost:1337/api/positions/${id}`);
+    const data = useFetch(`${POSITIONS_API}/${id}`);
 
     if (!data) {
-        return <></>;
+        return null;
     }
     const position = data.data.attributes;
 
     const parseList = stringList => {
-        const parsed = stringList.split('- ');
-        parsed.shift();
+        const parsed = stringList.split('\n');
         return parsed;
     }
 
