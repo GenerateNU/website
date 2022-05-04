@@ -19,13 +19,13 @@ import './style.css';
 export default function ClientsCarousel() {
     const [index, setIndex] = useState(0);
 
-    const changeSlide = e => {
+    const changeSlide = direction => {
         const numSlides = clientData.length;
         let index_ = index;
 
-        if (e.currentTarget.value === 'next') {
+        if (direction === 'down') {
             index_ = (index + 1) % (numSlides - 1);
-        } else if (e.currentTarget.value === 'prev') {
+        } else if (direction === 'up') {
             index_ = (index - 1);
         }
         if (index_ < 0) {
@@ -62,10 +62,16 @@ export default function ClientsCarousel() {
 
                                 <div className='position-relative h-60'>
                                     {/* TODO: replace arrow images with div components */}
-                                    <Button value='prev' onClick={changeSlide} className='bg-transparent p-0 border-0 rounded-0 shadow-none'>
+                                    <Button 
+                                        onMouseEnter={() => changeSlide('up')} 
+                                        onClick={() => changeSlide('up')} 
+                                        className='bg-transparent p-0 border-0 rounded-0 shadow-none'>
                                         <Image className="arrow-style" src={Arrow} />
                                     </Button>
-                                    <Button value='next' onClick={changeSlide} className='bg-transparent p-0 border-0 rounded-0 shadow-none position-absolute bottom-0 end-0'>
+                                    <Button 
+                                        onMouseEnter={() => changeSlide('down')} 
+                                        onClick={() => changeSlide('down')} 
+                                        className='bg-transparent p-0 border-0 rounded-0 shadow-none position-absolute bottom-0 end-0'>
                                         <Image className="arrow-style arrow-down" src={Arrow} />
                                     </Button>
                                 </div>
