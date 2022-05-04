@@ -63,3 +63,10 @@
 .cards-space {
     width: 55vw;
 }
+
+.sticky-element {
+    position: sticky;
+    width: 0.1%;
+    left:0;
+    white-space: nowrap;
+}

@@ -12,7 +12,9 @@ const WeAreSection = () => {
                         our values
                     </h5>
                     <h1 className="our-mission-we-are text-no-fill text-uppercase fit-content">
+                        <div class="sticky-element">
                         We are
+                        </div>
                     </h1>
                 </div>
                 <div className="we-are-header-space"></div>
