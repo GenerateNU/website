@@ -17,7 +17,6 @@ export default function App() {
         <div>
           <ScrollToTop />
           <Routes>
-            {/* <Route path="/" element={<LandingPage />}></Route> */}
             <Route path="/" element={<LandingPage />}></Route>
             <Route path="/apply" element={<ApplyPage />}></Route>
             <Route path="/positions/:id" element={<Position />}></Route>

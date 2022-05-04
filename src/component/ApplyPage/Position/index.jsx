@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -71,9 +71,11 @@ export default function Position() {
                     {/* Right */}
                     <Col xs={6} className='h-100 p-0 py-5 px-5 overflow-auto position-info'>
                         {/* Link back to list of positions */}
-                        <a className='text-decoration-none' href='#'>
+                        <Link 
+                            to='/apply'
+                            className='text-decoration-none' href='#'>
                             &lt; -- <u> positions</u>
-                        </a>
+                        </Link>
     
                         {/* Position summary */}
                         <p className='position-summary my-5'>

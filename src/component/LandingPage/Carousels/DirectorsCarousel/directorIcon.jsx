@@ -7,7 +7,7 @@ export default function DirectorIcon({title, inactiveIcon, activeIcon, changeSli
         <div className='p-0 fit-content'>
             <Button value={title} 
                 className='bg-transparent fit-content p-0 border-0 rounded-0 shadow-none'
-                onClick={changeSlide}>
+                onMouseEnter={changeSlide}>
                     <div className='position-relative'>
                         {/* TODO: figure out why community icons diverge when screen width smaller */}
                         <Image className='team-icon active-icon' src={activeIcon} />
