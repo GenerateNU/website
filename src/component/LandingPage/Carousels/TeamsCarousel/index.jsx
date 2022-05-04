@@ -16,11 +16,11 @@ import './style.css';
 export default function TeamsCarousel() {
     const teamToIndex = {};
     teamData.map((data, index) => (teamToIndex[data.team] = index));
-    const [index, setIndex] = useState(0);
+    const [currSlideIndex, setCurrSlideIndex] = useState(0);
 
     const changeSlide = e => {
-        let index_ = teamToIndex[e.target.text];
-        setIndex(index_);
+        let index = teamToIndex[e.target.text];
+        setCurrSlideIndex(index);
     };
 
     return (
@@ -33,7 +33,7 @@ export default function TeamsCarousel() {
                 <Col xs={11} className='h-75 ps-5 pe-0'>
                     <Carousel controls={false} indicators={false}
                               className='position-relative w-100 h-100'
-                              activeIndex={index}>
+                              activeIndex={currSlideIndex}>
                         {
                             teamData.map(data => {
                                 return (
@@ -50,12 +50,14 @@ export default function TeamsCarousel() {
                             <Col xs={3} className='position-relative p-0 h-100 d-flex align-items-center justify-content-center'>
                                 <div className='team-nav-links position-relative h-60'>
                                     {
-                                        teamData.map(data => {
+                                        teamData.map((data, index) => {
                                             return (
                                                 <>
                                                     <a className='team-nav-link text-decoration-none'
-                                                        
-                                                       onClick={changeSlide}>
+                                                       style={index === currSlideIndex ? 
+                                                              {color: '#00A7E1', marginLeft: '-2vw'} :
+                                                              {}}
+                                                       onMouseEnter={changeSlide}>
                                                         {data.team}
                                                     </a>
                                                     <br/>
