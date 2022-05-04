@@ -1,38 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { findAllPositions } from '../../services/positionService';
 
-class Positions extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            positions :[]
-        }
-    }
+export default function Positions() {
+    const [positions, setPositions] = useState();
 
-   async componentWillMount() {
-      await  fetch('http://localhost:1337/api/positions').then((response) => {
-            if(response.status >= 400) {
-                throw new Error('Bad Response')
+    useEffect(() => {
+        const getPositions = async () => {
+            const data = await findAllPositions();
+            setPositions(data);
+        }; 
+        getPositions();
+    }, []);
+
+    return (
+        positions.length > 0 &&
+        <div>
+            {
+                positions.map((position) => {
+                    return(<div>
+                        <h1>{position && position.attributes && position.attributes.PositionTitle}</h1>
+                    </div>)
+                })
             }
-            return response.json();
-        }).then((data) => {
-            this.setState({positions: data.data});
-        })
-
-    }
-
-    render() {
-        return this.state.positions.length > 0 && (
-            <div>
-                {
-                    this.state.positions.map((position) => {
-                        return(<div>
-                            <h1>{position && position.attributes && position.attributes.PositionTitle}</h1>
-                        </div>)
-                    })
-                }
-            </div>
-        )
-
-    }
+        </div>
+    );
 }
-export default Positions;

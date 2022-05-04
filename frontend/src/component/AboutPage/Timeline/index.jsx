@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import "./timeline.css";
-import TimelineImg from "../AboutPage/Timeline.png";
+import React from "react";
+import "./style.css";
+import TimelineImg from "./Timeline.png";
 
 export default function timeline() {
   return (

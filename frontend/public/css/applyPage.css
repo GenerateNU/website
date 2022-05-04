@@ -1,3 +1,7 @@
+.space-above-search {
+    height: 40vh;
+}
+
 /* .ap_image {
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,8 +226,8 @@
   }
 
   
-  /* Style the search field */
-form.example input[type=text] {
+  Style the search field
+/* .example input[type=search] {
   padding: 10px;
   font-size: 17px;
   border-bottom: 1px solid white;
@@ -236,18 +240,18 @@ form.example input[type=text] {
   margin-left: 55%;
   margin-top: -3%;
   color: white;
-}
+} */
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+/* ::placeholder {
   color: white;
-  opacity: 1; /* Firefox */
+  opacity: 1;
   font-family: 'Space Mono 400';
   font-size: 20px;
   line-height: 29.62px;
-}
+} */
 
 /* Style the submit button */
-form.example button {
+/* .example button {
   float: left;
   margin-top: -2%;
   padding: 10px;
@@ -256,14 +260,14 @@ form.example button {
   font-size: 17px;
   border: none;
   cursor: pointer;
-}
+} */
 
 /* Clear floats */
-form.example::after {
+/* .example::after {
   content: "";
   clear: both;
   display: table;
-}
+} */
 
 
 
