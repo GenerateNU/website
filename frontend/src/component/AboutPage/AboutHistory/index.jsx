@@ -1,6 +1,6 @@
 import React from 'react'
-import ShermImg from '../AboutPage/NU_ShermanCenter.png' 
-import MosaicImg from '../AboutPage/MosaicLogo.png'
+import ShermImg from './NU_ShermanCenter.png' 
+import MosaicImg from './MosaicLogo.png'
 
 export default function abouthistory() {
   return (

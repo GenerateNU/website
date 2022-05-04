@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import OverlayTrigger from 'react-bootstrap/esm/OverlayTrigger';
-import Button from 'react-bootstrap/esm/Button';
 import ShermLogo from '../../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png';
 import MosaicLogo from '../../../assets/images/landingpage/affiliateorgintros/Mosaic_Logo.png';
 import Tooltip from 'react-bootstrap/esm/Tooltip';

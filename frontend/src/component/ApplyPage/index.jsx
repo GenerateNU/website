@@ -1,20 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Categories from "./categories";
+import React from 'react'
+import Categories from './Categories';
 import Search from './Search';
-import { findAllCategories } from '../../services/categoryService';
 
 
 export default function ApplyPage() {
-    const [categories, setCategories] = useState([]);
-
-    useEffect(() => {
-        const getCategories = async () => {
-            const data = await findAllCategories();
-            setCategories(data);
-        };
-        getCategories();
-    }, []);
-
     return (
         <div className="ap_container">
             <div className="ap_img"></div>
@@ -29,7 +18,7 @@ export default function ApplyPage() {
                     <Search className=''/>
                 </div>
             </div>
-            <Categories categories={categories} />
+            <Categories />
         </div>
     );
 }

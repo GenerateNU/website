@@ -10,7 +10,6 @@ export const findAllPositions = async () => {
 };
 
 export const searchPositions = async query => {
-    console.log(`query: ${query}`)
     const formattedQuery = qs.stringify({
         filters: {
             positionTitle: {
@@ -25,3 +24,41 @@ export const searchPositions = async query => {
     const positions = response.data.data;
     return positions;
 };
+
+export const findPositionsByCategory = async category => {
+    const query = qs.stringify({
+        filters: {
+            categoryType: {
+                $eq: category,
+            },
+        },
+    }, {
+        encodeValuesOnly: true,
+    });
+
+    const response = await axios.get(`${POSITIONS_API}?${query}`);
+    const positions = response.data.data;
+    return positions;
+    // return filterPositions({categoryType: {
+    //     $eq: category,
+    // });
+};
+
+export const findPosition = async id => {
+    const response = await axios.get(`${POSITIONS_API}/${id}`);
+    return response.data.data;
+};
+
+const filterPositions = async filterQuery => {
+    const query = qs.stringify({
+        filters: {
+            filterQuery
+        },
+    }, {
+        encodeValuesOnly: true,
+    });
+
+    const response = await axios.get(`${POSITIONS_API}?${query}`);
+    const positions = response.data.data;
+    return positions;
+}
