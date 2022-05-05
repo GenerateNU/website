@@ -1,3 +1,14 @@
+# TODOs
+
+0. Rename component to components
+1. Delete dead code, repeated image assets
+2. Re-organize assets
+3. Re-organize style sheets, maintain just 1 for fonts and just 1 for public styling
+4. Make type and color system
+5. Re-organize components folder (make a pages directory and then misc directory for components like RightTriangle)
+5. Re-do pages (e.g. landing page carousels)
+6. Move data to backend
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
