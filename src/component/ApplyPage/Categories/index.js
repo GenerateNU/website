@@ -19,8 +19,8 @@ export default function Categories() {
     useEffect(() => {
         const getPositions = async () => {
             const data = await findPositionsByCategory(selectedCategory);
-            console.log(data)
-            console.log(selectedCategory)
+            console.log("data", data);
+            console.log("selectedCategory", selectedCategory)
             setPositions(data);
         }
         getPositions();

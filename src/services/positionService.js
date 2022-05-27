@@ -6,6 +6,7 @@ const POSITIONS_API = `${API_URI}/positions`;
 
 export const findAllPositions = async () => {
     const response = await axios.get(POSITIONS_API);
+    console.log("positionsddjs", response.data.data);
     return response.data.data;
 };
 
@@ -19,17 +20,16 @@ export const searchPositions = async query => {
     }, {
         encodeValuesOnly: true,
     });
-
     const response = await axios.get(`${POSITIONS_API}?${formattedQuery}`);
     const positions = response.data.data;
     return positions;
 };
 
-export const findPositionsByCategory = async category => {
+export const findPositionsByCategory = async currentCategory => {
     const query = qs.stringify({
         filters: {
             categoryType: {
-                $eq: category,
+                $eq: currentCategory,
             },
         },
     }, {
@@ -39,10 +39,8 @@ export const findPositionsByCategory = async category => {
     const response = await axios.get(`${POSITIONS_API}?${query}`);
     const positions = response.data.data;
     return positions;
-    // return filterPositions({categoryType: {
-    //     $eq: category,
-    // });
 };
+
 
 export const findPosition = async id => {
     const response = await axios.get(`${POSITIONS_API}/${id}`);

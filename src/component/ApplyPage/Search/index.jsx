@@ -8,10 +8,10 @@ export default function Search({className=''}) {
     const [positions, setPositions] = useState([]);
     const queryRef = useRef();
     
-    const fetchSongs = async e => {
+    const fetchPositions = async e => {
         e.preventDefault();
         const query = queryRef.current.value;
-
+        console.log("query", query);
         if (query) {
             const data = await searchPositions(query);
             setPositions(data);
@@ -35,7 +35,7 @@ export default function Search({className=''}) {
                         className='form-control p-2 border-0 shadow-none bg-transparent border-bottom border-white rounded-0 text-white' 
                         type='search'
                         placeholder='search positions'
-                        onInput={fetchSongs} />
+                        onInput={fetchPositions} />
                 <i className="fa fa-search fa-lg mx-2 text-white"></i>
             </div>
 
