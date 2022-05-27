@@ -7,12 +7,15 @@ import Toast from 'react-bootstrap/Toast';
 import ShadowedButton from '../../ShadowedButton';
 import { findPosition } from '../../../services/positionService';
 import './style.css';
+import { ToastHeader } from 'react-bootstrap';
 
 export default function Position() {
     const { id } = useParams();
     const [position, setPosition] = useState([]);
     // const id = 1;
-    // const [showToast, setShowToast] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
+    const [showText, setShowText] = useState('Share');
+
     
     useEffect(() => {
         const getPositions = async () => {
@@ -33,8 +36,10 @@ export default function Position() {
     }
 
     const copyShareLink = () => {
-        navigator.clipboard.writeText('https://en.wikipedia.org/wiki/Kookaburra');
-        // setShowToast(true);
+        console.log(window.location.href)
+        navigator.clipboard.writeText(window.location.href);
+        setShowNotification(true);
+        setShowText('Copied!');
     }
 
     if (position) {
@@ -59,8 +64,9 @@ export default function Position() {
                                         <ShadowedButton fillColor='white' text='notify me' xPad='4rem'
                                                 className='me-5' />)
                                 }
+                                
                                 <ShadowedButton fillColor='white' 
-                                                text='share' 
+                                                text={ showText }
                                                 xPad='1.5rem'
                                                 className='ms-5'
                                                 onClick={copyShareLink} />
@@ -129,16 +135,6 @@ export default function Position() {
                             <u>learn more</u> -- &gt;
                         </a>
                     </Col>
-    
-                    {/* Share copied notification */}
-                    <Toast className='link-copied-toast position-absolute'>
-                            {/* show={showToast}
-                             onClose={setShowToast(false)}> */}
-                        <Toast.Header className='text-uppercase text-primary'>
-                            <i className='fas fa-check pe-2'></i>
-                            Link copied!
-                        </Toast.Header>
-                    </Toast>
                 </Row>
             </Container>
         );
