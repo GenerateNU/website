@@ -6,15 +6,24 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: white;
 }
 
-
+.timlinecontainer {
+  /* margin: 20px; */
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  /* width: 120vw; */
+}
 
 .timeline-bg-image img {
   margin-top: 80px;
-  margin-left: 30px;
-  height: 55vh;
+  background-color: white;
+  margin-left: 20px;
+  height: 50vh;
   width: 95%;
+
 }
 
 .containerbackground p {
@@ -63,8 +72,8 @@
 
   font-family: "Space Mono";
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 300;
+  font-size: 10px;
   line-height: 30px;
   /* or 125% */
 
@@ -119,7 +128,7 @@
   position: absolute;
   width: 264px;
   height: 60px;
-  left: 38.5%;
+  left: 33.5%;
   top: 15.5%;
 
   /* B2 */
@@ -148,7 +157,7 @@
   position: absolute;
   width: 300px;
   height: 150px;
-  left: 58%;
+  left: 49%;
   top: 39%;
 }
 
@@ -164,7 +173,7 @@
   position: absolute;
   width: 300px;
   height: 20px;
-  left: 58%;
+  left: 49%;
   top: 49%;
 }
 
@@ -181,7 +190,7 @@
   position: absolute;
   width: 300px;
   height: 20px;
-  left: 58%;
+  left: 49%;
   top: 59%;
 }
 
@@ -196,8 +205,8 @@
   position: absolute;
   width: 264px;
   height: 60px;
-  left: 80%;
-  top: 7.5%;
+  left: 66%;
+  top: 11%;
   color: #000000;
 }
 
@@ -212,7 +221,7 @@
   position: absolute;
   width: 264px;
   height: 60px;
-  left: 80%;
+  left: 66%;
   top: 22%;
   color: #000000;
 }
@@ -229,7 +238,7 @@
   position: absolute;
   width: 300px;
   height: 150px;
-  left: 102%;
+  left: 83%;
   top: 40%;
 }
 
@@ -245,7 +254,7 @@
   position: absolute;
   width: 300px;
   height: 20px;
-  left: 102%;
+  left: 83%;
   top: 56.5%;
 }
 
@@ -256,22 +265,26 @@
 .members {
   display: flex;
   flex-direction: row;
+  /* width: 20vw; */
+  background-color: white;
+  width: 80vw;
+  position: relative;
 }
 
 .today {
   /* today */
-
   position: absolute;
-  width: 282px;
   height: 0px;
-  left: 130%;
+  top: 50%;
+  left: 20%;
+
   /* H1 */
 
   font-family: "Space Mono";
   font-style: normal;
-  font-weight: 700;
+  /* font-weight: 700;
   font-size: 600%;
-  line-height: 92px;
+  line-height: 92px; */
   /* identical to box height, or 100% */
 
   text-transform: uppercase;
@@ -282,14 +295,14 @@
 .membersInfo {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  right: 20%;
 }
 
 .membersInfo-Members,
 .membersInfo-Clients,
 .membersInfo-Teams,
 .membersInfo-Roles {
-  display: flex;
-  flex-direction: row;
   gap: 10rem;
 }
 
@@ -300,7 +313,8 @@
   position: absolute;
   width: 103px;
   height: 34px;
-  left: 155%;
+  /* left: 135%;
+  top: 65%; */
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
@@ -315,6 +329,8 @@
 
   color: #111111;
 }
+
+
 
 .membersInfo-Members p,
 .membersInfo-Clients p,
@@ -341,6 +357,8 @@
 
 .membersInfo-Members h1 {
   top: 90.73px;
+  right: 65px;
+
 }
 
 .membersInfo-Members p {
@@ -349,6 +367,7 @@
 
 .membersInfo-Clients h1 {
   top: 303px;
+  right: 65px;
 }
 
 .membersInfo-Clients p {
@@ -357,6 +376,7 @@
 
 .membersInfo-Teams h1 {
   top: 505.21px;
+  right: 65px;
 }
 
 .membersInfo-Teams p {
@@ -365,12 +385,13 @@
 
 .membersInfo-Roles h1 {
   top: 706.97px;
+  right: 65px;
 }
 
 .membersInfo-Roles p {
   top: 669px;
 }
 
-.timeline-img {
+/* .timeline-img {
   width: auto !important;
-}
+} */

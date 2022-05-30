@@ -5,8 +5,8 @@ import './style.css';
 
 const WeAreSection = () => {
     return (
-        <>
-            <div className="vh-100 mt-5 py-4 px-5 position-relative">
+        <> 
+             <div >
                 <div className="fit-content">
                     <h5 className="mb-0 our-mission-our-values we-are-values w-auto h-auto text-end">
                         our values
@@ -23,6 +23,9 @@ const WeAreSection = () => {
                 </div>
             </div>
             <div className="cards-space"></div>
+
+         
+           
         </>
     );
 };

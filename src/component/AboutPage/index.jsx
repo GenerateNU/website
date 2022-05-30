@@ -8,6 +8,7 @@ import History from "./History";
 import AboutHistory from './AboutHistory'
 import Timeline from './Timeline'
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
+// import Members from "./Members";
 import './style.css';
 
 export default class AboutPage extends React.Component {
@@ -19,10 +20,15 @@ export default class AboutPage extends React.Component {
                     <OurMissionSection />
                     <WeAreSection />
                     <Leadership />
-                    <History />
+                   
                     {/* <AboutHistory /> */}
-                    {/* <Timeline /> */}
+                    <History />
+                    <Timeline />
+                    {/* <Members/> */}
+
                     <WhyGenerateCarousel />
+
+                   
                 </Row>
             </Container>
         );

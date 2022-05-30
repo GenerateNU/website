@@ -7,12 +7,13 @@ import Toast from 'react-bootstrap/Toast';
 import ShadowedButton from '../../ShadowedButton';
 import { findPosition } from '../../../services/positionService';
 import './style.css';
+import { ToastHeader } from 'react-bootstrap';
 
 export default function Position() {
     const { id } = useParams();
     const [position, setPosition] = useState([]);
-    // const id = 1;
-    // const [showToast, setShowToast] = useState(false);
+    const [showText, setShowText] = useState('Share');
+
     
     useEffect(() => {
         const getPositions = async () => {
@@ -26,15 +27,16 @@ export default function Position() {
 
     const parseList = stringList => {
         if (stringList) {
-            return stringList.split('\n');
+            return stringList.split('.');
         } else {
             return [];
         }
     }
 
     const copyShareLink = () => {
-        navigator.clipboard.writeText('https://en.wikipedia.org/wiki/Kookaburra');
-        // setShowToast(true);
+        console.log(window.location.href)
+        navigator.clipboard.writeText(window.location.href);
+        setShowText('Copied!');
     }
 
     if (position) {
@@ -59,8 +61,9 @@ export default function Position() {
                                         <ShadowedButton fillColor='white' text='notify me' xPad='4rem'
                                                 className='me-5' />)
                                 }
+                                
                                 <ShadowedButton fillColor='white' 
-                                                text='share' 
+                                                text={ showText }
                                                 xPad='1.5rem'
                                                 className='ms-5'
                                                 onClick={copyShareLink} />
@@ -71,11 +74,9 @@ export default function Position() {
                     {/* Right */}
                     <Col xs={6} className='h-100 p-0 py-5 px-5 overflow-auto position-info'>
                         {/* Link back to list of positions */}
-                        <Link 
-                            to='/apply'
-                            className='text-decoration-none' href='#'>
-                            &lt; -- <u> positions</u>
-                        </Link>
+                        <a className='text-decoration-none' href='/about'>
+                          &lt; --  <u> positions</u>
+                        </a>
     
                         {/* Position summary */}
                         <p className='position-summary my-5'>
@@ -88,7 +89,7 @@ export default function Position() {
                             {
                                 
                                 parseList(position.responsibilities).map((info, index) => 
-                                    <li key={index} className='mb-4'>{info}</li>
+                                <li key={index} className='mb-4'>{info}</li> 
                                 )
                             }
                         </ul>
@@ -125,20 +126,10 @@ export default function Position() {
                         <div className='pt-4'></div>
     
                         {/* Link to information about position type */}
-                        <a className='text-decoration-none' href='#'>
+                        <a className='text-decoration-none' href='/about'>
                             <u>learn more</u> -- &gt;
                         </a>
                     </Col>
-    
-                    {/* Share copied notification */}
-                    <Toast className='link-copied-toast position-absolute'>
-                            {/* show={showToast}
-                             onClose={setShowToast(false)}> */}
-                        <Toast.Header className='text-uppercase text-primary'>
-                            <i className='fas fa-check pe-2'></i>
-                            Link copied!
-                        </Toast.Header>
-                    </Toast>
                 </Row>
             </Container>
         );
