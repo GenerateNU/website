@@ -6,7 +6,7 @@ import LeadershipCard from './leadershipCard';
 
 export default function Leadership() {
     return (
-        <Container fluid className='bg-black vh-100 vw-100'>
+        <Container fluid className='bg-black vh-100 vw-100 position-relative'>
             <Row className='vh-25 p-5'>
                 <h3 className='text-uppercase text-white p-0 m-0 fit-content='>
                     Leadership

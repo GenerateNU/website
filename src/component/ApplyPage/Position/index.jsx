@@ -12,8 +12,6 @@ import { ToastHeader } from 'react-bootstrap';
 export default function Position() {
     const { id } = useParams();
     const [position, setPosition] = useState([]);
-    // const id = 1;
-    const [showNotification, setShowNotification] = useState(false);
     const [showText, setShowText] = useState('Share');
 
     
@@ -29,7 +27,7 @@ export default function Position() {
 
     const parseList = stringList => {
         if (stringList) {
-            return stringList.split('\n');
+            return stringList.split('.');
         } else {
             return [];
         }
@@ -38,7 +36,6 @@ export default function Position() {
     const copyShareLink = () => {
         console.log(window.location.href)
         navigator.clipboard.writeText(window.location.href);
-        setShowNotification(true);
         setShowText('Copied!');
     }
 
@@ -77,11 +74,9 @@ export default function Position() {
                     {/* Right */}
                     <Col xs={6} className='h-100 p-0 py-5 px-5 overflow-auto position-info'>
                         {/* Link back to list of positions */}
-                        <Link 
-                            to='/apply'
-                            className='text-decoration-none' href='#'>
-                            &lt; -- <u> positions</u>
-                        </Link>
+                        <a className='text-decoration-none' href='/about'>
+                          &lt; --  <u> positions</u>
+                        </a>
     
                         {/* Position summary */}
                         <p className='position-summary my-5'>
@@ -94,7 +89,7 @@ export default function Position() {
                             {
                                 
                                 parseList(position.responsibilities).map((info, index) => 
-                                    <li key={index} className='mb-4'>{info}</li>
+                                <li key={index} className='mb-4'>{info}</li> 
                                 )
                             }
                         </ul>
@@ -131,7 +126,7 @@ export default function Position() {
                         <div className='pt-4'></div>
     
                         {/* Link to information about position type */}
-                        <a className='text-decoration-none' href='#'>
+                        <a className='text-decoration-none' href='/about'>
                             <u>learn more</u> -- &gt;
                         </a>
                     </Col>

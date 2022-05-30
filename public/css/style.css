@@ -45,7 +45,7 @@
 }
 
 @font-face {
-    font-family: 'Space Mono700';
+    font-family: 'Space Mono 700';
     font-style: normal;
     font-weight: 700;
     src: url(https://fonts.gstatic.com/s/spacemono/v10/i7dMIFZifjKcF5UAWdDRaPpZUFWaHi6WZ3Q.woff2) format('woff2');
@@ -53,7 +53,7 @@
   }
 
   @font-face {
-    font-family: 'Outfit300';
+    font-family: 'Outfit 300';
     font-style: normal;
     font-weight: 300;
     src: url(https://fonts.gstatic.com/s/outfit/v4/QGYyz_MVcBeNP4NjuGObqx1XmO1I4W61O4a0FQItq6fNIg.woff) format('woff');

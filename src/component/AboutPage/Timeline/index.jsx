@@ -5,9 +5,9 @@ import TimelineImg from "./Timeline.png";
 export default function timeline() {
   return (
     <>
-      <div id="container">
-        <div className="main">
-          <div className="timeline-bg-image">
+      <div className="timlinecontainer">
+        <div className="position-relative vh-100 py-4 px-5 d-flex bg-white">
+          <div className="timeline-bg-image vw-200 vh-100">
             <div class="containerbackground">
               <p>Our Timeline</p>
             </div>
@@ -137,9 +137,13 @@ export default function timeline() {
               </div>
             </div>
           </div>
-          <div className="members">
+          
+        </div>
+       
+      </div>
+      <div className="members">
             <div className="today">
-              <p>TODAY</p>
+            <h3>TODAY</h3>
             </div>
             <div className="membersInfo">
               <div className="membersInfo-Members">
@@ -160,8 +164,6 @@ export default function timeline() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </>
   );
 }

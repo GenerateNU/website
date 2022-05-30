@@ -1,3 +1,10 @@
+.wesection {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
 .value-card-sizing {
     height: 30vh;
     aspect-ratio: 1.2 / 1;
