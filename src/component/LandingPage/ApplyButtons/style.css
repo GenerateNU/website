@@ -1,0 +1,87 @@
+.i-am-a-style {
+    font-family: "Commuters Sans 700";
+    font-style: normal;
+    font-weight: bold;
+}
+
+.i-am-a-size {
+    font-size: 15vh;
+    line-height: 18vh;
+}
+
+/* For at least medium-sized screens */
+@media (min-width: 768px) {
+    .i-am-a-size {
+        font-size: 20vh;
+        line-height: 25vh;
+    }
+}
+
+.button-overflow {
+    overflow-y: hidden;
+    overflow-x: visible;
+}
+
+.apply-header-style {
+    font-family: "Commuters Sans 700";
+    font-style: normal;
+    font-weight: bold;
+}
+
+.apply-header-size {
+    font-size: 6.5vw;
+}
+
+/* For at most small-sized screens */
+@media (max-width: 575.5px) {
+    .apply-header-size {
+        font-size: 17vw;
+    }
+}
+
+.text-overflow-center {
+    margin-left: -100%;
+    margin-right: -100%;
+    text-align: center;
+}
+
+.apply-style {
+    font-family: "Space Mono 400";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5vh;
+    text-decoration-line: underline;
+}
+
+/* TODO: Find way to re-use repeated */
+.left-triangle {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-color: rgba(0, 167, 225, 0);
+    border-right-width: 0;
+	border-left-width: 9vh;
+    border-top-width: 14vh;
+    border-bottom-width: 14vh;
+	margin-top: -14vh;
+}
+
+.right-triangle {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-color: rgba(0, 167, 225, 0);
+    border-left-width: 0;
+	border-right-width: 9vh;
+    border-top-width: 14vh;
+    border-bottom-width: 14vh;
+	margin-top: -14vh;
+}

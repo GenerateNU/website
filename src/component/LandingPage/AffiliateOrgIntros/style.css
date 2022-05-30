@@ -1,0 +1,50 @@
+.main-body-height {
+    height: 70%;
+}
+
+.hm-15 {
+    height: 15%;
+}
+
+.px-5 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* TODO: delte after move to public */
+.tint {
+    filter: brightness(40%);
+}
+
+/* TODO: delete after move to public */
+.fit-image {
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.intro-paragraph-text {
+    font-family: "Space Mono 400";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.3vw;
+    line-height: 175%;
+    color: rgb(206, 202, 202);
+}
+
+.header-text {
+    color: white;
+    font-family: "Commuters Sans 800";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 4.5vw;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.vertical-text {
+    transform-origin: bottom right;
+    transform: rotate(270deg);
+}

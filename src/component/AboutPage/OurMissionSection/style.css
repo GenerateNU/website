@@ -1,0 +1,42 @@
+/* Move to public folder */
+.text-no-fill {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+.our-mission-quotation-mark {
+    color: #187DFF;
+    font-family: 'Space Mono700';
+    font-size: 6vw;
+    line-height: 75%;
+}
+
+.our-mission-quote {
+    color: white;
+    font-family: 'Outfit 400';
+    font-size: 1.7vw;
+    line-height: 170%;
+}
+
+.our-mission-header {
+    font-family: 'Space Mono700';
+    font-size: 17vw;
+    line-height: 77%;
+    color: #187DFF;
+}
+
+.our-mission-our-values {
+    color: #FFBF3C;
+    font-size: 1.7vw;
+    line-height: 100%;
+    font-family: 'Space Mono';
+    margin-right: 3%;
+}
+
+.our-mission-we-are {
+    color: #FFBF3C;
+    font-size: 15vw;
+    line-height: 77%;
+    font-family: 'Space Mono700';
+    word-spacing: -5vw;
+}
