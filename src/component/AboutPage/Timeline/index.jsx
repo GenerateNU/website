@@ -5,13 +5,13 @@ import TimelineImg from "./Timeline.png";
 export default function timeline() {
   return (
     <>
-      <div className="timlinecontainer">
+      <div >
         <div className="position-relative vh-100 py-4 px-5 d-flex bg-white">
-          <div className="timeline-bg-image vw-200 vh-100">
+          <div className="timeline-bg-image">
             <div class="containerbackground">
               <p>Our Timeline</p>
             </div>
-            <img class="timeline-img" src={TimelineImg} 
+            <img src={TimelineImg} 
             // alt="" height="80vh" width="70%" 
             />
             <div className="Spring2016-1">

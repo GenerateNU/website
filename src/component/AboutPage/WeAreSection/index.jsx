@@ -5,7 +5,7 @@ import './style.css';
 
 const WeAreSection = () => {
     return (
-        <> <div className="wesection">
+        <> 
              <div >
                 <div className="fit-content">
                     <h5 className="mb-0 our-mission-our-values we-are-values w-auto h-auto text-end">
@@ -24,7 +24,7 @@ const WeAreSection = () => {
             </div>
             <div className="cards-space"></div>
 
-           </div>
+         
            
         </>
     );

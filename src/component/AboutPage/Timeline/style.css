@@ -14,15 +14,15 @@
   display: flex;
   flex-direction: row;
   background-color: white;
-  width: 120vw;
+  /* width: 120vw; */
 }
 
 .timeline-bg-image img {
   margin-top: 80px;
-  margin-left: 30px;
+  background-color: white;
+  margin-left: 20px;
   height: 50vh;
   width: 95%;
-  background-color: white;
 
 }
 
@@ -392,6 +392,6 @@
   top: 669px;
 }
 
-.timeline-img {
+/* .timeline-img {
   width: auto !important;
-}
+} */
