@@ -1,0 +1,19 @@
+.vw-40 {
+    width: 40vw;
+}
+
+.vw-60 {
+    width: 60vw;
+}
+
+.team-name-style {
+    font-family: "Space Mono 700";
+    font-size: 4vw;
+    line-height: 128%;
+}
+
+.team-info-style {
+    font-family: "Outfit 300";
+    font-size: 1.2vw;
+    line-height: 150%;
+}
