@@ -1,0 +1,8 @@
+span {
+  font-family: "Space Mono 700";
+  /* font-style: normal; */
+  /* font-weight: 700; */
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
