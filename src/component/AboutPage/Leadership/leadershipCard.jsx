@@ -22,7 +22,7 @@ export default function LeadershipCard({
 }) {
     const [flipped, setFlipped] = useState(false);
     const boldHeaderStyle = {
-        fontFamily: 'Space Mono700'
+        fontFamily: 'Space Mono 700'
     };
 
     const Card = props => {
