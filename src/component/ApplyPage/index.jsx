@@ -11,7 +11,7 @@ export default function ApplyPage() {
       </div>
       <div className="d-flex">
         <div className="ap_text2 col-6 me-5 pe-5">
-          <div>
+          <div className="notice">
             Team Applications will be live from July 25 to August 5.<br></br>
           </div>
 

@@ -74,7 +74,7 @@ export default function Position() {
                     {/* Right */}
                     <Col xs={6} className='h-100 p-0 py-5 px-5 overflow-auto position-info'>
                         {/* Link back to list of positions */}
-                        <a className='text-decoration-none' href='/about'>
+                        <a className='blue-text' href='/about'>
                           &lt; --  <u> positions</u>
                         </a>
     
@@ -126,7 +126,7 @@ export default function Position() {
                         <div className='pt-4'></div>
     
                         {/* Link to information about position type */}
-                        <a className='text-decoration-none' href='/about'>
+                        <a className='blue-text'  href='/about'>
                             <u>learn more</u> -- &gt;
                         </a>
                     </Col>
