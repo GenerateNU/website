@@ -56,10 +56,10 @@ export default function Position() {
                                 {
                                     (position.active &&
                                         <ShadowedButton fillColor='#FFBF3C' text='apply now' xPad='4rem'
-                                                className='me-5' />) ||
+                                                className='me-5' lnk={position.positionTitle}/>) ||
                                     (!position.active &&
                                         <ShadowedButton fillColor='white' text='notify me' xPad='4rem'
-                                                className='me-5' />)
+                                                className='me-5'/>)
                                 }
                                 
                                 <ShadowedButton fillColor='white' 
@@ -113,7 +113,7 @@ export default function Position() {
                             <Col className='hours'>
                                 <h5>Weekly commitment</h5>
                                 {/* NOTE: Field does not yet exist */}
-                                <h4>Up to {position.weeklyCommitment} hours</h4>
+                                <h4>Up to 20 hours</h4>
                             </Col>
                         </Row>
     

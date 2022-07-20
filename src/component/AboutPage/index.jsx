@@ -8,6 +8,7 @@ import History from "./History";
 import AboutHistory from './AboutHistory'
 import Timeline from './Timeline'
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
+import Footer from "../VerticalFooter";
 // import Members from "./Members";
 import './style.css';
 
@@ -16,7 +17,7 @@ export default class AboutPage extends React.Component {
         return (
             <Container fluid className='vh-100 horizontal-scroll bg-black'>
                 <Row className='flex-nowrap'>
-                   
+                    
                     <OurMissionSection />
                     <WeAreSection />
                     <Leadership />
@@ -27,7 +28,7 @@ export default class AboutPage extends React.Component {
                     {/* <Members/> */}
 
                     <WhyGenerateCarousel />
-
+                    <Footer/>
                    
                 </Row>
             </Container>
