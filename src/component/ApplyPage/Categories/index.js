@@ -49,7 +49,7 @@ export default function Categories() {
                             positions.map(position => 
                                 <div className='accordion_link'
                                      key={position.id}>  
-                                    <Link style={{textDecoration: 'none'}} to={`/positions/${position.id}`}>
+                                    <Link style={{textDecoration: 'none', color: '#187DFF' }} to={`/positions/${position.id}`}>
                                         {position.attributes.positionTitle}
                                     </Link> 
                                 </div>

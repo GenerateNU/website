@@ -1,0 +1,46 @@
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer-container {
+  background-color: #187dff;
+  width: 20vw;
+}
+
+.footer-text {
+  height: 30px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  padding-left: 15%;
+  margin: 5%;
+}
+
+a:hover {
+   font-weight: 1000;
+   color: #ffffff;
+}
+
+.sherm{
+    margin-top: 25%;
+    margin-left: 25%;
+}
+
+.logo-background {
+     background-color: white;
+     width: 70px;
+     height: 60px;
+}
+
+.social-icons {
+    margin-top: 150%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.icon {
+    padding-top: 5%;
+}

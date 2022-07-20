@@ -1,13 +1,13 @@
 import React from "react";
+import Image from 'react-bootstrap/Image';
+import ShermLogo from '../../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png';
+import NavBar from "../../NavBar";
 import './style.css';
 
 const OurMissionSection = () => {
     return (
         <div className="vw-100 vh-100 py-4 px-5">
-            {/* <div className="bg-light p-3 mb-5 d-flex fit-content">
-                <span>gen logo</span>
-                ahhhh it's a nav bar help
-            </div> */}
+            <NavBar/>
             <div className="w-75 pe-5 d-flex">
                 <div className="our-mission-quotation-mark me-2">&#8220;</div>
                 <div className="our-mission-quote">
