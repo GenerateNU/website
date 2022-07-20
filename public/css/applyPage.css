@@ -27,7 +27,7 @@
 } */
 
 .ap_container {
-    height: 200vh;
+    /* height: 200vh; */
     background-color: rgba(0, 0, 0, 0.7);
   }
 
@@ -48,7 +48,7 @@
     font-family: 'Space Mono';
     font-weight: 700;
     font-size: 36px;
-    position: relative;
+    position: absolute;
     background: #187DFF;
     padding: 0.02em;
     width: fit-content;
@@ -460,9 +460,23 @@ a {
 }
 
 
+.notice {
+  color: white;
+  font-family: 'Space Mono';
+  font-weight: 400;
+  font-size: 24px;
+  position: relative;
+  background: #187DFF;
+  padding: 0.02em;
+  width: fit-content;
+  top: 10%;
+  margin-bottom: 5%;
+  /* margin-left: 4%; */
+}
 
 /* --------------------- MEDIA QUERIES TABLETS --------------------- */
 
 @media screen and (max-width: 1024px){
   
 }
+

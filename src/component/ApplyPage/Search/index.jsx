@@ -46,7 +46,7 @@ export default function Search({className=''}) {
                     {
                         positions.map(position =>
                             <li key={position.id} className='dropdown-item'>
-                                <Link to={`/positions/${position.id}`}
+                                <Link style={{color: '#187DFF'}} to={`/positions/${position.id}`}
                                     className='text-decoration-none'>
                                     <PositionListItem position={position.attributes} />
                                 </Link>

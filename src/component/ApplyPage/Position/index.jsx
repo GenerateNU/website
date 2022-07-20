@@ -56,10 +56,10 @@ export default function Position() {
                                 {
                                     (position.active &&
                                         <ShadowedButton fillColor='#FFBF3C' text='apply now' xPad='4rem'
-                                                className='me-5' />) ||
+                                                className='me-5' lnk={position.positionTitle}/>) ||
                                     (!position.active &&
                                         <ShadowedButton fillColor='white' text='notify me' xPad='4rem'
-                                                className='me-5' />)
+                                                className='me-5'/>)
                                 }
                                 
                                 <ShadowedButton fillColor='white' 
@@ -74,7 +74,7 @@ export default function Position() {
                     {/* Right */}
                     <Col xs={6} className='h-100 p-0 py-5 px-5 overflow-auto position-info'>
                         {/* Link back to list of positions */}
-                        <a className='text-decoration-none' href='/about'>
+                        <a className='blue-text' href='/about'>
                           &lt; --  <u> positions</u>
                         </a>
     
@@ -113,7 +113,7 @@ export default function Position() {
                             <Col className='hours'>
                                 <h5>Weekly commitment</h5>
                                 {/* NOTE: Field does not yet exist */}
-                                <h4>Up to {position.weeklyCommitment} hours</h4>
+                                <h4>Up to 20 hours</h4>
                             </Col>
                         </Row>
     
@@ -126,7 +126,7 @@ export default function Position() {
                         <div className='pt-4'></div>
     
                         {/* Link to information about position type */}
-                        <a className='text-decoration-none' href='/about'>
+                        <a className='blue-text'  href='/about'>
                             <u>learn more</u> -- &gt;
                         </a>
                     </Col>
