@@ -6,7 +6,7 @@
 
 .our-mission-quotation-mark {
     color: #187DFF;
-    font-family: 'Space Mono700';
+    font-family: 'Space Mono 700';
     font-size: 6vw;
     line-height: 75%;
 }
@@ -19,7 +19,7 @@
 }
 
 .our-mission-header {
-    font-family: 'Space Mono700';
+    font-family: 'Space Mono 700';
     font-size: 17vw;
     line-height: 77%;
     color: #187DFF;
@@ -37,6 +37,6 @@
     color: #FFBF3C;
     font-size: 15vw;
     line-height: 77%;
-    font-family: 'Space Mono700';
+    font-family: 'Space Mono 700';
     word-spacing: -5vw;
 }

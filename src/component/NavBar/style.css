@@ -6,3 +6,66 @@ span {
   line-height: 30px;
   text-transform: capitalize;
 }
+
+.fit-content {
+    height: fit-content;
+    width: fit-content;
+}
+
+.menu-hover {
+    cursor: pointer;
+}
+
+.menu-font-style {
+    font-family: "Space Mono 700";
+    font-size: 12vw;
+    line-height: 100%;
+}
+
+.header-font-style {
+    font-family: "Space Mono 700";
+    font-size: 4.5vw;
+    line-height: 128%;
+}
+
+.header-font-style:hover {
+    background-color: black;
+    color: #FFBF3C !important;
+}
+
+.header-font-style:hover, .header-font-style:active {
+    cursor: pointer;
+}
+
+.list-font-style {
+    font-family: 'Space Mono 400';
+    font-size: 1.2vw;
+    line-height: 175%;
+}
+
+.list-font-style:hover, .list-font-style:active {
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.vh-45 {
+    height: 45vh;
+}
+
+.vh-15 {
+    height: 15vh;
+}
+
+.vh-40 {
+    height: 40vh;
+}
+
+.footer-font-style {
+    font-family: 'Space Mono 400';
+    font-size: 1.2vw;
+    line-height: 150%;
+}
+
+.gen-float-end {
+    float: right;
+}
