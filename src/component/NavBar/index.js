@@ -17,7 +17,7 @@ export default function NavBar() {
         {/* Todo : change the logo */}
         <img src={ShermLogo} height="50vh" width="50vw"/>
         <span className='p-3'>Apply</span>
-        <span className='p-3'>Menu <a href="/menu"><MenuIcon/> </a></span>   
+        <span className='p-3'>Menu <a className='bg-black' href="/menu"><MenuIcon/> </a></span>   
     </div>
     );
 }
