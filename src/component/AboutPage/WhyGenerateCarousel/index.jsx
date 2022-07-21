@@ -30,7 +30,7 @@ export default function WhyGenerateCarousel() {
                     <Col xs={6} className='ps-5'>
                         {
                             whyGenerateData.map((d, index) => 
-                                                <div className='mb-5'
+                                                <div className='mb-4'
                                                     onMouseOver={() => setCurrentSection(index)}> 
                                                     <h3 className="m-0 p-0 fit-content why-gen-section" 
                                                         style={{color: currentSection === index ? d.color : 'white'}}>

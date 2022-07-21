@@ -45,7 +45,7 @@ export default function History() {
                         >
                             <Row className='m-0 mb-4 p-0 w-auto h-auto align-items-center justify-content-end'>
                                 <Col xs={8} className='w-auto d-flex align-items-center justify-content-end p-0'>
-                                    <h5 className='w-auto text-wrap'><u>Sherman Center</u></h5>
+                                    <h5 className='w-auto text-wrap header'><u>Sherman Center</u></h5>
                                 </Col>
                                 <Col xs={3} className='h-auto p-0 pe-2'>
                                     <Image src={ShermLogo} fluid className='logo float-right' />
@@ -59,7 +59,7 @@ export default function History() {
                         >
                             <Row className='m-0 p-0 mt-5 w-auto h-auto align-items-center justify-content-end'>
                                 <Col xs={3} className='w-auto d-flex align-items-center justify-content-end p-0'>
-                                    <h5><u>Mosaic</u></h5>
+                                    <h5 className='header'><u>Mosaic</u></h5>
                                 </Col>
                                 <Col xs={3} className='h-auto p-0 pe-2'>
                                     <Image src={MosaicLogo} fluid className='logo' />
