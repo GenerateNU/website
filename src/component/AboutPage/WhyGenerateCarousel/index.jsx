@@ -22,7 +22,7 @@ export default function WhyGenerateCarousel() {
                 </div>
                 <Row className="h-100">
                     <Col xs={6} className='pe-3 h-100'>
-                        <Image src={MissionCarouselImg} className='why-gen-fit-image' />
+                        <Image src={whyGenerateData[currentSection].image} className='why-gen-fit-image' />
                         <p className="why-gen-text">
                             {whyGenerateData[currentSection].text}
                         </p>

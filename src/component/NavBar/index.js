@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import ShermLogo from '../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png';
+import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png";
 import MenuIcon from '@material-ui/icons/Menu'; 
 import './style.css';
 import Modal from 'react-bootstrap/Modal';
@@ -14,8 +14,8 @@ const NavBar = () => {
     return (
         <div className="bg-light p-3 mb-5 d-flex fit-content">
             {/* Todo : change the logo */}
-            <img src={ShermLogo} height="50vh" width="50vw"/>
-            <span className='p-3'>Apply</span>
+            <a href="/"><img src={GenerateLogo} height="50vh" width="50vw"/></a>
+            <span className='p-3'><a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover' href="/apply">Apply</a></span>
             <span className='p-3' onClick={() => setShowMenu(true)}>
                 <a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover'>
                     Menu <MenuIcon/>
@@ -36,21 +36,21 @@ const NavBar = () => {
                         <Col xs={5} className='m-0 p-0 text-uppercase'>
                             <Row className='m-0 p-0'>
                                 <a className='header-font-style fit-content text-decoration-none text-black'
-                                    href=""
+                                    href="/"
                                 >
                                     Generate
                                 </a>
                             </Row>
                             <Row className='m-0 p-0'>
                                 <a className='header-font-style fit-content text-decoration-none text-black'
-                                    href=""
+                                    href="/about"
                                 >
                                     About
                                 </a>
                             </Row>
                             <Row className='m-0 p-0'>
                                 <a className='header-font-style fit-content text-decoration-none text-black'
-                                    href=""
+                                    href="/about"
                                 >
                                     Culture
                                 </a>
@@ -59,21 +59,21 @@ const NavBar = () => {
                         <Col xs={5} className='m-0 p-0 text-uppercase'>
                             <Row className='m-0 p-0'>
                                 <a className='header-font-style fit-content text-decoration-none text-black'
-                                    href=""
+                                    href="/"
                                 >
                                     Teams
                                 </a>
                             </Row>
                             <Row className='m-0 p-0'>
                                 <a className='header-font-style fit-content text-decoration-none text-black'
-                                    href=""
+                                    href="/apply"
                                 >
                                     Apply
                                 </a>
                             </Row>
                             <Row className='m-0 p-0'>
                                 <a className='header-font-style fit-content text-decoration-none text-black'
-                                    href=""
+                                    href="/"
                                 >
                                     Projects
                                 </a>
@@ -81,31 +81,31 @@ const NavBar = () => {
                         </Col>
                         <Col xs={2} className='m-0 p-0 pt-2'>
                             <a className='list-font-style text-decoration-none text-black'
-                                href=""
+                                href="/about"
                             >
                                 our mission
                             </a>
                             <br/>
                             <a className='list-font-style text-decoration-none text-black'
-                                href=""
+                                href="/about"
                             >
                                 our values
                             </a>
                             <br/>
                             <a className='list-font-style text-decoration-none text-black'
-                                href=""
+                                href="/about"
                             >
                                 leadership
                             </a>
                             <br/>
                             <a className='list-font-style text-decoration-none text-black'
-                                href=""
+                                href="/about"
                             >
                                 history
                             </a>
                             <br/>
                             <a className='list-font-style text-decoration-none text-black'
-                                href=""
+                                href="/about"
                             >
                                 why Generate
                             </a>

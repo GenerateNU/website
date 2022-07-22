@@ -5,7 +5,7 @@ import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Gen
 import InstaIcon from "../../assets/images/socialMediaIcons/Instagram-Logo.wine.png";
 import LinkedInIcon from "../../assets/images/socialMediaIcons/Linkedin-image.png";
 import FbIcon from "../../assets/images/socialMediaIcons/logo-facebook-512.webp";
-import TwitterIcon from "../../assets/images/socialMediaIcons/twitter.download.png";
+import YoutubeIcon from "../../assets/images/socialMediaIcons/youtube-512.webp";
 
 
 function VerticalFooter() {
@@ -26,10 +26,10 @@ function VerticalFooter() {
           <Col className="icon"><a href ='https://www.google.com/'> <img src={LinkedInIcon} height="20vh" width="20vw" /> </a></Col>
         </Row> */}
         <Row>
-        <Col className="icon"><a href ='https://www.google.com/'> <img src={InstaIcon} height="30vh" width="50vw" /> </a></Col>
-          <Col className="icon"><a href ='https://www.google.com/'> <img src={LinkedInIcon} height="20vh" width="20vw" /> </a></Col>
-          <Col className="icon"><a href ='https://www.google.com/'> <img src={TwitterIcon} height="20vh" width="20vw" /> </a></Col>
-          <Col className="icon"><a href ='https://www.google.com/'> <img src={FbIcon} height="30vh" width="30vw" /> </a></Col>
+        <Col className="icon"><a href ='https://www.instagram.com/generatenu/'> <img src={InstaIcon} height="30vh" width="50vw" /> </a></Col>
+          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={LinkedInIcon} height="20vh" width="20vw" /> </a></Col>
+          <Col className="icon"><a href ='https://www.youtube.com/channel/UC2Y_rgZiPKPH0lSU1FyQJFw/featured'> <img src={YoutubeIcon} height="20vh" width="20vw" /> </a></Col>
+          <Col className="icon"><a href ='https://www.facebook.com/GenerateNU/'> <img src={FbIcon} height="30vh" width="30vw" /> </a></Col>
         </Row>
        
       </div>

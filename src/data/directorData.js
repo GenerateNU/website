@@ -5,6 +5,11 @@ import AndrewCataldo from '../assets/images/landingpage/directorscarousel/Andrew
 import ThomasKeith from '../assets/images/landingpage/directorscarousel/ThomasKeith.jpg';
 import JoshBatra from '../assets/images/landingpage/directorscarousel/JoshBatra.jpg';
 import KyleJanko from '../assets/images/landingpage/directorscarousel/KyleJanko.jpg';
+import Liza from '../assets/images/landingpage/directorscarousel/Liza.png';
+import BenFrothingham from '../assets/images/landingpage/directorscarousel/Benjamin-Frothingham.jpeg';
+import Victoria from '../assets/images/landingpage/directorscarousel/Victoria.jpeg';
+
+
 // Team icons
 import ManagementActiveIcon from '../assets/icons/teams/colored/Management.png';
 import OutreachActiveIcon from '../assets/icons/teams/colored/Outreach.png';
@@ -26,35 +31,32 @@ const directorData = [
         'color': '#FFBF3C',
         'activeIcon': ManagementActiveIcon,
         'inactiveIcon': ManagementInactiveIcon,
-
-        'name': 'Kathryn Minor',
-        'image': KathrynMinor,
-        'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        'emailUsername': 'minor.k',
+        'name': 'Josh Batra',
+        'image': JoshBatra,
+        'bio': 'The Management Team is responsible for leading all teams and ensuring the development of all in the organization. Led by the Executive Director, our management team is a group of people who know their stuff and use it to push the organization forward.',
+        'emailUsername': 'batra.j',
     },
-    {
-        'title': 'Outreach Director',
-        'team': 'Outreach',
-        'color': '#56CCF2',
-        'activeIcon': OutreachActiveIcon,
-        'inactiveIcon': OutreachInactiveIcon,
-
-        'name': 'Avital Brodski',
-        'image': AvitalBrodski,
-        'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        'emailUsername': '???',
-    },
+    // {
+    //     'title': 'Outreach Director',
+    //     'team': 'Outreach',
+    //     'color': '#56CCF2',
+    //     'activeIcon': OutreachActiveIcon,
+    //     'inactiveIcon': OutreachInactiveIcon,
+    //     'name': 'Avital Brodski',
+    //     'image': AvitalBrodski,
+    //     'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    //     'emailUsername': '???',
+    // },
     {
         'title': 'Operations Director',
         'team': 'Operations',
         'color': '#6FCF97',
         'activeIcon': OperationsActiveIcon,
         'inactiveIcon': OperationsInactiveIcon,
-
-        'name': 'Andrew Cataldo',
-        'image': AndrewCataldo,
-        'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        'emailUsername': ':)',
+        'name': 'Ben Frothingham',
+        'image': BenFrothingham,
+        'bio': 'The Operations team is made up of people from many different disciplines, working together to make sure Generate is able to function efficiently. The Operations team is responsible for a wide range of roles including supporting the build studio, gathering, analyzing, reporting on, and utilizing data to better understand our organization, and organizing documentation and tracking the history and archives of Generate.',
+        'emailUsername': 'frothingham.b',
     },
     {
         'title': 'Software Director',
@@ -63,10 +65,10 @@ const directorData = [
         'activeIcon': SoftwareActiveIcon,
         'inactiveIcon': SoftwareInactiveIcon,
 
-        'name': 'Thomas Keith',
-        'image': ThomasKeith,
-        'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        'emailUsername': ':|',
+        'name': 'Victoria',
+        'image': Victoria,
+        'bio': 'The Build Studio Software team is focused on completing real product development work for professional software clients. You will work on a team of engineers and designers to further the products of Northeastern University affiliated businesses.',
+        'emailUsername': 'brennick.v',
     },
     {
         'title': 'Hardware Director',
@@ -75,10 +77,10 @@ const directorData = [
         'activeIcon': HardwareActiveIcon,
         'inactiveIcon': HardwareInactiveIcon,
 
-        'name': 'Josh Batra',
-        'image': JoshBatra,
-        'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        'emailUsername': ':(',
+        'name': 'Liza',
+        'image': Liza,
+        'bio': 'The Build Studio Hardware team is focused on completing real product development work for professional hardware clients. You will work on a team of engineers and designers to further the products of Northeastern University affiliated businesses.',
+        'emailUsername': 'russell.li',
     },
     {
         'title': 'Community Director',
@@ -89,8 +91,8 @@ const directorData = [
 
         'name': 'Kyle Janko',
         'image': KyleJanko,
-        'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        'emailUsername': ':((',
+        'bio': 'The Engagement Team is responsible for student involvement in Generate. The team manages Generate’s brand image and external relations. They host events to build a tight-knit community and work with our alumni network to maintain connections post-graduation.',
+        'emailUsername': 'janko.k',
     },
 ];
 
