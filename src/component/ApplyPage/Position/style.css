@@ -1,0 +1,105 @@
+ .h-25 {
+     height: 25%;
+ }
+ .h-75 {
+     height: 75%;
+ }
+
+ .left-color {
+     background-color: #1477F8;
+ }
+
+ .position-title {
+    /* Text style */
+    font-family: 'Space Mono';
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Text sizing */
+    line-height: 105%;
+    font-size: 5.5vw;
+    margin: 0;
+}
+
+.position-type {
+    color: transparent;
+    -webkit-text-stroke: .15vw white;
+    line-height: 100%;
+}
+
+.position-summary {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.6vw;
+    line-height: 140%;
+}
+
+.position-info a {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.position-info li{
+  font-size: 1.4vw;
+  font-family: 'Outfit';
+  font-weight: 300;
+  line-height: 145%;
+}
+
+.position-info ul{
+  padding-bottom: 5%;
+  list-style: none; 
+}
+
+.position-info ul li::before {
+  content: "\2022";
+  color: #1477F8;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+.position-info h3 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.position-info h4 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7vw;
+    margin: 0;
+}
+
+.position-info h5 {
+    color: rgba(17, 17, 17, 0.7);
+    font-family: 'Outfit';
+    font-weight: 300;
+    font-size: 1.2vw;
+    margin-bottom: 2%;
+}
+
+.link-copied-toast {
+    top: 1%;
+    right: 2em;
+}
+
+.blue-text {
+    color: #1477F8;
+}
+
+.blue-text:hover {
+    color: #1477F8;
+}
