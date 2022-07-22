@@ -1,18 +1,22 @@
 import React from "react";
 import Categories from "./Categories";
 import Search from "./Search";
+import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png";
+
 
 export default function ApplyPage() {
   return (
     <div className="ap_container">
       <div className="ap_img"></div>
       <div className="ap_text">
+       
+       <a href="/"> <img className="bg-white p-2" src={GenerateLogo} height="50px" width="50px"></img></a>&nbsp;
         WE VIBE HARD AND <br></br> MAKE THINGS
       </div>
       <div className="d-flex">
         <div className="ap_text2 col-6 me-5 pe-5">
           <div className="notice">
-            Team Applications will be live from July 25 to August 5.<br></br>
+            Applications will be live from July 25 to August 5.<br></br>
           </div>
 
           <div>

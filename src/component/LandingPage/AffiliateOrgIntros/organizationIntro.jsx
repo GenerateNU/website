@@ -49,7 +49,7 @@ export default function OrganizationIntroduction(props) {
                     </div>
 
                     {/* Learn more button */}
-                    <GenerateButton textColor='black' bgColor='#FFC539' text='Learn More' className='position-absolute end-0 bottom-0' />
+                   <GenerateButton textColor='black' bgColor='#FFC539' text='Learn More' className='position-absolute end-0 bottom-0' />
                 </Col>
             </Row>
 

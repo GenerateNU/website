@@ -9,7 +9,6 @@ import AboutHistory from './AboutHistory'
 import Timeline from './Timeline'
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import Footer from "../VerticalFooter";
-// import Members from "./Members";
 import './style.css';
 
 export default class AboutPage extends React.Component {
