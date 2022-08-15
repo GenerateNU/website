@@ -11,22 +11,16 @@ export default function ShadowedButton(props) {
     };
 
     const handleOnClick=() => {
-
-       console.log("cfvgbhjnmk");
-       console.log(props.lnk);
        const name = props.lnk;
        const key = name.replace(" ", "_");
-       console.log(name.replace(" ", "_"));
        const POSITIONS_URL = 'Position_' + key;
-       console.log("POSITIONS_API", POSITIONS_URL);
-       console.log(constants[POSITIONS_URL]);
-     window.location.assign(constants[POSITIONS_URL]);
+       window.location.assign(constants[POSITIONS_URL]);
     }
 
     return (
         <button className={`button-style fit-content me-5 text-nowrap ${props.className}`}
                 style={ButtonStyle}
-                onClick={handleOnClick}>
+                onClick={props.onClick ? props.onClick : handleOnClick}>
             {props.text}
         </button>
     );

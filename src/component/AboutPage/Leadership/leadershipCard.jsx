@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import Col from 'react-bootstrap/esm/Col';
 import Image from 'react-bootstrap/esm/Image';
@@ -25,6 +25,10 @@ export default function LeadershipCard({
         fontFamily: 'Space Mono 700'
     };
 
+    useEffect(() => {
+        console.log(`flipped changed values: ${flipped}`);
+    }, [flipped]);
+
     const Card = props => {
         const detailsRowJustify = props.directorTitle ? 'between' : 'end';
 
@@ -38,11 +42,6 @@ export default function LeadershipCard({
                             {director.team}
                         </h1>
                     </Col>
-                    {/* <Col xs={2} 
-                         className='gen-card-header h-100 text-right'
-                         style={props.boldHeader && boldHeaderStyle}>
-                        {director.team}
-                    </Col> */}
                     <Col xs={10} className='p-0 h-100'>
                         <Row className='m-0 gen-card-body'>
                             {props.body}
