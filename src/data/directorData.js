@@ -48,8 +48,8 @@ const directorData = [
     //     'emailUsername': '???',
     // },
     {
-        'title': 'Operations Director',
-        'team': 'Operations',
+        'title': 'Community Director',
+        'team': 'Community',
         'color': '#6FCF97',
         'activeIcon': OperationsActiveIcon,
         'inactiveIcon': OperationsInactiveIcon,
@@ -83,8 +83,8 @@ const directorData = [
         'emailUsername': 'russell.li',
     },
     {
-        'title': 'Community Director',
-        'team': 'Community',
+        'title': 'Operations Director',
+        'team': 'Operations',
         'color': '#A559EC',
         'activeIcon': CommunityActiveIcon,
         'inactiveIcon': CommunityInactiveIcon,
