@@ -5,7 +5,7 @@ import ApplyPage from './component/ApplyPage';
 import Position from './component/ApplyPage/Position';
 import AboutPage from './component/AboutPage';
 import ScrollToTop from './component/ScrollToTop';
-import CulturePage from './component/CulturePage';
+import CulturePage from './component/CulturePage/IntroSection';
 
 /**
  * The app.js the routes to the different pages are located.
