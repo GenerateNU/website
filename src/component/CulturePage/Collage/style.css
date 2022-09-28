@@ -42,6 +42,35 @@ body {
   mask-image: linear-gradient(to right, transparent 15%, black 85%);
   }
 
+  .item5 img{
+    position:relative;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 15%, black 85%);
+  mask-image: linear-gradient(to right, transparent 15%, black 85%);
+  }
+
+  .item9 img{
+    position:relative;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 15%, black 85%);
+  mask-image: linear-gradient(to right, transparent 15%, black 85%);
+  }
+
+
+  .item img{
+    position:relative;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
 
 .item1 {
   grid-area: span 3/ span 1;
