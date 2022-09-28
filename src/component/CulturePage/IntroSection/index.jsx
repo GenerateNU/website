@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const IntroSection = () => {
+export default function IntroSection() {
   return (
     <div className="position-relative vw-100 vh-100 py-4 px-5">
       <div className="bg-light p-3 mb-5 d-flex fit-content">
@@ -20,6 +20,4 @@ const IntroSection = () => {
       </h1>
     </div>
   );
-};
-
-export default IntroSection;
+}
