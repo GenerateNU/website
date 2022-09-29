@@ -5,6 +5,8 @@ a {
 .footer-container {
   background-color: #187dff;
   width: 20vw;
+  text-align:left;
+  float:left;
 }
 
 .footer-text {
@@ -36,11 +38,30 @@ a:hover {
 }
 
 .social-icons {
-    margin-top: 150%;
+    margin-top: 50%;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 40%;
 }
 
+.footer-two {
+  background-color: orange;
+  align-items: right;
+}
+
+.rectangle {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+.rectangleLogo{
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 90px;
+  height: 90px;
+  background: black;
+}
 .icon {
     padding-bottom: 10%;
 }

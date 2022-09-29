@@ -7,6 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Menu } from '@material-ui/core';
 
 const NavBar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -19,6 +20,7 @@ const NavBar = () => {
             <span className='p-3' onClick={() => setShowMenu(true)}>
                 <a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover'>
                     Menu <MenuIcon/>
+                    
                 </a>
             </span>
 
@@ -111,14 +113,26 @@ const NavBar = () => {
                             </a>
                         </Col>
                     </Row>
-                    <Row className='m-0 p-0 w-100 vh-15 footer-font-style ps-5'>
+                    <Col><div className="v1"></div></Col>
+                    <hr
+                        style={{
+                        background: 'black',
+                        color: 'black',
+                        borderColor: 'black',
+                        height: '2px',
+                        marginRight: '15px',
+                        width: 'px'
+                        }}
+                    />
+                    {/* <Row className='m-0 p-0 w-100 vh-15 footer-font-style ps-5'>
                         <Col xs={6} className='m-0 p-0 ps-3 pe-5 text-decoration-underline'>
                             generate@northeastern.edu
                         </Col>
                         <Col xs={6} className='m-0 p-0 ps-5 gen-float-end'>
                             008C Hayden Hall
                         </Col>
-                    </Row>
+                    </Row> */}
+                    <div className="rectangleLogo"></div>
                 </Modal.Body>
             </Modal>
         </div>

@@ -9,6 +9,8 @@ import AboutHistory from './AboutHistory'
 import Timeline from './Timeline'
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import Footer from "../VerticalFooter";
+import FooterTwo from "../VerticalFooterTeams";
+
 import './style.css';
 
 export default class AboutPage extends React.Component {
@@ -28,6 +30,7 @@ export default class AboutPage extends React.Component {
 
                     <WhyGenerateCarousel />
                     <Footer/>
+                    <FooterTwo/>
                    
                 </Row>
             </Container>

@@ -1,0 +1,49 @@
+a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .footerTeams-container {
+    background-color: orange;
+    width: 20vw;
+    text-align:left;
+    float:left;
+  }
+  .rectangle {
+    display: inline-block;
+    margin-left: 20px;
+    width: 170px;
+    height: 600px;
+    margin-bottom: 100px;
+    background: black;
+  }
+  .rectangleTwo {
+    box-sizing: border-box;
+    border: 2px solid #111111;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 90px;
+    height: 550px;
+  }
+  .arrow {
+    margin-top: 30px;
+    color: white;
+    
+  }
+  .arrowTwo {
+    margin-top: 250px;
+    color: white;
+  }
+  .teamText {
+    margin-top: 125px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 92px;
+    line-height: 92px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+  }
+  

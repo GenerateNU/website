@@ -69,3 +69,16 @@ span {
 .gen-float-end {
     float: right;
 }
+
+.vl {
+    border-Left: 6px solid green;
+    height: 500px;
+    left: 50%
+  }
+
+  .rectangleMenu {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: orange;
+  }
