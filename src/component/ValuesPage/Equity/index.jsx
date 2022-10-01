@@ -4,7 +4,7 @@ import "./style.css";
 export default function Equity() {
     return (
           <div className="equity">
-            <div className="sideways">
+            <div className="sideways_e">
                 <h4>
                     <span class="white-text">Equity</span>
                     <span class="yellow-text">Equity</span>

@@ -33,7 +33,7 @@ h2 {
 width: 450px;
 height: 561px;
 left: 565px;
-top: 195px;
+top: 561px;
     
     }
 
@@ -46,10 +46,10 @@ top: 195px;
         color: #111111;
     }
     
-    .sideways {
+    .sideways_e {
         position: absolute;
         left: -417px;
-        top: 300px;
+        top: 400px;
         width: 1634px;
         height: 92px;
     }
