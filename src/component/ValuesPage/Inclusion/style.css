@@ -5,7 +5,7 @@ font-style: bold;
 font-weight: 700;
 font-size: 92px; 
 line-height: 92px;
-text-shadow: -1px 0 #6FCF97, 0 1px #6FCF97, 1px 0 #6FCF97, 0 -1px #6FCF97;
+text-shadow: -1px 0 #A559EC, 0 1px #A559EC, 1px 0 #A559EC, 0 -1px #A559EC;
 transform: rotate(90deg);
 text-transform: uppercase;
 }
@@ -44,18 +44,19 @@ color: #111111;
 
 .sideways {
     position: absolute;
-    width: 1634px;
-    height: 92px;
-    left: 3029px;
-    top: 350px;
+width: 1634px;
+height: 92px;
+left: 4656px;
+top: 350px;
+
 }
 
 .number {
     position: absolute;
-width: 169px;
-height: 92px;
-left: 4002px;
-top: 87px;
+    width: 169px;
+    height: 92px;
+    left: 4728px;
+    top: 275px;
 
 }
 
@@ -64,7 +65,7 @@ top: 87px;
     color: white;
  }
 
- .green-text {
-    color: #6FCF97;
+ .purple-text {
+    color: #A559EC;
  }
 
