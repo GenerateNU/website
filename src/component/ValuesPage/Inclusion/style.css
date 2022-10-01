@@ -1,71 +1,73 @@
 /* H1 */
-h1 {
-font-family: 'Space Mono';
-font-style: bold;
-font-weight: 700;
-font-size: 92px; 
-line-height: 92px;
-text-shadow: -1px 0 #A559EC, 0 1px #A559EC, 1px 0 #A559EC, 0 -1px #A559EC;
-transform: rotate(90deg);
-text-transform: uppercase;
-}
-
-h2 {
-    color: white;
+h3 {
     font-family: 'Space Mono';
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
-    font-size: 92px;
+    font-size: 92px; 
     line-height: 92px;
+    text-shadow: -1px 0 #A559EC, 0 1px #A559EC, 1px 0 #A559EC, 0 -1px #A559EC;
+    transform: rotate(90deg);
     text-transform: uppercase;
-    text-shadow: -2px 0 #DFDFDF, 0 2px #DFDFDF, 2px 0 #DFDFDF, 0 -2px #DFDFDF;
+    }
+    
+h2 {
+        color: white;
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 92px;
+        text-transform: uppercase;
+        text-shadow: -2px 0 #DFDFDF, 0 2px #DFDFDF, 2px 0 #DFDFDF, 0 -2px #DFDFDF;
+    }
+    
+
+    .inclusion {
+        position: relative;
+        height: 1634px;
+        width: 600px;
+        left: 300px;
     }
 
-.diversity {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-start;
-}
-
-.descriptions {
-    position: absolute;
+    .descriptions_i {
+        position: absolute;
 width: 450px;
 height: 276px;
-left: 4002px;
-top: 195px;
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 300;
-font-size: 24px;
-line-height: 34px;
-color: #111111;
-}
+left: 565px;
+top: 383px;
+    
+    }
 
-.sideways {
-    position: absolute;
-width: 1634px;
-height: 92px;
-left: 4656px;
-top: 350px;
-
-}
-
-.number {
-    position: absolute;
+    p{
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 34px;
+        color: #111111;
+    }
+    
+    .sideways {
+        position: absolute;
+        left: -417px;
+        top: 300px;
+        width: 1634px;
+        height: 92px;
+    }
+    
+    div.number2 {
+        position: absolute;
     width: 169px;
     height: 92px;
-    left: 4728px;
+    left: 565px;
     top: 275px;
 
-}
-
-
-.white-text {
-    color: white;
- }
-
- .purple-text {
-    color: #A559EC;
- }
-
+    }
+    
+    .white-text {
+        color: white;
+     }
+    
+     .purple-text {
+        color: #A559EC;
+     }
+    

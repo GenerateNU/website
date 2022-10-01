@@ -1,70 +1,72 @@
 /* H1 */
 h1 {
-font-family: 'Space Mono';
-font-style: bold;
-font-weight: 700;
-font-size: 92px; 
-line-height: 92px;
-text-shadow: -1px 0 #6FCF97, 0 1px #6FCF97, 1px 0 #6FCF97, 0 -1px #6FCF97;
-transform: rotate(90deg);
-text-transform: uppercase;
-}
-
-h2 {
-    color: white;
     font-family: 'Space Mono';
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
-    font-size: 92px;
+    font-size: 92px; 
     line-height: 92px;
+    text-shadow: -1px 0 #6FCF97, 0 1px #6FCF97, 1px 0 #6FCF97, 0 -1px #6FCF97;
+    transform: rotate(90deg);
     text-transform: uppercase;
-    text-shadow: -2px 0 #DFDFDF, 0 2px #DFDFDF, 2px 0 #DFDFDF, 0 -2px #DFDFDF;
+    }
+    
+h2 {
+        color: white;
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 92px;
+        text-transform: uppercase;
+        text-shadow: -2px 0 #DFDFDF, 0 2px #DFDFDF, 2px 0 #DFDFDF, 0 -2px #DFDFDF;
+    }
+    
+
+    .diversity {
+        position: relative;
+        height: 1634px;
+        width: 600px;
     }
 
-.diversity {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-start;
-}
-
-.descriptions {
-    position: absolute;
+    .descriptions {
+        position: absolute;
 width: 450px;
 height: 276px;
-left: 4002px;
+left: 565px;
 top: 195px;
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 300;
-font-size: 24px;
-line-height: 34px;
-color: #111111;
-}
+    
+    }
 
-.sideways {
-    position: absolute;
-    width: 1634px;
+    p{
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 34px;
+        color: #111111;
+    }
+    
+    .sideways {
+        position: absolute;
+        left: -417px;
+        top: 300px;
+        width: 1634px;
+        height: 92px;
+    }
+    
+    div.number {
+        position: absolute;
+    width: 169px;
     height: 92px;
-    left: 3029px;
-    top: 350px;
-}
+    left: 565px;
+    top: 87px;
 
-.number {
-    position: absolute;
-width: 169px;
-height: 92px;
-left: 4002px;
-top: 87px;
-
-}
-
-
-.white-text {
-    color: white;
- }
-
- .green-text {
-    color: #6FCF97;
- }
-
+    }
+    
+    .white-text {
+        color: white;
+     }
+    
+     .green-text {
+        color: #6FCF97;
+     }
+    
