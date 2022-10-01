@@ -4,7 +4,7 @@ import "./style.css";
 export default function Diversity() {
     return (
           <div className="diversity">
-            <div className="sideways">
+            <div className="sideways_d">
                 <h1>
                     <span class="white-text">Diversity</span>
                     <span class="green-text">Diversity</span>

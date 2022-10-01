@@ -45,10 +45,10 @@ top: 195px;
         color: #111111;
     }
     
-    .sideways {
+    .sideways_d {
         position: absolute;
         left: -417px;
-        top: 300px;
+        top: 350px;
         width: 1634px;
         height: 92px;
     }

@@ -4,7 +4,7 @@ import "./style.css";
 export default function Inclusion() {
     return (
           <div className="inclusion">
-            <div className="sideways">
+            <div className="sideways_i">
                 <h3>
                     <span class="white-text">Inclusion</span>
                     <span class="purple-text">Inclusion</span>
