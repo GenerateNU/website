@@ -121,7 +121,7 @@ export default function timeline() {
                 <p>
                 {/* <h1>Spring 2021</h1> */}
                   Funding is acquired to allow the Executive Director to be paid
-                  as a full time position.
+                  as a full-time position.
                 </p>
               </div>
             </div>
