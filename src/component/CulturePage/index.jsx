@@ -5,6 +5,11 @@ import CollageSection from "./Collage"
 import Events from "./Events";
 import Events2 from "./Events2";
 import Events3 from "./Events3";
+import IntroSection from "./IntroSection";
+import IntroImages from "./IntroImages";
+import BelongHere from "./BelongHere";
+
+
 
 import "./style.css";
 
@@ -14,6 +19,9 @@ export default class CulturePage extends React.Component {
       <Container fluid className="vh-100 horizontal-scroll">
         <Row className="flex-nowrap">
           {/* Add components of culture page here  */}
+          <IntroSection />
+          <IntroImages/>
+          <BelongHere/>
           <Events />
           <Events2 />
           <Events3 />
