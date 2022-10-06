@@ -1,5 +1,5 @@
 /* H1 */
-h3 {
+.sidetexti {
     font-family: 'Space Mono';
     font-style: bold;
     font-weight: 700;
@@ -10,7 +10,7 @@ h3 {
     text-transform: uppercase;
     }
     
-h2 {
+.numbertexti {
         color: white;
         font-family: 'Space Mono';
         font-style: normal;
@@ -37,7 +37,7 @@ top: 383px;
     
     }
 
-    p{
+    .paragraphi{
         font-family: 'Outfit';
         font-style: normal;
         font-weight: 300;

@@ -5,7 +5,7 @@ export default function Equity() {
     return (
           <div className="equity">
             <div className="sideways_e">
-                <h4>
+                <h4 className="sidetexte">
                     <span class="yellow-text">Equity</span>
                     <span class="white-text">Equity</span>
                     <span class="yellow-text">Equity</span>
@@ -13,10 +13,10 @@ export default function Equity() {
                 </h4>
             </div>
             <div className="number3">
-                <h2>3.0</h2>
+                <h2 className="numbertexte">3.0</h2>
             </div>
             <div className="descriptions_e">
-                <p>
+                <p className="paragraphe">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
                     nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit
                     tempus risus. Tincidunt sagittis nulla orci id. Augue risus

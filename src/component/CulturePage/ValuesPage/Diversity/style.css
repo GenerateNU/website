@@ -1,5 +1,5 @@
-/* H1 */
-h1 {
+
+.sidetextd {
     font-family: 'Space Mono';
     font-style: bold;
     font-weight: 700;
@@ -10,7 +10,7 @@ h1 {
     text-transform: uppercase;
     }
     
-h2 {
+.numbertextd {
         color: white;
         font-family: 'Space Mono';
         font-style: normal;
@@ -36,7 +36,7 @@ top: 195px;
     
     }
 
-    p{
+    .paragraph{
         font-family: 'Outfit';
         font-style: normal;
         font-weight: 300;
