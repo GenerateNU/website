@@ -119,8 +119,15 @@ a {
     color: #000000;
   }
 
+  .mantra{
+    display: flex;
+    flex-direction: column;
+  }
+
   .alignItemsRight {
-    flex-direction: flex-end;
+    /* flex-direction: flex-end; */
+    display: flex;
+    flex-direction: row;
   }
 
   .applyNowBox {
