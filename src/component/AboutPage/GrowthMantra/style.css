@@ -120,7 +120,7 @@ a {
   }
 
   .alignItemsRight {
-    justify-content: right;
+    flex-direction: flex-end;
   }
 
   .applyNowBox {
