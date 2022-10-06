@@ -1,0 +1,161 @@
+a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .background-white {
+    background-color: white;
+  }
+  .Growth-text {
+    width: 1103px;
+    height: 444px;
+    left: 110px;
+    margin-top: -51px;
+    /* top: -51px; */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 250px;
+    /* line-height: 444px; */
+    text-transform: uppercase;
+
+    /* OPRATN Green */
+
+    color: #6FCF97;
+  }
+
+  .IsOurText {
+    width: 338px;
+    height: 92px;
+    left: 124px;
+    margin-top: -170px;
+    /* top: 288px; */
+
+    /* H1 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 92px;
+    text-transform: uppercase;
+
+  }
+
+  .MantraText {
+    width: 735px;
+    height: 296px;
+    left: 126px;
+    top: 302px;
+    margin-top: -50px;
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 296px;
+    text-transform: uppercase;
+
+    /* Black */
+
+    color: #111111;
+  }
+
+  .paragraphText {
+    width: 415px;
+    height: 238px;
+    margin-left: 10px;
+    top: 567px;
+    margin-top: -50px;
+    /* B1 */
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 34px;
+    /* or 142% */
+
+
+    /* Black */
+
+    color: #111111;
+  }
+
+  .paragraphTextTwo {
+    width: 415px;
+    height: 238px;
+    margin-left: 30px;
+    top: 567px;
+    margin-top: -50px;
+    text-align: right;
+    /* B1 */
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 34px;
+    /* or 142% */
+    color: #111111;
+  }
+
+  .interestedText {
+    width: 564px;
+    height: 92px;
+    left: 1611px;
+    top: 288px;
+
+    /* H1 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 92px;
+    line-height: 92px;
+    /* identical to box height, or 100% */
+
+    text-transform: uppercase;
+
+    color: #000000;
+  }
+
+  .alignItemsRight {
+    justify-content: right;
+  }
+
+  .applyNowBox {
+    position: absolute;
+    left: 100%;
+    right: -96.39%;
+    top: 0%;
+    bottom: 11.76%;
+
+    /* OPRATN Green */
+
+    background: #6FCF97;
+    /* Black */
+
+    border: 1px solid #111111;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  .applyNowText {
+    position: absolute;
+    width: 134.68px;
+    height: 36.4px;
+    left: calc(50% - 134.68px/2 + 5.49px);
+    top: calc(50% - 36.4px/2 - 6.51px);
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+
+    /* White */
+
+    color: #FFFFFF;
+  }
+
+  

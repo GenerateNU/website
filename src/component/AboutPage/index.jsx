@@ -8,6 +8,7 @@ import History from "./History";
 import AboutHistory from './AboutHistory'
 import Timeline from './Timeline'
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
+import GrowthMantra from "./GrowthMantra";
 import Footer from "../VerticalFooter";
 import FooterTwo from "../VerticalFooterTeams";
 
@@ -29,6 +30,7 @@ export default class AboutPage extends React.Component {
                     {/* <Members/> */}
 
                     <WhyGenerateCarousel />
+                    <GrowthMantra />
                     <Footer/>
                     <FooterTwo/>
                    
