@@ -11,8 +11,7 @@ const GrowthMantra = () => {
             <p className="IsOurText">Is Our</p>
             <p className="MantraText">Mantra</p>
             </div>
-            {/* TODO */}
-            <div>ghsegjgsjg</div>
+            <div className="interestedText">Interested</div>
             </div>
             
             {/* <div className="paragraphText">Our values arent just surface level but run deep throughout our organization. We always encourage our members to take on new challenges. Tools and resources are only an ask away, and members can test out their ideas to drive development.</div> */}
@@ -22,16 +21,19 @@ const GrowthMantra = () => {
          
           
             {/* <div className= "paragraphTextTwo">Teams work side-by-side to ensure products and processes are beyond expectations. We are self-driven and help one another reach goals and become leaders. Not only do we build products, but we also build community, leadership, and opportunities.</div> */}
-            <div className= "paragraphText">Our values arent just surface level but run deep throughout our organization. We always encourage our members to take on new challenges. Tools and resources are only an ask away, and members can test out their ideas to drive development.</div>
-            {/* TODO */}
-            <div>Apply button</div>
+            <div className= "paragraphText">Teams work side-by-side to ensure products and processes are beyond expectations. We are self-driven and help one another reach goals and become leaders. Not only do we build products, but we also build community, leadership, and opportunities.</div>
+            
+            <div className= "blackRectangle">
+              <div className= "applyNowBox">
+                <div className="applyNowText">apply now</div>
+              </div>
+            </div>
+            <div className= "paragraphTextThree">Join a community that shares the same goal - turning ideas into reality</div>
             
          </div>
          
             
-            {/* <div className= "applyNowBox">
-              <div className="applyNowText">apply now</div>
-            </div> */}
+            
         </div>
     );
 };

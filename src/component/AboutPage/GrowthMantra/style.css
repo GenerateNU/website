@@ -15,7 +15,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 250px;
+    font-size: 200px;
     /* line-height: 444px; */
     text-transform: uppercase;
 
@@ -28,7 +28,7 @@ a {
     width: 338px;
     height: 92px;
     left: 124px;
-    margin-top: -170px;
+    margin-top: -230px;
     /* top: 288px; */
 
     /* H1 */
@@ -36,7 +36,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 92px;
+    font-size: 70px;
     text-transform: uppercase;
 
   }
@@ -46,12 +46,12 @@ a {
     height: 296px;
     left: 126px;
     top: 302px;
-    margin-top: -50px;
+    margin-top: -100px;
 
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 200px;
+    font-size: 150px;
     line-height: 296px;
     text-transform: uppercase;
 
@@ -61,11 +61,11 @@ a {
   }
 
   .paragraphText {
-    width: 415px;
+    width: 300px;
     height: 238px;
     margin-left: 10px;
     top: 567px;
-    margin-top: -50px;
+    margin-top: -60px;
     /* B1 */
 
     font-family: 'Outfit';
@@ -83,7 +83,7 @@ a {
 
   .paragraphTextTwo {
     width: 415px;
-    height: 238px;
+    height: 400px;
     margin-left: 30px;
     top: 567px;
     margin-top: -50px;
@@ -102,15 +102,15 @@ a {
   .interestedText {
     width: 564px;
     height: 92px;
-    left: 1611px;
-    top: 288px;
+    margin-left: -140px;
+    margin-top: 200px;
 
     /* H1 */
 
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 92px;
+    font-size: 50px;
     line-height: 92px;
     /* identical to box height, or 100% */
 
@@ -131,28 +131,29 @@ a {
   }
 
   .applyNowBox {
-    position: absolute;
-    left: 100%;
-    right: -96.39%;
-    top: 0%;
-    bottom: 11.76%;
-
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
     /* OPRATN Green */
-
     background: #6FCF97;
     /* Black */
-
     border: 1px solid #111111;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  .blackRectangle {
+    display: inline-block;
+    width: 170px;
+    height: 55px;
+    margin-left: 330px;
+    background: black;
+    border: 1px solid #111111;
   }
 
   .applyNowText {
-    position: absolute;
     width: 134.68px;
     height: 36.4px;
-    left: calc(50% - 134.68px/2 + 5.49px);
-    top: calc(50% - 36.4px/2 - 6.51px);
-
+    margin-left: 30px;
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 400;
@@ -163,6 +164,22 @@ a {
     /* White */
 
     color: #FFFFFF;
+  }
+
+  .paragraphTextThree {
+    width: 150px;
+    height: 238px;
+    margin-left: 150px;
+    top: 567px;
+    margin-top: -40px;
+    /* B1 */
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 34px;
+    color: #111111;
   }
 
   
