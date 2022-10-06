@@ -1,0 +1,41 @@
+h2 {
+  font-family: Space Mono;
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+p {
+  font-family: Outfit300;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.belong-here {
+  width: 28.12em;
+}
+
+.thrive-together {
+  width: 28.12em;
+  padding-bottom: 2em;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.paragraphs :first-child {
+  align-self: center;
+}
+/* 
+.graphic {
+  width: 50em;
+}
+
+.color-block {
+  margin-left: 40%;
+  margin-top: -50%;
+} */

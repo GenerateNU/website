@@ -1,0 +1,72 @@
+.sidetexte {
+    font-family: 'Space Mono';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 92px; 
+    line-height: 92px;
+    text-shadow: -1px 0 #FFBF3C, 0 1px #FFBF3C, 1px 0 #FFBF3C, 0 -1px #FFBF3C;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    }
+    
+.numbertext {
+        color: white;
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 92px;
+        text-transform: uppercase;
+        text-shadow: -2px 0 #DFDFDF, 0 2px #DFDFDF, 2px 0 #DFDFDF, 0 -2px #DFDFDF;
+    }
+    
+
+    .equity {
+        position: relative;
+        height: 1634px;
+        width: 600px;
+        left: 600px;
+    }
+
+    .descriptions_e {
+        position: absolute;
+width: 450px;
+height: 561px;
+left: 565px;
+top: 561px;
+    
+    }
+
+    .paragraphe{
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 34px;
+        color: #111111;
+    }
+    
+    .sideways_e {
+        position: absolute;
+        left: -417px;
+        top: 740px;
+        width: 1634px;
+        height: 92px;
+    }
+    
+    div.number3 {
+        position: absolute;
+    width: 169px;
+    height: 92px;
+    left: 565px;
+    top: 453px;
+
+    }
+    
+    .white-text {
+        color: white;
+     }
+    
+     .yellow-text {
+        color: #FFBF3C;
+     }
+    
