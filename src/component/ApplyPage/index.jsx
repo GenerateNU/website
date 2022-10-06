@@ -34,7 +34,7 @@ export default function ApplyPage() {
         </div>
         <div className="col-4 h-100">
           <div className="space-above-search"></div>
-          <Search className="" />
+          <Search />
         </div>
       </div>
       <Categories />
