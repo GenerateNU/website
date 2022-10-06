@@ -1,0 +1,78 @@
+h2 {
+  font-family: "Space Mono700";
+  font-size: 7vw;
+  line-height: 100%;
+}
+
+h3 {
+  font-family: "Space Mono700";
+  font-size: 6.5vw;
+  line-height: 100%;
+}
+
+h5 {
+  font-family: "Outfit300";
+  font-size: 2.3vw;
+  line-height: 85%;
+}
+
+p {
+  font-family: "Outfit300";
+  font-size: 1.5vw;
+  line-height: 150%;
+}
+
+.meet-the-team-style {
+  color: rgba(255, 255, 255, 0.2);
+  line-height: 55%;
+  margin-left: 6rem !important;
+}
+
+.logo {
+  max-width: 75%;
+  max-height: 75%;
+}
+
+.our-culture-quote {
+  color: #a559ec;
+  font-family: "Space Mono700";
+  font-size: 4vw;
+  font-style: bold;
+  text-transform: uppercase;
+  line-height: 110%;
+}
+
+.culture-quote-positioning {
+  left: 35%;
+  top: 20em;
+  width: 40em;
+  position: absolute;
+}
+
+.intro-images {
+  z-index: 3;
+}
+
+.img-1 {
+  top: 40%;
+  width: 30em;
+}
+
+/* todo: delete after move to public   */
+
+.fit-content {
+  height: fit-content;
+  width: fit-content;
+}
+
+.left-text-style {
+  text-align: right;
+}
+
+.parent-orgs-style {
+  word-spacing: 9999rem;
+}
+
+.our-history-text-style {
+  margin-top: -1rem;
+}

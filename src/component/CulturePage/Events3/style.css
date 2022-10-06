@@ -1,0 +1,28 @@
+
+
+.showcase-title {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5%;
+    margin-top: 30%;  
+    text-transform: uppercase;
+    color: #187DFF;
+    text-align: left;
+}
+
+.showcase-text {
+    
+    width: 30%;
+    height: 10%;
+    color: black;
+    font-size: 1.36vw;
+    line-height: 160%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 300;
+
+    column-gap: 100px;
+}
+
+
