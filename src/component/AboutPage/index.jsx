@@ -10,7 +10,7 @@ import Timeline from './Timeline'
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import Footer from "../VerticalFooter";
 import FooterTwo from "../VerticalFooterTeams";
-
+import GrowthMantra from "./GrowthMantra";
 import './style.css';
 
 export default class AboutPage extends React.Component {
@@ -29,6 +29,7 @@ export default class AboutPage extends React.Component {
                     {/* <Members/> */}
 
                     <WhyGenerateCarousel />
+                    <GrowthMantra/>
                     <Footer/>
                     <FooterTwo/>
                    
