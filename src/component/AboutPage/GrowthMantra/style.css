@@ -88,6 +88,7 @@ a {
     top: 567px;
     margin-top: -50px;
     text-align: right;
+    margin-right: -50px;
     /* B1 */
 
     font-family: 'Outfit';
@@ -145,7 +146,7 @@ a {
     display: inline-block;
     width: 170px;
     height: 55px;
-    margin-left: 330px;
+    margin-left: -300px;
     background: black;
     border: 1px solid #111111;
   }
@@ -181,5 +182,16 @@ a {
     line-height: 34px;
     color: #111111;
   }
+
+  .cooltriangle {
+    margin-left: -40px;
+    margin-top: 30px;
+  }
+
+  .leftcarrot {
+    margin-left: 100px;
+    margin-right: -100px;
+  }
+  
 
   

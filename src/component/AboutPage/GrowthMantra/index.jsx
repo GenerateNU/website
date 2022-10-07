@@ -1,4 +1,6 @@
 import React from "react";
+import cooltriangle from "../../AboutPage/GrowthMantra/Green.png";
+import leftcarrot from "../../AboutPage/GrowthMantra/chevron.png";
 import './style.css';
 
 const GrowthMantra = () => {
@@ -22,11 +24,16 @@ const GrowthMantra = () => {
           
             {/* <div className= "paragraphTextTwo">Teams work side-by-side to ensure products and processes are beyond expectations. We are self-driven and help one another reach goals and become leaders. Not only do we build products, but we also build community, leadership, and opportunities.</div> */}
             <div className= "paragraphText">Teams work side-by-side to ensure products and processes are beyond expectations. We are self-driven and help one another reach goals and become leaders. Not only do we build products, but we also build community, leadership, and opportunities.</div>
-            
+            <div className="cooltriangle">
+              <img src={cooltriangle} height="400vh" width="600vw"/> 
+            </div>
             <div className= "blackRectangle">
               <div className= "applyNowBox">
                 <div className="applyNowText">apply now</div>
               </div>
+            </div>
+            <div className="leftcarrot">
+              <img src={leftcarrot} height="50vh" width="50vw"/> 
             </div>
             <div className= "paragraphTextThree">Join a community that shares the same goal - turning ideas into reality</div>
             
