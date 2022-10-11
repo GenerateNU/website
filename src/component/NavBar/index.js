@@ -130,6 +130,21 @@ const NavBar = () => {
                             008C Hayden Hall
                         </Col>
                     </Row> */}
+                  <div class="flexbox">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+        <div class="flexbox2">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        </div>
+
+        </div>
+
+      
                     <div className="rectangleLogo"></div>
                 </Modal.Body>
             </Modal>

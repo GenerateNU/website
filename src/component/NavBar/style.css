@@ -90,3 +90,27 @@ span {
     color: #e0e0e0 !important
 }
 
+.flexbox {
+    display:flex;
+    flex-direction: row;
+    }
+
+
+.flexbox2 {
+    display:flex;
+    flex-direction: row;
+    margin-left: 700px;
+    }
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    width: 5vw;
+    height: 5vw;
+    background-color: #FFBF3C;
+    border-radius: 100%;
+    }
