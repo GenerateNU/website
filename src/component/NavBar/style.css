@@ -82,3 +82,11 @@ span {
     height: 100px;
     background: orange;
   }
+
+  .disabled-font-style {
+    font-family: "Space Mono 700";
+    font-size: 4.5vw;
+    line-height: 128%;
+    color: #e0e0e0 !important
+}
+

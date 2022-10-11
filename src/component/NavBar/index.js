@@ -60,11 +60,9 @@ const NavBar = () => {
                         </Col>
                         <Col xs={5} className='m-0 p-0 text-uppercase'>
                             <Row className='m-0 p-0'>
-                                <a className='header-font-style fit-content text-decoration-none text-black'
-                                    href="/"
-                                >
+                                <div className='disabled-font-style fit-content text-decoration-none text-black'>
                                     Teams
-                                </a>
+                                </div>
                             </Row>
                             <Row className='m-0 p-0'>
                                 <a className='header-font-style fit-content text-decoration-none text-black'
