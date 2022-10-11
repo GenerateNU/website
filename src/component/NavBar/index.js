@@ -139,7 +139,7 @@ const NavBar = () => {
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
-        <div class="item"></div>
+           <div class="item"></div>
         </div>
 
         </div>
