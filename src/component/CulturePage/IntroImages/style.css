@@ -13,4 +13,6 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  position: relative;
+  left: -20%;
 }
