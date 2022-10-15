@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import ProductDevelopment from "./ProductDevelopment";
 import './style.css';
 
 export default class AboutPage extends React.Component {
@@ -8,7 +9,7 @@ export default class AboutPage extends React.Component {
         return (
             <Container fluid className='vh-100 horizontal-scroll bg-black'>
                 <Row className='flex-nowrap'>
-                   
+                   <ProductDevelopment />
                 </Row>
             </Container>
         );
