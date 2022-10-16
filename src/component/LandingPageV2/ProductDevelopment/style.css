@@ -69,7 +69,6 @@ a {
   }
 
   .alignItemsRight {
-    /* flex-direction: flex-end; */
     display: flex;
     flex-direction: row;
   }
