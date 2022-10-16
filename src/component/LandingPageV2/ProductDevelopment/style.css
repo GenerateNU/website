@@ -63,7 +63,7 @@ a {
   }
 
 
-  .mantra{
+  .column{
     display: flex;
     flex-direction: column;
   }
@@ -72,6 +72,10 @@ a {
     /* flex-direction: flex-end; */
     display: flex;
     flex-direction: row;
+  }
+
+  .DevelopmentWheel {
+    margin-left: 100px;
   }
 
  
