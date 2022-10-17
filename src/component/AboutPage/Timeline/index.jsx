@@ -21,10 +21,10 @@ export default function timeline() {
               <div className="Spring2016-text">
                 {/* <h1>Spring 2016</h1> */}
                 <p>
-                  Generate is founded by students Bailey Kane and Mina Iskarous,
-                  with the help of Ted Johnson, Assistant Program Manager of the
+                  Generate is founded by Bailey Kane and Mina Iskarous,
+                  Ted Johnson, Assistant Program Manager of the
                   Sherman Center, and Shashi Murthy, Director of the Sherman
-                  Center at the time.
+                  Center.
                 </p>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function timeline() {
               </div>
               <div className="Spring2019-text-1">
               {/* <h1>Fall 2019</h1> */}
-                <p>We grow to over 50 members.</p>
+                <p>We grow to over  <br></br> members.</p>
               </div>
             </div>
 
@@ -121,7 +121,7 @@ export default function timeline() {
                 <p>
                 {/* <h1>Spring 2021</h1> */}
                   Funding is acquired to allow the Executive Director to be paid
-                  as a full-time position.
+                  as a full time position.
                 </p>
               </div>
             </div>

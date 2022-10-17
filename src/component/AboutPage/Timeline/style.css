@@ -13,7 +13,7 @@
   /* margin: 20px; */
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: rgb(14, 2, 2);
   /* width: 120vw; */
 }
 
@@ -36,7 +36,7 @@
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 290px;
+  font-size: 200px;
   line-height: 230px;
   /* or 72% */
 
@@ -54,7 +54,7 @@
   width: 300px;
   height: 150px;
   left: 12%;
-  top: 44%;
+  top: 45.5%;
 }
 
 .Spring2016-text {
@@ -114,7 +114,7 @@
   width: 300px;
   height: 20px;
   left: 12%;
-  top: 60.5%;
+  top: 59.5%;
 }
 
 .Spring2016-text-2 {
@@ -240,6 +240,7 @@
   height: 150px;
   left: 80%;
   top: 40%;
+  right:10%
 }
 
 .Spring2021-text {

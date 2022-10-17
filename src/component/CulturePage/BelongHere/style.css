@@ -1,14 +1,13 @@
 h2 {
-  font-family: Space Mono;
+  font-family: 'Space Mono';
   text-transform: uppercase;
   font-size: 3em;
   font-weight: 700;
 }
 
 p {
-  font-family: Outfit300;
-  font-weight: 300;
-  font-size: 1.5em;
+  font-family: 'Outfit 300';
+  font-size: 1.0em;
 }
 
 .belong-here {
