@@ -107,10 +107,11 @@
   }
   .accordion .accordion-content {
     display:none;
-    height: 350px;
+    height: 380px;
+    /* height: auto; */
     width: 1440px;
     background-color:white;
-    overflow: hidden;
+    overflow: visible;
     white-space: nowrap;
     padding: 4%;
     /* margin-left: -4%; */
