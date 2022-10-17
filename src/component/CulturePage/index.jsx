@@ -9,8 +9,8 @@ import IntroSection from "./IntroSection";
 import IntroImages from "./IntroImages";
 import BelongHere from "./BelongHere";
 import ValuesPage from "./ValuesPage"
-
-
+import Inclusion from "./ValuesPage/Inclusion";
+import Equity from "./ValuesPage/Equity";
 import "./style.css";
 
 export default class CulturePage extends React.Component {
@@ -26,6 +26,8 @@ export default class CulturePage extends React.Component {
           <Events2 />
           <Events3 />
           <ValuesPage/>
+          {/* <Inclusion/> */}
+          {/* <Equity/> */}
           <CollageSection />
         </Row>
       </Container>

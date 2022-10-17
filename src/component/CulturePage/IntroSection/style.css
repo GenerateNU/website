@@ -76,3 +76,7 @@ p {
 .our-history-text-style {
   margin-top: -1rem;
 }
+
+.navbar-border{
+  border: 1px solid black
+}

@@ -13,7 +13,7 @@ const NavBar = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     return (
-        <div className="bg-light p-3 mb-5 d-flex fit-content">
+        <div className="bg-light p-3 mb-5 d-flex fit-content border border-dark">
             {/* Todo : change the logo */}
             <a href="/"><img src={GenerateLogo} height="50vh" width="50vw"/></a>
             <span className='p-3'><a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover' href="/apply">Apply</a></span>
