@@ -3,14 +3,12 @@ import "./style.css";
 
 export default function Diversity() {
     return (
-          <div className="diversity">
-            <div className="sideways_d">
-                <h1 className="sidetext">
+          <div className="left-arrange">
+                <div className="sidetext">
                     <span class="white-text">Diversity</span>
                     <span class="green-text">Diversity</span>
                     <span class="white-text">Diversity</span>
-                </h1>
-            </div>
+                </div>
             <div className="number">
                 <h2 className="numbertext">1.0</h2>
             </div>
@@ -22,6 +20,7 @@ export default function Diversity() {
                     adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
                 </p>
             </div>
+           
           </div>
     );
 }

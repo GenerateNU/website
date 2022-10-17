@@ -10,11 +10,11 @@ export default class ValuesPage extends React.Component {
     render() {
         return (
             <Container fluid className='vh-100 horizontal-scroll bg-white'>
-                <Row className='flex-nowrap'>
+                
                     <Diversity />
-                    <Inclusion />
-                    <Equity />
-                </Row>
+                    {/* <Inclusion /> */}
+                    {/* <Equity /> */}
+                
             </Container>
         );
     }
