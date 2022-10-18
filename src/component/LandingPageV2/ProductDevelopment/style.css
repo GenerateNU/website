@@ -35,7 +35,7 @@ a {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 28px;
     /* or 156% */
     
@@ -74,8 +74,81 @@ a {
   }
 
   .DevelopmentWheel {
+    margin-top: 100px;
     margin-left: 100px;
   }
 
+  .ideation {
+    margin-left: 100px;
+  }
+
+  .IdeationText {
+    width: 353px;
+    height: 92px;
+    left: 759px;
+    top: 263px;
+    margin-top: 100px;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 92px;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    /* Core/MNGMNT Yellow */
+
+    color: #FFBF3C;
+  }
+
+  .PrototypeText{
+    width: 353px;
+    height: 92px;
+    left: 759px;
+    top: 263px;
+    margin-top: 100px;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 92px;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    
+
+    color: #FF6660;
+  }
+
+  .ProductionText{
+    width: 353px;
+    height: 92px;
+    left: 759px;
+    top: 263px;
+    margin-top: 100px;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 92px;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    
+
+    color: #187DFF;
+  }
  
    
