@@ -1,40 +1,46 @@
-h2 {
+.heading-text {
   font-family: 'Space Mono';
   text-transform: uppercase;
   font-size: 3em;
   font-weight: 700;
 }
 
-p {
+.belong-here-text {
   font-family: 'Outfit 300';
-  font-size: 1.0em;
+  font-size: 24px;
+  line-height: 34px;
 }
 
 .belong-here {
   width: 28.12em;
+  margin-top:3%;
+  padding:1px;
 }
 
 .thrive-together {
   width: 28.12em;
   padding-bottom: 2em;
+  margin-top: 15%;
+  margin-left: 10%;
+  padding:1px;
 }
 
 .paragraphs {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .paragraphs :first-child {
-  align-self: center;
-}
-/* 
-.graphic {
-  width: 50em;
+  /* align-self: center; */
 }
 
+.graphic {
+  width: 70%;
+  height: 50%;
+} 
+
 .color-block {
-  margin-left: 40%;
-  margin-top: -50%;
-} */
+  margin-top: -30%;
+  margin-left: 20%;
+} 

@@ -1,0 +1,20 @@
+.vertical{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  
+  .container{
+      width: 30vw;
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .vertical-div {
+      width: 50px
+  }
+  
+  .text-div {
+      margin: 5%;
+      padding: 5%
+  }
+  
