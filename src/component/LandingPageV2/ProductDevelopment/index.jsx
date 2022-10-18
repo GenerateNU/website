@@ -17,7 +17,7 @@ const ProductDevelopment = () => {
             </div>
 
 
-            <div className = "DevelopmentWheel">
+            <div className = "DevelopmentWheelTwo">
               <img src ={DevelopmentWheel} />
             </div>
             <div className="ideation">
@@ -27,7 +27,7 @@ const ProductDevelopment = () => {
               </div>
             </div>
 
-            <div className = "DevelopmentWheel">
+            <div className = "DevelopmentWheelThree">
               <img src ={DevelopmentWheel} />
             </div>
             <div className="ideation">

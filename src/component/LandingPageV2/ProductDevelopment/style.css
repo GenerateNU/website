@@ -76,6 +76,20 @@ a {
   .DevelopmentWheel {
     margin-top: 100px;
     margin-left: 100px;
+    transform: rotate(360deg)
+  }
+  .DevelopmentWheelTwo {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    transform: rotate(97deg)
+  }
+  .DevelopmentWheelThree {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    transform: rotate(230deg)
+    
   }
 
   .ideation {
