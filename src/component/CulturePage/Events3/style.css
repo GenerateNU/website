@@ -1,10 +1,12 @@
-
+.events-picture {
+    margin-top: 40%;
+}
 
 .showcase-title {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 5%;
+    font-size: 45px;
     margin-top: 30%;  
     text-transform: uppercase;
     color: #187DFF;
@@ -13,7 +15,7 @@
 
 .showcase-text {
     
-    width: 30%;
+    width: 70%;
     height: 10%;
     color: black;
     font-size: 1.36vw;

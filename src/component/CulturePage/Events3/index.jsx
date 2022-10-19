@@ -3,8 +3,8 @@ import "./style.css";
 
 const Events3 = () => {
   return (
-    <div className="position-relative vw-100 vh-100 py-4 px-5">
-      <div className="events-picture-container d-flex flex-wrap justify-content-between">
+    <div className="position-relative w-50 vh-100 py-4 px-5">
+      <div className="events-picture d-flex">
         <div class="row gx-5">
           <div class="col ps-5 pe-5">
             <p className="text-uppercase showcase-title">showcase</p>
