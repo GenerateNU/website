@@ -1,0 +1,33 @@
+.parent {
+  display: flex;
+  flex-direction: row;
+}
+
+.column-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.client {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 4.5em;
+  text-transform: uppercase;
+}
