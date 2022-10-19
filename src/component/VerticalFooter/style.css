@@ -28,13 +28,27 @@ a:hover {
 
 .sherm{
     margin-top: 25%;
-    margin-left: 25%;
+    margin-left: 15%;
 }
 
 .logo-background {
-     background-color: white;
-     width: 70px;
-     height: 60px;
+    background-color: white;
+    width: 35%;
+    height: 50%;
+}
+
+.logo-placement {
+  margin: 10%;
+  background-color: white;
+  width: 40%;
+  height: 50%;
+  padding: 5%;
+}
+
+.logo-shadow {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
 }
 
 .social-icons {
@@ -55,7 +69,7 @@ a:hover {
   background: black;
 }
 .rectangleLogo{
-  display: inline-block;
+  /* display: inline-block; */
   margin-left: 50px;
   margin-top: 20px;
   width: 90px;

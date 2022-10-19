@@ -16,9 +16,9 @@ function VerticalFooter() {
   return (
     <Container fluid className="footer-container">
       <Row>
-        <div className = "rectangleLogo">
-          <div className="logo-background sherm">
-            <img src={GenerateLogo} height="50vh" width="50vw" />
+        <div>
+          <div className="sherm">
+            <img className="logo-placement logo-shadow" src={GenerateLogo} height="80%" width="60%" />
           </div>
         </div>
       </Row>

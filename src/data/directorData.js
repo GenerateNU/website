@@ -48,8 +48,8 @@ const directorData = [
     //     'emailUsername': '???',
     // },
     {
-        'title': 'Community Director',
-        'team': 'Community',
+        'title': 'Engagement Director',
+        'team': 'Engagement',
         'color': '#6FCF97',
         'activeIcon': OperationsActiveIcon,
         'inactiveIcon': OperationsInactiveIcon,
