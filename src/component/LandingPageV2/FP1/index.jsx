@@ -15,16 +15,11 @@ export default function FP1() {
           </p>
         </div>
         <div className="client">
-          <p
-            style={{
-              fontFamily: "Outfit 500",
-              fontSize: "1.5em",
-            }}
-          >
-            Client
-          </p>
-          <p>Max Thalheimer</p>
-          <p>Northeastern Alumnus ‘20</p>
+          <p className="client-text">Client</p>
+          <div className="name-order">
+            <p className="name-text">Max Thalheimer</p>
+            <p className="school">Northeastern Alumnus ‘20</p>
+          </div>
         </div>
         <div className="client-blurb">
           <p>
@@ -40,22 +35,26 @@ export default function FP1() {
         </div>
       </div>
       <div className="column-2">
-        <img src={EarnzMockUp} alt="" />
+        <div className="product-img-container">
+          <img className="product-img" src={EarnzMockUp} alt="" />
+        </div>
       </div>
       <div className="column-3">
         <div className="top-corner">
           <img src={TopCorner} alt="" />
         </div>
         <div className="quote-container">
-          <p>
+          <blockquote>
             Generate was great as a learning experience for me, as someone who
             hadn’t built a tech company before. The team of experienced Generate
             engineers knew what it takes to build a product like earnz, how to
             package it all together, and ultimately how to come together as a
             team.
-          </p>
+          </blockquote>
         </div>
       </div>
     </div>
   );
 }
+
+// https://codesandbox.io/s/ryidb?file=/src/SlideShow.js for making the images a slideshow
