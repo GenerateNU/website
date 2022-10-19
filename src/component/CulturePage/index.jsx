@@ -22,14 +22,13 @@ export default class CulturePage extends React.Component {
           <IntroSection />
           <IntroImages/>
           <BelongHere/>
-          <Events />
-          <Events2 />
-          <Events3 />
           <Diversity/>
           <Inclusion/>
           <Equity/>
+          <Events />
+          <Events2 />
+          <Events3 />
           <CollageSection />
-
         </Row>
       </Container>
     );

@@ -4,7 +4,7 @@
   }
   
   .container{
-      width: 30vw;
+      width: 50vw;
       display: flex;
       flex-direction: row;
   }

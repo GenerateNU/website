@@ -4,7 +4,7 @@ import "./style.css";
 
 export default function IntroSection() {
   return (
-    <div className="position-relative vw-100 vh-100 py-4 px-5">
+    <div className="position-relative w-80 vh-100 py-4">
       <NavBar/>
        
       <div className="w-50 pe-5 d-flex">
@@ -14,7 +14,7 @@ export default function IntroSection() {
           </div>
         </div>
       </div>
-      <h1 className="our-mission-header text-no-fill text-uppercase position-absolute start-0 bottom-0 fi">
+      <h1 className="our-mission-header text-no-fill text-uppercase position-absolute start-0 bottom-0 p-5 fi">
         Our Culture
       </h1>
     </div>
