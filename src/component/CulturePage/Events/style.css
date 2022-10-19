@@ -37,9 +37,9 @@
 
 .retreat-text {
     
-    width: 120%;
+    width: 140%;
     height: 10%;
-    color: black;
+    /* color: black; */
     font-size: 1.36vw;
     line-height: 160%;
     text-align: left;

@@ -101,8 +101,8 @@
 }
 
 .inclined-image{
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
     height:100%;
-    width:150%;
+    width:170%;
 }
 
