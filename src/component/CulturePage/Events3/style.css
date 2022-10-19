@@ -1,13 +1,9 @@
-.events-picture {
-    margin-top: 40%;
-}
-
 .showcase-title {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
-    margin-top: 30%;  
+    margin-top: 70%;  
     text-transform: uppercase;
     color: #187DFF;
     text-align: left;
@@ -28,3 +24,13 @@
 }
 
 
+.all-hands-title {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    margin-top: 45%;  
+    text-transform: uppercase;
+    color: #187DFF;
+    text-align: left;
+}

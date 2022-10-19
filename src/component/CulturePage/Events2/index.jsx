@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import CelebrateRepresent from "./CelebrateRepresent.png";
 
 const Events2 = () => {
   return (
@@ -19,6 +20,10 @@ const Events2 = () => {
           </div>
 
           <div class="col ps-5 pe-5">
+            <img className="inclined-image" src={CelebrateRepresent} alt=""/>
+          </div>
+
+          <div class="col ps-5 pe-5">
             <p className="text-uppercase orientation-title">orientation</p>
             <p className="t-4 r-3 orientation-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
@@ -28,7 +33,8 @@ const Events2 = () => {
               Tincidunt sagittis nulla orci id.
             </p>
           </div>
-          <div class="col ps-5 pe-5">
+        
+          {/* <div class="col ps-5 pe-5">
             <p className="text-uppercase all-hands-title">all-hands</p>
             <p className="t-4 r-3 all-hands-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
@@ -37,7 +43,7 @@ const Events2 = () => {
               adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
               Tincidunt sagittis nulla orci id.
             </p>
-          </div>
+          </div> */}
           {/* <div class="col ps-5 pe-5">
             <p className="text-uppercase showcase-title">showcase</p>
             <p className="t-4 r-3 showcase-text">
