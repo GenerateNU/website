@@ -25,11 +25,7 @@ a {
     width: 90px;
     height: 550px;
   }
-  .arrow {
-    margin-top: 30px;
-    color: white;
-    
-  }
+
   .arrowTwo {
     margin-top: 250px;
     color: white;
@@ -47,3 +43,16 @@ a {
     transform: rotate(90deg);
   }
   
+  .arrow {
+    object-fit: contain;
+    height: 50px;
+    width: 180px;
+  }
+
+
+  .arrow2 {
+    object-fit: contain;
+    height: 50px;
+    width: 180px;
+    margin-top: 160%
+  }
