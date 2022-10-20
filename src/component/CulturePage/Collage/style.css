@@ -11,8 +11,10 @@ body {
   /* grid-template-columns: repeat(2, 500px); */
   grid-template-rows: repeat(9, 87px);/*repeat(2, 25%);*/
   /*grid-gap: 5px;*/
-  grid-auto-columns: 25%;
+  grid-auto-columns: auto auto auto;
+  /* grid-auto-columns: 25%; */
   grid-auto-flow: column;
+  width: 101%
 }
 
 .item {
@@ -153,3 +155,4 @@ body {
   .item21 {
     grid-area: span 3/ span 1;
   }
+
