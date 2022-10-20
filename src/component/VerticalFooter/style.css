@@ -4,7 +4,7 @@ a {
 }
 .footer-container {
   background-color: #187dff;
-  width: 20vw;
+  width: 18vw;
   text-align:left;
   float:left;
 }
@@ -53,7 +53,7 @@ a:hover {
 
 .social-icons {
     margin-top: 50%;
-    margin-left: 10%;
+    margin-left: 20%;
     margin-right: 40%;
 }
 

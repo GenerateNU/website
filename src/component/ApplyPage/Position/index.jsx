@@ -43,7 +43,7 @@ export default function Position() {
   };
 
   const handleApply = () =>  {
-    console.log('hdhgashjdcgshg')
+    console.log('in apply')
     const name = position.positionTitle;
     const key = name.replaceAll(" ", "_");
     const POSITIONS_URL = 'Position_' + key;

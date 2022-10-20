@@ -18,7 +18,7 @@
 
 h2 {
   color: white;
-  -webkit-text-stroke-width: 1px;
+  /* -webkit-text-stroke-width: 1px; */
   -webkit-text-stroke-color: #dfdfdf;
 }
 

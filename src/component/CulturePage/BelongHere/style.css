@@ -3,11 +3,14 @@
   text-transform: uppercase;
   font-size: 3em;
   font-weight: 700;
+  color: black;
 }
+
 .belong-here {
   width: 28.12em;
   margin-top:3%;
   padding:1px;
+  color: black;
 }
 .thrive-together {
   width: 28.12em;
@@ -21,10 +24,6 @@
   display: flex;
   flex-direction: row;
   /* justify-content: space-evenly; */
-}
-
-.paragraphs :first-child {
-  /* align-self: center; */
 }
 
 .graphic {
