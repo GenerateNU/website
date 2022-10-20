@@ -4,14 +4,13 @@ import './style.css';
 export default function collage() {
   return (
     <div>
-
 <div class="grid">
   <div class="item item1">
 <img src="https://images.unsplash.com/photo-1530104091755-015d31dfa0b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1418&q=80">
 </img>
   </div>
-  <div class="item item2">2</div>
-  <div class="item item3">3</div>
+  <div class="item item2"></div>
+  <div class="item item3"></div>
   <div class="item item4">
   <img src="https://images.unsplash.com/photo-1529859719044-0c1f60408097?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
 </img>
@@ -20,7 +19,7 @@ export default function collage() {
   <img src="https://images.unsplash.com/photo-1529156362931-fa144f6d01eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1622&q=80">
 </img>
   </div>
-  <div class="item item6">6</div>
+  <div class="item item6"></div>
   <div class="item item7">
   <img src="https://images.unsplash.com/photo-1510739859545-e7b9e979de86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80">
 </img>
@@ -56,7 +55,7 @@ export default function collage() {
   <img src="https://images.unsplash.com/photo-1503587209101-a62878726384?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
 </img>
   </div>
-  <div class="item item16">
+  {/* <div class="item item16">
   <img src="https://images.unsplash.com/photo-1482203637719-6834798e9662?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
 </img>
   </div>
@@ -79,7 +78,7 @@ export default function collage() {
   <div class="item item21">
   <img src="https://images.unsplash.com/photo-1523825939563-3d119108584d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1828&q=80">
 </img>
-  </div>
+  </div> */}
 </div>
 
     </div>
