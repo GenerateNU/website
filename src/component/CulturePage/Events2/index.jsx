@@ -19,7 +19,7 @@ const Events2 = () => {
             </p>
           </div>
 
-          <div class="col ps-5 pe-5">
+          <div class="col ps-5 pe-5 inclined-img-container">
             <img className="inclined-image" src={CelebrateRepresent} alt=""/>
           </div>
 
