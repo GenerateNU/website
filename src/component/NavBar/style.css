@@ -82,3 +82,35 @@ span {
     height: 100px;
     background: orange;
   }
+
+  .disabled-font-style {
+    font-family: "Space Mono 700";
+    font-size: 4.5vw;
+    line-height: 128%;
+    color: #e0e0e0 !important
+}
+
+.flexbox {
+    display:flex;
+    flex-direction: row;
+    }
+
+
+.flexbox2 {
+    display:flex;
+    flex-direction: row;
+    margin-left: 600px;
+    }
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    width: 5vw;
+    height: 5vw;
+    background-color: #FFBF3C;
+    border-radius: 100%;
+    }
