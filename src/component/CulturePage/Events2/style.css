@@ -100,4 +100,9 @@
     column-gap: 100px;
 }
 
+.inclined-image{
+    transform: rotate(-10deg);
+    height:100%;
+    width:170%;
+}
 

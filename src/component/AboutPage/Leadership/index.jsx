@@ -8,10 +8,10 @@ export default function Leadership() {
     return (
         <Container fluid className='bg-black vh-100 vw-100 position-relative'>
             <Row className='vh-25 p-5'>
-                <h3 className='text-uppercase text-white p-0 m-0 fit-content='>
+                <h3 className="leadership-heading">
                     Leadership
                 </h3>
-                <h2 className='text-uppercase p-0 m-0 fit-content meet-the-team-style'>
+                <h2 className="meet-the-team">
                     Meet the team
                 </h2>
             </Row>
