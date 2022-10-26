@@ -4,7 +4,7 @@ import Row from "react-bootstrap/esm/Row";
 import ProductDevelopment from "./ProductDevelopment";
 import './style.css';
 
-export default class AboutPage extends React.Component {
+export default class LandingPageV2 extends React.Component {
     render() {
         return (
             <Container fluid className='vh-100 horizontal-scroll bg-black'>

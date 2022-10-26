@@ -5,6 +5,7 @@ import ApplyPage from './component/ApplyPage';
 import Position from './component/ApplyPage/Position';
 import AboutPage from './component/AboutPage';
 import ScrollToTop from './component/ScrollToTop';
+import LandingPageV2 from './component/LandingPageV2';
 
 /**
  * 
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/apply" element={<ApplyPage />}></Route>
             <Route path="/positions/:id" element={<Position />}></Route>
             <Route path="/about" element={<AboutPage />}></Route>
+            <Route path="/landing" element={<LandingPageV2 />}></Route>
           </Routes>
         </div>
       </Router>

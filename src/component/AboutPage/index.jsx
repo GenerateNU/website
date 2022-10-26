@@ -28,7 +28,6 @@ export default class AboutPage extends React.Component {
                     {/* <Members/> */}
 
                     <WhyGenerateCarousel />
-                    <ProductDevelopment />
                     {/* <Footer/> */}
                    
                 </Row>
