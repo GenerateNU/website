@@ -2,7 +2,9 @@ import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import FeaturedProjects from "./FeaturedProjects";
-import FP1 from "./FeaturedProjects";
+import FP1 from "./FP1";
+import PreviousProjects from "./PreviousProjects";
+import FP2 from "./FP2";
 import "./style.css";
 
 export default class AboutPage extends React.Component {
@@ -12,6 +14,8 @@ export default class AboutPage extends React.Component {
         <Row className="flex-nowrap">
           <FeaturedProjects />
           <FP1 />
+          <FP2 />
+          <PreviousProjects />
         </Row>
       </Container>
     );
