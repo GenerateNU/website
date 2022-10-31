@@ -7,10 +7,10 @@ import FeaturedProjects from "./FeaturedProjects";
 import FP1 from "./FP1";
 import PreviousProjects from "./PreviousProjects";
 import FP2 from "./FP2";
-import ProductDevelopment from "./ProductDevLifesycle/ProductDevelopment";
-import Ideation from "./ProductDevLifesycle/Ideation";
-import Prototype from "./ProductDevLifesycle/Prototype";
-import Production from "./ProductDevLifesycle/Production";
+import ProductDevelopment from "./ProductDevLifecycle/ProductDevelopment";
+import Ideation from "./ProductDevLifecycle/Ideation";
+import Prototype from "./ProductDevLifecycle/Prototype";
+import Production from "./ProductDevLifecycle/Production";
 import './style.css';
 
 export default class LandingPageV2 extends React.Component {
