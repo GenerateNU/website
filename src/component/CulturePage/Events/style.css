@@ -1,0 +1,94 @@
+/* Move to public folder */
+.text-no-fill {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+.events-top {
+    color: #A2A2A2;
+    font-family: 'Space Mono';
+    font-size: 1.3vw;
+    line-height: 150%;
+} 
+
+.events-header {
+    font-family: 'Space Mono';
+    font-size: 20vw;
+    line-height: 77%;
+    color: #FF6660
+}
+
+.events-picture-container {
+    font-size: 65vw;
+    line-height: 77%;
+    
+}
+
+.retreat-title {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5%;
+    margin-top: 81%;  
+    text-transform: uppercase;
+    color: #A559EC;    
+    text-align: left;
+}
+
+.retreat-text {
+    
+    width: 140%;
+    height: 10%;
+    /* color: black; */
+    font-size: 1.36vw;
+    line-height: 160%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 300;
+
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.events-quotation-mark {
+    color: #187DFF;
+    font-family: 'Space Mono 700';
+    font-size: 6vw;
+    line-height: 75%;
+}
+
+
+
+
+
+
+
+
+.events-our-values {
+    color: #FFBF3C;
+    font-size: 1.7vw;
+    line-height: 100%;
+    font-family: 'Space Mono';
+    margin-right: 3%;
+}
+
+.events-we-are {
+    color: #FFBF3C;
+    font-size: 15vw;
+    line-height: 77%;
+    font-family: 'Space Mono 700';
+    word-spacing: -5vw;
+}

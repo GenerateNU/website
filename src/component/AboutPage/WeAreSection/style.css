@@ -19,10 +19,11 @@
 
 .value-card-text {
     color: white;
-    font-family: 'Outfit300';
+    font-family: 'Outfit 300';
     font-size: 100%;
     line-height: 140%;
     height: 80%;
+    padding: 5%;
 }
 
 .value-card:not(:last-child) {

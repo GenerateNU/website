@@ -48,7 +48,6 @@
     font-family: 'Space Mono';
     font-weight: 700;
     font-size: 36px;
-    position: absolute;
     background: #187DFF;
     padding: 0.02em;
     width: fit-content;
@@ -63,7 +62,7 @@
     line-height: 30px;
     color:white;
     width: 40%;
-    margin-top: 15%;
+    margin-top: 5%;
     margin-left: 4%;
     padding-bottom: 3%;
   }
@@ -472,6 +471,15 @@ a {
   top: 10%;
   margin-bottom: 5%;
   /* margin-left: 4%; */
+}
+
+.navbar-style {
+    padding: 0.02em;
+    width: fit-content;
+    padding-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 4%;
+
 }
 
 /* --------------------- MEDIA QUERIES TABLETS --------------------- */

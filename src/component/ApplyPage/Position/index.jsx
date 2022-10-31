@@ -8,14 +8,18 @@ import ShadowedButton from "../../ShadowedButton";
 import { findPosition } from "../../../services/positionService";
 import "./style.css";
 import { ToastHeader } from "react-bootstrap";
+import { constants } from "../../../services/constants.js";
+
 
 export default function Position() {
   const { id } = useParams();
   const [position, setPosition] = useState([]);
   const [showText, setShowText] = useState("Share");
+  const [lnk, setLnk] = useState('');
 
   useEffect(() => {
     const getPositions = async () => {
+      console.log('jefkcsfbjjh')
       console.log(id);
       const data = await findPosition(id);
       console.log(data.attributes);
@@ -37,6 +41,16 @@ export default function Position() {
     navigator.clipboard.writeText(window.location.href);
     setShowText("Copied!");
   };
+
+  const handleApply = () =>  {
+    console.log('in apply')
+    const name = position.positionTitle;
+    const key = name.replaceAll(" ", "_");
+    const POSITIONS_URL = 'Position_' + key;
+    console.log('POSITIONS_URL', POSITIONS_URL)
+    console.log('POSITIONS_URL', constants[POSITIONS_URL])
+    window.location.assign(constants[POSITIONS_URL]);
+  }
 
   if (position) {
     return (
@@ -61,6 +75,7 @@ export default function Position() {
                     xPad="4rem"
                     className="me-5"
                     lnk={position.positionTitle}
+                    onClick={handleApply}
                   />
                 )) ||
                   (!position.active && (
@@ -89,7 +104,7 @@ export default function Position() {
             className="h-100 p-0 py-5 px-5 overflow-auto position-info"
           >
             {/* Link back to list of positions */}
-            <a className="blue-text" href="/about">
+            <a className="blue-text" href="/apply">
               &lt; -- <u> positions</u>
             </a>
 

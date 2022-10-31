@@ -5,32 +5,34 @@ import OurMissionSection from "./OurMissionSection";
 import WeAreSection from "./WeAreSection";
 import Leadership from "./Leadership";
 import History from "./History";
-import AboutHistory from './AboutHistory'
-import Timeline from './Timeline'
+import AboutHistory from "./AboutHistory";
+import Timeline from "./Timeline";
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
+import GrowthMantra from "./GrowthMantra";
 import Footer from "../VerticalFooter";
-import './style.css';
+import FooterTwo from "../VerticalFooterTeams";
+import "./style.css";
 
 export default class AboutPage extends React.Component {
-    render() {
-        return (
-            <Container fluid className='vh-100 horizontal-scroll bg-black'>
-                <Row className='flex-nowrap'>
-                    
-                    <OurMissionSection />
-                    <WeAreSection />
-                    <Leadership />
-                   
-                    {/* <AboutHistory /> */}
-                    <History />
-                    <Timeline />
-                    {/* <Members/> */}
+  render() {
+    return (
+      <Container fluid className="vh-100 horizontal-scroll bg-black">
+        <Row className="flex-nowrap">
+          <OurMissionSection />
+          <WeAreSection />
+          <Leadership />
 
-                    <WhyGenerateCarousel />
-                    <Footer/>
-                   
-                </Row>
-            </Container>
-        );
-    }
+          {/* <AboutHistory /> */}
+          <History />
+          <Timeline />
+          {/* <Members/> */}
+
+          <WhyGenerateCarousel />
+          <GrowthMantra/>
+          <Footer />
+          <FooterTwo />
+        </Row>
+      </Container>
+    );
+  }
 }

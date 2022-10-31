@@ -1,0 +1,37 @@
+.heading-text {
+  font-family: 'Space Mono';
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 700;
+  color: black;
+}
+
+.belong-here {
+  width: 28.12em;
+  margin-top:3%;
+  padding:1px;
+  color: black;
+}
+.thrive-together {
+  width: 28.12em;
+  padding-bottom: 2em;
+  margin-top: 15%;
+  margin-left: 10%;
+  padding:1px;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+}
+
+.graphic {
+  width: 70%;
+  height: 50%;
+} 
+
+.color-block {
+  margin-top: -30%;
+  margin-left: 20%;
+} 

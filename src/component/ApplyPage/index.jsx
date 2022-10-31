@@ -1,23 +1,29 @@
 import React from "react";
 import Categories from "./Categories";
 import Search from "./Search";
+import NavBar from "../NavBar";
 import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png";
-
 
 export default function ApplyPage() {
   return (
     <div className="ap_container">
       <div className="ap_img"></div>
+      <div className="navbar-style"><NavBar/></div>
+      <div className="ap_text">
+       <a href="/"></a>&nbsp;
+        WE VIBE HARD AND 
+        {/* <br></br> MAKE THINGS */}
+      </div>
       <div className="ap_text">
        
-       <a href="/"> <img className="bg-white p-2" src={GenerateLogo} height="50px" width="50px"></img></a>&nbsp;
-        WE VIBE HARD AND <br></br> MAKE THINGS
+       <a href="/"></a>&nbsp;
+        MAKE THINGS
       </div>
       <div className="d-flex">
         <div className="ap_text2 col-6 me-5 pe-5">
-          <div className="notice">
+          {/* <div className="notice">
             Applications will be live from July 25 to August 5.<br></br>
-          </div>
+          </div> */}
 
           <div>
             We’re always looking for passionate individuals who are ready to
@@ -28,7 +34,7 @@ export default function ApplyPage() {
         </div>
         <div className="col-4 h-100">
           <div className="space-above-search"></div>
-          <Search className="" />
+          <Search />
         </div>
       </div>
       <Categories />
