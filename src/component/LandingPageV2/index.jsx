@@ -7,6 +7,7 @@ import FeaturedProjects from "./FeaturedProjects";
 import FP1 from "./FP1";
 import PreviousProjects from "./PreviousProjects";
 import FP2 from "./FP2";
+import ProductDevelopment from "./ProductDevelopment";
 import './style.css';
 
 export default class LandingPageV2 extends React.Component {
@@ -19,7 +20,8 @@ export default class LandingPageV2 extends React.Component {
                    <FP1 />
                    <FP2 />
                    <PreviousProjects />
-                   <Interested/>  
+                   <ProductDevelopment />
+                   {/* <Interested/>   */}
                 </Row>
             </Container>
         );

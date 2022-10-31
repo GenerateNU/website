@@ -10,6 +10,7 @@ import Timeline from './Timeline'
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import Footer from "../VerticalFooter";
 import './style.css';
+import ProductDevelopment from "../LandingPageV2/ProductDevelopment";
 
 export default class AboutPage extends React.Component {
     render() {
@@ -27,7 +28,7 @@ export default class AboutPage extends React.Component {
                     {/* <Members/> */}
 
                     <WhyGenerateCarousel />
-                    <Footer/>
+                    {/* <Footer/> */}
                    
                 </Row>
             </Container>
