@@ -11,7 +11,7 @@ import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import GrowthMantra from "./GrowthMantra";
 import Footer from "../VerticalFooter";
 import './style.css';
-import ProductDevelopment from "../LandingPageV2/ProductDevelopment";
+import ProductDevelopment from "../LandingPageV2/ProductDevLifesycle/ProductDevelopment";
 import FooterTwo from "../VerticalFooterTeams";
 
 export default class AboutPage extends React.Component {
