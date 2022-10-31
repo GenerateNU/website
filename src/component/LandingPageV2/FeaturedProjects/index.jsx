@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function FeaturedProjects() {
   return (
-    <div className="bg-white">
+    <div className="bg-white w-50">
       <div className="featured_projects_container">
         <div className="projects-container">
           <h2> Featured Projects </h2>
