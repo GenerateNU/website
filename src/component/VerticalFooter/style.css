@@ -4,7 +4,9 @@ a {
 }
 .footer-container {
   background-color: #187dff;
-  width: 20vw;
+  width: 18vw;
+  text-align:left;
+  float:left;
 }
 
 .footer-text {
@@ -26,21 +28,54 @@ a:hover {
 
 .sherm{
     margin-top: 25%;
-    margin-left: 25%;
+    margin-left: 15%;
 }
 
 .logo-background {
-     background-color: white;
-     width: 70px;
-     height: 60px;
+    background-color: white;
+    width: 35%;
+    height: 50%;
+}
+
+.logo-placement {
+  margin: 10%;
+  background-color: white;
+  width: 40%;
+  height: 50%;
+  padding: 5%;
+}
+
+.logo-shadow {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
 }
 
 .social-icons {
-    margin-top: 150%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-top: 50%;
+    margin-left: 20%;
+    margin-right: 40%;
 }
 
+.footer-two {
+  background-color: orange;
+  align-items: right;
+}
+
+.rectangle {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+.rectangleLogo{
+  /* display: inline-block; */
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 90px;
+  height: 90px;
+  background: black;
+}
 .icon {
     padding-bottom: 10%;
 }

@@ -6,6 +6,8 @@ import Position from './component/ApplyPage/Position';
 import AboutPage from './component/AboutPage';
 import ScrollToTop from './component/ScrollToTop';
 import LandingPageV2 from './component/LandingPageV2/';
+import CulturePage from "./component/CulturePage";
+
 /**
  *
  * The app.js the routes to the different pages are located.
@@ -18,11 +20,12 @@ export default function App() {
         <div>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<LandingPage />}></Route>
+            <Route path="/" element={<AboutPage />}></Route>
             <Route path="/apply" element={<ApplyPage />}></Route>
             <Route path="/positions/:id" element={<Position />}></Route>
             <Route path="/about" element={<AboutPage />}></Route>
             <Route path="/landing" element={<LandingPageV2 />}></Route>
+            <Route path="/culture" element={<CulturePage />}></Route>
           </Routes>
         </div>
       </Router>
