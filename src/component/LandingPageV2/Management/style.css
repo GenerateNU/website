@@ -1,103 +1,79 @@
-.circle-menu {
+#skills {
     position: relative;
-    width: 400px;
-    height: 400px;
-    margin: 50px auto;   
-    background: white;
-    box-shadow: 0 0 3px #cccccc;
-}
-
-.circle-menu ul {
+    width: 500px;
+    height: 500px;
     position: absolute;
-    width: 300px;
-    height: 300px;
-    margin: 50px;
-    padding: 0;
-    list-style: none;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.circle-menu .center{
+    top:0;
+    bottom: 0;
+    left: 100px;
+    margin: auto;
+    
+  }
+  
+  .center {
     position: absolute;
-    top: 195px;
-    left: 195px;
+    top: 150px;
+    left: 150px;
     z-index: 1000;
-    border: 5px solid #34495e;
-    border-radius: 100%;
-    box-shadow: 0 0 3px #cccccc;
+    border: 100px solid white;
+    border-radius: 50%;
 }
 
-.circle-menu li {
+  .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     position: absolute;
-    top: -10px;
-    left: -10px; 
-    width: 160px;
-    height: 160px;
-    transform-origin: 100% 100%;
-    overflow: hidden;
-}
+  }
+  
+  .animate {
+    -webkit-transition: 0.2s cubic-bezier(.74,1.13,.83,1.2);
+    -moz-transition: 0.2s cubic-bezier(.74,1.13,.83,1.2);
+    -o-transition: 0.2s cubic-bezier(.74,1.13,.83,1.2);
+    transition: 0.2s cubic-bezier(.74,1.13,.83,1.2);
+  }
+  
+  .animate:hover {
+    transform: scale(1.1);
+    transform-origin: center center;
+  }
+  
+  #part1 {
+    background-color: #FFBF3C;
+    -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 41.2%, 100% 0);
+    clip-path: polygon(50% 0, 50% 50%, 100% 41.2%, 100% 0);
+  }
+  
+  #part2 {
+    background-color: #6FCF97;
+    -webkit-clip-path: polygon(50% 50%, 100% 41.2%, 100% 100%, 63.4% 100%);
+    clip-path: polygon(50% 50%, 100% 41.2%, 100% 100%, 63.4% 100%);
+  }
+  
+  #part3 {
+    background-color:  #187DFF;
+    -webkit-clip-path: polygon(50% 50%, 36.6% 100%, 63.4% 100%);
+    clip-path: polygon(50% 50%, 0% 100%, 63.4% 100%);
+  }
+  
+  
+  #part4 {
+    background-color: #FF6660;
+    -webkit-clip-path: polygon(50% 50%, 0 36.6%, 0 100%);
+    clip-path: polygon(50% 50%, 0 36.6%, 0 100%);
+  }
+  
+  #part5 {
+    background-color: #A559EC;
+    -webkit-clip-path: polygon(50% 50%, 0 36.6%, 0 0, 50% 0);
+    clip-path: polygon(50% 50%, 0 36.6%, 0 0, 50% 0);
+  }
 
-.circle-menu li:nth-child(1) {
-    transform: rotate(0deg) skew(30deg);
-}
-
-.circle-menu li:nth-child(2) {
-     transform: rotate(60deg) skew(30deg);
-}
-
-.circle-menu li:nth-child(3) {
-    transform: rotate(120deg) skew(30deg);
-}
-
-.circle-menu li:nth-child(4) {
-    transform: rotate(180deg) skew(30deg);
-}
-.circle-menu li:nth-child(5) {
-    transform: rotate(240deg) skew(30deg);
-}
-.circle-menu li:nth-child(6) {
-    transform: rotate(300deg) skew(30deg);
-}
-
-.circle-menu li a {
-    display: block;
-    width: 160px;
-    height: 160px;
-    margin-top: 40px;
-    margin-left: 40px;
-    font-size: 0;
-    background: rgba(241, 196, 15, 0.5) url("https://htmlacademy.ru/assets/icons/monitor-4x.png") no-repeat 50% 40%;
-    transition: background-color 0.5s;
-    transform: skew(-30deg) rotate(-60deg);
-}
-
-.circle-menu li:nth-child(even) a {
-    background-color: rgba(241, 196, 15, 0.75);
-}
-
-.circle-menu li a:hover {
-    background-color: rgba(241, 196, 15, 1);
-}
-
-/* Иконки */
-
-.circle-menu li:nth-child(2) a {
-    background-image: url("https://htmlacademy.ru/assets/icons/aperture-4x.png");
-}
-
-.circle-menu li:nth-child(3) a {
-    background-image: url("https://htmlacademy.ru/assets/icons/audio-4x.png");
-}
-
-.circle-menu li:nth-child(4) a {
-    background-image: url("https://htmlacademy.ru/assets/icons/battery-empty-4x.png");
-}
-
-.circle-menu li:nth-child(5) a {
-    background-image: url("https://htmlacademy.ru/assets/icons/bluetooth-4x.png");
-}
-
-.circle-menu li:nth-child(6) a {
-    background-image: url("https://htmlacademy.ru/assets/icons/browser-4x.png");
-}
+  #title {
+    position: absolute;
+    left: 52%;
+    top: 20%;
+    font-family: 'Space Mono 700';
+    font-size: 72px;
+    line-height: 92px;
+  }
