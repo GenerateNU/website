@@ -10,15 +10,13 @@ import MosaicIcon from "../../assets/images/socialMediaIcons/Mosaic.png";
 import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.png";
 import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
 
-
-
-function VerticalFooter() {
+export default function VerticalFooter() {
   return (
     <Container fluid className="footer-container">
       <Row>
-        <div>
-          <div className="sherm">
-            <img className="logo-placement logo-shadow" src={GenerateLogo} height="80%" width="60%" />
+        <div className = "rectangleLogo">
+          <div className="logo-background sherm">
+            <img src={GenerateLogo} height="50vh" width="50vw" />
           </div>
         </div>
       </Row>
@@ -53,5 +51,3 @@ function VerticalFooter() {
 
   );
 }
-
-export default VerticalFooter;

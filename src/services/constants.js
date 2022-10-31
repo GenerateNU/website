@@ -21,5 +21,6 @@ export const constants =  {
    Position_Software_Tech_Lead : 'https://forms.gle/zRs9VhzDy7GHxgSV9',
    Position_Software_Design_Lead : 'https://forms.gle/MpPBPETURFMZcirf8',
    Position_Software_BSE : 'https://forms.gle/T9wFSbDgQ8nph7zD8',
-   Position_Software_BSD : 'https://forms.gle/xyCGoRmKpP6GrVCd9'
+   Position_Software_BSD : 'https://forms.gle/xyCGoRmKpP6GrVCd9',
+   Position_Software_Client : 'https://forms.gle/xyCGoRmKpP6GrVCd9'
 }

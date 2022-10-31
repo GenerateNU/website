@@ -4,7 +4,7 @@ a {
   }
   .footerTeams-container {
     background-color: orange;
-    width: 20vw;
+    width: 18vw;
     text-align:left;
     float:left;
   }
@@ -18,18 +18,14 @@ a {
   }
   .rectangleTwo {
     box-sizing: border-box;
-    border: 2px solid #111111;
+    /* border: 2px solid #111111; */
     display: inline-block;
     margin-top: 50px;
     margin-left: 10px;
     width: 90px;
     height: 550px;
   }
-  .arrow {
-    margin-top: 30px;
-    color: white;
-    
-  }
+
   .arrowTwo {
     margin-top: 250px;
     color: white;
@@ -47,3 +43,16 @@ a {
     transform: rotate(90deg);
   }
   
+  .arrow {
+    object-fit: contain;
+    height: 50px;
+    width: 180px;
+  }
+
+
+  .arrow2 {
+    object-fit: contain;
+    height: 50px;
+    width: 180px;
+    margin-top: 160%
+  }

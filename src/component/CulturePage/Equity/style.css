@@ -1,0 +1,31 @@
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.container {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-div {
+  width: 50px;
+}
+
+.text-div-equity {
+  margin-top: 40%;
+  padding: 8em;
+}
+
+.outline-equity {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 90px;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffbf3c;
+}

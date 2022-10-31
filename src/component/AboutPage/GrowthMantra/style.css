@@ -1,0 +1,198 @@
+a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .background-white {
+    background-color: white;
+  }
+  .Growth-text {
+    width: 1103px;
+    height: 444px;
+    left: 110px;
+    margin-top: -51px;
+    /* top: -51px; */
+
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    /* font-weight: 700; */
+    font-size: 200px;
+    /* line-height: 444px; */
+    text-transform: uppercase;
+
+    /* OPRATN Green */
+
+    color: #6FCF97;
+  }
+
+  .IsOurText {
+    width: 338px;
+    height: 92px;
+    left: 124px;
+    margin-top: -230px;
+    /* top: 288px; */
+
+    /* H1 */
+
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    text-transform: uppercase;
+
+  }
+
+  .MantraText {
+    width: 735px;
+    height: 296px;
+    left: 126px;
+    top: 302px;
+    margin-top: -100px;
+
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    /* font-weight: 700; */
+    font-size: 150px;
+    line-height: 296px;
+    text-transform: uppercase;
+
+    /* Black */
+
+    color: #111111;
+  }
+
+  .paragraphText {
+    width: 300px;
+    height: 238px;
+    margin-left: 10px;
+    top: 567px;
+    margin-top: -60px;
+    /* B1 */
+
+    font-family: 'Outfit 300';
+    font-style: normal;
+    /* font-weight: 300; */
+    font-size: 18px;
+    line-height: 34px;
+    /* or 142% */
+
+
+    /* Black */
+
+    color: #111111;
+  }
+
+  .paragraphTextTwo {
+    width: 415px;
+    height: 400px;
+    margin-left: 30px;
+    top: 567px;
+    margin-top: -50px;
+    text-align: right;
+    margin-right: -50px;
+    /* B1 */
+
+    font-family: 'Outfit 300';    
+    font-style: normal;
+    /* font-weight: 300; */
+    font-size: 18px;
+    line-height: 34px;
+    /* or 142% */
+    color: #111111;
+  }
+
+  .interestedText {
+    width: 564px;
+    height: 92px;
+    margin-left: -140px;
+    margin-top: 200px;
+
+    /* H1 */
+
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    /* font-weight: 700; */
+    font-size: 50px;
+    line-height: 92px;
+    /* identical to box height, or 100% */
+
+    text-transform: uppercase;
+
+    color: #000000;
+  }
+
+  .mantra{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alignItemsRight {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .applyNowBox {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    /* OPRATN Green */
+    background: #6FCF97;
+    /* Black */
+    border: 1px solid #111111;
+  }
+
+  .blackRectangle {
+    display: inline-block;
+    width: 170px;
+    height: 55px;
+    margin-left: -300px;
+    background: black;
+    border: 1px solid #111111;
+  }
+
+  .applyNowText {
+    width: 134.68px;
+    height: 36.4px;
+    margin-left: 30px;
+    font-family: 'Space Mono 400';
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+
+    /* White */
+
+    color: #FFFFFF;
+  }
+
+  .paragraphTextThree {
+    width: 150px;
+    height: 238px;
+    margin-left: 150px;
+    top: 567px;
+    margin-top: -40px;
+    /* B1 */
+
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 34px;
+    color: #111111;
+  }
+
+  .cooltriangle {
+    margin-left: -40px;
+    margin-top: 120px;
+  }
+
+  .leftcarrot {
+    margin-left: 100px;
+    margin-right: -100px;
+  }
+  
+
+  

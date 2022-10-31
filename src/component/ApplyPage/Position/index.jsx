@@ -43,7 +43,7 @@ export default function Position() {
   };
 
   const handleApply = () =>  {
-    console.log('hdhgashjdcgshg')
+    console.log('in apply')
     const name = position.positionTitle;
     const key = name.replaceAll(" ", "_");
     const POSITIONS_URL = 'Position_' + key;
@@ -104,7 +104,7 @@ export default function Position() {
             className="h-100 p-0 py-5 px-5 overflow-auto position-info"
           >
             {/* Link back to list of positions */}
-            <a className="blue-text" href="/about">
+            <a className="blue-text" href="/apply">
               &lt; -- <u> positions</u>
             </a>
 
