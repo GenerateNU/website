@@ -9,7 +9,7 @@ import ShadowedButton from "../../ShadowedButton";
 
 const Interested = () => {
   return (
-    <div className="vw-100 vh-100 py-4 px-5">
+    <div className="bg-white vw-100 vh-100 py-4 px-5">
       {/* <div className="w-75 pe-5 d-flex">
         <div className="interested-word text-uppercase">Interested</div>
       </div> */}
@@ -18,7 +18,7 @@ const Interested = () => {
         <div className="interested-word text-uppercase">Interested</div>
       </Row>
 
-      <Row className="vh-33 p-5">
+      <Row className="vh-23 p-5">
         <Col>
           <div className="box">join us</div>
         </Col>

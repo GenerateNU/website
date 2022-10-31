@@ -1,14 +1,18 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import WhatWeOffer from "./WhatWeOffer";
+import Interested from "./Interested";
+
 import './style.css';
 
-export default class AboutPage extends React.Component {
+export default class LandingPageV2 extends React.Component {
     render() {
         return (
             <Container fluid className='vh-100 horizontal-scroll bg-black'>
                 <Row className='flex-nowrap'>
-                   
+                   <WhatWeOffer/>
+                   <Interested/>
                 </Row>
             </Container>
         );
