@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPageV2 from "./component/LandingPageV2";
+import LandingPage from "./component/LandingPage";
 import ApplyPage from "./component/ApplyPage";
 import Position from "./component/ApplyPage/Position";
 import AboutPage from "./component/AboutPage";
@@ -18,7 +18,7 @@ export default function App() {
         <div>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<LandingPageV2 />}></Route>
+            <Route path="/" element={<LandingPage />}></Route>
             <Route path="/apply" element={<ApplyPage />}></Route>
             <Route path="/positions/:id" element={<Position />}></Route>
             <Route path="/about" element={<AboutPage />}></Route>
