@@ -1,0 +1,137 @@
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 3em;
+}
+
+.column-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.column-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.client {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.client-text {
+  font-family: Outfit 500;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding-right: 1em;
+}
+
+.name-text {
+  font-family: Outfit 500;
+  font-size: 1.5em;
+}
+
+.school {
+  font-family: Outfit 500;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.name-order {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5em;
+}
+
+.client-blurb {
+  width: 20em;
+  padding-top: 3em;
+  align-self: flex-end;
+}
+
+.bottom-corner {
+  /* padding-top: 2.5em; */
+  padding-bottom: 2.5em;
+  align-self: flex-start;
+}
+
+.product-img-container {
+  padding-top: 2.5em;
+  padding-left: 7em;
+  margin-top: 7em;
+}
+
+.mockup-img {
+  /* position: absolute; */
+  /* height: 30em; */
+  width: 37em;
+  margin-left: -6em;
+  min-height: 100%;
+}
+
+.top-corner {
+  align-self: flex-end;
+  height: 20em;
+}
+
+.quote-container {
+  align-self: flex-end;
+  width: 18em;
+  /* padding-top: 1em; */
+  padding-right: 2em;
+}
+
+/* .fp1-quotation-mark {
+    color: #ffbf3c;
+    font-family: "Space Mono 700";
+    font-size: 3vw;
+    line-height: 50%;
+  } */
+
+blockquote {
+  font-family: Outfit 300;
+  font-size: 1.2vw;
+  position: relative;
+  margin: 0.5em;
+  margin-top: 5em;
+  margin-left: 3em;
+  /* padding: 0.5em 2em 0.5em 3em; */
+}
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+blockquote:before {
+  font-family: "Space Mono 700";
+  color: #ffbf3c;
+  position: absolute;
+  font-size: 3em;
+  line-height: 1;
+  top: 0;
+  left: -0.75em;
+  content: "\201C";
+}
+blockquote:after {
+  font-family: "Space Mono 700";
+  color: #ffbf3c;
+  position: absolute;
+  float: right;
+  font-size: 3em;
+  line-height: 1;
+  right: 0em;
+  bottom: -0.5em;
+  content: "\201D";
+}
+
+h1 {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 4.5em;
+  text-transform: uppercase;
+}
