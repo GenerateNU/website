@@ -1,0 +1,36 @@
+/* Move to public folder */
+
+
+
+
+.interested-word {
+    color: black;
+    font-family: 'Space Mono 700';
+    font-size: 6em;   
+    margin-top:10%;
+}
+
+.box {
+    margin-top:10%;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-size: 1.6em;   
+    background-color: #187DFF;
+    color: white;
+    text-align: center;
+
+    
+    width: 67%;
+    height: 70%;
+}
+
+
+.phrase-text {
+    color: black;
+    font-family: 'Outfit';
+    font-size: 1.6em;   
+    font-style: normal;
+    margin-top:10%;
+    width: 60%;
+}
+

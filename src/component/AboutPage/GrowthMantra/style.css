@@ -60,7 +60,7 @@ a {
     color: #111111;
   }
 
-  .paragraphText {
+  .paragraphTextGrowthMantra {
     width: 300px;
     height: 238px;
     margin-left: 10px;
@@ -78,7 +78,7 @@ a {
 
     /* Black */
 
-    color: #111111;
+    color: black;
   }
 
   .paragraphTextTwo {
@@ -117,7 +117,7 @@ a {
 
     text-transform: uppercase;
 
-    color: #000000;
+    color: black;
   }
 
   .mantra{
@@ -130,6 +130,7 @@ a {
     flex-direction: row;
     padding-left: 5%;
     padding-right: 5%;
+    color: #000000;
   }
 
   .applyNowBox {
@@ -181,7 +182,7 @@ a {
     font-weight: 300;
     font-size: 18px;
     line-height: 34px;
-    color: #111111;
+    color: black;
   }
 
   .cooltriangle {

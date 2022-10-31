@@ -10,8 +10,9 @@ import Timeline from "./Timeline";
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import GrowthMantra from "./GrowthMantra";
 import Footer from "../VerticalFooter";
+import './style.css';
+import ProductDevelopment from "../LandingPageV2/ProductDevelopment";
 import FooterTwo from "../VerticalFooterTeams";
-import "./style.css";
 
 export default class AboutPage extends React.Component {
   render() {
@@ -22,17 +23,17 @@ export default class AboutPage extends React.Component {
           <WeAreSection />
           <Leadership />
 
-          {/* <AboutHistory /> */}
           <History />
           <Timeline />
-          {/* <Members/> */}
-
           <WhyGenerateCarousel />
           <GrowthMantra/>
           <Footer />
           <FooterTwo />
-        </Row>
-      </Container>
+                   
+                </Row>
+            </Container>
+
+    
     );
   }
 }
