@@ -11,7 +11,7 @@ const Events2 = () => {
             <p className="text-uppercase moral-budget-title">
               morale&nbsp;budget
             </p>
-            <p className="t-4 r-3 moral-budget-text">
+            <p className="t-4 r-3 l-5 moral-budget-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
               nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec
               elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus
@@ -20,12 +20,15 @@ const Events2 = () => {
           </div>
 
           <div class="col ps-5 pe-5 inclined-img-container">
-            <img className="inclined-image" src={CelebrateRepresent} alt=""/>
+            <div className="celebrate-rep-container">
+              {" "}
+              <img className="inclined-image" src={CelebrateRepresent} alt="" />
+            </div>
           </div>
 
           <div class="col ps-5 pe-5">
             <p className="text-uppercase orientation-title">orientation</p>
-            <p className="t-4 r-3 orientation-text">
+            <p className="orientation-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
               nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec
               elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus
@@ -33,7 +36,7 @@ const Events2 = () => {
               Tincidunt sagittis nulla orci id.
             </p>
           </div>
-        
+
           {/* <div class="col ps-5 pe-5">
             <p className="text-uppercase all-hands-title">all-hands</p>
             <p className="t-4 r-3 all-hands-text">

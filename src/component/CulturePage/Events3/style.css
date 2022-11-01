@@ -1,36 +1,33 @@
 .showcase-title {
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    margin-top: 70%;  
-    text-transform: uppercase;
-    color: #187DFF;
-    text-align: left;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  margin-top: 70%;
+  text-transform: uppercase;
+  color: #187dff;
+  text-align: left;
 }
 
 .showcase-text {
-    
-    width: 70%;
-    height: 10%;
-    color: black;
-    font-size: 1.36vw;
-    line-height: 160%;
-    text-align: left;
-    font-style: normal;
-    font-weight: 300;
-
-    column-gap: 100px;
+  width: 70%;
+  height: 10%;
+  color: black;
+  font-size: 1.36vw;
+  line-height: 160%;
+  text-align: left;
+  font-style: normal;
+  font-weight: 300;
+  column-gap: 100px;
 }
 
-
 .all-hands-title {
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    margin-top: 38%;  
-    text-transform: uppercase;
-    color: #187DFF;
-    text-align: left;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  margin-top: 38%;
+  text-transform: uppercase;
+  color: #187dff;
+  text-align: left;
 }

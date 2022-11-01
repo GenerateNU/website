@@ -6,7 +6,7 @@ const Events3 = () => {
     <div className="position-relative w-70 vh-100 py-4 px-5">
       <div className="events-picture d-flex">
         <div class="row gx-5">
-        <div class="col ps-5 pe-5">
+          <div class="col ps-5 pe-5">
             <p className="text-uppercase all-hands-title">all-hands</p>
             <p className="t-4 r-3 showcase-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
@@ -16,7 +16,7 @@ const Events3 = () => {
               Tincidunt sagittis nulla orci id.
             </p>
           </div>
-          <div class="col ps-5 pe-5">
+          <div class="col ps-5 pe-2">
             <p className="text-uppercase showcase-title">showcase</p>
             <p className="t-4 r-3 showcase-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
