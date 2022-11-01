@@ -7,7 +7,7 @@
     bottom: 0;
     left: 100px;
     margin: auto;
-    
+    transform: rotate(320deg);
   }
   
   .center {
@@ -76,4 +76,14 @@
     font-family: 'Space Mono 700';
     font-size: 72px;
     line-height: 92px;
+  }
+
+  #description {
+    position: absolute;
+    width: 30%;
+    font-family: 'Outfit 300';
+    font-size: 20px;
+    line-height: 30px;
+    left: 52%;
+    top: 35%;
   }
