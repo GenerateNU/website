@@ -87,3 +87,55 @@
     left: 52%;
     top: 35%;
   }
+
+  .image1 {
+    width: 20%;
+    height: 20%;
+    z-index: 100;
+    margin-bottom: 70%;
+    transform: rotate(40deg);
+    margin-left: 45%;
+    margin-top: 13%;
+  }
+
+  .image2 {
+    width: 20%;
+    height: 20%;
+    z-index: 100;
+    margin-bottom: 70%;
+    transform: rotate(40deg);
+    margin-left: 60%;
+    margin-top: 58%;
+  }
+
+  .image3 {
+    width: 20%;
+    height: 18%;
+    z-index: 100;
+    margin-bottom: 70%;
+    transform: rotate(40deg);
+    margin-right: 18%;
+    margin-top: 77%;
+  }
+
+
+  .image4 {
+    width: 20%;
+    height: 18%;
+    z-index: 100;
+    margin-bottom: 70%;
+    transform: rotate(40deg);
+    margin-right: 70%;
+    margin-top: 50%;
+  }
+
+
+  .image5 {
+    width: 20%;
+    height: 20%;
+    z-index: 100;
+    margin-bottom: 70%;
+    transform: rotate(40deg);
+    margin-right: 45%;
+    margin-top: 15%;
+  }

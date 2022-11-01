@@ -1,5 +1,10 @@
 import React from 'react';
 import './style.css';
+import image1 from '../Management/images/wheel_image1.png'
+import image2 from '../Management/images/wheel_image2.png'
+import image3 from '../Management/images/wheel_image3.png'
+import image4 from '../Management/images/wheel_image4.png'
+import image5 from '../Management/images/wheel_image5.png'
 
 export default function Management() {
   function Color() {
@@ -36,11 +41,17 @@ export default function Management() {
        <div>
        <div id="skills">
        <div class="center"></div>
-       <button id="part1" class="circle animate" onClick={Color}> </button>
-       <button id="part2" class="circle animate" onClick={Color2}> </button>
-       <button id="part3" class="circle animate" onClick={Color3}> </button>
-       <button id="part4" class="circle animate" onClick={Color4}> </button>
-       <button id="part5" class="circle animate" onClick={Color5}> </button>
+       <button id="part1" class="circle animate" onClick={Color}> 
+       <img class="image1" alt='image1' src={image1} />
+       </button>
+       <button id="part2" class="circle animate" onClick={Color2}>
+       <img class="image2" alt='image2' src={image2} /> </button>
+       <button id="part3" class="circle animate" onClick={Color3}> 
+       <img class="image3" alt='image3' src={image3} /> </button>
+       <button id="part4" class="circle animate" onClick={Color4}> 
+       <img class="image4" alt='image4' src={image4} /> </button>
+       <button id="part5" class="circle animate" onClick={Color5}> 
+       <img class="image5" alt='image5' src={image5} /> </button>
        </div>
        
        <div id="title">
