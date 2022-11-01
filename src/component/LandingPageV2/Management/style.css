@@ -139,3 +139,13 @@
     margin-right: 45%;
     margin-top: 15%;
   }
+
+  .button {
+    position: absolute;
+    width: 10%;
+    font-family: 'Outfit 300';
+    font-size: 20px;
+    line-height: 30px;
+    left: 52%;
+    top: 65%;
+  }

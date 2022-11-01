@@ -5,6 +5,7 @@ import image2 from '../Management/images/wheel_image2.png'
 import image3 from '../Management/images/wheel_image3.png'
 import image4 from '../Management/images/wheel_image4.png'
 import image5 from '../Management/images/wheel_image5.png'
+import button from '../Management/images/button.png'
 
 export default function Management() {
   function Color() {
@@ -63,6 +64,7 @@ export default function Management() {
         The team drives our teams to excel through collaboration and innovative thinking - 
         ensuring Generate is functioning at its peak. Our management team is responsible 
         for directing Generate’s yearly focus. </div>
+        <button> <img class="button" alt='button' src={button} /> </button>
         </div>
     );
 }
