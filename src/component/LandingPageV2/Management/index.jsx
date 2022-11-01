@@ -40,6 +40,7 @@ export default function Management() {
 
     return (
        <div>
+
        <div id="skills">
        <div class="center"></div>
        <button id="part1" class="circle animate" onClick={Color}> 
