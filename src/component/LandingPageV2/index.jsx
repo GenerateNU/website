@@ -12,11 +12,12 @@ import Ideation from "./ProductDevLifecycle/Ideation";
 import Prototype from "./ProductDevLifecycle/Prototype";
 import Production from "./ProductDevLifecycle/Production";
 import './style.css';
+import Management from "./Management"
 
 export default class LandingPageV2 extends React.Component {
     render() {
         return (
-            <Container fluid className='vh-100 horizontal-scroll bg-black'>
+            <Container fluid className='vh-100 horizontal-scroll'>
                 <Row className='flex-nowrap'>
                    <WhatWeOffer/>
                    <FeaturedProjects />
@@ -28,6 +29,10 @@ export default class LandingPageV2 extends React.Component {
                    <Prototype/>
                    <Production/>
                    {/* <Interested/>   */}
+                    
+                    <Management />
+                  
+                   
                 </Row>
             </Container>
         );
