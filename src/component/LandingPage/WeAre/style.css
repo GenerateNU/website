@@ -63,20 +63,6 @@ color: #FFFFFF;
 
 }
 
-.scrollbox {
-    /* Rectangle 109 */
-box-sizing: border-box;
-
-position: absolute;
-width: 90px;
-height: 90px;
-left: 12px;
-top: 90px;
-background: #FFFFFF;
-/* Black/Black */
-border: 1px solid #111111;
-}
-
 .bluerectangle {
 position: absolute;
 width: 713px;
@@ -233,5 +219,27 @@ background: #FFBF3C;
     top: 600px;
 
     background-image: url('../../../assets/images/landingpage/weare/GenerateLogoWhite.png');
+    background-size: cover;
+}
+
+.whitebox {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 1230px;
+    top: 762px;
+
+    background-image: url('../../../assets/images/landingpage/weare/WhiteBox.png');
+    background-size: cover;
+}
+
+.scrollarrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 1255px;
+    top: 787px;
+
+    background-image: url('../../../assets/images/landingpage/weare/ArrowSideways.png');
     background-size: cover;
 }

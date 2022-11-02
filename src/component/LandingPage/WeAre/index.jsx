@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image'
-import generateLogo from '../../../assets/images/landingpage/weare/GenerateLogoWhite.png';
 import './style.css';
 
 /**
@@ -14,6 +12,8 @@ export class WeAre extends Component {
                 <div className="shermancenter" />
                 <p className="wearetext">WE ARE</p>
                 <p className="generatetext">GENERATE</p>
+                <div className="whitebox" />
+                <div className="scrollarrow" />
                 <p className="scrolltext">scroll</p>
                 <div className="bluerectangle" />
                 <div className="purplerectangle" />
@@ -28,9 +28,9 @@ export class WeAre extends Component {
                 <p className="somesayparagraphone">we are</p>
                 <p className="somesayparagraphtwo">{"northeastern's best product development studio :)"}</p>
                 <div className="yellowrectangle" />
-                <Image className="generatelogowhiteone" src={generateLogo} />
-                <Image className="generatelogowhitetwo" src={generateLogo} />
-                <Image className="generatelogowhitethree" src={generateLogo} />
+                <div className="generatelogowhiteone" />
+                <div className="generatelogowhitetwo" />
+                <div className="generatelogowhitethree" />
         </Container>
         );
     }
