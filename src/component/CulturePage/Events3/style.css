@@ -9,6 +9,13 @@
   text-align: left;
 }
 
+.showcase {
+  margin-right: 100px;
+}
+
+.all-hands {
+  margin-left: 140px; 
+}
 .showcase-text {
   width: 70%;
   height: 10%;
