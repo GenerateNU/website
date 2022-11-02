@@ -166,7 +166,7 @@ text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF;
     position: absolute;
 width: 867px;
 height: 368px;
-left: 2295px;
+left: 2316px;
 top: 138px;
 font-family: 'Space Mono';
 font-style: normal;
@@ -205,10 +205,10 @@ background: #FFBF3C;
 
 .generatelogowhiteone {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 2228px;
-    top: 625px;
+    width: 300px;
+    height: 300px;
+    left: 2203px;
+    top: 600px;
 
     background-image: url('../../../assets/images/landingpage/weare/GenerateLogoWhite.png');
     background-size: cover;
@@ -216,10 +216,10 @@ background: #FFBF3C;
 
 .generatelogowhitetwo {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 2502px;
-    top: 625px;
+    width: 300px;
+    height: 300px;
+    left: 2477px;
+    top: 600px;
 
     background-image: url('../../../assets/images/landingpage/weare/GenerateLogoWhite.png');
     background-size: cover;
@@ -227,10 +227,10 @@ background: #FFBF3C;
 
 .generatelogowhitethree {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 2776px;
-    top: 625px;
+    width: 300px;
+    height: 300px;
+    left: 2751px;
+    top: 600px;
 
     background-image: url('../../../assets/images/landingpage/weare/GenerateLogoWhite.png');
     background-size: cover;
