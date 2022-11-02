@@ -68,22 +68,22 @@
   }
 
   #title {
-    position: absolute;
     left: 52%;
     top: 20%;
     font-family: 'Space Mono 700';
     font-size: 72px;
     line-height: 92px;
+    margin-left: 60%;
+    margin-top: -30%;
   }
 
   #description {
-    position: absolute;
     width: 30%;
     font-family: 'Outfit 300';
     font-size: 20px;
     line-height: 30px;
-    left: 52%;
-    top: 35%;
+    margin-left: 60%;
+    margin-top: 2%;
   }
 
   .image1 {
@@ -139,11 +139,10 @@
   }
 
   .button {
-    position: absolute;
     width: 10%;
     font-family: 'Outfit 300';
     font-size: 20px;
     line-height: 30px;
-    left: 52%;
-    top: 65%;
+    margin-left: 60%;
+    margin-top: 3%;
   }
