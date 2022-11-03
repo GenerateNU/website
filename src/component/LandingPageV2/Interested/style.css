@@ -2,8 +2,88 @@
 
 
 
+a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .background-white {
+    background-color: white;
+  }
 
-.interested-word {
+
+
+  .interestedText {
+    margin-left: 6%;
+    margin-top: 15%;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .applyNowBox {
+    display: inline-block;
+    width: 17em;
+    height: 5em;
+    margin-left: 1em;
+    margin-top: 10em;
+    background: blue;
+    border: 1px solid #111111;
+  }
+
+  .blackRectangle {
+    display: inline-block;
+    width: 15em;
+    height: 5em;
+    background: black;
+    margin-left: 5em;
+
+  }
+
+  .applyNowText {
+    width: 50%;
+    height: 50%;
+    font-family: 'Space Mono 400';
+    font-style: normal;
+    font-size: 1.2em;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+    line-height: 3.5em;
+    margin-left: 4.5em;
+  }
+
+  .sentenceText{
+    margin-left: 30em;
+    margin-top: -3.5em;
+    width: 12em;
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+  }
+
+  .cooltriangle {
+    margin-left: -40px;
+    margin-top: 120px;
+  }
+
+  .leftcarrot {
+    margin-left: 35%;
+    margin-top: -2%;
+  }
+  
+
+  
+
+
+
+
+
+
+/* .interested-word {
     color: black;
     font-family: 'Space Mono 700';
     font-size: 6em;   
@@ -33,4 +113,4 @@
     margin-top:10%;
     width: 60%;
 }
-
+ */

@@ -106,7 +106,7 @@ const WhatWeOffer = () => {
           <div className="vh-60 bg-black text-white">
             <Row className="h-50 p-5">
               <Col xs={4} className="p-5">
-                <p className="p-5">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Modeling</strong>
                   <br />
                   Using Fusion 360 and other tools to create detailed CAD
@@ -114,7 +114,7 @@ const WhatWeOffer = () => {
                 </p>
               </Col>
               <Col xs={4} className="p-5">
-                <p className="p-5">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Prototypes</strong>
                   <br />
                   Building out prototypes with 3D-pritned models, laser cutting
@@ -122,7 +122,7 @@ const WhatWeOffer = () => {
                 </p>
               </Col>
               <Col xs={4} className="p-5">
-                <p className="p-5">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Analysis</strong>
                   <br />
                   FEA simulations and calculations and validating designs.
@@ -131,7 +131,7 @@ const WhatWeOffer = () => {
             </Row>
             <Row className="h-50 p-5 pt-0">
               <Col xs={4} className="p-5 pt-0">
-                <p className="p-5">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Handoff</strong>
                   <br />
                   Comprehensive technical documentation on the engineering and
@@ -139,7 +139,7 @@ const WhatWeOffer = () => {
                 </p>
               </Col>
               <Col xs={4} className="p-5 pt-0">
-                <p className="p-5">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Design</strong>
                   <br />
                   Providing detailed product drawings and renders for the
@@ -147,7 +147,7 @@ const WhatWeOffer = () => {
                 </p>
               </Col>
               <Col xs={4} className="p-5 pt-0">
-                <p className="p-5">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Testing</strong>
                   <br />
                   Completing and documenting multiple rounds of user testing for
