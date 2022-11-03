@@ -11,6 +11,7 @@ import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import GrowthMantra from "./GrowthMantra";
 import Footer from "../VerticalFooter";
 import './style.css';
+import Stats from "./Stats";
 import ProductDevelopment from "../LandingPageV2/ProductDevLifecycle/ProductDevelopment";
 import FooterTwo from "../VerticalFooterTeams";
 
@@ -25,12 +26,13 @@ export default class AboutPage extends React.Component {
 
           <History />
           <Timeline />
+          <Stats/>
           <WhyGenerateCarousel />
           <GrowthMantra/>
           <Footer />
           <FooterTwo />
-                   
-                </Row>
+          
+        </Row>
             </Container>
 
     
