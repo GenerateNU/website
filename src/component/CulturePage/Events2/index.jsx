@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import CelebrateRepresent from "./CelebrateRepresent.png";
+import CelebrateRepresent from "../Events2/CelebrateRepresent.png";
 
 const Events2 = () => {
   return (
@@ -8,15 +8,17 @@ const Events2 = () => {
       <div className="events-picture-container d-flex flex-wrap justify-content-between">
         <div class="row gx-5">
           <div class="col ps-5 pe-5">
-            <p className="text-uppercase moral-budget-title">
-              morale&nbsp;budget
-            </p>
-            <p className="t-4 r-3 l-5 moral-budget-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
-              nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec
-              elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus
-              adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
-            </p>
+            <div class ="shiftLeft">
+              <p className="text-uppercase moral-budget-title">
+                morale&nbsp;budget
+              </p>
+              <p className="t-4 r-3 l-5 moral-budget-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
+                nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec
+                elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus
+                adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
+              </p>
+            </div>
           </div>
 
           <div class="col ps-5 pe-5 inclined-img-container">
@@ -26,7 +28,8 @@ const Events2 = () => {
             </div>
           </div>
 
-          <div class="col ps-5 pe-5">
+          <div class="col">
+            <div class="shiftleft3">
             <p className="text-uppercase orientation-title">orientation</p>
             <p className="orientation-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
@@ -35,6 +38,7 @@ const Events2 = () => {
               adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
               Tincidunt sagittis nulla orci id.
             </p>
+            </div>
           </div>
 
           {/* <div class="col ps-5 pe-5">

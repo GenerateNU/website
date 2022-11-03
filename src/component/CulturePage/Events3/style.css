@@ -38,3 +38,12 @@
   color: #187dff;
   text-align: left;
 }
+
+.shiftleft1 {
+  margin-right: 50px;
+}
+
+.shiftleft2 {
+  margin-right: 20px;
+  margin-bottom: 10px; 
+}
