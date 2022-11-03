@@ -137,7 +137,8 @@ a {
     display: inline-block;
     width: 200px;
     height: 50px;
-    margin-left: 10px;
+    margin-left: 11px;
+    margin-top: -14px;
     /* OPRATN Green */
     background: #6FCF97;
     /* Black */
@@ -146,8 +147,8 @@ a {
 
   .blackRectangle {
     display: inline-block;
-    width: 170px;
-    height: 55px;
+    width: 200px;
+    height: 50px;
     margin-left: -300px;
     background: black;
     border: 1px solid #111111;
@@ -170,7 +171,7 @@ a {
   }
 
   .paragraphTextThree {
-    width: 150px;
+    width: 350px;
     height: 238px;
     margin-left: 150px;
     top: 567px;
