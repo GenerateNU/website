@@ -6,38 +6,46 @@ import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import ShadowedButton from "../../ShadowedButton";
+import leftcarrot from "../../LandingPageV2/Interested/chevron.png";
 
 const Interested = () => {
   return (
-    <div className="bg-white vw-100 vh-100 py-4 px-5">
-      {/* <div className="w-75 pe-5 d-flex">
-        <div className="interested-word text-uppercase">Interested</div>
-      </div> */}
+    <div className="background-white">
+      <div className="interestedText">Interested</div>
 
-      <Row className="vh-33 p-5">
-        <div className="interested-word text-uppercase">Interested</div>
-      </Row>
-
-      <Row className="vh-23 p-5">
-        <Col>
-          <div className="box">join us</div>
-        </Col>
-
-        <Col>
-          <div className="phrase-text">
-            Join a community that shares the same goal - turning ideas into
-            reality
-          </div>
-        </Col>
-      </Row>
-
-      {/* <div className="w-75 pe-5 d-flex">
-        <div className="interested-text text-uppercase">Interested</div>
+      <div className="blackRectangle">
+        <div className="applyNowBox">
+          <a href="/apply" className="applyNowText">
+            join us
+          </a>
+        </div>
       </div>
-      <div className="our-mission-header text-no-fill text-uppercase position-relative start-0 bottom-0 ps-5 pb-4">
-        Our Mission
-      </div> */}
+      <div className="leftcarrot">
+        <img src={leftcarrot} height="50vh" width="50vw" />
+      </div>
+      <div className="sentenceText">
+        Join a community that shares the same goal - turning ideas into reality
+      </div>
     </div>
+
+    // <div className="bg-white vw-100 vh-100 py-4 px-5">
+    //   <Row className="vh-33 p-5">
+    //     <div className="interested-word text-uppercase">Interested</div>
+    //   </Row>
+
+    //   <Row className="vh-23 p-5">
+    //     <Col>
+    //       <div className="box">join us</div>
+    //     </Col>
+
+    //     <Col>
+    //       <div className="phrase-text">
+    //         Join a community that shares the same goal - turning ideas into
+    //         reality
+    //       </div>
+    //     </Col>
+    //   </Row>
+    // </div>
   );
 };
 
