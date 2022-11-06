@@ -17,8 +17,8 @@ import Management from "./Management"
 export default class LandingPageV2 extends React.Component {
     render() {
         return (
-            <Container fluid className='vh-100 horizontal-scroll'>
-                <Row className='flex-nowrap'>
+            <div class="vh-100 horizontal-scroll bg-white container-fluid" tab-index="0">
+               <Row className='flex-nowrap'>
                    <WhatWeOffer/>
                    <FeaturedProjects />
                    <FP1 />
@@ -28,13 +28,14 @@ export default class LandingPageV2 extends React.Component {
                    <Ideation />
                    <Prototype/>
                    <Production/>
-                   {/* <Interested/>   */}
                     
                     <Management />
+                    <Interested/>  
+
                   
                    
                 </Row>
-            </Container>
+            </div>
         );
     }
 }

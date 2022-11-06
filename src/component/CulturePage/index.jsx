@@ -17,8 +17,8 @@ import "./style.css";
 export default class CulturePage extends React.Component {
   render() {
     return (
-      <Container fluid className="vh-100 horizontal-scroll">
-        <Row className="flex-nowrap">
+      <div class="vh-100 horizontal-scroll bg-white container-fluid" tab-index="0">
+      <Row className="flex-nowrap">
           {/* Add components of culture page here  */}
           <IntroSection />
           <IntroImages/>
@@ -32,7 +32,7 @@ export default class CulturePage extends React.Component {
           <CollageSection />
           <VerticalFooter/>
         </Row>
-      </Container>
+      </div>
     );
   }
 }
