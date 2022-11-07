@@ -11,25 +11,37 @@ import ArtistLaunch from "../../../assets/images/landingpage-v2/ArtistLaunch.png
 import Burncam from "../../../assets/images/landingpage-v2/Burncam.png";
 
 export default function PreviousProjects() {
-  const logos = [
-    Shortfall,
-    Shownxt,
-    MentorMatch,
-    Tiliti,
-    Klip,
-    ArtistLaunch,
-    Burncam,
-    RootedLiving,
-    Limewire,
-  ];
-  const listLogos = logos.map((logo) => (
+  const logos1 = [Shortfall, Tiliti, Burncam];
+
+  const logos2 = [Shownxt, Klip, RootedLiving];
+
+  const logos3 = [MentorMatch, ArtistLaunch, Limewire];
+
+  const l1 = logos1.map((logo) => (
     <div className="logo">
       <img src={logo} alt="" />
     </div>
   ));
+
+  const l2 = logos2.map((logo) => (
+    <div className="logo">
+      <img src={logo} alt="" />
+    </div>
+  ));
+
+  const l3 = logos3.map((logo) => (
+    <div className="logo">
+      <img src={logo} alt="" />
+    </div>
+  ));
+
   return (
     <div className="prev-proj-wrapper">
-      <div className="wrapper">{listLogos}</div>
+      <div className="wrapper">
+        <div className="col-1">{l1}</div>
+        <div className="col-2">{l2}</div>
+        <div className="col-3">{l3}</div>
+      </div>
     </div>
   );
 }

@@ -1,18 +1,35 @@
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
-  grid-gap: 3em;
-  margin-left: 10em;
-  margin-top: 3.75em;
-  margin-bottom: 3.75em;
-  /* justify-content: center; */
-}
-
 .logo {
   width: 9.375em;
   padding: 2em;
+  object-fit: contain;
 }
 
 .prev-proj-wrapper {
   background-color: #111111;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-top: 7%;
+}
+
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
