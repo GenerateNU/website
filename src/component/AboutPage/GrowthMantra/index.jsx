@@ -23,17 +23,19 @@ const GrowthMantra = () => {
          
           
             {/* <div className= "paragraphTextTwo">Teams work side-by-side to ensure products and processes are beyond expectations. We are self-driven and help one another reach goals and become leaders. Not only do we build products, but we also build community, leadership, and opportunities.</div> */}
-            <div className= "paragraphTextGrowthMantra">Teams work side-by-side to ensure products and processes are beyond expectations. We are self-driven and help one another reach goals and become leaders. Not only do we build products, but we also build community, leadership, and opportunities.</div>
+            <div className= "paragraphTextGrowthMantraTwo">Teams work side-by-side to ensure products and processes are beyond expectations. We are self-driven and help one another reach goals and become leaders. Not only do we build products, but we also build community, leadership, and opportunities.</div>
             {/* <div className="cooltriangle">
               <img src={cooltriangle} height="400vh" width="600vw"/> 
             </div> */}
         
-              <div className= "applyNowBoxGrowthMantra">
-                <a href= "/apply" className="applyNowText">apply now</a>
-              </div>
-            <div >
+            <div className= "applyNowBoxGrowthMantra">
+              <a href= "/apply" className="applyNowText">apply now</a>
+            </div>
+
+            <div className= "carrot">
               <img src={leftcarrot}/> 
             </div>
+
             <div className= "paragraphTextThree">Join a community that shares the same goal - turning ideas into reality</div>
             
          </div>
