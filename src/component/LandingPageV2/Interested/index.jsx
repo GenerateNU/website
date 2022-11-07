@@ -10,21 +10,26 @@ import leftcarrot from "../../LandingPageV2/Interested/chevron.png";
 
 const Interested = () => {
   return (
-    <div className="background-white">
+    <div className="bg-white interestedcontainer">
       <div className="interestedText">Interested</div>
-
-      <div className="blackRectangle">
-        <div className="applyNowBox">
-          <a href="/apply" className="applyNowText">
+      <div className="interestedflexbox">
+        <div className="interestedJoinNowBox">
+          <a href="/apply" className="joinCommunitytext">
             join us
           </a>
         </div>
+        <div className="leftcarrot">
+          <img src={leftcarrot} />
+        </div>
+      <div className="sentenceText">
+        Join a community that shares the same goal - turning ideas into reality
       </div>
-      <div className="leftcarrot">
+      {/* <div className="leftcarrot">
         <img src={leftcarrot} height="50vh" width="50vw" />
       </div>
       <div className="sentenceText">
         Join a community that shares the same goal - turning ideas into reality
+      </div> */}
       </div>
     </div>
 

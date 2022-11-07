@@ -27,13 +27,12 @@ const GrowthMantra = () => {
             <div className="cooltriangle">
               <img src={cooltriangle} height="400vh" width="600vw"/> 
             </div>
-            <div className= "blackRectangle">
+        
               <div className= "applyNowBox">
                 <a href= "/apply" className="applyNowText">apply now</a>
               </div>
-            </div>
-            <div className="leftcarrot">
-              <img src={leftcarrot} height="50vh" width="50vw"/> 
+            <div >
+              <img src={leftcarrot}/> 
             </div>
             <div className= "paragraphTextThree">Join a community that shares the same goal - turning ideas into reality</div>
             

@@ -1,6 +1,8 @@
 /* Move to public folder */
 
-
+.interestedcontainer{
+  width: 65%;
+}
 
 a {
     text-decoration: none;
@@ -11,7 +13,10 @@ a {
   }
 
 
-
+.interestedflexbox {
+  display: flex;
+  flex-direction: row;
+}
   .interestedText {
     margin-left: 6%;
     margin-top: 15%;
@@ -28,7 +33,7 @@ a {
     height: 5em;
     margin-left: 1em;
     margin-top: 10em;
-    background: blue;
+    background: #187DFF;
     border: 1px solid #111111;
   }
 
@@ -41,28 +46,17 @@ a {
 
   }
 
-  .applyNowText {
-    width: 50%;
-    height: 50%;
-    font-family: 'Space Mono 400';
-    font-style: normal;
-    font-size: 1.2em;
-    text-align: center;
-    vertical-align: middle;
-    color: #FFFFFF;
-    line-height: 3.5em;
-    margin-left: 4.5em;
-  }
-
   .sentenceText{
-    margin-left: 30em;
-    margin-top: -3.5em;
-    width: 12em;
+    margin-left: 10%;
+    margin-top: 20%;
+    width: 15em;
     font-family: 'Outfit 300';
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     color: black;
+    margin-left: 10%;
+    padding-left: 10%;
   }
 
   .cooltriangle {
@@ -71,46 +65,36 @@ a {
   }
 
   .leftcarrot {
-    margin-left: 35%;
-    margin-top: -2%;
+    margin-left: 10%;
+    margin-top: 20%;
   }
   
 
+  .interestedJoinNowBox{    
+    width: 17em; 
+    height: 5em;
+    margin-left: 10%;
+    margin-top: 20%;
+    background: #187DFF;
+    border: 1px solid #111111;
+    box-shadow: 5px 10px;
+  }
+
+    .joinCommunitytext {
+      width: 134.68px;
+      height: 36.4px;
+      margin-left: 20%;    
+      font-family: 'Space Mono 400';
+      font-style: normal;
+      /* font-weight: 400; */
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+  
+      /* White */
+  
+      color: #FFFFFF;
+    }
   
 
 
-
-
-
-
-/* .interested-word {
-    color: black;
-    font-family: 'Space Mono 700';
-    font-size: 6em;   
-    margin-top:10%;
-}
-
-.box {
-    margin-top:10%;
-    font-family: 'Space Mono 700';
-    font-style: normal;
-    font-size: 1.6em;   
-    background-color: #187DFF;
-    color: white;
-    text-align: center;
-
-    
-    width: 67%;
-    height: 70%;
-}
-
-
-.phrase-text {
-    color: black;
-    font-family: 'Outfit';
-    font-size: 1.6em;   
-    font-style: normal;
-    margin-top:10%;
-    width: 60%;
-}
- */

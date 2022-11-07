@@ -16,6 +16,7 @@ import WhoWeAre from "./WhoWeAre";
 import WhoWeAreResponse from "./WhoWeAreResponse";
 import './style.css';
 import Management from "./Management"
+import Footer from "../VerticalFooter";
 
 export default class LandingPageV2 extends React.Component {
     render() {
@@ -26,16 +27,17 @@ export default class LandingPageV2 extends React.Component {
                    <WhoWeAre/>
                    <WhoWeAreResponse/>
                    <WhatWeOffer/>
-                   <FeaturedProjects />
-                   <FP1 />
-                   <FP2 />
-                   <PreviousProjects />
                    <ProductDevelopment />
                    <Ideation />
                    <Prototype/>
                    <Production/>
-                    <Management />
+                   <Management />
+                   <FeaturedProjects />
+                   <FP1 />
+                   <FP2 />
+                   <PreviousProjects />
                     <Interested/>  
+                   <Footer/>
  
                   
                    

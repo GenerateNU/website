@@ -2,6 +2,12 @@ a {
     text-decoration: none;
     color: #FFFFFF;
   }
+
+  .productDevcontainer{
+    width: 60%;
+    padding-left:5%;
+  }
+
   .background-black {
     background-color: black;
   }
