@@ -9,7 +9,7 @@ const WhatWeOffer = () => {
   //const [showHighlightHardware, setHighlightHardware] = useState(false);
 
   return (
-    <div className="position-relative vh-100 vw-100 overflow-hidden">
+    <div className="position-relative vh-100 vw-100 overflow-hidden nospacing">
       {/* Background */}
       <div className="bg-white vh-50 vw-100" />
       <div className="bg-black vh-50 vw-100" />
