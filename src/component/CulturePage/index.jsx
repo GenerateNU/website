@@ -12,6 +12,7 @@ import Inclusion from "./Inclusion";
 import Equity from "./Equity";
 import Diversity from "./Diversity";
 import VerticalFooter from "../VerticalFooter";
+import Showcase from "./Showcase";
 import "./style.css";
 
 export default class CulturePage extends React.Component {
@@ -29,6 +30,7 @@ export default class CulturePage extends React.Component {
           <Events />
           <Events2 />
           <Events3 />
+          <Showcase/>
           <CollageSection />
           <VerticalFooter/>
         </Row>

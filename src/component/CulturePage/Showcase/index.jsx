@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-const Events3 = () => {
+const Showcase = () => {
   return (
-    <div className="all-hands-div">
-                <p className="text-uppercase all-hands-title">all-hands</p>
+    <div className="showcase-div">
+                <p className="text-uppercase all-hands-title">showcase</p>
                 <p className="showcase-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
                   nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec
@@ -19,4 +19,4 @@ const Events3 = () => {
   );
 };
 
-export default Events3;
+export default Showcase;

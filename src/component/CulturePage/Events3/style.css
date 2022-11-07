@@ -1,3 +1,4 @@
+
 .showcase-title {
   font-family: "Space Mono";
   font-style: normal;
@@ -10,14 +11,19 @@
 }
 
 .showcase {
-  margin-right: 100px;
+  margin-right:5%;
 }
 
 .all-hands {
-  margin-left: 140px; 
+  margin-left: 5%; 
+}
+
+.all-hands-div {
+  width: 40%;
+  margin-left: 5%;
 }
 .showcase-text {
-  width: 70%;
+  width: 80%;
   height: 10%;
   color: black;
   font-size: 1.36vw;
@@ -44,6 +50,6 @@
 }
 
 .shiftleft2 {
-  margin-right: 20px;
+  /* margin-right: 20px; */
   margin-bottom: 10px; 
 }
