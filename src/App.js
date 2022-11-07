@@ -20,11 +20,10 @@ export default function App() {
         <div>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<AboutPage />}></Route>
+            <Route path="/" element={<LandingPageV2 />}></Route>
             <Route path="/apply" element={<ApplyPage />}></Route>
             <Route path="/positions/:id" element={<Position />}></Route>
             <Route path="/about" element={<AboutPage />}></Route>
-            <Route path="/landing" element={<LandingPageV2 />}></Route>
             <Route path="/culture" element={<CulturePage />}></Route>
           </Routes>
         </div>
