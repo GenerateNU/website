@@ -49,7 +49,7 @@ const WhatWeOffer = () => {
         {showSoftwareInfo && (
           <div className="vh-60 bg-white">
             <Row className="h-50 p-5">
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5">
                   <strong className="info-heading">Web</strong>
                   <br />
@@ -57,7 +57,7 @@ const WhatWeOffer = () => {
                   such as React and Heroku.
                 </p>
               </Col>
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5">
                   <strong className="info-heading">Mobile</strong>
                   <br />
@@ -65,7 +65,7 @@ const WhatWeOffer = () => {
                   Android.
                 </p>
               </Col>
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
                   <br />
@@ -74,7 +74,7 @@ const WhatWeOffer = () => {
                 </p>
               </Col>
             </Row>
-            <Row className="h-50 p-5 pt-0">
+            <Row className="h-50 p-6 pt-0">
               <Col xs={4} className="p-5 pt-0">
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
@@ -83,7 +83,7 @@ const WhatWeOffer = () => {
                   future success.
                 </p>
               </Col>
-              <Col xs={4} className="p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5">
                   <strong className="info-heading">Branding</strong>
                   <br />
@@ -91,7 +91,7 @@ const WhatWeOffer = () => {
                   with complete guidelines.
                 </p>
               </Col>
-              <Col xs={4} className="p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5">
                   <strong className="info-heading">UI/UX Design</strong>
                   <br />
@@ -105,7 +105,7 @@ const WhatWeOffer = () => {
         {showHardwareInfo && (
           <div className="vh-60 bg-black text-white">
             <Row className="h-50 p-5">
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Modeling</strong>
                   <br />
@@ -113,7 +113,7 @@ const WhatWeOffer = () => {
                   moodels.
                 </p>
               </Col>
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Prototypes</strong>
                   <br />
@@ -121,7 +121,7 @@ const WhatWeOffer = () => {
                   and CNC milled models.
                 </p>
               </Col>
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Analysis</strong>
                   <br />
@@ -129,7 +129,7 @@ const WhatWeOffer = () => {
                 </p>
               </Col>
             </Row>
-            <Row className="h-50 p-5 pt-0">
+            <Row className="h-50 p-6 pt-0">
               <Col xs={4} className="p-5 pt-0">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Handoff</strong>
@@ -138,7 +138,7 @@ const WhatWeOffer = () => {
                   design process.
                 </p>
               </Col>
-              <Col xs={4} className="p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Design</strong>
                   <br />
@@ -146,7 +146,7 @@ const WhatWeOffer = () => {
                   product.
                 </p>
               </Col>
-              <Col xs={4} className="p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Testing</strong>
                   <br />
