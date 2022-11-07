@@ -192,7 +192,7 @@ a {
     width: 350px;
     height: 238px;
     margin-left: 20px;
-    top: 567px;
+    /* top: 567px; */
     margin-top: -40px;
     /* B1 */
 
@@ -202,6 +202,11 @@ a {
     font-size: 18px;
     line-height: 34px;
     color: black;
+    width: 350px;
+    height: 238px;
+    margin-left: 20px;
+    /* top: 567px; */
+    padding-top: 2%;
   }
 
   .cooltriangle {
