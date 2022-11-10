@@ -1,0 +1,43 @@
+.whoWeAreContainer{
+    width: 60%;
+    margin:0%;
+    padding: 0%;
+}
+
+.whowearetext {
+padding-top: 20%;
+padding-left: 10%;
+font-family: 'Space Mono 700' ;
+font-style: normal;
+font-weight: 700;
+font-size: 72px;
+line-height: 92px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.bluerectangle {
+height: 32%;
+background:  #187DFF;;
+}
+
+.purplerectangle {
+height: 60%;
+background: #A559EC;
+}
+
+.whoweareparagraph {
+    padding: 7%;
+    padding-left: 10%;
+width: 80%;
+height: 80%;
+left: 1540px;
+top: 384px;
+text-align: left;
+font-family: 'Outfit 300';
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 34px;
+color: #FFFFFF;
+}

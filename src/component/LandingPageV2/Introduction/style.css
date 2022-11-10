@@ -1,0 +1,91 @@
+.introductionContainer{
+    margin:0%;
+    padding: 0%;
+}
+
+.shermancenter{
+    /* position: absolute; */
+    /* width: 1440px; */
+    height: 904px;
+    left: 0px;
+    top: 0px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../../../assets/images/landingpage/weare/The_Sherman_Center.jpg');
+    background-size: cover;
+}
+
+
+.wearetext{
+    position: relative;
+    width: 133px;
+    height: 53px;
+    left: 125px;
+    top: 294px;
+    
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+    
+    .generatetext {
+        /* generate */
+    position: relative;
+    width: 1225px;
+    height: 370px;
+    left: 108px;
+    top: 265px;
+    
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 250px;
+    line-height: 370px;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    }
+    
+
+    .scrolltext {
+        /* scroll */
+    position: absolute;
+    width: 74px;
+    height: 30px;
+    left: 1340px;
+    top: 792px;
+    
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+    /* Black/White */
+    color: #FFFFFF;
+    
+    }
+
+    .scrollarrow {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 1255px;
+        top: 787px;
+    
+        background-image: url('../../../assets/images/landingpage/weare/ArrowSideways.png');
+        background-size: cover;
+    }
+
+    .whitebox {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        left: 1230px;
+        top: 762px;
+    
+        background-image: url('../../../assets/images/landingpage/weare/WhiteBox.png');
+        background-size: cover;
+    }

@@ -1,0 +1,174 @@
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  .productDevcontainer{
+    width: 60%;
+    padding-left:5%;
+  }
+
+  .background-black {
+    background-color: black;
+  }
+  .ProductDevText {
+    width: 624px;
+    height: 275px;
+    left: 167px;
+    top: 187px;
+    
+    /* H1 */
+    
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 92px;
+    line-height: 92px;
+    /* or 100% */
+    
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .paragraphText {
+    width: 600px;
+    height: 238px;
+    top: 567px;
+    margin-top: 50px;
+    /* B1 */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* or 156% */
+    
+    
+    color: #FFFFFF;
+  }
+  .ourProcessText {
+    width: 135px;
+    height: 30px;
+    left: 172px;
+    top: 164px;
+    margin-top: 100px;
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+
+    /* Core/MNGMNT Yellow */
+
+    color: #FFBF3C;
+  }
+
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alignItemsRight {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .DevelopmentWheel {
+    margin-top: 100px;
+    margin-left: 100px;
+    transform: rotate(360deg)
+  }
+  .DevelopmentWheelTwo {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    transform: rotate(97deg)
+  }
+  .DevelopmentWheelThree {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    transform: rotate(230deg)
+    
+  }
+
+  .ideation {
+    margin-left: 100px;
+  }
+
+  .IdeationText {
+    width: 353px;
+    height: 92px;
+    left: 759px;
+    top: 263px;
+    margin-top: 100px;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 92px;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    /* Core/MNGMNT Yellow */
+
+    color: #FFBF3C;
+  }
+
+  .PrototypeText{
+    width: 353px;
+    height: 92px;
+    left: 759px;
+    top: 263px;
+    margin-top: 100px;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 92px;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    
+
+    color: #FF6660;
+  }
+
+  .ProductionText{
+    width: 353px;
+    height: 92px;
+    left: 759px;
+    top: 263px;
+    margin-top: 100px;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 92px;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    
+
+    color: #187DFF;
+  }
+ 
+   

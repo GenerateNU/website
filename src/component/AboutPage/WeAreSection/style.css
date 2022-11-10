@@ -27,7 +27,7 @@
 }
 
 .value-card:not(:last-child) {
-    padding-right: 15%;
+    padding-right: 8%;
 }
 
 .value-card:last-child {

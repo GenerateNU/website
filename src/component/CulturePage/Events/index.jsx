@@ -36,8 +36,6 @@ const Events = () => {
               adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-
-            
           </div>
         </div>
       </div>

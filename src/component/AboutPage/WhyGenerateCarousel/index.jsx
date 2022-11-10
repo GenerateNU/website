@@ -37,7 +37,7 @@ export default function WhyGenerateCarousel() {
                                                         <span className={currentSection !== index ? 'd-none' : 'd-inline me-4'}>
                                                             &gt;
                                                         </span>
-                                                        <span className={`text-nowrap ${currentSection !== index ? 'ms-5 ps-2' : ''}`}>
+                                                        <span className={`text-nowrap ${currentSection !== index ? 'ms-5 ps-2'  : ''}`}>
                                                             {d.section}
                                                         </span>
                                                     </h3>

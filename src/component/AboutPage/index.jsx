@@ -11,27 +11,29 @@ import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import GrowthMantra from "./GrowthMantra";
 import Footer from "../VerticalFooter";
 import './style.css';
-import ProductDevelopment from "../LandingPageV2/ProductDevelopment";
+import Stats from "./Stats";
+import ProductDevelopment from "../LandingPageV2/ProductDevLifecycle/ProductDevelopment";
 import FooterTwo from "../VerticalFooterTeams";
 
 export default class AboutPage extends React.Component {
   render() {
     return (
-      <Container fluid className="vh-100 horizontal-scroll bg-black">
-        <Row className="flex-nowrap">
+     <div class="vh-100 horizontal-scroll bg-black container-fluid" tab-index="0">
+          <Row className="flex-nowrap">
           <OurMissionSection />
           <WeAreSection />
           <Leadership />
 
           <History />
           <Timeline />
+          <Stats/>
           <WhyGenerateCarousel />
           <GrowthMantra/>
           <Footer />
           <FooterTwo />
-                   
-                </Row>
-            </Container>
+          
+          </Row>
+      </div>
 
     
     );

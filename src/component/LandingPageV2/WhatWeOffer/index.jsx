@@ -9,7 +9,7 @@ const WhatWeOffer = () => {
   //const [showHighlightHardware, setHighlightHardware] = useState(false);
 
   return (
-    <div className="position-relative vh-100 vw-100 overflow-hidden">
+    <div className="position-relative vh-100 vw-100 overflow-hidden nospacing">
       {/* Background */}
       <div className="bg-white vh-50 vw-100" />
       <div className="bg-black vh-50 vw-100" />
@@ -49,7 +49,7 @@ const WhatWeOffer = () => {
         {showSoftwareInfo && (
           <div className="vh-60 bg-white">
             <Row className="h-50 p-5">
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5">
                   <strong className="info-heading">Web</strong>
                   <br />
@@ -57,7 +57,7 @@ const WhatWeOffer = () => {
                   such as React and Heroku.
                 </p>
               </Col>
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5">
                   <strong className="info-heading">Mobile</strong>
                   <br />
@@ -65,7 +65,7 @@ const WhatWeOffer = () => {
                   Android.
                 </p>
               </Col>
-              <Col xs={4} className="p-5">
+              <Col xs={4} className="p-6">
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
                   <br />
@@ -74,7 +74,7 @@ const WhatWeOffer = () => {
                 </p>
               </Col>
             </Row>
-            <Row className="h-50 p-5 pt-0">
+            <Row className="h-50 p-6 pt-0">
               <Col xs={4} className="p-5 pt-0">
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
@@ -83,7 +83,7 @@ const WhatWeOffer = () => {
                   future success.
                 </p>
               </Col>
-              <Col xs={4} className="p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5">
                   <strong className="info-heading">Branding</strong>
                   <br />
@@ -91,7 +91,7 @@ const WhatWeOffer = () => {
                   with complete guidelines.
                 </p>
               </Col>
-              <Col xs={4} className="p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5">
                   <strong className="info-heading">UI/UX Design</strong>
                   <br />
@@ -105,49 +105,49 @@ const WhatWeOffer = () => {
         {showHardwareInfo && (
           <div className="vh-60 bg-black text-white">
             <Row className="h-50 p-5">
-              <Col xs={4} className="p-5">
-                <p className="p-5">
+              <Col xs={4} className="p-6">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Modeling</strong>
                   <br />
                   Using Fusion 360 and other tools to create detailed CAD
                   moodels.
                 </p>
               </Col>
-              <Col xs={4} className="p-5">
-                <p className="p-5">
+              <Col xs={4} className="p-6">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Prototypes</strong>
                   <br />
                   Building out prototypes with 3D-pritned models, laser cutting
                   and CNC milled models.
                 </p>
               </Col>
-              <Col xs={4} className="p-5">
-                <p className="p-5">
+              <Col xs={4} className="p-6">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Analysis</strong>
                   <br />
                   FEA simulations and calculations and validating designs.
                 </p>
               </Col>
             </Row>
-            <Row className="h-50 p-5 pt-0">
+            <Row className="h-50 p-6 pt-0">
               <Col xs={4} className="p-5 pt-0">
-                <p className="p-5">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Handoff</strong>
                   <br />
                   Comprehensive technical documentation on the engineering and
                   design process.
                 </p>
               </Col>
-              <Col xs={4} className="p-5 pt-0">
-                <p className="p-5">
+              <Col xs={4} className="p-6 pt-0">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Design</strong>
                   <br />
                   Providing detailed product drawings and renders for the
                   product.
                 </p>
               </Col>
-              <Col xs={4} className="p-5 pt-0">
-                <p className="p-5">
+              <Col xs={4} className="p-6 pt-0">
+                <p className="p-5 text-white">
                   <strong className="info-heading">Testing</strong>
                   <br />
                   Completing and documenting multiple rounds of user testing for

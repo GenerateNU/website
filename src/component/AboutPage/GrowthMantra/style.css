@@ -5,6 +5,10 @@ a {
   .background-white {
     background-color: white;
   }
+
+.growthMantraContainer{
+  width: 130%;
+}
   .Growth-text {
     width: 1103px;
     height: 444px;
@@ -63,7 +67,7 @@ a {
   .paragraphTextGrowthMantra {
     width: 300px;
     height: 238px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     top: 567px;
     margin-top: -60px;
     /* B1 */
@@ -79,6 +83,30 @@ a {
     /* Black */
 
     color: black;
+  }
+  .paragraphTextGrowthMantraTwo {
+    width: 300px;
+    height: 238px;
+    margin-left: 60px;
+    top: 567px;
+    margin-top: -60px;
+    /* B1 */
+
+    font-family: 'Outfit 300';
+    font-style: normal;
+    /* font-weight: 300; */
+    font-size: 18px;
+    line-height: 34px;
+    /* or 142% */
+
+
+    /* Black */
+
+    color: black;
+  }
+
+  .carrot{
+    margin-left: 20px;
   }
 
   .paragraphTextTwo {
@@ -100,29 +128,19 @@ a {
     color: #111111;
   }
 
-  .interestedText {
-    width: 564px;
-    height: 92px;
-    margin-left: -140px;
-    margin-top: 200px;
-
-    /* H1 */
-
+  .growthMantrainterestedText {
     font-family: 'Space Mono 700';
     font-style: normal;
-    /* font-weight: 700; */
-    font-size: 50px;
-    line-height: 92px;
-    /* identical to box height, or 100% */
-
+    font-size: 5rem;
     text-transform: uppercase;
-
     color: black;
+    margin-top: 12%;
   }
 
   .mantra{
     display: flex;
     flex-direction: column;
+    width: 60%;
   }
 
   .alignItemsRight {
@@ -133,11 +151,12 @@ a {
     color: #000000;
   }
 
-  .applyNowBox {
+  .applyNowBoxGrowthMantra {
     display: inline-block;
     width: 200px;
     height: 50px;
-    margin-left: 10px;
+    margin-left: 65px;
+    /* margin-top: -14px; */
     /* OPRATN Green */
     background: #6FCF97;
     /* Black */
@@ -146,8 +165,8 @@ a {
 
   .blackRectangle {
     display: inline-block;
-    width: 170px;
-    height: 55px;
+    width: 200px;
+    height: 50px;
     margin-left: -300px;
     background: black;
     border: 1px solid #111111;
@@ -156,7 +175,7 @@ a {
   .applyNowText {
     width: 134.68px;
     height: 36.4px;
-    margin-left: 30px;
+    margin-left: 25px;
     font-family: 'Space Mono 400';
     font-style: normal;
     /* font-weight: 400; */
@@ -170,10 +189,10 @@ a {
   }
 
   .paragraphTextThree {
-    width: 150px;
+    width: 350px;
     height: 238px;
-    margin-left: 150px;
-    top: 567px;
+    margin-left: 20px;
+    /* top: 567px; */
     margin-top: -40px;
     /* B1 */
 
@@ -183,6 +202,11 @@ a {
     font-size: 18px;
     line-height: 34px;
     color: black;
+    width: 350px;
+    height: 238px;
+    margin-left: 20px;
+    /* top: 567px; */
+    padding-top: 2%;
   }
 
   .cooltriangle {
