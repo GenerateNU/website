@@ -80,3 +80,8 @@ p {
 .navbar-border {
   border: 1px solid black;
 }
+
+.generateLogo {
+  margin-left: 130%;
+  margin-top: -32%;
+}

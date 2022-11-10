@@ -15,10 +15,7 @@ export default function BelongHere() {
           <h2 className="heading-text">Belong Here</h2>
           <div className="culture-text-box">
           <p className="culture-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
-            nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit
-            tempus risus. Tincidunt sagittis nulla orci id. Augue risus
-            adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
+            Here at Generate, we do everything we can to create a sense of belonging within each and every Generate member. We want Generate to be more than a group of peers: a group of friends and acquaintances that work together to make every member feel welcome, respected, and valued.
           </p>
 
           </div>
@@ -28,10 +25,7 @@ export default function BelongHere() {
           <h2 className="heading-text">Thrive Together</h2>
           <div className="culture-text-box">
           <p className="culture-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
-            nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit
-            tempus risus. Tincidunt sagittis nulla orci id. Augue risus
-            adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
+            With each team working to achieve their own goals, Generate also works to create a cohesive and integrated group culture; we all succeed together, and any struggles of one group can be helped by another. The Generate family learns and grows together, continuously adapting and improving. 
           </p>
           </div>
         </div>

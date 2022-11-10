@@ -16,10 +16,7 @@ export default function Inclusion() {
         <h2>2.0</h2>
         <div className="culture-text-box">
           <p className="culture-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
-            nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit
-            tempus risus. Tincidunt sagittis nulla orci id. Augue risus
-            adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
+          Generate holds equity as a core part of its mission. As a learning community, we take action to make the community and culture fair to everyone. Members are encouraged to share their vision for the community as well as empowered to make change through surveying and engagement opportunities. Our engineers are also guaranteed inventor’s credit for projects they work on.
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../../NavBar";
+import logo from "../IntroSection/GeneratePeaceLogo.png";
 import "./style.css";
 
 export default function IntroSection() {
@@ -8,6 +9,9 @@ export default function IntroSection() {
       <NavBar/>
        
       <div className="w-50 pe-5 d-flex">
+      <div className= "generateLogo">
+        <img src ={logo} />
+      </div>
         <div className="culture-quote-positioning p-3">
           <div className="our-culture-quote">
             We make wicked projects and plan wicked events.
