@@ -83,10 +83,10 @@
 }
 
 .quote-container {
-  align-self: flex-end;
-  width: 18em;
+  /* align-self: flex-end; */
+  width: 80%;
   /* padding-top: 1em; */
-  padding-right: 2em;
+  /* padding-right: 2em; */
 }
 
 /* .fp1-quotation-mark {

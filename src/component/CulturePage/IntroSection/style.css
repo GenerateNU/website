@@ -44,8 +44,8 @@ p {
 
 .culture-quote-positioning {
   left: 42%;
-  top: 20em;
-  width: 40em;
+  top: 43%;
+  width: 45em;
   position: absolute;
 }
 
@@ -77,6 +77,6 @@ p {
   margin-top: -1rem;
 }
 
-.navbar-border{
-  border: 1px solid black
+.navbar-border {
+  border: 1px solid black;
 }

@@ -65,7 +65,7 @@ export default function Management() {
         The team drives our teams to excel through collaboration and innovative thinking - 
         ensuring Generate is functioning at its peak. Our management team is responsible 
         for directing Generate’s yearly focus. </div>
-         <img class="button" alt='button' src={button} /> 
+        <a href="/apply"> <img class="button" alt='button' src={button} />  </a>
         </div>
     );
 }

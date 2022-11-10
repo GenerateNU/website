@@ -1,0 +1,48 @@
+.whoWeAreResponseContainer{
+    width: 70%;
+    margin:0%;
+    padding: 0%;
+}
+
+.greenrectangle{
+    /* width: 70%; */
+    height: 50%;
+    background:  #6FCF97;;
+}
+
+.yellowrectangle{
+    /* width: 70%; */
+    height: 45%;
+    background: #FFBF3C;;
+}
+
+.somesaytext {
+box-sizing: border-box;
+font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 72px;
+line-height: 92px;
+text-align: left;
+/* identical to box height, or 128% */
+
+text-transform: uppercase;
+color: #6FCF97;
+text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF;
+}
+
+
+.weareresponse {
+    padding:10%;
+font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 62px;
+line-height: 92px;
+text-transform: uppercase;
+color: white;
+}
+
+.generateLogoWhiteStyle {
+    padding: 2%;
+}

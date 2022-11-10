@@ -41,7 +41,7 @@ export default function FP2() {
       </div>
       <div className="column-3">
         <div className="top-corner">
-          <img src={TopCorner} alt="" />
+          <img src={TopCorner} alt="Smarty_Pill"  width="45%"/>
         </div>
         <div className="quote-container">
           <blockquote>

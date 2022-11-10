@@ -18,8 +18,8 @@ import FooterTwo from "../VerticalFooterTeams";
 export default class AboutPage extends React.Component {
   render() {
     return (
-      <Container fluid className="vh-100 horizontal-scroll bg-black">
-        <Row className="flex-nowrap">
+     <div class="vh-100 horizontal-scroll bg-black container-fluid" tab-index="0">
+          <Row className="flex-nowrap">
           <OurMissionSection />
           <WeAreSection />
           <Leadership />
@@ -32,8 +32,8 @@ export default class AboutPage extends React.Component {
           <Footer />
           <FooterTwo />
           
-        </Row>
-            </Container>
+          </Row>
+      </div>
 
     
     );

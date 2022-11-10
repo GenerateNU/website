@@ -11,30 +11,38 @@ import ProductDevelopment from "./ProductDevLifecycle/ProductDevelopment";
 import Ideation from "./ProductDevLifecycle/Ideation";
 import Prototype from "./ProductDevLifecycle/Prototype";
 import Production from "./ProductDevLifecycle/Production";
+import Intro from "./Introduction";
+import WhoWeAre from "./WhoWeAre";
+import WhoWeAreResponse from "./WhoWeAreResponse";
 import './style.css';
 import Management from "./Management"
+import Footer from "../VerticalFooter";
 
 export default class LandingPageV2 extends React.Component {
     render() {
         return (
-            <Container fluid className='vh-100 horizontal-scroll'>
-                <Row className='flex-nowrap'>
+            <div class="vh-100 horizontal-scroll bg-white container-fluid" tab-index="0">
+               <Row className='flex-nowrap'>
+                   <Intro/>
+                   <WhoWeAre/>
+                   <WhoWeAreResponse/>
                    <WhatWeOffer/>
-                   <FeaturedProjects />
-                   <FP1 />
-                   <FP2 />
-                   <PreviousProjects />
                    <ProductDevelopment />
                    <Ideation />
                    <Prototype/>
                    <Production/>
-                   {/* <Interested/>   */}
-                    
-                    <Management />
+                   <Management />
+                   <FeaturedProjects />
+                   <FP1 />
+                   <FP2 />
+                   <PreviousProjects />
+                    <Interested/>  
+                   <Footer/>
+ 
                   
                    
                 </Row>
-            </Container>
+            </div>
         );
     }
 }
