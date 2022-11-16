@@ -7,7 +7,7 @@ export default function Introduction() {
   return (
     <div className="introductionContainer">
       <div className="shermancenter">
-        <NavBar />
+        <div className="intro-navbar"><NavBar /> </div>
 
         <p className="wearetext">WE ARE</p>
         <p className="generatetext">GENERATE</p>
