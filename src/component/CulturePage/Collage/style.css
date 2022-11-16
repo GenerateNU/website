@@ -13,7 +13,7 @@ body {
   flex:1; /* takes care of the width / height */
 }
 
-img {
+.culture-general-img {
   position:relative;
   width:100%;
   height:100%;
