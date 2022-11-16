@@ -1,9 +1,9 @@
-import Course from "../assets/images/aboutpage/TheCourse.png";
-import Community from "../assets/images/aboutpage/Community.png";
-import Makerspace from "../assets/images/aboutpage/Makerspace.png";
-import Networks from "../assets/images/aboutpage/Networks.png";
-import Workshops from "../assets/images/aboutpage/Workshops.png";
-import Mission from "../assets/images/aboutpage/generate_mission.png";
+import Course from "../assets/images/aboutpage/thecourse.jpg";
+import Community from "../assets/images/aboutpage/Community.jpg";
+import Makerspace from "../assets/images/aboutpage/makerspace.jpg";
+import Networking from "../assets/images/aboutpage/networking.JPG";
+import Workshops from "../assets/images/aboutpage/workshop2.jpg";
+import Events from "../assets/images/aboutpage/events.JPG";
 
 const whyGenerateData = [
   {
@@ -27,13 +27,13 @@ const whyGenerateData = [
   {
     section: "Events",
     color: "#56CCF2",
-    image: Mission,
+    image: Events,
     text: "Meet other excited individuals and enjoy bonding activities where you get to know each other beyond projects and teams.",
   },
   {
     section: "Networks",
     color: "#6FCF97",
-    image: Networks,
+    image: Networking,
     text: "Access our network of great connections like Tesla and SpaceX. A unique opportunity to apply the skills you’ve learned with us.",
   },
   {
