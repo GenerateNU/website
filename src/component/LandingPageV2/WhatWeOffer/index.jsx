@@ -53,8 +53,8 @@ const WhatWeOffer = () => {
                 <p className="p-5">
                   <strong className="info-heading">Web</strong>
                   <br />
-                  Building website-based platforms using HTML, CSS and tools
-                  such as React and Heroku.
+                  Website based platforms using HTML, CSS and tools 
+                  such as React and Heroku
                 </p>
               </Col>
               <Col xs={4} className="p-6">
@@ -69,8 +69,7 @@ const WhatWeOffer = () => {
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
                   <br />
-                  Implement systems that combine datastore persistence to power
-                  platform specific tasks.
+                  Systems that combine datastore persistence to power platform-specific tasks
                 </p>
               </Col>
             </Row>
@@ -79,7 +78,7 @@ const WhatWeOffer = () => {
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
                   <br />
-                  Comprehensive technical documentaion for seamless handoff and
+                  Comprehensive technical documentation for seamless handoff and
                   future success.
                 </p>
               </Col>
@@ -95,7 +94,7 @@ const WhatWeOffer = () => {
                 <p className="p-5">
                   <strong className="info-heading">UI/UX Design</strong>
                   <br />
-                  Hi-fideilty Figma prototypes for apps, websites and other
+                  High-fidelity Figma prototypes for apps, websites and other
                   mediums.
                 </p>
               </Col>
@@ -109,23 +108,22 @@ const WhatWeOffer = () => {
                 <p className="p-5 text-white">
                   <strong className="info-heading">Modeling</strong>
                   <br />
-                  Using Fusion 360 and other tools to create detailed CAD
-                  moodels.
+                  Detailed CAD models using industry leading tools
                 </p>
               </Col>
               <Col xs={4} className="p-6">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Prototypes</strong>
                   <br />
-                  Building out prototypes with 3D-pritned models, laser cutting
-                  and CNC milled models.
+                  Functional prototypes consisting of custom parts 
+                  integrated with off-the-shelf components
                 </p>
               </Col>
               <Col xs={4} className="p-6">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Analysis</strong>
                   <br />
-                  FEA simulations and calculations and validating designs.
+                  FEA simulations and calculations to validate designs.
                 </p>
               </Col>
             </Row>
@@ -134,24 +132,22 @@ const WhatWeOffer = () => {
                 <p className="p-5 text-white">
                   <strong className="info-heading">Handoff</strong>
                   <br />
-                  Comprehensive technical documentation on the engineering and
-                  design process.
+                  Comprehensive technical documentation 
+                  on the process and final product.
                 </p>
               </Col>
               <Col xs={4} className="p-6 pt-0">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Design</strong>
                   <br />
-                  Providing detailed product drawings and renders for the
-                  product.
+                  Detailed product drawings and renderings.
                 </p>
               </Col>
               <Col xs={4} className="p-6 pt-0">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Testing</strong>
                   <br />
-                  Completing and documenting multiple rounds of user testing for
-                  feedback.
+                  Multiple rounds of functional testing and user testing for design feedback.
                 </p>
               </Col>
             </Row>
