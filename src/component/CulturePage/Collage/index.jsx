@@ -14,7 +14,7 @@ import elevenimg from '../Collage/website-26.JPG'
 
 export default function collage() {
   return (
-    <div>
+    <div className='nospacing'>
 <div class="flex-parent">
   <div class="flex-child">
   <img class="img1" src={firstimg}>

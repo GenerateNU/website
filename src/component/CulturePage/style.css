@@ -8,3 +8,8 @@
     font-size: 150%;
     line-height: 34px;
   }
+
+.nospacing {
+    margin:0%;
+    padding: 0%;
+}
