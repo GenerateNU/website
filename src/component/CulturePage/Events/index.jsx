@@ -12,10 +12,10 @@ const Events = () => {
         <div className="events-top">celebrate &amp; represent</div>
       </div>
 
-      <h1 className="events-header text-no-fill text-uppercase position-absolute start-0 bottom-1 ps-4 pb-4">
+      <div className="events-header text-no-fill text-uppercase position-absolute start-0 bottom-1 ps-4 pb-4">
       {/* <div className="eventsTitle"> */}
         events
-      </h1>
+      </div>
 
       <div className="events-picture-container d-flex flex-wrap justify-content-between">
           {/* <div className="for-padding"> */}
