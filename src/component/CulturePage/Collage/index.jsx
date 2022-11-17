@@ -1,37 +1,56 @@
 import React from 'react'
 import './style.css';
+import firstimg from '../Collage/website-8.jpg'
+import secondimg from '../Collage/website-9.jpg'
+import thirdimg from '../Collage/website-12.jpg'
+import fourimg from '../Collage/website-14.jpg'
+import fiveimg from '../Collage/website-15.jpg'
+import siximg from '../Collage/website-16.jpg'
+import sevenimg from '../Collage/website-21.jpg'
+import eightimg from '../Collage/website-23.jpg'
+import nineimg from '../Collage/website-24.jpg'
+import tenimg from '../Collage/website-25.jpg'
+import elevenimg from '../Collage/website-26.JPG'
 
 export default function collage() {
   return (
     <div>
 <div class="flex-parent">
   <div class="flex-child">
-  <img class="img1" src="https://images.unsplash.com/photo-1530104091755-015d31dfa0b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1418&q=80">
+  <img class="img1" src={firstimg}>
 </img>
   </div>
   <div class="flex-child">
-  <img src="https://images.unsplash.com/photo-1523825939563-3d119108584d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1828&q=80">
+  <img src={secondimg}>
 </img>
   </div>
   <div class="flex-child">
-  <img src="https://images.unsplash.com/photo-1577085894322-2c9e824c270e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80">
+  <img src={thirdimg}>
+</img>
+  </div>
+  <div class="flex-child">
+  <img src={tenimg}>
+</img>
+  </div>
+  <div class="flex-child">
+  <img src={elevenimg}>
 </img>
   </div>
 </div>
 <div class="flex-parent">
-  <div class="flex-child"> <img class="img2" src="https://images.unsplash.com/photo-1465488867967-ffb57e7f0a89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+  <div class="flex-child"> <img class="img2" src={fourimg}>
 </img></div>
-  <div class="flex-child"><img src="https://images.unsplash.com/photo-1530453029958-05ad3266af54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1710&q=80">
+  <div class="flex-child"><img src={fiveimg}>
 </img></div>
-  <div class="flex-child"><img src="https://images.unsplash.com/photo-1503587209101-a62878726384?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+  <div class="flex-child"><img src={siximg}>
 </img></div>
 </div>
 <div class="flex-parent">
-  <div class="flex-child"> <img class="img3" src="https://images.unsplash.com/photo-1503891455988-54b97c8dfc4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+  <div class="flex-child"> <img class="img3" src={sevenimg}>
 </img></div>
-  <div class="flex-child"><img src="https://images.unsplash.com/photo-1567866885012-3c7171d2c5ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80">
+  <div class="flex-child"><img src={eightimg}>
 </img></div>
-  <div class="flex-child"> <img src="https://images.unsplash.com/photo-1529156362931-fa144f6d01eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1622&q=80">
+  <div class="flex-child"><img src={nineimg}>
 </img></div>
 </div>
 
