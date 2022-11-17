@@ -15,42 +15,38 @@ import elevenimg from '../Collage/website-26.JPG'
 export default function collage() {
   return (
     <div className='nospacing'>
-<div class="flex-parent">
-  <div class="flex-child">
-  <img class="img1" src={firstimg}>
+<div className="flex-parent">
+  <div className="flex-child">
+  <img className="img1" style={{width: "100%", height: "100%"}}src={firstimg} alt = "">
 </img>
   </div>
   <div class="flex-child">
-  <img src={secondimg}>
+  <img style={{width: "100%", height: "100%"}} src={secondimg}>
 </img>
   </div>
   <div class="flex-child">
-  <img src={thirdimg}>
+  <img style={{width: "100%", height: "100%"}} src={thirdimg}>
 </img>
   </div>
   <div class="flex-child">
-  <img src={tenimg}>
-</img>
-  </div>
-  <div class="flex-child">
-  <img src={elevenimg}>
+  <img style={{width: "100%", height: "100%"}} src={tenimg}>
 </img>
   </div>
 </div>
 <div class="flex-parent">
-  <div class="flex-child"> <img class="img2" src={fourimg}>
+  <div class="flex-child"> </div>
+  <div class="flex-child"><img className="img2" style={{width: "100%", height: "100%"}} src={fourimg}>
 </img></div>
-  <div class="flex-child"><img src={fiveimg}>
+  <div class="flex-child"><img style={{width: "100%", height: "100%"}} src={fiveimg}>
 </img></div>
-  <div class="flex-child"><img src={siximg}>
+<div class="flex-child"><img style={{width: "100%", height: "100%"}} src={siximg}>
 </img></div>
 </div>
 <div class="flex-parent">
-  <div class="flex-child"> <img class="img3" src={sevenimg}>
+  <div class="flex-child"> </div>
+  <div class="flex-child"><img className="img3" style={{width: "100%", height: "100%"}} src={eightimg}>
 </img></div>
-  <div class="flex-child"><img src={eightimg}>
-</img></div>
-  <div class="flex-child"><img src={nineimg}>
+  <div class="flex-child"><img style={{width: "100%", height: "100%"}} src={nineimg}>
 </img></div>
 </div>
 
