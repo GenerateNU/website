@@ -15,7 +15,7 @@ export default function Diversity() {
       <div className="text-div-diversity">
         <h2>1.0</h2>
         <div className="culture-text-box">
-          <p className="culture-text">
+          <p className="cultureTwo-text">
            Generate strives to create, maintain, and promote a diverse community to increase innovation, develop deeper relationships within our community, and to better serve the Northeastern community. 
           </p>
         </div>

@@ -14,7 +14,9 @@ export default function IntroSection() {
       </div>
         <div className="culture-quote-positioning p-3">
           <div className="our-culture-quote">
+            <div className="culture">
             We make wicked projects and plan wicked events.
+            </div>
           </div>
         </div>
       </div>

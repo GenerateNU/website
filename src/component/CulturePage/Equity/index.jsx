@@ -15,11 +15,8 @@ export default function Equity() {
       <div className="text-div-equity">
         <h2>3.0</h2>
         <div className="culture-text-box">
-          <p className="culture-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
-            nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit
-            tempus risus. Tincidunt sagittis nulla orci id. Augue risus
-            adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
+          <p className="cultureTwo-text">
+          Inclusion is a key part of what Generate stands for. We recognize that its a continuous process to improve our organization and are committed to making a positive impact. Through work with OPEN, OUEC, and other Northeastern offices, we strive to provide a physically, emotionally, and intellectually inclusive community. Our practices consistently change as we stove to improve the experience for each of our members and anyone who interacts with our community.  
           </p>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
-import RectImg1 from "./Rectangle264.png";
-import RectImg2 from "./Rectangle265.png";
-import RectImg3 from "./Rectangle266.png";
+import RectImg1 from "./website-5.jpg";
+import RectImg2 from "./website-6.jpg";
+import RectImg3 from "./website-7.jpg";
 import { DialogContent } from "@material-ui/core";
 
 const Events = () => {
@@ -17,15 +17,17 @@ const Events = () => {
       </h1>
 
       <div className="events-picture-container d-flex flex-wrap justify-content-between">
-        <div class="row gx-5">
+          {/* <div className="for-padding"> */}
+            <div class="row gx-5">
+              <div class="col">
+                <img className="img-formatting" style={{ width: 250, height: 350 }} src={RectImg1} alt="" />
+              </div>
+        {/* </div> */}
           <div class="col">
-            <img src={RectImg1} alt="" />
+            <img className="img-formatting" style={{ width: 250, height: 350 }} src={RectImg2} alt="" />
           </div>
           <div class="col">
-            <img src={RectImg2} alt="" />
-          </div>
-          <div class="col">
-            <img src={RectImg3} alt="" />
+            <img className="img-formatting" style={{ width: 250, height: 350 }} src={RectImg3} alt="" />
           </div>
           <div class="col">
             <p className="text-uppercase retreat-title">retreat</p>
