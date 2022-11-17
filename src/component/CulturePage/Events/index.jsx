@@ -13,6 +13,7 @@ const Events = () => {
       </div>
 
       <h1 className="events-header text-no-fill text-uppercase position-absolute start-0 bottom-1 ps-4 pb-4">
+      {/* <div className="eventsTitle"> */}
         events
       </h1>
 

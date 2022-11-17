@@ -5,11 +5,11 @@ export default function Inclusion() {
   return (
     <div className="container">
       <div className="vertical-div">
-        <span className="outline-inclusion">uity</span>
+        <span className="outline-inclusion">UITY</span>
         <span style={{ color: "#A559EC" }} className="vertical">
-          Equity
+          EQUITY
         </span>
-        <span className="outline-inclusion">Equ</span>
+        <span className="outline-inclusion">EQU</span>
       </div>
 
       <div className="text-div-inclusion">

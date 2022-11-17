@@ -12,7 +12,7 @@ export default function BelongHere() {
       <div className="paragraphs">
         
         <div className="belong-here">
-          <h2 className="heading-text">Belong Here</h2>
+          <h2 className="headingTwo-text">Belong Here</h2>
           <div className="culture-text-box">
           <p className="culture-text">
             Here at Generate, we do everything we can to create a sense of belonging within each and every Generate member. We want Generate to be more than a group of peers: a group of friends and acquaintances that work together to make every member feel welcome, respected, and valued.

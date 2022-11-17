@@ -4,6 +4,16 @@
   font-size: 3em;
   font-weight: 700;
   color: black;
+  margin-right: 5px;
+}
+
+.headingTwo-text {
+  font-family: 'Space Mono';
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 700;
+  color: black;
+  margin-right: 120px;
 }
 
 .belong-here {
