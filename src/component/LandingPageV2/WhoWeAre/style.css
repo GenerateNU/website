@@ -5,8 +5,8 @@
 }
 
 .whowearetext {
-padding-top: 20%;
-padding-left: 10%;
+padding-top: 25%;
+padding-left: 15%;
 font-family: 'Space Mono 700' ;
 font-style: normal;
 font-weight: 700;
@@ -28,7 +28,7 @@ background: #A559EC;
 
 .whoweareparagraph {
     padding: 7%;
-    padding-left: 10%;
+    padding-left: 15%;
 width: 80%;
 height: 80%;
 left: 1540px;
