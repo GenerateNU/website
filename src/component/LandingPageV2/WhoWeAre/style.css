@@ -29,15 +29,16 @@ background: #A559EC;
 .whoweareparagraph {
     padding: 7%;
     padding-left: 10%;
-width: 80%;
-height: 80%;
-left: 1540px;
-top: 384px;
-text-align: left;
-font-family: 'Outfit 300';
-font-style: normal;
-font-weight: 300;
-font-size: 24px;
-line-height: 34px;
-color: #FFFFFF;
+    width: 80%;
+    height: 80%;
+    left: 1540px;
+    top: 384px;
+    text-align: left;
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: -7%;
+    color: #FFFFFF;
 }
