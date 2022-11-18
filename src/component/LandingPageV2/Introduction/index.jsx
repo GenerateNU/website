@@ -7,7 +7,9 @@ export default function Introduction() {
   return (
     <div className="introductionContainer">
       <div className="shermancenter">
-        <div className="intro-navbar"><NavBar /> </div>
+        <div className="intro-navbar">
+          <NavBar />{" "}
+        </div>
 
         <p className="wearetext">WE ARE</p>
         <p className="generatetext">GENERATE</p>
@@ -15,10 +17,13 @@ export default function Introduction() {
                  <div className="scrollarrow" ></div>
                  <p className="scrolltext">scroll</p>  
                  </div> */}
-        <div className="scroll">
-          <img className="scrollimg" src={ScrollButton} alt="sroll left" />
-          <p className="scrolltext">scroll</p>
+        <div className="scroll-container">
+          <div className="scroll">
+            <img className="scrollimg" src={ScrollButton} alt="sroll left" />
+          </div>
+          <p className="s-text">scroll</p>
         </div>
+
         <div></div>
       </div>
     </div>

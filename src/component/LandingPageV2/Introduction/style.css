@@ -40,7 +40,7 @@
   width: 1225px;
   height: 370px;
   left: 108px;
-  top: 100px;
+  top: 60px;
 
   font-family: "Space Mono";
   font-style: normal;
@@ -94,22 +94,30 @@
 
 .scrollimg {
   width: 6em;
-  object-fit: contain;
-  margin-top: 5em;
+  position: absolute;
+  right: 3em;
 }
 
 .scroll {
-  display: flex;
-  flex-direction: row;
-  float: right;
-  padding-right: 2em;
+  /* overflow: hidden; */
+  height: 100%;
+  margin-top: 3em;
+  width: 100%;
+  position: relative;
 }
 
-.scrolltext {
+.s-text {
   font-size: 20px;
   font-family: "Space Mono";
   font-weight: 400;
   color: #ffffff;
+  margin-top: 3.5em;
+  margin-right: 2em;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .intro-navbar {
