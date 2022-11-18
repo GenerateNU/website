@@ -33,13 +33,13 @@ function VerticalFooter() {
         {" "}
         <a href="/culture">Culture</a>
       </Row>
-      <Row className="footer-text-disabled">
+      <Row className="footer-text">
         {" "}
-        <a href="/">Teams</a>
+        <a className="footer-no">Teams</a>
       </Row>
-      <Row className="footer-text-disabled">
+      <Row className="footer-text">
         {" "}
-        <a href="/">People</a>
+        <a className="footer-no">People</a>
       </Row>
       <Row className="footer-text">
         {" "}

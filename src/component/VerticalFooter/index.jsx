@@ -28,9 +28,11 @@ export default function VerticalFooter() {
         {" "}
         <a href="/culture">Culture</a>
       </Row>
-      <Row className="footer-text-disabled">
+      <Row className="footer-text">
         {" "}
-        <a href="/">Teams</a>
+        <a className="fcftdisabled" href="/">
+          Teams
+        </a>
       </Row>
       <Row className="footer-text-disabled">
         {" "}
