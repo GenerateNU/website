@@ -48,7 +48,7 @@ const WhatWeOffer = () => {
         )}
         {showSoftwareInfo && (
           <div className="vh-60 bg-white">
-            <Row className="h-50 p-5">
+            <Row className="h-50 p-6">
               <Col xs={4} className="p-6">
                 <p className="p-5">
                   <strong className="info-heading">Web</strong>
@@ -75,7 +75,7 @@ const WhatWeOffer = () => {
               </Col>
             </Row>
             <Row className="h-50 p-6 pt-0">
-              <Col xs={4} className="p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
                   <br />
@@ -129,8 +129,8 @@ const WhatWeOffer = () => {
                 </p>
               </Col>
             </Row>
-            <Row className="h-50 p-6 pt-0">
-              <Col xs={4} className="p-5 pt-0">
+            <Row className="h-50 p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5 text-white">
                   <strong className="info-heading">Handoff</strong>
                   <br />

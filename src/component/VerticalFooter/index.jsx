@@ -30,9 +30,7 @@ export default function VerticalFooter() {
       </Row>
       <Row className="footer-text">
         {" "}
-        <a className="fcftdisabled" href="/">
-          Teams
-        </a>
+        <a href="/">Teams</a>
       </Row>
       <Row className="footer-text-disabled">
         {" "}
