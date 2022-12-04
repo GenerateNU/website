@@ -9,13 +9,14 @@ export default function WhoWeAre() {
             <div className="whowearetext"> Who we are</div>
         </div>
         <div className="purplerectangle">
-            <p className="whoweareparagraph">Generate is a student-led product development studio, providing 
-                  professional product design experience, leadership training and more to Northeastern students. 
+            <p className="whoweareparagraph">Generate is a student-led product development studio, working with 
+            industry clients and Northeastern founders from all backgrounds to turn their vision into reality. 
                   <br></br>
                   <br></br>
-                  Generate offers a unique and supportive learning experience for all through professional product 
-                 design opportunities. With dedicated teams from engineering and design to community and 
-                 operations, we support ventures from all backgrounds to turn visions into reality.
+                  Generate offers a unique and supportive learning opportunity for all members through professional 
+                  product development experience, leadership, and training in their respective disciplines. 
+                  We provide our clients with the engineering, design, and prototyping they need to take their venture 
+                  to the next stage. 
                  </p>
            
                 
