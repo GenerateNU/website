@@ -1,5 +1,6 @@
 body {
-    height: 100px !important
+    height: 100px !important;
+    overflow-y: hidden;
 }
 .nospacing {
     margin:0%;
