@@ -1,3 +1,6 @@
+body {
+    overflow-y: hidden;
+}
 .nospacing {
     margin:0%;
     padding: 0%;
