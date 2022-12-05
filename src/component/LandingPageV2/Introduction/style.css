@@ -6,7 +6,7 @@
 .shermancenter{
     /* position: absolute; */
     /* width: 1440px; */
-    height: 904px;
+    height: 100vh;
     left: 0px;
     top: 0px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../../../assets/images/landingpage/weare/landing.jpg');
@@ -15,16 +15,16 @@
 
 .wearetext {
   position: relative;
-  width: 133px;
-  height: 53px;
-  left: 125px;
-  top: 100px;
+  width: 16.2vh;
+  height: 6.46vh;
+  left: 15.24vh;
+  top: 12.19vh;
 
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 53px;
+  font-size: 4.39vh;
+  line-height: 6.46vh;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -32,16 +32,16 @@
 .generatetext {
   /* generate */
   position: relative;
-  width: 1225px;
-  height: 370px;
-  left: 108px;
-  top: 100px;
+  width: 149.39vh;
+  height: 45.12vh;
+  left: 13.17vh;
+  top: 12.19vh;
 
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 250px;
-  line-height: 370px;
+  font-size: 30.48vh;
+  line-height: 45.12vh;
   text-transform: uppercase;
 
   color: #ffffff;
@@ -67,10 +67,10 @@
 
 .scrollarrow {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  left: 1255px;
-  top: 787px;
+  width: 5.11vh;
+  height: 5.11vh;
+  left: 160.28vh;
+  top: 100.51vh;
 
   background-image: url("../../../assets/images/landingpage/weare/ArrowSideways.png");
   background-size: cover;
@@ -88,9 +88,9 @@
 }
 
 .scrollimg {
-  width: 6em;
+  width: 10.04vh;
   object-fit: contain;
-  margin-top: 5em;
+  margin-bottom: -35vh;
 }
 
 .scroll {

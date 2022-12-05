@@ -15,7 +15,7 @@ const NavBar = () => {
     return (
         <div className="bg-light p-3 mb-5 d-flex fit-content border border-dark h-10 w-10">
             {/* Todo : change the logo */}
-            <a href="/"><img src={GenerateLogo} height="50vh" width="50vw"/></a>
+            <a href="/"><img style={{width: '5vh', height: '5vh'}} src={GenerateLogo} /></a>
             <span className='p-3'><a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover' href="/apply">Apply</a></span>
             <span className='p-3' onClick={() => setShowMenu(true)}>
                 <a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover'>
