@@ -7,7 +7,7 @@ const Ideation = () => {
           <div className="background-black">
             <div className = "alignItemsRight">
             <div className = "DevelopmentWheelTwo">
-              <img src ={DevelopmentWheel} />
+              <img style={{width: '64vh'}}src ={DevelopmentWheel} />
             </div>
             <div className="ideation">
               <div className = "column">
