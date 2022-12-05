@@ -19,7 +19,7 @@ const Interested = () => {
           </a>
         </div>
         <div className="leftcarrot">
-          <img src={leftcarrot} />
+          <img style={{width: "8vh"}} src={leftcarrot} />
         </div>
       <div className="sentenceText">
         Join a community that shares the same goal - turning ideas into reality

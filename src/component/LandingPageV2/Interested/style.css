@@ -22,46 +22,46 @@ a {
     margin-top: 15%;
     font-family: 'Space Mono 700';
     font-style: normal;
-    font-size: 5rem;
+    font-size: 10vh;
     text-transform: uppercase;
     color: black;
   }
 
   .applyNowBox {
     display: inline-block;
-    width: 17em;
-    height: 5em;
-    margin-left: 1em;
-    margin-top: 10em;
+    width: 34vh;
+    height: 10vh;
+    margin-left: 2vh;
+    margin-top: 20vh;
     background: #187DFF;
     border: 1px solid #111111;
   }
 
   .blackRectangle {
     display: inline-block;
-    width: 15em;
-    height: 5em;
+    width: 30vh;
+    height: 10vh;
     background: black;
-    margin-left: 5em;
+    margin-left: 10vh;
 
   }
 
   .sentenceText{
     margin-left: 10%;
     margin-top: 20%;
-    width: 15em;
+    width: 30vh;
     font-family: 'Outfit 300';
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 2.5vh;
     color: black;
     margin-left: 10%;
     padding-left: 10%;
   }
 
   .cooltriangle {
-    margin-left: -40px;
-    margin-top: 120px;
+    margin-left: -5vh;
+    margin-top: 15vh;
   }
 
   .leftcarrot {
@@ -71,8 +71,8 @@ a {
   
 
   .interestedJoinNowBox{    
-    width: 17em; 
-    height: 5em;
+    width: 34vh; 
+    height: 10vh;
     margin-left: 10%;
     margin-top: 20%;
     background: #187DFF;
@@ -81,14 +81,14 @@ a {
   }
 
     .joinCommunitytext {
-      width: 134.68px;
-      height: 36.4px;
+      width: 16.8vh;
+      height: 4.5vh;
       margin-left: 20%;    
       font-family: 'Space Mono 400';
       font-style: normal;
       /* font-weight: 400; */
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 4vh;
+      line-height: 6vh;
       text-align: center;
   
       /* White */

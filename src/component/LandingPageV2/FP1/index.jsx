@@ -8,21 +8,21 @@ export default function FP1() {
   return (
     <div className="parent">
       <div className="column-1">
-        <div className="heading-container">
-          <h1>Earnz</h1>
-          <p style={{ fontFamily: "Space Mono", fontSize: "1.5em" }}>
+        <div>
+          <h1 style={{fontSize: "9vh"}}>Earnz</h1>
+          <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
             software
           </p>
         </div>
         <div className="client">
-          <p className="client-text">Client</p>
+          <p style={{fontSize: "3vh"}} className="client-text">Client</p>
           <div className="name-order">
-            <p className="name-text">Max Thalheimer</p>
-            <p className="school">Northeastern Alumnus ‘20</p>
-          </div>
+            <p style={{fontSize: "3vh"}} className="name-text">Max Thalheimer</p>
+            <p style={{fontSize: "2vh"}} className="school">Northeastern Alumnus ‘20</p>
+          </div> 
         </div>
-        <div className="client-blurb">
-          <p>
+        <div>
+          <p style={{width: "40vh"}} className="client-blurb">
             A unique, two-sided promotional and loyalty platform built to level
             the playing field for independent bars and restaurants by allowing
             them to utilize an app to acquire and retain customers as easily and
@@ -31,7 +31,7 @@ export default function FP1() {
           <a href="url">learn more</a>
         </div>
         <div className="bottom-corner">
-          <img src={BottomCorner} alt="" />
+          <img style={{height: "25vh"}}src={BottomCorner} alt="" />
         </div>
       </div>
       <div className="column-2">
@@ -41,7 +41,7 @@ export default function FP1() {
       </div>
       <div className="column-3">
         <div className="top-corner">
-          <img src={TopCorner} alt="" />
+          <img style={{height: "25vh"}} src={TopCorner} alt="" />
         </div>
         <div className="quote-container">
           <blockquote>

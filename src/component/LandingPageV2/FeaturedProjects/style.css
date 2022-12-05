@@ -3,32 +3,32 @@ h2 {
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 4.5em;
+  font-size: 8.78vh;
   color: white;
   text-align: center;
 }
 
 .projects-container {
-  padding: 1em;
+  padding: 2vh;
 }
 
 .blurb-container {
-  width: 26.8em;
+  width: 54vh;;
   text-align: left;
-  padding: 1em;
+  padding: 2vh;
 }
 
 p {
   font-style: normal;
   font-weight: 300;
-  font-size: 1em;
-  line-height: 1.875em;
+  font-size: 2vh;
+  line-height: 3.75vh;
   color: black;
 }
 
 .featured_projects_container {
   background-color: #6fcf97;
-  width: 40em;
+  width: 70vh;
   height: 100vh;
   display: inline-flex;
   flex-direction: column;

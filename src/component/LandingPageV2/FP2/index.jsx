@@ -9,20 +9,20 @@ export default function FP2() {
     <div className="parent">
       <div className="column-1">
         <div className="heading-container">
-          <h1>SmartyPill</h1>
-          <p style={{ fontFamily: "Space Mono", fontSize: "1.5em" }}>
+          <h1 style={{fontSize: "9vh"}}>SmartyPill</h1>
+          <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
             software + hardware
           </p>
         </div>
         <div className="client">
           <p className="client-text">Client</p>
           <div className="name-order">
-            <p className="name-text">Matthew Swenson</p>
-            <p className="school">Northeastern Alumnus ‘20</p>
+            <p style={{fontSize: "3vh"}} className="name-text">Matthew Swenson</p>
+            <p style={{fontSize: "2vh"}} className="school">Northeastern Alumnus ‘20</p>
           </div>
         </div>
         <div className="client-blurb">
-          <p>
+          <p style={{width: "40vh"}}>
             SmartyPill is an automatic pill and water dispenser that ensures
             you’re taking the right pills at the right time. With customizable
             alerts and a connected app, SmartyPill is the perfect in-home
@@ -31,7 +31,7 @@ export default function FP2() {
           <a href="url">learn more</a>
         </div>
         <div className="bottom-corner">
-          <img src={BottomCorner} alt="" />
+          <img style={{height: "25vh"}} src={BottomCorner} alt="" />
         </div>
       </div>
       <div className="column-2">
@@ -41,7 +41,7 @@ export default function FP2() {
       </div>
       <div className="column-3">
         <div className="top-corner">
-          <img src={TopCorner} alt="Smarty_Pill"  width="45%"/>
+          <img style={{height: "25vh"}} src={TopCorner} alt="Smarty_Pill"  width="45%"/>
         </div>
         <div className="quote-container">
           <blockquote>
