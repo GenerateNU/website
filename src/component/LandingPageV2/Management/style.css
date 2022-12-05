@@ -11,7 +11,7 @@
   .center {
     position: absolute;
     top: 18.54vh;
-    left: 18.54vh;
+    left: 20vh;
     z-index: 1000;
     border: 12.36vh solid white;
     border-radius: 50%;
