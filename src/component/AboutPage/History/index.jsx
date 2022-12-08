@@ -59,7 +59,7 @@ export default function History() {
                         >
                             <Row className='m-0 p-0 mt-5 w-auto h-auto align-items-center justify-content-end'>
                                 <Col xs={3} className='w-auto d-flex align-items-center justify-content-end p-0'>
-                                    <h5><a href="https://entrepreneurship.northeastern.edu/mosaic/"><u>Mosiac</u></a></h5>
+                                    <h5><a href="https://entrepreneurship.northeastern.edu/mosaic/"><u>Mosaic</u></a></h5>
                                 </Col>
                                 <Col xs={3} className='h-auto p-0 pe-2'>
                                     <Image src={MosaicLogo} fluid className='logo' />

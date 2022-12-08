@@ -11,8 +11,8 @@ export default function WhoWeAreResponse() {
          </div>
          <div className="yellowrectangle">
             <img className="generateLogoWhiteStyle" src={GenerateLogoWhite} alt=""/>
-            <img src={GenerateLogoWhite} alt=""/>
-            <img src={GenerateLogoWhite} alt=""/>
+            <img className="generateLogoWhiteStyle" src={GenerateLogoWhite} alt=""/>
+            <img className="generateLogoWhiteStyle" src={GenerateLogoWhite} alt=""/>
             
          </div>
                 

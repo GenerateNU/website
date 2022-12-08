@@ -6,18 +6,18 @@ a {
     background-color: black;
   }
   .ProductDevText {
-    width: 624px;
-    height: 275px;
-    left: 167px;
-    top: 187px;
+    width: 76.1vh;
+    height: 33.53vh;
+    left: 20.36vh;
+    top: 22.8vh;
     
     /* H1 */
     
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 92px;
-    line-height: 92px;
+    font-size: 11.22vh;
+    line-height: 11.22vh;
     /* or 100% */
     
     text-transform: uppercase;
@@ -27,33 +27,33 @@ a {
   }
 
   .paragraphText {
-    width: 600px;
-    height: 238px;
-    top: 567px;
-    margin-top: 50px;
+    width: 73.17vh;
+    height: 29.02vh;
+    top: 69.14vh;
+    margin-top: 6.1vh;
     /* B1 */
     font-family: 'Outfit 400';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 2.44vh;
+    line-height: 3.41vh;
     /* or 156% */
     
     
     color: #FFFFFF;
   }
   .ourProcessText {
-    width: 135px;
-    height: 30px;
-    left: 172px;
-    top: 164px;
-    margin-top: 100px;
+    width: 16.46vh;
+    height: 3.66vh;
+    left: 21.58vh;
+    top: 20.58vh;
+    margin-top: 12.55vh;
 
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 2.51vh;
+    line-height: 3.76vh;
     /* identical to box height, or 150% */
 
 
@@ -74,43 +74,44 @@ a {
   }
 
   .DevelopmentWheel {
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 12.55vh;
+    margin-left: 12.55vh;;
     transform: rotate(360deg)
   }
   .DevelopmentWheelTwo {
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-bottom: 100px;
+    height: 63.11vh;
+    margin-top: 12.55vh;;
+    margin-left: 12.55vh;;
+    margin-bottom: 12.55vh;;
     transform: rotate(97deg)
   }
   .DevelopmentWheelThree {
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-bottom: 100px;
+    margin-top: 12.55vh;;
+    margin-left: 12.55vh;;
+    margin-bottom: 12.55vh;;
     transform: rotate(230deg)
     
   }
 
   .ideation {
-    margin-left: 100px;
+    margin-left: 12.55vh;;
     margin-top: 5%;
   }
 
   .IdeationText {
-    width: 353px;
-    height: 92px;
-    left: 759px;
-    top: 263px;
-    margin-top: 100px;
+    width: 44.3vh;
+    height: 11.22vh;
+    left: 95.23vh;
+    top: 33vh;
+    margin-top: 12.55vh;
 
     /* H2 */
 
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
-    line-height: 92px;
+    font-size: 8.78vh;
+    line-height: 11.22vh;
     /* identical to box height, or 128% */
 
     text-transform: uppercase;
@@ -121,19 +122,19 @@ a {
   }
 
   .PrototypeText{
-    width: 353px;
-    height: 92px;
-    left: 759px;
-    top: 263px;
-    margin-top: 100px;
+    width: 44.29vh;
+    height: 11.22vh;
+    left: 95.23vh;
+    top: 33vh;
+    margin-top: 12.55vh;
 
     /* H2 */
 
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
-    line-height: 92px;
+    font-size: 8.78vh;
+    line-height: 11.22vh;
     /* identical to box height, or 128% */
 
     text-transform: uppercase;
@@ -144,19 +145,19 @@ a {
   }
 
   .ProductionText{
-    width: 353px;
-    height: 92px;
-    left: 759px;
-    top: 263px;
-    margin-top: 100px;
+    width: 44.29vh;
+    height: 11.22vh;
+    left: 95.23vh;
+    top: 33vh;
+    margin-top: 12.55vh;
 
     /* H2 */
 
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
-    line-height: 92px;
+    font-size: 8.78vh;
+    line-height: 11.22vh;
     /* identical to box height, or 128% */
 
     text-transform: uppercase;

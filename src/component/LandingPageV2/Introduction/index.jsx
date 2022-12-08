@@ -17,7 +17,6 @@ export default function Introduction() {
                  </div> */}
         <div className="scroll">
           <img className="scrollimg" src={ScrollButton} alt="sroll left" />
-          <p className="scrolltext">scroll</p>
         </div>
         <div></div>
       </div>

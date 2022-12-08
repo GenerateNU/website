@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 3em;
+  padding: 6vh;
   background-color: white;
 }
 
 .column-1 {
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
 }
@@ -14,7 +15,6 @@
 .column-2 {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .column-3 {
@@ -31,81 +31,69 @@
 
 .client-text {
   font-family: Outfit 500;
-  font-size: 1.5em;
+  font-size: 3vh;
+  line-height: 3vh;;
   font-weight: 700;
-  padding-right: 1em;
+  padding-right: 2vh;
 }
 
 .name-text {
   font-family: Outfit 500;
-  font-size: 1.5em;
+  font-size: 3vh;
 }
 
 .school {
   font-family: Outfit 500;
-  font-size: 1em;
+  font-size: 2vh;
   text-transform: uppercase;
 }
 
 .name-order {
   display: flex;
   flex-direction: column;
-  margin-right: 5em;
+  margin-right: 10vh;
 }
 
 .client-blurb {
-  width: 20em;
-  padding-top: 3em;
+  width: 40vh;
+  padding-top: 6vh;
   align-self: flex-end;
 }
 
 .bottom-corner {
-  /* padding-top: 2.5em; */
-  padding-bottom: 2.5em;
+  padding-bottom: 5vh;
   align-self: flex-start;
-}
-
-.product-img-container {
-  /* padding-top: 2em;
-  padding-left: 3em; */
-  /* margin-top: -3em; */
 }
 
 .product-img {
   /* position: absolute; */
-  height: 40em;
-  margin-top: -4em;
-  margin-left: -2em;
+  height: 80vh;
+  margin-top: -8vh;
+  margin-left: -4vh;
   min-height: 100%;
 }
 
 .top-corner {
   align-self: flex-end;
-  height: 20em;
-}
-
-.quote-container {
-    /* width: 20em; */
-    /* padding-right: 2em; */
-    /* padding-bottom: 2em; */
+  height: 40vh;
 }
 
 blockquote {
   font-family: Outfit 300;
-  font-size: 1.25em;
+  font-size: 2.5vh;
   position: relative;
-  margin: 0.5em;
-  /* padding: 0.5em 2em 0.5em 3em; */
+  margin: 2vh;
 }
 
 blockquote:before {
   font-family: "Space Mono 700";
   color: #ffbf3c;
   position: absolute;
-  font-size: 3em;
+  font-size: 6vh;
   line-height: 1;
   top: 0;
-  left: -1em;
+  margin-left: -2vh;
+  left: -2vh;
   content: "\201C";
 }
 blockquote:after {
@@ -113,10 +101,11 @@ blockquote:after {
   color: #ffbf3c;
   position: absolute;
   float: right;
-  font-size: 3em;
+  font-size: 6vh;
+  margin-top: 2vh;
   line-height: 1;
-  right: 0em;
-  bottom: -0.5em;
+  right: 0vh;
+  bottom: -1vh;
   content: "\201D";
 }
 
@@ -124,6 +113,7 @@ h1 {
   font-family: "Space Mono";
   font-style: normal;
   font-weight: bolder;
-  font-size: 4.5em;
+  font-size: 9vh;
+  line-height: 9vh;
   text-transform: uppercase;
 }

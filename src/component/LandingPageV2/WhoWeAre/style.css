@@ -10,19 +10,19 @@ padding-left: 15%;
 font-family: 'Space Mono 700' ;
 font-style: normal;
 font-weight: 700;
-font-size: 72px;
-line-height: 92px;
+font-size: 8.78vh;
+line-height: 11.22vh;
 text-transform: uppercase;
 color: #FFFFFF;
 }
 
 .bluerectangle {
-height: 32%;
+height: 40vh;
 background:  #187DFF;;
 }
 
 .purplerectangle {
-height: 60%;
+height: 60vh;
 background: #A559EC;
 }
 
@@ -31,13 +31,13 @@ background: #A559EC;
     padding-left: 15%;
 width: 80%;
 height: 80%;
-left: 1540px;
-top: 384px;
+left: 187.7vh;
+top: 46.83vh;
 text-align: left;
 font-family: 'Outfit 300';
 font-style: normal;
 font-weight: 300;
-font-size: 24px;
-line-height: 34px;
+font-size: 2.92vh;
+line-height: 4.15vh;
 color: #FFFFFF;
 }
