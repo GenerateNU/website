@@ -1,5 +1,5 @@
 h2 {
-  font-family: "Space Mono700";
+  font-family: "Space Mono 700";
   font-size: 7vw;
   line-height: 100%;
 }
@@ -35,7 +35,7 @@ p {
 
 .our-culture-quote {
   color: #a559ec;
-  font-family: "Space Mono700";
+  font-family: "Space Mono 700";
   font-size: 4vw;
   font-style: bold;
   text-transform: uppercase;
@@ -43,9 +43,9 @@ p {
 }
 
 .culture-quote-positioning {
-  left: 35%;
-  top: 20em;
-  width: 40em;
+  left: 42%;
+  top: 43%;
+  width: 45em;
   position: absolute;
 }
 
@@ -75,4 +75,17 @@ p {
 
 .our-history-text-style {
   margin-top: -1rem;
+}
+
+.navbar-border {
+  border: 1px solid black;
+}
+
+.generateLogo {
+  margin-left: 130%;
+  margin-top: -33%;
+}
+
+.culture {
+  margin-top: -5%;
 }

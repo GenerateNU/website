@@ -8,27 +8,33 @@ import Events3 from "./Events3";
 import IntroSection from "./IntroSection";
 import IntroImages from "./IntroImages";
 import BelongHere from "./BelongHere";
-import ValuesPage from "./ValuesPage"
-
-
+import Inclusion from "./Inclusion";
+import Equity from "./Equity";
+import Diversity from "./Diversity";
+import VerticalFooter from "../VerticalFooter";
+import Showcase from "./Showcase";
 import "./style.css";
 
 export default class CulturePage extends React.Component {
   render() {
     return (
-      <Container fluid className="vh-100 horizontal-scroll">
-        <Row className="flex-nowrap">
+      <div class="vh-100 horizontal-scroll bg-white container-fluid" tab-index="0">
+      <Row className="flex-nowrap">
           {/* Add components of culture page here  */}
           <IntroSection />
           <IntroImages/>
           <BelongHere/>
+          <Diversity/>
+          <Inclusion/>
+          <Equity/>
           <Events />
           <Events2 />
           <Events3 />
-          <ValuesPage/>
+          <Showcase/>
           <CollageSection />
+          <VerticalFooter/>
         </Row>
-      </Container>
+      </div>
     );
   }
 }

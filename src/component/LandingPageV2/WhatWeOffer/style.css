@@ -1,0 +1,39 @@
+.vh-50 {
+    height: 50vh;
+}
+
+.vh-20 {
+    height: 20vh;
+}
+
+.vh-30 {
+    height: 30vh;
+}
+
+.vh-60 {
+    height: 60vh;
+}
+
+.software-hardware-style {
+    font-family: "Space Mono 700";
+    font-size: 5vw;
+    line-height: 100%;
+}
+
+.software-color {
+    color: #187DFF;
+}
+
+.hardware-color {
+    color: #FF5751;
+}
+
+.what-we-offer-style {
+    font-family: "Space Mono 700";
+    font-size: 16vw;
+    line-height: 75%;
+}
+
+.info-heading {
+    font-family: "Outfit 600";
+}

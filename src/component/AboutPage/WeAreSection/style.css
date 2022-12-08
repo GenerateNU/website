@@ -23,10 +23,11 @@
     font-size: 100%;
     line-height: 140%;
     height: 80%;
+    padding: 5%;
 }
 
 .value-card:not(:last-child) {
-    padding-right: 15%;
+    padding-right: 8%;
 }
 
 .value-card:last-child {

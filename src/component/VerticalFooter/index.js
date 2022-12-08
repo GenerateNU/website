@@ -16,14 +16,14 @@ function VerticalFooter() {
   return (
     <Container fluid className="footer-container">
       <Row>
-        <div className = "rectangleLogo">
-          <div className="logo-background sherm">
-            <img src={GenerateLogo} height="50vh" width="50vw" />
+        <div>
+          <div className="sherm">
+            <img className="logo-placement logo-shadow" src={GenerateLogo} height="80%" width="60%" />
           </div>
         </div>
       </Row>
       <Row className="footer-text"> <a href="/about">About </a></Row>
-      <Row className="footer-text"> <a href="/">Culture</a></Row>
+      <Row className="footer-text"> <a href="/culture">Culture</a></Row>
       <Row className="footer-text"> <a href="/">Teams</a></Row>
       <Row className="footer-text"> <a href="/">People</a></Row>
       <Row className="footer-text"> <a href="/apply">Apply</a></Row>

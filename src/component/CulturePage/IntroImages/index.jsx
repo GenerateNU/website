@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
-import IntroImg1 from "../../../assets/images/culturepage/intro_photo_1.png";
-import IntroImg2 from "../../../assets/images/culturepage/intro_photo_2.png";
-import IntroImg3 from "../../../assets/images/culturepage/intro_photo_3.png";
+import IntroImg1 from "../../../component/CulturePage/IntroImages/website-2.jpg";
+import IntroImg2 from "../../../component/CulturePage/IntroImages/website-3.jpg";
+import IntroImg3 from "../../../component/CulturePage/IntroImages/website-4.jpg";
 
 export default function IntroImages() {
   return (

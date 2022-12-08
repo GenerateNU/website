@@ -1,4 +1,15 @@
-.horizontal-scroll {
-  overflow-x: auto;
-  overflow-y: hidden;
+.culture-text-box{
+    height: 50vh;
+    width: 35vw;
+}
+
+.culture-text {
+    font-family: 'Outfit 300';
+    font-size: 150%;
+    line-height: 34px;
+  }
+
+.nospacing {
+    margin:0%;
+    padding: 0%;
 }

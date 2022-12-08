@@ -1,0 +1,168 @@
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  .background-black {
+    background-color: black;
+  }
+  .ProductDevText {
+    width: 78.29vh;
+    height: 34.5vh;
+    left: 20.95vh;
+    top: 23.46vh;
+    
+    /* H1 */
+    
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11.22vh;
+    line-height: 11.22vh;
+    /* or 100% */
+    
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    
+  }
+
+  .paragraphText {
+    width: 75.28vh;
+    height: 29.86vh;
+    top: 71.14vh;
+    margin-top: 6.27vh;
+    /* B1 */
+    font-family: 'Outfit 400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5vh;
+    line-height: 3.5vh;
+    /* or 156% */
+    
+    
+    color: #FFFFFF;
+  }
+  .ourProcessText {
+    width: 16.9vh;
+    height: 3.76vh;
+    left: 21.58vh;
+    top: 20.57vh;
+    margin-top: 12.55vh;
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5vh;
+    line-height: 3.76vh;
+    /* identical to box height, or 150% */
+
+
+    /* Core/MNGMNT Yellow */
+
+    color: #FFBF3C;
+  }
+
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alignItemsRight {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .DevelopmentWheel {
+    margin-top: 12.55vh;
+    margin-left: 12.55vh;
+    transform: rotate(360deg)
+  }
+  .DevelopmentWheelTwo {
+    margin-top: 12.55vh;
+    margin-left: 12.55vh;
+    margin-bottom: 12.55vh;
+    transform: rotate(97deg)
+  }
+  .DevelopmentWheelThree {
+    margin-top: 12.55vh;
+    margin-left: 12.55vh;
+    margin-bottom: 12.55vh;
+    transform: rotate(230deg)
+    
+  }
+
+  .ideation {
+    margin-left: 12.55vh;
+  }
+
+  .IdeationText {
+    width: 44.29vh;
+    height: 11.22vh;
+    left:  96.23vh;
+    top: 33vh;
+    margin-top: 12.55vh;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size:8.78vh;
+    line-height: 11.22vh;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    /* Core/MNGMNT Yellow */
+
+    color: #FFBF3C;
+  }
+
+  .PrototypeText{
+    width: 44.29vh;
+    height: 11.22vh;
+    left:  96.23vh;
+    top: 33vh;
+    margin-top: 12.55vh;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size:8.78vh;
+    line-height: 11.22vh;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    
+
+    color: #FF6660;
+  }
+
+  .ProductionText{
+    width: 44.29vh;
+    height: 11.22vh;
+    left:  96.23vh;
+    top: 33vh;
+    margin-top: 12.55vh;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size:8.78vh;
+    line-height: 11.22vh;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    
+
+    color: #187DFF;
+  }
+ 
+   

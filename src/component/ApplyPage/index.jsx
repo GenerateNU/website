@@ -8,16 +8,15 @@ export default function ApplyPage() {
   return (
     <div className="ap_container">
       <div className="ap_img"></div>
-      <div className="navbar-style"><NavBar/></div>
+      <div className="navbar-style"><NavBar /></div>
       <div className="ap_text">
-       <a href="/"></a>&nbsp;
-        WE VIBE HARD AND 
+        <a href="/"></a>&nbsp;
+        Join a community that shares the same goal:&nbsp;
         {/* <br></br> MAKE THINGS */}
       </div>
       <div className="ap_text">
-       
-       <a href="/"></a>&nbsp;
-        MAKE THINGS
+        <a href="/"></a>&nbsp;
+        turning ideas into reality&nbsp;
       </div>
       <div className="d-flex">
         <div className="ap_text2 col-6 me-5 pe-5">

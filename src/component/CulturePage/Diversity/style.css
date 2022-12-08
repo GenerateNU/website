@@ -1,0 +1,46 @@
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 90px;
+  padding: 0.5em;
+}
+
+.outline {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 90px;
+  padding: 0.5em;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #6fcf97;
+  /* text-shadow: -1px 0 #6fcf97, 0 1px #6fcf97, 1px 0 #6fcf97, 0 -1px #6fcf97; */
+}
+
+h2 {
+  color: white;
+  /* -webkit-text-stroke-width: 1px; */
+  -webkit-text-stroke-color: #dfdfdf;
+}
+
+.text-div-diversity {
+  padding: 8em;
+}
+
+.container {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-div {
+  width: 50px;
+}
+
+.text-div {
+  margin: 5%;
+  padding: 5%;
+}
+
+.cultureTwo-text {
+  margin-top: -20%;
+}

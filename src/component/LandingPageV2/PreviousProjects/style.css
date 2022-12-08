@@ -1,0 +1,35 @@
+.logo {
+  width: 18.75vh;
+  padding: 4vh;
+  object-fit: contain;
+}
+
+.prev-proj-wrapper {
+  background-color: #111111;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-top: 7%;
+}
+
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

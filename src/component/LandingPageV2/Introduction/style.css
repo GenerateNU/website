@@ -1,0 +1,113 @@
+.introductionContainer {
+  margin: 0%;
+  padding: 0%;
+}
+
+.shermancenter{
+    /* position: absolute; */
+    /* width: 1440px; */
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../../../assets/images/landingpage/weare/landing.jpg');
+    background-size: cover;
+}
+
+.wearetext {
+  position: relative;
+  width: 16.2vh;
+  height: 6.46vh;
+  left: 15.24vh;
+  top: 12.19vh;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.39vh;
+  line-height: 6.46vh;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.generatetext {
+  /* generate */
+  position: relative;
+  width: 149.39vh;
+  height: 45.12vh;
+  left: 13.17vh;
+  top: 12.19vh;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30.48vh;
+  line-height: 45.12vh;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.scrolltext {
+  /* scroll */
+  position: absolute;
+  width: 74px;
+  height: 30px;
+  left: 1340px;
+  top: 792px;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height, or 150% */
+  /* Black/White */
+  color: #ffffff;
+}
+
+.scrollarrow {
+  position: absolute;
+  width: 5.11vh;
+  height: 5.11vh;
+  left: 160.28vh;
+  top: 100.51vh;
+
+  background-image: url("../../../assets/images/landingpage/weare/ArrowSideways.png");
+  background-size: cover;
+}
+
+.whitebox {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 1230px;
+  top: 762px;
+
+  background-image: url("../../../assets/images/landingpage/weare/WhiteBox.png");
+  background-size: cover;
+}
+
+.scrollimg {
+  width: 10.04vh;
+  object-fit: contain;
+  margin-bottom: -35vh;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  padding-right: 2em;
+}
+
+.scrolltext {
+  font-size: 20px;
+  font-family: "Space Mono";
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.intro-navbar {
+  margin-left: 3%;
+  padding-top: 2%;
+}

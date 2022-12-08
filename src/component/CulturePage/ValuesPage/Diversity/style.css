@@ -1,5 +1,5 @@
 
-.sidetextd {
+.sidetext {
     font-family: 'Space Mono';
     font-style: bold;
     font-weight: 700;
@@ -8,7 +8,7 @@
     text-shadow: -1px 0 #6FCF97, 0 1px #6FCF97, 1px 0 #6FCF97, 0 -1px #6FCF97;
     transform: rotate(90deg);
     text-transform: uppercase;
-    }
+}
     
 .numbertextd {
         color: white;
@@ -20,24 +20,24 @@
         text-shadow: -2px 0 #DFDFDF, 0 2px #DFDFDF, 2px 0 #DFDFDF, 0 -2px #DFDFDF;
     }
     
-
+/* 
     .diversity {
         position: relative;
-        height: 1634px;
-        width: 600px;
-    }
+        width: 30%;
+        
+    } */
 
     .descriptions {
-        position: absolute;
-width: 450px;
-height: 276px;
-left: 565px;
-top: 195px;
+        position: relative;
+        width: 450px;
+        height: 276px;
+        left: 50px;
+        top: 30%;
     
     }
 
     .paragraph{
-        font-family: 'Outfit';
+        font-family: 'Outfit 300';
         font-style: normal;
         font-weight: 300;
         font-size: 24px;
@@ -46,7 +46,7 @@ top: 195px;
     }
     
     .sideways_d {
-        position: absolute;
+        position: relative;
         left: -417px;
         top: 350px;
         width: 1634px;
@@ -54,19 +54,35 @@ top: 195px;
     }
     
     div.number {
-        position: absolute;
+        position: relative;
     width: 169px;
     height: 92px;
-    left: 565px;
-    top: 87px;
-
+    left: 50px;
+    top: 30%;
     }
     
     .white-text {
         color: white;
+        font-size: 90px;
      }
     
      .green-text {
         color: #6FCF97;
+        font-size: 90px;
      }
-    
+
+     .left-arrange {
+        margin-left: 1%;
+     }
+
+
+     .left-arrange2 {
+        margin-left: 20%;
+        margin-top: 0px;
+     }
+
+     .left-arrange3 {
+        margin-left: 60%;
+        margin-top: 0px;
+        margin-right: -30%;
+     }

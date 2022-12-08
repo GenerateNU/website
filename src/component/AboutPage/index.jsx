@@ -8,29 +8,34 @@ import History from "./History";
 import AboutHistory from "./AboutHistory";
 import Timeline from "./Timeline";
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
+import GrowthMantra from "./GrowthMantra";
 import Footer from "../VerticalFooter";
+import './style.css';
+import Stats from "./Stats";
+import ProductDevelopment from "../LandingPageV2/ProductDevLifecycle/ProductDevelopment";
 import FooterTwo from "../VerticalFooterTeams";
-import "./style.css";
 
 export default class AboutPage extends React.Component {
   render() {
     return (
-      <Container fluid className="vh-100 horizontal-scroll bg-black">
-        <Row className="flex-nowrap">
+     <div class="vh-100 horizontal-scroll bg-black container-fluid" tab-index="0">
+          <Row className="flex-nowrap">
           <OurMissionSection />
           <WeAreSection />
           <Leadership />
 
-          {/* <AboutHistory /> */}
           <History />
           <Timeline />
-          {/* <Members/> */}
-
+          <Stats/>
           <WhyGenerateCarousel />
+          <GrowthMantra/>
           <Footer />
           <FooterTwo />
-        </Row>
-      </Container>
+          
+          </Row>
+      </div>
+
+    
     );
   }
 }

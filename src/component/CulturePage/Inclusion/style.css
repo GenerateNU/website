@@ -1,0 +1,40 @@
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #a559ec;
+}
+
+.container {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.outline-inclusion {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 90px;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #a559ec;
+}
+.text-div-inclusion {
+  padding: 8em;
+  margin-top: 20%;
+}
+
+.vertical-div {
+  width: 50px;
+}
+
+.text-div {
+  margin: 5%;
+  padding: 5%;
+}
+
+.cultureTwo-text {
+  margin-top: -30%;
+}
