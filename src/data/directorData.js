@@ -32,7 +32,7 @@ const directorData = [
     inactiveIcon: ManagementInactiveIcon,
     name: "Josh Batra",
     image: Josh,
-    bio: "I’m Josh Batra, the Executive Director! I am a 4th year Mechanical Engineer from Needham, MA and this is my 5th semester in Generate. Previously I’ve been a Project Lead, Hardware Engineer, and the Hardware Director. Generate has been a huge piece of my college experience and my favorite part is the friends I’ve been able to make in the org. Outside of Generate I play trumpet in the Pep Band and love watching or playing soccer! Management does a lot of high level planning and alignment with Mosaic, the Sherman Center, and Northeastern. We act as a resource for all teams and help them be successful.",
+    bio: "I’m Josh Batra, the Executive Director! I am a 4th year Mechanical Engineer from Needham, MA and this is my 5th semester in Generate. Previously I’ve been a Project Lead, Hardware Engineer, and the Hardware Director. Generate has been a huge piece of my college experience and my favorite part is the friends I’ve been able to make in the org. Outside of Generate I play trumpet in the Pep Band and love watching or playing soccer!",
     emailUsername: "batra.j",
   },
   // {
@@ -54,7 +54,7 @@ const directorData = [
     inactiveIcon: OperationsInactiveIcon,
     name: "Ben Frothingham",
     image: Ben,
-    bio: "I am Ben Frothingham, and I’m the Engagement Director. I am a 5th year Mechanical Engineer from Merrimack, NH, and I’ve been in Generate for 6 semesters now! Outside of Generate, I spend my time surfing and working on my capstone project (which is also a surfboard!). My incredible Engagement team covers a wide range of topics – from branding and creating merch, to hosting events for hundreds of attendees, to presenting about Generate to other organizations. We make sure that everyone feels like a part of the Generate family! ",
+    bio: "I am Ben Frothingham, and I’m the Engagement Director. I am a 5th year Mechanical Engineer from Merrimack, NH, and I’ve been in Generate for 6 semesters now! Outside of Generate, I spend my time surfing and working on my capstone project (which is also a surfboard!). My incredible Engagement team covers a wide range of topics – from branding and creating merch, to hosting events for hundreds of attendees, to presenting about Generate to other organizations. ",
     emailUsername: "frothingham.b",
   },
   {
@@ -78,7 +78,7 @@ const directorData = [
 
     name: "Liza",
     image: Liza,
-    bio: "My name is Liza, and I am so excited to be the Hardware Director this year! I’m a 5th year pursuing a BS in Mechanical Engineering and an MS in Engineering Management, and I’m from West Newbury, MA. In my free time, I love to play tennis, hike, surf, and cook! Hardware works with four clients every semester to create high quality, innovative, and intriguing mechanical or electromechanical  products. Generate Hardware has truly shaped my college experience, and after holding almost every position within Hardware, I am so unbelievably happy to be guiding our teams towards success and continuing to strive to improve the org!",
+    bio: "My name is Liza, and I am so excited to be the Hardware Director this year! I’m a 5th year pursuing a BS in Mechanical Engineering and an MS in Engineering Management, and I’m from West Newbury, MA. In my free time, I love to play tennis, hike, surf, and cook! Hardware works with four clients every semester to create high quality, innovative, and intriguing mechanical or electromechanical  products. I am so unbelievably happy to be guiding our teams towards success!",
     emailUsername: "russell.li",
   },
   {

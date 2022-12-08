@@ -4,18 +4,16 @@ import "./style.css";
 const Showcase = () => {
   return (
     <div className="showcase-div">
-                <p className="text-uppercase all-hands-title">showcase</p>
-                <p className="showcase-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
-                  nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec
-                  elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus
-                  adipiscing mi eleifend proin nisl ac gravida. Viverra cursus.
-                  Tincidunt sagittis nulla orci id.
-                </p>
-               
-            </div>
-        
-
+      <p className="text-uppercase all-hands-title">showcase</p>
+      <p className="showcase-text">
+        Every semester ends with our culminating event: Showcase. We get all
+        fancied-up and celebrate the semesters' accomplishments with our
+        teammates, clients, friends, families, professors and peers. Completed
+        projects are shown off in all their glory, delicious food is catered,
+        and heartfelt goodbyes are shared before the long generate-less
+        vacation.
+      </p>
+    </div>
   );
 };
 
