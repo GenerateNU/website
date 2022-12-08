@@ -1,25 +1,45 @@
-export const constants =  {
-   Position_Executive_Director: 'https://forms.gle/rQfU8QUoXnjxWSyf9',
-   Position_Hardware_Director: 'https://docs.google.com/forms/d/1-SA8Q4sVc4rw67qjR5RMhOYoXkLfAp5wUIZIU5uQdls/edit',
-   Position_Software_Director: 'https://docs.google.com/forms/d/1sUtUaHUN6dUQUXkmGyEFOnK9r5oDe1vORGBZoxMAzrU/edit',
-   Position_Ops_Director: 'https://docs.google.com/forms/d/1duYk3ysEKBd9tr_KHlF6f1zsBw_GMeCdJzln85LkMvk/edit',
-   Position_Engagement_Director: 'https://docs.google.com/forms/d/1P96KguA1azW6ct8_BjjCi6YtP7CPOvxwj8IS0-PpokA/edit',
-   Position_Online_Eng_Coordinator: 'https://forms.gle/t91bnRvBK6NpsmcZ9',
-   Position_Photographer: 'https://forms.gle/FVB1WdbPBs22si4T6',
-   Position_Videographer : 'https://forms.gle/h2fWBf1zxi9n3uSRA',
-   Position_Brand_designer : 'https://forms.gle/h2fWBf1zxi9n3uSRA',
-   Position_Office_Manager : 'https://docs.google.com/forms/d/e/1FAIpQLSe-eMae53oKUgu5xNDMDTgYVxWdYpK0I0qKhkCKiNDGWSsS4Q/viewform?usp=sf_link',
-   Position_Build_Studio_Support : 'https://docs.google.com/forms/d/e/1FAIpQLSciIXkmLcG2DOl0UONgthXbGfd_elOIjSjqQP4Xh4gg7tSJIg/viewform?usp=sf_link',
-   Position_Data_Analyst : 'https://docs.google.com/forms/d/e/1FAIpQLScCWxCo7WVg_wEfPGTc0xfDAfV9QZZCOQgqzcrzqKXs2TVhow/viewform?usp=sf_link',
-   Position_Professional_Dev_Specialist : 'https://docs.google.com/forms/d/1_EsBgzKXZJhuQSZ-hsX4dOzwqpCz8sKH32s483L0v_I/edit?usp=sharing',
-   Position_Internal_Dev_Specialist  : 'https://forms.gle/kJ1MuAdA8Z1RDiNZ7',
-   Position_Hardware_Chief : 'https://forms.gle/ZMgsmWUTkmaJf8e9A',
-   Position_Hardware_Project_Lead : 'https://forms.gle/3Ms3S63aBjb8tf9K9',
-   Position_Hardware_Tech_Lead : 'https://forms.gle/rekKpX1kq3dDKqtc9',
-   Position_Hardware_BSE : 'https://forms.gle/jNrdUSjbfLCGh53v6',
-   Position_Hardware_BSD : 'https://forms.gle/voNsviCg7wAqL43u9',
-   Position_Software_Tech_Lead : 'https://forms.gle/zRs9VhzDy7GHxgSV9',
-   Position_Software_Design_Lead : 'https://forms.gle/MpPBPETURFMZcirf8',
-   Position_Software_BSE : 'https://forms.gle/T9wFSbDgQ8nph7zD8',
-   Position_Software_BSD : 'https://forms.gle/xyCGoRmKpP6GrVCd9'
-}
+export const constants = {
+  // Management
+  Position_Executive_Director: "https://forms.gle/SFo5x49Xz8hcFDZj6",
+  //Position_Hardware_Director:
+  // "https://docs.google.com/forms/d/1-SA8Q4sVc4rw67qjR5RMhOYoXkLfAp5wUIZIU5uQdls/edit",
+  //Position_Software_Director:
+  // "https://docs.google.com/forms/d/1sUtUaHUN6dUQUXkmGyEFOnK9r5oDe1vORGBZoxMAzrU/edit",
+  //Position_Ops_Director:
+  // "https://docs.google.com/forms/d/1duYk3ysEKBd9tr_KHlF6f1zsBw_GMeCdJzln85LkMvk/edit",
+  //Position_Engagement_Director:
+  // "https://docs.google.com/forms/d/1P96KguA1azW6ct8_BjjCi6YtP7CPOvxwj8IS0-PpokA/edit",
+
+  // Engagement
+  Position_Online_Engagement_Coordinator: "https://forms.gle/FhTRWBm53eQFYVp68",
+  Position_Photographer_Videographer:
+    "https://docs.google.com/forms/d/e/1FAIpQLSd1jVp6UUSNDnTjz6F-4ntoBjKyLKC9YWGbzeNJ2knUT5XHDQ/viewform?usp=sf_link",
+  Position_Brand_Designer:
+    "https://docs.google.com/forms/d/e/1FAIpQLSeRM9SNSrBhT6Vp_GgAnyQHUfxEDZPotTW6wgal3ZknrOe3VQ/viewform?usp=sf_link",
+  Position_Illustrator_Animator:
+    "https://docs.google.com/forms/d/e/1FAIpQLScbjdoTNXB5I9e74qYBKc-S5d15l2yf5Koz0akbnPehbRaw2w/viewform?usp=sf_link",
+  Position_Events_Coordinator: "https://forms.gle/4yqADyY8LYkgHvJT9",
+  Position_Recruitment_Specialist:
+    "https://docs.google.com/forms/d/e/1FAIpQLSf6u8q54JH9WwO_-_lODF4ziKX92bd9NLiD7tJtqUPnyKzcoQ/viewform?usp=sf_link",
+
+  // Operations
+  Position_Office_Coordinator: "https://forms.gle/VMTLj1o3NhcDLsuU6",
+  Position_Data_Analyst: "https://forms.gle/48qdD8n52wBDRVT77",
+  Position_Strategic_Partnerships_Coordinator:
+    "https://forms.gle/63KhXsRpJXQWFtES6",
+  Position_Member_Development_Specialist: "https://forms.gle/6xujDs9yBNLofZ5YA",
+  Position_Employer_Events_Coordinator: "https://forms.gle/mCFM6DvVg6YQkuHHA",
+  Position_Capital_Development_Coordinator:
+    "https://forms.gle/8VZGCwZ1Fv5Z8rSDA",
+  Position_Tech_Specialist: "https://forms.gle/8iLm6tFzC5YVxYo5A",
+  Position_Makerspace_Specialist: "https://forms.gle/zRz2tBdwpQRhjsua6",
+  Position_Information_Architect: "https://forms.gle/CmNQCADrwxAMuo8aA",
+
+  // SW + HW
+  Position_Hardware_Engineer:
+    "https://docs.google.com/forms/d/e/1FAIpQLSdTKaypAXMO1LYU6nx36uHReRgk8HF9mDo0TOUBzmuSJrdOlw/viewform?usp=sf_link",
+  Position_Hardware_Designer:
+    "https://docs.google.com/forms/d/e/1FAIpQLSeD0MLTJxVciJWcbyxYLHp4bNab87xiT0IZBEA1byyQPCzWCw/viewform?usp=sf_link",
+  Position_Software_Engineer: "https://forms.gle/9dfpE6ki6Tnpem6U9",
+  Position_Software_Designer: "https://forms.gle/wYoyFmowtEgGF5JA6",
+};
