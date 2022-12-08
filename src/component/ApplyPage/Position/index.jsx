@@ -124,7 +124,7 @@ export default function Position() {
 
             {/* Position qualifications */}
             {position.requirements && (
-              <h3 className="pt-5 pb-3">Who you are</h3>
+              <h3 className="pt-5 pb-3">Requirements</h3>
             )}
             <ul>
               {parseList(position.requirements).map((info, index) => (
