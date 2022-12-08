@@ -19,7 +19,6 @@ export default function Position() {
 
   useEffect(() => {
     const getPositions = async () => {
-      console.log('jefkcsfbjjh')
       console.log(id);
       const data = await findPosition(id);
       console.log(data.attributes);
@@ -42,8 +41,7 @@ export default function Position() {
     setShowText("Copied!");
   };
 
-  const handleApply = () =>  {
-    console.log('in apply')
+  const handleApply = () => {
     const name = position.positionTitle;
     const key = name.replaceAll(" ", "_");
     const POSITIONS_URL = 'Position_' + key;
@@ -144,7 +142,7 @@ export default function Position() {
               <Col className="hours">
                 <h5>Weekly commitment</h5>
                 {/* NOTE: Field does not yet exist */}
-                <h4>Up to 20 hours</h4>
+                <h4>Up to 10 hours</h4>
               </Col>
             </Row>
 
