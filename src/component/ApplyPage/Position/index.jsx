@@ -24,6 +24,7 @@ export default function Position() {
       console.log(data.attributes);
       setPosition(data.attributes);
     };
+
     getPositions();
   }, [id]);
 
