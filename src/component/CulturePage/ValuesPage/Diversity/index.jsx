@@ -10,9 +10,7 @@ export default function Diversity() {
                     <span class="green-text">Diversity</span>
                     <span class="white-text">Diversity</span>
                 </div>
-            <div className="number">
-                <h2 className="numbertext">1.0</h2>
-            </div>
+            
             <div className="descriptions">
                 <p className="paragraph">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est sed
