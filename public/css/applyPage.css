@@ -32,7 +32,7 @@
 }
 
 .ap_img {
-  background-image: url("/images/ApplyPageImages/applyPageImage.jpg");
+  background-image: url("/images/ApplyPageImages/showcase.jpg");
   height: 100%;
   width: 100%;
   position: fixed;
@@ -104,6 +104,7 @@
   clear: both;
   margin-left: 4%;
 }
+
 .accordion .accordion-content {
   display: none;
   width: 1440px;
@@ -112,6 +113,7 @@
   white-space: nowrap;
   padding: 4%;
 }
+
 .accordion input[type="checkbox"] {
   position: absolute;
   top: 0;
@@ -119,6 +121,7 @@
   width: 0;
   height: 0;
 }
+
 .accordion .toggle-btn {
   color: white;
   font-family: "Space Mono";
@@ -128,6 +131,7 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+
 /* .accordion input[type="checkbox"]:checked ~ .accordion-content {
     display: block;
   } */
@@ -172,6 +176,7 @@
   clear: both;
   margin-left: 4%;
 }
+
 .accordion2 .accordion-content2 {
   display: none;
   height: 367px;
@@ -182,6 +187,7 @@
   padding: 4%;
   margin-left: -4%;
 }
+
 .accordion2 input[type="checkbox"] {
   position: absolute;
   top: 0;
@@ -189,6 +195,7 @@
   width: 0;
   height: 0;
 }
+
 .accordion2 .toggle-btn2 {
   color: white;
   font-family: "Space Mono";
@@ -197,6 +204,7 @@
   line-height: 130px;
   cursor: pointer;
 }
+
 /* .accordion2 input[type="checkbox"]:checked ~ .accordion-content2 {
     display: block;
   } */
@@ -468,5 +476,4 @@ a {
 
 /* --------------------- MEDIA QUERIES TABLETS --------------------- */
 
-@media screen and (max-width: 1024px) {
-}
+@media screen and (max-width: 1024px) {}
