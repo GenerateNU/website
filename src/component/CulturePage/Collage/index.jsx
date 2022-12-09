@@ -15,40 +15,40 @@ import elevenimg from '../Collage/website-26.JPG'
 export default function collage() {
   return (
     <div className='nospacing'>
-<div className="flex-parent">
-  <div className="flex-child">
-  <img className="img1" style={{width: "100%", height: "100%"}}src={firstimg} alt = "">
-</img>
-  </div>
-  <div class="flex-child">
-  <img style={{width: "100%", height: "100%"}} src={secondimg}>
-</img>
-  </div>
-  <div class="flex-child">
-  <img style={{width: "100%", height: "100%"}} src={thirdimg}>
-</img>
-  </div>
-  <div class="flex-child">
-  <img style={{width: "100%", height: "100%"}} src={tenimg}>
-</img>
-  </div>
-</div>
-<div class="flex-parent">
-  <div class="flex-child"> </div>
-  <div class="flex-child"><img className="img2" style={{width: "100%", height: "100%"}} src={fourimg}>
-</img></div>
-  <div class="flex-child"><img style={{width: "100%", height: "100%"}} src={fiveimg}>
-</img></div>
-<div class="flex-child"><img style={{width: "100%", height: "100%"}} src={siximg}>
-</img></div>
-</div>
-<div class="flex-parent">
-  <div class="flex-child"> </div>
-  <div class="flex-child"><img className="img3" style={{width: "100%", height: "100%"}} src={eightimg}>
-</img></div>
-  <div class="flex-child"><img style={{width: "100%", height: "100%"}} src={nineimg}>
-</img></div>
-</div>
+      <div className="flex-parent">
+        <div className="flex-child">
+          <img className="img1" style={{ width: "100%", height: "100%" }} src={firstimg} alt="">
+          </img>
+        </div>
+        <div class="flex-child">
+          <img style={{ width: "100%", height: "100%" }} src={secondimg}>
+          </img>
+        </div>
+        <div class="flex-child">
+          <img style={{ width: "100%", height: "100%" }} src={thirdimg}>
+          </img>
+        </div>
+        <div class="flex-child">
+          <img style={{ width: "100%", height: "100%" }} src={tenimg}>
+          </img>
+        </div>
+      </div>
+      <div class="flex-parent">
+        <div class="flex-child"> </div>
+        <div class="flex-child"><img className="img2" style={{ width: "100%", height: "100%" }} src={fourimg}>
+        </img></div>
+        <div class="flex-child"><img style={{ width: "100%", height: "100%" }} src={fiveimg}>
+        </img></div>
+        <div class="flex-child"><img style={{ width: "100%", height: "100%" }} src={siximg}>
+        </img></div>
+      </div>
+      <div class="flex-parent">
+        <div class="flex-child"> </div>
+        <div class="flex-child"><img className="img3" style={{ width: "100%", height: "100%" }} src={eightimg}>
+        </img></div>
+        <div class="flex-child"><img style={{ width: "100%", height: "100%" }} src={nineimg}>
+        </img></div>
+      </div>
 
 
     </div>
