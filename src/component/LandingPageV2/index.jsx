@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "react-bootstrap/esm/Container";
+//import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import WhatWeOffer from "./WhatWeOffer";
 import Interested from "./Interested";
@@ -17,8 +17,8 @@ import WhoWeAreResponse from "./WhoWeAreResponse";
 import "./style.css";
 import Management from "./Management";
 import Footer from "../VerticalFooter";
-import NavBar from "../NavBar";
-import { Navbar } from "react-bootstrap";
+//import NavBar from "../NavBar";
+//import { Navbar } from "react-bootstrap";
 
 export default class LandingPageV2 extends React.Component {
   render() {
@@ -27,24 +27,24 @@ export default class LandingPageV2 extends React.Component {
         class="vh-100 horizontal-scroll bg-white container-fluid"
         tab-index="0"
       >
-        <Row className="flex-nowrap">
-          <Intro />
-          <WhoWeAre />
-          <WhoWeAreResponse />
-          <WhatWeOffer />
-          <ProductDevelopment />
-          <Ideation />
-          <Prototype />
-          <Production />
-          <Management />
-          <FeaturedProjects />
-          <FP1 />
-          <FP2 />
-          <PreviousProjects />
-          <Interested />
-          <Footer />
-        </Row>
-      </div>
+          <Row className="flex-nowrap">
+            <Intro />
+            <WhoWeAre />
+            <WhoWeAreResponse />
+            <WhatWeOffer />
+            <ProductDevelopment />
+            <Ideation />
+            <Prototype />
+            <Production />
+            <Management />
+            <FeaturedProjects />
+            <FP1 />
+            <FP2 />
+            <PreviousProjects />
+            <Interested />
+            <Footer />
+          </Row>
+        </div>
     );
   }
 }

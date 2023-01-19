@@ -3,7 +3,7 @@
   padding: 0%;
 }
 
-.shermancenter{
+.shermancenter {
     /* position: absolute; */
     /* width: 1440px; */
     height: 100vh;
@@ -18,13 +18,13 @@
   width: 16.2vh;
   height: 6.46vh;
   left: 15.24vh;
-  top: 12.19vh;
+  top: 8.19vh;
 
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
   font-size: 4.39vh;
-  line-height: 6.46vh;
+  line-height: 10.46vh;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -41,10 +41,66 @@
   font-style: normal;
   font-weight: 700;
   font-size: 30.48vh;
+  line-height: 25.12vh;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.comingsoontext {
+  display: inline;
+  position: relative;
+  width: 110.39vh;
+  height: 30.12vh;
+  left: 1.17vh;
+  top: 1.19vh;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10vh;
+  line-height: 8.12vh;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  
+}
+
+.desktop {
+  /* generate */
+  display: inline;
+  position: relative;
+  width: 149.39vh;
+  height: 45.12vh;
+  left: 13.17vh;
+  top: 12.19vh;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30.48vh;
   line-height: 45.12vh;
   text-transform: uppercase;
 
   color: #ffffff;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .desktop {
+    display: none;
+  }
+  .comingsoontext {
+    display: inline;
+  }
+}
+
+@media only screen and (min-device-width: 651px) {
+  .desktop {
+    display: inline;
+  }
+  .comingsoontext {
+    display: none
+  }
 }
 
 .scrolltext {
