@@ -29,7 +29,7 @@ background: #A559EC;
 .whoweareparagraph {
     padding: 7%;
     padding-left: 15%;
-width: 80%;
+width: 85%;
 height: 80%;
 left: 187.7vh;
 top: 46.83vh;
@@ -37,7 +37,7 @@ text-align: left;
 font-family: 'Outfit 300';
 font-style: normal;
 font-weight: 300;
-font-size: 2.92vh;
-line-height: 4.15vh;
+font-size: 2.5vh;
+line-height: 3vw;
 color: #FFFFFF;
 }
