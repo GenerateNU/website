@@ -18,10 +18,12 @@ color: #FFFFFF;
 
 .bluerectangle {
 height: 30vh;
+height: 30vh;
 background:  #187DFF;;
 }
 
 .purplerectangle {
+height: 70vh;
 height: 70vh;
 background: #A559EC;
 }
