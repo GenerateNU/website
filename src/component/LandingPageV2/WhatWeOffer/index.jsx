@@ -74,7 +74,7 @@ const WhatWeOffer = () => {
               </Col>
             </Row>
             <Row className="h-50 p-6 pt-0">
-              <Col xs={4} className="p-5 pt-0">
+              <Col xs={4} className="p-6 pt-0">
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
                   <br />
