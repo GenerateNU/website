@@ -95,6 +95,8 @@
 }
 
 .scroll {
+  position: relative;
+  bottom: 50px;
   display: flex;
   flex-direction: row;
   float: right;
