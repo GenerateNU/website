@@ -3,6 +3,11 @@ import "./style.css";
 import NavBar from "../../NavBar";
 import ScrollButton from "../../../assets/images/landingpage-v2/scroll button.png";
 
+/**
+ * Added "MOBILE PAGE COMING SOON" element to display on mobile
+ * Line 20-21
+ * @returns 
+ */
 export default function Introduction() {
   return (
     <div className="introductionContainer">
