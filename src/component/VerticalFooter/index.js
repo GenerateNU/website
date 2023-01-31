@@ -37,11 +37,15 @@ function VerticalFooter() {
       </Row>
       <Row className="footer-text">
         {" "}
-        <a href="/">Teams</a>
+        <a class="disabled-footer-text" href="/">
+          Teams
+        </a>
       </Row>
       <Row className="footer-text">
         {" "}
-        <a href="/">People</a>
+        <a class="disabled-footer-text" href="/">
+          People
+        </a>
       </Row>
       <Row className="footer-text">
         {" "}
@@ -49,7 +53,9 @@ function VerticalFooter() {
       </Row>
       <Row className="footer-text">
         {" "}
-        <a href="/">Projects</a>
+        <a class="disabled-footer-text" href="/">
+          Projects
+        </a>
       </Row>
 
       <div className="social-icons">
