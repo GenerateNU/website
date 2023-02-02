@@ -5,6 +5,7 @@ import './style.css';
 /**
  * Hero section containing a looping video background.
  */
+
  export default function WeAre() {
         return (
                <div>
@@ -33,5 +34,8 @@ import './style.css';
                 </div>
         );
     };
+
+
+
 
 
