@@ -3,11 +3,11 @@
     margin:0%;
     padding: 0%;
 }
-
+/*
 .vh-100 {
     display: inline;
   }
-
+*/
 .mobile {
     display: none;
   }
@@ -17,6 +17,6 @@
       display: none;
     }
     .mobile {
-      display: inline;
+      display: flex;
     }
 }

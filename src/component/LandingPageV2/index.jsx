@@ -47,7 +47,7 @@ export default class LandingPageV2 extends React.Component {
           <Footer />
         </Row>
       </div><div
-        class="mobile vertical-scroll bg-white container-fluid"
+        class="vw-100 mobile vertical-scroll bg-black container-fluid"
         tab-index="0"
       >
           <Column className="flex-nowrap">

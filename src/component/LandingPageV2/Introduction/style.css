@@ -5,9 +5,10 @@
 
 .shermancenter {
     /* position: absolute; */
-    /* width: 1440px; */
+    max-width: fit-content;
     height: 100vh;
     left: 0px;
+    right: 0px;
     top: 0px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../../../assets/images/landingpage/weare/landing.jpg');
     background-size: cover;
