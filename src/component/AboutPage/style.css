@@ -3,6 +3,11 @@
     overflow-y: hidden;
 }
 
+.vertical-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .vh-25 {
     height: 25vh;
 }
