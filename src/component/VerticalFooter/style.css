@@ -22,8 +22,8 @@ a {
 }
 
 .disabled-footer-text {
-    pointer-events: none;
-    color: #e0e0e0;
+  pointer-events: none;
+  color: #e0e0e0;
 }
 
 a:hover {
