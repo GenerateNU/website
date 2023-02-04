@@ -25,32 +25,34 @@ export default class LandingPageV2 extends React.Component {
     
   render() {
     return (
-        <><div
-        class="vh-100 horizontal-scroll bg-white container-fluid"
-        tab-index="0"
-      >
-        <Row className="flex-nowrap">
-          <Intro />
-          <WhoWeAre />
-          <WhoWeAreResponse />
-          <WhatWeOffer />
-          <ProductDevelopment />
-          <Ideation />
-          <Prototype />
-          <Production />
-          <Management />
-          <FeaturedProjects />
-          <FP1 />
-          <FP2 />
-          <PreviousProjects />
-          <Interested />
-          <Footer />
-        </Row>
-      </div><div
-        class="vw-100 mobile vertical-scroll bg-black container-fluid"
-        tab-index="0"
-      >
-          <Column className="flex-nowrap">
+      <>
+        <div
+          class="vh-100 horizontal-scroll bg-white container-fluid"
+          tab-index="0"
+        >
+          <Row className="flex-nowrap">
+            <Intro />
+            <WhoWeAre />
+            <WhoWeAreResponse />
+            <WhatWeOffer />
+            <ProductDevelopment />
+            <Ideation />
+            <Prototype />
+            <Production />
+            <Management />
+            <FeaturedProjects />
+            <FP1 />
+            <FP2 />
+            <PreviousProjects />
+            <Interested />
+            <Footer />
+          </Row>
+        </div>
+        <div
+          class="vw-100 mobile vertical-scroll bg-black container-fluid"
+          tab-index="0"
+        >
+          <Column className="flex-nowrap" id="mobile-page-container">
             <Intro />
             <WhoWeAre />
             <WhoWeAreResponse />
@@ -67,8 +69,9 @@ export default class LandingPageV2 extends React.Component {
             <Interested />
             <Footer />
           </Column>
-        </div></>
-    )
+        </div>
+      </>
+    );
   }
 };
 /*
