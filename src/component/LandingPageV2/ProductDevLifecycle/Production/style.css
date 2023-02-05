@@ -5,6 +5,11 @@ a {
   .background-black-wheel {
     background-color: black;
     width: 70vh;
+  }
+  
+  .background-black-text {
+    background-color: black;
+    width: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
