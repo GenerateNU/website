@@ -2,8 +2,14 @@ a {
     text-decoration: none;
     color: #FFFFFF;
   }
-  .background-black {
+  .background-black-wheel {
     background-color: black;
+    width: 70vh;
+  }
+  
+  .background-black-text {
+    background-color: black;
+    width: 80vh;
   }
   .ProductDevText {
     width: 78.29vh;
@@ -27,7 +33,7 @@ a {
   }
 
   .paragraphText {
-    width: 75.28vh;
+    width: 55vh;
     height: 29.86vh;
     top: 71.14vh;
     margin-top: 6.27vh;
