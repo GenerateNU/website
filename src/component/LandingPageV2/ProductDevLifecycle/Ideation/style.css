@@ -2,8 +2,17 @@ a {
     text-decoration: none;
     color: #FFFFFF;
   }
-  .background-black {
+
+
+  .background-black-wheel {
     background-color: black;
+    width: 70vh;
+  
+  }
+
+  .background-black-text {
+    background-color: black;
+    width: 75vh; 
   }
   .ProductDevText {
     width: 76.1vh;
@@ -74,8 +83,9 @@ a {
   }
 
   .DevelopmentWheel {
+    display: block;
     margin-top: 12.55vh;
-    margin-left: 12.55vh;;
+    margin-left: 12.55vh;
     transform: rotate(360deg)
   }
   .DevelopmentWheelTwo {
