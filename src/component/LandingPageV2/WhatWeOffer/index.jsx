@@ -20,9 +20,7 @@ const WhatWeOffer = () => {
           <div
             className="w-100 text-uppercase software-hardware-style software-color py-3"
             onClick={() => {setShowSoftwareInfo(!showSoftwareInfo)
-                            setShowHardwareInfo(false)}} 
-            /*onMouseEnter={() => setShowSoftwareInfo(true)}
-            onMouseLeave={() => setShowSoftwareInfo(false)}*/
+                            setShowHardwareInfo(false)}}
           >
             Software
           </div>
