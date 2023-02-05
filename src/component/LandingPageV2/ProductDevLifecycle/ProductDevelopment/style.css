@@ -4,7 +4,7 @@ a {
   }
 
   .productDevcontainer{
-    width: 60%;
+    width: 100vh;
     padding-left:5%;
   }
 
@@ -12,7 +12,7 @@ a {
     background-color: black;
   }
   .ProductDevText {
-    width: 78.3vh;
+    width: 78.3vw;
     height: 34.5vh;
     left: 20.95vh;
     top: 23.46vh;
@@ -22,7 +22,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 11.22vh;
+    font-size: 11.22vmin;
     line-height: 11.22vh;
     /* or 100% */
     
@@ -33,7 +33,7 @@ a {
   }
 
   .paragraphText {
-    width: 75.28vh;
+    width: 75.28%;
     height: 29.86vh;
     top: 71.14vh;
     margin-top: 6.27vh;
@@ -41,7 +41,7 @@ a {
     font-family: 'Outfit 400';
     font-style: normal;
     font-weight: 400;
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
     line-height: 3.51vh;
     /* or 156% */
     
