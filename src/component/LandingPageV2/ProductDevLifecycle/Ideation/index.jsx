@@ -6,9 +6,14 @@ const Ideation = () => {
     return (
         <>
         <div className="background-black-wheel">
+        <>
+        <div className="background-black-wheel">
             <div className = "DevelopmentWheelTwo">
               <img style={{width: 'min(64vh, 100vw)'}} src ={DevelopmentWheel} />
             </div>
+        </div>
+        <div className="background-black-text">
+            <div className = "alignItemsRight">
         </div>
         <div className="background-black-text">
             <div className = "alignItemsRight">
