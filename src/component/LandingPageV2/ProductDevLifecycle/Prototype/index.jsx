@@ -4,11 +4,14 @@ import './style.css';
 
 const Prototype = () => {
     return (
-          <div className="background-black">
-            <div className = "alignItemsRight">
-            <div className = "DevelopmentWheelThree">
-              <img  style={{width: '64vh'}} src ={DevelopmentWheel} />
+          <>
+            <div className="background-black-wheel">
+              <div className = "DevelopmentWheelThree">
+                <img  style={{width: '64vh'}} src ={DevelopmentWheel} />
+              </div>
             </div>
+            <div className="background-black-text">
+            <div className = "alignItemsRight">
             <div className="ideation">
               <div className = "column">
                 <div className="PrototypeText">Prototype</div>
@@ -17,6 +20,7 @@ const Prototype = () => {
             </div>
            </div>
            </div>
+           </>
             
     );
 };
