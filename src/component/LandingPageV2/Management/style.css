@@ -69,21 +69,19 @@
   }
 
   #title {
-    left: 52%;
-    top: 20%;
+    left: 52vw;
+    top: 20vw;
     font-family: 'Space Mono 700';
     font-size: 8.9vh;
     line-height: 11.37vh;
-    margin-left: 60%;
-    margin-top: -30%;
+    margin-top: 30%;
   }
 
   #description {
-    width: 30%;
+    width: 80%;
     font-family: 'Outfit 300';
     font-size: 2.47vh;
     line-height: 3.7vh;
-    margin-left: 60%;
     margin-top: 2%;
   }
 
@@ -140,10 +138,21 @@
   }
 
   .button {
-    width: 10%;
+    width: 20vh;
     font-family: 'Outfit 300';
     font-size: 2.47vh;
     line-height: 3.7vh;
-    margin-left: 60%;
-    margin-top: 3%;
+    margin-top: 10%;
+  }
+
+  .management-wheel {
+    width: 90vh;
+    margin: 0vw;
+    padding: 0vw;
+  }
+
+  .management-text {
+    width: 70vh;
+    margin: 0vw;
+    padding: 0vw;
   }
