@@ -168,4 +168,24 @@ a {
     color: #187DFF;
   }
  
-   
+@media only screen and (max-device-width: 650px) {
+  .background-black {
+    width: 100vw;
+  }
+
+  .ProductDevText {
+    word-break: break-word;
+    font-size: 5vh;
+    line-height: 5vh;
+    width: calc(100vw - 10%);
+  }
+
+  .paragraphText {
+    width: calc(100vw - 10%);
+    padding-right: 10%;
+  }
+
+  .alignItemsRight {
+    flex-direction: column;
+  }
+}

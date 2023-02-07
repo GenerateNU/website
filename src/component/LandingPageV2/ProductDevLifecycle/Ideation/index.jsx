@@ -10,9 +10,9 @@ const Ideation = () => {
           <div className="DevelopmentWheelTwo">
             <img style={{ width: "64vh" }} src={DevelopmentWheel} />
           </div>
-          <div className="DevelopmentWheelTwoMobile">
+          {/* <div className="DevelopmentWheelTwoMobile">
             <img style={{ width: "30vh" }} src={DevelopmentWheelMobile} />
-          </div>
+          </div> */}
           <div className="ideation">
             <div className="column">
               <div className="IdeationText">Ideation</div>
