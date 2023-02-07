@@ -189,3 +189,24 @@ a {
     flex-direction: column;
   }
 }
+
+.DevelopmentWheelImage {
+  width: 64vh;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .DevelopmentWheelOne, .DevelopmentWheelTwo, .DevelopmentWheelThree {
+    size: 30.11vh;
+    height: 30.11vh;
+    margin: 0 auto;
+  }
+
+  .DevelopmentWheelImage {
+    width: 30.11vh;
+  }
+
+  .ideation {
+    width: 100vw;
+    margin-left: 5%;
+  }
+}
