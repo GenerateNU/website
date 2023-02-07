@@ -75,42 +75,45 @@ a {
 
   .DevelopmentWheel {
     margin-top: 12.55vh;
-    margin-left: 12.55vh;;
-    transform: rotate(360deg)
+    margin-left: 12.55vh;
+    transform: rotate(360deg);
   }
-  .DevelopmentWheelTwo, .DevelopmentWheelTwoMobile {
+  .DevelopmentWheelTwo {
     height: 63.11vh;
     margin-top: 12.55vh;
     margin-left: 12.55vh;
     margin-bottom: 12.55vh;
-    transform: rotate(97deg)
+    transform: rotate(97deg);
   }
   .DevelopmentWheelThree {
-    margin-top: 12.55vh;;
-    margin-left: 12.55vh;;
-    margin-bottom: 12.55vh;;
-    transform: rotate(230deg)
-    
+    margin-top: 12.55vh;
+    margin-left: 12.55vh;
+    margin-bottom: 12.55vh;
+    transform: rotate(230deg);
+  }
+  .DevelopmentWheelImage {
+    width: 64vh;
   }
 
-  /* @media(max-width: 768px) {
-    .DevelopmentWheelTwoMobile {
-        height: 30.11vh;
-      }
-
-      .DevelopmentWheelTwo {
-        display: none;
-      }
-  }
-
-  @media(min-width: 768px) {
-    .DevelopmentWheelTwoMobile {
-      display: none;
+  @media only screen and (max-device-width: 650px) {
+    .DevelopmentWheelOne, .DevelopmentWheelTwo, .DevelopmentWheelThree {
+      size: 30.11vh;
+      height: 30.11vh;
+      margin: 0 auto;
     }
-  } */
+
+    .DevelopmentWheelImage {
+      width: 30.11vh;
+    }
+
+    .ideation {
+      width: 100vw;
+      margin-left: 5%;
+    }
+  }
 
   .ideation {
-    margin-left: 12.55vh;;
+    margin-left: 12.55vh;
     margin-top: 5%;
   }
 

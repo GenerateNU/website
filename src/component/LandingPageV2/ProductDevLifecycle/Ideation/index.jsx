@@ -1,6 +1,5 @@
 import React from "react";
 import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel.png"
-import DevelopmentWheelMobile from "../ProductDevelopment/DevelopmentWheelMobile.png";
 import './style.css';
 
 const Ideation = () => {
@@ -8,7 +7,7 @@ const Ideation = () => {
       <div className="background-black">
         <div className="alignItemsRight">
           <div className="DevelopmentWheelTwo">
-            <img style={{ width: "64vh" }} src={DevelopmentWheel} />
+            <img class="DevelopmentWheelImage" src={DevelopmentWheel} />
           </div>
           {/* <div className="DevelopmentWheelTwoMobile">
             <img style={{ width: "30vh" }} src={DevelopmentWheelMobile} />
