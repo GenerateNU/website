@@ -93,7 +93,7 @@ a {
     
   }
 
-  @media(max-width: 768px) {
+  /* @media(max-width: 768px) {
     .DevelopmentWheelTwoMobile {
         height: 30.11vh;
       }
@@ -107,7 +107,7 @@ a {
     .DevelopmentWheelTwoMobile {
       display: none;
     }
-  }
+  } */
 
   .ideation {
     margin-left: 12.55vh;;
