@@ -1,28 +1,23 @@
-h2 {
+.projects-container {
+  padding: 2vh;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 8.78vh;
+  font-size: 14.77vh;
+  line-height: 15vh;
   color: white;
   text-align: center;
 }
 
-.projects-container {
-  padding: 2vh;
-}
-
 .blurb-container {
-  width: 54vh;;
+  width: 53vh;;
   text-align: left;
   padding: 2vh;
-}
-
-p {
+  font-family: 'Outfit 300';;
   font-style: normal;
-  font-weight: 300;
-  font-size: 2vh;
-  line-height: 3.75vh;
+  font-size: 3.15vh;
+  line-height: 4.7vh;
   color: black;
 }
 
