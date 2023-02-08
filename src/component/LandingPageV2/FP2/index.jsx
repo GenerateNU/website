@@ -10,7 +10,7 @@ export default function FP2() {
       <div className="column-1">
         <div className="heading-container">
           <h1 id="fp2-header">SmartyPill</h1>
-          <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
+          <p id="fp2-teams">
             software + hardware
           </p>
         </div>
