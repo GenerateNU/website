@@ -140,17 +140,36 @@ h1 {
   font-size: 9vh;
 }
 
+#fp2-teams {
+  font-family: "Space Mono"; 
+  font-size: 3vh;
+}
+
 @media only screen and (max-device-width: 650px) {
   .parent {
     flex-direction: column;
   }
 
   #fp2-header {
-    font-size: 7vh;
+    font-size: 12vw;
+  }
+
+  #fp2-teams {
+    font-size: 5vw;
   }
 
   .client-blurb {
     padding-top: 3vh;
+    margin: auto;
+    margin-left: -6vw;
+  }
+
+  .name-order {
+    margin-right: 0;
+  }
+
+  .client {
+    align-items: baseline
   }
 
   .client-blurb p {
@@ -178,9 +197,16 @@ h1 {
 
   .quote-container blockquote {
     font-size: 2vh;
+    margin-left: 0;
+  }
+
+  .quote-container blockquote::before {
+    top: -3.5vh;
+    left: 1.5vh;
   }
 
   .quote-container blockquote::after {
-    bottom: -2.5vh;
+    left: -0.5vh;
+    bottom: -6vh;
   }
 }
