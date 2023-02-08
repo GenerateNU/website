@@ -96,10 +96,12 @@ a {
   }
 
   @media only screen and (max-device-width: 650px) {
-    .DevelopmentWheelOne, .DevelopmentWheelTwo, .DevelopmentWheelThree {
+    .DevelopmentWheel, .DevelopmentWheelTwo, .DevelopmentWheelThree {
       size: 30.11vh;
       height: 30.11vh;
-      margin: 0 auto;
+      margin-top: 30.11vh;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .DevelopmentWheelImage {
@@ -109,6 +111,10 @@ a {
     .ideation {
       width: 100vw;
       margin-left: 5%;
+    }
+
+    .IdeationText, .PrototypeText, .ProductionText {
+      font-size: 15vw;
     }
   }
 
