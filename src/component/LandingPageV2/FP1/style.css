@@ -2,30 +2,36 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 6vh;
+  padding: 20vh;
   background-color: white;
 }
 
 .column-1 {
-  margin-top: 10vh;
+  width: 60vh;
+}
+
+.column-1-text {
+  padding-top: 15vh;
+  padding-left: 25vh;
   display: flex;
   flex-direction: column;
 }
 
 .column-2 {
+  width: 70vh;
   display: flex;
   flex-direction: column;
 }
 
 .column-3 {
+  width: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .client {
-  display: flex;
+  width: 50vh;
   flex-direction: row;
-  justify-content: space-between;
   padding-top: 3%;
 }
 
@@ -58,11 +64,18 @@
   width: 40vh;
   padding-top: 6vh;
   align-self: flex-end;
+  font-size: 3vh;
 }
 
 .bottom-corner {
   padding-bottom: 5vh;
   align-self: flex-start;
+}
+
+.bottom-corner-img {
+  margin-top: -30vh;
+  margin-left: 10vh;
+  height: 25vh;
 }
 
 .product-img {
@@ -78,8 +91,15 @@
   height: 40vh;
 }
 
+.top-corner-img {
+  margin-top: 5vh;
+  margin-right: 8vh;
+  align-self: flex-end;
+  height: 25vh;
+}
+
 blockquote {
-  font-family: Outfit 300;
+  font-family: "Outfit 300";
   font-size: 2.5vh;
   position: relative;
   margin: 2vh;
@@ -96,6 +116,7 @@ blockquote:before {
   left: -2vh;
   content: "\201C";
 }
+
 blockquote:after {
   font-family: "Space Mono 700";
   color: #ffbf3c;
@@ -103,6 +124,7 @@ blockquote:after {
   float: right;
   font-size: 6vh;
   margin-top: 2vh;
+  margin-right: 12vh;
   line-height: 1;
   right: 0vh;
   bottom: -1vh;
@@ -116,4 +138,11 @@ h1 {
   font-size: 9vh;
   line-height: 9vh;
   text-transform: uppercase;
+}
+
+.quote-container {
+  font-family: "Outfit 300";
+  font-size: 2.5vh;
+  position: relative;
+  margin: 2vh;
 }
