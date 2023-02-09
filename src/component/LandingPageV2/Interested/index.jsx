@@ -11,7 +11,7 @@ import leftcarrot from "../../LandingPageV2/Interested/chevron.png";
 const Interested = () => {
   return (
     <div className="bg-white interestedcontainer">
-      <div className="interestedText">Interested</div>
+      <div className="interestedText">Interested?</div>
       <div className="interestedflexbox">
         <div className="interestedJoinNowBox">
           <a href="/apply" className="joinCommunitytext">
