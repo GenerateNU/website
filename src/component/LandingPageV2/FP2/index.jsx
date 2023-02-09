@@ -9,8 +9,8 @@ export default function FP2() {
     <div className="parent">
       <div className="column-1">
         <div className="heading-container">
-          <h1 style={{fontSize: "9vh"}}>SmartyPill</h1>
-          <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
+          <h1 id="fp2-header">SmartyPill</h1>
+          <p id="fp2-teams">
             software + hardware
           </p>
         </div>
