@@ -19,8 +19,8 @@ const WhatWeOffer = () => {
         <div className="vh-20 text-uppercase text-center">
           <div
             className="w-100 text-uppercase software-hardware-style software-color py-3"
-            onMouseEnter={() => setShowSoftwareInfo(true)}
-            onMouseLeave={() => setShowSoftwareInfo(false)}
+            onClick={() => {setShowSoftwareInfo(!showSoftwareInfo)
+                            setShowHardwareInfo(false)}}
           >
             Software
           </div>
@@ -171,7 +171,8 @@ const WhatWeOffer = () => {
         <div className="position-relative vh-20 text-center">
           <div
             className="bg-black position-absolute bottom-0 w-100 text-uppercase software-hardware-style hardware-color py-3"
-            onMouseEnter={() => setShowHardwareInfo(true)}
+            onClick={() => {setShowHardwareInfo(!showHardwareInfo)
+                            setShowSoftwareInfo(false)}}
             onMouseLeave={() => setShowHardwareInfo(false)}
           >
             Hardware
