@@ -160,8 +160,10 @@ h1 {
 
   .client-blurb {
     padding-top: 3vh;
+    padding-bottom: 3vh;
     margin: auto;
-    margin-left: -6vw;
+    display: flex;
+    /* margin-left: -6vw; */
   }
 
   .name-order {
@@ -174,6 +176,7 @@ h1 {
 
   .client-blurb p {
     font-size: 2vh;
+    margin: auto;
   }
 
   .product-img-container {
