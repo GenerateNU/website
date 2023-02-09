@@ -8,12 +8,14 @@
 .column-1 {
   display: flex;
   flex-direction: column;
+  width: 80vh;
 }
 
 .column-2 {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 80vh;
 }
 
 .column-3 {
