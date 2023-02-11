@@ -167,6 +167,8 @@
 }
 
 .intro-navbar {
+  position: fixed;
+  z-index: 2;
   margin-left: 3%;
   padding-top: 2%;
 }
