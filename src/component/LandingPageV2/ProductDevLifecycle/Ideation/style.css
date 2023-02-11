@@ -14,26 +14,6 @@ a {
     background-color: black;
     width: 80vh; 
   }
-  .ProductDevText {
-    width: 76.1vh;
-    height: 33.53vh;
-    left: 20.36vh;
-    top: 22.8vh;
-    
-    /* H1 */
-    
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 11.22vh;
-    line-height: 11.22vh;
-    /* or 100% */
-    
-    text-transform: uppercase;
-    
-    color: #FFFFFF;
-    
-  }
 
   .paragraphText {
     width: 55vh;
