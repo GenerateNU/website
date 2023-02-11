@@ -48,6 +48,7 @@ p {
   .blurb-container p {
     text-align: left;
     padding: 3.5vw;
+    font-size: 4.5vw;
   }
   .featured_projects_container {
     padding-top: 8em;
