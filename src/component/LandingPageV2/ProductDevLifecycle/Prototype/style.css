@@ -44,11 +44,14 @@ a {
 
   
   .DevelopmentWheelThree {
+    height: 63.11vh;
     margin-top: 12.55vh;
     margin-left: 12.55vh;
-    margin-bottom: 12.55vh;
-    transform: rotate(230deg)
     
+  }
+
+  .rotateThree {
+    transform: rotate(230deg);
   }
 
   .ideation {
