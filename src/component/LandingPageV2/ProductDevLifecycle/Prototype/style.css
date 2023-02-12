@@ -29,25 +29,7 @@ a {
     
     color: #FFFFFF;
   }
-  .ourProcessText {
-    width: 16.9vh;
-    height: 3.76vh;
-    left: 21.58vh;
-    top: 20.57vh;
-    margin-top: 12.55vh;
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5vh;
-    line-height: 3.76vh;
-    /* identical to box height, or 150% */
-
-
-    /* Core/MNGMNT Yellow */
-
-    color: #FFBF3C;
-  }
+  
 
 
   .column{
