@@ -11,7 +11,7 @@
 .value-card-header {
     color: white;
     font-family: 'Space Mono 700';
-    font-size: 200%;
+    font-size: 4.2vh;
     line-height: 100%;
     -webkit-text-stroke-width: 1.5px;
     height: 20%;
@@ -20,7 +20,7 @@
 .value-card-text {
     color: white;
     font-family: 'Outfit 300';
-    font-size: 100%;
+    font-size: 2vh;
     line-height: 140%;
     height: 80%;
     padding: 5%;
