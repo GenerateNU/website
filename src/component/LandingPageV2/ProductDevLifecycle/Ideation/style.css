@@ -47,12 +47,13 @@ a {
   
   .DevelopmentWheelTwo {
     height: 63.11vh;
-    margin-top: 12.55vh;;
-    margin-left: 12.55vh;;
-    margin-bottom: 12.55vh;;
-    transform: rotate(97deg)
+    margin-top: 12.55vh;
+    margin-left: 12.55vh;
   }
   
+  .rotateTwo {
+    transform: rotate(97deg);
+  }
 
   .ideation {
     margin-left: 12.55vh;;

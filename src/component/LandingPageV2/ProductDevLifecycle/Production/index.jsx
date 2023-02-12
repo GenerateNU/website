@@ -7,7 +7,7 @@ const Production = () => {
           <>
             <div className="background-black-wheel">
               <div className = "DevelopmentWheel">
-                <img  style={{width: '64vh'}} src ={DevelopmentWheel} />
+                <img  className="rotate" style={{width: '64vh'}} src ={DevelopmentWheel} />
               </div>
             </div>
             <div className="background-black-text">
