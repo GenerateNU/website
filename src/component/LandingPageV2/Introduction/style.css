@@ -54,7 +54,7 @@
   width: 110.39vh;
   height: 30.12vh;
   left: 1.17vh;
-  top: 1.19vh;
+  top: 6.0vh;
 
   font-family: "Space Mono";
   font-style: normal;
@@ -149,7 +149,7 @@
 .scrollimg {
   width: 10.04vh;
   object-fit: contain;
-  margin-bottom: -35vh;
+  margin-bottom: -70vh;
 }
 
 .scroll {
@@ -167,6 +167,8 @@
 }
 
 .intro-navbar {
+  position: fixed;
+  z-index: 2;
   margin-left: 3%;
   padding-top: 2%;
 }
