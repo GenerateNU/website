@@ -1,3 +1,9 @@
+/* @media only screen and (max-device-width: 650px) {
+        .vh-50 {
+        height: 100vh;
+    }
+  } */
+
 .vh-50 {
     height: 50vh;
 }
@@ -36,4 +42,22 @@
 
 .info-heading {
     font-family: "Outfit 600";
+    font-size: 3vw;
 }
+
+.info-text {
+    font-size: 1.5vw;
+}
+
+.fooper{
+    width: 100%;
+    overflow: auto;
+
+}
+
+.dot {
+    width: 33.33%;
+    float: left;
+    box-sizing: border-box;
+  }
+

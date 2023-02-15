@@ -54,8 +54,8 @@ export default class LandingPageV2 extends React.Component {
         >
           <Column className="flex-nowrap" id="mobile-page-container">
             <Intro />
-            <WhoWeAre />
-            <WhoWeAreResponse />
+            {/* <WhoWeAre />
+            <WhoWeAreResponse /> */}
             <WhatWeOffer />
             <ProductDevelopment />
             <Ideation />

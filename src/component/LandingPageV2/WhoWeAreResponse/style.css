@@ -17,30 +17,30 @@
 }
 
 .somesaytext {
-box-sizing: border-box;
-font-family: 'Space Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 8.78vh;
-line-height: 11.22vh;
-text-align: left;
-/* identical to box height, or 128% */
+    box-sizing: border-box;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8.78vh;
+    line-height: 11.22vh;
+    text-align: left;
+    /* identical to box height, or 128% */
 
-text-transform: uppercase;
-color: #6FCF97;
-text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF;
+    text-transform: uppercase;
+    color: #6FCF97;
+    text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF;
 }
 
 
 .weareresponse {
     padding:10%;
-font-family: 'Space Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 7.56vh;
-line-height: 11.22vh;
-text-transform: uppercase;
-color: white;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 7.56vh;
+    line-height: 11.22vh;
+    text-transform: uppercase;
+    color: white;
 }
 
 .generateLogoWhiteStyle {
