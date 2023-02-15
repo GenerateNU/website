@@ -68,7 +68,7 @@
 .product-img {
   /* position: absolute; */
   height: 80vh;
-  margin-top: -8vh;
+  margin-top: 9vh;
   margin-left: -4vh;
   min-height: 100%;
 }
@@ -116,4 +116,28 @@ h1 {
   font-size: 9vh;
   line-height: 9vh;
   text-transform: uppercase;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .parent {
+    flex-direction: column;
+  }
+
+  .client-blurb {
+    width: 40vh;
+    padding-top: 6vh;
+    align-self: flex-end;
+    font-size: 2vh;
+  }
+
+  .product-img {
+    /* position: absolute; */
+    height: 60vh;
+    margin-top: 5vh;
+    margin-left: -17vh;
+    min-height: 100%;
+    text-align: center;
+  }
+
+
 }
