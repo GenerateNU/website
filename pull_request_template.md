@@ -1,11 +1,11 @@
  # What was the ticket?
- WT-41 - I worked on mobile responsiveness by attempting to coding the mobile Featured Projects page panel to match the mobile UI in Figma.
+ WT-41 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
  Link to Ticket: https://generatenu.atlassian.net/browse/WT-41?atlOrigin=eyJpIjoiMjY1ODFmZTRkMDVmNGY1N2ExZjc4MjJiYThlODNlMDUiLCJwIjoiaiJ9
 
  
  # What did I do?
  
-I changed some of the CSS properties of the text components on the Featured Projects panel when the display is switched to mobile via using selectors to specifically change properties such as DOM layout and text font-size.
+I changed some of the CSS properties of the text components on the Featured Projects panel when the display is switched to mobile via using selectors to specifically change properties such as DOM layout (padding, margins) and text font-size.
  
  # How did I test it?
  
