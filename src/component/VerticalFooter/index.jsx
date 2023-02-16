@@ -16,7 +16,7 @@ export default function VerticalFooter() {
       <Row>
         <div className = "rectangleLogo">
           <div className="logo-background sherm">
-            <img src={GenerateLogo} height="50vh" width="50vw" />
+            <img src={GenerateLogo} href="/" height="50vh" width="50vw" />
           </div>
         </div>
       </Row>

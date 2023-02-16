@@ -18,12 +18,14 @@ function VerticalFooter() {
       <Row>
         <div>
           <div className="sherm">
-            <img
-              className="logo-placement logo-shadow"
-              src={GenerateLogo}
-              height="80%"
-              width="60%"
-            />
+            <a href="/">
+              <img
+                className="logo-placement logo-shadow"
+                src={GenerateLogo}
+                height="80%"
+                width="100%"
+              />
+            </a>
           </div>
         </div>
       </Row>
