@@ -29,5 +29,5 @@ Describe in detail steps you used to test the changes you have made.
  
  # Screenshots
  
- ![alt text](public/images/Featured_projects_mobile.png?raw=true "FIGMA") 
-![alt text](public/images/Featured_projects_mobile_UI_local.png?raw=true "LOCAL")
+ ![alt text](public/images/PRImages/Featured_projects_mobile.png?raw=true "FIGMA") 
+![alt text](public/images/PRImages/Featured_projects_mobile_UI_local.png?raw=true "LOCAL")
