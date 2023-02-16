@@ -28,6 +28,8 @@ Describe in detail steps you used to test the changes you have made.
  # Additional comments for the reviewers
  
  # Screenshots
- 
+ FIGMA
  ![alt text](public/images/PRImages/Featured_projects_mobile.png?raw=true "FIGMA") 
+
+ MY VERSION
 ![alt text](public/images/PRImages/Featured_projects_mobile_UI_local.png?raw=true "LOCAL")
