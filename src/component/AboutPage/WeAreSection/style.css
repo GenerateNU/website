@@ -14,7 +14,7 @@
     font-size: 4.2vh;
     line-height: 100%;
     -webkit-text-stroke-width: 1.5px;
-    height: 20%;
+    height: 15%;
 }
 
 .value-card-text {
@@ -59,7 +59,7 @@
 }
 
 .we-are-header-space {
-    height: 20vh;
+    height: calc(20vh - 50px);
 }
 
 .cards-space {
