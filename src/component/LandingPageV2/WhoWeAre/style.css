@@ -10,7 +10,7 @@ padding-left: 15%;
 font-family: 'Space Mono 700' ;
 font-style: normal;
 font-weight: 700;
-font-size: 8.78vh;
+font-size: min(8.78vh, 6vw);
 line-height: 11.22vh;
 text-transform: uppercase;
 color: #FFFFFF;
