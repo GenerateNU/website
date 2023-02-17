@@ -34,11 +34,12 @@ text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF;
 
 .weareresponse {
     padding:5%;
+    padding-top: 10;
 font-family: 'Space Mono';
 font-style: normal;
 font-weight: 700;
-font-size: 7.56vh;
-line-height: 8vw;
+font-size: 7.5vh;
+line-height: max(8vw, 7vh);
 text-transform: uppercase;
 color: white;
 }
