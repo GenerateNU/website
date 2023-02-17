@@ -14,7 +14,8 @@ a {
   
 
   .paragraphText {
-    width: 55vh;
+    /*width: 55vh;*/
+    width: min(55vh, calc(100vw - 20vh));
     height: 29.86vh;
     top: 71.14vh;
     margin-top: 6.27vh;
@@ -46,7 +47,7 @@ a {
   .DevelopmentWheelThree {
     height: 63.11vh;
     margin-top: 12.55vh;
-    margin-left: 12.55vh;
+    /*margin-left: 12.55vh;*/
     
   }
 
@@ -58,28 +59,7 @@ a {
     margin-left: 12.55vh;
   }
 
-  .IdeationText {
-    width: 44.29vh;
-    height: 11.22vh;
-    left:  96.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size:8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
-    /* Core/MNGMNT Yellow */
-
-    color: #FFBF3C;
-  }
+ 
 
   .PrototypeText{
     width: 44.29vh;
@@ -93,7 +73,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size:8.78vh;
+    font-size: 8vh;
     line-height: 11.22vh;
     /* identical to box height, or 128% */
 
@@ -104,27 +84,4 @@ a {
     color: #FF6660;
   }
 
-  .ProductionText{
-    width: 44.29vh;
-    height: 11.22vh;
-    left:  96.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size:8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
-    
-
-    color: #187DFF;
-  }
- 
-   
+  
