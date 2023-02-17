@@ -7,6 +7,9 @@ a {
   .background-black-wheel {
     background-color: black;
     width: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   
   }
 
@@ -16,7 +19,7 @@ a {
   }
 
   .paragraphText {
-    width: 55vh;
+    width: min(55vh, calc(100vw - 20vh));
     height: 29.02vh;
     top: 69.14vh;
     margin-top: 6.1vh;
@@ -48,7 +51,7 @@ a {
   .DevelopmentWheelTwo {
     height: 63.11vh;
     margin-top: 12.55vh;
-    margin-left: 12.55vh;
+    /*margin-left: 12.55vh;*/
   }
   
   .rotateTwo {
@@ -72,7 +75,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 8.78vh;
+    font-size: 8vh;
     line-height: 11.22vh;
     /* identical to box height, or 128% */
 
@@ -83,50 +86,6 @@ a {
     color: #FFBF3C;
   }
 
-  .PrototypeText{
-    width: 44.29vh;
-    height: 11.22vh;
-    left: 95.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
-    
-
-    color: #FF6660;
-  }
-
-  .ProductionText{
-    width: 44.29vh;
-    height: 11.22vh;
-    left: 95.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
-    
-
-    color: #187DFF;
-  }
+  
  
    
