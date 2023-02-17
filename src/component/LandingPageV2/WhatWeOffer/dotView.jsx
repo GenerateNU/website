@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 
-// children is an array of elements
+// children is an array of contents in HTML format
 // numElementsPerPage is the number of elements to be displayed per page
 const DotView = ({ children, numElementsPerPane }) => {
   const numChildren = children.length;
@@ -9,10 +9,14 @@ const DotView = ({ children, numElementsPerPane }) => {
 
   const dotter = () =>
     Array.from({ length: numChildren / numElementsPerPane }, (_, index) => (
-      <div className="dot" key={index}>
+      <button className="dot" key={index} onClick={clickFunc}>
         dot!
-      </div>
+      </button>
     ));
+
+  const clickFunc = () => {
+    setCurrentChild(currentChild + numElementsPerPane);
+  };
 
   const displayer = () => {
     return children.slice(currentChild, currentChild + numElementsPerPane);
