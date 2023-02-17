@@ -1,5 +1,5 @@
 import React from "react";
-import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel.png"
+import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel_230deg.png"
 import './style.css';
 
 const Prototype = () => {
@@ -7,7 +7,7 @@ const Prototype = () => {
           <>
             <div className="background-black-wheel">
               <div className = "DevelopmentWheelThree">
-                <img  className = "rotateThree" style={{width: '64vh'}} src ={DevelopmentWheel} />
+                <img  style={{width: 'min(64vh, 100vw)'}} src ={DevelopmentWheel} />
               </div>
             </div>
             <div className="background-black-text">
