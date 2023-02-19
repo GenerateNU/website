@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 
 const DotView = ({
   children,
@@ -16,14 +17,8 @@ const DotView = ({
     )
   );
 
-  const clickFunc = (index) => {
-    if(index * numElementsPerPane === currentChild) return;
-    setCurrentChild(index * numElementsPerPane);
-    setButtonColors(
-      buttonColors.map((_, i) =>
-        i === index * numElementsPerPane ? currentButtonColor : idleButtonColor
-      )
-    );
+  const displayer = () => {
+    return children.slice(currentChild * numElementsPerPane, currentChild * numElementsPerPane + numElementsPerPane);
   };
 
   const dotter = () => {
@@ -37,11 +32,21 @@ const DotView = ({
     ));
   };
 
-  const displayer = () => {
-    return children.slice(currentChild, currentChild + numElementsPerPane);
+  const clickFunc = (index) => {
+    if (index === currentChild) return;
+    setCurrentChild(index);
+    setButtonColors((prevButtonColors) =>
+      prevButtonColors.map((_, i) =>
+        i === index ? currentButtonColor : idleButtonColor
+      )
+    );
   };
 
-  return (
+  useEffect(() => {
+    dotter();
+  }, [currentChild, buttonColors]);
+
+  return  (
     <div className="h-60vh">
       {displayer()}
       {dotter()}
