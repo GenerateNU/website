@@ -2,7 +2,7 @@ import React from "react";
 import Categories from "./Categories";
 import Search from "./Search";
 import NavBar from "../NavBar";
-import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png";
+
 
 export default function ApplyPage() {
   return (

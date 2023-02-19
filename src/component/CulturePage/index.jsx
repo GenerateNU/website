@@ -1,6 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/esm/Container";
-import Row from "react-bootstrap/esm/Row";
 import CollageSection from "./Collage"
 import Events from "./Events";
 import Events2 from "./Events2";
@@ -14,13 +12,13 @@ import Diversity from "./Diversity";
 import VerticalFooter from "../VerticalFooter";
 import Showcase from "./Showcase";
 import "./style.css";
+import DesktopMobilfy from "../desktop-mobile";
+
 
 export default class CulturePage extends React.Component {
   render() {
     return (
-      <div class="vh-100 horizontal-scroll bg-white container-fluid" tab-index="0">
-      <Row className="flex-nowrap">
-          {/* Add components of culture page here  */}
+      <DesktopMobilfy bgColor={"white"}>
           <IntroSection />
           <IntroImages/>
           <BelongHere/>
@@ -33,8 +31,7 @@ export default class CulturePage extends React.Component {
           <Showcase/>
           <CollageSection />
           <VerticalFooter/>
-        </Row>
-      </div>
+        </DesktopMobilfy >
     );
   }
 }

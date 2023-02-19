@@ -1,7 +1,5 @@
 import React from "react";
 //import Container from "react-bootstrap/esm/Container";
-import Row from "react-bootstrap/esm/Row";
-import Column from "react-bootstrap/esm/Col";
 import WhatWeOffer from "./WhatWeOffer";
 import Interested from "./Interested";
 import FeaturedProjects from "./FeaturedProjects";
@@ -20,17 +18,14 @@ import Management from "./Management";
 import Footer from "../VerticalFooter";
 //import NavBar from "../NavBar";
 //import { Navbar } from "react-bootstrap";
+import DesktopMobilfy from "../desktop-mobile";
+
 
 export default class LandingPageV2 extends React.Component {
     
   render() {
     return (
-      <>
-        <div
-          class="vh-100 horizontal-scroll bg-white container-fluid"
-          tab-index="0"
-        >
-          <Row className="flex-nowrap">
+      <DesktopMobilfy bgColor={"white"}>
             <Intro />
             <WhoWeAre />
             <WhoWeAreResponse />
@@ -41,39 +36,15 @@ export default class LandingPageV2 extends React.Component {
             <Production />
             <Management />
             <FeaturedProjects />
-            <FP1 />
-            <FP2 />
+            <FP1/>
+            <FP2/>
             <PreviousProjects />
             <Interested />
             <Footer />
-          </Row>
-        </div>
-        <div
-          class="vw-100 mobile vertical-scroll bg-black container-fluid"
-          tab-index="0"
-        >
-          <Column className="flex-nowrap" id="mobile-page-container">
-            <Intro />
-            <WhoWeAre />
-            <WhoWeAreResponse />
-            <WhatWeOffer />
-            <ProductDevelopment />
-            <Ideation />
-            <Prototype />
-            <Production />
-            <Management />
-            <FeaturedProjects />
-            <FP1 />
-            <FP2 />
-            <PreviousProjects />
-            <Interested />
-            <Footer />
-          </Column>
-        </div>
-      </>
+      </DesktopMobilfy>
     );
-  }
 };
+}
 /*
 export default class LandingPageV2 extends React.Component {
   constructor() {
