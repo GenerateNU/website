@@ -6,17 +6,17 @@ import "./style.css";
 export default function IntroSection() {
   return (
     <div className="position-relative w-80 vh-100">
-      <div className="intro-navbar"><NavBar /> </div>
-       
-      <div className="w-50 pe-5 d-flex">
-      <div className= "generateLogo">
-        <img src ={logo} />
+      <div className="intro-navbar">
+        <NavBar />{" "}
       </div>
+
+      <div className="w-50 d-flex">
+        <div className="generateMascotContainer">
+          <img className="generateMascot" src={logo} alt="Generate Mascot" />
+        </div>
         <div className="culture-quote-positioning p-3">
           <div className="our-culture-quote">
-            <div className="culture">
-            We make wicked projects and plan wicked events.
-            </div>
+            We make wicked projects and plan wicked events
           </div>
         </div>
       </div>
