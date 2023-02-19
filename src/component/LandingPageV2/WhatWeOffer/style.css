@@ -49,15 +49,11 @@
     font-size: 1.5vw;
 }
 
-.fooper{
-    width: 100%;
-    overflow: auto;
-
-}
-
-.dot {
-    width: 33.33%;
-    float: left;
-    box-sizing: border-box;
+.dot_button {
+display: inline-block;
+  width: 1vh;
+  height: 1vh;
+  border-radius: 50%;
+  border: none;
   }
 

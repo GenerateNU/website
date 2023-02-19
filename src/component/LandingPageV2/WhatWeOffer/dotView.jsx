@@ -1,21 +1,40 @@
 import React, { useState } from "react";
-import "./style.css";
 
-// children is an array of contents in HTML format
-// numElementsPerPage is the number of elements to be displayed per page
-const DotView = ({ children, numElementsPerPane }) => {
+const DotView = ({
+  children,
+  numElementsPerPane,
+  currentButtonColor,
+  idleButtonColor,
+}) => {
   const numChildren = children.length;
   const [currentChild, setCurrentChild] = useState(0);
+  const [buttonColors, setButtonColors] = useState(
+    Array.from({ length: numChildren / numElementsPerPane }, (_, index) =>
+      index === currentChild * numElementsPerPane
+        ? currentButtonColor
+        : idleButtonColor
+    )
+  );
 
-  const dotter = () =>
-    Array.from({ length: numChildren / numElementsPerPane }, (_, index) => (
-      <button className="dot" key={index} onClick={clickFunc}>
-        dot!
-      </button>
+  const clickFunc = (index) => {
+    if(index * numElementsPerPane === currentChild) return;
+    setCurrentChild(index * numElementsPerPane);
+    setButtonColors(
+      buttonColors.map((_, i) =>
+        i === index * numElementsPerPane ? currentButtonColor : idleButtonColor
+      )
+    );
+  };
+
+  const dotter = () => {
+    return buttonColors.map((buttonColor, index) => (
+      <button
+        className="dot_button"
+        style={{ backgroundColor: buttonColor }}
+        key={index}
+        onClick={() => clickFunc(index)}
+      ></button>
     ));
-
-  const clickFunc = () => {
-    setCurrentChild(currentChild + numElementsPerPane);
   };
 
   const displayer = () => {
