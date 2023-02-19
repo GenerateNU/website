@@ -22,7 +22,7 @@ export default function FP1() {
           </div> 
         </div>
         <div>
-          <p style={{width: "40vh"}} className="client-blurb">
+          <p style={{width: "38vh"}} className="client-blurb" id="fp1-client-blurb">
             A unique, two-sided promotional and loyalty platform built to level
             the playing field for independent bars and restaurants by allowing
             them to utilize an app to acquire and retain customers as easily and
@@ -41,9 +41,9 @@ export default function FP1() {
       </div>
       <div className="column-3">
         <div className="top-corner">
-          <img style={{height: "25vh"}} src={TopCorner} alt="" />
+          <img style={{width: "38vh", height: "25vh"}} src={TopCorner} alt="" />
         </div>
-        <div className="quote-container">
+        <div className="quote-container" id="fp1-quote-container">
           <blockquote>
             Generate was great as a learning experience for me, as someone who
             hadn’t built a tech company before. The team of experienced Generate
