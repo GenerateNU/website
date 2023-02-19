@@ -80,21 +80,49 @@ a {
     box-shadow: 5px 10px;
   }
 
-    .joinCommunitytext {
-      width: 16.8vh;
-      height: 4.5vh;
-      margin-left: 20%;    
-      font-family: 'Space Mono 400';
-      font-style: normal;
-      /* font-weight: 400; */
-      font-size: 4vh;
-      line-height: 6vh;
-      text-align: center;
-  
-      /* White */
-  
-      color: #FFFFFF;
-    }
-  
+  .joinCommunitytext {
+    width: 16.8vh;
+    height: 4.5vh;
+    margin-left: 20%;    
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 4vh;
+    line-height: 6vh;
+    text-align: center;
 
+    /* White */
+
+    color: #FFFFFF;
+  }
+
+  #join-span {
+    display: contents;
+  }
+  
+@media only screen and (max-device-width: 650px) {
+  .interestedcontainer {
+    width: 100%;
+    background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center fixed;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    padding: 5vh 0;
+  }
+
+  .interestedText {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8vh;
+    text-align: center;
+  }
+
+  .interestedflexbox {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #join-span {
+    display: flex;
+  }
+}
 
