@@ -90,10 +90,6 @@ a:hover {
     width: 100%;
   }
 
-  .footer-container .social-icons {
-    margin: 0;
-  }
-
   #footer-links {
     display: flex;
     justify-content: space-around;
@@ -119,11 +115,22 @@ a:hover {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+    margin-right: 8vw;
+  }
+
+  .social-icons .row {
+    padding-bottom: 2vh;
+  }
+
+  .social-icons .icon {
+    padding-right: 2vh;
   }
 
   .social-icons .icon a img {
     height: auto;
-    width: 6vh;
+    width: 4vh;
   }
 
   .logo-placement {
