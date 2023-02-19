@@ -14,13 +14,18 @@
     background-size: cover;
 }
 
-.wearetext {
+.text-container {
   position: relative;
-  width: 16.2vh;
-  height: 6.46vh;
-  left: 15.24vh;
-  top: 8.19vh;
+  left: 8vw;
+  top: calc(30vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.wearetext {
+  width: 30vh;
+  padding-left: 10px;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
@@ -32,11 +37,11 @@
 
 .generatetext {
   /* generate */
-  position: relative;
-  width: 149.39vh;
-  height: 45.12vh;
-  left: 13.17vh;
-  top: 12.19vh;
+
+
+  width: 50vh;
+  /*height: 45.12vh;
+  top: 12.19vh; */
 
   font-family: "Space Mono";
   font-style: normal;
