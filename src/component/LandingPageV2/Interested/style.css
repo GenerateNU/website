@@ -103,7 +103,7 @@ a {
 @media only screen and (max-device-width: 650px) {
   .interestedcontainer {
     width: 100%;
-    background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center fixed;
+    background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center;
     background-repeat: no-repeat;
     background-size: 75%;
     padding: 5vh 0;
@@ -112,7 +112,7 @@ a {
   .interestedText {
     margin-left: auto;
     margin-right: auto;
-    font-size: 8vh;
+    font-size: 14vw;
     text-align: center;
   }
 
@@ -123,6 +123,16 @@ a {
 
   #join-span {
     display: flex;
+  }
+
+  .interestedJoinNowBox .joinCommunitytext {
+    height: inherit;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: unset;
+    margin-left: 0;
   }
 }
 
