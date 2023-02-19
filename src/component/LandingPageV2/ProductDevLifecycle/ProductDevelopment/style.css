@@ -33,7 +33,7 @@ a {
   }
 
   .paragraphText {
-    width: 50vw;
+    width: min(60vh, calc(80vw - 12vh));
     height: 40vh;
     top: 71.14vh;
     margin-top: 6.27vh;
@@ -83,7 +83,7 @@ a {
  
 
   .ideation {
-    margin-left: 12.55vh;
+    /*margin-left: 12.55vh;*/
   }
 
   .IdeationText {
