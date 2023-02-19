@@ -161,7 +161,7 @@ h1 {
   .client-blurb {
     padding-top: 3vh;
     padding-bottom: 3vh;
-    margin: auto;
+    margin: fit-content;
     display: flex;
     /* margin-left: -6vw; */
   }

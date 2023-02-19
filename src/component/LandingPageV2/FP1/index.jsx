@@ -22,7 +22,7 @@ export default function FP1() {
           </div> 
         </div>
         <div>
-          <p style={{width: "40vh"}} className="client-blurb">
+          <p style={{width: "38vh"}} className="client-blurb">
             A unique, two-sided promotional and loyalty platform built to level
             the playing field for independent bars and restaurants by allowing
             them to utilize an app to acquire and retain customers as easily and
@@ -41,7 +41,7 @@ export default function FP1() {
       </div>
       <div className="column-3">
         <div className="top-corner">
-          <img style={{height: "25vh"}} src={TopCorner} alt="" />
+          <img style={{width: "38vh", height: "25vh"}} src={TopCorner} alt="" />
         </div>
         <div className="quote-container">
           <blockquote>
