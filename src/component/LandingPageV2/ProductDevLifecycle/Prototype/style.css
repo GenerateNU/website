@@ -15,7 +15,7 @@ a {
 
   .paragraphText {
     /*width: 55vh;*/
-    width: min(55vh, calc(80vw - 12vh));
+    width: min(60vh, calc(80vw - 12vh));
     height: 29.86vh;
     top: 71.14vh;
     margin-top: 6.27vh;
@@ -56,7 +56,7 @@ a {
   }
 
   .ideation {
-    margin-left: 12.55vh;
+    /*margin-left: 12.55vh;*/
   }
 
  
