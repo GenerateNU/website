@@ -35,7 +35,7 @@ export default function FP1() {
         </div>
       </div>
       <div className="column-2">
-        <div className="product-img-container">
+        <div className="product-img-container" id="fp1-img-container">
           <img className="product-img" src={EarnzMockUp} alt="" />
         </div>
       </div>
