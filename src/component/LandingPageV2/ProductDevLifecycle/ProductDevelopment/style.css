@@ -12,7 +12,7 @@ a {
     background-color: black;
   }
   .ProductDevText {
-    width: 78.3vh;
+    width: 50vh;
     height: 34.5vh;
     left: 20.95vh;
     top: 23.46vh;
@@ -33,8 +33,8 @@ a {
   }
 
   .paragraphText {
-    width: 75.28%;
-    height: 29.86vh;
+    width: 50vw;
+    height: 40vh;
     top: 71.14vh;
     margin-top: 6.27vh;
     /* B1 */
