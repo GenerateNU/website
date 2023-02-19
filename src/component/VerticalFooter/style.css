@@ -44,8 +44,7 @@ a:hover {
 
 .logo-placement {
   margin: 10%;
-  background-color: white;
-  width: 40%;
+  width: 60%;
   height: 50%;
   padding: 5%;
 }
@@ -87,6 +86,47 @@ a:hover {
 
 @media only screen and (max-device-width: 650px) {
   .footer-container {
-    width: 100vw;
+    padding-bottom: 5vh;
+    width: 100%;
+  }
+
+  .footer-container .social-icons {
+    margin: 0;
+  }
+
+  #footer-links {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-text {
+    font-size: 3vh;
+    padding-bottom: 5vh;
+  }
+
+  .sherm {
+    margin: 0;
+  }
+
+  #footer-pages {
+    margin: 0;
+    width: 50%;
+  }
+
+  .social-icons {
+    margin: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  .social-icons .icon a img {
+    height: auto;
+    width: 6vh;
+  }
+
+  .logo-placement {
+    width: 30%;
   }
 }
