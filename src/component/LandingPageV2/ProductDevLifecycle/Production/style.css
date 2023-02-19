@@ -18,7 +18,7 @@ a {
 
   .paragraphText {
     /*width: 55vh;*/
-    width: min(55vh, calc(100vw - 20vh));
+    width: min(55vh, calc(80vw - 12vh));
     height: 29.86vh;
     top: 71.14vh;
     margin-top: 6.27vh;
@@ -75,7 +75,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 7.5vh;
+    font-size: min(7.5vh, 10vw);
     line-height: 11.22vh;
     /* identical to box height, or 128% */
 
