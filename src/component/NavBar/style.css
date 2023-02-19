@@ -29,6 +29,10 @@ span {
     line-height: 128%;
 }
 
+.font-size {
+    font-size: min(2.5vmax, 30px);
+}
+
 .header-font-style:hover {
     background-color: black;
     color: #FFBF3C !important;
