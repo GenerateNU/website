@@ -22,10 +22,10 @@ For some reason, the branch does not currently contain a PRImages folder, so I h
  # Screenshots
 
  MY VERSION
-![alt text](public/images/PRImages/what_we_offer.png?raw=true "LOCAL")
-![alt text](public/images/PRImages/intro_wide.png?raw=true "LOCAL")
-![alt text](public/images/PRImages/intro_tall.png?raw=true "LOCAL")
-![alt text](public/images/PRImages/whoweare_wide.png?raw=true "LOCAL")
-![alt text](public/images/PRImages/whoweare_tall.png?raw=true "LOCAL")
-![alt text](public/images/PRImages/cycle_1.png?raw=true "LOCAL")
-![alt text](public/images/PRImages/cycle_2.png?raw=true "LOCAL")
+![alt text](../public/images/PRImages/what_we_offer.png)
+![alt text](../public/images/PRImages/intro_wide.png? "LOCAL")
+![alt text](../public/images/PRImages/intro_tall.png?"LOCAL")
+![alt text](../public/images/PRImages/whoweare_wide.png "LOCAL")
+![alt text](../public/images/PRImages/whoweare_tall.png "LOCAL")
+![alt text](../public/images/PRImages/cycle_1.png? "LOCAL")
+![alt text](../public/images/PRImages/cycle_2.png "LOCAL")
