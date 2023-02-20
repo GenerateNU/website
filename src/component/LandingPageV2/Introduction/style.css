@@ -14,15 +14,6 @@
     background-size: cover;
 }
 
-.text-container {
-  position: relative;
-  left: 8vw;
-  top: calc(30vh - 90px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .wearetext {
   width: 30vh;
   padding-left: 10px;
@@ -90,7 +81,7 @@
   text-transform: uppercase; */
   position: relative;
   left: 8vw;
-  top: calc(30vh - 90px);
+  top: max(35vh, 90px);
   display: flex;
   flex-direction: column;
   justify-content: center;
