@@ -161,7 +161,7 @@ h1 {
   .client-blurb {
     padding-top: 3vh;
     margin: auto;
-    margin-left: -6vw;
+    /*margin-left: -6vw;*/
   }
 
   .name-order {
