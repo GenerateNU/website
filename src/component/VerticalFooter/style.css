@@ -84,3 +84,9 @@ a:hover {
 .icon {
     padding-bottom: 10%;
 }
+
+@media only screen and (max-device-width: 650px) {
+  .footer-container {
+    width: 100vw;
+  }
+}
