@@ -1,12 +1,12 @@
 .nextPage {
     background: #FFBF3C;
-    width: 18vw;
+    width: calc(18vw + 2vh);
     position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2%;
+    padding: 5% 2%;
 }
 
 .nextPage a {
@@ -23,17 +23,20 @@
     align-items: center;
     padding: 20%;
     box-sizing: border-box;
-    width: 100%;
+    width: calc(100% - 2vh);
     height: 100%;
     flex-direction: column;
+    margin-left: 2vh;
+    box-shadow: -2vh 2vh 0 0 #ffbf3c, -2vh 2vh 0 2px black;
 }
 
 .nextPageArrow {
-    width: 8vh;
+    margin: 1vh 0;
+    width: 6vh;
 }
 
 .nextPageName {
-    font-size: 15vh;
+    font-size: 12vh;
     text-transform: uppercase;
     transform: rotate(90deg);
 }
@@ -51,12 +54,13 @@
 
     .nextPageButton {
         flex-direction: row;
-        padding: 5%;
+        padding: 3%;
+        box-shadow: -1.5vh 1.5vh 0 0 #ffbf3c, -1.5vh 1.5vh 0 2px black;
     }
 
     .nextPage {
         width: 100vw;
         height: unset;
-        padding: 10%;
+        padding: 10% 5%;
     }
 }
