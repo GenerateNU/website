@@ -47,7 +47,7 @@ export default class LandingPageV2 extends React.Component {
             <PreviousProjects />
             <Interested />
             <Footer />
-            <NextPage pageName="Apply" url="/apply" />
+            <NextPage pageName="About" url="/about" />
           </Row>
         </div>
         <div
@@ -70,7 +70,7 @@ export default class LandingPageV2 extends React.Component {
             <PreviousProjects />
             <Interested />
             <Footer />
-            <NextPage pageName="Apply" url="/apply" />
+            <NextPage pageName="About" url="/about" />
           </Column>
         </div>
       </>
