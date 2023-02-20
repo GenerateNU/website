@@ -6,28 +6,31 @@
 }
 
 .image {
-  width: 25vw;
+  width: 25vmin;
   height: auto;
 }
 
 .image-tall {
-  width: 12.5vw;
+  width: 12.5vmin;
   height: auto;
 }
 
 .prev-proj-wrapper {
   background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .wrapper {
   display: flex;
   height: 65%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-left: 10%;
-  margin-top: 7%;
   margin-right: 10%;
   margin-bottom: 7%;
+  column-gap: 15vw;
 }
 
 .col-1 {
@@ -35,6 +38,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 25%;
+  height: 86vh;
+
 }
 
 .col-2 {
@@ -42,6 +47,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 25%;
+  height: 86vh;
 }
 
 .col-3 {
@@ -49,5 +55,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 30%;
+  height: 86vh;
 }
 
