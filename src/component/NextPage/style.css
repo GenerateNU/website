@@ -1,0 +1,62 @@
+.nextPage {
+    background: #FFBF3C;
+    width: 18vw;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.nextPage a {
+    width: 100%;
+    height: 100%;
+}
+
+.nextPageButton {
+    color: white;
+    background: black;
+    font-family: 'Space Mono 700';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.nextPageArrow {
+    width: 8vh;
+}
+
+.nextPageName {
+    font-size: 15vh;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+}
+
+@media only screen and (max-device-width: 650px) {
+    .nextPageArrow {
+        transform: rotate(90deg);
+        width: 4vh;
+    }
+
+    .nextPageName {
+        transform: unset;
+        font-size: 5vh;
+    }
+
+    .nextPageButton {
+        flex-direction: row;
+        padding: 5%;
+    }
+
+    .nextPage {
+        width: 100vw;
+        height: unset;
+        padding: 10%;
+    }
+}
