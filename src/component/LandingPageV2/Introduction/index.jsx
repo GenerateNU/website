@@ -14,8 +14,10 @@ export default function Introduction() {
         <div className="shermancenter">
           <div className="intro-navbar"><NavBar /> </div>
           <div class="desktop">
+            <div className="text-container">
             <p className="wearetext">WE ARE</p>
             <p className="generatetext">GENERATE</p>
+            </div>
           </div>
           <div class="comingsoontext">
             <p className="comingsoontext">MOBILE PAGE COMING SOON!</p>

@@ -14,7 +14,6 @@ export default function FeaturedProjects() {
           <br></br>
           <br></br>
           We’ve had some exciting projects over the years! Check out what we’ve worked on so far.
-          </p>
         </div>
       </div>
   );
