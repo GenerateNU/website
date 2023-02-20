@@ -77,16 +77,16 @@ a {
     margin-top: 20%;
     background: #187DFF;
     border: 1px solid #111111;
-    box-shadow: 5px 10px;
+    box-shadow: -0.75vh 0.75vh;;
   }
 
   .joinCommunitytext {
     width: 16.8vh;
     height: 4.5vh;
     margin-left: 20%;    
-    font-family: 'Space Mono 700';
+    font-family: 'Space Mono';
     font-style: normal;
-    /* font-weight: 400; */
+    font-weight: 400;
     font-size: 4vh;
     line-height: 6vh;
     text-align: center;
@@ -126,6 +126,11 @@ a {
     display: flex;
   }
 
+  .interestedJoinNowBox {
+    width: 50vw;
+    height: 7vh;
+  }
+
   .interestedJoinNowBox .joinCommunitytext {
     height: inherit;
     text-align: center;
@@ -134,6 +139,7 @@ a {
     justify-content: center;
     width: unset;
     margin-left: 0;
+    font-size: 2vh;
   }
 }
 
