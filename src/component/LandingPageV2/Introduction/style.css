@@ -74,7 +74,7 @@
   width: 149.39vh;
   height: 45.12vh;
   left: 13.17vh;
-  top: 12.19vh;
+  top: calc(30vh - 90px);
 
   font-family: "Space Mono";
   font-style: normal;
