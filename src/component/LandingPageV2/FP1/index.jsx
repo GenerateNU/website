@@ -9,7 +9,7 @@ export default function FP1() {
     <div className="parent">
       <div className="column-1">
         <div>
-          <h1 style={{fontSize: "9vh"}}>Earnz</h1>
+          <h1 style={{fontSize: "9vh"}} className="earnz-header">Earnz</h1>
           <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
             software
           </p>
@@ -22,12 +22,12 @@ export default function FP1() {
           </div> 
         </div>
         <div>
-          <p style={{width: "38vh"}} className="client-blurb" id="fp1-client-blurb">
+          <blockquote style={{width: "40vh"}} className="client-blurb" id="fp1-client-blurb">
             A unique, two-sided promotional and loyalty platform built to level
             the playing field for independent bars and restaurants by allowing
             them to utilize an app to acquire and retain customers as easily and
             cost effectively as currently only chains can.
-          </p>
+          </blockquote>
           <a href="url">learn more</a>
         </div>
         <div className="bottom-corner">
@@ -39,18 +39,18 @@ export default function FP1() {
           <img className="product-img" src={EarnzMockUp} alt="" />
         </div>
       </div>
-      <div className="column-3">
+      <div className="column-3" id="fp1-c3">
         <div className="top-corner">
-          <img style={{width: "38vh", height: "25vh"}} src={TopCorner} alt="" />
+          <img style={{width: "60vh", height: "25vh"}} src={TopCorner} alt="" />
         </div>
         <div className="quote-container" id="fp1-quote-container">
-          <blockquote>
+          <p id="earnPage">
             Generate was great as a learning experience for me, as someone who
             hadn’t built a tech company before. The team of experienced Generate
             engineers knew what it takes to build a product like earnz, how to
             package it all together, and ultimately how to come together as a
             team.
-          </blockquote>
+          </p>
         </div>
       </div>
     </div>
