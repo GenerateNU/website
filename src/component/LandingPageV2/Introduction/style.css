@@ -46,7 +46,7 @@
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 30.48vh;
+  font-size: 17vw;
   line-height: 25.12vh;
   text-transform: uppercase;
 
@@ -74,6 +74,7 @@
 
 .desktop {
   /* generate */
+  /*
   display: inline;
   position: relative;
   width: 149.39vh;
@@ -86,8 +87,13 @@
   font-weight: 700;
   font-size: 30.48vh;
   line-height: 45.12vh;
-  text-transform: uppercase;
-
+  text-transform: uppercase; */
+  position: relative;
+  left: 8vw;
+  top: calc(30vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #ffffff;
 }
 
