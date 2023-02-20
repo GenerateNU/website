@@ -45,12 +45,13 @@ p {
 .culture-quote-positioning {
   left: 42%;
   top: 43%;
-  width: 45em;
+  width: 50%;
   position: absolute;
 }
 
 .intro-images {
   z-index: 3;
+  min-width: 1088px;
 }
 
 .img-1 {
