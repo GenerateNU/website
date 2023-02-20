@@ -27,7 +27,7 @@
     height: 100%;
     flex-direction: column;
     margin-left: 2vh;
-    box-shadow: -2vh 2vh 0 0 #ffbf3c, -2vh 2vh 0 2px black;
+    box-shadow: -1vh 1vh 0 0 #ffbf3c, -1vh 1vh 0 2px black;
 }
 
 .nextPageArrow {
@@ -36,7 +36,7 @@
 }
 
 .nextPageName {
-    font-size: 12vh;
+    font-size: 10vh;
     text-transform: uppercase;
     transform: rotate(90deg);
 }
@@ -55,7 +55,6 @@
     .nextPageButton {
         flex-direction: row;
         padding: 3%;
-        box-shadow: -1.5vh 1.5vh 0 0 #ffbf3c, -1.5vh 1.5vh 0 2px black;
     }
 
     .nextPage {
