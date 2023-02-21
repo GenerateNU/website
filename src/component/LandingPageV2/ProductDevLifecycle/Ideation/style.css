@@ -106,6 +106,7 @@ a {
 
     .DevelopmentWheelImage {
       width: 30.11vh;
+      /* margin-bottom: -30vh; */
     }
 
     .ideation {
