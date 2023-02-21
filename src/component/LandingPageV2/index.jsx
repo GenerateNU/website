@@ -20,30 +20,34 @@ import Footer from "../VerticalFooter";
 //import { Navbar } from "react-bootstrap";
 import DesktopMobilfy from "../desktop-mobile";
 
-
 export default class LandingPageV2 extends React.Component {
-    
   render() {
+    const children = [
+      <Intro />,
+      <WhoWeAre />,
+      <WhoWeAreResponse />,
+      <WhatWeOffer />,
+      <ProductDevelopment />,
+      <Ideation />,
+      <Prototype />,
+      <Production />,
+      <Management />,
+      <FeaturedProjects />,
+      <FP1 />,
+      <FP2 />,
+      <PreviousProjects />,
+      <Interested />,
+      <Footer />,
+    ];
     return (
-      <DesktopMobilfy desktopBGColor={"white"} mobileBGColor={"black"}>
-            <Intro />
-            <WhoWeAre />
-            <WhoWeAreResponse />
-            <WhatWeOffer />
-            <ProductDevelopment />
-            <Ideation />
-            <Prototype />
-            <Production />
-            <Management />
-            <FeaturedProjects />
-            <FP1/>
-            <FP2/>
-            <PreviousProjects />
-            <Interested />
-            <Footer />
-      </DesktopMobilfy>
+      <DesktopMobilfy
+        desktopChildren={children}
+        mobileChildren={children}
+        desktopBGColor={"white"}
+        mobileBGColor={"black"}
+      />
     );
-};
+  }
 }
 /*
 export default class LandingPageV2 extends React.Component {

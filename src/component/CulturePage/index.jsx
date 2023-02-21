@@ -1,5 +1,5 @@
 import React from "react";
-import CollageSection from "./Collage"
+import CollageSection from "./Collage";
 import Events from "./Events";
 import Events2 from "./Events2";
 import Events3 from "./Events3";
@@ -14,24 +14,29 @@ import Showcase from "./Showcase";
 import "./style.css";
 import DesktopMobilfy from "../desktop-mobile";
 
-
 export default class CulturePage extends React.Component {
   render() {
+    const children = [
+      <IntroSection />,
+      <IntroImages />,
+      <BelongHere />,
+      <Diversity />,
+      <Inclusion />,
+      <Equity />,
+      <Events />,
+      <Events2 />,
+      <Events3 />,
+      <Showcase />,
+      <CollageSection />,
+      <VerticalFooter />,
+    ];
     return (
-      <DesktopMobilfy desktopBGColor={"white"} mobileBGColor={"white"}>
-          <IntroSection />
-          <IntroImages/>
-          <BelongHere/>
-          <Diversity/>
-          <Inclusion/>
-          <Equity/>
-          <Events />
-          <Events2 />
-          <Events3 />
-          <Showcase/>
-          <CollageSection />
-          <VerticalFooter/>
-        </DesktopMobilfy>
+      <DesktopMobilfy
+        desktopChildren={children}
+        mobileChildren={children}
+        desktopBGColor={"white"}
+        mobileBGColor={"white"}
+      />
     );
   }
 }

@@ -14,20 +14,25 @@ import DesktopMobilfy from "../desktop-mobile";
 
 export default class AboutPage extends React.Component {
   render() {
+    const children = [
+      <OurMissionSection />,
+      <WeAreSection />,
+      <Leadership />,
+      <History />,
+      <Timeline />,
+      <Stats />,
+      <WhyGenerateCarousel />,
+      <GrowthMantra />,
+      <Footer />,
+      <FooterTwo />,
+    ];
     return (
-      <DesktopMobilfy desktopBGColor={"black"} mobileBGColor={"black"}>
-        <OurMissionSection />
-            <WeAreSection />
-            <Leadership />
-            <History />
-            <Timeline />
-            <Stats />
-            <WhyGenerateCarousel />
-            <GrowthMantra />
-            <Footer />
-            <FooterTwo />
-      </DesktopMobilfy>
-
+      <DesktopMobilfy
+        desktopChildren={children}
+        mobileChildren={children}
+        desktopBGColor={"black"}
+        mobileBGColor={"black"}
+      />
     );
   }
 }
