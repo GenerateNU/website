@@ -22,7 +22,7 @@ const Interested = () => {
         </div>
         <span id="join-span">
           <div className="leftcarrot">
-            <img style={{ width: "8vh" }} src={leftcarrot} />
+            <img id="join-carrot" src={leftcarrot} />
           </div>
           <div className="sentenceText">
             Join a community that shares the same goal - turning ideas into
