@@ -31,7 +31,7 @@ export default class CulturePage extends React.Component {
           <Showcase/>
           <CollageSection />
           <VerticalFooter/>
-        </DesktopMobilfy >
+        </DesktopMobilfy>
     );
   }
 }
