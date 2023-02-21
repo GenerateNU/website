@@ -18,7 +18,7 @@ import DesktopMobilfy from "../desktop-mobile";
 export default class CulturePage extends React.Component {
   render() {
     return (
-      <DesktopMobilfy bgColor={"white"}>
+      <DesktopMobilfy desktopBGColor={"white"} mobileBGColor={"white"}>
           <IntroSection />
           <IntroImages/>
           <BelongHere/>

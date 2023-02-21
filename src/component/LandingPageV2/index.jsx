@@ -25,7 +25,7 @@ export default class LandingPageV2 extends React.Component {
     
   render() {
     return (
-      <DesktopMobilfy bgColor={"white"}>
+      <DesktopMobilfy desktopBGColor={"white"} mobileBGColor={"black"}>
             <Intro />
             <WhoWeAre />
             <WhoWeAreResponse />

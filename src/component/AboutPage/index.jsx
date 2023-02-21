@@ -15,7 +15,7 @@ import DesktopMobilfy from "../desktop-mobile";
 export default class AboutPage extends React.Component {
   render() {
     return (
-      <DesktopMobilfy bgColor={"black"}>
+      <DesktopMobilfy desktopBGColor={"black"} mobileBGColor={"black"}>
         <OurMissionSection />
             <WeAreSection />
             <Leadership />
