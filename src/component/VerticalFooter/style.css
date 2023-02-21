@@ -87,7 +87,7 @@ a:hover {
 @media only screen and (max-device-width: 650px) {
   .footer-container {
     padding-bottom: 5vh;
-    width: 100%;
+    width: 100vw;
   }
 
   #footer-links {
@@ -135,5 +135,6 @@ a:hover {
 
   .logo-placement {
     width: 30%;
+    width: 100vw;
   }
 }

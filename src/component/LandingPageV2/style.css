@@ -92,6 +92,7 @@ p {
 
 .mobile {
     display: none;
+    padding-left: 0px;
   }
 
 @media only screen and (max-device-width: 650px) {

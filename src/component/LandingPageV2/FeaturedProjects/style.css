@@ -49,6 +49,7 @@ p {
     text-align: left;
     padding: 3.5vw;
     font-size: 4.5vw;
+    max-width: 90vw;
   }
   .featured_projects_container {
     padding-top: 8em;
