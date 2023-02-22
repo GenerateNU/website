@@ -36,13 +36,13 @@ export default function LeadershipCard({
             <div className='card card-back rounded-0'
                  style={{backgroundColor: director.color}}>
                 <Row className='py-4 ps-5 pe-2 h-100 w-100'>
-                    <Col xs={2} className='p-0 position-relative'>
+                    <Col xs={2} className='p-0 position-relative' style={{"margin-left": "1.5vw"}}>
                         <h1 className='m-0 gen-card-header position-absolute top-0 end-50'
                             style={props.boldHeader && boldHeaderStyle}>
                             {director.team}
                         </h1>
                     </Col>
-                    <Col xs={10} className='p-0 h-100'>
+                    <Col xs={10} className='p-0 h-100' style={{"margin-left": "4.42vw"}}>
                         <Row className='m-0 gen-card-body'>
                             {props.body}
                         </Row>

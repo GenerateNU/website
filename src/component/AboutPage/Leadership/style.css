@@ -37,7 +37,7 @@
     height: 85%;
     font-family: 'Outfit 300';
     font-style: normal;
-    font-size: 1.2vw;
+    font-size: max(1.3vh, 1.2vw);
     line-height: 150%;
 }
 
@@ -60,7 +60,7 @@
     font-family: 'Space Mono';
     color: #FFBF3C;
     text-transform: lowercase;
-    font-size: 1.75em;
+    font-size: 3vh;
 }
 
 .meet-the-team {
@@ -68,7 +68,7 @@
     color: #FFFFFF;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 5.75em;
+    font-size: 12vh;
 }
 
 /* TODO: delete after move to public */
@@ -81,6 +81,7 @@
 }
 
 .cards-display {
+    margin-top: 7vh;
     display: flex;
     flex-wrap: wrap !important;
 }
