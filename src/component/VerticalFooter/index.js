@@ -31,19 +31,19 @@ function VerticalFooter() {
 
       <div className="social-icons">
         <Row>
-          <Col className="icon"><a href ='https://www.google.com/'> <img src={InstaIcon} height="30vh" width="30vw" /> </a></Col>
+          <Col className="icon"><a href ='https://www.google.com/'> <img src={InstaIcon} style={{"height":"3vh", "width":"3vh"}}/> </a></Col>
         </Row>
         <Row>
-        <Col className="icon"><a href ='https://www.youtube.com/channel/UC2Y_rgZiPKPH0lSU1FyQJFw/featured'> <img src={YoutubeIcon} height="30vh" width="30vw"/> </a></Col>
-        <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={NortheasternIcon} height="30vh" width="30vw" /></a></Col>
+        <Col className="icon"><a href ='https://www.youtube.com/channel/UC2Y_rgZiPKPH0lSU1FyQJFw/featured'> <img src={YoutubeIcon} style={{"height":"3vh", "width":"3vh"}}/> </a></Col>
+        <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={NortheasternIcon} style={{"height":"3vh", "width":"3vh"}} /></a></Col>
         </Row>
         <Row>
-          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={LinkedInIcon} height="30vh" width="30vw" /></a></Col>
-          <Col className="icon"><a href ='https://www.facebook.com/GenerateNU/'> <img src={MosaicIcon} height="30vh" width="30vw" /> </a></Col>
+          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={LinkedInIcon} style={{"height":"3vh", "width":"3vh"}}/></a></Col>
+          <Col className="icon"><a href ='https://www.facebook.com/GenerateNU/'> <img src={MosaicIcon} style={{"height":"3vh", "width":"3vh"}} /> </a></Col>
         </Row>
         <Row>
-          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={FbIcon} height="30vh" width="30vw" /></a></Col>
-          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={Sherm} height="30vh" width="30vw" /></a></Col>
+          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={FbIcon} style={{"height":"3vh", "width":"3vh"}}/></a></Col>
+          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={Sherm} style={{"height":"3vh", "width":"3vh"}} /></a></Col>
         </Row>
         
       </div>

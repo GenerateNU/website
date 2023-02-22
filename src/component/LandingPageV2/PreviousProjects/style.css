@@ -1,7 +1,6 @@
 .logo {
   width: 18.75vh;
   padding: 4vh;
-  object-fit: contain;
 }
 
 .col-1 {
@@ -29,5 +28,4 @@
   width: 50vh;
   background-color: #111111;
   padding-bottom: 5vh;
-  padding-left: 8vh;
 }

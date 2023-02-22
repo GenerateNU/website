@@ -145,6 +145,12 @@
     margin-top: 10%;
   }
 
+  .management-spacer {
+    width: max(10vw, 25vh);
+    margin: 0vw;
+    padding: 0vw;
+  }
+
   .management-wheel {
     width: 90vh;
     margin: 0vw;

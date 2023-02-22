@@ -66,6 +66,9 @@
 }
 
 .product-img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   padding-top: 5vh;
   padding-left: 14vh;
   margin-top: 14vh;
@@ -74,7 +77,11 @@
 .mockup-img {
   /* position: absolute; */
   /* height: 30em; */
-  width: 74vh;
+  min-width: min(74vh, 100vw);
+  width: auto;
+  height: auto;
+  margin-top: 10vh;
+  margin-bottom: -10vh;
   margin-left: -12vh;
   min-height: 100%;
 }

@@ -10,11 +10,11 @@ a {
 }
 
 .footer-text {
-  height: 30px;
+  height: 3.5vh;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 3vh;
   line-height: 30px;
   color: #ffffff;
   padding-left: 18%;
