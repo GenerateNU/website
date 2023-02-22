@@ -19,6 +19,7 @@ a {
   color: #ffffff;
   padding-left: 18%;
   margin: 5%;
+  white-space: nowrap;
 }
 
 .disabled-footer-text {
@@ -32,7 +33,7 @@ a:hover {
 }
 
 .sherm{
-    margin-top: 25%;
+    /* margin-top: 25%; */
     margin-left: 15%;
 }
 
@@ -96,8 +97,12 @@ a:hover {
   }
 
   .footer-text {
-    font-size: 3vh;
-    padding-bottom: 5vh;
+    font-size: 5vw;
+    padding-bottom: 2.5vh;
+  }
+
+  .footer-text:has(b) {
+    margin-top: 1vw;
   }
 
   .sherm {
@@ -106,7 +111,7 @@ a:hover {
 
   #footer-pages {
     margin: 0;
-    width: 50%;
+    width: 100%;
   }
 
   .social-icons {
@@ -134,6 +139,6 @@ a:hover {
   }
 
   .logo-placement {
-    width: 30%;
+    width: 40%;
   }
 }

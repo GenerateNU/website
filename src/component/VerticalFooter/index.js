@@ -31,6 +31,12 @@ function VerticalFooter() {
         <span id="footer-pages">
           <Row className="footer-text">
             {" "}
+            <b>
+              <a href={window.location.href}>Generate &lt;</a>
+            </b>
+          </Row>
+          <Row className="footer-text">
+            {" "}
             <a href="/about">About </a>
           </Row>
           <Row className="footer-text">
