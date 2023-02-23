@@ -32,8 +32,7 @@ export default class CulturePage extends React.Component {
     ];
     return (
       <DesktopMobilfy
-        desktopChildren={children}
-        mobileChildren={children}
+        children={children}
         desktopBGColor={"white"}
         mobileBGColor={"white"}
       />

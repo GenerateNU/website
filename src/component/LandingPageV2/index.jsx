@@ -41,8 +41,7 @@ export default class LandingPageV2 extends React.Component {
     ];
     return (
       <DesktopMobilfy
-        desktopChildren={children}
-        mobileChildren={children}
+        children={children}
         desktopBGColor={"white"}
         mobileBGColor={"black"}
       />

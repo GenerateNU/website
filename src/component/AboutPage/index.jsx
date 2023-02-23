@@ -28,8 +28,7 @@ export default class AboutPage extends React.Component {
     ];
     return (
       <DesktopMobilfy
-        desktopChildren={children}
-        mobileChildren={children}
+        children={children}
         desktopBGColor={"black"}
         mobileBGColor={"black"}
       />
