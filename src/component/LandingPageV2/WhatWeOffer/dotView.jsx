@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const DotView = ({
   children,
@@ -18,7 +17,10 @@ const DotView = ({
   );
 
   const displayer = () => {
-    return children.slice(currentChild * numElementsPerPane, currentChild * numElementsPerPane + numElementsPerPane);
+    return children.slice(
+      currentChild * numElementsPerPane,
+      currentChild * numElementsPerPane + numElementsPerPane
+    );
   };
 
   const dotter = () => {
@@ -46,7 +48,7 @@ const DotView = ({
     dotter();
   }, [currentChild, buttonColors]);
 
-  return  (
+  return (
     <div className="h-60vh">
       {displayer()}
       {dotter()}
