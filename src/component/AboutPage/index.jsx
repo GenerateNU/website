@@ -10,7 +10,7 @@ import Footer from "../VerticalFooter";
 import "./style.css";
 import Stats from "./Stats";
 import FooterTwo from "../VerticalFooterTeams";
-import DesktopMobilfy from "../desktop-mobile";
+import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class AboutPage extends React.Component {
   render() {
@@ -27,7 +27,7 @@ export default class AboutPage extends React.Component {
       <FooterTwo />,
     ];
     return (
-      <DesktopMobilfy
+      <DesktopMobileScrollAndBackgroundHandler
         children={children}
         desktopBGColor={"black"}
         mobileBGColor={"black"}

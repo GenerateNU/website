@@ -12,7 +12,7 @@ import Diversity from "./Diversity";
 import VerticalFooter from "../VerticalFooter";
 import Showcase from "./Showcase";
 import "./style.css";
-import DesktopMobilfy from "../desktop-mobile";
+import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class CulturePage extends React.Component {
   render() {
@@ -31,7 +31,7 @@ export default class CulturePage extends React.Component {
       <VerticalFooter />,
     ];
     return (
-      <DesktopMobilfy
+      <DesktopMobileScrollAndBackgroundHandler
         children={children}
         desktopBGColor={"white"}
         mobileBGColor={"white"}

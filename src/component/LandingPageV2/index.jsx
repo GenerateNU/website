@@ -18,7 +18,7 @@ import Management from "./Management";
 import Footer from "../VerticalFooter";
 //import NavBar from "../NavBar";
 //import { Navbar } from "react-bootstrap";
-import DesktopMobilfy from "../desktop-mobile";
+import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class LandingPageV2 extends React.Component {
   render() {
@@ -40,7 +40,7 @@ export default class LandingPageV2 extends React.Component {
       <Footer />,
     ];
     return (
-      <DesktopMobilfy
+      <DesktopMobileScrollAndBackgroundHandler
         children={children}
         desktopBGColor={"white"}
         mobileBGColor={"black"}
