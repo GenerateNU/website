@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
 
+// TODO actively clear state
+// componentDidMount() {
+//   this.setState({ currentChild: 0 });
+//   this.setState({ buttonColors: [idleButtonColor, currentButtonColor, idleButtonColor] });
+// }
+// componentDidUpdate() {
+//   this.setState({ currentChild: 0 });
+//   this.setState({ buttonColors: [idleButtonColor, currentButtonColor, idleButtonColor] });
+// }
 const DotView = ({
   children,
   numElementsPerPane,
@@ -16,6 +25,9 @@ const DotView = ({
     )
   );
 
+  // const [buttonColors, setButtonColors] = useState([idleButtonColor,currentButtonColor,idleButtonColor]
+  // );
+
   const displayer = () => {
     return children.slice(
       currentChild * numElementsPerPane,
@@ -29,7 +41,7 @@ const DotView = ({
         className="dot_button"
         style={{ backgroundColor: buttonColor }}
         key={index}
-        onClick={() => clickFunc(index)}
+        // onClick={() => clickFunc(index)}
       ></button>
     ));
   };
