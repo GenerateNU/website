@@ -31,7 +31,7 @@ export default class CulturePage extends React.Component {
           <Events2 />
           <Events3 />
           <Showcase/>
-          <CollageSection />
+          <CollageSection/>
           <VerticalFooter/>
         </Row>
       </div>

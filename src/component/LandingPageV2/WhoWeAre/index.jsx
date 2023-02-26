@@ -17,13 +17,8 @@ export default function WhoWeAre() {
                   product development experience, leadership, and training in their respective disciplines. 
                   We provide our clients with the engineering, design, and prototyping they need to take their venture 
                   to the next stage. 
-                 </p>
-           
-                
-               
+            </p>
        </div>
        </div>
-     
-
     );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel.png"
+import DevelopmentWheel from "../../../../assets/images/landingpage-v2/Frame.svg"
 import './style.css';
 
 const Ideation = () => {
@@ -7,7 +7,7 @@ const Ideation = () => {
           <div className="background-black">
             <div className = "alignItemsRight">
             <div className = "DevelopmentWheelTwo">
-              <img style={{width: '64vh'}}src ={DevelopmentWheel} />
+              <img style={{width: '84vh'}}src ={DevelopmentWheel} />
             </div>
             <div className="ideation">
               <div className = "column">

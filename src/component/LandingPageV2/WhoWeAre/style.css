@@ -5,12 +5,12 @@
 }
 
 @media only screen and (max-device-width: 650px) {
-    .whoWeAreContainer{
+    .whoWeAreContainer {
         width: 100%;
         margin:0%;
         padding: 0%;
     }
-  }
+}
 
 .whowearetext {
 padding-top: 25%;
