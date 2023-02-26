@@ -90,3 +90,8 @@ p {
 .culture {
   margin-top: -5%;
 }
+
+.generateLogo img {
+  max-height: 305px;
+  height: 90vh;
+}
