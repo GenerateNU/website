@@ -124,6 +124,7 @@ h1 {
   /*}*/
   .column-1{
     margin-left: -3vh;
+    margin-top: -3vh;
   }
 
   .client-blurb#fp1-client-blurb {
@@ -161,6 +162,21 @@ h1 {
     font-family: Outfit 300;
     font-size: 2.5vh;
     position: relative;
+  }
+
+  #pageSeparator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+    margin-bottom: 0vh;
+    color:black;
+    opacity: 100%;
+    width: 75%;
+    margin-left: 2vh;
+    font-weight: bold;
+    height: 3px;
+
   }
 
   .column-3#fp1-quote-container{
