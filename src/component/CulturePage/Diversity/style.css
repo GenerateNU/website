@@ -24,10 +24,11 @@ h2 {
 
 .text-div-diversity {
   padding: 8em;
+  padding-right: 0;
 }
 
 .container {
-  width: 50vw;
+  width: unset;
   display: flex;
   flex-direction: row;
 }

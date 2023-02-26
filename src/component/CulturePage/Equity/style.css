@@ -4,7 +4,7 @@
 }
 
 .container {
-  width: 50vw;
+  width: unset;
   display: flex;
   flex-direction: row;
 }
@@ -16,6 +16,7 @@
 .text-div-equity {
   margin-top: 40%;
   padding: 8em;
+  padding-right: 0;
 }
 
 .outline-equity {

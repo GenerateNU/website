@@ -5,7 +5,7 @@
 }
 
 .container {
-  width: 50vw;
+  width: unset;
   display: flex;
   flex-direction: row;
 }
@@ -24,6 +24,7 @@
 .text-div-inclusion {
   padding: 8em;
   margin-top: 20%;
+  padding-right: 0;
 }
 
 .vertical-div {
