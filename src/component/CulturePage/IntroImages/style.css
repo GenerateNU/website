@@ -8,11 +8,12 @@
 
 .for-padding {
   padding: 2em;
-  margin-top: 20%;
+  margin-top: min(20%, 30vh);
 }
 
 .intro-images {
   display: flex;
   flex-direction: row;
   width: 85%;
+  z-index: 1;
 }
