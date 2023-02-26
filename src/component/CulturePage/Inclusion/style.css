@@ -38,4 +38,5 @@
 
 .cultureTwo-text {
   margin-top: -30%;
+  font-size: max(2.5vmin, 1.5vw);
 }
