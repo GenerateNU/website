@@ -89,3 +89,20 @@ p {
 .culture {
   margin-top: -5%;
 }
+
+@media only screen and (max-device-width: 650px) {
+
+  .culture-quote-positioning{
+    text-align: center;
+  }
+
+  .generateLogo{
+    position: absolute;
+    text-align: center;
+  }
+
+
+
+
+
+  }

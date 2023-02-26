@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import Column from "react-bootstrap/esm/Col";
 import CollageSection from "./Collage"
 import Events from "./Events";
 import Events2 from "./Events2";
@@ -18,6 +19,7 @@ import "./style.css";
 export default class CulturePage extends React.Component {
   render() {
     return (
+      <>
       <div class="vh-100 horizontal-scroll bg-white container-fluid" tab-index="0">
       <Row className="flex-nowrap">
           {/* Add components of culture page here  */}
@@ -35,6 +37,24 @@ export default class CulturePage extends React.Component {
           <VerticalFooter/>
         </Row>
       </div>
+      <div class="vw-100 mobile vertical-scroll bg-white container-fluid" tab-index="0">
+      <Column className="flex-nowrap" id="mobileCulturePage">
+          {/* Add components of culture page here  */}
+          <IntroSection />
+          <IntroImages/>
+          <BelongHere/>
+          <Diversity/>
+          <Inclusion/>
+          <Equity/>
+          <Events />
+          <Events2 />
+          <Events3 />
+          <Showcase/>
+          <CollageSection />
+          <VerticalFooter/>
+        </Column>
+      </div>
+      </>
     );
   }
 }
