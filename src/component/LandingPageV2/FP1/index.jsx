@@ -9,7 +9,7 @@ export default function FP1() {
     <div className="parent">
       <div className="column-1">
         <div>
-          <h1 style={{fontSize: "9vh"}} className="earnz-header">Earnz</h1>
+          <h1 style={{fontSize: "7vh"}} className="earnz-header">Earnz</h1>
           <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
             software
           </p>
@@ -52,6 +52,8 @@ export default function FP1() {
             team.
           </p>
         </div>
+        <hr id="pageSeparator">
+        </hr>
       </div>
     </div>
   );
