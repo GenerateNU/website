@@ -1,9 +1,11 @@
 import React from "react";
 import './style.css';
 import teamsDataV2 from '../../data/teamDataV2';
+import TeamCard from './TeamCard'
 //import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Column from "react-bootstrap/esm/Col";
+
 
 export default class TeamsPage extends React.Component {
   render() {
@@ -13,15 +15,12 @@ export default class TeamsPage extends React.Component {
     tab-index="0">
         Teams WIP
         <Row className="flex-nowrap">
-        {
+        {/*
                     teamsDataV2.map(team => {
-                        return (
-                        <div className="PH">
-                            {team.team}
-                        </div>
-                        )
+                       <TeamCard props={team}/> 
                     }).reverse()
-                }
+                  */}
+                  <TeamCard props={teamsDataV2[0]}/>
         </Row>
       </div>
     );
