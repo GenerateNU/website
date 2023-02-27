@@ -23,7 +23,6 @@ export default class AboutPage extends React.Component {
           <OurMissionSection />
           <WeAreSection />
           <Leadership />
-
           <History />
           <Timeline />
           <Stats/>
@@ -31,7 +30,6 @@ export default class AboutPage extends React.Component {
           <GrowthMantra/>
           <Footer />
           <FooterTwo />
-          
           </Row>
       </div>
 

@@ -1,36 +1,40 @@
-.todayContainer{
-
+.today-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
 }
 
-.today{
-    
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
 }
 
-.statsContainer{
-
+.stat-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10%;
 }
 
-.statTitle{
-
+.stat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin-right: 20%;
 }
 
-.statNumber{
-
+.stat_number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
 }
-
-.members{
-
-}
-
-.clients{
-
-}
-
-.teams{
-
-}
-
-.roles{
-
-}
-
