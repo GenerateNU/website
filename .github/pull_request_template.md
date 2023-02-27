@@ -9,7 +9,7 @@
 
 Describe in detail steps you used to test the changes you have made.
 
- Required checks:
+Required checks:
 
 - [ ] Did you conduct a self-review?
 - [ ] Have you written unit or integration tests?
