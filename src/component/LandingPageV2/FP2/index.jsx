@@ -6,7 +6,7 @@ import TopCorner from "../../../assets/images/landingpage-v2/top_corner.png";
 
 export default function FP2() {
   return (
-    <div className="parent">
+    <div className="parent" id="fp2-parent">
       <div className="column-1">
         <div className="heading-container">
           <h1 id="fp2-header">SmartyPill</h1>
