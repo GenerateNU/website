@@ -15,12 +15,11 @@ export default class TeamsPage extends React.Component {
     tab-index="0">
         Teams WIP
         <Row className="flex-nowrap">
-        {/*
+        {
                     teamsDataV2.map(team => {
-                       <TeamCard props={team}/> 
+                       return <TeamCard {...team}/> 
                     }).reverse()
-                  */}
-                  <TeamCard props={teamsDataV2[0]}/>
+                  }
         </Row>
       </div>
     );
