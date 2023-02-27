@@ -1,12 +1,7 @@
-# What was the ticket?
 
- WT-[ticket number] - [ticket title]
- Ticket Link: htttps://put_the_ticket_link_here.com
-
-# What did I do?
-
-# How did I test it?
-
+ # What was the ticket?
+ WT-42 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
+ Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-42
  
  # What did I do?
  
@@ -15,8 +10,15 @@ I changed some of the HTML/CSS properties of FP1 that included the Earnz Project
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
-
-Required checks:
+ Key Parts
+ - I checked the behavior of the page at various mobile settings (iPhone SE, iPhone 12 Pro, iPhone XR, Pixel 5, Samsung Galaxy 8+, Samsung Galaxy S20 Ultra)
+ - Made sure text remained clearly visible and as close as possible to the mobile UI.
+ 
+ Required checks:
+ 
+ - [Yes] Did you conduct a self-review?
+ - [Yes] Have you written unit or integration tests?
+=======
 
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
