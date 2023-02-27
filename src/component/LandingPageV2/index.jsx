@@ -18,6 +18,7 @@ import WhoWeAreResponse from "./WhoWeAreResponse";
 import "./style.css";
 import Management from "./Management";
 import Footer from "../VerticalFooter";
+import NextPage from "../NextPage";
 //import NavBar from "../NavBar";
 //import { Navbar } from "react-bootstrap";
 
@@ -46,6 +47,7 @@ export default class LandingPageV2 extends React.Component {
             <PreviousProjects />
             <Interested />
             <Footer />
+            <NextPage pageName="About" url="/about" />
           </Row>
         </div>
         <div
@@ -68,6 +70,7 @@ export default class LandingPageV2 extends React.Component {
             <PreviousProjects />
             <Interested />
             <Footer />
+            <NextPage pageName="About" url="/about" />
           </Column>
         </div>
       </>
