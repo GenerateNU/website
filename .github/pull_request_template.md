@@ -1,28 +1,35 @@
 # What was the ticket?
+ WT-41 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
+ Link to Ticket: https://generatenu.atlassian.net/browse/WT-41?atlOrigin=eyJpIjoiMjY1ODFmZTRkMDVmNGY1N2ExZjc4MjJiYThlODNlMDUiLCJwIjoiaiJ9
 
- WT-57 - Bug fix + resizing dynamics: Fix text layout issues on "Stats" panel of About page when resizing page.
- [Ticket Link]([htttps://put_the_ticket_link_here.com](https://generatenu.atlassian.net/browse/WT-57?atlOrigin=eyJpIjoiOWEzYWVhZTYxOTBmNGVjNDgzN2U0OGQwYjY0MWM1MzkiLCJwIjoiaiJ9))
 
-# What did I do?
+ # What did I do?
 
-Cleaned up the code and fixed the text layout issues on the "Stats" panel of the About page when resizing the page. Additionally implemented a NumberTickerAnimation component that animates the numbers on the "Stats" panel to tick up as depicted in the Figma design. This feature is currently disabled until I can get the go ahead from design that the animation is what they intended.
+I changed some of the CSS properties of the text components on the Featured Projects panel when the display is switched to mobile via using selectors to specifically change properties such as DOM layout (padding, margins) and text font-size.
 
-# How did I test it?
+ # How did I test it?
 
 Describe in detail steps you used to test the changes you have made.
+ Key Parts
+ - I checked the behavior of the page at various page lengths (desktop size, border between desktop and mobile, and mobile size)
+ - Made sure text remained clearly visible and as close as possible to the mobile UI.
 
-Tested on a variety of screen sizes within inspect to ensure that the text bleeding and overlapping issues were fixed.
+ Required checks:
 
-Required checks:
+ - [ ] Did you conduct a self-review?
+ - [ ] Have you written unit or integration tests?
 
-- [Y] Did you conduct a self-review?
-- [N/A] Have you written unit or integration tests?
+ # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
 
-# What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
+ Describe aspects of the PR that may become problems in the future.
+ Key Questions
+ - There is a black line running down the left side of the mobile page of the Landing, needs to be looked into.
 
-Describe aspects of the PR that may become problems in the future.
+ # Additional comments for the reviewers
 
-Black bars between timeline and stats section are not in the Figma. Unsure how to fix this.
-# Additional Comments for the Reviewers
+ # Screenshots
+ FIGMA
+ ![alt text](public/images/PRImages/Featured_projects_mobile.png?raw=true "FIGMA") 
 
-# Screenshots
+ MY VERSION
+![alt text](public/images/PRImages/Featured_projects_mobile_UI_local.png?raw=true "LOCAL")
