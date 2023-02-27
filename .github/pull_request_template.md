@@ -1,7 +1,7 @@
 # What was the ticket?
 
  WT-[ticket number] - [ticket title]
- [Ticket Link](htttps://put_the_ticket_link_here.com)
+ Ticket Link: htttps://put_the_ticket_link_here.com
 
 # What did I do?
 
