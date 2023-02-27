@@ -7,10 +7,12 @@ import ShadowedButton from '../../ShadowedButton';
 import './style.css';
 
 const TeamCard = (props) => {
-    <div className='card-container-flex'>
+    <div className='card-container-flex' style={"color: " + props.color}>
         <img className='card-img' src={props.image} />
         <div className='title-bkgnd'>
-        {props.title}
+            <div className='title-text' style={"color: " + props.color}>
+                {props.title}
+            </div>
         </div>
     </div>
 }

@@ -2,3 +2,32 @@
     font-size: 400px;
 }
 
+.card-container-flex {
+    height: 100%;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img {
+    width: 40vh;
+    height: auto;
+}
+
+.title-bkgnd {
+    color: black;
+    width: 50vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text {
+    font-family: 'Space Mono 700';
+    font-weight: 700;
+    font-size: 8vh;
+    line-height: 5vh;
+}
