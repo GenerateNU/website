@@ -1,6 +1,6 @@
 
 .value-card-sizing {
-    height: 27vw;
+    height: min(27vw, 400px);
     aspect-ratio: 1.2 / 1;
 }
 
