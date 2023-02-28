@@ -177,12 +177,14 @@ h1 {
   .client-blurb p {
     font-size: 2vh;
     margin: auto;
+
   }
 
   .product-img-container {
     padding-top: 0;
     margin-top: 0;
     padding-left: 0;
+
   }
 
   .mockup-img {

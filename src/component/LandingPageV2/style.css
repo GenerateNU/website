@@ -1,3 +1,18 @@
+
+.horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.vertical-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#mobile-page-container {
+  width: 100vw;
+}
+
 .vh-25 {
   height: 25vh;
 }
@@ -74,4 +89,21 @@ p {
 .nospacing {
     margin:0%;
     padding: 0%;
+}
+/*
+.vh-100 {
+    display: inline;
+  }
+*/
+.mobile {
+    display: none;
+  }
+
+@media only screen and (max-device-width: 650px) {
+    .vh-100 {
+      display: none;
+    }
+    .mobile {
+      display: flex;
+    }
 }

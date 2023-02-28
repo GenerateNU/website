@@ -27,6 +27,11 @@ a {
   color: #e0e0e0;
 }
 
+.disabled-footer-text {
+  pointer-events: none;
+  color: #e0e0e0;
+}
+
 a:hover {
    font-weight: 1000;
    color: #ffffff;
