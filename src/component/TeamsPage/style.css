@@ -33,3 +33,10 @@
     line-height: 5vh;
     text-transform: uppercase;
 }
+
+.teams-navbar {
+  position: fixed;
+  z-index: 2;
+  margin-left: 3%;
+  padding-top: 2%;
+}

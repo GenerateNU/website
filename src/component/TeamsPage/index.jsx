@@ -16,7 +16,9 @@ export default class TeamsPage extends React.Component {
     class="vh-100 horizontal-scroll bg-white container-fluid"
     tab-index="0">
         <Row className="flex-nowrap">
-          <NavBar/>
+          <div className="teams-navbar">
+            <NavBar/>
+          </div>
           {
                     teamsDataV2.map(team => {
                        return <TeamCard {...team}/> 
