@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import Column from "react-bootstrap/esm/Col";
 import OurMissionSection from "./OurMissionSection";
 import WeAreSection from "./WeAreSection";
 import Leadership from "./Leadership";
@@ -42,10 +43,9 @@ export default class AboutPage extends React.Component {
   render() {
     const width = this.state.width;
     const isMobile = width <= 650;
-    return (
-     <div class={`${isMobile ? "vw-100 vertical-scroll" : "vh-100 horizontal-scroll"} bg-black container-fluid`} tab-index="0">
-          <Row className="flex-nowrap">
-            <OurMissionSection />
+    //element of all components on the About page
+    const aboutBody = (<>
+      <OurMissionSection />
             <WeAreSection />
             {!isMobile && <>
               <Leadership />
@@ -57,8 +57,16 @@ export default class AboutPage extends React.Component {
               <Footer />
               <FooterTwo />
               </>
-            }
-          </Row>
+            }</>);
+
+    return (
+      //render with vertical scroll on mobile and horizontal on desktop
+      <div class={`${isMobile ? "vw-100 vertical-scroll" : "vh-100 horizontal-scroll"} bg-black container-fluid`} tab-index="0">
+        
+        {isMobile ? //render as column on mobile, or row on desktop
+          <Column className="flex-nowrap"> {aboutBody}</Column> :
+          <Row className="flex-nowrap"> {aboutBody}</Row>
+        }
       </div>
 
     
