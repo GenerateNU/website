@@ -20,7 +20,7 @@
 .value-card-text {
     color: white;
     font-family: 'Outfit 300';
-    font-size: min(2vw, 25px);
+    font-size: min(1.8vw, 25px);
     line-height: min(2.35vw, 35px);
     height: 80%;
     padding: 5%;
