@@ -4,13 +4,7 @@
     padding: 0%;
 }
 
-@media only screen and (max-device-width: 650px) {
-    .whoWeAreContainer{
-        width: 100%;
-        margin:0%;
-        padding: 0%;
-    }
-  }
+
 
 .whowearetext {
 padding-top: 15vh;
@@ -51,3 +45,31 @@ font-size: 2.5vh;
 line-height: 3vw;
 color: #FFFFFF;
 }
+
+@media only screen and (max-device-width: 650px) {
+    .whoWeAreContainer{
+        width: 100%;
+        margin:0%;
+        padding: 0%;
+    }
+
+    .bluerectangle {
+        height: 20vh;
+    }
+    .whowearetext {
+        padding-top: 7vh;
+        padding-left: 5%;
+        font-size: 5vh;
+    }
+
+    .purplerectangle {
+        height: 60vh;
+    }
+
+    .whoweareparagraph {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: 3vh;
+    }
+  }
