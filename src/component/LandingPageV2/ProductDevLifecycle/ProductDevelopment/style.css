@@ -32,7 +32,7 @@ a {
     
   }
 
-  .paragraphText {
+  .prodParagraphText {
     width: min(60vh, calc(80vw - 12vh));
     height: 40vh;
     top: 71.14vh;
@@ -77,7 +77,12 @@ a {
   .alignItemsRight {
     display: flex;
     flex-direction: row;
+     
     margin-top: 4%;
+  }
+
+  .wheel-img {
+    width: min(64vh, 100vw);
   }
 
  
@@ -86,6 +91,20 @@ a {
     justify-content: center;
   }
 
-  .ProductDevText
+  .alignItemsRight {
+    padding-left: 0;
+  }
+
+  .ProductDevText {
+    font-family: "Space Mono 700";
+    font-size: 12vw;
+    line-height: 7vh;
+    height: 43vw;
+  }
+
+  .prodParagraphText {
+    width: 90vw;
+  }
+   
 }
    

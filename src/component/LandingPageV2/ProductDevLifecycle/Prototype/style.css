@@ -87,6 +87,58 @@ a {
     
 
     color: #FF6660;
+  }  
+  @media only screen and (max-device-width: 650px) {
+  .column {
+    justify-content: center;
   }
+
+  .alignItemsRight {
+    padding-left: 0;
+  }
+
+  .PrototypeText{
+    font-family: "Space Mono 700";
+    font-size: 12vw;
+    line-height: 7vh;
+    height: 10vh;
+    margin-top: 0%;
+  }
+
+  .paragraphText {
+    width: 90vw;
+    font-size: 2vh;
+    margin-top: 0%;
+  }
+  
+  .background-black-text {
+    width: 100vw;
+    height: 60vh;
+    margin-left: 5%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .background-black-wheel {
+
+    width: 100vw;
+    height: 70vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .DevelopmentWheelThree {
+    margin-top: 0%;
+  }
+
+  .wheel-img {
+    width: 70vw;
+  }
+
+}
+
+ 
+   
 
   
