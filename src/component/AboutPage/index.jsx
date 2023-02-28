@@ -27,6 +27,20 @@ export default class AboutPage extends React.Component {
       <FooterTwo />,
     ];
     return (
+     <div class="vh-100 horizontal-scroll bg-black container-fluid" tab-index="0">
+          <Row className="flex-nowrap">
+          <OurMissionSection />
+          <WeAreSection />
+          <Leadership />
+          <History />
+          <Timeline />
+          <Stats/>
+          <WhyGenerateCarousel />
+          <GrowthMantra/>
+          <Footer />
+          <FooterTwo />
+          </Row>
+      </div>
       <DesktopMobileScrollAndBackgroundHandler
         children={children}
         desktopBGColor={"black"}
