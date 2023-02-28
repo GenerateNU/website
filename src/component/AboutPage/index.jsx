@@ -38,7 +38,8 @@ export default class AboutPage extends React.Component {
     
     );
   }
-}
+};
+
 /*
 export default class AboutPage extends React.Component {
   render() {
