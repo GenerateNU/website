@@ -5,6 +5,8 @@ import TeamCard from './TeamCard'
 //import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import NavBar from "../NavBar"
+import Footer from "../VerticalFooter"
+import NextPage from "../NextPage"
 
 
 export default class TeamsPage extends React.Component {
@@ -14,12 +16,14 @@ export default class TeamsPage extends React.Component {
     class="vh-100 horizontal-scroll bg-white container-fluid"
     tab-index="0">
         <Row className="flex-nowrap">
-        <NavBar/>
-        {
+          <NavBar/>
+          {
                     teamsDataV2.map(team => {
                        return <TeamCard {...team}/> 
                     })
                   }
+            <Footer />
+            <NextPage pageName="People" url="/about"/>
         </Row>
       </div>
     );
