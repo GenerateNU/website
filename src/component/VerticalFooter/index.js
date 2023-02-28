@@ -20,11 +20,7 @@ function VerticalFooter() {
           <div className="sherm">
           <a href='https://generatenu.com/'>
             <img
-<<<<<<< HEAD
               className="logo-placement logo-shadow" 
-=======
-              className="logo-placement logo-shadow"
->>>>>>> parent of fb49ab4 (Merge branch 'main' into dev/desktop-moblify)
               src={GenerateLogo}
               height="80%"
               width="60%"

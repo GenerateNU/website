@@ -25,6 +25,7 @@ import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 export default class LandingPageV2 extends React.Component {
     
   render() {
+    
     const children = [
       <Intro />,
       <WhoWeAre />,
@@ -42,6 +43,7 @@ export default class LandingPageV2 extends React.Component {
       <Interested />,
       <Footer />,
     ];
+    
     return (
       <><>
         <div
@@ -88,10 +90,7 @@ export default class LandingPageV2 extends React.Component {
             <Footer />
           </Column>
         </div>
-      </><DesktopMobileScrollAndBackgroundHandler
-          children={children}
-          desktopBGColor={"white"}
-          mobileBGColor={"black"} /></>
+      </></>
     );
   }
 };
