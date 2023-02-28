@@ -40,3 +40,15 @@
     font-family: 'Space Mono 700';
     word-spacing: -5vw;
 }
+
+@media only screen and (max-device-width: 650px) {
+    .quote-text {
+        width: 100%;
+
+    }
+
+    .mission-mobile {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
