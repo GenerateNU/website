@@ -7,7 +7,7 @@ const WeAreSection = () => {
     return (
         <> 
              <div >
-                <div className="mt-4 fit-content">
+                <div className="weare-header mt-4 fit-content">
                     <h6 className="mb-0 our-mission-our-values we-are-values w-auto h-auto text-end p-4">
                         our values
                     </h6>

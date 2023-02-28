@@ -69,3 +69,9 @@
 .our-mission-we-are {
     font-size: 10vw;
 }
+
+@media only screen and (max-device-width: 650px) {
+    .weare-header {
+        width: 100% !important;
+    }
+}
