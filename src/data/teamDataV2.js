@@ -11,31 +11,31 @@ import CommunityInactiveIcon from "../assets/icons/teams/gray/Community.png";
 
 const teamDataV2 = [
     {
-        team: "Management",
+        name: "Management",
         color: "#FFBF3C",
         activeIcon: ManagementActiveIcon,
         inactiveIcon: ManagementInactiveIcon,
     },
     {
-        team: "Operations",
+        name: "Operations",
         color: "#A559EC",
         activeIcon: CommunityActiveIcon,
         inactiveIcon: CommunityInactiveIcon,
     },
     {
-        team: "Software",
+        name: "Software",
         color: "#187DFF",
         activeIcon: SoftwareActiveIcon,
         inactiveIcon: SoftwareInactiveIcon,
     },
     {
-        team: "Hardware",
+        name: "Hardware",
         color: "#FF5751",
         activeIcon: HardwareActiveIcon,
         inactiveIcon: HardwareInactiveIcon,
     },
     {
-        team: "Engagement",
+        name: "Engagement",
         color: "#6FCF97",
         activeIcon: OperationsActiveIcon,
         inactiveIcon: OperationsInactiveIcon,
