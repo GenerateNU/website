@@ -30,6 +30,22 @@
   color: #ffffff;
 }
 
+.wearetextmobile {
+  position: relative;
+  width: 16.2vh;
+  height: 6.46vh;
+  left: 1.24vh;
+  top: 19vh;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.79vh;
+  line-height: 10.46vh;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 .generatetext {
   /* generate */
   position: relative;
@@ -46,6 +62,82 @@
   text-transform: uppercase;
 
   color: #ffffff;
+}
+
+.generatetextmobile {
+  /* generate */
+  position: relative;
+  width: 149.39vh;
+  height: 45.12vh;
+  top: 11vh;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8vh;
+  line-height: 25.12vh;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.northeasternbest {
+  /* generate */
+  position: relative;
+  height: 6.46vh;
+  right: -18vh;
+  top: -20vh;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 10;
+  font-size: 1.79vh;
+  line-height: 10.46vh;
+  color: #ffffff;
+}
+
+.productdevelopment {
+  /* generate */
+  position: relative;
+  height: 6.46vh;
+  right: -18vh;
+  top: -24vh;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 10;
+  font-size: 1.79vh;
+  line-height: 10.46vh;
+  text-transform: lowercase;
+  color: #ffbf00;
+}
+
+.studio {
+  /* generate */
+  position: relative;
+  height: 6.46vh;
+  right: -32vh;
+  top: -28vh;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 10;
+  font-size: 1.79vh;
+  line-height: 10.46vh;
+  text-transform: lowercase;
+  color: white;
+}
+
+.scrollmobile {
+  position: relative;
+  height: 210vh;
+  right: -19vh;
+  top: 5vh;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 10;
+  font-size: 1.79vh;
+  line-height: 10.46vh;
+  text-transform: lowercase;
+  color: white;
+  text-decoration: underline;
 }
 
 .comingsoontext {

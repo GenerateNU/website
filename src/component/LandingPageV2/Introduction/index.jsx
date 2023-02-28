@@ -18,14 +18,12 @@ export default function Introduction() {
             <p className="generatetext">GENERATE</p>
           </div>
           <div class="comingsoontext">
-            <p className="comingsoontext">MOBILE PAGE COMING SOON!</p>
-          </div>
-          {/* <div className="whitebox">
-             <div className="scrollarrow" ></div>
-             <p className="scrolltext">scroll</p>
-             </div> */}
-          <div className="scroll">
-            <img className="scrollimg" src={ScrollButton} alt="sroll left" />
+            <p className="wearetextmobile">WE ARE</p>
+            <p className="generatetextmobile">GENERATE</p>
+            <p className="northeasternbest">Northeastern's  best</p>
+            <p className="productdevelopment">product development</p>
+            <p className="studio">studio</p>
+            <p className="scrollmobile">scroll</p>
           </div>
         </div>
       </div>
