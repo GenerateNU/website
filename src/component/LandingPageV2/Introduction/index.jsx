@@ -13,12 +13,9 @@ export default function Introduction() {
     <div className="introductionContainer">
         <div className="shermancenter">
           <div className="intro-navbar"><NavBar /> </div>
-          <div class="desktop">
+          <div class="text-container">
             <p className="wearetext">WE ARE</p>
             <p className="generatetext">GENERATE</p>
-          </div>
-          <div class="comingsoontext">
-            <p className="comingsoontext">MOBILE PAGE COMING SOON!</p>
           </div>
           {/* <div className="whitebox">
              <div className="scrollarrow" ></div>
