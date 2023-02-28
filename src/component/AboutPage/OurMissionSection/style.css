@@ -40,3 +40,13 @@
     font-family: 'Space Mono 700';
     word-spacing: -5vw;
 }
+
+.mission-navbar {
+  position: fixed;
+  z-index: 2;
+  margin-left: 3%;
+}
+
+.mission-margin {
+    margin-top: 15vmax;
+}

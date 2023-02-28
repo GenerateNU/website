@@ -7,8 +7,10 @@ import "./style.css";
 const OurMissionSection = () => {
   return (
     <div className="vw-100 vh-100 py-4 px-5">
-      <NavBar />
-      <div className="w-75 pe-5 d-flex">
+      <div className="mission-navbar">
+        <NavBar />
+      </div>
+      <div className="w-75 mission-margin pe-5 d-flex">
         <div className="our-mission-quotation-mark me-2">&#8220;</div>
         <div className="our-mission-quote">
           To educate Northeastern students through hands-on professional
