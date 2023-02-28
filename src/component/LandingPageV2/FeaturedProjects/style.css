@@ -35,3 +35,25 @@ p {
   align-items: center;
   justify-content: space-evenly;
 }
+
+@media only screen and (max-device-width: 650px) {
+  .mobile {
+    display: flex;
+  }
+  .projects-container h2 {
+    font-size: 8em;
+    text-align: start;
+    padding: 4.2vw;
+  }
+  .blurb-container p {
+    text-align: left;
+    padding: 3.5vw;
+    font-size: 4.5vw;
+    max-width: 90vw;
+  }
+  .featured_projects_container {
+    padding-top: 8em;
+    width: 100vw;
+    align-items: flex-start;
+  }
+}

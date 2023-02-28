@@ -62,3 +62,27 @@
   height: 86vh;
 }
 
+
+
+@media only screen and (max-device-width: 650px) {
+  .prev-proj-wrapper .wrapper {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .prev-proj-wrapper .logo {
+    max-width: unset;
+    max-height: unset;
+    width: unset;
+    padding: 0;
+  }
+
+  .prev-proj-wrapper .col-1, .prev-proj-wrapper .col-2, .prev-proj-wrapper .col-3 {
+    align-items: center;
+    width: unset;
+  }
+
+  .prev-proj-wrapper .logo img {
+    width: 75vw;
+  }
+}

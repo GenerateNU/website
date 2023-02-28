@@ -1,7 +1,5 @@
 import React from "react";
-import Container from "react-bootstrap/esm/Container";
-import Row from "react-bootstrap/esm/Row";
-import CollageSection from "./Collage"
+import CollageSection from "./Collage";
 import Events from "./Events";
 import Events2 from "./Events2";
 import Events3 from "./Events3";
@@ -14,27 +12,30 @@ import Diversity from "./Diversity";
 import VerticalFooter from "../VerticalFooter";
 import Showcase from "./Showcase";
 import "./style.css";
+import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class CulturePage extends React.Component {
   render() {
+    const children = [
+      <IntroSection />,
+      <IntroImages />,
+      <BelongHere />,
+      <Diversity />,
+      <Inclusion />,
+      <Equity />,
+      <Events />,
+      <Events2 />,
+      <Events3 />,
+      <Showcase />,
+      <CollageSection />,
+      <VerticalFooter />,
+    ];
     return (
-      <div class="vh-100 horizontal-scroll bg-white container-fluid" tab-index="0">
-      <Row className="flex-nowrap">
-          {/* Add components of culture page here  */}
-          <IntroSection />
-          <IntroImages/>
-          <BelongHere/>
-          <Diversity/>
-          <Inclusion/>
-          <Equity/>
-          <Events />
-          <Events2 />
-          <Events3 />
-          <Showcase/>
-          <CollageSection />
-          <VerticalFooter/>
-        </Row>
-      </div>
+      <DesktopMobileScrollAndBackgroundHandler
+        children={children}
+        desktopBGColor={"white"}
+        mobileBGColor={"white"}
+      />
     );
   }
 }
