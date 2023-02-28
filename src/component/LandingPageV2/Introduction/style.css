@@ -97,6 +97,12 @@
   .comingsoontext {
     display: inline;
   }
+
+  .intro-navbar {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media only screen and (min-device-width: 651px) {
