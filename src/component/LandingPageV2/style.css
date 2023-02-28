@@ -96,7 +96,7 @@ p {
   }
 
 @media only screen and (max-device-width: 650px) {
-    .vh-100 {
+    .desktop {
       display: none;
     }
     .mobile {

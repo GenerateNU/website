@@ -132,7 +132,7 @@ export default class LandingPageV2 extends React.Component {
       ); } else {
         return (
           <div
-            class="vh-100 horizontal-scroll bg-white container-fluid"
+            class="desktop vh-100 horizontal-scroll bg-white container-fluid"
             tab-index="0"
           >
             <Row className="flex-nowrap">
