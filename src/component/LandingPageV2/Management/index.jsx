@@ -57,7 +57,11 @@ export default function Management() {
         <div id="title">
           <div>MANAGEMENT</div>
         </div>
-
+        <div className="management-text">
+          <div id="title">
+            <div>MANAGEMENT</div>
+          </div>
+        </div>
         <div id="description">
           The Management Team ensures alignment across our organization.
           The team drives our teams to excel through collaboration and innovative thinking -

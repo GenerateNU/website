@@ -172,8 +172,9 @@ const WhatWeOffer = () => {
           <div
             className="bg-black position-absolute bottom-0 w-100 text-uppercase software-hardware-style hardware-color py-3"
             onClick={() => {setShowHardwareInfo(!showHardwareInfo)
-                            setShowSoftwareInfo(false)}}
-            onMouseLeave={() => setShowHardwareInfo(false)}
+                            setShowSoftwareInfo(false)}}      
+            /*onMouseEnter={() => setShowHardwareInfo(true)}
+            onMouseLeave={() => setShowHardwareInfo(false)}*/
           >
             Hardware
           </div>

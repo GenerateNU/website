@@ -1,4 +1,4 @@
-# TODOs
+graves# TODOs
 
 0. Rename component to components
 1. Delete dead code, repeated image assets
@@ -8,7 +8,7 @@
 5. Re-organize components folder (make a pages directory and then misc directory for components like RightTriangle)
 5. Re-do pages (e.g. landing page carousels)
 6. Move data to backend
-
+7. Add CI/CD pipeline to deploy to prod on push to main
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

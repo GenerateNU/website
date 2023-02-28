@@ -3,23 +3,15 @@
   padding: 0%;
 }
 
-.shermancenter{
+.shermancenter {
     /* position: absolute; */
-    /* width: 1440px; */
+    max-width: 100vw;
     height: 100vh;
     left: 0px;
+    right: 0px;
     top: 0px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../../../assets/images/landingpage/weare/landing.jpg');
     background-size: cover;
-}
-
-.text-container {
-  position: relative;
-  left: 8vw;
-  top: calc(30vh - 90px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .wearetext {
@@ -29,7 +21,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 4.39vh;
-  line-height: 6.46vh;
+  line-height: 10.46vh;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -45,12 +37,75 @@
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 30.48vh;
   font-size: 17vw;
   line-height: 25.12vh;
   text-transform: uppercase;
 
   color: #ffffff;
+}
+
+.comingsoontext {
+  display: inline;
+  position: relative;
+  width: 110.39vh;
+  height: 30.12vh;
+  left: 1.17vh;
+  top: 6.0vh;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10vh;
+  line-height: 8.12vh;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  
+}
+
+.desktop {
+  /* generate */
+  /*
+  display: inline;
+  position: relative;
+  width: 149.39vh;
+  height: 45.12vh;
+  left: 13.17vh;
+  top: calc(30vh - 90px);
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30.48vh;
+  line-height: 45.12vh;
+  text-transform: uppercase; */
+  position: relative;
+  left: 8vw;
+  top: max(35vh, 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/* css to render appropriate intro on desktop vs. mobile by setting display size params
+*/
+@media only screen and (max-device-width: 650px) {
+  .desktop {
+    display: none;
+  }
+  .comingsoontext {
+    display: inline;
+  }
+}
+
+@media only screen and (min-device-width: 651px) {
+  .desktop {
+    display: flex;
+  }
+  .comingsoontext {
+    display: none
+  }
 }
 
 .scrolltext {
@@ -96,7 +151,7 @@
 .scrollimg {
   width: 10.04vh;
   object-fit: contain;
-  margin-bottom: -35vh;
+  margin-bottom: -70vh;
 }
 
 .scroll {
@@ -116,6 +171,8 @@
 }
 
 .intro-navbar {
+  position: fixed;
+  z-index: 2;
   margin-left: 3%;
   padding-top: 2%;
 }

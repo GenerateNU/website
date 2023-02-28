@@ -13,7 +13,7 @@ export default function FeaturedProjects() {
           leave with a working prototype, and possible IP.
           <br></br>
           <br></br>
-          We’ve had some exciting projects over the years! Check out what we’ve worked on so far:
+          We’ve had some exciting projects over the years! Check out what we’ve worked on so far.
         </div>
       </div>
   );
