@@ -84,7 +84,7 @@
   top: max(35vh, 90px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   color: #ffffff;
 }
 
@@ -156,7 +156,7 @@
 
 .scroll {
   position: relative;
-  bottom: 50px;
+  top: max(9vh, 10px);
   display: flex;
   flex-direction: row;
   float: right;
