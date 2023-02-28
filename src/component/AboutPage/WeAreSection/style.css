@@ -1,6 +1,6 @@
 
 .value-card-sizing {
-    height: 30vh;
+    height: 27vw;
     aspect-ratio: 1.2 / 1;
 }
 
@@ -63,5 +63,5 @@
 }
 
 .cards-space {
-    width: 60%;
+    width: 100%;
 }
