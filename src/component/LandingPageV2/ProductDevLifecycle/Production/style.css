@@ -34,7 +34,7 @@ a {
 
   .paragraphText {
     /*width: 55vh;*/
-    width: min(55vh, calc(80vw - 12vh));
+    width: min(55vh, calc(80vw - 10vh));
     height: 29.86vh;
     top: 71.14vh;
     margin-top: 6.27vh;
@@ -42,7 +42,7 @@ a {
     font-family: 'Outfit 400';
     font-style: normal;
     font-weight: 400;
-    font-size: 2.51vh;
+    font-size: 2vh;
     line-height: 3.51vh;
     /* or 156% */
     
