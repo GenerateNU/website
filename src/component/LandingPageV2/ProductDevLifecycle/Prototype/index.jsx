@@ -7,7 +7,7 @@ const Prototype = () => {
           <>
             <div className="background-black-wheel">
               <div className = "DevelopmentWheelThree">
-                <img  style={{width: 'min(64vh, 100vw)'}} src ={DevelopmentWheel} />
+                <img className="wheel-img" src ={DevelopmentWheel} />
               </div>
             </div>
             <div className="background-black-text">
