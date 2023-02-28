@@ -89,13 +89,10 @@ p {
     margin:0%;
     padding: 0%;
 }
-/*
-.vh-100 {
-    display: inline;
-  }
-*/
+
 .mobile {
     display: none;
+    padding-left: 0px;
   }
 
 @media only screen and (max-device-width: 650px) {
