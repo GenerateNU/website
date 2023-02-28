@@ -81,78 +81,11 @@ a {
   }
 
  
-
-  .ideation {
-    /*margin-left: 12.55vh;*/
+@media only screen and (max-device-width: 650px) {
+  .column {
+    justify-content: center;
   }
 
-  .IdeationText {
-    width: 44.3vh;
-    height: 11.22vh;
-    left: 95.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
-    /* Core/MNGMNT Yellow */
-
-    color: #FFBF3C;
-  }
-
-  .PrototypeText{
-    width: 44.3vh;
-    height: 11.22vh;
-    left: 95.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
-    
-
-    color: #FF6660;
-  }
-
-  .ProductionText{
-    width: 44.3vh;
-    height: 11.22vh;
-    left: 95.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
-    
-
-    color: #187DFF;
-  }
- 
+  .ProductDevText
+}
    
