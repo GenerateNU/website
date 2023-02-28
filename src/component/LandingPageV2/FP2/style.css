@@ -160,10 +160,8 @@ h1 {
 
   .client-blurb {
     padding-top: 3vh;
-    padding-bottom: 3vh;
     margin: auto;
-    display: flex;
-    /* margin-left: -6vw; */
+    margin-left: -6vw;
   }
 
   .name-order {
@@ -176,20 +174,25 @@ h1 {
 
   .client-blurb p {
     font-size: 2vh;
+<<<<<<< HEAD
     margin: auto;
 
+=======
+>>>>>>> parent of fb49ab4 (Merge branch 'main' into dev/desktop-moblify)
   }
 
   .product-img-container {
     padding-top: 0;
     margin-top: 0;
+<<<<<<< HEAD
     padding-left: 0;
 
+=======
+>>>>>>> parent of fb49ab4 (Merge branch 'main' into dev/desktop-moblify)
   }
 
   .mockup-img {
     width: unset;
-    margin-left: -3vh;
   }
 
   .bottom-corner, .top-corner {
@@ -215,9 +218,5 @@ h1 {
   .quote-container blockquote::after {
     left: -0.5vh;
     bottom: -6vh;
-  }
-
-  #fp2-parent .column-2 {
-    align-items: center;
   }
 }
