@@ -10,8 +10,7 @@
 I changed the CSS units for width, height, line-height, font-size, and other attributes to make them fit better on the page.
 In some cases, I utilized CSS functions such as min() to ensure that a sizing which looked good at normal resolutions did not cause issues at
 extreme window sizes and shapes. I created rotated copies of the Product Development wheel instead of rotating a single image, and split the
- Ideation, Prototype, and Production components into two main elements enclosed by JSX fragments. I also I also added CSS styling for the mobile version 
- through the Product Development Lifecycle section to 
+ Ideation, Prototype, and Production components into two main elements enclosed by JSX fragments. I also reduced the padding on the NavBar component and added a row-flex to one of its divs to align the image, text, and menu icon within. I also added CSS styling for the mobile version of the landing page through the Product Development Lifecycle section to match it with the Figma and prevent bleeding.
  
  # How did I test it?
  
@@ -19,11 +18,15 @@ Describe in detail steps you used to test the changes you have made.
 I viewed the window on a monitor to check for large viewport width and heights, shrank viewport width to its minimum while testing different viewport heights to test for extreme width-height ratios, and zoomed the page up to 200% to ensure that spacing remained consistent at high magnification.
 ​
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
+
+ I have documented the changes I have worked on, but this branch also contains fixes Andy worked on, some of which should be in a separate PR which he posted last Thursday. Note that this is on branch bug-fix/window resizing; Andy had done work on that branch and successfully merged my work from bug-fix/landing-window-resizing into it. 
+
+
  
-This PR only covers the landing page up to and including the Product Development Lifecycle section. Additionally, fixes to the nav bar may need to be aligned with what is currently on the main branch, and the repositioning of text in the Introduction element may break proper positioning of the scroll box in the bottom right corner.
   # Additional comments for the reviewers
  
-For some reason, the branch does not currently contain a PRImages folder, so I had to include it in a new commit.
+ This is a large commit. It contains work from both Andy and I, and also other small fixes which were necessary while achieveing the main ticket goal (making sure that the CSS does not break on mobile, getting the navbar to look good on the About page, etc) for which there were no tickets.
+ Thanks for handling this big PR right before all hands!
  # Screenshots
 
  MY VERSION
