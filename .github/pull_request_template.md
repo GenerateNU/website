@@ -30,4 +30,11 @@ I viewed the window on a monitor to check for large viewport width and heights, 
  # Screenshots
 
  MY VERSION
-![alt text]
+![alt text](../public/images/Screenshot 2023-02-28 at 6.05.39 AM.png)
+![alt text](../public/images/Screenshot 2023-02-28 at 6.14.57 AM.png)
+![alt text](../public/images/Screenshot 2023-02-28 at 6.15.46 AM.png)
+![alt text](../public/images/Screenshot 2023-02-28 at 6.16.00 AM.png)
+![alt text](../public/images/Screenshot 2023-02-28 at 6.06.27 AM.png)
+![alt text](../public/images/Screenshot 2023-02-28 at 6.15.09 AM.png)
+![alt text](../public/images/Screenshot 2023-02-28 at 6.15.52 AM.png)
+![alt text](../public/images/Screenshot 2023-02-28 at 6.22.14 AM.png)
