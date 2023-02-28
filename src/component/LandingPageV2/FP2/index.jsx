@@ -21,7 +21,7 @@ export default function FP2() {
             <p style={{fontSize: "2vh"}} className="school">Northeastern Alumnus ‘20</p>
           </div>
         </div>
-        <div className="client-blurb">
+        <div className="client-blurb" id="fp2-client-blurb">
           <p style={{width: "40vh"}}>
             SmartyPill is an automatic pill and water dispenser that ensures
             you’re taking the right pills at the right time. With customizable
