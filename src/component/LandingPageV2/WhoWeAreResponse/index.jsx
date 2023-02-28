@@ -13,6 +13,9 @@ export default function WhoWeAreResponse() {
             <img className="generateLogoWhiteStyle" src={GenerateLogoWhite} alt=""/>
             <img className="generateLogoWhiteStyle" src={GenerateLogoWhite} alt=""/>
             <img className="generateLogoWhiteStyle" src={GenerateLogoWhite} alt=""/>
+            <div className="logo-mobile">
+               <img className="generateLogoWhiteStyle" src={GenerateLogoWhite} alt=""/>
+            </div>
             
          </div>
                 
