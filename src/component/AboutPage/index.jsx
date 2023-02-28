@@ -27,11 +27,13 @@ export default class AboutPage extends React.Component {
       <FooterTwo />,
     ];
     return (
+      <>
       <DesktopMobileScrollAndBackgroundHandler
         children={children}
         desktopBGColor={"black"}
         mobileBGColor={"black"}
       />
+      </>
     );
   }
 }

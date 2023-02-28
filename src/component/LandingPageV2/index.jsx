@@ -43,7 +43,7 @@ export default class LandingPageV2 extends React.Component {
       <Footer />,
     ];
     return (
-      <>
+      <><>
         <div
           class="vh-100 horizontal-scroll bg-white container-fluid"
           tab-index="0"
@@ -88,12 +88,10 @@ export default class LandingPageV2 extends React.Component {
             <Footer />
           </Column>
         </div>
-      </>
-      <DesktopMobileScrollAndBackgroundHandler
-        children={children}
-        desktopBGColor={"white"}
-        mobileBGColor={"black"}
-      />
+      </><DesktopMobileScrollAndBackgroundHandler
+          children={children}
+          desktopBGColor={"white"}
+          mobileBGColor={"black"} /></>
     );
   }
 };
