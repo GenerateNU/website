@@ -80,7 +80,8 @@
 
 @media only screen and (max-device-width: 650px) {
     .weare-header {
-        width: 100% !important;
+        width: 90% !important;
+        padding-left: 5%;
     }
 
     .our-mission-our-values {
