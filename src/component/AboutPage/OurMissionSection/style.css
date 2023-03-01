@@ -72,9 +72,9 @@
     }
 
     .mission-mobile {
-        padding-left: 0% !important;
+        padding-left: 5% !important;
         padding-right: 0% !important;
         width: 100% !important;
-        height: 80% !important;
+        height: 80vh !important;
     }
 }
