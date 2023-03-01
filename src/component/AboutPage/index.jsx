@@ -15,16 +15,16 @@ import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 export default class AboutPage extends React.Component {
   render() {
     const children = [
-      <OurMissionSection />,
-      <WeAreSection />,
+      // <OurMissionSection />,
+      // <WeAreSection />,
       <Leadership />,
-      <History />,
-      <Timeline />,
-      <Stats />,
-      <WhyGenerateCarousel />,
-      <GrowthMantra />,
-      <Footer />,
-      <FooterTwo />,
+      // <History />,
+      // <Timeline />,
+      // <Stats />,
+      // <WhyGenerateCarousel />,
+      // <GrowthMantra />,
+      // <Footer />,
+      // <FooterTwo />,
     ];
     return (
       <DesktopMobileScrollAndBackgroundHandler
