@@ -74,3 +74,7 @@ p {
 .our-history-text-style {
     margin-top: -1rem;
 }
+
+.mobile {
+    .padding-left: 0% !important;
+}

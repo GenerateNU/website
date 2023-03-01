@@ -61,7 +61,7 @@ export default class AboutPage extends React.Component {
 
     return (
       //render with vertical scroll on mobile and horizontal on desktop
-      <div class={`${isMobile ? "vw-100 vertical-scroll" : "vh-100 horizontal-scroll"} bg-black container-fluid`} tab-index="0">
+      <div class={`${isMobile ? "vw-100 vertical-scroll mobile" : "vh-100 horizontal-scroll"} bg-black container-fluid`} tab-index="0">
         
         {isMobile ? //render as column on mobile, or row on desktop
           <Column className="flex-nowrap"> {aboutBody}</Column> :
