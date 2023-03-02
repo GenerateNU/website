@@ -26,12 +26,12 @@
 }
 
 .whowearetext {
-    padding-top: 25%;
+    padding-top: 15vh;
     padding-left: 15%;
-    font-family: 'Space Mono 700';
+    font-family: 'Space Mono 700' ;
     font-style: normal;
     font-weight: 700;
-    font-size: 8.78vh;
+    font-size: min(8.78vh, 6vw);
     line-height: 11.22vh;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -50,19 +50,19 @@
 }
 
 .bluerectangle {
-    height: 40vh;
-    background: #187DFF;;
+    height: 30vh;
+    background:  #187DFF;
 }
 
 .purplerectangle {
-    height: 60vh;
+    height: 70vh;
     background: #A559EC;
 }
 
 .whoweareparagraph {
     padding: 7%;
     padding-left: 15%;
-    width: 80%;
+    width: 85%;
     height: 80%;
     left: 187.7vh;
     top: 46.83vh;
@@ -70,7 +70,7 @@
     font-family: 'Outfit 300';
     font-style: normal;
     font-weight: 300;
-    font-size: 2.92vh;
-    line-height: 4.15vh;
+    font-size: 2.5vh;
+    line-height: 3vw;
     color: #FFFFFF;
 }
