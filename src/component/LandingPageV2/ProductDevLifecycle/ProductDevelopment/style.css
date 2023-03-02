@@ -4,15 +4,16 @@ a {
   }
 
   .productDevcontainer{
-    width: 60%;
-    padding-left:5%;
+    width: 100vh;
+    padding-left: 5%;
   }
 
   .background-black {
     background-color: black;
   }
+
   .ProductDevText {
-    width: 78.3vh;
+    width: 50vh;
     height: 34.5vh;
     left: 20.95vh;
     top: 23.46vh;
@@ -22,7 +23,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 11.22vh;
+    font-size: 11.22vmin;
     line-height: 11.22vh;
     /* or 100% */
     
@@ -33,23 +34,24 @@ a {
   }
 
   .paragraphText {
-    width: 75.28vh;
-    height: 29.86vh;
+    width: min(60vh, calc(80vw - 12vh));
+    height: 40vh;
     top: 71.14vh;
     margin-top: 6.27vh;
     /* B1 */
     font-family: 'Outfit 400';
     font-style: normal;
     font-weight: 400;
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
     line-height: 3.51vh;
     /* or 156% */
     
     
     color: #FFFFFF;
   }
+
   .ourProcessText {
-    width: 16.9vh;
+    width: 30vh;
     height: 3.76vh;
     left: 18.78vh;
     top: 20.58vh;
