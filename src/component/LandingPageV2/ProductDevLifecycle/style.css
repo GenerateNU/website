@@ -1,0 +1,15 @@
+.background-black-wheel {
+    background-color: black;
+    width: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+  }
+
+  .DevelopmentWheel {
+    height: 63.11vh;
+    margin-top: 12.55vh;
+  }
+
+  
