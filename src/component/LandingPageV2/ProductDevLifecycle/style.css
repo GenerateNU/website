@@ -12,4 +12,61 @@
     margin-top: 12.55vh;
   }
 
-  
+  .background-black-text {
+    background-color: black;
+    width: 70vh;
+    /*width: 80vh;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alignItemsRight {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titleText {
+    width: 44.3vh;
+    height: 11.22vh;
+    left: 95.23vh;
+    top: 33vh;
+    margin-top: 12.55vh;
+
+    /* H2 */
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: min(7.5vh, 10vw);
+    line-height: 11.22vh;
+    /* identical to box height, or 128% */
+
+    text-transform: uppercase;
+
+    /* Core/MNGMNT Yellow */
+
+  }
+
+  .paragraphText {
+    width: min(60vh, calc(80vw - 12vh));
+    height: 29.02vh;
+    top: 69.14vh;
+    margin-top: 6.1vh;
+    /* B1 */
+    font-family: 'Outfit 400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5.44vh;
+    line-height: 3.41vh;
+    /* or 156% */
+    
+    
+    color: #FFFFFF;
+  }
+
