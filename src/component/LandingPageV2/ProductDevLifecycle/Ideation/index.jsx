@@ -1,5 +1,5 @@
 import React from "react";
-import wheelImg from "../ProductDevelopment/DevelopmentWheel.png"
+import wheelImg from "../ProductDevelopment/DevelopmentWheel_97deg.png"
 import DevelopmentWheel from "../DevelopmentWheel"
 import DevelopmentText from "../DevelopmentText";
 import './style.css';
