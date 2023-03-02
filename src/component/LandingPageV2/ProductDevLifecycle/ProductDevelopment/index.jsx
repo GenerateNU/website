@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel.png";
 
 const ProductDevelopment = () => {
   return (
