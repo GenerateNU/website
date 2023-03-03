@@ -33,7 +33,7 @@ a {
     
   }
 
-  .paragraphText {
+  .prodParagraphText {
     width: min(60vh, calc(80vw - 12vh));
     height: 40vh;
     top: 71.14vh;
