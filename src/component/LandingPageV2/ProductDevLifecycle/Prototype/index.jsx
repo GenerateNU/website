@@ -2,7 +2,6 @@ import React from "react";
 import wheelImg from "../ProductDevelopment/DevelopmentWheel_230deg.png"
 import DevelopmentWheel from "../DevelopmentWheel"
 import DevelopmentText from "../DevelopmentText"
-import './style.css';
 
 const Prototype = () => {
     /*return (

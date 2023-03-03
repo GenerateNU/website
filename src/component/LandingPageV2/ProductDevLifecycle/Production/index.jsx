@@ -2,7 +2,6 @@ import React from "react";
 import wheelImg from "../ProductDevelopment/DevelopmentWheel.png"
 import DevelopmentWheel from "../DevelopmentWheel"
 import DevelopmentText from "../DevelopmentText"
-import './style.css';
 
 const Production = () => {
     /*return (
