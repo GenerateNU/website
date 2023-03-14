@@ -28,12 +28,6 @@ export const constants = {
    // "Position_Information_Architect/Copywriter": "https://forms.gle/CmNQCADrwxAMuo8aA",
 
    // SW + HW
-   // "Position_Hardware_Engineer":
-   //    "https://docs.google.com/forms/d/e/1FAIpQLSdTKaypAXMO1LYU6nx36uHReRgk8HF9mDo0TOUBzmuSJrdOlw/viewform?usp=sf_link",
-   // "Position_Hardware_Designer":
-   //    "https://docs.google.com/forms/d/e/1FAIpQLSeD0MLTJxVciJWcbyxYLHp4bNab87xiT0IZBEA1byyQPCzWCw/viewform?usp=sf_link",
-   // "Position_Software_Engineer": "https://forms.gle/9dfpE6ki6Tnpem6U9",
-   // "Position_Software_Designer": "https://forms.gle/wYoyFmowtEgGF5JA6",
    "Position_Hardware_Client": "https://docs.google.com/forms/d/e/1FAIpQLSc7TVI0FmZG6DujNi2GLEUeyGBQYlhAGtFUyf5AXzLIB0mF9Q/viewform?usp=sf_link",
    "Position_Software_Client": "https://docs.google.com/forms/d/e/1FAIpQLSfWrQlG1ewhGAtKYrVyLVmTQ4KPdm99j9lwm049UywL-yhL9w/viewform?usp=sf_link"
 };

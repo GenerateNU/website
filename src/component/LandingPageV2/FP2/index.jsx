@@ -10,7 +10,7 @@ export default function FP2() {
       <div className="column-1">
         <div className="column-1-text">
           <div>
-            <h1 style={{fontSize: "9vh"}}>SmartyPill</h1>
+            <h1 style={{ fontSize: "9vh" }}>SmartyPill</h1>
             <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
               software + hardware
             </p>
@@ -18,12 +18,12 @@ export default function FP2() {
           <div className="client">
             <p className="client-text">Client</p>
             <div className="name-order">
-              <p style={{fontSize: "3vh"}} className="name-text">Matthew Swenson</p>
-              <p style={{fontSize: "2vh"}} className="school">Northeastern Alumnus ‘20</p>
+              <p style={{ fontSize: "3vh" }} className="name-text">Matthew Swenson</p>
+              <p style={{ fontSize: "2vh" }} className="school">Northeastern Alumnus ‘20</p>
             </div>
           </div>
           <div>
-            <p style={{width: "40vh"}} className="client-blurb">
+            <p style={{ width: "40vh" }} className="client-blurb">
               SmartyPill is an automatic pill and water dispenser that ensures
               you’re taking the right pills at the right time. With customizable
               alerts and a connected app, SmartyPill is the perfect in-home
@@ -42,12 +42,12 @@ export default function FP2() {
         </div>
       </div>
       <div className="column-3">
-      <div className="top-corner">
-          <img className="top-corner-img" src={TopCorner} alt="Smarty_Pill" width="45%"/>
+        <div className="top-corner">
+          <img className="top-corner-img" src={TopCorner} alt="Smarty_Pill" width="45%" />
         </div>
         <blockquote>
           <div className="quote-container">
-          The biggest benefit that Generate provided for me was just the
+            The biggest benefit that Generate provided for me was just the
             amount of work that was put into SmartyPill, and the knowledge
             gained from prototyping and writing software for it.
           </div>

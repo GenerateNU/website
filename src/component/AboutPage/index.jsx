@@ -38,4 +38,57 @@ export default class AboutPage extends React.Component {
     
     );
   }
+};
+
+/*
+export default class AboutPage extends React.Component {
+  render() {
+    const children = [
+      <OurMissionSection />,
+      <WeAreSection />,
+      <Leadership />,
+      <History />,
+      <Timeline />,
+      <Stats />,
+      <WhyGenerateCarousel />,
+      <GrowthMantra />,
+      <Footer />,
+      <FooterTwo />,
+    ];
+    return (
+      <>
+      <DesktopMobileScrollAndBackgroundHandler
+        children={children}
+        desktopBGColor={"black"}
+        mobileBGColor={"black"}
+      />
+      </>
+    );
+  }
 }
+
+
+export default class AboutPage extends React.Component {
+  
+  render() {
+    return (
+     <div class="vh-100 horizontal-scroll bg-black container-fluid" tab-index="0">
+          <Row className="flex-nowrap">
+          <OurMissionSection />
+          <WeAreSection />
+          <Leadership />
+
+          <History />
+          <Timeline />
+          <Stats/>
+          <WhyGenerateCarousel />
+          <GrowthMantra/>
+          <Footer />
+          <FooterTwo />
+          
+          </Row>
+      </div>
+    );
+  }
+}
+*/

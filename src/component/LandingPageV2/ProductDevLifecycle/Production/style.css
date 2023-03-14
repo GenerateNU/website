@@ -152,4 +152,89 @@ a {
 }
 
  
-   
+@media only screen and (max-device-width: 650px) {
+  .background-black {
+    width: 100vw;
+  }
+
+  .ProductDevText {
+    word-break: break-word;
+    font-size: 5vh;
+    line-height: 5vh;
+    width: calc(100vw - 10%);
+    height: auto;
+  }
+
+  .paragraphText {
+    width: calc(100vw - 10%);
+    padding-right: 10%;
+  }
+
+  .alignItemsRight {
+    flex-direction: column;
+  }
+}
+
+.DevelopmentWheelImage {
+  width: 64vh;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .DevelopmentWheel, .DevelopmentWheelTwo, .DevelopmentWheelThree {
+    size: 30.11vh;
+    height: 30.11vh;
+    margin-left: 0;
+    margin-top: -15vh;
+  }
+
+  .DevelopmentWheelTwo {
+    margin-bottom: -10vh;
+    margin-top: 30vh;
+  }
+
+  .DevelopmentWheel {
+    margin-top: 45vh;
+    /* margin-bottom: -20vh; */
+  }
+
+  .DevelopmentWheelThree {
+    margin-top: 35vh;
+  }
+
+  .DevelopmentWheelImage {
+    width: 30.11vh;
+    text-align: left;
+  }
+
+  .ideation {
+    width: 100vw;
+    margin-left: 0;
+  }
+
+  .background-black {
+    margin-bottom: -15%;
+  }
+
+  .IdeationText,
+  .PrototypeText,
+  .ProductionText {
+    font-size: 15vw;
+  }
+
+  .PrototypeText {
+    margin-top: -10vh;
+  }
+
+  .ProductionText {
+    margin-top: 0;
+  }
+
+  .ideation .paragraphText {
+    margin-top: 0;
+  }
+
+  #deliveryText{
+    margin-bottom: 30vh;
+
+  }
+}

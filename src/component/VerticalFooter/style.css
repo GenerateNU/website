@@ -26,6 +26,11 @@ a {
   color: #e0e0e0;
 }
 
+.disabled-footer-text {
+  pointer-events: none;
+  color: #e0e0e0;
+}
+
 a:hover {
    font-weight: 1000;
    color: #ffffff;
@@ -52,8 +57,10 @@ a:hover {
 
 .logo-shadow {
   border: 1px solid;
-  padding: 10px;
-  box-shadow: 5px 10px;
+  padding: 10px; 
+  box-shadow: 5px 10px; 
+  color: black;
+
 }
 
 .social-icons {

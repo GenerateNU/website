@@ -1,94 +1,96 @@
 a {
-    text-decoration: none;
-    color: #FFFFFF;
-  }
-  .background-black-wheel {
-    background-color: black;
-    width: 70vh;
-  }
-  
-  .background-black-text {
-    background-color: black;
-    width: 70vh;
-  }
-  
-  .background-black-text {
-    background-color: black;
-    width: 80vh;
-  }
-  
+  text-decoration: none;
+  color: #FFFFFF;
+}
 
-  .paragraphText {
-    /*width: 55vh;*/
-    width: min(60vh, calc(80vw - 12vh));
-    height: 29.86vh;
-    top: 71.14vh;
-    margin-top: 6.27vh;
-    /* B1 */
-    font-family: 'Outfit 400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5vh;
-    line-height: 3.5vh;
-    /* or 156% */
-    
-    
-    color: #FFFFFF;
-  }
-  
+.background-black-wheel {
+  background-color: black;
+  width: 70vh;
+}
+
+.background-black-text {
+  background-color: black;
+  width: 70vh;
+}
+
+.background-black-text {
+  background-color: black;
+  width: 80vh;
+}
 
 
-  .column{
-    display: flex;
-    flex-direction: column;
-  }
+.paragraphText {
+  /*width: 55vh;*/
+  width: min(60vh, calc(80vw - 12vh));
+  height: 29.86vh;
+  top: 71.14vh;
+  margin-top: 6.27vh;
+  /* B1 */
+  font-family: 'Outfit 400';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vh;
+  line-height: 3.5vh;
+  /* or 156% */
 
-  .alignItemsRight {
-    display: flex;
-    flex-direction: row;
-  }
 
-  
-  .DevelopmentWheelThree {
-    height: 63.11vh;
-    margin-top: 12.55vh;
-    /*margin-left: 12.55vh;*/
-    
-  }
+  color: #FFFFFF;
+}
 
-  .rotateThree {
-    transform: rotate(230deg);
-  }
 
-  .ideation {
-    /*margin-left: 12.55vh;*/
-  }
 
- 
+.column {
+  display: flex;
+  flex-direction: column;
+}
 
-  .PrototypeText{
-    width: 44.29vh;
-    height: 11.22vh;
-    left:  96.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
+.alignItemsRight {
+  display: flex;
+  flex-direction: row;
+}
 
-    /* H2 */
 
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: min(7.5vh, 10vw);
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
+.DevelopmentWheelThree {
+  height: 63.11vh;
+  margin-top: 12.55vh;
+  /*margin-left: 12.55vh;*/
 
-    text-transform: uppercase;
+}
 
-    
+.rotateThree {
+  transform: rotate(230deg);
+}
 
-    color: #FF6660;
-  }  
-  @media only screen and (max-device-width: 650px) {
+.ideation {
+  /*margin-left: 12.55vh;*/
+}
+
+
+
+.PrototypeText {
+  width: 44.29vh;
+  height: 11.22vh;
+  left: 96.23vh;
+  top: 33vh;
+  margin-top: 12.55vh;
+
+  /* H2 */
+
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(7.5vh, 10vw);
+  line-height: 11.22vh;
+  /* identical to box height, or 128% */
+
+  text-transform: uppercase;
+
+
+
+  color: #FF6660;
+}
+
+@media only screen and (max-device-width: 650px) {
   .column {
     justify-content: center;
   }
@@ -97,7 +99,7 @@ a {
     padding-left: 0;
   }
 
-  .PrototypeText{
+  .PrototypeText {
     font-family: "Space Mono 700";
     font-size: 12vw;
     line-height: 7vh;
@@ -110,7 +112,7 @@ a {
     font-size: 2vh;
     margin-top: 0%;
   }
-  
+
   .background-black-text {
     width: 100vw;
     height: 60vh;
@@ -138,7 +140,35 @@ a {
 
 }
 
- 
-   
 
-  
+.DevelopmentWheelImage {
+  width: 64vh;
+}
+
+@media only screen and (max-device-width: 650px) {
+
+  .DevelopmentWheel,
+  .DevelopmentWheelTwo,
+  .DevelopmentWheelThree {
+    size: 30.11vh;
+    height: 30.11vh;
+    margin-top: 30.11vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .DevelopmentWheelImage {
+    width: 30.11vh;
+  }
+
+  .ideation {
+    width: 100vw;
+    margin-left: 5%;
+  }
+
+  .IdeationText,
+  .PrototypeText,
+  .ProductionText {
+    font-size: 15vw;
+  }
+}
