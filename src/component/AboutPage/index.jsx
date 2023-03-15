@@ -13,7 +13,7 @@ import Footer from "../VerticalFooter";
 import './style.css';
 import Stats from "./Stats";
 import ProductDevelopment from "../LandingPageV2/ProductDevLifecycle/ProductDevelopment";
-import FooterTwo from "../VerticalFooterTeams";
+import NextPage from "../NextPage";
 
 export default class AboutPage extends React.Component {
   render() {
@@ -30,7 +30,7 @@ export default class AboutPage extends React.Component {
           <WhyGenerateCarousel />
           <GrowthMantra/>
           <Footer />
-          <FooterTwo />
+          <NextPage pageName='culture' url='/culture' />
           
           </Row>
       </div>
