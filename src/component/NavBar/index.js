@@ -21,7 +21,7 @@ const NavBar = () => {
     return (
         <div className="bg-light p-2 mb-5 d-flex fit-content justify-content-around align-items-center border border-dark h-10 w-10">
             {/* Todo : change the logo */}
-            <img style={{width: '3vmax', height: 'auto'}} src={GenerateLogo} onClick={navigateHome}/>
+            <img style={{width: 'min(3vmax, 40px)', height: 'auto'}} src={GenerateLogo} onClick={navigateHome}/>
             <span className='p-3'><a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center' href="/apply">Apply</a></span>
             <span className='p-3 d-flex align-items-center' onClick={() => setShowMenu(true)}>
                 <a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-items-center'>
