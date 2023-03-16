@@ -1,100 +1,167 @@
 /* Move to public folder */
 
-.interestedcontainer{
+.interestedcontainer {
   width: 65%;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  .background-white {
-    background-color: white;
-  }
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.background-white {
+  background-color: white;
+}
 
 
 .interestedflexbox {
   display: flex;
   flex-direction: row;
 }
+
+.interestedText {
+  margin-left: 6%;
+  margin-top: 15%;
+  font-family: 'Space Mono 700';
+  font-style: normal;
+  font-size: 10vh;
+  text-transform: uppercase;
+  color: black;
+}
+
+.applyNowBox {
+  display: inline-block;
+  width: 34vh;
+  height: 10vh;
+  margin-left: 2vh;
+  margin-top: 20vh;
+  background: #187DFF;
+  border: 1px solid #111111;
+}
+
+.blackRectangle {
+  display: inline-block;
+  width: 30vh;
+  height: 10vh;
+  background: black;
+  margin-left: 10vh;
+
+}
+
+.sentenceText {
+  margin-left: 10%;
+  margin-top: 20%;
+  width: 30vh;
+  font-family: 'Outfit 300';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.5vh;
+  color: black;
+  margin-left: 10%;
+  padding-left: 10%;
+}
+
+.cooltriangle {
+  margin-left: -5vh;
+  margin-top: 15vh;
+}
+
+.leftcarrot {
+  margin-left: 10%;
+  margin-top: 20%;
+}
+
+
+.interestedJoinNowBox {
+  width: 34vh;
+  height: 10vh;
+  margin-left: 10%;
+  margin-top: 20%;
+  background: #187DFF;
+  border: 1px solid #111111;
+  box-shadow: -0.75vh 0.75vh;
+  ;
+}
+
+.joinCommunitytext {
+  width: 16.8vh;
+  height: 4.5vh;
+  margin-left: 20%;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vh;
+  line-height: 6vh;
+  text-align: center;
+
+  /* White */
+
+  color: #FFFFFF;
+}
+
+#join-span {
+  display: contents;
+  text-transform: unset;
+}
+
+#join-carrot {
+  width: 8vh;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .interestedcontainer {
+    width: 100%;
+    background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    padding: 5vh 0;
+    background-position: 80% 25%;
+  }
+
   .interestedText {
-    margin-left: 6%;
-    margin-top: 15%;
-    font-family: 'Space Mono 700';
-    font-style: normal;
-    font-size: 10vh;
-    text-transform: uppercase;
-    color: black;
+    font-size: 12vw;
+    text-align: left;
   }
 
-  .applyNowBox {
-    display: inline-block;
-    width: 34vh;
-    height: 10vh;
-    margin-left: 2vh;
-    margin-top: 20vh;
-    background: #187DFF;
-    border: 1px solid #111111;
-  }
-
-  .blackRectangle {
-    display: inline-block;
-    width: 30vh;
-    height: 10vh;
-    background: black;
-    margin-left: 10vh;
-
-  }
-
-  .sentenceText{
-    margin-left: 10%;
-    margin-top: 20%;
-    width: 30vh;
-    font-family: 'Outfit 300';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 2.5vh;
-    color: black;
-    margin-left: 10%;
-    padding-left: 10%;
-  }
-
-  .cooltriangle {
-    margin-left: -5vh;
-    margin-top: 15vh;
-  }
-
-  .leftcarrot {
-    margin-left: 10%;
+  .interestedflexbox {
+    display: flex;
+    flex-direction: column-reverse;
     margin-top: 20%;
   }
-  
 
-  .interestedJoinNowBox{    
-    width: 34vh; 
-    height: 10vh;
-    margin-left: 10%;
-    margin-top: 20%;
-    background: #187DFF;
-    border: 1px solid #111111;
-    box-shadow: 5px 10px;
+  #join-span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5vw;
   }
 
-    .joinCommunitytext {
-      width: 16.8vh;
-      height: 4.5vh;
-      margin-left: 20%;    
-      font-family: 'Space Mono 400';
-      font-style: normal;
-      /* font-weight: 400; */
-      font-size: 4vh;
-      line-height: 6vh;
-      text-align: center;
-  
-      /* White */
-  
-      color: #FFFFFF;
-    }
-  
+  .interestedJoinNowBox {
+    width: 50vw;
+    height: 7vh;
+    margin-top: 10%;
+  }
 
+  .interestedJoinNowBox .joinCommunitytext {
+    height: inherit;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: unset;
+    margin-left: 0;
+    font-size: 2vh;
+  }
 
+  .interestedflexbox .sentenceText {
+    width: 70vw;
+    font-size: 4.5vw;
+    line-height: 3vh;
+    margin-left: 7vw;
+  }
+
+  #join-carrot {
+    width: 3vh;
+    height: auto;
+  }
+}
