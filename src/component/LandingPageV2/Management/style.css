@@ -1,17 +1,16 @@
 #skills {
-    width: 64vh;
-    height: 64vh;
+    width: min(64vh, 90vw);
+    height: min(64vh, 90vw);
     left:12.36vh;
-    margin: auto;
     transform: rotate(320deg);
-    margin-left: 12.36vh;
-    margin-top: 12.36vh;
+    /* margin-left: 12.36vh; */
+    /* margin-top: 12.36vh; */
   }
   
   .center {
     position: absolute;
-    top: 18.54vh;
-    left: 20vh;
+    top: min(18.54vh, 23vw);
+    left: min(20vh, 24vw);
     z-index: 1000;
     border: 12.36vh solid white;
     border-radius: 50%;
@@ -74,7 +73,7 @@
     font-family: 'Space Mono 700';
     font-size: 8.9vh;
     line-height: 11.37vh;
-    margin-top: 30%;
+    padding-top: 30%;
   }
 
   #description {
@@ -149,16 +148,23 @@
     width: max(10vw, 25vh);
     margin: 0vw;
     padding: 0vw;
+    background: white;
   }
 
   .management-wheel {
     width: 90vh;
     margin: 0vw;
-    padding: 0vw;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: white;
   }
 
   .management-text {
     width: 70vh;
     margin: 0vw;
-    padding: 0vw;
+    padding: 2.3vw;
+    background: white;
   }

@@ -38,7 +38,7 @@ export default function Management() {
     <>
       <div className="management-wheel">
         <div id="skills">
-          <div className="center"></div>
+        <div className="center"/>
           <button id="part1" class="circle animate" onClick={Color}>
             <img class="image1" alt='image1' src={image1} />
           </button>
@@ -61,7 +61,7 @@ export default function Management() {
           The Management Team ensures alignment across our organization.
           The team drives our teams to excel through collaboration and innovative thinking -
           ensuring Generate is functioning at its peak. Our management team is responsible
-          for directing Generate’s yearly focus. </div>
+          for directing Generate's yearly focus. </div>
         <a href="/apply"> <img class="button" alt='button' src={button} />  </a>
       </div>
     </>
