@@ -27,7 +27,6 @@
 
 .purplerectangle {
     height: 70vh;
-    height: 70vh;
     background: #A559EC;
 }
 
@@ -85,17 +84,7 @@
     }
 }
 
-.whowearetext {
-    padding-top: 25%;
-    padding-left: 15%;
-    font-family: 'Space Mono 700';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 8.78vh;
-    line-height: 11.22vh;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
+
 
 .whowearetextmobile {
     padding-top: 25%;
@@ -109,29 +98,3 @@
     color: #FFFFFF;
 }
 
-.bluerectangle {
-    height: 40vh;
-    background: #187DFF;
-    ;
-}
-
-.purplerectangle {
-    height: 60vh;
-    background: #A559EC;
-}
-
-.whoweareparagraph {
-    padding: 7%;
-    padding-left: 15%;
-    width: 80%;
-    height: 80%;
-    left: 187.7vh;
-    top: 46.83vh;
-    text-align: left;
-    font-family: 'Outfit 300';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 2.92vh;
-    line-height: 4.15vh;
-    color: #FFFFFF;
-}
