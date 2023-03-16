@@ -9,8 +9,8 @@ span {
 /*Changed font size from scaling with height to scaling with width*/
 
 .bar-size {
-    height: 10vh;
-    width: 25vw;
+    height: max(50px, 7vmax);
+    width: max(180px, 30vmax);
 }
 
 .menu-hover {
