@@ -22,9 +22,9 @@ const NavBar = () => {
         <div className="bg-light p-2 mb-5 d-flex fit-content justify-content-center align-items-center border border-dark h-10 w-10">
             {/* Todo : change the logo */}
             <img style={{width: '3vmax', height: 'auto'}} src={GenerateLogo} onClick={navigateHome}/>
-            <span className='p-3'><a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover align-item-center' href="/apply">Apply</a></span>
+            <span className='p-3'><a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center' href="/apply">Apply</a></span>
             <span className='p-3' onClick={() => setShowMenu(true)}>
-                <a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover align-item-center'>
+                <a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center'>
                     Menu
                     
                 </a>
