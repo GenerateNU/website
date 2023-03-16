@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import NavBar from "../../NavBar";
-import ScrollButton from "../../../assets/images/landingpage-v2/scroll button.png";
+import ScrollButton from "../../../assets/images/landingpage-v2/scrollword.png";
 
 /**
  * Added "MOBILE PAGE COMING SOON" element to display on mobile

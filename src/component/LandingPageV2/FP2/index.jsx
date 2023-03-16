@@ -6,7 +6,7 @@ import TopCorner from "../../../assets/images/landingpage-v2/top_corner.png";
 
 export default function FP2() {
   return (
-    <div className="parent" id="fp2-parent">
+    <div className="parent">
       <div className="column-1">
         <div className="heading-container">
           <h1 id="fp2-header">SmartyPill</h1>
@@ -21,7 +21,7 @@ export default function FP2() {
             <p style={{fontSize: "2vh"}} className="school">Northeastern Alumnus ‘20</p>
           </div>
         </div>
-        <div className="client-blurb">
+        <div className="client-blurb" id="fp2-client-blurb">
           <p style={{width: "40vh"}}>
             SmartyPill is an automatic pill and water dispenser that ensures
             you’re taking the right pills at the right time. With customizable

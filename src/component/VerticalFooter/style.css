@@ -19,7 +19,11 @@ a {
   color: #ffffff;
   padding-left: 18%;
   margin: 5%;
-  white-space: nowrap;
+}
+
+.disabled-footer-text {
+  pointer-events: none;
+  color: #e0e0e0;
 }
 
 .disabled-footer-text {
@@ -33,7 +37,7 @@ a:hover {
 }
 
 .sherm{
-    /* margin-top: 25%; */
+    margin-top: 25%;
     margin-left: 15%;
 }
 
@@ -45,15 +49,18 @@ a:hover {
 
 .logo-placement {
   margin: 10%;
-  width: 60%;
+  background-color: white;
+  width: 40%;
   height: 50%;
   padding: 5%;
 }
 
 .logo-shadow {
   border: 1px solid;
-  padding: 10px;
-  box-shadow: 5px 10px;
+  padding: 10px; 
+  box-shadow: 5px 10px; 
+  color: black;
+
 }
 
 .social-icons {
@@ -83,62 +90,4 @@ a:hover {
 }
 .icon {
     padding-bottom: 10%;
-}
-
-@media only screen and (max-device-width: 650px) {
-  .footer-container {
-    padding-bottom: 5vh;
-    width: 100vw;
-  }
-
-  #footer-links {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .footer-text {
-    font-size: 5vw;
-    padding-bottom: 2.5vh;
-  }
-
-  .footer-text:has(b) {
-    margin-top: 1vw;
-  }
-
-  .sherm {
-    margin: 0;
-  }
-
-  #footer-pages {
-    margin: 0;
-    width: 100%;
-  }
-
-  .social-icons {
-    margin: 0;
-    width: 50%;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin: 0;
-    margin-right: 8vw;
-  }
-
-  .social-icons .row {
-    padding-bottom: 2vh;
-  }
-
-  .social-icons .icon {
-    padding-right: 2vh;
-  }
-
-  .social-icons .icon a img {
-    height: auto;
-    width: 4vh;
-  }
-
-  .logo-placement {
-    width: 40%;
-  }
 }

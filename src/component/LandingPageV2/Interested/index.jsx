@@ -1,6 +1,5 @@
 import Image from "react-bootstrap/Image";
 import ShermLogo from "../../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png";
-import QuestionMark from "../../../assets/images/landingpage-v2/interestedbg.svg";
 import NavBar from "../../NavBar";
 import "./style.css";
 import { Row } from "react-bootstrap";
@@ -12,7 +11,6 @@ import leftcarrot from "../../LandingPageV2/Interested/chevron.png";
 const Interested = () => {
   return (
     <div className="bg-white interestedcontainer">
-      {/* <img src={QuestionMark}></img> */}
       <div className="interestedText">Interested</div>
       <div className="interestedflexbox">
         <div className="interestedJoinNowBox">
@@ -20,16 +18,13 @@ const Interested = () => {
             join us
           </a>
         </div>
-        <span id="join-span">
-          <div className="leftcarrot">
-            <img id="join-carrot" src={leftcarrot} />
-          </div>
-          <div className="sentenceText">
-            Join a community that shares the same goal - turning ideas into
-            reality
-          </div>
-        </span>
-        {/* <div className="leftcarrot">
+        <div className="leftcarrot">
+          <img style={{width: "8vh"}} src={leftcarrot} />
+        </div>
+      <div className="sentenceText">
+        Join a community that shares the same goal - turning ideas into reality
+      </div>
+      {/* <div className="leftcarrot">
         <img src={leftcarrot} height="50vh" width="50vw" />
       </div>
       <div className="sentenceText">

@@ -13,9 +13,63 @@ import Footer from "../VerticalFooter";
 import './style.css';
 import Stats from "./Stats";
 import ProductDevelopment from "../LandingPageV2/ProductDevLifecycle/ProductDevelopment";
-import FooterTwo from "../VerticalFooterTeams";
+import NextPage from "../NextPage";
 
 export default class AboutPage extends React.Component {
+  render() {
+    return (
+     <div class="vh-100 horizontal-scroll bg-black container-fluid" tab-index="0">
+          <Row className="flex-nowrap">
+          <OurMissionSection />
+          <WeAreSection />
+          <Leadership />
+
+          <History />
+          <Timeline />
+          <Stats/>
+          <WhyGenerateCarousel />
+          <GrowthMantra/>
+          <Footer />
+          <NextPage pageName='culture' url='/culture' />
+          
+          </Row>
+      </div>
+
+    
+    );
+  }
+};
+
+/*
+export default class AboutPage extends React.Component {
+  render() {
+    const children = [
+      <OurMissionSection />,
+      <WeAreSection />,
+      <Leadership />,
+      <History />,
+      <Timeline />,
+      <Stats />,
+      <WhyGenerateCarousel />,
+      <GrowthMantra />,
+      <Footer />,
+      <FooterTwo />,
+    ];
+    return (
+      <>
+      <DesktopMobileScrollAndBackgroundHandler
+        children={children}
+        desktopBGColor={"black"}
+        mobileBGColor={"black"}
+      />
+      </>
+    );
+  }
+}
+
+
+export default class AboutPage extends React.Component {
+  
   render() {
     return (
      <div class="vh-100 horizontal-scroll bg-black container-fluid" tab-index="0">
@@ -34,8 +88,7 @@ export default class AboutPage extends React.Component {
           
           </Row>
       </div>
-
-    
     );
   }
 }
+*/

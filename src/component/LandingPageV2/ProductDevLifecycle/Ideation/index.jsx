@@ -19,9 +19,8 @@ const Ideation = () => {
                 deeper into its overall viability.</div>
               </div>
             </div>
-           </div>
-           </div>
-            
+          </div>
+        </div>
     );
 };
 export default Ideation;
