@@ -8,14 +8,20 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Menu } from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const navigate = useNavigate();
+    const navigateHome = () => {navigate("/");};
 
+    /*
+    @todo 
+    */
     return (
         <div className="bg-light p-2 mb-5 d-flex fit-content justify-content-center align-items-center border border-dark h-10 w-10">
             {/* Todo : change the logo */}
-            <a href="/"><img style={{width: '5vmax', height: 'auto'}} src={GenerateLogo} /></a>
+            <img style={{width: '3vmax', height: 'auto'}} src={GenerateLogo} onClick={navigateHome}/>
             <span className='p-3'><a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover align-item-center' href="/apply">Apply</a></span>
             <span className='p-3' onClick={() => setShowMenu(true)}>
                 <a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover align-item-center'>
