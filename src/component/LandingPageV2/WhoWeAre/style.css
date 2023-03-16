@@ -41,15 +41,15 @@
     font-family: 'Outfit 300';
     font-style: normal;
     font-weight: 300;
-    font-size: 2.5vh;
-    line-height: 3vw;
+    font-size: 2.8vh;
+    line-height: max(2.8vw, 12px);
     color: #FFFFFF;
 }
 
 @media only screen and (max-device-width: 650px) {
     .whoWeAreContainer {
         width: 100%;
-        height: 25%;
+        height: 80vh;
         margin: 0%;
         padding: 0%;
     }
