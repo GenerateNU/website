@@ -36,10 +36,10 @@ export default function PreviousProjects() {
   ));
 
   return (
-    <>
+    <div className="prev-proj-wrapper">
       <div className="col-1">{l1}</div>
       <div className="col-2">{l2}</div>
       <div className="col-3">{l3}</div>
-    </>
+    </div>
   );
 }
