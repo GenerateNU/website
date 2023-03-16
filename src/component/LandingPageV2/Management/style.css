@@ -168,3 +168,25 @@
     padding: 2.3vw;
     background: white;
   }
+
+  
+@media only screen and (max-device-width: 650px) {
+  .management-wheel {
+    width: 100vw;
+  }
+
+  .management-text {
+    width: 100vw;
+    padding: 7vw;
+  }
+
+  #title {
+    font-size: 13vw;
+    padding-top:0%
+  }
+
+  #description {
+    width: 100%;
+  }
+  
+}

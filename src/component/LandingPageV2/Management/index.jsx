@@ -55,7 +55,7 @@ export default function Management() {
       <div className='management-spacer'/>
       <div className="management-text">
         <div id="title">
-          <div>MANAGEMENT</div>
+          MANAGEMENT
         </div>
         <div id="description">
           The Management Team ensures alignment across our organization.
