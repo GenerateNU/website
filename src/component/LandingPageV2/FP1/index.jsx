@@ -54,8 +54,6 @@ export default function FP1() {
             team.
           </div>
         </blockquote>
-        <hr id="pageSeparator">
-        </hr>
       </div>
     </ >
   );

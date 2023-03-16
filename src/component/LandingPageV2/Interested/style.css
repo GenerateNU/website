@@ -30,7 +30,7 @@ a {
   margin-top: 30vh;
   font-family: 'Space Mono 700';
   font-style: normal;
-  font-size: min(10vh, 15vw);
+  font-size: min(9vh, 15vw);
   text-transform: uppercase;
   color: black;
   z-index: -1;
