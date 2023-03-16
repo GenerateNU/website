@@ -73,12 +73,22 @@ a {
     flex-direction: row;
   }
 
-  .DevelopmentWheelThree {
-    size: 64vh;
-    margin-top: 1.75vh;
+  .DevelopmentWheel {
+    margin-top: 12.55vh;
+    margin-left: 12.55vh;
+    transform: rotate(360deg)
+  }
+  .DevelopmentWheelTwo {
+    margin-top: 12.55vh;
     margin-left: 12.55vh;
     margin-bottom: 12.55vh;
-    transform: rotate(360deg);
+    transform: rotate(97deg)
+  }
+  .DevelopmentWheelThree {
+    margin-top: 12.55vh;
+    margin-left: 12.55vh;
+    margin-bottom: 12.55vh;
+    transform: rotate(230deg)
     
   }
 
