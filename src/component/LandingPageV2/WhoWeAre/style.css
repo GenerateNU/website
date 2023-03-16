@@ -49,7 +49,7 @@
 @media only screen and (max-device-width: 650px) {
     .whoWeAreContainer {
         width: 100%;
-        height: 25%;
+        height: 80vh;
         margin: 0%;
         padding: 0%;
     }
