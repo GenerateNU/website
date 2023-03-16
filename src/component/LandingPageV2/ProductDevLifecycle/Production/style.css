@@ -74,24 +74,11 @@ a {
   }
 
   .DevelopmentWheel {
-    size: 63.11vh;
-    margin-top: 12.55vh;
-    margin-left: 12.55vh;
-    transform: rotate(360deg)
-  }
-  .DevelopmentWheelTwo {
-    size: 63.11vh;
-    margin-top: 12.55vh;
+    size: 64vh;
+    margin-top: 12.75vh;
     margin-left: 12.55vh;
     margin-bottom: 12.55vh;
-    transform: rotate(97deg)
-  }
-  .DevelopmentWheelThree {
-    size: 63.11vh;
-    margin-top: 12.55vh;
-    margin-left: 12.55vh;
-    margin-bottom: 12.55vh;
-    transform: rotate(230deg)
+    transform: rotate(360deg);
     
   }
 
