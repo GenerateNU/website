@@ -2,6 +2,10 @@
 
 .interestedcontainer {
   width: 65%;
+  background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 80% 20%;
 }
 
 a {
@@ -84,18 +88,16 @@ a {
 }
 
 .joinCommunitytext {
-  width: 16.8vh;
-  height: 4.5vh;
-  margin-left: 20%;
+  height: inherit;
   font-family: 'Space Mono';
   font-style: normal;
   font-weight: 400;
   font-size: 4vh;
   line-height: 6vh;
   text-align: center;
-
-  /* White */
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #FFFFFF;
 }
 
@@ -111,8 +113,6 @@ a {
 @media only screen and (max-device-width: 650px) {
   .interestedcontainer {
     width: 100%;
-    background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center;
-    background-repeat: no-repeat;
     background-size: 65%;
     padding: 5vh 0;
     background-position: 80% 25%;
@@ -143,13 +143,7 @@ a {
   }
 
   .interestedJoinNowBox .joinCommunitytext {
-    height: inherit;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: unset;
-    margin-left: 0;
     font-size: 2vh;
   }
 
