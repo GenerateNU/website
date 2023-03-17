@@ -32,11 +32,10 @@
 
 .wearetextmobile {
   position: relative;
-  width: 16.2vh;
-  height: 6.46vh;
-  left: 1.24vh;
-  top: 19vh;
-
+  /* width: 16.2vh; */
+  /* height: 6.46vh; */
+  left: 1rem;
+  top: 23rem;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
@@ -67,43 +66,45 @@
 .generatetextmobile {
   /* generate */
   position: relative;
-  width: 149.39vh;
-  height: 45.12vh;
-  top: 11vh;
-
+  /* width: 16.2vh; */
+  /* height: 6.46vh; */
+  left: 1rem;
+  top: 20rem;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 8vh;
-  line-height: 25.12vh;
+  font-size: 8.5vh;
+  line-height: 10.46vh;
   text-transform: uppercase;
-
   color: #ffffff;
 }
 
 .northeasternbest {
   /* generate */
   position: relative;
-  height: 6.46vh;
-  right: -18vh;
-  top: -20vh;
+  /* width: 16.2vh; */
+  /* height: 6.46vh; */
+  left: 21vh;
+  top: 15rem;
   font-family: "Space Mono";
   font-style: normal;
-  font-weight: 10;
+  font-weight: 700;
   font-size: 1.79vh;
   line-height: 10.46vh;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
 .productdevelopment {
   /* generate */
   position: relative;
-  height: 6.46vh;
-  right: -18vh;
-  top: -24vh;
+  /* width: 16.2vh; */
+  /* height: 6.46vh; */
+  left: 21vh;
+  top: 6rem;
   font-family: "Space Mono";
   font-style: normal;
-  font-weight: 10;
+  font-weight: 700;
   font-size: 1.79vh;
   line-height: 10.46vh;
   text-transform: lowercase;
@@ -113,12 +114,13 @@
 .studio {
   /* generate */
   position: relative;
-  height: 6.46vh;
-  right: -32vh;
-  top: -28vh;
+  /* width: 16.2vh; */
+  /* height: 6.46vh; */
+  left: 35vh;
+  top: -2rem;
   font-family: "Space Mono";
   font-style: normal;
-  font-weight: 10;
+  font-weight: 700;
   font-size: 1.79vh;
   line-height: 10.46vh;
   text-transform: lowercase;
@@ -127,9 +129,9 @@
 
 .scrollmobile {
   position: relative;
-  height: 210vh;
+  height: 250vh;
   right: -19vh;
-  top: 5vh;
+  top: 23vh;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 10;
@@ -154,9 +156,7 @@
   font-size: 10vh;
   line-height: 8.12vh;
   text-transform: uppercase;
-
   color: #ffffff;
-  
 }
 
 .desktop {
