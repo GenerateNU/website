@@ -25,7 +25,7 @@ a {
 
 .interestedText {
   margin-left: 6%;
-  margin-top: 15%;
+  margin-top: 30%;
   font-family: 'Space Mono 700';
   font-style: normal;
   font-size: 10vh;
@@ -53,15 +53,12 @@ a {
 }
 
 .sentenceText {
-  margin-left: 10%;
-  margin-top: 20%;
   width: 30vh;
   font-family: 'Outfit 300';
   font-style: normal;
   font-weight: 300;
   font-size: 2.5vh;
   color: black;
-  margin-left: 10%;
   padding-left: 10%;
 }
 
@@ -71,16 +68,15 @@ a {
 }
 
 .leftcarrot {
-  margin-left: 10%;
-  margin-top: 20%;
+  margin-left: 0;
+  margin-right: 0;
 }
-
 
 .interestedJoinNowBox {
   width: 34vh;
   height: 10vh;
   margin-left: 10%;
-  margin-top: 20%;
+  margin-top: 15%;
   background: #187DFF;
   border: 1px solid #111111;
   box-shadow: -0.75vh 0.75vh;
@@ -102,12 +98,15 @@ a {
 }
 
 #join-span {
-  display: contents;
+  display: flex;
+  align-items: center;
   text-transform: unset;
+  margin-left: 9%;
+  margin-top: 15%;
 }
 
 #join-carrot {
-  width: 8vh;
+  width: 4vh;
 }
 
 @media only screen and (max-device-width: 650px) {
@@ -130,8 +129,6 @@ a {
   }
 
   #join-span {
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
     margin-right: 5vw;
   }
@@ -150,12 +147,16 @@ a {
   .interestedflexbox .sentenceText {
     width: 70vw;
     font-size: 4.5vw;
-    line-height: 3vh;
-    margin-left: 7vw;
+    line-height: 4vh;
+    /* margin-left: 7vw; */
   }
 
   #join-carrot {
     width: 3vh;
     height: auto;
+  }
+
+  .leftcarrot {
+    margin-left: 10%;
   }
 }
