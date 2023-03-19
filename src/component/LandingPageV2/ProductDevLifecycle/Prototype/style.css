@@ -165,4 +165,31 @@ a {
     color: #187DFF;
   }
  
-   
+.DevelopmentWheelImage {
+  width: 64vh;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .DevelopmentWheel, .DevelopmentWheelTwo, .DevelopmentWheelThree {
+    size: 30.11vh;
+    height: 30.11vh;
+    margin-top: 30.11vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .DevelopmentWheelImage {
+    width: 30.11vh;
+  }
+
+  .ideation {
+    width: 100vw;
+    margin-left: 5%;
+  }
+
+    .IdeationText,
+    .PrototypeText,
+    .ProductionText {
+      font-size: 15vw;
+    }
+}
