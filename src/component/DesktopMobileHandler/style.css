@@ -1,28 +1,27 @@
 .horizontal-scroll {
-    overflow-x: auto;
-    overflow-y: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.vertical-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#mobile-page-container {
+  width: 100vw;
+}
+
+.mobile {
+  display: none;
+  padding-left: 0px;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .vh-100 {
+    display: none;
   }
-  
-  .vertical-scroll {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  
-  #mobile-page-container {
-      width: 100vw;
-    }
-  
   .mobile {
-      display: none;
-      padding-left: 0px;
-    }
-  
-  @media only screen and (max-device-width: 650px) {
-      .vh-100 {
-        display: none;
-      }
-      .mobile {
-        display: flex;
-      }
+    display: flex;
   }
-  
+}

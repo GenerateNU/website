@@ -9,7 +9,7 @@ import GrowthMantra from "./GrowthMantra";
 import Footer from "../VerticalFooter";
 import "./style.css";
 import Stats from "./Stats";
-import FooterTwo from "../VerticalFooterTeams";
+import NextPage from "../NextPage";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class AboutPage extends React.Component {
@@ -27,11 +27,50 @@ export default class AboutPage extends React.Component {
       // <FooterTwo />,
     ];
     return (
-      <DesktopMobileScrollAndBackgroundHandler
-        children={children}
-        desktopBGColor={"black"}
-        mobileBGColor={"black"}
-      />
+      <div
+        class="vh-100 horizontal-scroll bg-black container-fluid"
+        tab-index="0"
+      >
+        <Row className="flex-nowrap">
+          <OurMissionSection />
+          <WeAreSection />
+          <Leadership />
+
+          <History />
+          <Timeline />
+          <Stats />
+          <WhyGenerateCarousel />
+          <GrowthMantra />
+          <Footer />
+          <FooterTwo />
+        </Row>
+      </div>
     );
   }
 }
+
+
+export default class AboutPage extends React.Component {
+  
+  render() {
+    return (
+     <div class="vh-100 horizontal-scroll bg-black container-fluid" tab-index="0">
+          <Row className="flex-nowrap">
+          <OurMissionSection />
+          <WeAreSection />
+          <Leadership />
+
+          <History />
+          <Timeline />
+          <Stats/>
+          <WhyGenerateCarousel />
+          <GrowthMantra/>
+          <Footer />
+          <FooterTwo />
+          
+          </Row>
+      </div>
+    );
+  }
+}
+*/

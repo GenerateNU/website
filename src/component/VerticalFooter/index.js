@@ -10,8 +10,6 @@ import MosaicIcon from "../../assets/images/socialMediaIcons/Mosaic.png";
 import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.png";
 import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
 
-
-
 function VerticalFooter() {
   return (
     <Container fluid className="footer-container">
