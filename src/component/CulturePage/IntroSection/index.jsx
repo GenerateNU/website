@@ -14,16 +14,17 @@ export default function IntroSection() {
         <div className="generateMascotContainer">
           <img className="generateMascot" src={logo} alt="Generate Mascot" />
         </div>
-        <div className="culture-quote-positioning p-3">
+        <div className="our-culture-quote-positioning p-3">
           <div className="our-culture-quote">
             We make wicked projects &amp; plan wicked events
           </div>
         </div>
       </div>
-
-      <h1 className="our-mission-header text-no-fill text-uppercase position-absolute start-0 bottom-0 p-5 fi">
-        Our Culture
-      </h1>
+      <div className="our-culture-big-positioning">
+        <div className="our-culture-big text-no-fill text-uppercase position-relative start-0 bottom-0 p-5">
+          Our Culture
+        </div>
+      </div>
     </div>
   );
 }
