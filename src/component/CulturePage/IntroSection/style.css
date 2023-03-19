@@ -48,14 +48,14 @@
 .our-culture-quote {
   color: #a559ec;
   font-family: "Space Mono 700";
-  font-size: 8vh;
+  font-size: calc(12px + 2.5vw);
   font-style: bold;
   text-transform: uppercase;
   line-height: 110%;
 }
 
 .culture-quote-positioning {
-  left: 624px;
+  left: 42%;
   top: 43%;
   width: 45em;
   position: absolute;
