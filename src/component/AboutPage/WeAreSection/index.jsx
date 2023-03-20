@@ -16,7 +16,7 @@ const WeAreSection = () => {
                     </h1>
                 </div>
                 <div className="we-are-header-space"></div>
-                <div className="d-flex align-items-center">
+                <div className="card-container d-flex align-items-center">
                     {
                         valueData.map(value => <ValueCard value={value} />)
                     }
