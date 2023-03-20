@@ -1,7 +1,4 @@
 import React from "react";
-//import Container from "react-bootstrap/esm/Container";
-import Row from "react-bootstrap/esm/Row";
-import Column from "react-bootstrap/esm/Col";
 import WhatWeOffer from "./WhatWeOffer";
 import Interested from "./Interested";
 import FeaturedProjects from "./FeaturedProjects";
@@ -19,8 +16,6 @@ import "./style.css";
 import Management from "./Management";
 import Footer from "../VerticalFooter";
 import NextPage from "../NextPage";
-//import NavBar from "../NavBar";
-//import { Navbar } from "react-bootstrap";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class LandingPageV2 extends React.Component {
@@ -45,56 +40,11 @@ export default class LandingPageV2 extends React.Component {
     ];
 
     return (
-      <>
-        <>
-          <div
-            class="vh-100 horizontal-scroll bg-white container-fluid"
-            tab-index="0"
-          >
-            <Row className="flex-nowrap">
-              <Intro />
-              <WhoWeAre />
-              <WhoWeAreResponse />
-              <WhatWeOffer />
-              <ProductDevelopment />
-              <Ideation />
-              <Prototype />
-              <Production />
-              <Management />
-              <FeaturedProjects />
-              <FP1 />
-              <FP2 />
-              <PreviousProjects />
-              <Interested />
-              <Footer />
-              <NextPage pageName="about" url="/about" />
-            </Row>
-          </div>
-          <div
-            class="vw-100 mobile vertical-scroll bg-black container-fluid"
-            tab-index="0"
-          >
-            <Column className="flex-nowrap" id="mobile-page-container">
-              <Intro />
-              <WhoWeAre />
-              <WhoWeAreResponse />
-              <WhatWeOffer />
-              <ProductDevelopment />
-              <Ideation />
-              <Prototype />
-              <Production />
-              <Management />
-              <FeaturedProjects />
-              <FP1 />
-              <FP2 />
-              <PreviousProjects />
-              <Interested />
-              <Footer />
-              <NextPage pageName="about" url="/about" />
-            </Column>
-          </div>
-        </>
-      </>
+      <DesktopMobileScrollAndBackgroundHandler
+        children={children}
+        desktopBGColor={"white"}
+        mobileBGColor={"black"}
+      />
     );
   }
 }
@@ -134,8 +84,8 @@ export default class LandingPageV2 extends React.Component {
         >
           <Column className="flex-nowrap">
             <Intro />
-            {/* <WhoWeAre />
-            <WhoWeAreResponse /> }
+            <WhoWeAre />
+            <WhoWeAreResponse />
             <WhatWeOffer />
             <ProductDevelopment />
             <Ideation />
