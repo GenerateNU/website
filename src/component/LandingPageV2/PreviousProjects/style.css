@@ -39,8 +39,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 25%;
-  height: 86vh;
+
 
 }
 
@@ -49,8 +48,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 25%;
-  height: 86vh;
+
 }
 
 .col-3 {
@@ -58,8 +56,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 25%;
-  height: 86vh;
+
 }
 
 
@@ -77,7 +74,9 @@
     padding: 0;
   }
 
-  .prev-proj-wrapper .col-1, .prev-proj-wrapper .col-2, .prev-proj-wrapper .col-3 {
+  .prev-proj-wrapper .col-1,
+  .prev-proj-wrapper .col-2,
+  .prev-proj-wrapper .col-3 {
     align-items: center;
     width: unset;
   }
