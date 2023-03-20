@@ -1,6 +1,10 @@
 export const constants = {
    // Management
    // "Position_Executive_Director": "https://forms.gle/SFo5x49Xz8hcFDZj6",
+   "Position_Hardware_Director": "https://forms.gle/2A6tV8Xe2bp8q1TNA",
+   "Position_Software_Director": "https://forms.gle/tegB5SWsEkqe5YW17",
+   "Position_Operations_Director": "https://forms.gle/8jkatNqUu7VB88he8",
+   "Position_Engagement_Director": "https://forms.gle/vQXUHNKxhQkDpkns6",
 
    // Engagement
    // "Position_Online_Engagement_Coordinator": "https://forms.gle/FhTRWBm53eQFYVp68",

@@ -1,5 +1,5 @@
 import React from "react";
-import DevelopmentWheel from "../../../../assets/images/landingpage-v2/Production.svg"
+import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel.png"
 import './style.css';
 
 const Production = () => {

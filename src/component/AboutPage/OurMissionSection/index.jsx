@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
-import ShermLogo from "../../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png";
 import NavBar from "../../NavBar";
 import "./style.css";
 
