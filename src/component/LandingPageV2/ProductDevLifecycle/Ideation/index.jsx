@@ -4,6 +4,7 @@ import './style.css';
 
 const Ideation = () => {
     return (
+        <>
           <div className="background-black">
             <div className = "alignItemsRight">
             <div className = "DevelopmentWheelOne">
@@ -21,7 +22,7 @@ const Ideation = () => {
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
 };
 export default Ideation;
