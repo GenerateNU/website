@@ -1,5 +1,5 @@
 import React from "react";
-import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel.png"
+import DevelopmentWheel from "../ProductDevelopment/IdeationWheel.svg"
 import './style.css';
 
 const Ideation = () => {
