@@ -74,3 +74,11 @@ p {
 .our-history-text-style {
     margin-top: -1rem;
 }
+
+
+
+@media only screen and (max-device-width: 650px) {
+    .mobile {
+        padding-left: 0% !important;
+    }
+}
