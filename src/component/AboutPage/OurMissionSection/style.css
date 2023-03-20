@@ -44,12 +44,37 @@
 
 @media only screen and (max-device-width: 650px) {
     .quote-text {
-        width: 100%;
+        width: 100% !important;
+        padding: 0% !important;
+        flex-direction: column;
+    }
 
+    .our-mission-quote {
+        font-size: 3vh;
+    }
+
+    .our-mission-quotation-mark {
+        float: left;
+        font-size: 7vh;
+        line-height: 4vh;
+        height: 4vh;
+    }
+
+    .bottom-quote {
+        padding-top: 2vh !important;
+    }
+
+    .our-mission-header {
+        padding: 0% !important;
+        margin-top: 2vh;
+        font-size: 10vh;
+        line-height: 10vh;
     }
 
     .mission-mobile {
-        padding-left: 0%;
-        padding-right: 0%;
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+        width: 100% !important;
+        height: 80% !important;
     }
 }
