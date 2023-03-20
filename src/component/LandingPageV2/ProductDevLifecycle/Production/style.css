@@ -192,17 +192,18 @@ a {
 
   .DevelopmentWheelOne {
     margin-top: 45vh;
-    margin-bottom: 0vh;
+    margin-bottom: -2vh;
   }
 
   .DevelopmentWheelTwo {
-    margin-bottom: -10vh;
+    margin-bottom: 11.5vh;
     margin-top: 30vh;
     /* margin-bottom: -20vh; */
   }
 
   .DevelopmentWheelThree {
     margin-top: 35vh;
+    margin-bottom: -1vh;
   }
 
   .DevelopmentWheelImageOne {
