@@ -81,6 +81,10 @@
         padding-left: 5%;
     }
 
+    .we-are-header-space {
+        height: 7vh;
+    }
+
     .our-mission-our-values {
         font-size: 2vh;
         margin-right: 10vh;
