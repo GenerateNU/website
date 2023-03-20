@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./style.css";
 import { Row, Col } from "react-bootstrap";
+import "./style.css";
 
 const WhatWeOffer = () => {
   const [showSoftwareInfo, setShowSoftwareInfo] = useState(false);
