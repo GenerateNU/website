@@ -54,6 +54,7 @@
     width: fit-content;
 }
 
+
 .mw-content {
     width: max-content;
 }
@@ -64,4 +65,10 @@
 
 .cards-space {
     width: 60%;
+}
+
+@media only screen and (max-device-width: 650px) {
+    .weare-header {
+        width: 100% !important;
+    }
 }
