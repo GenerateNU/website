@@ -13,7 +13,7 @@ const OurMissionSection = () => {
           experiences and to support Northeastern ventures of all backgrounds
           with their development needs.
         </div>
-        <div className="our-mission-quotation-mark pt-5">&#8221;</div>
+        <div className="our-mission-quotation-mark bottom-quote pt-5">&#8221;</div>
       </div>
       <h1 className="our-mission-header text-no-fill text-uppercase position-relative start-0 bottom-0 ps-5 pb-4">
         Our Mission
