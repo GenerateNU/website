@@ -28,4 +28,6 @@ The Firefox Mobile inspect was being buggy selecting different phones, so I test
 
 # Additional comments for the reviewers
 
- None
+
+![image](./public/images/PRImages/Screenshot%202023-03-20%20at%206.42.57%20PM.png)
+![image](./public/images/PRImages/Screenshot%202023-03-20%20at%206.43.05%20PM.png)
