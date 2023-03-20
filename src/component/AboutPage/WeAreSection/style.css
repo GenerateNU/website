@@ -67,8 +67,26 @@
     width: 60%;
 }
 
+.our-mission-our-values {
+    color: #FFBF3C;
+    font-size: 1.7vw;
+    line-height: 100%;
+    font-family: 'Space Mono';
+    margin-right: 3%;
+}
+
 @media only screen and (max-device-width: 650px) {
     .weare-header {
         width: 100% !important;
+    }
+
+    .our-mission-our-values {
+        font-size: 2vh;
+        margin-right: 10vh;
+        padding-bottom: 2% !important;
+    }
+
+    .our-mission-we-are {
+        font-size: 10vh;
     }
 }
