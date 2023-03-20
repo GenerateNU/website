@@ -4,6 +4,7 @@ import './style.css';
 
 const Production = () => {
     return (
+          <>
           <div className="background-black">
             <div className = "alignItemsRight">
             <div className = "DevelopmentWheelThree">
@@ -17,6 +18,7 @@ const Production = () => {
             </div> 
            </div>
            </div>
+          </>
             
     );
 };

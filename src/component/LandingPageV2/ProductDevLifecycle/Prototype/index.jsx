@@ -4,6 +4,7 @@ import './style.css';
 
 const Prototype = () => {
     return (
+      <>
           <div className="background-black">
             <div className = "alignItemsRight">
             <div className = "DevelopmentWheelTwo">
@@ -17,6 +18,7 @@ const Prototype = () => {
             </div>
            </div>
            </div>
+      </>
             
     );
 };
