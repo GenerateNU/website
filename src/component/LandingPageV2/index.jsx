@@ -24,9 +24,7 @@ import NextPage from "../NextPage";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class LandingPageV2 extends React.Component {
-    
   render() {
-    
     const children = [
       <Intro />,
       <WhoWeAre />,
@@ -43,9 +41,9 @@ export default class LandingPageV2 extends React.Component {
       <PreviousProjects />,
       <Interested />,
       <Footer />,
-      <NextPage pageName='about' url='/about'/>
+      <NextPage pageName="about" url="/about" />,
     ];
-    
+
     return (
       <>
         <>
@@ -99,7 +97,7 @@ export default class LandingPageV2 extends React.Component {
       </>
     );
   }
-};
+}
 /*
 export default class LandingPageV2 extends React.Component {
   constructor() {
@@ -137,7 +135,7 @@ export default class LandingPageV2 extends React.Component {
           <Column className="flex-nowrap">
             <Intro />
             {/* <WhoWeAre />
-            <WhoWeAreResponse /> */}
+            <WhoWeAreResponse /> }
             <WhatWeOffer />
             <ProductDevelopment />
             <Ideation />
