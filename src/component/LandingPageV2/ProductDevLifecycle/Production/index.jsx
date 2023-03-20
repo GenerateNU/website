@@ -6,8 +6,8 @@ const Production = () => {
     return (
           <div className="background-black">
             <div className = "alignItemsRight">
-            <div className = "DevelopmentWheel">
-              <img  style={{width: '62vh'}} src ={DevelopmentWheel} />
+            <div className = "DevelopmentWheelThree">
+              <img className = "DevelopmentWheelImageThree" src ={DevelopmentWheel} />
             </div>
             <div className="ideation">
               <div className = "column">

@@ -6,8 +6,8 @@ const Ideation = () => {
     return (
           <div className="background-black">
             <div className = "alignItemsRight">
-            <div className = "DevelopmentWheelTwo">
-              <img style={{width: '84vh'}}src ={DevelopmentWheel} />
+            <div className = "DevelopmentWheelOne">
+              <img className = "DevelopmentWheelImageOne" /*style={{width: '84vh'}}*/ src ={DevelopmentWheel} />
             </div>
             <div className="ideation">
               <div className = "column">

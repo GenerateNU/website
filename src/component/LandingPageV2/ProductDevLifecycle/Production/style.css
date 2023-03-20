@@ -73,13 +73,12 @@ a {
     flex-direction: row;
   }
 
-  .DevelopmentWheel {
-    size: 64vh;
+  .DevelopmentWheelThree {
+    width: 62vh;
     margin-top: 12.75vh;
     margin-left: 12.55vh;
     margin-bottom: 12.55vh;
     transform: rotate(360deg);
-    
   }
 
   .ideation {
@@ -178,25 +177,26 @@ a {
   }
 }
 
-.DevelopmentWheelImage {
-  width: 64vh;
+.DevelopmentWheelImageThree {
+  width: 60vh;
 }
 
 @media only screen and (max-device-width: 650px) {
-  .DevelopmentWheel, .DevelopmentWheelTwo, .DevelopmentWheelThree {
+  /*.DevelopmentWheelOne, .DevelopmentWheelTwo, .DevelopmentWheelThree {
     size: 30.11vh;
     height: 30.11vh;
     margin-left: 0;
     margin-top: -15vh;
+  }*/
+
+  .DevelopmentWheelOne {
+    margin-top: 45vh;
+    margin-bottom: 0vh;
   }
 
   .DevelopmentWheelTwo {
     margin-bottom: -10vh;
     margin-top: 30vh;
-  }
-
-  .DevelopmentWheel {
-    margin-top: 45vh;
     /* margin-bottom: -20vh; */
   }
 
@@ -204,9 +204,27 @@ a {
     margin-top: 35vh;
   }
 
-  .DevelopmentWheelImage {
+  .DevelopmentWheelImageOne {
+    width: 42.11vh;
+    text-align: left;
+    margin-left: -17.5vh;
+    padding-left: 0vh;
+    margin-top: -22vh;
+  }
+
+  .DevelopmentWheelImageTwo {
+    width: 39.11vh;
+    text-align: left;
+    margin-left: -15vh;
+    margin-top: -4vh;
+    margin-bottom: 15vh;
+  }
+
+  .DevelopmentWheelImageThree {
     width: 30.11vh;
     text-align: left;
+    margin-left: -11.85vh;
+    margin-bottom: -12vh;
   }
 
   .ideation {
@@ -230,6 +248,10 @@ a {
 
   .ProductionText {
     margin-top: 0;
+  }
+  
+  .IdeationText {
+    margin-top: -4vh;
   }
 
   .ideation .paragraphText {
