@@ -110,4 +110,8 @@
         padding-right: .5rem;
         padding-bottom: 5%;
     }
+    
+    .value-card:last-child {
+        padding-right: .5rem;
+    }
 }
