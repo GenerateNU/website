@@ -6,8 +6,8 @@ const Prototype = () => {
     return (
           <div className="background-black">
             <div className = "alignItemsRight">
-            <div className = "DevelopmentWheelThree">
-              <img class="DevelopmentWheelImage" src ={DevelopmentWheel} />
+            <div className = "DevelopmentWheelTwo">
+              <img className = "DevelopmentWheelImageTwo" /*style={{width: '80vh'}}*/ src ={DevelopmentWheel} />
             </div>
             <div className="ideation">
               <div className = "column">

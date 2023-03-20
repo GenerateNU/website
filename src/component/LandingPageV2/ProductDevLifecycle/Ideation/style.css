@@ -73,14 +73,9 @@ a {
     flex-direction: row;
   }
 
-  .DevelopmentWheel {
-    margin-top: 12.55vh;
-    margin-left: 12.55vh;
-    transform: rotate(360deg);
-  }
-  .DevelopmentWheelTwo {
-    height: 63.11vh;
-    margin-top: 12.55vh;
+  .DevelopmentWheelOne {
+    width: 84vh;
+    margin-top: 1.75vh;
     margin-left: 12.55vh;
     margin-bottom: 12.55vh;
     transform: rotate(97deg);
@@ -117,6 +112,10 @@ a {
     .IdeationText, .PrototypeText, .ProductionText {
       font-size: 15vw;
     }
+  }
+
+  .DevelopmentWheelImageOne {
+    width: 82vh;
   }
 
   .ideation {
