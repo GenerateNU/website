@@ -29,10 +29,19 @@
 .software-color {
     color: #187DFF;
 }
+.software-color:hover {
+    color: white;
+    -webkit-text-stroke: 2px #187DFF;
+}
 
 .hardware-color {
     color: #FF5751;
 }
+.hardware-color:hover {
+    color: black;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
 
 .what-we-offer-style {
     font-family: "Space Mono 700";

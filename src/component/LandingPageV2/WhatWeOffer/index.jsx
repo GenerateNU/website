@@ -111,12 +111,12 @@ const WhatWeOffer = () => {
           <div
             className="w-100 text-uppercase software-hardware-style software-color py-3"
             onClick={() => {
-            if (showHardware) {
-              showHardware = !showHardware;
-              setShowHardwareInfo(!showHardwareInfo);
-            }
-            showSoftware = !showSoftware;
-            setShowSoftwareInfo(!showSoftwareInfo);
+              if (showHardware) {
+                showHardware = !showHardware;
+                setShowHardwareInfo(!showHardwareInfo);
+              }
+              showSoftware = !showSoftware;
+              setShowSoftwareInfo(!showSoftwareInfo);
             }}
           >
             Software
@@ -144,23 +144,25 @@ const WhatWeOffer = () => {
           </div>
         )}
         {showSoftwareInfo ? (
-          <Inform info={softwareInfo} colorProfile={new colorProfile("white", new rgba(0,0,0,0.2))}/>
+          <Inform
+            info={softwareInfo}
+            colorProfile={new colorProfile("white", new rgba(0, 0, 0, 0.2))}
+          />
         ) : showHardwareInfo ? (
-          <Inform info={hardwareInfo} colorProfile={new colorProfile("black", new rgba(255,255,255,0.2))} />
+          <Inform
+            info={hardwareInfo}
+            colorProfile={
+              new colorProfile("black", new rgba(255, 255, 255, 0.2))
+            }
+          />
         ) : (
           <></>
         )}
         <div className="position-relative vh-20 text-center">
           <div
             className="bg-black position-absolute bottom-0 w-100 text-uppercase software-hardware-style hardware-color py-3"
-            onClick={()=>{
-              if (showSoftware) {
-                showSoftware = !showSoftware;
-                setShowSoftwareInfo(!showSoftwareInfo);
-              }
-              showHardware = !showHardware;
-              setShowHardwareInfo(!showHardwareInfo);
-              }}
+            onMouseEnter={() => setShowHardwareInfo(true)}
+            onMouseLeave={() => setShowHardwareInfo(false)}
           >
             Hardware
           </div>
