@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useRef } from "react";
 import Row from "react-bootstrap/esm/Row";
 import Column from "react-bootstrap/esm/Col";
 import "./style.css";
@@ -20,26 +21,40 @@ export default function DesktopMobileScrollAndBackgroundHandler({
   desktopBGColor,
   mobileBGColor,
 }) {
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    const handleWheel = (evt) => {
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    };
+    scrollContainer.addEventListener("wheel", handleWheel);
+    return () => {
+      scrollContainer.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
   return (
     <>
       {/* Desktop view */}
       <div
-        class={`vh-100 horizontal-scroll bg-${desktopBGColor} container-fluid`}
-        tab-index="0"
+        ref={scrollContainerRef}
+        // using dsktop to avoid naming collision...
+        class={`vh-100 dsktop horizontal-scroll bg-${desktopBGColor} container-fluid`}
+        tabIndex="0"
       >
         {/* The content is wrapped in a Row component from the react-bootstrap library to ensure proper layout */}
-        <Row className="flex-nowrap">{children}</Row>
+        <Row className="flex-nowrap vh-100">{children}</Row>
       </div>
 
       {/* Mobile view */}
       <div
         class={`vw-100 mobile vertical-scroll bg-${mobileBGColor} container-fluid`}
-        tab-index="0"
+        tabIndex="0"
       >
         {/* The content is wrapped in a Column component from the react-bootstrap library to ensure proper layout */}
-        <Column className="flex-nowrap" id="mobile-page-container">
-          {children}
-        </Column>
+        <Column className="flex-nowrap vw-100">{children}</Column>
       </div>
     </>
   );
