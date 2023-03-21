@@ -27,10 +27,10 @@
 
 .mission-navbar-container {
     position:fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
     z-index: 4;
-    width: 80%;
+    margin-left: 3%;
+    padding-top: 2%;
+
 }
 
 .mission-header-space {
@@ -82,6 +82,14 @@
         padding-right: 0% !important;
         width: 100% !important;
         height: 90vh !important;
+    }
+
+    .mission-navbar-container {
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 80%;
+        margin-left: 0%;
+        padding-top: 0%;
     }
 
 }
