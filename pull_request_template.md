@@ -1,18 +1,20 @@
 # What was the ticket?
 
-WT-78: Implementing About landing and values mobile pages
- [Link to Ticket](https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-78)
+WT-65 UI Design: Construct JSX page to match the UI of Teams landing page.
+ [Link to Ticket](https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-65)
 
 # What did I do?
 
-I added extra mobile CSS selectors, changed font sizes, heights and widths, and added/changed paddings to make the pages properly dipslay on mobile scales.
+Created new Teams page with route at /teams, based off the figma design for it. Currently waiting for images to populate
+the rest of the page, and works to be completed on the figma for an expanded view of each of the teams
 
 # How did I test it?
 
 Describe in detail steps you used to test the changes you have made.
 Key Parts
 
-I used the mobile inspect to check proper displaying on multiple phone resolutions.
+Compared the figma and current page to ensure it correctly reflected what the design should be. Ran tests for resizing the window to ensure page
+did not ahve any scaling issues.
 
  Required checks:
 
@@ -24,10 +26,10 @@ I used the mobile inspect to check proper displaying on multiple phone resolutio
 Describe aspects of the PR that may become problems in the future.
 Key Questions
 
-The Firefox Mobile inspect was being buggy selecting different phones, so I tested with a diversity of resolutions under the Responsive phone selection. If display issues were to occur on different phones, namely IPhones, this might be why.
+Currently the page doesn't go anywhere, it is mainly jsut a simple gray space to build onto morechanges as figma designs are updated
 
 # Additional comments for the reviewers
 
 
-![image](./public/images/PRImages/Screenshot%202023-03-20%20at%206.42.57%20PM.png)
-![image](./public/images/PRImages/Screenshot%202023-03-20%20at%206.43.05%20PM.png)
+![image](./public/images/PRImages/Screenshot%202023-03-20%20204229.png)
+![image](./public/images/PRImages/Screenshot%202023-03-20%20204258.png)
