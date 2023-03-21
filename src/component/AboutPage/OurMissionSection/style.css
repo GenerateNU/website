@@ -34,7 +34,7 @@
 }
 
 .mission-header-space {
-    height: 15vh;
+    height: max(120px, 20vh);
 }
 
 
