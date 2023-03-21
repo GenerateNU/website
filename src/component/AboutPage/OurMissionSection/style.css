@@ -25,6 +25,15 @@
     color: #187DFF;
 }
 
+.mission-navbar-container {
+    position:fixed;
+    z-index: 4;
+}
+
+.mission-header-space {
+    height: 20vh;
+}
+
 
 
 .our-mission-we-are {
