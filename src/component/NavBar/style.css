@@ -10,7 +10,7 @@ span {
 
 .bar-size {
     height: max(50px, 7vmin);
-    width: max(180px, 30vmin);
+    width: max(250px, 35vmin);
 }
 
 .menu-hover {
