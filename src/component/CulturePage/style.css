@@ -1,5 +1,4 @@
 .culture-text-box{
-    height: 50vh;
     width: 35vw;
 }
 
@@ -12,4 +11,8 @@
 .nospacing {
     margin:0%;
     padding: 0%;
+}
+
+.culture-outline {
+    -webkit-text-stroke: 1px #DFDFDF;
 }

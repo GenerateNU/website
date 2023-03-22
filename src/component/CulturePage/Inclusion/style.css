@@ -22,9 +22,10 @@
   -webkit-text-stroke-color: #a559ec;
 }
 .text-div-inclusion {
-  padding: 8em;
-  margin-top: 20%;
-  padding-right: 0;
+  padding: 0 0 0 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .vertical-div {
@@ -37,6 +38,5 @@
 }
 
 .cultureTwo-text {
-  margin-top: -30%;
   font-size: max(2.5vmin, 1.5vw);
 }
