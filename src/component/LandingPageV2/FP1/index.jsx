@@ -9,29 +9,35 @@ export default function FP1() {
     <div className="parent">
       <div className="column-1">
         <div>
-          <h1 style={{fontSize: "7vh"}} className="earnz-header">Earnz</h1>
-          <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
-            software
-          </p>
+          <h1 style={{ fontSize: "7vh" }} className="earnz-header">
+            Earnz
+          </h1>
+          <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>software</p>
         </div>
         <div className="client">
-          <p style={{fontSize: "3vh"}} className="client-text">Client</p>
+          <p style={{ fontSize: "3vh" }} className="client-text">
+            Client
+          </p>
           <div className="name-order">
-            <p style={{fontSize: "3vh"}} className="name-text">Max Thalheimer</p>
-            <p style={{fontSize: "2vh"}} className="school">Northeastern Alumnus ‘20</p>
-          </div> 
+            <p style={{ fontSize: "3vh" }} className="name-text">
+              Max Thalheimer
+            </p>
+            <p style={{ fontSize: "2vh" }} className="school">
+              Northeastern Alumnus ‘20
+            </p>
+          </div>
         </div>
-        <div>
-          <blockquote style={{width: "40vh"}} className="client-blurb" id="fp1-client-blurb">
-            A unique, two-sided promotional and loyalty platform built to level
-            the playing field for independent bars and restaurants by allowing
-            them to utilize an app to acquire and retain customers as easily and
-            cost effectively as currently only chains can.
-          </blockquote>
+        <div className="client-blurb" id="fp1-client-blurb">
+            <p style={{width: "40vh"}}>
+              A unique, two-sided promotional and loyalty platform built to
+              level the playing field for independent bars and restaurants by
+              allowing them to utilize an app to acquire and retain customers as
+              easily and cost effectively as currently only chains can.
+            </p>
           <a href="url">learn more</a>
         </div>
         <div className="bottom-corner">
-          <img style={{height: "25vh"}}src={BottomCorner} alt="" />
+          <img style={{ height: "25vh" }} src={BottomCorner} alt="" />
         </div>
       </div>
       <div className="column-2">
@@ -41,19 +47,22 @@ export default function FP1() {
       </div>
       <div className="column-3" id="fp1-c3">
         <div className="top-corner">
-          <img style={{width: "60vh", height: "25vh"}} src={TopCorner} alt="" />
+          <img
+            style={{ width: "60vh", height: "25vh" }}
+            src={TopCorner}
+            alt=""
+          />
         </div>
         <div className="quote-container" id="fp1-quote-container">
-          <p id="earnPage">
+          <blockquote>
             Generate was great as a learning experience for me, as someone who
             hadn’t built a tech company before. The team of experienced Generate
             engineers knew what it takes to build a product like earnz, how to
             package it all together, and ultimately how to come together as a
             team.
-          </p>
+          </blockquote>
         </div>
-        <hr id="pageSeparator">
-        </hr>
+        <hr id="pageSeparator"></hr>
       </div>
     </div>
   );
