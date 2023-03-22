@@ -1,5 +1,5 @@
 .whoWeAreContainer {
-    width: 60%;
+    width: max(60%, 80vh);
     margin: 0%;
     padding: 0%;
 }
@@ -42,7 +42,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 2.8vh;
-    line-height: max(2.8vw, 22.4px);
+    line-height: max(2.8vw, 3.5vh);
     color: #FFFFFF;
 }
 
