@@ -48,7 +48,7 @@ export default function ApplyPage() {
                         We’re always looking for passionate individuals who are ready to
                         learn and grow. We have opportunities that run broad and deep. If
                         you don’t see anything right now drop an email and we’ll let you
-                        know when posiitons open up again.
+                        know when positions open up again.
                     </div>
                 </div>
                 <div className="search-bar-width">
