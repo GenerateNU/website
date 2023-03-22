@@ -45,7 +45,7 @@ export default function FP2() {
         <div className="top-corner">
           <img className="top-corner-img" src={TopCorner} alt="Smarty_Pill" width="45%" />
         </div>
-        <blockquote>
+        <blockquote className="block_quote">
           <div className="quote-container">
             The biggest benefit that Generate provided for me was just the
             amount of work that was put into SmartyPill, and the knowledge

@@ -72,6 +72,7 @@
   padding-top: 5vh;
   padding-left: 14vh;
   margin-top: 14vh;
+  margin-left: 20vh;
 }
 
 .mockup-img {
@@ -114,6 +115,11 @@ blockquote {
   margin-left: 6vh;
   /* padding: 0.5em 2em 0.5em 3em; */
 }
+
+.block_quote {
+  margin-left: 13vh;
+}
+
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
 blockquote:before {
   font-family: "Space Mono 700";

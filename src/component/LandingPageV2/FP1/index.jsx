@@ -45,7 +45,7 @@ export default function FP1() {
         <div className="top-corner">
           <img className="top-corner-img" src={TopCorner} alt="" />
         </div>
-        <blockquote>
+        <blockquote className="block_quote">
           <div className="quote-container">
             Generate was great as a learning experience for me, as someone who
             hadn't built a tech company before. The team of experienced Generate
