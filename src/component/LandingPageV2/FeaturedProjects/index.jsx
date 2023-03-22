@@ -1,6 +1,10 @@
 import React from "react";
 import "./style.css";
 
+/**
+ * 
+ * @todo tweak to be fixed on max monitor hi
+ */
 export default function FeaturedProjects() {
   return (
       <div className="featured_projects_container">
