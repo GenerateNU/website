@@ -31,9 +31,9 @@
 }
 
 .whoweareparagraph {
-    padding: 7%;
-    padding-left: 15%;
-    width: 85%;
+    padding: 5%;
+    padding-left: 10%;
+    width: 90%;
     height: 80%;
     left: 187.7vh;
     top: 46.83vh;
@@ -42,7 +42,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 2.8vh;
-    line-height: max(2.8vw, 12px);
+    line-height: max(2.8vw, 22.4px);
     color: #FFFFFF;
 }
 
