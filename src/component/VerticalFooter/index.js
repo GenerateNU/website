@@ -32,12 +32,16 @@ function VerticalFooter() {
           <Row className="footer-text">
             {" "}
             <b>
-              <a href={"/"}>Generate {currentPage === "/" ? "<" : ""}</a>
+              <a href={"/"}>
+                Generate {currentPage === "/" ? "<" : ""}
+              </a>
             </b>
           </Row>
           <Row className="footer-text">
             {" "}
-            <a href="/about">About {currentPage === "/about" ? "<" : ""}</a>
+            <a href="/about">
+              About {currentPage === "/about" ? "<" : ""}
+            </a>
           </Row>
           <Row className="footer-text">
             {" "}
@@ -59,7 +63,9 @@ function VerticalFooter() {
           </Row>
           <Row className="footer-text">
             {" "}
-            <a href="/apply">Apply {currentPage === "/apply" ? "<" : ""}</a>
+            <a href="/apply">
+              Apply {currentPage === "/apply" ? "<" : ""}
+            </a>
           </Row>
           <Row className="footer-text">
             {" "}
