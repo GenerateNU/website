@@ -11,6 +11,8 @@ import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.p
 import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
 
 function VerticalFooter() {
+  const currentPageUrl = window.location.href;
+  const currentPage = currentPageUrl.substring(currentPageUrl.lastIndexOf("/"));
   return (
     <Container fluid className="footer-container">
       <Row>
@@ -30,16 +32,18 @@ function VerticalFooter() {
           <Row className="footer-text">
             {" "}
             <b>
-              <a href={window.location.href}>Generate &lt;</a>
+              <a href={"/"}>Generate {currentPage === "/" ? "<" : ""}</a>
             </b>
           </Row>
           <Row className="footer-text">
             {" "}
-            <a href="/about">About </a>
+            <a href="/about">About {currentPage === "/about" ? "<" : ""}</a>
           </Row>
           <Row className="footer-text">
             {" "}
-            <a href="/culture">Culture</a>
+            <a href="/culture">
+              Culture {currentPage === "/culture" ? "<" : ""}
+            </a>
           </Row>
           <Row className="footer-text">
             {" "}
@@ -55,7 +59,7 @@ function VerticalFooter() {
           </Row>
           <Row className="footer-text">
             {" "}
-            <a href="/apply">Apply</a>
+            <a href="/apply">Apply {currentPage === "/apply" ? "<" : ""}</a>
           </Row>
           <Row className="footer-text">
             {" "}
