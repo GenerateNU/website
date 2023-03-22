@@ -19,19 +19,19 @@ export default function PreviousProjects() {
 
   const l1 = logos1.map((logo) => (
     <div className="logo">
-      <img src={logo} alt="" />
+      <img src={logo} className="image" alt="" />
     </div>
   ));
 
   const l2 = logos2.map((logo) => (
     <div className="logo">
-      <img src={logo} alt="" />
+      <img src={logo} className="image" alt="" />
     </div>
   ));
 
   const l3 = logos3.map((logo) => (
     <div className="logo">
-      <img src={logo} alt="" />
+      <img src={logo} className="image-tall" alt="" />
     </div>
   ));
 

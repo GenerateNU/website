@@ -42,6 +42,11 @@ a {
     
     color: #FFFFFF;
   }
+
+  .DevelopmentWheelImageTwo {
+    width: 77vh;
+  }
+
   .ourProcessText {
     width: 16.9vh;
     height: 3.76vh;
@@ -73,23 +78,12 @@ a {
     flex-direction: row;
   }
 
-  .DevelopmentWheel {
-    margin-top: 12.55vh;
-    margin-left: 12.55vh;
-    transform: rotate(360deg)
-  }
   .DevelopmentWheelTwo {
-    margin-top: 12.55vh;
+    width: 80vh;
+    margin-top: 1.75vh;
     margin-left: 12.55vh;
     margin-bottom: 12.55vh;
-    transform: rotate(97deg)
-  }
-  .DevelopmentWheelThree {
-    margin-top: 12.55vh;
-    margin-left: 12.55vh;
-    margin-bottom: 12.55vh;
-    transform: rotate(230deg)
-    
+    transform: rotate(360deg);
   }
 
   .ideation {
@@ -165,4 +159,6 @@ a {
     color: #187DFF;
   }
  
-   
+.DevelopmentWheelImage {
+  width: 64vh;
+}

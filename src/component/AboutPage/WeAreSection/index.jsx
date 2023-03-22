@@ -7,7 +7,7 @@ const WeAreSection = () => {
     return (
         <> 
              <div >
-                <div className="fit-content">
+                <div className="weare-header fit-content">
                     <h5 className="mb-0 our-mission-our-values we-are-values w-auto h-auto text-end p-4">
                         our values
                     </h5>
@@ -16,7 +16,7 @@ const WeAreSection = () => {
                     </h1>
                 </div>
                 <div className="we-are-header-space"></div>
-                <div className="d-flex align-items-center">
+                <div className="card-container d-flex align-items-center">
                     {
                         valueData.map(value => <ValueCard value={value} />)
                     }

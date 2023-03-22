@@ -161,7 +161,6 @@ h1 {
   .client-blurb {
     padding-top: 3vh;
     margin: auto;
-    margin-left: -6vw;
   }
 
   .name-order {
@@ -174,15 +173,20 @@ h1 {
 
   .client-blurb p {
     font-size: 2vh;
+    margin: auto;
+
   }
 
   .product-img-container {
     padding-top: 0;
     margin-top: 0;
+    padding-left: 0;
+
   }
 
   .mockup-img {
     width: unset;
+    margin-left: 0;
   }
 
   .bottom-corner, .top-corner {

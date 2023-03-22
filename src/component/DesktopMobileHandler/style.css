@@ -1,0 +1,22 @@
+.horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.vertical-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .dsktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+}

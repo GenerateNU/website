@@ -55,7 +55,6 @@
   height: 30.12vh;
   left: 1.17vh;
   top: 6.0vh;
-
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
@@ -147,7 +146,7 @@
 }
 
 .scrollimg {
-  width: 10.04vh;
+  width: 15.04vh;
   object-fit: contain;
   margin-bottom: -70vh;
 }

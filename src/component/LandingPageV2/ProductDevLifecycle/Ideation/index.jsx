@@ -1,13 +1,14 @@
 import React from "react";
-import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel.png"
+import DevelopmentWheel from "../ProductDevelopment/IdeationWheel.svg"
 import './style.css';
 
 const Ideation = () => {
     return (
+        <>
           <div className="background-black">
             <div className = "alignItemsRight">
-            <div className = "DevelopmentWheelTwo">
-              <img style={{width: '64vh'}}src ={DevelopmentWheel} />
+            <div className = "DevelopmentWheelOne">
+              <img className = "DevelopmentWheelImageOne" /*style={{width: '84vh'}}*/ src ={DevelopmentWheel} />
             </div>
             <div className="ideation">
               <div className = "column">
@@ -19,9 +20,9 @@ const Ideation = () => {
                 deeper into its overall viability.</div>
               </div>
             </div>
-           </div>
-           </div>
-            
+          </div>
+        </div>
+      </>
     );
 };
 export default Ideation;
