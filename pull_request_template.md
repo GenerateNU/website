@@ -1,12 +1,9 @@
 # What was the ticket?
 
-WT-78: Implementing About landing and values mobile pages
- [Link to Ticket](https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-78)
-
+No specific ticket; building off of WT-78
 # What did I do?
 
-I added extra mobile CSS selectors, changed font sizes, heights and widths, and added/changed paddings to make the pages properly dipslay on mobile scales.
-
+Added a fixed-position div around the NavBar, and an extra spacing div at the top of the mission section
 # How did I test it?
 
 Describe in detail steps you used to test the changes you have made.
@@ -24,10 +21,9 @@ I used the mobile inspect to check proper displaying on multiple phone resolutio
 Describe aspects of the PR that may become problems in the future.
 Key Questions
 
-The Firefox Mobile inspect was being buggy selecting different phones, so I tested with a diversity of resolutions under the Responsive phone selection. If display issues were to occur on different phones, namely IPhones, this might be why.
+There are other changes to the NavBar on other branches such as window-resizing; this may affect the width and positioning of the navbar on the About page.
 
 # Additional comments for the reviewers
 
+[!image](./public/images/PRImages/Screenshot%202023-03-20%20at%208.15.02%20PM.png)
 
-![image](./public/images/PRImages/Screenshot%202023-03-20%20at%206.42.57%20PM.png)
-![image](./public/images/PRImages/Screenshot%202023-03-20%20at%206.43.05%20PM.png)

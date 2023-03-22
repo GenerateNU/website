@@ -5,7 +5,8 @@ import "./style.css";
 const OurMissionSection = () => {
   return (
     <div className="vw-100 vh-100 py-4 px-5 mission-mobile">
-      <NavBar />
+      <div className='mission-navbar-container'><NavBar /></div>
+      <div className='mission-header-space'></div>
       <div className="quote-text w-75 pe-5 d-flex">
         <div className="our-mission-quotation-mark me-2">&#8220;</div>
         <div className="our-mission-quote">
