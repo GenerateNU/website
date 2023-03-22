@@ -161,7 +161,6 @@ h1 {
   .client-blurb {
     padding-top: 3vh;
     margin: auto;
-    margin-left: -6vw;
   }
 
   .name-order {
@@ -187,6 +186,7 @@ h1 {
 
   .mockup-img {
     width: unset;
+    margin-left: 0;
   }
 
   .bottom-corner, .top-corner {

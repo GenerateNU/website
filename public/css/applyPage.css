@@ -1,7 +1,6 @@
 .space-above-search {
   height: 40vh;
 }
-
 /* .ap_image {
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,6 +27,13 @@
 
 .ap_container {
   /* height: 200vh; */
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ap_mobile {
+  /* height: 200vh; */
+  display: none;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -56,6 +62,20 @@
   margin-left: 4%;
 }
 
+.ap_text_mobile {
+  color: white;
+  font-family: "Space Mono";
+  font-weight: 700;
+  font-size: 60px;
+  background: #187dff;
+  margin-right: 6vh;
+  padding: 0.5em;
+  width: fit-content;
+  top: 10%;
+  margin-bottom: 1%;
+  margin-left: 4%;
+}
+
 .ap_text2 {
   font-family: "Outfit 400";
   font-size: 20px;
@@ -65,6 +85,23 @@
   margin-top: 5%;
   margin-left: 4%;
   padding-bottom: 3%;
+}
+
+.ap_text2_mobile {
+  font-family: "Outfit 400";
+  font-size: 40px;
+  line-height: 30px;
+  color: white;
+  width: 90%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3%;
+}
+
+.search-bar-width {
+  width: 90%;
+  margin: 10% auto;
 }
 
 .ap_link1 {
@@ -475,5 +512,24 @@ a {
 }
 
 /* --------------------- MEDIA QUERIES TABLETS --------------------- */
+/*@media screen and (min-width: 501px) {*/
+/*  .ap_container {*/
+/*    display: inline;*/
+/*  }*/
 
-@media screen and (max-width: 1024px) {}
+/*  .ap_mobile {*/
+/*    display: block;*/
+/*  }*/
+/*}*/
+
+@media screen and (max-device-width: 500px) {
+  .ap_container {
+    display: none;
+  }
+
+  .ap_mobile {
+    display: block;
+  }
+}
+
+

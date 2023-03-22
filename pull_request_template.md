@@ -30,6 +30,7 @@ Currently the page doesn't go anywhere, it is mainly jsut a simple gray space to
 
 # Additional comments for the reviewers
 
+[!image](./public/images/PRImages/Screenshot%202023-03-20%20at%208.15.02%20PM.png)
 
 ![image](./public/images/PRImages/Screenshot%202023-03-20%20204229.png)
 ![image](./public/images/PRImages/Screenshot%202023-03-20%20204258.png)
