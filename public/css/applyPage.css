@@ -27,11 +27,13 @@
 
 .ap_container {
   /* height: 200vh; */
+  display: inline;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
 .ap_mobile {
   /* height: 200vh; */
+  display: none;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -510,25 +512,24 @@ a {
 }
 
 /* --------------------- MEDIA QUERIES TABLETS --------------------- */
+/*@media screen and (min-width: 501px) {*/
+/*  .ap_container {*/
+/*    display: inline;*/
+/*  }*/
 
-@media screen and (max-width: 1024px) {}
+/*  .ap_mobile {*/
+/*    display: block;*/
+/*  }*/
+/*}*/
 
-@media screen and (min-width: 501px) {
-  .ap_container {
-    display: inline;
-  }
-
-  .ap_mobile {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-device-width: 500px) {
   .ap_container {
     display: none;
   }
 
   .ap_mobile {
-    display: inline;
+    display: block;
   }
 }
+
+
