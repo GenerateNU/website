@@ -21,18 +21,12 @@
 }
 
 .somesaytext {
-box-sizing: border-box;
-font-family: 'Space Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 8.78vh;
-line-height: 11.22vh;
-text-align: left;
-/* identical to box height, or 128% */
-
-text-transform: uppercase;
-color: #6FCF97;
-text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF;
+    color: #6FCF97;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    font-size: 7.5vmin;
+    line-height: 6vmax;
+    text-transform: uppercase;
 }
 
 
@@ -42,10 +36,11 @@ text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF;
 font-family: 'Space Mono';
 font-style: normal;
 font-weight: 700;
-font-size: 7.5vh;
-line-height: max(8vw, 7vh);
+font-size: 7.5vmin;
+line-height: 6vmax;
 text-transform: uppercase;
 color: white;
+overflow-wrap: break-word;
 }
 
 .generateLogoWhiteStyle {
