@@ -4,7 +4,7 @@
   font-size: 5vmin;
   font-weight: 700;
   color: black;
-  margin-right: 5px;
+  text-align: left;
 }
 
 .headingTwo-text {
@@ -13,35 +13,40 @@
   font-size: 5vmin;
   font-weight: 700;
   color: black;
-  margin-right: 120px;
+  text-align: left;
 }
 
 .belong-here {
-  width: 28.12em;
-  /* margin-top:1%; */
   padding:1px;
   color: black;
+  text-align: left;
 }
+
 .thrive-together {
   width: 28.12em;
-  padding-bottom: 2em;
-  margin-top: 8%;
-  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding:1px;
 }
 
 .paragraphs {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
+  height: 100%;
 }
 
-.graphic {
-  width: 70%;
-  height: 50%;
+.color-block {
+  text-align: center;
 } 
 
-.color-block {
-  margin-top: -30%;
-  margin-left: 20%;
-} 
+.color-block .graphic {
+  height: 70vh;
+  margin-top: -42vh;
+}
+
+#belong-here-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
