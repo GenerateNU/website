@@ -154,8 +154,8 @@
 .intro-navbar {
   position: fixed;
   z-index: 6;
-  margin-left: 3%;
-  padding-top: 2%;
+  left: 1.5%;
+  top: 3%;
 }
 /* css to render appropriate intro on desktop vs. mobile by setting display size params
 */
