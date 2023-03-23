@@ -1,9 +1,11 @@
 a {
     text-decoration: none;
     color: #ffffff;
+    z-index: 1;
   }
   .background-white {
     background-color: white;
+    z-index: 1;
   }
 
 .growthMantraContainer{
@@ -12,6 +14,7 @@ a {
   .Growth-text {
     width: 1103px;
     height: 444px;
+    z-index: 1;
     left: 110px;
     margin-top: -51px;
     /* top: -51px; */
@@ -33,6 +36,7 @@ a {
     height: 92px;
     left: 124px;
     margin-top: -230px;
+    z-index: 1;
     /* top: 288px; */
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1.5px;
@@ -52,6 +56,7 @@ a {
     left: 126px;
     top: 302px;
     margin-top: -100px;
+    z-index: 1;
 
     font-family: 'Space Mono 700';
     font-style: normal;
@@ -68,6 +73,7 @@ a {
   .paragraphTextGrowthMantra {
     width: 300px;
     height: 238px;
+    z-index: 1;
     /* margin-left: 10px; */
     top: 567px;
     margin-top: -60px;
@@ -91,6 +97,7 @@ a {
     margin-left: 60px;
     top: 567px;
     margin-top: -60px;
+    z-index: 1;
     /* B1 */
 
     font-family: 'Outfit 300';
@@ -108,6 +115,7 @@ a {
 
   .carrot{
     margin-left: 20px;
+    z-index: 1;
   }
 
   .paragraphTextTwo {
@@ -127,6 +135,7 @@ a {
     line-height: 34px;
     /* or 142% */
     color: #111111;
+    z-index: 1;
   }
 
   .growthMantrainterestedText {
@@ -136,12 +145,14 @@ a {
     text-transform: uppercase;
     color: black;
     margin-top: 12%;
+    z-index: 1;
   }
 
   .mantra{
     display: flex;
     flex-direction: column;
     width: 60%;
+    z-index: 1;
   }
 
   .alignItemsRight {
@@ -150,6 +161,7 @@ a {
     padding-left: 5%;
     padding-right: 5%;
     color: #000000;
+    z-index: 1;
   }
 
   .applyNowBoxGrowthMantra {
@@ -162,6 +174,7 @@ a {
     background: #6FCF97;
     /* Black */
     border: 1px solid #111111;
+    z-index: 1;
   }
 
   .blackRectangle {
@@ -171,6 +184,7 @@ a {
     margin-left: -300px;
     background: black;
     border: 1px solid #111111;
+    z-index: 1;
   }
 
   .applyNowText {
@@ -187,6 +201,7 @@ a {
     /* White */
 
     color: #FFFFFF;
+    z-index: 1;
   }
 
   .paragraphTextThree {
@@ -208,16 +223,32 @@ a {
     margin-left: 20px;
     /* top: 567px; */
     padding-top: 2%;
+    z-index: 1;
   }
 
   .cooltriangle {
     margin-left: -40px;
     margin-top: 120px;
+    z-index: 1;
   }
 
   .leftcarrot {
     margin-left: 100px;
     margin-right: -100px;
+    z-index: 1;
+  }
+
+  .mountain-image{
+    /* margin-left:auto;
+    margin-right: auto; */
+    text-align: center;
+    height:auto;
+    z-index: -1;
+    margin-top: -370px;
+    margin-bottom: auto;
+    /* position: fixed; */
+    /* bottom: 0;
+    left: 0; */
   }
   
 

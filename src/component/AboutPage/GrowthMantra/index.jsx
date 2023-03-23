@@ -1,7 +1,9 @@
 import React from "react";
 import cooltriangle from "../../AboutPage/GrowthMantra/Green.png";
 import leftcarrot from "../../AboutPage/GrowthMantra/chevron.png";
+import mountains from "../../AboutPage/GrowthMantra/Mountains.png";
 import "./style.css";
+
 
 const GrowthMantra = () => {
   return (
@@ -51,6 +53,10 @@ const GrowthMantra = () => {
           Join a community that shares the same goal - turning ideas into
           reality
         </div>
+      </div>
+
+      <div className="mountain-image">
+        <img src={mountains} />
       </div>
     </div>
   );
