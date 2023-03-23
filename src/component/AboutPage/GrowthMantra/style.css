@@ -244,8 +244,14 @@ a {
     width: auto;
     height: auto;
     margin-top: -15vh;
-    margin-bottom: auto;
-    position: static;
+    /* margin-bottom: auto; */
+    /* position: static; */
+    background-position: bottom;
+  }
+
+  .m-img{
+    width:100;
+    height:200%;
   }
   
 

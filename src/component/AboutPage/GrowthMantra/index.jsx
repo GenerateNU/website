@@ -56,7 +56,7 @@ const GrowthMantra = () => {
       </div>
 
       <div className="mountain-image">
-        <img src={mountains} />
+        <img className="m-img" src={mountains} />
       </div>
     </div>
   );
