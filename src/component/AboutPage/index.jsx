@@ -7,6 +7,7 @@ import Timeline from "./Timeline";
 import Stats from "./Stats";
 import WhyGenerateCarousel from "./WhyGenerateCarousel";
 import GrowthMantra from "./GrowthMantra";
+import Interested from "../LandingPageV2/Interested";
 import Footer from "../VerticalFooter";
 import NextPage from "../NextPage";
 import "./style.css";
@@ -23,6 +24,7 @@ export default class AboutPage extends React.Component {
       <Stats />,
       <WhyGenerateCarousel />,
       <GrowthMantra />,
+      <Interested/>,
       <Footer />,
       <NextPage pageName="culture" url="/culture" />,
     ];
