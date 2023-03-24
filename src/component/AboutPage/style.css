@@ -125,4 +125,8 @@ p {
         padding-top: 10%;
         width: 95%;
     }
+
+    .about-page .interestedText {
+        margin-top: 20%;
+    }
 }
