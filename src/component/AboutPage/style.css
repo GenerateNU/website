@@ -75,7 +75,16 @@ p {
     margin-top: -1rem;
 }
 
+.about-page .interestedJoinNowBox {
+    background: #6FCF97;
+}
 
+.about-page .interestedcontainer {
+    background: url("../../assets/images/aboutpage/interestedbg.svg") center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 80% 20%;
+}
 
 @media only screen and (max-device-width: 650px) {
     .mobile {
@@ -128,5 +137,10 @@ p {
 
     .about-page .interestedText {
         margin-top: 20%;
+    }
+
+    .about-page .interestedcontainer {
+        background-size: 65%; 
+        background-position: 80% 10%;
     }
 }
