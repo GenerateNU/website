@@ -63,6 +63,10 @@ a:hover {
   margin-right: 40%;
 }
 
+.social-icons .row {
+  flex-wrap: nowrap;
+}
+
 .footer-two {
   background-color: orange;
   align-items: right;
