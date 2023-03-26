@@ -90,7 +90,6 @@ export default function Categories() {
     return (
       categories.length > 0 && (
         <div>
-          {
             <div className="accordion">
                 {
                     sections.map((section) => {
@@ -140,7 +139,6 @@ export default function Categories() {
                     })
                 }
             </div>
-          }
         </div>
       )
     );
