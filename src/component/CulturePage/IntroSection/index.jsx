@@ -22,7 +22,7 @@ export default function IntroSection() {
           </div>
         </div>
       </div>
-      <h1 className="our-mission-header text-no-fill text-uppercase position-absolute start-0 bottom-0 p-5 fi">
+      <h1 className="our-mission-header text-no-fill text-uppercase position-absolute start-0 bottom-0 p-5 fi" id="our-culture-header">
         Our Culture
       </h1>
     </div>

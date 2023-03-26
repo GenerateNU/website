@@ -20,6 +20,7 @@ export default function DesktopMobileScrollAndBackgroundHandler({
   children,
   desktopBGColor,
   mobileBGColor,
+  ...props
 }) {
   const scrollContainerRef = useRef(null);
 
@@ -41,7 +42,9 @@ export default function DesktopMobileScrollAndBackgroundHandler({
       <div
         ref={scrollContainerRef}
         // using dsktop to avoid naming collision...
-        class={`vh-100 dsktop horizontal-scroll bg-${desktopBGColor} container-fluid`}
+        class={`vh-100 dsktop horizontal-scroll bg-${desktopBGColor} container-fluid ${
+          props.className ?? ""
+        }`}
         tabIndex="0"
       >
         {/* The content is wrapped in a Row component from the react-bootstrap library to ensure proper layout */}
@@ -50,7 +53,9 @@ export default function DesktopMobileScrollAndBackgroundHandler({
 
       {/* Mobile view */}
       <div
-        class={`vw-100 mobile vertical-scroll bg-${mobileBGColor} container-fluid`}
+        class={`vw-100 mobile vertical-scroll bg-${mobileBGColor} container-fluid ${
+          props.className ?? ""
+        }`}
         tabIndex="0"
       >
         {/* The content is wrapped in a Column component from the react-bootstrap library to ensure proper layout */}

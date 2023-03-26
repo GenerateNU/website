@@ -73,17 +73,11 @@ a {
     flex-direction: row;
   }
 
-  .DevelopmentWheel {
-    margin-top: 12.55vh;
-    margin-left: 12.55vh;
-    transform: rotate(360deg);
-  }
-  .DevelopmentWheelTwo {
-    height: 63.11vh;
-    margin-top: 12.55vh;
+  .DevelopmentWheelOne {
+    width: 84vh;
+    margin-top: 1.75vh;
     margin-left: 12.55vh;
     margin-bottom: 12.55vh;
-    transform: rotate(97deg);
   }
   .DevelopmentWheelThree {
     margin-top: 12.55vh;
@@ -119,9 +113,13 @@ a {
     }
   }
 
+  .DevelopmentWheelImageOne {
+    width: 82vh;
+  }
+
   .ideation {
     margin-left: 12.55vh;
-    margin-top: 5%;
+    margin-top: 4%;
   }
 
   .IdeationText {

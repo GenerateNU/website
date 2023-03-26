@@ -129,17 +129,22 @@ h1 {
 
   .client-blurb#fp1-client-blurb {
     /*font-size: 2vh;*/
-    margin-left: 0.8vh;
+    /* margin-left: 0.8vh; */
+    margin-left: auto;
+    margin-right: auto;
     font-family: Outfit 300;
     font-size: 2.5vh;
     position: relative;
   }
 
   .product-img {
-    height: 60vh;
+    height: auto;
     margin-top: 1vh;
     min-height: 100%;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    transform: translateX(17%);
   }
 
   #fp1-img-container {
@@ -246,9 +251,10 @@ h1 {
 
     .product-img {
       /* position: absolute; */
-      height: 60vh;
+      height: auto;
       margin-top: 1vh;
-      margin-left: 2vh;
+      margin-left: auto;
+      margin-right: auto;
       min-height: 100%;
       text-align: center;
     }
@@ -260,10 +266,6 @@ h1 {
 
     .fp1-quote-container{
       width: 55vh;
-    }
-
-    .earnPage{
-
     }
 
   }
@@ -286,11 +288,14 @@ h1 {
   
       .product-img {
         /* position: absolute; */
-      height: 60vh;
+      height: auto;
       margin-top: 1vh;
       /* margin-left: -0.5vh; */
       min-height: 100%;
-      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      left: 50%;
+      transform: translateX(10%);
       }
 
       blockquote#fp1-client-blurb:after {
