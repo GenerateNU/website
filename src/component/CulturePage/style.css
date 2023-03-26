@@ -1,15 +1,18 @@
 .culture-text-box{
-    height: 50vh;
     width: 35vw;
 }
 
 .culture-text {
     font-family: 'Outfit 300';
-    font-size: 150%;
-    line-height: 34px;
+    font-size: min(4vmin, 150%);
+    line-height: 4vmin;
   }
 
 .nospacing {
     margin:0%;
     padding: 0%;
+}
+
+.culture-outline {
+    -webkit-text-stroke: 1px #DFDFDF;
 }

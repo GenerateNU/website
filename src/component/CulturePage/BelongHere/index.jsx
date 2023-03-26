@@ -5,7 +5,7 @@ import ColorBlock from "../../../assets/images/culturepage/Color block.png";
 export default function BelongHere() {
   return (
     // <div className="container">
-    <div>
+    <div id="belong-here-container">
        <div className="color-block">
          <img className="graphic" src={ColorBlock} alt="" />
           </div>

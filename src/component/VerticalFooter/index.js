@@ -11,17 +11,22 @@ import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.p
 import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
 
 function VerticalFooter() {
+  const currentPageUrl = window.location.href;
+  const currentPage = currentPageUrl.substring(currentPageUrl.lastIndexOf("/"));
   return (
     <Container fluid className="footer-container">
       <Row>
         <div>
-          <div className="sherm">
-            <img
-              className="logo-placement"
-              src={GenerateLogo}
-              height="80%"
-              width="60%"
-            />
+        <div className="sherm">
+           <a href="https://generatenu.com/">
+               <img
+                  className="logo-placement"
+                  src={GenerateLogo}
+                  height="80%"
+                  width="60%"
+                  alt="Logo description" // Add alt text to the image for accessibility
+               />
+              </a>
           </div>
         </div>
       </Row>
@@ -29,17 +34,33 @@ function VerticalFooter() {
         <span id="footer-pages">
           <Row className="footer-text">
             {" "}
-            <b>
-              <a href={window.location.href}>Generate &lt;</a>
-            </b>
+            {currentPage === "/" ? (
+              <b>
+                <a href={"/"}>Generate {"<"}</a>
+              </b>
+            ) : (
+              <a href={"/"}>Generate</a>
+            )}
           </Row>
           <Row className="footer-text">
             {" "}
-            <a href="/about">About </a>
+            {currentPage === "/about" ? (
+              <b>
+                <a href={"/about"}>About {"<"}</a>
+              </b>
+            ) : (
+              <a href={"/about"}>About</a>
+            )}
           </Row>
           <Row className="footer-text">
             {" "}
-            <a href="/culture">Culture</a>
+            {currentPage === "/culture" ? (
+              <b>
+                <a href={"/culture"}>Culture {"<"}</a>
+              </b>
+            ) : (
+              <a href={"/culture"}>Culture</a>
+            )}
           </Row>
           <Row className="footer-text">
             {" "}
@@ -55,7 +76,13 @@ function VerticalFooter() {
           </Row>
           <Row className="footer-text">
             {" "}
-            <a href="/apply">Apply</a>
+            {currentPage === "/apply" ? (
+              <b>
+                <a href={"/apply"}>Apply {"<"}</a>
+              </b>
+            ) : (
+              <a href={"/apply"}>Apply</a>
+            )}
           </Row>
           <Row className="footer-text">
             {" "}

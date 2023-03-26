@@ -8,21 +8,15 @@
   overflow-y: auto;
 }
 
-#mobile-page-container {
-    width: 100vw;
-  }
-
 .mobile {
-    display: none;
-    padding-left: 0px;
-  }
-
-@media only screen and (max-device-width: 650px) {
-    .vh-100 {
-      display: none;
-    }
-    .mobile {
-      display: flex;
-    }
+  display: none;
 }
 
+@media only screen and (max-device-width: 650px) {
+  .dsktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+}

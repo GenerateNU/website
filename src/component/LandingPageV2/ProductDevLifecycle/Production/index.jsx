@@ -1,13 +1,14 @@
 import React from "react";
-import DevelopmentWheel from "../ProductDevelopment/DevelopmentWheel.png"
+import DevelopmentWheel from "../ProductDevelopment/DeliveryWheel.svg"
 import './style.css';
 
 const Production = () => {
     return (
+          <>
           <div className="background-black">
             <div className = "alignItemsRight">
-            <div className = "DevelopmentWheel">
-              <img class="DevelopmentWheelImage" src ={DevelopmentWheel} />
+            <div className = "DevelopmentWheelThree">
+              <img className = "DevelopmentWheelImageThree" src ={DevelopmentWheel} />
             </div>
             <div className="ideation">
               <div className = "column">
@@ -17,6 +18,7 @@ const Production = () => {
             </div> 
            </div>
            </div>
+          </>
             
     );
 };

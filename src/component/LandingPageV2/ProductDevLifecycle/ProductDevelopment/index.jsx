@@ -9,7 +9,7 @@ const ProductDevelopment = () => {
         <div className="column">
           <div className="ourProcessText">our process </div>
           <div className="ProductDevText">Product Development Cycle </div>
-          <div className="paragraphText">
+          <div className="paragraphText mainDevCycleParagraph">
             Generate's product development cycle is a roadmap to guide any
             product's lifetime. We base our process on common industry practice,
             using an iterative process that includes research, prototyping and
