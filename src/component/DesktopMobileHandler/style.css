@@ -8,17 +8,12 @@
   overflow-y: auto;
 }
 
-#mobile-page-container {
-  width: 100vw;
-}
-
 .mobile {
   display: none;
-  padding-left: 0px;
 }
 
 @media only screen and (max-device-width: 650px) {
-  .vh-100 {
+  .dsktop {
     display: none;
   }
   .mobile {

@@ -16,6 +16,8 @@ a {
     height: 34.5vh;
     left: 20.95vh;
     top: 23.46vh;
+    margin-left: -2.5vh;
+    margin-bottom: -2vh;
     
     /* H1 */
     
@@ -32,11 +34,15 @@ a {
     
   }
 
+  .mainDevCycleParagraph {
+    margin-left: -2.5vh;
+  }
+
   .paragraphText {
     width: 75.28vh;
     height: 29.86vh;
     top: 71.14vh;
-    margin-top: 6.27vh;
+    margin-top: 5.27vh;
     /* B1 */
     font-family: 'Outfit 400';
     font-style: normal;
@@ -54,6 +60,7 @@ a {
     left: 18.78vh;
     top: 20.58vh;
     margin-top: 12.55vh;
+    margin-left: -2.5vh;
 
     font-family: 'Space Mono';
     font-style: normal;
