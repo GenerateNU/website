@@ -1,3 +1,11 @@
 .carousel {
   overflow: hidden;
 }
+
+.dotbutton {
+  display: inline-block;
+  width: 1vh;
+  height: 1vh;
+  border-radius: 50%;
+  border: none;
+}

@@ -2,55 +2,58 @@ import React, { useState, useCallback } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./Carousel.css";
 
-const Carousel = React.memo(({ children }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const Carousel = React.memo(
+  ({
+    children,
+    txtcolor,
+    currentButtonColor,
+    idleButtonColor,
+    perPage = 1,
+  }) => {
+    const [activeIndex, setActiveIndex] = useState(0);
 
-  const updateIndex = useCallback(
-    (newIndex) => {
-      if (newIndex < 0) {
-        newIndex = React.Children.count(children) - 1;
-      } else if (newIndex >= React.Children.count(children)) {
-        newIndex = 0;
-      }
+    const updateIndex = useCallback(
+      (newIndex) => {
+        if (newIndex < 0) {
+          newIndex = Math.ceil(children.length / perPage) - 1;
+        } else if (newIndex >= Math.ceil(children.length / perPage)) {
+          newIndex = 0;
+        }
 
-      setActiveIndex(newIndex);
-    },
-    [children]
-  );
+        setActiveIndex(newIndex);
+      },
+      [children, perPage]
+    );
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () => updateIndex(activeIndex + 1),
-    onSwipedRight: () => updateIndex(activeIndex - 1),
-  });
+    const handlers = useSwipeable({
+      onSwipedLeft: () => updateIndex(activeIndex + 1),
+      onSwipedRight: () => updateIndex(activeIndex - 1),
+    });
 
-  const renderIndicators = React.useMemo(
-    () =>
-      React.Children.map(children, (_, index) => (
-        <button
-          key={index}
-          className={`${index === activeIndex ? "active" : ""}`}
-          onClick={() => updateIndex(index)}
-        >
-          {index + 1}
-        </button>
-      )),
-    [children, activeIndex, updateIndex]
-  );
+    const renderChildren = React.useMemo(() => {
+      const startIndex = activeIndex * perPage;
+      const endIndex = startIndex + perPage;
+      return children.slice(startIndex, endIndex);
+    }, [children, activeIndex, perPage]);
 
-  return (
-    <div {...handlers} className="carousel">
-      <div style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
-        {React.Children.map(children, (child) =>
-          React.cloneElement(child, { width: "100%" })
-        )}
+    return (
+      <div {...handlers} className="carousel">
+        <div style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+          {renderChildren}
+        </div>
+        <div>
+          <button
+            className="dotbutton"
+            onClick={() => updateIndex(activeIndex - 1)}
+          />
+          <button
+            className="dotbutton"
+            onClick={() => updateIndex(activeIndex + 1)}
+          />
+        </div>
       </div>
-      <div>
-        <button onClick={() => updateIndex(activeIndex - 1)}>Prev</button>
-        {renderIndicators}
-        <button onClick={() => updateIndex(activeIndex + 1)}>Next</button>
-      </div>
-    </div>
-  );
-});
+    );
+  }
+);
 
 export default Carousel;
