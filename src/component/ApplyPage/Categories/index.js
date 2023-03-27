@@ -1,145 +1,181 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { findPositionsByCategory } from '../../../services/positionService';
-import { findAllCategories } from '../../../services/categoryService';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { findPositionsByCategory } from "../../../services/positionService";
+import { findAllCategories } from "../../../services/categoryService";
 
 export default function Categories() {
-    const [categories, setCategories] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState('');
-    const [communityEngagement, setCommunityEngagement] = useState([]);
-    const [contentCreation, setContentCreation] = useState([]);
-    const [dataScience, setDataScience] = useState([]);
-    const [design, setDesign] = useState([]);
-    const [engineering, setEngineering] = useState([]);
-    const [leadership, setLeadership] = useState([]);
-    const [operations, setOperations] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [management, setManagement] = useState([]);
+  const [clients, setClients] = useState([]);
+  const [software, setSoftware] = useState([]);
+  const [hardware, setHardware] = useState([]);
+  const [operations, setOperations] = useState([]);
+  const [engagement, setEngagement] = useState([]);
 
-    useEffect(() => {
-        const getCategories = async () => {
-            const data = await findAllCategories();
-            setCategories(data);
-        };
-        getCategories();
-    }, []);
+  useEffect(() => {
+    const getCategories = async () => {
+      const data = await findAllCategories();
+      setCategories(data);
+    };
+    getCategories();
+  }, []);
 
-    useEffect(() => {
-        const getPositions = async () => {
-            var data = await findPositionsByCategory('Community Engagement');
-            setCommunityEngagement(data);
-            data = await findPositionsByCategory('Content Creation');
-            setContentCreation(data);
-            data = await findPositionsByCategory('Data Science');
-            setDataScience(data);
-            data = await findPositionsByCategory('Design');
-            setDesign(data);
-            data = await findPositionsByCategory('Engineering');
-            setEngineering(data);
-            data = await findPositionsByCategory('Leadership');
-            setLeadership(data);
-            data = await findPositionsByCategory('Operations');
-            setOperations(data);
-        }
-        getPositions();
-    }, [selectedCategory]);
+  //Management, Client, Software, Hardware, Operations and Engagement
 
+  useEffect(() => {
+    const getPositions = async () => {
+      var data = await findPositionsByCategory("Management");
+      setManagement(data);
+      data = await findPositionsByCategory("Clients");
+      setClients(data);
+      data = await findPositionsByCategory("Software");
+      setSoftware(data);
+      data = await findPositionsByCategory("Hardware");
+      setHardware(data);
+      data = await findPositionsByCategory("Operations");
+      setOperations(data);
+      data = await findPositionsByCategory("Engagement");
+      setEngagement(data);
+    };
+    getPositions();
+  }, [selectedCategory]);
 
-    const handleSelection = (selectedCategory, id) => {
-        setSelectedCategory(selectedCategory);
-        const content = document.getElementById(id);
-        content.classList.toggle("toggle-container");
-    }
+  const handleSelection = (selectedCategory, id) => {
+    setSelectedCategory(selectedCategory);
+    const content = document.getElementById(id);
+    content.classList.toggle("toggle-container");
+  };
 
-    const sections = [
+  return (
+    categories.length > 0 && (
+      <div>
         {
-            name: 'Community Engagement',
-            id: 13,
-            positions: communityEngagement
-        },
-        {
-            name: 'Content Creation',
-            id: 12,
-            positions: contentCreation
-        },
-        {
-            name: 'Data Science',
-            id: 14,
-            positions: dataScience
-        },
-        {
-            name: 'Design',
-            id: 7,
-            positions: design
-        },
-        {
-            name: 'Engineering',
-            id: 11,
-            positions: engineering
-        },
-        {
-            name: 'Leadership',
-            id: 15,
-            positions: leadership
-        },
-        {
-            name: 'Operations',
-            id: 16,
-            positions: operations
-        }
-    ]
-
-    return (
-      categories.length > 0 && (
-        <div>
-            <div className="accordion">
-                {
-                    sections.map((section) => {
-                        return (
-                          <>
-                            <div
-                              className="toggle-btn"
-                              onClick={() =>
-                                handleSelection(section.name, section.id)
-                              }
-                              id="toggle"
-                              name="toggle"
-                            >
-                              {section.name}
-                            </div>
-                            <div id={section.id} className="accordion-content">
-                              {section.positions.length === 0 ? (
-                                <div className="accordion_link">
-                                  <p>
-                                    No live positions now, check back later!
-                                  </p>
-                                  <p>
-                                    Check out this position from last semester!
-                                  </p>
-                                </div>
-                              ) : (
-                                section.positions.map((positions) => (
-                                  <div
-                                    className="accordion_link"
-                                    key={positions.id}
-                                  >
-                                    <Link
-                                      style={{
-                                        textDecoration: "none",
-                                        color: "#187DFF",
-                                      }}
-                                      to={`/positions/${positions.id}`}
-                                    >
-                                      {positions.attributes.positionTitle}
-                                    </Link>
-                                  </div>
-                                ))
-                              )}
-                            </div>
-                          </>
-                        );
-                    })
-                }
+          <div className="accordion">
+            <div
+              className="toggle-btn"
+              onClick={() => handleSelection("Management", 13)}
+              id="toggle"
+              name="toggle"
+            >
+              {"Management"}
             </div>
-        </div>
-      )
-    );
+            <div id={13} className="accordion-content">
+              {management.map((managementPositions) => (
+                <div className="accordion_link" key={managementPositions.id}>
+                  <Link
+                    style={{ textDecoration: "none", color: "#187DFF" }}
+                    to={`/positions/${managementPositions.id}`}
+                  >
+                    {managementPositions.attributes.positionTitle}
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div
+              className="toggle-btn"
+              onClick={() => handleSelection("Clients", 12)}
+              id="toggle"
+              name="toggle"
+            >
+              {"Clients"}
+            </div>
+            <div id={12} className="accordion-content">
+              {clients.map((clientsPositions) => (
+                <div className="accordion_link" key={clientsPositions.id}>
+                  <Link
+                    style={{ textDecoration: "none", color: "#187DFF" }}
+                    to={`/positions/${clientsPositions.id}`}
+                  >
+                    {clientsPositions.attributes.positionTitle}
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div
+              className="toggle-btn"
+              onClick={() => handleSelection("Software", 14)}
+              id="toggle"
+              name="toggle"
+            >
+              {"Software"}
+            </div>
+            <div id={14} className="accordion-content">
+              {software.map((softwarePositions) => (
+                <div className="accordion_link" key={softwarePositions.id}>
+                  <Link
+                    style={{ textDecoration: "none", color: "#187DFF" }}
+                    to={`/positions/${softwarePositions.id}`}
+                  >
+                    {softwarePositions.attributes.positionTitle}
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div
+              className="toggle-btn"
+              onClick={() => handleSelection("Hardware", 7)}
+              id="toggle"
+              name="toggle"
+            >
+              {"Hardware"}
+            </div>
+            <div id={7} className="accordion-content">
+              {hardware.map((hardwarePositions) => (
+                <div className="accordion_link" key={hardwarePositions.id}>
+                  <Link
+                    style={{ textDecoration: "none", color: "#187DFF" }}
+                    to={`/positions/${hardwarePositions.id}`}
+                  >
+                    {hardwarePositions.attributes.positionTitle}
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div
+              className="toggle-btn"
+              onClick={() => handleSelection("Operations", 11)}
+              id="toggle"
+              name="toggle"
+            >
+              {"Operations"}
+            </div>
+            <div id={11} className="accordion-content">
+              {operations.map((operationsPositions) => (
+                <div className="accordion_link" key={operationsPositions.id}>
+                  <Link
+                    style={{ textDecoration: "none", color: "#187DFF" }}
+                    to={`/positions/${operationsPositions.id}`}
+                  >
+                    {operationsPositions.attributes.positionTitle}
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div
+              className="toggle-btn"
+              onClick={() => handleSelection("Engagement", 15)}
+              id="toggle"
+              name="toggle"
+            >
+              {"Engagement"}
+            </div>
+            <div id={15} className="accordion-content">
+              {engagement.map((engagementPositions) => (
+                <div className="accordion_link" key={engagementPositions.id}>
+                  <Link
+                    style={{ textDecoration: "none", color: "#187DFF" }}
+                    to={`/positions/${engagementPositions.id}`}
+                  >
+                    {engagementPositions.attributes.positionTitle}
+                  </Link>
+                </div>
+              ))}
+            </div>
+            -
+          </div>
+        }
+      </div>
+    )
+  );
 }

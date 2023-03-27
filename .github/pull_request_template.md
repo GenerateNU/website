@@ -1,18 +1,16 @@
 
  # What was the ticket?
- WT-42 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-42
+ WT-42 - I worked on setting the proper categories and positions on the apply page.
  
  # What did I do?
  
-I changed some of the HTML/CSS properties of FP1 that included the Earnz Project.
+I changed the names of the useState objects and the JSX return to the proper categories. Axios I assume automatically calls the positions and sets them in the JSX based on the name.
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
  Key Parts
- - I checked the behavior of the page at various mobile settings (iPhone SE, iPhone 12 Pro, iPhone XR, Pixel 5, Samsung Galaxy 8+, Samsung Galaxy S20 Ultra)
- - Made sure text remained clearly visible and as close as possible to the mobile UI.
+
  
  Required checks:
  
