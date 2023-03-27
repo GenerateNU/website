@@ -7,7 +7,7 @@ export default function Categories() {
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('');
     const [management, setManagement] = useState([]);
-    const [client, setClient] = useState([]);
+    const [clients, setClients] = useState([]);
     const [software, setSoftware] = useState([]);
     const [hardware, setHardware] = useState([]);
     const [operations, setOperations] = useState([]);
@@ -27,8 +27,8 @@ export default function Categories() {
         const getPositions = async () => {
             var data = await findPositionsByCategory('Management');
             setManagement(data);
-            data = await findPositionsByCategory('Client');
-            setClient(data);
+            data = await findPositionsByCategory('Clients');
+            setClients(data);
             data = await findPositionsByCategory('Software');
             setSoftware(data);
             data = await findPositionsByCategory('Hardware');
@@ -72,17 +72,17 @@ export default function Categories() {
                     </div>
 
 
-                    <div className="toggle-btn" onClick={() => handleSelection('Client', 12)}
+                    <div className="toggle-btn" onClick={() => handleSelection('Clients', 12)}
                         id="toggle" name="toggle">
-                        {'Client'}
+                        {'Clients'}
                     </div>
                     <div id={12} className="accordion-content">
                         {
-                            client.map(clientPositions =>
+                            clients.map(clientsPositions =>
                                 <div className='accordion_link'
-                                    key={clientPositions.id}>
-                                    <Link style={{ textDecoration: 'none', color: '#187DFF' }} to={`/positions/${clientPositions.id}`}>
-                                        {clientPositions.attributes.positionTitle}
+                                    key={clientsPositions.id}>
+                                    <Link style={{ textDecoration: 'none', color: '#187DFF' }} to={`/positions/${clientsPositions.id}`}>
+                                        {clientsPositions.attributes.positionTitle}
                                     </Link>
                                 </div>
                             )
@@ -157,7 +157,7 @@ export default function Categories() {
                                 </div>
                             )
                         }
-                    </div>
+                    </div>-
                 </div>
             }
         </div>
