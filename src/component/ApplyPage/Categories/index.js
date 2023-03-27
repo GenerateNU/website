@@ -98,8 +98,7 @@ export default function Categories() {
                   <div id={section.id} className="accordion-content">
                     {section.positions.length === 0 ? (
                       <div className="accordion_link">
-                        <p>No live positions now, check back later!</p>
-                        <p>Check out this position from last semester!</p>
+                        <p>No live positions right now, check back later!</p>
                       </div>
                     ) : (
                       section.positions.map((positions) => (
