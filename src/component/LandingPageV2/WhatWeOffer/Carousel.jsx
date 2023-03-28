@@ -3,13 +3,7 @@ import { useSwipeable } from "react-swipeable";
 import "./Carousel.css";
 
 const Carousel = React.memo(
-  ({
-    children,
-    txtcolor,
-    currentButtonColor,
-    idleButtonColor,
-    perPage = 1,
-  }) => {
+  ({ children, currentButtonColor, idleButtonColor, perPage = 1 }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const updateIndex = useCallback(
