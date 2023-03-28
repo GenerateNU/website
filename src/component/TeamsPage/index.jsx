@@ -7,27 +7,34 @@ import Row from "react-bootstrap/esm/Row";
 import NavBar from "../NavBar"
 import Footer from "../VerticalFooter"
 import NextPage from "../NextPage"
-
+import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class TeamsPage extends React.Component {
   render() {
-    return (
-    <div
-    class="vh-100 horizontal-scroll bg-white container-fluid"
-    tab-index="0">
+    const children = [
+      <div
+        class="vh-100 bg-white container-fluid"
+        tab-index="0">
         <Row className="flex-nowrap">
           <div className="teams-navbar">
-            <NavBar/>
+            <NavBar />
           </div>
           {
-                    teamsDataV2.map(team => {
-                       return <TeamCard {...team}/> 
-                    })
-                  }
-            <Footer />
-            <NextPage pageName="People" url="/about"/>
+            teamsDataV2.map(team => {
+              return <TeamCard {...{ color: team.color, name: team.name, image: team.largePic }} />
+            })
+          }
+          <Footer />
+          <NextPage pageName="People" url="/about" />
         </Row>
       </div>
+    ]
+    return (
+      <DesktopMobileScrollAndBackgroundHandler
+        children={children}
+        desktopBGColor={"white"}
+        mobileBGColor={"black"}
+      />
     );
   }
 };

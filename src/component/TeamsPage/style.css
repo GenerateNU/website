@@ -11,7 +11,8 @@
 }
 
 .card-img {
-    width: 40vh;
+    margin-top: 20vh;
+    width: 30vh;
     height: auto;
 }
 
@@ -23,7 +24,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 60vh;
+    margin-top: 10vh;
 }
 
 .title-text {
