@@ -71,4 +71,19 @@
         font-size: 5vh;
         line-height: 11.22vh;
     }
+    
+    .bluerectangle {
+        height: 20vh;
+    }
+
+    .purplerectangle {
+        height: 60vh;
+    }
+
+    .whoweareparagraph {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: 3vh;
+    }
 }
