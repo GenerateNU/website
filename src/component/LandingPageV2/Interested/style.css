@@ -109,6 +109,125 @@ a {
   width: 4vh;
 }
 
+@media only screen and (min-aspect-ratio: 6/10) {
+  .interestedcontainer {
+    width: 65vh;
+    background-size: 80%;
+    background-position: 100% 30%;
+  }
+  
+  .questionMarkContainer {
+    width: 45vh;
+    margin-top: -11vh;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .background-white {
+    background-color: white;
+  }
+  
+  
+  .interestedflexbox {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .interestedText {
+    margin-left: 6%;
+    margin-top: 30vh;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-size: min(9vh, 15vw);
+    text-transform: uppercase;
+    color: black;
+  }
+  
+  .applyNowBox {
+    display: inline-block;
+    width: 34vh;
+    height: 10vh;
+    margin-left: 2vh;
+    margin-top: 20vh;
+    background: #187DFF;
+    border: 1px solid #111111;
+  }
+  
+  .blackRectangle {
+    display: inline-block;
+    width: 30vh;
+    height: 10vh;
+    background: black;
+    margin-left: 10vh;
+  }
+  
+  .sentenceText {
+    margin-left: -5vh;
+    margin-top: -10vh;
+    width: 40vh;
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3vh;
+    color: black;
+    padding-left: 10%;
+  }
+  
+  .cooltriangle {
+    margin-left: -5vh;
+    margin-top: 15vh;
+  }
+  
+  .leftcarrot {
+    margin-left: -15vh;
+    margin-top: 70.5vh;
+  }
+  
+  
+  .interestedJoinNowBox {
+    width: 34vh;
+    height: 10vh;
+    margin-left: 10%;
+    margin-top: 20%;
+    padding-top: 4%;
+    background: #187DFF;
+    border: 1px solid #111111;
+    box-shadow: 15px 30px;
+  }
+  
+  .joinCommunitytext {
+    width: 20vh;
+    height: 4.5vh;
+    margin-left: 21%;
+    font-family: 'Space Mono 400';
+    font-style: normal;
+    /* font-weight: 400; */
+    
+    font-size: 4vh;
+    line-height: 6vh;
+  
+    /* White */
+  
+    color: #FFFFFF;
+  }
+  
+  .questionMark {
+    width: 10vh;
+    height: 10vh;
+    margin-top: -20vh;
+    margin-left: -20vh;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-size: 90vh;
+    text-transform: uppercase;
+    /* 24, 125, 255 is #187DFF blue in RGB instead of hex */
+    color: rgba(24, 125, 255, 0.2);
+  }
+}
+
 @media only screen and (max-device-width: 650px) {
   .interestedcontainer {
     width: 100%;
