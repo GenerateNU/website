@@ -2,7 +2,6 @@
   width: 25vmin;
   padding: 4vmin;
   object-fit: contain;
-  margin-left: -0.5vh
 }
 
 .image {
@@ -17,21 +16,8 @@
 
 .prev-proj-wrapper {
   background-color: #111111;
-  display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.wrapper {
-  display: flex;
-  /*height: 65%;*/
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  /*margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 7%;*/
-  column-gap: 20vw;
 }
 
 .col-1 {
@@ -39,8 +25,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
-
+  margin-top: 7vh;
 }
 
 .col-2 {
@@ -48,7 +33,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
+  margin-top: 7vh;
 }
 
 .col-3 {
@@ -56,7 +41,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
+  margin-left: 10vh;
+  margin-top: 7vh;
 }
 
 @media only screen and (min-aspect-ratio: 6/10) {
@@ -79,7 +65,7 @@
   
   .prev-proj-wrapper {
     background-color: #111111;
-    display: flex;
+    display: inline;
     flex-direction: row;
     width: 60vh;
   }
@@ -103,7 +89,7 @@
     align-items: center;
     width: 25%;
     height: 86vh;
-  
+    margin: vw;
   }
   
   .col-2 {
@@ -143,6 +129,8 @@
   .prev-proj-wrapper .col-3 {
     align-items: center;
     width: unset;
+    margin-left: 0vh;
+    margin-top: 0vh;
   }
 
   .prev-proj-wrapper .logo img {
