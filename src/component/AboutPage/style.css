@@ -75,10 +75,72 @@ p {
     margin-top: -1rem;
 }
 
+.about-page .interestedJoinNowBox {
+    background: #6FCF97;
+}
 
+.about-page .interestedcontainer {
+    background: url("../../assets/images/aboutpage/interestedbg.svg") center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 80% 20%;
+}
 
 @media only screen and (max-device-width: 650px) {
     .mobile {
         padding-left: 0% !important;
+    }
+
+    .growthMantraContainer {
+        width: 100%;
+        padding-bottom: 10%;
+    }
+
+    .mantra {
+        padding: 0;
+        padding-top: 10%;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Growth-text, .IsOurText, .MantraText {
+        width: unset;
+        text-align: center;
+        height: auto;
+        margin-top: 0;
+        line-height: 100%;
+    }
+
+    .Growth-text {
+        font-size: 24.5vw;
+    }
+
+    .IsOurText {
+        font-size: 12vw;
+    }
+
+    .MantraText {
+        font-size: 20.5vw;
+    }
+
+    .paragraphTextGrowthMantra, .paragraphTextGrowthMantraTwo {
+        font-size: 4.5vw;
+        line-height: 4vh;
+        width: unset;
+        height: unset;
+        margin: 0 auto;
+        padding-top: 10%;
+        width: 95%;
+    }
+
+    .about-page .interestedText {
+        margin-top: 20%;
+    }
+
+    .about-page .interestedcontainer {
+        background-size: 65%; 
+        background-position: 80% 10%;
     }
 }

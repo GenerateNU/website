@@ -1,0 +1,44 @@
+.PH {
+    font-size: 400px;
+}
+
+.card-container-flex {
+    height: 100vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img {
+    margin-top: 20vh;
+    width: 30vh;
+    height: auto;
+}
+
+.title-bkgnd {
+    background-color: black;
+    width: 50vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.title-text {
+    font-family: 'Space Mono 700';
+    font-weight: 700;
+    font-size: 7.5vh;
+    line-height: 5vh;
+    text-transform: uppercase;
+}
+
+.teams-navbar {
+  position: fixed;
+  z-index: 2;
+  margin-left: 3%;
+  padding-top: 2%;
+  width: 42vh;
+}

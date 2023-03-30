@@ -1,16 +1,17 @@
 .nextPage {
     background: #FFBF3C;
-    width: calc(18vw + 2vh);
+    width: 21.5vh;
     position: relative;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 3% 4%;
 }
 
 .nextPage a {
-    width: 100%;
+    width: 12vh;
     height: 100%;
 }
 
@@ -23,10 +24,8 @@
     align-items: center;
     padding: 20%;
     box-sizing: border-box;
-    width: calc(100% - 2vh);
     height: 100%;
     flex-direction: column;
-    margin-left: 2vh;
     box-shadow: -1vh 1vh 0 0 #ffbf3c, -1vh 1vh 0 2px black;
 }
 
@@ -61,5 +60,11 @@
         width: 100vw;
         height: unset;
         padding: 10% 5%;
+    }
+
+    .nextPage a {
+        margin-left: 0.5vh;
+        width: 90vw;
+        height: 100%;
     }
 }

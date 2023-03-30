@@ -1,5 +1,5 @@
 export const constants = {
-   // Management
+   //Management
    // "Position_Executive_Director": "https://forms.gle/SFo5x49Xz8hcFDZj6",
    "Position_Hardware_Director": "https://forms.gle/2A6tV8Xe2bp8q1TNA",
    "Position_Software_Director": "https://forms.gle/tegB5SWsEkqe5YW17",
@@ -34,4 +34,7 @@ export const constants = {
    // SW + HW
    "Position_Hardware_Client": "https://docs.google.com/forms/d/e/1FAIpQLSc7TVI0FmZG6DujNi2GLEUeyGBQYlhAGtFUyf5AXzLIB0mF9Q/viewform?usp=sf_link",
    "Position_Software_Client": "https://docs.google.com/forms/d/e/1FAIpQLSfWrQlG1ewhGAtKYrVyLVmTQ4KPdm99j9lwm049UywL-yhL9w/viewform?usp=sf_link"
+
 };
+
+export default constants;
