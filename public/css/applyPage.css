@@ -144,8 +144,8 @@
 
 .accordion .accordion-content {
   display: none;
-  width: 1440px;
-  background-color: white;
+  /*width: 1440px;
+  background-color: white;*/
   overflow: auto;
   white-space: nowrap;
   padding: 4%;

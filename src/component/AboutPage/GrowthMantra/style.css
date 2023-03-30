@@ -1,15 +1,17 @@
 a {
     text-decoration: none;
     color: #ffffff;
-  }
-  .background-white {
-    background-color: white;
-  }
-
-.growthMantraContainer{
-  width: 130%;
 }
-  .Growth-text {
+
+.background-white {
+    background-color: white;
+}
+
+.growthMantraContainer {
+    width: 130%;
+}
+
+.Growth-text {
     width: 1103px;
     height: 444px;
     left: 110px;
@@ -26,9 +28,9 @@ a {
     /* OPRATN Green */
 
     color: #6FCF97;
-  }
+}
 
-  .IsOurText {
+.IsOurText {
     width: 338px;
     height: 92px;
     left: 124px;
@@ -43,9 +45,9 @@ a {
     font-size: 70px;
     text-transform: uppercase;
 
-  }
+}
 
-  .MantraText {
+.MantraText {
     width: 735px;
     height: 296px;
     left: 126px;
@@ -62,14 +64,14 @@ a {
     /* Black */
 
     color: #111111;
-  }
+}
 
-  .paragraphTextGrowthMantra {
-    width: 300px;
+.paragraphTextGrowthMantra {
+    width: 320px;
     height: 238px;
     /* margin-left: 10px; */
     top: 567px;
-    margin-top: -60px;
+    margin-top: -127px;
     /* B1 */
 
     font-family: 'Outfit 300';
@@ -83,13 +85,14 @@ a {
     /* Black */
 
     color: black;
-  }
-  .paragraphTextGrowthMantraTwo {
-    width: 300px;
+}
+
+.paragraphTextGrowthMantraTwo {
+    width: 320px;
     height: 238px;
-    margin-left: 60px;
+    margin-left: 50px;
     top: 567px;
-    margin-top: -60px;
+    margin-top: -127px;
     /* B1 */
 
     font-family: 'Outfit 300';
@@ -103,13 +106,13 @@ a {
     /* Black */
 
     color: black;
-  }
+}
 
-  .carrot{
+.carrot {
     margin-left: 20px;
-  }
+}
 
-  .paragraphTextTwo {
+.paragraphTextTwo {
     width: 415px;
     height: 400px;
     margin-left: 30px;
@@ -119,39 +122,39 @@ a {
     margin-right: -50px;
     /* B1 */
 
-    font-family: 'Outfit 300';    
+    font-family: 'Outfit 300';
     font-style: normal;
     /* font-weight: 300; */
     font-size: 18px;
     line-height: 34px;
     /* or 142% */
     color: #111111;
-  }
+}
 
-  .growthMantrainterestedText {
+.growthMantrainterestedText {
     font-family: 'Space Mono 700';
     font-style: normal;
     font-size: 5rem;
     text-transform: uppercase;
     color: black;
     margin-top: 12%;
-  }
+}
 
-  .mantra{
+.mantra {
     display: flex;
     flex-direction: column;
     width: 60%;
-  }
+}
 
-  .alignItemsRight {
+.alignItemsRight {
     display: flex;
     flex-direction: row;
     padding-left: 5%;
     padding-right: 5%;
     color: #000000;
-  }
+}
 
-  .applyNowBoxGrowthMantra {
+.applyNowBoxGrowthMantra {
     display: inline-block;
     width: 200px;
     height: 50px;
@@ -161,18 +164,18 @@ a {
     background: #6FCF97;
     /* Black */
     border: 1px solid #111111;
-  }
+}
 
-  .blackRectangle {
+.blackRectangle {
     display: inline-block;
     width: 200px;
     height: 50px;
     margin-left: -300px;
     background: black;
     border: 1px solid #111111;
-  }
+}
 
-  .applyNowText {
+.applyNowText {
     width: 134.68px;
     height: 36.4px;
     margin-left: 25px;
@@ -186,9 +189,9 @@ a {
     /* White */
 
     color: #FFFFFF;
-  }
+}
 
-  .paragraphTextThree {
+.paragraphTextThree {
     width: 350px;
     height: 238px;
     margin-left: 20px;
@@ -207,17 +210,17 @@ a {
     margin-left: 20px;
     /* top: 567px; */
     padding-top: 2%;
-  }
+}
 
-  .cooltriangle {
+.cooltriangle {
     margin-left: -40px;
     margin-top: 120px;
-  }
+}
 
-  .leftcarrot {
+.leftcarrot {
     margin-left: 100px;
     margin-right: -100px;
-  }
+}
   
 
   
