@@ -29,7 +29,7 @@ export default function History() {
     );
 
     return (
-        <Row className='vh-100 vw-100'>
+        <Row className='vh-100 vw-100 parent-orgs-and-history'>
             <Col className='bg-black text-white left-text-style h-100 p-5'>
                 <Row className='vh-40 text-right mt-5 pb-5'>
                     <h3 className='text-uppercase parent-orgs-style'>

@@ -72,3 +72,10 @@
     border-color: black;
     border-width: 10px;
 }
+
+@media only screen and (max-device-width: 650px) {
+    .parent-orgs-and-history {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
