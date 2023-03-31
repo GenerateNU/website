@@ -78,13 +78,7 @@ a {
       margin-top: 0%;
     }
 
-    .column {
-      justify-content: center;
-    }
-  
-    .alignItemsRight {
-      padding-left: 0;
-    }
+   
 
     .DevelopmentWheelThree {
       size: 30.11vh;
@@ -105,3 +99,5 @@ a {
       font-size: 15vw;
     }
   }
+
+  

@@ -88,7 +88,33 @@ a {
     margin-top: 4%;
   }
   
+  @media only screen and (max-device-width: 650px) {
+    .column {
+    }
 
+    .background-black {
+      width: 100vw;
+    }
+  
+    .alignItemsRight {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  
+    .ProductDevText {
+      font-family: "Space Mono 700";
+      font-size: 12vw;
+      line-height: 7vh;
+      height: 43vw;
+    }
+  
+    .paragraphText {
+      width: 90vw;
+    }
+     
+  }
+
+  
   
 
   
