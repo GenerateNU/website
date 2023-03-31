@@ -1,5 +1,6 @@
 .featured-projects {
     width: 100vw;
+    display: flex;
 }
 
 .projects-title {
@@ -24,7 +25,7 @@
 }
 
 .featured-project-buttons {
-    margin-left: 4%;
+    margin-top: 15%;
 }
 
 .projects-button {
@@ -36,5 +37,42 @@
 }
 
 .projects-up {
-    margin-right: 40px
+    margin-right: 40px;
+}
+
+.project {
+    display: flex;
+}
+
+.project img {
+    width: 50%;
+}
+
+.project-text h1 {
+    font-family: 'Space Mono 700';
+}
+
+.project-team {
+    font-family: 'Space Mono';
+    font-size: 3vh;
+    color: #000;
+    text-align: left;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.project-text p {
+    max-width: 250px;
+    font-size: 1.3vw;
+}
+
+.view-project-button {
+    color: black;
+    background-color: white;
+    border: 1px solid #111111;
+    box-shadow: -.5rem .6rem;
+    font-family: 'Space Mono';
+    font-size: 3vh;
+    padding: 2% 20%;
+    margin-top: 45%;
 }
