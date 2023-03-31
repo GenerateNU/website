@@ -1,8 +1,4 @@
 // Directors' profile pictures
-import KathrynMinor from "../assets/images/landingpage/directorscarousel/KathrynMinor.jpg";
-import AvitalBrodski from "../assets/images/landingpage/directorscarousel/AvitalBrodski.jpg";
-import AndrewCataldo from "../assets/images/landingpage/directorscarousel/AndrewCataldo.jpg";
-import ThomasKeith from "../assets/images/landingpage/directorscarousel/ThomasKeith.jpg";
 import Ben from "../assets/images/aboutpage/Ben.jpeg";
 import Josh from "../assets/images/aboutpage/Josh.jpg";
 import Kyle from "../assets/images/aboutpage/Kyle.png";
@@ -11,13 +7,11 @@ import Victoria from "../assets/images/aboutpage/Victoria.JPG";
 
 // Team icons
 import ManagementActiveIcon from "../assets/icons/teams/colored/Management.png";
-import OutreachActiveIcon from "../assets/icons/teams/colored/Outreach.png";
 import OperationsActiveIcon from "../assets/icons/teams/colored/Operations.png";
 import SoftwareActiveIcon from "../assets/icons/teams/colored/Software.png";
 import HardwareActiveIcon from "../assets/icons/teams/colored/Hardware.png";
 import CommunityActiveIcon from "../assets/icons/teams/colored/Community.png";
 import ManagementInactiveIcon from "../assets/icons/teams/gray/Management.png";
-import OutreachInactiveIcon from "../assets/icons/teams/gray/Outreach.png";
 import OperationsInactiveIcon from "../assets/icons/teams/gray/Operations.png";
 import SoftwareInactiveIcon from "../assets/icons/teams/gray/Software.png";
 import HardwareInactiveIcon from "../assets/icons/teams/gray/Hardware.png";
