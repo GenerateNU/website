@@ -18,3 +18,23 @@
     margin-left: 4%;
     width: 40%;
 }
+
+.projects-down img {
+    transform: rotate(180deg);
+}
+
+.featured-project-buttons {
+    margin-left: 4%;
+}
+
+.projects-button {
+    background: #FFFFFF;
+    border: 1px solid #111111;
+    width: 90px;
+    height: 90px;
+    box-shadow: -.5rem .6rem;
+}
+
+.projects-up {
+    margin-right: 40px
+}
