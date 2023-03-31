@@ -1,0 +1,20 @@
+.featured-projects {
+    width: 100vw;
+}
+
+.projects-title {
+    color: #187DFF;
+    font-weight: 700;
+}
+
+.projects-text {
+    color: #000;
+    font-size: 2.5vh;
+    margin-top: 5%;
+    max-width: 400px;
+}
+
+.featured-projects-text {
+    margin-left: 4%;
+    width: 40%;
+}
