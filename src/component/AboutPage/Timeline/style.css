@@ -396,3 +396,65 @@
 /* .timeline-img {
   width: auto !important;
 } */
+
+.timeline-bg-image {
+  display: block;
+}
+
+.timeline-text {
+  display: none;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .timeline-bg-image {
+    display: none;
+  }
+
+  .timeline-text {
+    display: block;
+    width: 100vw;
+  }
+
+  .semester-text {
+    text-transform: uppercase;
+    text-align: center;
+    white-space: pre-line;
+    padding-top: 20%;
+  }
+
+  .timeline-container {
+    height: unset!important;
+  }
+
+  .semester-list {
+    font-size: 1.5vh;
+    padding-left: 4rem;
+  }
+
+  .semester-bullet {
+    position: relative;
+    right: -30px;
+  }
+
+  .semester-list li {
+    padding-top: 8%;
+  }
+
+  .semester-bullet p {
+    font-size: 1.75vh;
+    width: 90%;
+    text-transform: none;
+  }
+
+  .timeline-heading {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: unset;
+    transform: rotate(90deg);
+    width: 100%;
+    height: min-content;
+    font-size: 6.2vh;
+    margin-bottom: -10%;
+  }
+}
