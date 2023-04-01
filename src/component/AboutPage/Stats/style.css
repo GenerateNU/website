@@ -43,6 +43,7 @@
   .today-stats-container {
     flex-direction: column;
     height: unset!important;
+    margin-top: -1px;
   }
 
   .today-container {
@@ -81,5 +82,6 @@
   .stat-number {
     font-family: 'Outfit 400';
     font-weight: bolder;
+    font-size: 8vh;
   }
 }

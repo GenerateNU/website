@@ -424,6 +424,7 @@
 
   .timeline-container {
     height: unset!important;
+    margin-top: -1px;
   }
 
   .semester-list {
