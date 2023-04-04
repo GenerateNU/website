@@ -34,7 +34,7 @@ const WhatWeOffer = () => {
           <div className="text-center">
             <div className="position-relative vh-30">
               <div
-                className="position-absolute bottom-0 text-black w-100 text-uppercase what-we-offer-style"
+                className="position-absolute bottom-0 p-1 text-black w-100 text-uppercase what-we-offer-style"
                 // onMouseEnter={() => setHighlightSoftware(true)}
                 // onMouseLeave={() => setHighlightSoftware(false)}
               >

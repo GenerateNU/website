@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import { findPositionsByCategory } from "../../../services/positionService";
 import { findAllCategories } from "../../../services/categoryService";
 
-export default function Categories() {
-  const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [management, setManagement] = useState([]);
-  const [clients, setClients] = useState([]);
-  const [software, setSoftware] = useState([]);
-  const [hardware, setHardware] = useState([]);
-  const [operations, setOperations] = useState([]);
-  const [engagement, setEngagement] = useState([]);
+export default function Categories(props) {
+    
+    const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState('');
+    const [management, setManagement] = useState([]);
+    const [clients, setClients] = useState([]);
+    const [software, setSoftware] = useState([]);
+    const [hardware, setHardware] = useState([]);
+    const [operations, setOperations] = useState([]);
+    const [engagement, setEngagement] = useState([]);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -44,6 +45,7 @@ export default function Categories() {
   const handleSelection = (selectedCategory, id) => {
     setSelectedCategory(selectedCategory);
     const content = document.getElementById(id);
+    console.log(content);
     content.classList.toggle("toggle-container");
   };
 
@@ -77,8 +79,9 @@ export default function Categories() {
         name: "Engagement",
         id: 15,
         positions: engagement
-    }
+        }
   ]
+    
 
   return (
     categories.length > 0 && (
@@ -89,13 +92,18 @@ export default function Categories() {
                 <>
                   <div
                     className="toggle-btn"
-                    onClick={() => handleSelection(section.name, section.id)}
+                    onClick={() =>
+                      handleSelection(section.name, props.disp + section.id)
+                    }
                     id="toggle"
                     name="toggle"
                   >
                     {section.name}
                   </div>
-                  <div id={section.id} className="accordion-content">
+                  <div
+                    id={props.disp + section.id}
+                    className="accordion-content"
+                  >
                     {section.positions.length === 0 ? (
                       <div className="accordion_link">
                         <p>No live positions right now, check back later!</p>

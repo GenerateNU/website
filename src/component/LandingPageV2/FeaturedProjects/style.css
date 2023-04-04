@@ -10,42 +10,48 @@ h2 {
 
 .projects-container {
   padding: 2vh;
+  width: 60vh;
+  font-family: "Space Mono 700";
+  font-style: normal;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 10vh;
+  line-height: 12vh;
+  color: white;
+  text-align: center;
 }
 
 .blurb-container {
-  width: 54vh;;
+  width: 53vh;;
   text-align: left;
   padding: 2vh;
-}
-
-p {
+  font-family: 'Outfit 300';;
   font-style: normal;
-  font-weight: 300;
-  font-size: 2vh;
-  line-height: 3.75vh;
+  font-size: 2.5vh;
+  line-height: 3.5vh;
   color: black;
 }
 
 .featured_projects_container {
   background-color: #6fcf97;
-  width: 70vh;
+  width: 85vh;
   height: 100vh;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 @media only screen and (max-device-width: 650px) {
   .mobile {
     display: flex;
   }
-  .projects-container h2 {
+  .projects-container {
     font-size: 8em;
-    text-align: start;
+    text-align: center;
     padding: 4.2vw;
   }
-  .blurb-container p {
+  .blurb-container {
     text-align: left;
     padding: 3.5vw;
     font-size: 4.5vw;
@@ -54,6 +60,9 @@ p {
   .featured_projects_container {
     padding-top: 8em;
     width: 100vw;
-    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
