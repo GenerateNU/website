@@ -13,7 +13,7 @@ export default function Stats() {
   ];
 
   return (
-    <div className="position-relative vh-100 vw-75 bg-white d-flex today-stats-container">
+    <div className="position-relative vh-100 vw-75 bg-white d-flex">
       <div className="today-container">
         <h1>TODAY</h1>
       </div>
