@@ -1,15 +1,20 @@
 # What was the ticket?
 
-No specific ticket; building off of WT-78
+WT-65 UI Design: Construct JSX page to match the UI of Teams landing page.
+ [Link to Ticket](https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-65)
+
 # What did I do?
 
-Added a fixed-position div around the NavBar, and an extra spacing div at the top of the mission section
+Created new Teams page with route at /teams, based off the figma design for it. Currently waiting for images to populate
+the rest of the page, and works to be completed on the figma for an expanded view of each of the teams
+
 # How did I test it?
 
 Describe in detail steps you used to test the changes you have made.
 Key Parts
 
-I used the mobile inspect to check proper displaying on multiple phone resolutions.
+Compared the figma and current page to ensure it correctly reflected what the design should be. Ran tests for resizing the window to ensure page
+did not ahve any scaling issues.
 
  Required checks:
 
@@ -21,9 +26,11 @@ I used the mobile inspect to check proper displaying on multiple phone resolutio
 Describe aspects of the PR that may become problems in the future.
 Key Questions
 
-There are other changes to the NavBar on other branches such as window-resizing; this may affect the width and positioning of the navbar on the About page.
+Currently the page doesn't go anywhere, it is mainly jsut a simple gray space to build onto morechanges as figma designs are updated
 
 # Additional comments for the reviewers
 
 [!image](./public/images/PRImages/Screenshot%202023-03-20%20at%208.15.02%20PM.png)
 
+![image](./public/images/PRImages/Screenshot%202023-03-20%20204229.png)
+![image](./public/images/PRImages/Screenshot%202023-03-20%20204258.png)

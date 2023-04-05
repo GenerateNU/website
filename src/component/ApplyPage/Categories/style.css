@@ -1,0 +1,11 @@
+.toggle-container, .accordion-content {
+    display: inline !important;
+    cursor: 'pointer';
+}
+
+@media only screen and (max-device-width: 650px) {
+    .toggle-container {
+        display: inline;
+        cursor: 'pointer !important';
+    }
+}

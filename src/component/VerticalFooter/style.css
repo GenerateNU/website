@@ -5,7 +5,7 @@ a {
 
 .footer-container {
   background-color: #187dff;
-  width: 18vw;
+  width: 36vh;
   text-align: left;
   float: left;
 }
@@ -58,9 +58,13 @@ a:hover {
 }
 
 .social-icons {
-  margin-top: 50%;
-  margin-left: 20%;
+  margin-top: 30%;
+  margin-left: 27%;
   margin-right: 40%;
+}
+
+.social-icons .row {
+  flex-wrap: nowrap;
 }
 
 .footer-two {

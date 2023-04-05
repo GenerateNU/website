@@ -7,10 +7,11 @@ export default function Positions() {
     useEffect(() => {
         const getPositions = async () => {
             const data = await findAllPositions();
+            console.log(data);
             setPositions(data);
         }; 
         getPositions();
-    }, []);
+    }, positions);
 
     return (
         positions.length > 0 &&

@@ -6,13 +6,11 @@ import Arrow from "../../assets/images/nextpage/arrow.svg";
 export default function NextPage(props) {
   return (
     <div className="nextPage">
-      <a href={props.url}>
-        <button className="nextPageButton">
+        <a className="nextPageButton" href={props.url}>
           <img src={Arrow} className={"nextPageArrow"}></img>
           <span className={"nextPageName"}>{props.pageName}</span>
           <img src={Arrow} className={"nextPageArrow"}></img>
-        </button>
-      </a>
+        </a>
     </div>
   );
 }
