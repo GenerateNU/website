@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import "./style.css";
-import SwipeableCarousel from "./SwipeableCarousel";
+import SwipeableCarousel from "../../SwipeableCarousel/SwipeableCarousel";
 
 const WhatWeOffer = () => {
   const [showSoftwareInfo, setShowSoftwareInfo] = useState(false);
