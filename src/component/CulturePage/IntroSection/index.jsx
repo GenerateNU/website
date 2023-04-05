@@ -19,10 +19,10 @@ export default function IntroSection() {
             We make wicked projects &amp; plan wicked events
           </div>
         </div>
-      </div>
-      <div className="our-culture-big-positioning">
-        <div className="our-culture-big text-no-fill text-uppercase position-relative start-0 bottom-0 p-5">
-          Our Culture
+        <div className="our-culture-big-positioning">
+          <div className="our-culture-big text-no-fill text-uppercase position-relative start-0 bottom-0 p-5">
+            Our Culture
+          </div>
         </div>
       </div>
     </div>

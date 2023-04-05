@@ -1,41 +1,46 @@
 .generateMascotContainer {
-  margin-left: 130%;
-  position: relative;
+  position: absolute;
+  right: 35%;
+  top: 10%;
 }
 
 .generateMascot {
-  position: relative;
-  top: 20%;
-  left: 0%;
+  position: absolute;
   margin: 0 auto;
 }
 
 .our-culture-quote-positioning {
-  left: 42%;
-  top: 43%;
-  width: 45rem;
   position: absolute;
+  right: 0%;
+  top: 43%;
+  min-height: 200px;
+  height: 20vh;
+  min-width: 400px;
+  width: 40vw;
 }
 
 .our-culture-quote {
   color: #a559ec;
   font-family: "Space Mono 700";
-  font-size: calc(12px + 2.5rem);
+  font-size: calc(12px + 2.5vw);
+  line-height: 110%;
   font-style: bold;
   text-transform: uppercase;
-  line-height: 110%;
 }
 
 .our-culture-big-positioning {
-  left: 0%;
-  top: 35%;
-  width: 45rem;
   position: absolute;
+  right: 50%;
+  bottom: 45%;
+  min-height: 200px;
+  height: 20vh;
+  min-width: 400px;
+  width: 40vw;
 }
 
 .our-culture-big {
-  font-family: "Space Mono 700";
-  font-size: calc(72px + 16rem);
-  line-height: 77%;
   color: #187dff;
+  font-family: "Space Mono 700";
+  font-size: calc(72px + 14vw);
+  line-height: 77%;
 }
