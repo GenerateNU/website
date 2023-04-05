@@ -17,7 +17,7 @@ const Interested = () => {
         <div className="interestedflexbox">
           <div className="interestedJoinNowBox">
             <a href="/apply" className="joinCommunitytext">
-              apply now
+              join us
             </a>
           </div>
           <span id="join-span">
