@@ -47,6 +47,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  filter: brightness(50%);
 }
 
 .ap_text {
@@ -144,7 +145,7 @@
 
 .accordion .accordion-content {
   display: none;
-  width: 1440px;
+  width: 95vw;
   background-color: white;
   overflow: auto;
   white-space: nowrap;
@@ -522,13 +523,27 @@ a {
 /*  }*/
 /*}*/
 
-@media screen and (max-device-width: 500px) {
+@media only screen and (max-device-width: 500px) {
   .ap_container {
     display: none;
   }
 
   .ap_mobile {
-    display: block;
+    display: inline;
+    height: 100vh;
+  }
+
+  .toggle-container {
+    display: inline;
+  }
+
+  .accordion-content {
+    display: inline;
+    width: 95vw;
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 4%;
   }
 }
 

@@ -29,7 +29,7 @@ export default function ApplyPage() {
                         <Search/>
                     </div>
                 </div>
-                <Categories/>
+                <Categories disp="desktop"/>
             </div>
             <div className="ap_mobile">
                 <div className="ap_img"/>
@@ -54,7 +54,7 @@ export default function ApplyPage() {
                 <div className="search-bar-width">
                     <Search/>
                 </div>
-                <Categories/>
+                <Categories disp="mobile"/>
             </div>
         </>
     );

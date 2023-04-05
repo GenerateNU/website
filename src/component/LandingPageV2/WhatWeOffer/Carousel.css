@@ -9,3 +9,7 @@
   border-radius: 50%;
   border: none;
 }
+
+.inner {
+  transition: transform 1s;
+}

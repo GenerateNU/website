@@ -38,3 +38,50 @@
   height: 100%;
   width: 50%;
 }
+
+@media only screen and (max-device-width: 650px) {
+  .today-stats-container {
+    flex-direction: column;
+    height: unset!important;
+    margin-top: -1px;
+  }
+
+  .today-container {
+    width: 100%;
+    height: unset;
+  }
+
+  .today-container h1 {
+    font-size: 6.2vh;
+    height: min-content!important;
+    font-family: 'Space Mono 700';
+    text-align: center;
+  }
+
+  .stats-container {
+    flex-direction: row;
+    height: unset;
+    width: unset;
+    flex-wrap: wrap;
+  }
+
+  .stat-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .stat-title {
+    height: unset;
+    width: unset;
+    margin-right: 0;
+    font-family: 'Space Mono';
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Outfit 400';
+    font-weight: bolder;
+    font-size: 8vh;
+  }
+}

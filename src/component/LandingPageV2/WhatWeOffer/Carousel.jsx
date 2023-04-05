@@ -28,22 +28,26 @@ const Carousel = React.memo(
       const startIndex = activeIndex * perPage;
       const endIndex = startIndex + perPage;
       return children.slice(startIndex, endIndex);
-    }, [children, activeIndex, perPage]);
+    }, [activeIndex]);
+
+    const renderButtons = () => {
+      return Array.from({ length: Math.ceil(children.length / perPage) }, (_, i) => (
+        <button
+          key={i}
+          className="dotbutton"
+          onClick={() => updateIndex(i)}
+        />
+      ));
+    };
+    
 
     return (
       <div {...handlers} className="carousel">
-        <div style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+        <div className="inner" >
           {renderChildren}
         </div>
         <div>
-          <button
-            className="dotbutton"
-            onClick={() => updateIndex(activeIndex - 1)}
-          />
-          <button
-            className="dotbutton"
-            onClick={() => updateIndex(activeIndex + 1)}
-          />
+          {renderButtons()}
         </div>
       </div>
     );

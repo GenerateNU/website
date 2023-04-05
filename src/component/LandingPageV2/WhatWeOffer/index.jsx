@@ -122,7 +122,7 @@ const WhatWeOffer = () => {
         {!showSoftwareInfo && !showHardwareInfo && (
           <div className="text-center">
             <div className="position-relative vh-30">
-              <div className="position-absolute bottom-0 text-black w-100 text-uppercase what-we-offer-style">
+              <div className="position-absolute bottom-0 p-1 text-black w-100 text-uppercase what-we-offer-style">
                 What We
               </div>
             </div>
@@ -135,6 +135,7 @@ const WhatWeOffer = () => {
           (isBigScreen ? (
             softwareInfo
           ) : (
+            <div className="vh-60 bg-white">
             <Carousel
               children={softwareRawContent.map((content, i) => (
                 <PBlockify info={content} clsname="p-5 text-black" key={i} />
@@ -142,11 +143,13 @@ const WhatWeOffer = () => {
               txtcolor={"black"}
               perPage={2}
             />
+            </div>
           ))}
         {showHardwareInfo &&
           (isBigScreen ? (
             hardwareInfo
           ) : (
+            <div className="vh-60 bg-black">
             <Carousel
               children={hardwareRawContent.map((content, i) => (
                 <PBlockify info={content} clsname="p-5 text-white" key={i} />
@@ -154,6 +157,7 @@ const WhatWeOffer = () => {
               txtcolor={"white"}
               perPage={2}
             />
+            </div>
           ))}
 
         <div className="position-relative vh-20 text-center">
