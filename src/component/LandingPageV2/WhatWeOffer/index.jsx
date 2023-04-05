@@ -140,8 +140,9 @@ const WhatWeOffer = () => {
               children={softwareRawContent.map((content, i) => (
                 <PBlockify info={content} clsname="p-5 text-black" key={i} />
               ))}
-              txtcolor={"black"}
               perPage={2}
+              currentButtonColor={"rgb(0, 0, 0)"}
+              idleButtonColor={"rgba(255, 255, 255, 0.2)"}
             />
             </div>
           ))}
@@ -154,8 +155,9 @@ const WhatWeOffer = () => {
               children={hardwareRawContent.map((content, i) => (
                 <PBlockify info={content} clsname="p-5 text-white" key={i} />
               ))}
-              txtcolor={"white"}
               perPage={2}
+              currentButtonColor={"rgba(255, 255, 255, 1)"}
+              idleButtonColor={"rgba(0, 0, 0, 0.2)"}
             />
             </div>
           ))}

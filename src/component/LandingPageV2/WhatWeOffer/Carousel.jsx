@@ -31,24 +31,27 @@ const Carousel = React.memo(
     }, [activeIndex]);
 
     const renderButtons = () => {
-      return Array.from({ length: Math.ceil(children.length / perPage) }, (_, i) => (
-        <button
-          key={i}
-          className="dotbutton"
-          onClick={() => updateIndex(i)}
-        />
-      ));
+      return Array.from(
+        { length: Math.ceil(children.length / perPage) },
+        (_, i) => {
+          return (
+            <button
+              key={i}
+              className="dotbutton"
+              onClick={() => updateIndex(i)}
+              style={activeIndex === i
+                ? { backgroundColor: currentButtonColor }
+                : { backgroundColor: idleButtonColor }}
+            />
+          );
+        }
+      );
     };
-    
 
     return (
       <div {...handlers} className="carousel">
-        <div className="inner" >
-          {renderChildren}
-        </div>
-        <div>
-          {renderButtons()}
-        </div>
+        <div className="inner">{renderChildren}</div>
+        <div>{renderButtons()}</div>
       </div>
     );
   }
