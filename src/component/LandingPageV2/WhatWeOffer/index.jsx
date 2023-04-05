@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import "./style.css";
-import Carousel from "./Carousel";
+import SwipeableCarousel from "./SwipeableCarousel";
 
 const WhatWeOffer = () => {
   const [showSoftwareInfo, setShowSoftwareInfo] = useState(false);
@@ -61,10 +61,10 @@ const WhatWeOffer = () => {
     ),
   ];
 
-  function PBlockify({ info, clsname }) {
+  function PBlockify({ info, pclsname = "", headingclsname = "info-heading" }) {
     return (
-      <p className={clsname}>
-        <strong className="info-heading">{info.heading}</strong>
+      <p className={pclsname}>
+        <strong className={headingclsname}>{info.heading}</strong>
         <br />
         {info.info}
       </p>
@@ -76,17 +76,17 @@ const WhatWeOffer = () => {
     const secondRow = infos.slice(3, 6);
     return (
       <div className={`vh-60 bg-${bgcolor}`}>
-        <Row className="h-50 p-5">
+        <Row className="h-50 p-6 pt-0">
           {firstRow.map((info, i) => (
-            <Col key={i} xs={4} className="p-6">
-              <PBlockify info={info} clsname={`p-5 text-${txtcolor}`} />
+            <Col key={i} xs={4} className="p-6 pt-0">
+              <PBlockify info={info} pclsname={`p-5 info-text text-${txtcolor}`} />
             </Col>
           ))}
         </Row>
         <Row className="h-50 p-6 pt-0">
           {secondRow.map((info, i) => (
             <Col key={i} xs={4} className="p-6 pt-0">
-              <PBlockify info={info} clsname={`p-5 text-${txtcolor}`} />
+              <PBlockify info={info} pclsname={`p-5 info-text text-${txtcolor}`} />
             </Col>
           ))}
         </Row>
@@ -135,30 +135,38 @@ const WhatWeOffer = () => {
           (isBigScreen ? (
             softwareInfo
           ) : (
-            <div className="vh-60 bg-white">
-            <Carousel
-              children={softwareRawContent.map((content, i) => (
-                <PBlockify info={content} clsname="p-5 text-black" key={i} />
-              ))}
-              perPage={2}
-              currentButtonColor={"rgb(0, 0, 0)"}
-              idleButtonColor={"rgba(255, 255, 255, 0.2)"}
-            />
+            <div className="vh-60 bg-white position-relative">
+              <SwipeableCarousel
+                children={softwareRawContent.map((content, i) => (
+                  <PBlockify
+                    info={content}
+                    pclsname="text-black info-text-mobile"
+                    headingclsname="info-heading-mobile"
+                    key={i}
+                  />
+                ))}
+                perPage={2}
+                currentButtonColor={"rgb(0, 0, 0)"}
+              />
             </div>
           ))}
         {showHardwareInfo &&
           (isBigScreen ? (
             hardwareInfo
           ) : (
-            <div className="vh-60 bg-black">
-            <Carousel
-              children={hardwareRawContent.map((content, i) => (
-                <PBlockify info={content} clsname="p-5 text-white" key={i} />
-              ))}
-              perPage={2}
-              currentButtonColor={"rgba(255, 255, 255, 1)"}
-              idleButtonColor={"rgba(0, 0, 0, 0.2)"}
-            />
+            <div className="vh-60 bg-black position-relative">
+              <SwipeableCarousel
+                children={hardwareRawContent.map((content, i) => (
+                  <PBlockify
+                    info={content}
+                    pclsname="text-white info-text-mobile"
+                    headingclsname="info-heading-mobile"
+                    key={i}
+                  />
+                ))}
+                perPage={2}
+                currentButtonColor={"rgba(255, 255, 255, 1)"}
+              />
             </div>
           ))}
 

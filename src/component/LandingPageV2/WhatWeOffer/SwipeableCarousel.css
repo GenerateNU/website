@@ -1,5 +1,6 @@
 .carousel {
   overflow: hidden;
+  height: 100%
 }
 
 .dotbutton {
@@ -12,4 +13,12 @@
 
 .inner {
   transition: transform 1s;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
