@@ -347,6 +347,14 @@
     justify-content: center;
   }
 
+  .comingsoontext {
+    display: inline;
+  }
+
+  .desktop {
+    display: none;
+  }
+
   .intro-navbar {
     position: fixed;
     left: 50%;
