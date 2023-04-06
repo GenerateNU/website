@@ -1,39 +1,40 @@
 
  # What was the ticket?
- WT-65 - Andy and Sebastian worked on implementing the Teams page based on the figma diagram
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-65
+ WT-2 - No specific ticket, but pulled in resizing changes for WeAreResponse section.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-2 
  
  # What did I do?
  
-Created a new Teams component and routed it to "/teams"
-Ensured the page was based off the design in the figma and followed standards
-present in the rest of the website, like horizontal scrolling, and smooth resizing
+ I pulled in changes from window-resizing, and used a span tag to implement the outline for "Some Say" in the green rectangle.
+ I also updated the text to match the Figma.
+ Also pulled in relevant changes for mobile.
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
-
-Compared page in Figma with created page to ensure same structure was kept
-For resizing, looked at smallest possible size to ensure the page looked nice even at that ratio
  
+ - I checked that the Figma matched at the default size.
+ - I ensured that the page resized well at low viewport width/high height and low height/high widths.
+ - I ensured that the page did not bleed at high and low magnifications.
+ - I checked the page on various phone sizes.
  Required checks:
  
  - [Yes] Did you conduct a self-review?
- - [N/A] Have you written unit or integration tests?
+ - [Yes] Have you written unit or integration tests?
 =======
 
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
  Describe aspects of the PR that may become problems in the future.
- - None of the pictures are mapped to any of the specific teams pages, since those haven't been made yet
- - Used placeholder images that need to be replaced
+ New CSS selector added for Some Say text, used in the span
  
  # Additional comments for the reviewers
+ The intro text bleeds over in one of the screenshots, but this is fixed on a different branch.
  
  # Screenshots
- FIGMA
- ![alt text](public/images/PRImages/FigmaScreenshot.png?raw=true "FIGMA") 
 
  MY VERSION
- ![alt text](public/images/PRImages/TeamsScreenshot1.png?raw=true "SS 1")
- ![alt text](public/images/PRImages/TeamsScreenshot2.png.png?raw=true "SS 2")
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.01.53%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.03%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.11%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.27%20AM.png)
