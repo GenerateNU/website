@@ -6,7 +6,7 @@ import EarnzMockUp from "../../../assets/images/landingpage-v2/Earnz_Mock_Up.png
 export default function FeaturedProjects() {
   return (
     <div className="projects-page-container">
-      <div className="navbar-style">
+      <div className="navbar-style" id="projects-navbar">
         <NavBar />
       </div>
       <div className="featured-projects">

@@ -90,9 +90,13 @@ function VerticalFooter() {
           </Row>
           <Row className="footer-text">
             {" "}
-            <a class="disabled-footer-text" href="/">
-              Projects
-            </a>
+            {currentPage === "/projects" ? (
+              <b>
+                <a href={"/projects"}>Projects {"<"}</a>
+              </b>
+            ) : (
+              <a href={"/projects"}>Projects</a>
+            )}
           </Row>
         </span>
         <div className="social-icons">

@@ -8,6 +8,10 @@
     font-weight: 700;
 }
 
+#projects-navbar {
+    padding-top: 2%;
+}
+
 .projects-text {
     color: #000;
     font-size: 2.5vh;
@@ -18,6 +22,8 @@
 .featured-projects-text {
     margin-left: 4%;
     width: 40%;
+    min-width: 396px;
+    margin-top: -3%;
 }
 
 .projects-down img {
@@ -42,14 +48,19 @@
 
 .project {
     display: flex;
+    margin-top : 6%
 }
 
 .project img {
     width: 50%;
+    height: 25%;
+    min-width: 390px;
+    min-height: 556px;
 }
 
 .project-text h1 {
     font-family: 'Space Mono 700';
+    font-size: 7vh;
 }
 
 .project-team {
@@ -63,7 +74,7 @@
 
 .project-text p {
     max-width: 250px;
-    font-size: 1.3vw;
+    font-size: 2vh;
 }
 
 .view-project-button {
