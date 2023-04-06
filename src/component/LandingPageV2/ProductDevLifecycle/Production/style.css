@@ -5,62 +5,6 @@ a {
   .background-black {
     background-color: black;
   }
-  .ProductDevText {
-    width: 78.29vh;
-    height: 34.5vh;
-    left: 20.95vh;
-    top: 23.46vh;
-    
-    /* H1 */
-    
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 11.22vh;
-    line-height: 11.22vh;
-    /* or 100% */
-    
-    text-transform: uppercase;
-    
-    color: #FFFFFF;
-    
-  }
-
-  .paragraphText {
-    width: 75.28vh;
-    height: 29.86vh;
-    top: 71.14vh;
-    margin-top: 6.27vh;
-    /* B1 */
-    font-family: 'Outfit 400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.51vh;
-    line-height: 3.51vh;
-    /* or 156% */
-    
-    
-    color: #FFFFFF;
-  }
-  .ourProcessText {
-    width: 16.9vh;
-    height: 3.76vh;
-    left: 18.78vh;
-    top: 20.577vh;
-    margin-top: 12.55vh;
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.51vh;
-    line-height: 3.76vh;
-    /* identical to box height, or 150% */
-
-
-    /* Core/MNGMNT Yellow */
-
-    color: #FFBF3C;
-  }
 
 
   .column{
@@ -74,63 +18,19 @@ a {
   }
 
   .DevelopmentWheelThree {
-    width: 62vh;
-    margin-top: 12.75vh;
-    margin-left: 12.55vh;
+    height: 63.11vh;
+    margin-top: calc(1.6*12.55vh);
     margin-bottom: 12.55vh;
-    transform: rotate(360deg);
-
   }
-
-  .ideation {
-    margin-left: 12.55vh;
-  }
-
-  .IdeationText {
-    width: 44.29vh;
-    height: 11.22vh;
-    left: 95.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
-    /* Core/MNGMNT Yellow */
-
-    color: #FFBF3C;
-  }
-
-  .PrototypeText{
-    width: 44.29vh;
-    height: 11.22vh;
-    left: 95.23vh;
-    top: 33vh;
-    margin-top: 12.55vh;
-
-    /* H2 */
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 8.78vh;
-    line-height: 11.22vh;
-    /* identical to box height, or 128% */
-
-    text-transform: uppercase;
-
     
-
-    color: #FF6660;
+  .DevelopmentWheelImageThree {
+    width: calc(0.8*min(64vh, 100vw));
   }
+
+
+  
+
+  
 
   .ProductionText{
     width: 44.29vh;
@@ -144,7 +44,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 8.78vh;
+    font-size: min(7.5vh, 10vw);
     line-height: 11.22vh;
     /* identical to box height, or 128% */
 
@@ -155,113 +55,51 @@ a {
     color: #187DFF;
   }
  
-@media only screen and (max-device-width: 650px) {
-  .background-black {
-    width: 100vw;
-  }
+  @media only screen and (max-device-width: 650px) {
 
-  .ProductDevText {
-    word-break: break-word;
-    font-size: 5vh;
-    line-height: 5vh;
-    width: calc(100vw - 10%);
-    height: auto;
-  }
-
-  .paragraphText {
-    width: calc(100vw - 10%);
-    padding-right: 10%;
-  }
-
-  .alignItemsRight {
-    flex-direction: column;
-  }
-}
-
-.DevelopmentWheelImageThree {
-  width: 60vh;
-}
-
-@media only screen and (max-device-width: 650px) {
-  /*.DevelopmentWheelOne, .DevelopmentWheelTwo, .DevelopmentWheelThree {
-    size: 30.11vh;
-    height: 30.11vh;
-    margin-left: 0;
-    margin-top: -15vh;
-  }*/
-
-  .DevelopmentWheelOne {
-    margin-top: 45vh;
-    margin-bottom: -2vh;
-  }
-
-  .DevelopmentWheelTwo {
-    margin-bottom: 11.5vh;
-    margin-top: 30vh;
-    /* margin-bottom: -20vh; */
-  }
-
-  .DevelopmentWheelThree {
-    margin-top: 35vh;
-    margin-bottom: -1vh;
-  }
-
-  .DevelopmentWheelImageOne {
-    width: 42.11vh;
-    text-align: left;
-    margin-left: -17.5vh;
-    padding-left: 0vh;
-    margin-top: -22vh;
-  }
-
-  .DevelopmentWheelImageTwo {
-    width: 39.11vh;
-    text-align: left;
-    margin-left: -15vh;
-    margin-top: -4vh;
-    margin-bottom: 15vh;
-  }
-
-  .DevelopmentWheelImageThree {
-    width: 30.11vh;
-    text-align: left;
-    margin-left: -11.85vh;
-    margin-bottom: -12vh;
-  }
-
-  .ideation {
-    width: 100vw;
-    margin-left: 0;
-  }
-
-  .background-black {
-    margin-bottom: -15%;
-  }
-
-  .IdeationText,
-  .PrototypeText,
-  .ProductionText {
-    font-size: 15vw;
-  }
-
-  .PrototypeText {
-    margin-top: -10vh;
-  }
-
-  .ProductionText {
-    margin-top: 0;
-  }
+    .background-black-text {
+      width: 100vw;
+      height: 60vh;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   
-  .IdeationText {
-    margin-top: -4vh;
+    .background-black-wheel {
+      width: 100vw;
+      height: 70vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .paragraphText {
+      width: 90vw;
+      font-size: 2vh;
+      margin-top: 0%;
+    }
+
+   
+
+    .DevelopmentWheelThree {
+      size: 30.11vh;
+      height: 30.11vh;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      margin-right: 21%;
+    }
+
+    .DevelopmentWheelImageThree {
+      width: 30vh;
+    }
+  
+   
+  
+    .ProductionText {
+      font-size: 15vw;
+      line-height: 7vh;
+      height: 10vh;
+      margin-top: 0%;
+    }
   }
 
-  .ideation .paragraphText {
-    margin-top: 0;
-  }
-
-  #deliveryText{
-    margin-bottom: 30vh;
-
-  }
-}
+  

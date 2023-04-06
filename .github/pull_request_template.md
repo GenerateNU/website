@@ -1,5 +1,6 @@
 
  # What was the ticket?
+
  WT-2 - No specific ticket, but pulled in resizing changes for WeAreResponse section.
  Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-2 
  
@@ -34,7 +35,9 @@ Describe in detail steps you used to test the changes you have made.
  # Screenshots
 
  MY VERSION
+
  ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.01.53%20AM.png)
  ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.03%20AM.png)
  ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.11%20AM.png)
  ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.27%20AM.png)
+
