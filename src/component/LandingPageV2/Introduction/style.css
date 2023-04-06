@@ -3,13 +3,11 @@
   padding: 0%;
 }
 
-.text-container {
-  /* generate */
+.desktop, .text-container {
   display: inline;
   position: relative;
   margin-right: 30px;
-  /*width: 149.39vh;*/
-  width: 50vh;
+  width: 90vw; /*149.39vh;*/
   height: 45.12vh;
   left: 13.17vh;
   top: calc(30vh - 90px);
@@ -23,12 +21,11 @@
 
   color: #ffffff;
 }
-
+/*
 .desktop {
-    
     position: relative;
     left: 8vw;
-    right: max(10vw, 75px);
+    /*right: max(10vw, 75px);
     top: max(35vh, 90px);
     text-transform: uppercase;
     display: flex;
@@ -37,6 +34,7 @@
     color: #ffffff;
     
 }
+*/
 
 .shermancenter {
     /* position: absolute; */
