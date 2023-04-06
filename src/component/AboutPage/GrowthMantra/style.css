@@ -245,7 +245,8 @@ a {
     height: auto;
     margin-top: auto;
     margin-bottom: auto;
-    /* transform: translate(-10%, 0); */
+    transform: scale(1.5);
+    transform: translate(-10%, -20%);
     /* position: fixed; */
     /* background-position: bottom; */
   }
@@ -264,7 +265,8 @@ a {
       height: auto;
       margin-top: auto;
       margin-bottom: auto;
-      transform: translate(-10%, -60%);
+      transform: scale(1.5);
+      transform: translate(-5%, -60%);
       /* position: fixed; */
       /* background-position: bottom; */
     }

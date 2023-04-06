@@ -1,18 +1,17 @@
 
  # What was the ticket?
- WT-42 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-42
+ WT-86 - I worked on adding the mountain image to the Growth Mantra section of the About Page (Landing)
+ Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?assignee=63c99b32e28ec74364ccacdc&selectedIssue=WT-86
  
  # What did I do?
  
-I changed some of the HTML/CSS properties of FP1 that included the Earnz Project.
+I changed some of the HTML/CSS properties of the GrowthMantra section to add the mountain image and determine proper sizing 
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
  Key Parts
- - I checked the behavior of the page at various mobile settings (iPhone SE, iPhone 12 Pro, iPhone XR, Pixel 5, Samsung Galaxy 8+, Samsung Galaxy S20 Ultra)
- - Made sure text remained clearly visible and as close as possible to the mobile UI.
+ - I made sure that the mountain was always in view in the center of the page when resizing.
  
  Required checks:
  
@@ -24,7 +23,7 @@ Describe in detail steps you used to test the changes you have made.
  
  Describe aspects of the PR that may become problems in the future.
  Key Questions
- - Had to make specific changes at various screen dimensions. May need to make changes in the future to make it more generalizable.
+ - This landing page has its own issues that need to be fixed that may impact the positioning and sizing of the mountain image
  
  # Additional comments for the reviewers
  
