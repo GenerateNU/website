@@ -26,6 +26,9 @@ a {
     margin-bottom: 12.55vh;
   }
 
+  .DevelopmentWheelImageTwo {
+    width: calc(min(64vh, 100vw));
+  }
 
   .PrototypeText{
     width: 44.29vh;
@@ -50,8 +53,23 @@ a {
     color: #FF6660;
   }
 
+  @media only screen and (max-device-width: 650px) {
+    .DevelopmentWheelTwo {
+      size: 30.11vh;
+      height: 45vh;
+      margin-right: 11%;
+    }
+    .DevelopmentWheelImageTwo {
+      width: 42vh;
+    }
+
+    .PrototypeText {
+      font-size: 15vw;
+      line-height: 7vh;
+      height: 10vh;
+      margin-top: 0%;
+    }
+
+  }
   
  
-.DevelopmentWheelImage {
-  width: 64vh;
-}

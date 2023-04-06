@@ -7,7 +7,7 @@ const Ideation = () => {
         <>
           <div className="background-black-wheel">
             <div className = "DevelopmentWheelOne">
-              <img className = "DevelopmentWheelImage" /*style={{width: '84vh'}}*/ src ={DevelopmentWheel} />
+              <img className = "DevelopmentWheelImageOne" /*style={{width: '84vh'}}*/ src ={DevelopmentWheel} />
             </div>
           </div>
           <div className="background-black-text">

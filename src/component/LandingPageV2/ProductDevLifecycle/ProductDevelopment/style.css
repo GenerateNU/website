@@ -97,7 +97,6 @@ a {
     }
   
     .alignItemsRight {
-      padding-left: 5%;
       padding-right: 5%;
     }
   
@@ -105,7 +104,6 @@ a {
       font-family: "Space Mono 700";
       font-size: 12vw;
       line-height: 7vh;
-      height: 43vw;
     }
   
     .paragraphText {

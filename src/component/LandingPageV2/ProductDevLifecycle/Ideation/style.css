@@ -52,7 +52,7 @@ a {
     margin-bottom: 12.55vh;
   }
   
-   .DevelopmentWheelImage {
+   .DevelopmentWheelImageOne {
       width: min(64vh, 100vw);
   }
 
@@ -73,7 +73,7 @@ a {
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 8.78vh;
+    font-size: min(7.5vh, 10vw);
     line-height: 11.22vh;
     /* identical to box height, or 128% */
 
@@ -88,14 +88,12 @@ a {
   @media only screen and (max-device-width: 650px) {
     .DevelopmentWheelOne {
       size: 30.11vh;
-      height: 30.11vh;
-      margin-top: 30.11vh;
-      margin-left: auto;
-      margin-right: auto;
+      height: 45vh;
+      margin-right: 20%;
     }
 
-    .DevelopmentWheelImage {
-      width: 70vw;
+    .DevelopmentWheelImageOne {
+      width: 42vh;
     }
 
 
@@ -108,7 +106,7 @@ a {
 
     .ideation {
       width: 100vw;
-      margin-left: 5%;
+      margin-left: 0%;
     }
 
     .IdeationText {
@@ -121,7 +119,6 @@ a {
     .background-black-text {
       width: 100vw;
       height: 60vh;
-      margin-left: 5%;
       flex-direction: column;
       justify-content: flex-start;
     }

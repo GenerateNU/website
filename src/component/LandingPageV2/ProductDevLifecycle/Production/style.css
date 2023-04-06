@@ -19,13 +19,14 @@ a {
 
   .DevelopmentWheelThree {
     height: 63.11vh;
-    margin-top: 12.55vh;
+    margin-top: calc(1.6*12.55vh);
     margin-bottom: 12.55vh;
   }
-
-  .ideation {
-    margin-left: 12.55vh;
+    
+  .DevelopmentWheelImageThree {
+    width: calc(0.8*min(64vh, 100vw));
   }
+
 
   
 
@@ -59,7 +60,6 @@ a {
     .background-black-text {
       width: 100vw;
       height: 60vh;
-      margin-left: 5%;
       flex-direction: column;
       justify-content: flex-start;
     }
@@ -83,20 +83,22 @@ a {
     .DevelopmentWheelThree {
       size: 30.11vh;
       height: 30.11vh;
-      margin-top: 30.11vh;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      margin-right: 21%;
     }
 
-    .DevelopmentWheelImage {
-      width: 30.11vh;
+    .DevelopmentWheelImageThree {
+      width: 30vh;
     }
   
-    .ideation {
-      width: 100vw;
-      margin-left: 5%;
-    }
+   
   
     .ProductionText {
       font-size: 15vw;
+      line-height: 7vh;
+      height: 10vh;
+      margin-top: 0%;
     }
   }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import DevelopmentWheel from "../ProductDevelopment/DeliveryWheel.svg"
+//import DevelopmentWheel from "../ProductDevelopment/PrototypeWheel.svg"
 import './style.css';
 
 const Production = () => {
@@ -7,7 +8,7 @@ const Production = () => {
           <>
           <div className="background-black-wheel">
             <div className = "DevelopmentWheelThree">
-              <img className = "DevelopmentWheelImage" src ={DevelopmentWheel} />
+              <img className = "DevelopmentWheelImageThree" src ={DevelopmentWheel} />
             </div>
           </div>
           <div className="background-black-text">
