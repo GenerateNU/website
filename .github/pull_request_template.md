@@ -1,20 +1,22 @@
 
  # What was the ticket?
- WT-65 - Andy and Sebastian worked on implementing the Teams page based on the figma diagram
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-65
+WT-63 - Fix alignment for Generate logo on the navbar.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-63 
+
  
  # What did I do?
  
-Created a new Teams component and routed it to "/teams"
-Ensured the page was based off the design in the figma and followed standards
-present in the rest of the website, like horizontal scrolling, and smooth resizing
+ I pulled in the changes for the navbar I made in window-resizing. 
+ This includes taking logos out of anchor tags so that they align properly in the flexbox and adding 
+ a selector specifying the width and height of the nav bar.
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
 
-Compared page in Figma with created page to ensure same structure was kept
-For resizing, looked at smallest possible size to ensure the page looked nice even at that ratio
+- Compared navbar with that of Figma
+- Checked navbar at max and min screen zooms
+- Checked navbar on mobile to ensure it resizes properly
  
  Required checks:
  
@@ -25,15 +27,15 @@ For resizing, looked at smallest possible size to ensure the page looked nice ev
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
  Describe aspects of the PR that may become problems in the future.
- - None of the pictures are mapped to any of the specific teams pages, since those haven't been made yet
- - Used placeholder images that need to be replaced
+ Depending on how the navbar is embedded in the page, it may cause other components to come out of alignment on certain pages.
  
  # Additional comments for the reviewers
+ I implemented a decent mobile look, although the styling will be changed entirely in a different ticket.
  
  # Screenshots
- FIGMA
- ![alt text](public/images/PRImages/FigmaScreenshot.png?raw=true "FIGMA") 
 
  MY VERSION
- ![alt text](public/images/PRImages/TeamsScreenshot1.png?raw=true "SS 1")
- ![alt text](public/images/PRImages/TeamsScreenshot2.png.png?raw=true "SS 2")
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.26.47%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.27.01%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.27.31%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.43.13%20AM.png)
