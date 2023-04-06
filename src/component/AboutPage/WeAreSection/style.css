@@ -89,6 +89,11 @@
         box-shadow: .10rem .12rem;
     }
 
+    .value-card-text {
+        font-size: 5vw;
+        line-height: 7vw;
+    }
+
     .our-mission-our-values {
         font-size: 2vh;
         margin-right: 10vh;
