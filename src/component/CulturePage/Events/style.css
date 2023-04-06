@@ -16,7 +16,7 @@
 
 .events-header {
   font-family: "Space Mono";
-  font-size: max(18vw, 40px);
+  font-size: min(18vw, 35vh);
   line-height: 100%;
   color: #ff6660;
 }
