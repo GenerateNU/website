@@ -1,20 +1,25 @@
 
  # What was the ticket?
- WT-65 - Andy and Sebastian worked on implementing the Teams page based on the figma diagram
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-65
+ WT-48, WT-78, and WT-54: Properly resizing the WeAreSection and its cards, and implementing it properly on mobile.
+ URLs: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-54
+ https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-78
+ https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-48
+
+
  
  # What did I do?
  
-Created a new Teams component and routed it to "/teams"
-Ensured the page was based off the design in the figma and followed standards
-present in the rest of the website, like horizontal scrolling, and smooth resizing
+Increased the blank div off the right side of Teams
+Added min calculations to card sizes, font sizes, and reduced overall sizes
+
+For mobile, I simply had to make a few changes to the existing mobile implementation by tweaking card and font sizes to fit properly
+on the mobile screen.
  
  # How did I test it?
  
-Describe in detail steps you used to test the changes you have made.
+ I tested the screen matching the Figma at the default resolution, tested for no bleeding at narrow and tall viewport resolutions, and 
+ checked for bleeding at my laptop's minimum and maximum zoom. I also checked whether the mobile version displayed properly and matched the Figma for different phones.
 
-Compared page in Figma with created page to ensure same structure was kept
-For resizing, looked at smallest possible size to ensure the page looked nice even at that ratio
  
  Required checks:
  
@@ -23,17 +28,13 @@ For resizing, looked at smallest possible size to ensure the page looked nice ev
 =======
 
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
+ Changing the Teams section could cause it to extend off to the left and overlap with the Values section.
  
- Describe aspects of the PR that may become problems in the future.
- - None of the pictures are mapped to any of the specific teams pages, since those haven't been made yet
- - Used placeholder images that need to be replaced
  
  # Additional comments for the reviewers
  
+ The navbar currently bleeds over some of the text, but that will be fixed in the resizing-navbar-fix PR.
  # Screenshots
- FIGMA
- ![alt text](public/images/PRImages/FigmaScreenshot.png?raw=true "FIGMA") 
 
  MY VERSION
- ![alt text](public/images/PRImages/TeamsScreenshot1.png?raw=true "SS 1")
- ![alt text](public/images/PRImages/TeamsScreenshot2.png.png?raw=true "SS 2")
+ ![alt text](
