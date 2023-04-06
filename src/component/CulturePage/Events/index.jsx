@@ -31,7 +31,7 @@ const Events = () => {
                   </div>
       </div>
       
-    <div class="h-75 w-25 pt-5">
+    <div class="retreat-div">
             <p className="text-uppercase retreat-title">retreat</p>
             <p className="retreat-text">
               Retreat is the ultimate team-bonding experience, and is everyones favorite event of the year. We spend the night in a house up north, and get to know each other! You can expect walks in the woods, playing games, home-cooked meals, and stories to laugh about for years to come.

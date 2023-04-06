@@ -1,7 +1,7 @@
 .showcase-div {
     width: 40%;
     /* margin-left: 2%; */
-    margin-top: 20%;
+    margin-top: 10%;
   }
   .showcase-title {
     font-family: "Space Mono";
@@ -27,10 +27,10 @@
     margin-left: 5%;
   }
   .showcase-text {
-    width: 80%;
+    width: 30vw;
     height: 10%;
     color: black;
-    font-size: 1vw;
+    font-size: 3vh;
     line-height: 160%;
     text-align: left;
     font-style: normal;
