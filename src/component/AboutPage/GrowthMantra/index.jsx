@@ -15,7 +15,7 @@ const GrowthMantra = () => {
           <p className="IsOurText">Is Our</p>
           <p className="MantraText">Mantra</p>
         </div>
-        <div className="growthMantrainterestedText">Interested</div>
+        {/* <div className="growthMantrainterestedText">Interested</div> */}
       </div>
 
       {/* <div className="paragraphText">Our values arent just surface level but run deep throughout our organization. We always encourage our members to take on new challenges. Tools and resources are only an ask away, and members can test out their ideas to drive development.</div> */}
@@ -39,7 +39,7 @@ const GrowthMantra = () => {
               <img src={cooltriangle} height="400vh" width="600vw"/> 
             </div> */}
 
-        <div className="applyNowBoxGrowthMantra">
+        {/* <div className="applyNowBoxGrowthMantra">
           <a href="/apply" className="applyNowText">
             apply now
           </a>
@@ -52,7 +52,7 @@ const GrowthMantra = () => {
         <div className="paragraphTextThree">
           Join a community that shares the same goal - turning ideas into
           reality
-        </div>
+        </div> */}
       </div>
 
       <div className="mountain-image">

@@ -7,6 +7,7 @@ const WeAreSection = () => {
     return (
         <> 
              <div >
+             <div className='mission-header-space'></div>
                 <div className="weare-header fit-content">
                     <h5 className="mb-0 our-mission-our-values we-are-values w-auto h-auto text-end p-4">
                         our values

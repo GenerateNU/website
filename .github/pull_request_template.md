@@ -13,6 +13,10 @@ Describe in detail steps you used to test the changes you have made.
  Key Parts
  - I made sure that the mountain was always in view in the center of the page when resizing.
  
+ - I checked that the Figma matched at the default size.
+ - I ensured that the page resized well at low viewport width/high height and low height/high widths.
+ - I ensured that the page did not bleed at high and low magnifications.
+ - I checked the page on various phone sizes.
  Required checks:
  
  - [Yes] Did you conduct a self-review?
@@ -26,6 +30,7 @@ Describe in detail steps you used to test the changes you have made.
  - This landing page has its own issues that need to be fixed that may impact the positioning and sizing of the mountain image
  
  # Additional comments for the reviewers
+ The intro text bleeds over in one of the screenshots, but this is fixed on a different branch.
  
  # Screenshots
  FIGMA

@@ -18,12 +18,15 @@ function VerticalFooter() {
       <Row>
         <div>
           <div className="sherm">
-            <img
-              className="logo-placement"
-              src={GenerateLogo}
-              height="80%"
-              width="60%"
-            />
+            <a href="https://generatenu.com/">
+              <img
+                className="logo-placement"
+                src={GenerateLogo}
+                height="80%"
+                width="60%"
+                alt="Logo description" // Add alt text to the image for accessibility
+              />
+            </a>
           </div>
         </div>
       </Row>
@@ -61,9 +64,13 @@ function VerticalFooter() {
           </Row>
           <Row className="footer-text">
             {" "}
-            <a class="disabled-footer-text" href="/">
-              Teams
-            </a>
+            {currentPage === "/teams" ? (
+              <b>
+                <a href={"/teams"}>Teams {"<"}</a>
+              </b>
+            ) : (
+              <a href={"/teams"}>Teams</a>
+            )}
           </Row>
           <Row className="footer-text">
             {" "}
