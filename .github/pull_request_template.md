@@ -37,4 +37,8 @@ on the mobile screen.
  # Screenshots
 
  MY VERSION
- ![alt text](
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%209.48.52%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%209.49.17%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%209.49.34%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%209.49.59%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%209.50.21%20AM.png)
