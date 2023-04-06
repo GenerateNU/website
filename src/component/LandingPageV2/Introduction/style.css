@@ -4,21 +4,12 @@
 }
 
 .desktop, .text-container {
-  display: inline;
   position: relative;
-  margin-right: 30px;
-  width: 90vw; /*149.39vh;*/
-  height: 45.12vh;
-  left: 13.17vh;
-  top: calc(30vh - 90px);
-
-  font-family: "Space Mono";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30.48vh;
-  line-height: 45.12vh;
-  text-transform: uppercase;
-
+  left: 8vw;
+  top: max(35vh, 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #ffffff;
 }
 /*
@@ -114,7 +105,7 @@
 
 @media only screen and (min-device-width: 651px) {
   .desktop {
-    display: inline;
+    display: flex;
   }
   .comingsoontext {
     display: none
