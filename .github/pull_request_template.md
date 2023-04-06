@@ -1,18 +1,18 @@
 
  # What was the ticket?
- WT-42 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-42
+ WT-98: Fixed "We are Generate" resizing bugs.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-98 
  
  # What did I do?
  
-I changed some of the HTML/CSS properties of FP1 that included the Earnz Project.
+ I pulled in resizing changes from the window-resizing branch.
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
  Key Parts
- - I checked the behavior of the page at various mobile settings (iPhone SE, iPhone 12 Pro, iPhone XR, Pixel 5, Samsung Galaxy 8+, Samsung Galaxy S20 Ultra)
- - Made sure text remained clearly visible and as close as possible to the mobile UI.
+ - I tested the page at low screen sizes, as well as high viewport width and low height/low viewport width and high height.
+- Compared default size against Figma
  
  Required checks:
  
@@ -23,15 +23,14 @@ Describe in detail steps you used to test the changes you have made.
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
  Describe aspects of the PR that may become problems in the future.
- Key Questions
- - Had to make specific changes at various screen dimensions. May need to make changes in the future to make it more generalizable.
  
+ - Fixing the navbar MAY cause "We Are" text to overlap
+ - Intro page still needs to be implemented for mobile, instead of Coming Soon
  # Additional comments for the reviewers
  
  # Screenshots
- FIGMA
- ![alt text](public/images/PRImages/Figma_Earnz.png?raw=true "FIGMA") 
-
  MY VERSION
- ![alt text](public/images/PRImages/Earnz_SS_1.png?raw=true "LOCAL 1")
- ![alt text](public/images/PRImages/Earnz_SS_2.png?raw=true "LOCAL 2")
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.49.26%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.49.32%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.49.39%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.49.45%20AM.png)
