@@ -26,15 +26,15 @@ Describe in detail steps you used to test the changes you have made.
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
  Describe aspects of the PR that may become problems in the future.
- Key Questions
- - Had to make specific changes at various screen dimensions. May need to make changes in the future to make it more generalizable.
+ New CSS selector added for Some Say text, used in the span
  
  # Additional comments for the reviewers
+ The intro text bleeds over in one of the screenshots, but this is fixed on a different branch.
  
  # Screenshots
- FIGMA
- ![alt text](public/images/PRImages/Figma_Earnz.png?raw=true "FIGMA") 
 
  MY VERSION
- ![alt text](public/images/PRImages/Earnz_SS_1.png?raw=true "LOCAL 1")
- ![alt text](public/images/PRImages/Earnz_SS_2.png?raw=true "LOCAL 2")
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.01.53%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.03%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.11%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.27%20AM.png)
