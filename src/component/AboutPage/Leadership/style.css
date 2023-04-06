@@ -1,3 +1,11 @@
+.vh-15 {
+  height: 15vh;
+}
+
+.vh-225 {
+  height: 225vh;
+}
+
 .card {
   width: 27vw;
   height: 62vh;
@@ -23,32 +31,17 @@
 
 .gen-card-header {
   font-family: "Space Mono 700";
-  font-size: 3.2vw;
+  font-size: calc(max(3.2vw, 3.2vh));
   line-height: 150%;
   transform-origin: bottom right;
   transform: rotate(270deg);
   text-transform: uppercase;
-  /* font-weight: 700; */
-  /* writing-mode: vertical-lr;
-    transform: rotate(180deg); */
-}
-
-.gen-card-body {
-  height: 85%;
-  font-family: "Outfit 300";
-  font-style: normal;
-  font-size: 1.2vw;
-  line-height: 150%;
 }
 
 .position-details {
   font-family: "Outfit 400";
-  font-size: 1.2vw;
+  font-size: calc(max(1.2vw, 1.2vh));
   line-height: 135%;
-}
-
-.h-15 {
-  height: 15%;
 }
 
 .no-right-margin {
@@ -60,7 +53,8 @@
   font-family: "Space Mono";
   color: #ffbf3c;
   text-transform: lowercase;
-  font-size: 1.75em;
+  font-size: calc(max(1.5vw, 1.5vh));
+  height: calc(max(1.5vw, 1.5vh));
 }
 
 .meet-the-team {
@@ -68,7 +62,8 @@
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 5.75em;
+  font-size: calc(max(5vw, 5vh));
+  height: calc(max(5vw, 5vh));
 }
 
 /* TODO: delete after move to public */
@@ -84,15 +79,28 @@
   justify-content: center;
 }
 
+.bio-text {
+  font-size: calc(max(1.2vw, 1.2vh));
+}
+
 @media only screen and (max-device-width: 650px) {
   .cards-display {
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
   }
 
   .card {
     width: 50vw;
-    height: 50vw;
-    transition: all 0.6s ease;
+    height: 62.5vw;
+    margin-bottom: 1.5vh;
+  }
+
+  .react-card-flip:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .react-card-flip:hover ~ .react-card-flip {
+    transform: none;
   }
 }

@@ -27,11 +27,7 @@ export default function LeadershipCard({
   const detailsRowJustify = title ? "between" : "end";
 
   return (
-    <ReactCardFlip
-      isFlipped={flipped}
-      flipDirection="vertical"
-      className="dsktop"
-    >
+    <ReactCardFlip isFlipped={flipped} flipDirection="vertical">
       <div
         className="card card-back rounded-0"
         style={{ backgroundColor: color }}
@@ -67,7 +63,18 @@ export default function LeadershipCard({
                   fontSize="1.2vw"
                   text="read bio"
                   onClick={() => setFlipped((prev) => !prev)}
-                  className="no-right-margin"
+                  className="no-right-margin dsktop"
+                />
+              </div>
+              <div className="p-0 w-auto h-100">
+                <ShadowedButton
+                  fillColor="white"
+                  yPad="0rem"
+                  xPad=".5rem"
+                  fontSize=""
+                  text="bio"
+                  onClick={() => setFlipped((prev) => !prev)}
+                  className="no-right-margin bio-text-mobile"
                 />
               </div>
             </Row>
