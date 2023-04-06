@@ -119,3 +119,11 @@ span {
     background-color: #FFBF3C;
     border-radius: 100%;
     }
+
+
+@media only screen and (max-device-width: 650px) {
+    .bar-size {
+        height: 16vw;
+        width: 80vw;
+    }
+}
