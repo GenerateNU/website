@@ -3,6 +3,41 @@
   padding: 0%;
 }
 
+.text-container {
+  /* generate */
+  display: inline;
+  position: relative;
+  margin-right: 30px;
+  /*width: 149.39vh;*/
+  width: 50vh;
+  height: 45.12vh;
+  left: 13.17vh;
+  top: calc(30vh - 90px);
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30.48vh;
+  line-height: 45.12vh;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.desktop {
+    
+    position: relative;
+    left: 8vw;
+    right: max(10vw, 75px);
+    top: max(35vh, 90px);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    
+}
+
 .shermancenter {
     /* position: absolute; */
     max-width: 100vw;
@@ -66,24 +101,7 @@
   
 }
 
-.desktop {
-  /* generate */
-  display: inline;
-  position: relative;
-  width: 149.39vh;
-  height: 45.12vh;
-  left: 13.17vh;
-  top: calc(30vh - 90px);
 
-  font-family: "Space Mono";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30.48vh;
-  line-height: 45.12vh;
-  text-transform: uppercase;
-
-  color: #ffffff;
-}
 
 /* css to render appropriate intro on desktop vs. mobile by setting display size params
 */
