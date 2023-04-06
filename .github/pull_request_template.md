@@ -32,5 +32,6 @@ Checked mobile version against live mobile version, and tested on multiple phone
  # Screenshots
 
  MY VERSION
- ![alt text](public/images/PRImages/Screen
- ![alt text](public/images/PRImages/TeamsScreenshot2.png.png?raw=true "SS 2")
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.32.35%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.32.54%20AM.png
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.33.19%20AM.png)
