@@ -1,115 +1,46 @@
-h2 {
-  font-family: "Space Mono 700";
-  font-size: 7vw;
-  line-height: 100%;
+.generateMascotContainer {
+  position: absolute;
+  right: 35%;
+  top: 10%;
 }
 
-h3 {
-  font-family: "Space Mono 700";
-  font-size: 6.5vw;
-  line-height: 100%;
+.generateMascot {
+  position: absolute;
+  margin: 0 auto;
 }
 
-h5 {
-  font-family: "Outfit 300";
-  font-size: 2.3vw;
-  line-height: 85%;
-}
-
-p {
-  font-family: "Outfit 300";
-  font-size: 1.5vw;
-  line-height: 150%;
-}
-
-.meet-the-team-style {
-  color: rgba(255, 255, 255, 0.2);
-  line-height: 55%;
-  margin-left: 6rem !important;
-}
-
-.logo {
-  max-width: 75%;
-  max-height: 75%;
+.our-culture-quote-positioning {
+  position: absolute;
+  right: 0%;
+  top: 43%;
+  min-height: 200px;
+  height: 20vh;
+  min-width: 400px;
+  width: 40vw;
 }
 
 .our-culture-quote {
   color: #a559ec;
   font-family: "Space Mono 700";
-  font-size: 4vw;
+  font-size: calc(12px + 2.5vw);
+  line-height: 110%;
   font-style: bold;
   text-transform: uppercase;
-  line-height: 110%;
 }
 
-.culture-quote-positioning {
-  left: 42%;
-  top: 43%;
-  width: 50%;
+.our-culture-big-positioning {
   position: absolute;
+  right: 50%;
+  bottom: 45%;
+  min-height: 200px;
+  height: 20vh;
+  min-width: 400px;
+  width: 40vw;
 }
 
-.intro-images {
-  z-index: 3;
-  min-width: 1088px;
+.our-culture-big {
+  color: #187dff;
+  font-family: "Space Mono 700";
+  font-size: calc(72px + 14vw);
+  line-height: 77%;
 }
-
-.img-1 {
-  top: 40%;
-  width: 30em;
-}
-
-/* todo: delete after move to public   */
-
-.fit-content {
-  height: fit-content;
-  width: fit-content;
-}
-
-.left-text-style {
-  text-align: right;
-}
-
-.parent-orgs-style {
-  word-spacing: 9999rem;
-}
-
-.our-history-text-style {
-  margin-top: -1rem;
-}
-
-.navbar-border {
-  border: 1px solid black;
-}
-
-.generateLogo {
-  margin-left: 130%;
-  margin-top: -33%;
-}
-
-.culture {
-  margin-top: -5%;
-}
-
-.generateLogo img {
-  max-height: 305px;
-  height: 90vh;
-}
-
-#our-culture-header {
-  font-size: min(40vh, 17vw);
-}
-
-@media only screen and (max-device-width: 650px) {
-
-  
-
-}
-
-
-
-
-
-
-
-
