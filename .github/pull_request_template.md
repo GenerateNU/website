@@ -1,18 +1,19 @@
 
  # What was the ticket?
- WT-42 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-42
+ WT-99 - I pulled in resizing changes for the Who We Are section.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-99 
  
  # What did I do?
  
-I changed some of the HTML/CSS properties of FP1 that included the Earnz Project.
+ I pulled in changes from the window-resizing branch and added tweaks for mobile support.
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
  Key Parts
- - I checked the behavior of the page at various mobile settings (iPhone SE, iPhone 12 Pro, iPhone XR, Pixel 5, Samsung Galaxy 8+, Samsung Galaxy S20 Ultra)
- - Made sure text remained clearly visible and as close as possible to the mobile UI.
+ - I compared the component to the  Figma at default size
+ - Tested clean resizing at max viewport width and min viewport height/min viewport width and max height
+ - Checked on multiple phone resolutions to ensure consistent resizing
  
  Required checks:
  
@@ -22,16 +23,19 @@ Describe in detail steps you used to test the changes you have made.
 
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
- Describe aspects of the PR that may become problems in the future.
+ Not much; simple changes made here
  Key Questions
  - Had to make specific changes at various screen dimensions. May need to make changes in the future to make it more generalizable.
  
  # Additional comments for the reviewers
+
+ The screenshots show bleeding from the previous Intro panel, but that is fixed in a different branch and has no bearing
+ on the efficacy of this PR.
  
  # Screenshots
- FIGMA
- ![alt text](public/images/PRImages/Figma_Earnz.png?raw=true "FIGMA") 
 
  MY VERSION
- ![alt text](public/images/PRImages/Earnz_SS_1.png?raw=true "LOCAL 1")
- ![alt text](public/images/PRImages/Earnz_SS_2.png?raw=true "LOCAL 2")
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.38.08%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.38.49%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.39.24%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.39.36%20AM.png)
