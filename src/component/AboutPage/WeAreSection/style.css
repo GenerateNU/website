@@ -1,7 +1,24 @@
 
 .value-card-sizing {
-    height: 30vh;
+    height: min(17vw, 200px);
     aspect-ratio: 1.2 / 1;
+}
+
+.our-mission-our-values {
+    color: #FFBF3C;
+    font-size: 5vh;
+    line-height: 100%;
+    font-family: 'Space Mono';
+    margin-right: 3%;
+}
+
+
+.our-mission-we-are {
+    color: #FFBF3C;
+    font-size: 25vmin;
+    line-height: 77%;
+    font-family: 'Space Mono 700';
+    word-spacing: -4vh;
 }
 
 .value-card-shadow {
@@ -11,17 +28,17 @@
 .value-card-header {
     color: white;
     font-family: 'Space Mono 700';
-    font-size: 200%;
+    font-size: min(2.3vw, 27px);
     line-height: 100%;
-    -webkit-text-stroke-width: 1.5px;
-    height: 20%;
+    -webkit-text-stroke-width: min(0.1vw, 1.2px);
+    height: 15%;
 }
 
 .value-card-text {
     color: white;
     font-family: 'Outfit 300';
-    font-size: 100%;
-    line-height: 140%;
+    font-size: min(1vw, 13px);
+    line-height: min(1.5vw, 20px);
     height: 80%;
     padding: 5%;
 }
@@ -60,19 +77,11 @@
 }
 
 .we-are-header-space {
-    height: 10vh;
+    height: 6vh;
 }
 
 .cards-space {
-    width: 60%;
-}
-
-.our-mission-our-values {
-    color: #FFBF3C;
-    font-size: 1.7vw;
-    line-height: 100%;
-    font-family: 'Space Mono';
-    margin-right: 3%;
+    width: 60vw;
 }
 
 @media only screen and (max-device-width: 650px) {
@@ -83,6 +92,15 @@
 
     .we-are-header-space {
         height: 7vh;
+    }
+
+    .value-card-shadow {
+        box-shadow: .10rem .12rem;
+    }
+
+    .value-card-text {
+        font-size: 5vw;
+        line-height: 7vw;
     }
 
     .our-mission-our-values {
@@ -100,6 +118,10 @@
         align-items: center;
     }
 
+    .value-card-header {
+        font-size: 10vw;
+    }
+
     .value-card-sizing {
         width: 85vw;
         aspect-ratio: 1.2 / 1;
@@ -108,7 +130,7 @@
 
     .value-card:not(:last-child) {
         padding-right: .5rem;
-        padding-bottom: 5%;
+        padding-bottom: 10%;
     }
     
     .value-card:last-child {
