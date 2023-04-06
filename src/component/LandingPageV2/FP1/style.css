@@ -117,3 +117,360 @@ h1 {
   line-height: 9vh;
   text-transform: uppercase;
 }
+
+@media only screen and (min-aspect-ratio: 6/10) {
+  .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20vh;
+    background-color: white;
+  }
+  
+  .column-1 {
+    width: 60vh;
+    margin-top: -5vh;
+  }
+  
+  .column-1-text {
+    padding-top: 15vh;
+    padding-left: 25vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column-2 {
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column-3 {
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .client {
+    width: 50vh;
+    flex-direction: row;
+    padding-top: 3%;
+  }
+  
+  .client-text {
+    font-family: Outfit 500;
+    font-size: 3vh;
+    line-height: 3vh;
+    ;
+    font-weight: 700;
+    padding-right: 2vh;
+  }
+  
+  .name-text {
+    font-family: Outfit 500;
+    font-size: 3vh;
+  }
+  
+  .school {
+    font-family: Outfit 500;
+    font-size: 2vh;
+    text-transform: uppercase;
+  }
+  
+  .name-order {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10vh;
+  }
+  
+  .client-blurb {
+    width: 40vh;
+    padding-top: 6vh;
+    align-self: flex-end;
+    font-size: 3vh;
+  }
+  
+  .bottom-corner {
+    padding-bottom: 5vh;
+    align-self: flex-start;
+  }
+  
+  .bottom-corner-img {
+    margin-top: -23vh;
+    margin-left: 10vh;
+    height: 25vh;
+  }
+  
+  .product-img {
+    /* position: absolute; */
+    height: 80vh;
+    margin-top: -8vh;
+    margin-left: -4vh;
+    min-height: 100%;
+  }
+  
+  .product-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-left: 14vh;
+    margin-top: 14vh;
+  }
+  
+  .top-corner {
+    align-self: flex-end;
+    height: 40vh;
+  }
+  
+  .top-corner-img {
+    margin-top: 5vh;
+    margin-right: 8vh;
+    align-self: flex-end;
+    height: 25vh;
+  }
+  
+  blockquote {
+    font-family: "Outfit 300";
+    font-size: 2.5vh;
+    position: relative;
+    margin: 2vh;
+  }
+  
+  blockquote:before {
+    font-family: "Space Mono 700";
+    color: #ffbf3c;
+    position: absolute;
+    font-size: 6vh;
+    line-height: 1;
+    top: 0;
+    margin-left: -2vh;
+    left: -2vh;
+    content: "\201C";
+  }
+  
+  blockquote:after {
+    font-family: "Space Mono 700";
+    color: #ffbf3c;
+    position: absolute;
+    float: right;
+    font-size: 6vh;
+    margin-top: 2vh;
+    margin-right: 12vh;
+    line-height: 1;
+    right: 0vh;
+    bottom: -1vh;
+    content: "\201D";
+  }
+  
+  h1 {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 9vh;
+    line-height: 9vh;
+    text-transform: uppercase;
+  }
+  
+  .quote-container {
+    font-family: "Outfit 300";
+    font-size: 2.5vh;
+    position: relative;
+    margin: 2vh;
+    margin-left: 2vh;
+  }
+  
+  .block_quote {
+    margin-left: 13vh;
+  }
+}
+
+@media only screen and (max-device-width: 650px) {
+  /*.parent {*/
+  /*  flex-direction: column;*/
+  /*}*/
+  .column-1{
+    margin-left: -3vh;
+    margin-top: -3vh;
+  }
+
+  .client-blurb#fp1-client-blurb {
+    /*font-size: 2vh;*/
+    /* margin-left: 0.8vh; */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Outfit 300;
+    font-size: 2.5vh;
+    position: relative;
+  }
+
+  .product-img {
+    height: auto;
+    margin-top: 1vh;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    transform: translateX(17%);
+  }
+
+  #fp1-img-container {
+    padding-left: 0;
+  }
+
+  .quote-container#fp1-quote-container{
+    margin-left: -3.5vh;
+    margin-top: -1vh;
+    margin-bottom: -2vh;
+    width: 800px;
+    font-family: Outfit 300;
+    font-size: 2.5vh;
+    position: relative;
+  }
+
+  .column-3#fp1-c3 {
+    margin-left: 2.25vh;
+    margin-top: -4vh;
+    letter-spacing: normal;
+    font-family: Outfit 300;
+    font-size: 2.5vh;
+    position: relative;
+  }
+
+  #pageSeparator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: -1vh;
+    color:black;
+    opacity: 100%;
+    width: 75%;
+    margin-left: 2vh;
+    font-weight: bold;
+    height: 3px;
+
+  }
+
+  .column-3#fp1-quote-container{
+    letter-spacing: normal;
+  }
+
+  blockquote#fp1-client-blurb:before{
+    margin-left: 1.05vh;
+  }
+
+  blockquote#fp1-client-blurb:after {
+    margin-right: 37vh;
+    margin-bottom: -2vh;
+  }
+
+  blockquote:before{
+    color: white;
+  }
+
+  blockquote:after {
+    font-family: "Space Mono 700";
+    color: white;
+    position: absolute;
+    float: right;
+    font-size: 6vh;
+    margin-top: 2vh;
+    line-height: 1;
+    right: 0vh;
+    bottom: -1vh;
+    content: "\201D";
+  }
+
+  #earnPage{
+    margin-top: 6vh;
+    margin-left: -1vh;
+    font-family: Outfit 300;
+    font-size: 2.5vh;
+    position: relative;
+
+  }
+
+
+}
+
+  @media only screen and (device-width: 375px) and (device-height: 667px) {
+    .parent {
+      flex-direction: column;
+      padding-top: 3vh;
+      padding-bottom: 3vh;
+      padding-left: 6vh;
+    }
+
+    .column-1{
+      margin-left: -1.75vh;
+    }
+
+    .client-blurb#fp1-client-blurb{
+      /*padding-top: 2vh;*/
+      /*padding-bottom: 2vh;*/
+      /*padding-left: 3.5vh;*/
+      /*display: center;*/
+      font-family: Outfit 300;
+      font-size: 2.5vh;
+      position: relative;
+    }
+
+    .product-img {
+      /* position: absolute; */
+      height: auto;
+      margin-top: 1vh;
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 100%;
+      text-align: center;
+    }
+
+    .column-3#fp1-c3 {
+      margin-left: 2.7vh;
+      margin-top: -4vh;
+    }
+
+    .fp1-quote-container{
+      width: 55vh;
+    }
+
+  }
+
+    @media only screen and (device-width: 412px) and (device-height: 915px) {
+      .parent {
+        flex-direction: column;
+      }
+  
+      .client-blurb#fp1-client-blurb {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        /* padding-left: 4vh; */
+        padding-right: 4vh;
+        display: center;
+        font-family: Outfit 300;
+        font-size: 2.5vh;
+        position: relative;
+      }
+  
+      .product-img {
+        /* position: absolute; */
+      height: auto;
+      margin-top: 1vh;
+      /* margin-left: -0.5vh; */
+      min-height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 50%;
+      transform: translateX(10%);
+      }
+
+      blockquote#fp1-client-blurb:after {
+        margin-right: 37vh;
+        margin-bottom: -2vh;
+      }
+
+    }
+
+
+

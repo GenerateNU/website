@@ -13,7 +13,7 @@ const NavBar = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     return (
-        <div className="bg-light p-3 mb-5 d-flex fit-content border border-dark h-10 w-10">
+        <div className="bg-light p-3 mb-5 d-flex border border-dark h-10 w-10">
             {/* Todo : change the logo */}
             <a href="/"><img style={{width: '5vh', height: '5vh'}} src={GenerateLogo} /></a>
             <span className='p-3'><a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover' href="/apply">Apply</a></span>
@@ -60,9 +60,11 @@ const NavBar = () => {
                         </Col>
                         <Col xs={5} className='m-0 p-0 text-uppercase'>
                             <Row className='m-0 p-0'>
-                                <div className='disabled-font-style fit-content text-decoration-none text-black'>
+                            <a className='header-font-style fit-content text-decoration-none text-black'
+                                    href="/teams"
+                                >
                                     Teams
-                                </div>
+                                </a>
                             </Row>
                             <Row className='m-0 p-0'>
                                 <a className='header-font-style fit-content text-decoration-none text-black'

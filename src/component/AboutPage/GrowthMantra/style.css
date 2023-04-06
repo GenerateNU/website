@@ -34,7 +34,8 @@ a {
     left: 124px;
     margin-top: -230px;
     /* top: 288px; */
-
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
     /* H1 */
 
     font-family: 'Space Mono 700';

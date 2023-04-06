@@ -15,13 +15,16 @@ function HorizontalFooter() {
     <Container fluid className="footer-container">
       <Row>
         <div>
-          <div className="sherm">
-            <img
-              className="logo-placement logo-shadow"
-              src={GenerateLogo}
-              height="80%"
-              width="60%"
-            />
+        <div className="sherm">
+           <a href="https://generatenu.com/">
+               <img
+                  className="logo-placement"
+                  src={GenerateLogo}
+                  height="80%"
+                  width="60%"
+                  alt="Logo description" // Add alt text to the image for accessibility
+               />
+              </a>
           </div>
         </div>
       </Row>

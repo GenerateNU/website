@@ -19,8 +19,12 @@ const WhatWeOffer = () => {
         <div className="vh-20 text-uppercase text-center">
           <div
             className="w-100 text-uppercase software-hardware-style software-color py-3"
-            onMouseEnter={() => setShowSoftwareInfo(true)}
-            onMouseLeave={() => setShowSoftwareInfo(false)}
+            onClick={() => {
+              setShowSoftwareInfo(!showSoftwareInfo);
+              setShowHardwareInfo(false);
+            }}
+            /*onMouseEnter={() => setShowSoftwareInfo(true)}
+            onMouseLeave={() => setShowSoftwareInfo(false)}*/
           >
             Software
           </div>
@@ -30,7 +34,7 @@ const WhatWeOffer = () => {
           <div className="text-center">
             <div className="position-relative vh-30">
               <div
-                className="position-absolute bottom-0 text-black w-100 text-uppercase what-we-offer-style"
+                className="position-absolute bottom-0 p-1 text-black w-100 text-uppercase what-we-offer-style"
                 // onMouseEnter={() => setHighlightSoftware(true)}
                 // onMouseLeave={() => setHighlightSoftware(false)}
               >
@@ -53,8 +57,8 @@ const WhatWeOffer = () => {
                 <p className="p-5">
                   <strong className="info-heading">Web</strong>
                   <br />
-                  Website based platforms using HTML, CSS and tools 
-                  such as React and Heroku
+                  Website based platforms using HTML, CSS and tools such as
+                  React and Heroku
                 </p>
               </Col>
               <Col xs={4} className="p-6">
@@ -69,7 +73,8 @@ const WhatWeOffer = () => {
                 <p className="p-5">
                   <strong className="info-heading">Backend</strong>
                   <br />
-                  Systems that combine datastore persistence to power platform-specific tasks
+                  Systems that combine datastore persistence to power
+                  platform-specific tasks
                 </p>
               </Col>
             </Row>
@@ -115,8 +120,8 @@ const WhatWeOffer = () => {
                 <p className="p-5 text-white">
                   <strong className="info-heading">Prototypes</strong>
                   <br />
-                  Functional prototypes consisting of custom parts 
-                  integrated with off-the-shelf components
+                  Functional prototypes consisting of custom parts integrated
+                  with off-the-shelf components
                 </p>
               </Col>
               <Col xs={4} className="p-6">
@@ -132,8 +137,8 @@ const WhatWeOffer = () => {
                 <p className="p-5 text-white">
                   <strong className="info-heading">Handoff</strong>
                   <br />
-                  Comprehensive technical documentation 
-                  on the process and final product.
+                  Comprehensive technical documentation on the process and final
+                  product.
                 </p>
               </Col>
               <Col xs={4} className="p-6 pt-0">
@@ -147,7 +152,8 @@ const WhatWeOffer = () => {
                 <p className="p-5 text-white">
                   <strong className="info-heading">Testing</strong>
                   <br />
-                  Multiple rounds of functional testing and user testing for design feedback.
+                  Multiple rounds of functional testing and user testing for
+                  design feedback.
                 </p>
               </Col>
             </Row>
@@ -171,8 +177,12 @@ const WhatWeOffer = () => {
         <div className="position-relative vh-20 text-center">
           <div
             className="bg-black position-absolute bottom-0 w-100 text-uppercase software-hardware-style hardware-color py-3"
-            onMouseEnter={() => setShowHardwareInfo(true)}
-            onMouseLeave={() => setShowHardwareInfo(false)}
+            onClick={() => {
+              setShowHardwareInfo(!showHardwareInfo);
+              setShowSoftwareInfo(false);
+            }}
+            /*onMouseEnter={() => setShowHardwareInfo(true)}
+            onMouseLeave={() => setShowHardwareInfo(false)}*/
           >
             Hardware
           </div>

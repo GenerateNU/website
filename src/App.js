@@ -7,6 +7,7 @@ import AboutPage from './component/AboutPage';
 import ScrollToTop from './component/ScrollToTop';
 import LandingPageV2 from './component/LandingPageV2/';
 import CulturePage from "./component/CulturePage";
+import TeamsPage from "./component/TeamsPage";
 
 /**
  *
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/positions/:id" element={<Position />}></Route>
             <Route path="/about" element={<AboutPage />}></Route>
             <Route path="/culture" element={<CulturePage />}></Route>
+            <Route path="/teams" element={<TeamsPage />}></Route>
           </Routes>
         </div>
       </Router>

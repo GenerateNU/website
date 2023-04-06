@@ -1,35 +1,88 @@
 .logo {
-  width: 18.75vh;
-  padding: 4vh;
+  width: 25vmin;
+  padding: 4vmin;
   object-fit: contain;
+
+}
+
+.image {
+  width: 25vmin;
+  height: auto;
+}
+
+.image-tall {
+  width: 12.5vmin;
+  height: auto;
 }
 
 .prev-proj-wrapper {
   background-color: #111111;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
   display: flex;
+  /*height: 65%;*/
   flex-direction: row;
-  justify-content: space-between;
-  margin-left: 10%;
-  margin-top: 7%;
+  justify-content: space-evenly;
+  align-items: center;
+  /*margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 7%;*/
+  column-gap: 20vw;
 }
 
 .col-1 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+
+
 }
 
 .col-2 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 
 .col-3 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+
+
+@media only screen and (max-device-width: 650px) {
+  .prev-proj-wrapper .wrapper {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .prev-proj-wrapper .logo {
+    max-width: unset;
+    max-height: unset;
+    width: unset;
+    padding: 0;
+  }
+
+  .prev-proj-wrapper .col-1,
+  .prev-proj-wrapper .col-2,
+  .prev-proj-wrapper .col-3 {
+    align-items: center;
+    width: unset;
+  }
+
+  .prev-proj-wrapper .logo img {
+    width: 75vw;
+  }
 }

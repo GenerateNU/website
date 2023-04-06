@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 import NavBar from "../../NavBar";
-import ScrollButton from "../../../assets/images/landingpage-v2/scroll button.png";
 
 /**
  * Added "MOBILE PAGE COMING SOON" element to display on mobile
@@ -13,7 +12,7 @@ export default function Introduction() {
     <div className="introductionContainer">
         <div className="shermancenter">
           <div className="intro-navbar"><NavBar /> </div>
-          <div class="desktop">
+          <div className="text-container desktop">
             <p className="wearetext">WE ARE</p>
             <p className="generatetext">GENERATE</p>
           </div>
@@ -24,6 +23,7 @@ export default function Introduction() {
             <p className="productdevelopment">product development</p>
             <p className="studio">studio</p>
             <p className="scrollmobile">scroll</p>
+            <p className="comingsoontext">MOBILE PAGE COMING SOON!</p>
           </div>
         </div>
       </div>
