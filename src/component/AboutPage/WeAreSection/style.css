@@ -1,6 +1,6 @@
 
 .value-card-sizing {
-    height: min(20vw, 350px);
+    height: min(17vw, 200px);
     aspect-ratio: 1.2 / 1;
 }
 
@@ -15,7 +15,7 @@
 
 .our-mission-we-are {
     color: #FFBF3C;
-    font-size: 25vh;
+    font-size: 25vmin;
     line-height: 77%;
     font-family: 'Space Mono 700';
     word-spacing: -4vh;
@@ -28,17 +28,17 @@
 .value-card-header {
     color: white;
     font-family: 'Space Mono 700';
-    font-size: min(2.7vw, 50px);
+    font-size: min(2.3vw, 27px);
     line-height: 100%;
-    -webkit-text-stroke-width: min(0.1vw, 1.5px);
+    -webkit-text-stroke-width: min(0.1vw, 1.2px);
     height: 15%;
 }
 
 .value-card-text {
     color: white;
     font-family: 'Outfit 300';
-    font-size: min(1.2vw, 25px);
-    line-height: min(2.15vw, 35px);
+    font-size: min(1vw, 13px);
+    line-height: min(1.5vw, 20px);
     height: 80%;
     padding: 5%;
 }
