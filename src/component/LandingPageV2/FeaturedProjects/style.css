@@ -48,8 +48,8 @@ h2 {
   }
   .projects-container {
     font-size: 8em;
-    text-align: center;
-    padding: 4.2vw;
+    text-align: left;
+    max-width: 90vw;
   }
   .blurb-container {
     text-align: left;

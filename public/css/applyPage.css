@@ -529,7 +529,8 @@ a {
   }
 
   .ap_mobile {
-    display: block;
+    display: inline;
+    height: 100vh;
   }
 
   .toggle-container {
