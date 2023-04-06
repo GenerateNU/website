@@ -4,6 +4,9 @@
   -webkit-text-stroke-width: 2px;
 }
 
+.events-container {
+  width: max(75vw, 600px);
+}
 .events-top {
   color: #a2a2a2;
   font-family: "Space Mono";
@@ -13,21 +16,21 @@
 
 .events-header {
   font-family: "Space Mono";
-  font-size: 20vw;
-  line-height: 77%;
+  font-size: max(18vw, 40px);
+  line-height: 100%;
   color: #ff6660;
 }
 
 .events-picture-container {
-  font-size: 65vw;
-  line-height: 77%;
+  width: 100%;
+  /*width: max(100vw, 600px);*/
 }
 
 .retreat-title {
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 10vh;
   margin-top: 81%;
   text-transform: uppercase;
   color: #a559ec;
