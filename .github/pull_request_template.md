@@ -29,8 +29,10 @@ Describe in detail steps you used to test the changes you have made.
  
  # Screenshots
  FIGMA
- ![alt text](public/images/PRImages/Figma_Earnz.png?raw=true "FIGMA") 
+ ![alt text](public/images/PRImages/FigmaMountains.png?raw=true "FIGMA") 
 
  MY VERSION
- ![alt text](public/images/PRImages/Earnz_SS_1.png?raw=true "LOCAL 1")
- ![alt text](public/images/PRImages/Earnz_SS_2.png?raw=true "LOCAL 2")
+ ![alt text](public/images/PRImages/Mountains1.png?raw=true "LOCAL 1")
+ ![alt text](public/images/PRImages/Mountains2.png?raw=true "LOCAL 2")
+  ![alt text](public/images/PRImages/Mountains3.png?raw=true "LOCAL 3")
+   ![alt text](public/images/PRImages/Mountains4.pngraw=true "LOCAL 4")
