@@ -1,19 +1,22 @@
 
  # What was the ticket?
- WT-42 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-42
+ WT-2 - No specific ticket, but pulled in resizing changes for WeAreResponse section.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-2 
  
  # What did I do?
  
-I changed some of the HTML/CSS properties of FP1 that included the Earnz Project.
+ I pulled in changes from window-resizing, and used a span tag to implement the outline for "Some Say" in the green rectangle.
+ I also updated the text to match the Figma.
+ Also pulled in relevant changes for mobile.
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
- Key Parts
- - I checked the behavior of the page at various mobile settings (iPhone SE, iPhone 12 Pro, iPhone XR, Pixel 5, Samsung Galaxy 8+, Samsung Galaxy S20 Ultra)
- - Made sure text remained clearly visible and as close as possible to the mobile UI.
  
+ - I checked that the Figma matched at the default size.
+ - I ensured that the page resized well at low viewport width/high height and low height/high widths.
+ - I ensured that the page did not bleed at high and low magnifications.
+ - I checked the page on various phone sizes.
  Required checks:
  
  - [Yes] Did you conduct a self-review?
