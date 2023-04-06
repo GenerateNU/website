@@ -271,6 +271,21 @@ a {
       /* background-position: bottom; */
     }
 
+    @media only screen and (max-device-height: 800px) {
+      .mountain-image{
+        text-align: center;
+        z-index: 20;
+        width: auto;
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        transform: scale(1.5);
+        transform: translate(-5%, -80%);
+        /* position: fixed; */
+        /* background-position: bottom; */
+      }
+    }
+
   }
   
 
