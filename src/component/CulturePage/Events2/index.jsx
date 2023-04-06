@@ -9,10 +9,10 @@ const Events2 = () => {
         <div class="row gx-5">
           <div class="col ps-5 pe-5">
             <div class ="shiftLeft">
-              <div className = "MoraleBudgetTitle">
-              <p className="text-uppercase moral-budget-title">
+              <div className = "moral-budget-title">
+              <div className="text-uppercase moral-budget-title">
                 morale&nbsp;budget
-              </p>
+              </div>
               </div>
               <div className = "MoraleBudget">
               <p className="t-4 r-3 l-5 moral-budget-text">
@@ -22,9 +22,8 @@ const Events2 = () => {
             </div>
           </div>
 
-          <div class="col ps-5 pe-5 inclined-img-container">
+          <div class="col ps-5 pe-5 d-flex flex-column justify-content-center inclined-img-container">
             <div className="celebrate-rep-container">
-              {" "}
               <img className="inclined-image" src={CelebrateRepresent} alt="" />
             </div>
           </div>
