@@ -159,6 +159,12 @@
   color: #ffffff;
 }
 
+@media only screen and (max-device-width: 376px) {
+  .comingsoontext {
+    left: 6.5rem;
+  }
+}
+
 .desktop {
   /* generate */
   display: inline;
