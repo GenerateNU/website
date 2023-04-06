@@ -9,12 +9,10 @@ const Events2 = () => {
         <div class="row gx-5">
           <div class="col ps-5 pe-5">
             <div class ="shiftLeft">
-              <div className = "moral-budget-title">
-              <div className="text-uppercase moral-budget-title">
-                morale&nbsp;budget
-              </div>
-              </div>
               <div className = "MoraleBudget">
+              <p className="text-uppercase moral-budget-title">
+                morale budget
+              </p>
               <p className="t-4 r-3 l-5 moral-budget-text">
                 Our engagement team empowers members every semester by giving them a designated budget to spend together as teammates. What you choose to do with that budget is up to you, but you can bet itll be a good time! Teams go ax throwing, bowling, escape-room-ing, or anything else they can think of! 
               </p>
@@ -22,7 +20,7 @@ const Events2 = () => {
             </div>
           </div>
 
-          <div class="col ps-5 pe-5 d-flex flex-column justify-content-center inclined-img-container">
+          <div class="col ps-5 pe-5 d-flex vh-100 flex-column justify-content-center inclined-img-container">
             <div className="celebrate-rep-container">
               <img className="inclined-image" src={CelebrateRepresent} alt="" />
             </div>
