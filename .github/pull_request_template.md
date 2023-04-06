@@ -1,37 +1,43 @@
 
  # What was the ticket?
- WT-101 - Fixing Product Dev Lifecycle resizing
- Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-101 
+
+ WT-2 - No specific ticket, but pulled in resizing changes for WeAreResponse section.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-2 
  
  # What did I do?
  
- Pulled changes from window-resizing branch into new branch
- Had to redo mobile CSS, since it was not compatible with the new JSX and CSS styling
+ I pulled in changes from window-resizing, and used a span tag to implement the outline for "Some Say" in the green rectangle.
+ I also updated the text to match the Figma.
+ Also pulled in relevant changes for mobile.
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
-
-Compared against performance on window-resizing branch
-Checked whether any text/circles bled at minimum viewport width and max height, as well as at low and high zooms
-Checked mobile version against live mobile version, and tested on multiple phone resolutions
  
+ - I checked that the Figma matched at the default size.
+ - I ensured that the page resized well at low viewport width/high height and low height/high widths.
+ - I ensured that the page did not bleed at high and low magnifications.
+ - I checked the page on various phone sizes.
  Required checks:
  
  - [Yes] Did you conduct a self-review?
- - [N/A] Have you written unit or integration tests?
+ - [Yes] Have you written unit or integration tests?
 =======
 
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
  Describe aspects of the PR that may become problems in the future.
- - Current wheel SVG's are dealt with individually, since each wheel takes up a _different amount of space_ on each SVG. In the future, the SVGs should be standardized.
+ New CSS selector added for Some Say text, used in the span
  
  # Additional comments for the reviewers
+ The intro text bleeds over in one of the screenshots, but this is fixed on a different branch.
  
  # Screenshots
 
  MY VERSION
- ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.32.35%20AM.png)
- ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.32.54%20AM.png
- ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.33.19%20AM.png)
+
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.01.53%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.03%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.11%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%202.02.27%20AM.png)
+
