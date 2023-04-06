@@ -85,6 +85,10 @@
         height: 7vh;
     }
 
+    .value-card-shadow {
+        box-shadow: .10rem .12rem;
+    }
+
     .our-mission-our-values {
         font-size: 2vh;
         margin-right: 10vh;
@@ -100,6 +104,10 @@
         align-items: center;
     }
 
+    .value-card-header {
+        font-size: 10vw;
+    }
+
     .value-card-sizing {
         width: 85vw;
         aspect-ratio: 1.2 / 1;
@@ -108,7 +116,7 @@
 
     .value-card:not(:last-child) {
         padding-right: .5rem;
-        padding-bottom: 5%;
+        padding-bottom: 10%;
     }
     
     .value-card:last-child {
