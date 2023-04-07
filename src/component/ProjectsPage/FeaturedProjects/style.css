@@ -1,3 +1,8 @@
+.projects-page-container {
+    min-width: 1107px;
+    width: calc(100vw - 36vh);
+}
+
 .featured-projects {
     width: 100vw;
     display: flex;
@@ -21,12 +26,12 @@
 
 .featured-projects-text {
     margin-left: 4%;
-    width: 40%;
+    width: min-content;
     min-width: 396px;
     margin-top: -3%;
 }
 
-.projects-down img {
+.projects-back img {
     transform: rotate(180deg);
 }
 
@@ -42,7 +47,7 @@
     box-shadow: -.5rem .6rem;
 }
 
-.projects-up {
+.projects-forward {
     margin-right: 40px;
 }
 
@@ -86,4 +91,86 @@
     font-size: 3vh;
     padding: 2% 20%;
     margin-top: 45%;
+}
+
+.projects-mobile {
+    display: none;
+}
+
+@media only screen and (max-device-width: 650px) {
+    .projects-page-container {
+        min-width: unset;
+        width: unset;
+    }
+
+    .projects-forward img {
+        transform: rotate(270deg);
+    }
+    .projects-back img {
+        transform: rotate(90deg);
+    }
+
+    .featured-projects {
+        flex-direction: column;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .featured-projects-text {
+        width: unset;
+    }
+
+    .projects-text {
+        max-width: unset;
+    }
+
+    .project img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projects-desktop {
+        display: none;
+    }
+
+    .projects-mobile {
+        display: block;
+    }
+
+    .featured-project-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 4%;
+    }
+
+    .project-team {
+        margin-top: -15%;
+    }
+
+    .project-text p {
+        max-width: unset;
+        margin: 5% 10%;
+    }
+
+    .view-project-button {
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+
+    .view-project-div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .projects-title {
+        font-size: 6vh;
+    }
+
+    .projects-button {
+        width: 120px;
+        height: 120px;
+    }
 }
