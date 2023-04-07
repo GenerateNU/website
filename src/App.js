@@ -1,11 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPage from './component/LandingPage/';
-import ApplyPage from './component/ApplyPage';
-import Position from './component/ApplyPage/Position';
-import AboutPage from './component/AboutPage';
-import ScrollToTop from './component/ScrollToTop';
-import LandingPageV2 from './component/LandingPageV2/';
+import ApplyPage from "./component/ApplyPage";
+import Position from "./component/ApplyPage/Position";
+import AboutPage from "./component/AboutPage";
+import ScrollToTop from "./component/ScrollToTop";
+import LandingPageV2 from "./component/LandingPageV2/";
 import CulturePage from "./component/CulturePage";
 import TeamsPage from "./component/TeamsPage";
 import ProjectsPage from "./component/ProjectsPage";
