@@ -28,8 +28,8 @@
 .mission-navbar-container {
     position:fixed;
     z-index: 4;
-    margin-left: 3%;
-    padding-top: 2%;
+    left: 1.5%;
+    top: 3%;
 
 }
 
