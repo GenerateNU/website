@@ -66,15 +66,15 @@ export default function LeadershipCard({
                   className="no-right-margin dsktop"
                 />
               </div>
-              <div className="p-0 w-auto h-100">
+              <div className="p-0 w-auto h-100 d-flex">
                 <ShadowedButton
                   fillColor="white"
                   yPad="0rem"
-                  xPad=".5rem"
-                  fontSize=""
+                  xPad="4rem"
+                  fontSize="3vw"
                   text="bio"
                   onClick={() => setFlipped((prev) => !prev)}
-                  className="no-right-margin bio-text-mobile"
+                  className="mob s-butt-mob no-right-margin"
                 />
               </div>
             </Row>

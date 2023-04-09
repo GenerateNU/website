@@ -23,7 +23,10 @@ export default function Leadership() {
             .reverse()}
         </div>
       </Container>
-      <Container fluid className="bg-black vh-225 vw-100 position-relative">
+      <Container
+        fluid
+        className="mob bg-black container-h vw-100 position-relative"
+      >
         <Row className="vh-15 p-5">
           <h3 className="leadership-heading">Leadership</h3>
           <h2 className="meet-the-team">Meet the team</h2>
