@@ -60,3 +60,15 @@
   padding: 5rem;
   margin-top: 10%;
 }
+
+.software-hardware-style {
+  font-family: "Space Mono 700";
+  font-size: 5vw;
+  line-height: 100%;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .software-hardware-style {
+    font-size: max(6vw, 6vh);
+  }
+}

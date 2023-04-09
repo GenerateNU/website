@@ -1,39 +1,52 @@
 
  # What was the ticket?
- WT-65 - Andy and Sebastian worked on implementing the Teams page based on the figma diagram
- Link to Ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-65
+
+ WT-99 - I pulled in resizing changes for the Who We Are section.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-99 
  
  # What did I do?
  
-Created a new Teams component and routed it to "/teams"
-Ensured the page was based off the design in the figma and followed standards
-present in the rest of the website, like horizontal scrolling, and smooth resizing
+ I pulled in changes from the window-resizing branch and added tweaks for mobile support.
  
  # How did I test it?
  
 Describe in detail steps you used to test the changes you have made.
 
-Compared page in Figma with created page to ensure same structure was kept
-For resizing, looked at smallest possible size to ensure the page looked nice even at that ratio
+ Key Parts
+ - I compared the component to the  Figma at default size
+ - Tested clean resizing at max viewport width and min viewport height/min viewport width and max height
+ - Checked on multiple phone resolutions to ensure consistent resizing
+
  
+ - I checked that the Figma matched at the default size.
+ - I ensured that the page resized well at low viewport width/high height and low height/high widths.
+ - I ensured that the page did not bleed at high and low magnifications.
+ - I checked the page on various phone sizes.
  Required checks:
  
  - [Yes] Did you conduct a self-review?
- - [N/A] Have you written unit or integration tests?
+ - [Yes] Have you written unit or integration tests?
 =======
 
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
- Describe aspects of the PR that may become problems in the future.
- - None of the pictures are mapped to any of the specific teams pages, since those haven't been made yet
- - Used placeholder images that need to be replaced
+
+ Not much; simple changes made here
+ Key Questions
+ - Had to make specific changes at various screen dimensions. May need to make changes in the future to make it more generalizable.
  
  # Additional comments for the reviewers
+
+ The screenshots show bleeding from the previous Intro panel, but that is fixed in a different branch and has no bearing
+ on the efficacy of this PR.
+
  
  # Screenshots
- FIGMA
- ![alt text](public/images/PRImages/FigmaScreenshot.png?raw=true "FIGMA") 
 
  MY VERSION
- ![alt text](public/images/PRImages/TeamsScreenshot1.png?raw=true "SS 1")
- ![alt text](public/images/PRImages/TeamsScreenshot2.png.png?raw=true "SS 2")
+
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.38.08%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.38.49%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.39.24%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.39.36%20AM.png)
+
