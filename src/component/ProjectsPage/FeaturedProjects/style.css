@@ -57,10 +57,9 @@
 }
 
 .project img {
-  width: 50%;
-  height: 25%;
-  min-width: 390px;
-  min-height: 556px;
+  max-width: 40vw;
+  max-height: 56vh;
+  object-fit: contain;
 }
 
 .project-text h1 {
@@ -95,6 +94,13 @@
 
 .projects-mobile {
   display: none;
+}
+
+.projects {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-device-width: 650px) {
@@ -147,7 +153,7 @@
   }
 
   .project-team {
-    margin-top: -15%;
+    margin-top: -10%;
   }
 
   .project-text p {

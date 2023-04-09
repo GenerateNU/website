@@ -18,8 +18,8 @@ export default function FeaturedProjects() {
           </p>
           <div className="featured-project-buttons">
             <div className="projects-mobile">
-              <h1 className="earnz-header">Earnz</h1>
-              <h2 className="project-team">software</h2>
+              <h1>Earnz</h1>
+              <h2>software</h2>
             </div>
             <div className="projects-buttons">
               <button className="projects-button projects-forward">
