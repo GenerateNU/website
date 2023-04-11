@@ -26,3 +26,4 @@ package-lock.json
 .vscode/settings.json
 
 .idea/
+.vscode/
