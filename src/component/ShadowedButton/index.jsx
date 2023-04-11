@@ -11,11 +11,9 @@ export default function ShadowedButton(props) {
     };
 
     const handleOnClick=() => {
-        console.log('hdhgashjdcgshg')
        const name = props.lnk;
        const key = name.replace(" ", "_");
        const POSITIONS_URL = 'Position_' + key;
-       console.log('hdhgashjdcgshg')
        window.location.assign(constants[POSITIONS_URL]);
     }
 
