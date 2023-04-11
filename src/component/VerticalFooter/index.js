@@ -85,7 +85,7 @@ function SocialIcon({ href, imgSrc }) {
   return (
     <Col className="icon">
       <a href={href}>
-        <img src={imgSrc} height="30vh" width="30vw" />
+        <img className={"social-media"} src={imgSrc}/>
       </a>
     </Col>
   );
