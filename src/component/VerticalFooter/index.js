@@ -97,52 +97,53 @@ function VerticalFooter() {
         </span>
         <div className="social-icons">
           <Row>
-            <Col className="icon">
+            <Col className="icon" id="ig">
               <a href="https://www.instagram.com/generatenu/">
                 {" "}
-                <img src={InstaIcon} height="30vh" width="30vw" />{" "}
+                <img className="social-media" src={InstaIcon}/>{" "}
               </a>
             </Col>
+            <Col className="spacer"></Col>
           </Row>
           <Row>
-            <Col className="icon">
+            <Col className="icon" id="youtube">
               <a href="https://www.youtube.com/channel/UC2Y_rgZiPKPH0lSU1FyQJFw/featured">
                 {" "}
-                <img src={YoutubeIcon} height="30vh" width="30vw" />{" "}
+                <img className="social-media" src={YoutubeIcon}/>{" "}
               </a>
             </Col>
-            <Col className="icon">
+            <Col className="icon" id="neu">
               <a href="https://coe.northeastern.edu/orgs/generate/">
                 {" "}
-                <img src={NortheasternIcon} height="30vh" width="30vw" />
+                <img className="social-media" src={NortheasternIcon}/>
               </a>
             </Col>
           </Row>
           <Row>
-            <Col className="icon">
+            <Col className="icon" id="linkedin">
               <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
                 {" "}
-                <img src={LinkedInIcon} height="30vh" width="30vw" />
+                <img className="social-media" src={LinkedInIcon}/>
               </a>
             </Col>
-            <Col className="icon">
+            <Col className="icon" id="mosaic">
               <a href="https://entrepreneurship.northeastern.edu/mosaic/">
                 {" "}
-                <img src={MosaicIcon} height="30vh" width="30vw" />{" "}
+                <img className="social-media" src={MosaicIcon}/>{" "}
               </a>
             </Col>
           </Row>
           <Row>
-            <Col className="icon">
+            <Col className="icon" id="fb">
               <a href="https://www.facebook.com/GenerateNU/">
                 {" "}
-                <img src={FbIcon} height="30vh" width="30vw" />
+                <img className="social-media" src={FbIcon}/>
               </a>
             </Col>
-            <Col className="icon">
+            <Col className="icon" id="sherm">
               <a href="https://sherman.center.northeastern.edu/">
                 {" "}
-                <img src={Sherm} height="30vh" width="30vw" />
+                <img className="social-media" src={Sherm}/>
               </a>
             </Col>
           </Row>
