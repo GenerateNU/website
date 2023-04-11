@@ -1,52 +1,35 @@
 
  # What was the ticket?
 
- WT-99 - I pulled in resizing changes for the Who We Are section.
- Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-99 
+No ticket - Jeremy asked to raise up the navbar so that it does not bleed into the our mission text.
  
  # What did I do?
  
- I pulled in changes from the window-resizing branch and added tweaks for mobile support.
+ I changed the styling in the navbar container div to have a small left and top positioning value.
  
  # How did I test it?
  
-Describe in detail steps you used to test the changes you have made.
-
- Key Parts
- - I compared the component to the  Figma at default size
- - Tested clean resizing at max viewport width and min viewport height/min viewport width and max height
- - Checked on multiple phone resolutions to ensure consistent resizing
-
- 
- - I checked that the Figma matched at the default size.
- - I ensured that the page resized well at low viewport width/high height and low height/high widths.
- - I ensured that the page did not bleed at high and low magnifications.
- - I checked the page on various phone sizes.
- Required checks:
- 
- - [Yes] Did you conduct a self-review?
- - [Yes] Have you written unit or integration tests?
-=======
+ I altered the dimensions of the screen to maximumx width and maximum height and checked whether the navbar overlapped with text, and also
+ inspected at minimum and maximum zoom.
 
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
  
+ Ultimately, this change can only fully be ironed out when the new navbar is pushed to main. That navbar has different dimensions which make it much easier
+ to fit alongside text. Furthermore, the weare-cards-resizing branch also changes some of the text spacing on the OurMissionSection page to make the text fit better, so more work may be needed in the future to precisely arrange everything. However, that work must be done after the About section is fully updated.
 
- Not much; simple changes made here
- Key Questions
- - Had to make specific changes at various screen dimensions. May need to make changes in the future to make it more generalizable.
  
  # Additional comments for the reviewers
 
- The screenshots show bleeding from the previous Intro panel, but that is fixed in a different branch and has no bearing
- on the efficacy of this PR.
 
  
  # Screenshots
 
  MY VERSION
 
- ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.38.08%20AM.png)
- ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.38.49%20AM.png)
- ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.39.24%20AM.png)
- ![alt text](../public/images/PRImages/Screenshot%202023-04-06%20at%201.39.36%20AM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-08%20at%203.16.38%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-08%20at%203.16.48%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-08%20at%203.16.38%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-08%20at%203.16.58%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-08%20at%203.17.11%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-08%20at%203.17.28%20PM.png)
 
