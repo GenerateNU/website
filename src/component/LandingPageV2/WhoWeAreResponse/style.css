@@ -1,81 +1,80 @@
-.whoWeAreResponseContainer{
-    width: 70%;
-    margin:0%;
-    padding: 0%;
+.whoWeAreResponseContainer {
+  width: 70%;
+  margin: 0%;
+  padding: 0%;
 }
 
-.greenrectangle{
-    /* width: 70%; */
-    height: 60vh;
-    background:  #6FCF97;;
+.greenrectangle {
+  /* width: 70%; */
+  height: 60vh;
+  background: #6fcf97;
 }
 
-.yellowrectangle{
-    /* width: 70%; */
-    height: 40vh;
-    background: #FFBF3C;;
+.yellowrectangle {
+  /* width: 70%; */
+  height: 40vh;
+  background: #ffbf3c;
 }
 
 .somesaytext {
-font-family: 'Space Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 7.5vmin;
-line-height: 6vmax;
-/* identical to box height, or 128% */
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7.5vmin;
+  line-height: 6vmax;
+  /* identical to box height, or 128% */
 
-text-transform: uppercase;
-color: #6FCF97;
--webkit-text-stroke-width: 2px;
--webkit-text-stroke-color: white;
+  text-transform: uppercase;
+  color: #6fcf97;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
 }
 
-
 .weareresponse {
-    padding: 5%;
-    padding-top: 7%;
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 7.5vmin;
-    line-height: 6vmax;
-    text-transform: uppercase;
-    color: white;
-    overflow-wrap: break-word;
+  padding: 5%;
+  padding-top: 7%;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7.5vmin;
+  line-height: 6vmax;
+  text-transform: uppercase;
+  color: white;
+  overflow-wrap: break-word;
 }
 
 .generateLogoWhiteStyle {
-    padding: 2%;
-    height: 40vh;
-    object-fit: contain;
+  padding: 2%;
+  height: 40vh;
+  object-fit: contain;
 }
 
 .logo-mobile {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-device-width: 650px) {
-    .whoWeAreResponseContainer {
-        width: 100%;
-    }
+  .whoWeAreResponseContainer {
+    width: 100%;
+  }
 
-    .yellowrectangle {
-        height: 30vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+  .yellowrectangle {
+    height: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
-    .greenrectangle {
-        height: 40vh;
-    }
+  .greenrectangle {
+    height: 40vh;
+  }
 
-    .generateLogoWhiteStyle {
-        width: 25vw;
-        height: auto;
-    }
+  .generateLogoWhiteStyle {
+    width: 25vw;
+    height: auto;
+  }
 
-    .logo-mobile {
-        display: contents;
-    }
+  .logo-mobile {
+    display: contents;
+  }
 }
