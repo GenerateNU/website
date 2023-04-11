@@ -133,7 +133,8 @@ function VerticalFooter() {
                     imgSrc={icon.imgSrc}
                   />
                   {icon.href.includes("instagram") && (
-                  <Col className={"spacer"}></Col>)}
+                    <Col className={"spacer"}></Col>
+                  )}
                 </>
               ))}
             </Row>
