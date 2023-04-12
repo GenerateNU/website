@@ -22,6 +22,7 @@
 .software-color {
   color: #187dff;
 }
+
 .software-color:hover {
   color: white;
   -webkit-text-stroke: 2px #187dff;
@@ -70,5 +71,23 @@
 @media only screen and (max-device-width: 650px) {
   .software-hardware-style {
     font-size: max(6vw, 6vh);
+  }
+
+  .software-color {
+    text-decoration: underline;
+  }
+
+  .software-color:hover {
+    color: #187dff;
+    -webkit-text-stroke: initial;
+  }
+
+  .hardware-color {
+    text-decoration: underline;
+  }
+
+  .hardware-color:hover {
+    color: #ff5751;
+    -webkit-text-stroke: initial;
   }
 }
