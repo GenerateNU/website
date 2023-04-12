@@ -1,0 +1,15 @@
+
+.paragraph-title {
+    font-family: "Space Mono 700";
+    text-transform: capitalize;
+    color: black;
+    font-size: 10vh;
+    line-height: 5vw;
+}
+
+.paragraph-text {
+    font-family: "Space Mono";
+    color: black;
+    font-size: 5vh;
+    line-height: 2vw;
+}
