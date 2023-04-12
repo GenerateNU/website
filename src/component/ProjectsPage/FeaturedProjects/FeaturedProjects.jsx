@@ -7,18 +7,10 @@ import Projects from "../../../data/featuredProjectData.js";
 export default function FeaturedProjects() {
   const [currentProject, setCurrentProject] = useState(Projects[0]);
 
-  const handleNextProject = () => {
+  const handleProject = (dir) => {
     const currentIndex = Projects.indexOf(currentProject);
-    const nextIndex = (currentIndex + 1) % Projects.length;
-    setCurrentProject(Projects[nextIndex]);
-  };
-
-  const handlePreviousProject = () => {
-    const currentIndex = Projects.indexOf(currentProject);
-    const previousIndex =
-      (currentIndex - 1 + Projects.length) % Projects.length;
-    setCurrentProject(Projects[previousIndex]);
-  };
+    setCurrentProject(Projects[(currentIndex + dir + Projects.length) % Projects.length]) 
+  }
 
   return (
     <div className="projects-page-container">
@@ -40,13 +32,13 @@ export default function FeaturedProjects() {
             <div className="projects-buttons">
               <button
                 className="projects-button projects-forward"
-                onClick={handleNextProject}
+                onClick={() => handleProject(1)}
               >
                 <img src={Arrow}></img>
               </button>
               <button
                 className="projects-button projects-back"
-                onClick={handlePreviousProject}
+                onClick={() => handleProject(-1)}
               >
                 <img src={Arrow}></img>
               </button>
