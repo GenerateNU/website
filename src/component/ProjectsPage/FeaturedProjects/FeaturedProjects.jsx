@@ -1,9 +1,25 @@
+import React, { useState } from "react";
 import NavBar from "../../NavBar";
 import "./style.css";
 import Arrow from "../../../assets/images/projectspage/arrowbutton.svg";
-import EarnzMockUp from "../../../assets/images/landingpage-v2/Earnz_Mock_Up.png";
+import Projects from "../../../data/featuredProjectData.js";
 
 export default function FeaturedProjects() {
+  const [currentProject, setCurrentProject] = useState(Projects[0]);
+
+  const handleNextProject = () => {
+    const currentIndex = Projects.indexOf(currentProject);
+    const nextIndex = (currentIndex + 1) % Projects.length;
+    setCurrentProject(Projects[nextIndex]);
+  };
+
+  const handlePreviousProject = () => {
+    const currentIndex = Projects.indexOf(currentProject);
+    const previousIndex =
+      (currentIndex - 1 + Projects.length) % Projects.length;
+    setCurrentProject(Projects[previousIndex]);
+  };
+
   return (
     <div className="projects-page-container">
       <div className="navbar-style" id="projects-navbar">
@@ -18,14 +34,20 @@ export default function FeaturedProjects() {
           </p>
           <div className="featured-project-buttons">
             <div className="projects-mobile">
-              <h1>Earnz</h1>
-              <h2>software</h2>
+              <h1>{currentProject.name}</h1>
+              <h2>{currentProject.type}</h2>
             </div>
             <div className="projects-buttons">
-              <button className="projects-button projects-forward">
+              <button
+                className="projects-button projects-forward"
+                onClick={handleNextProject}
+              >
                 <img src={Arrow}></img>
               </button>
-              <button className="projects-button projects-back">
+              <button
+                className="projects-button projects-back"
+                onClick={handlePreviousProject}
+              >
                 <img src={Arrow}></img>
               </button>
             </div>
@@ -33,16 +55,13 @@ export default function FeaturedProjects() {
         </div>
         <div className="projects">
           <div className="project">
-            <img src={EarnzMockUp}></img>
+            <img src={currentProject.image}></img>
             <div className="project-text">
-              <h1 className="earnz-header projects-desktop">Earnz</h1>
-              <h2 className="project-team projects-desktop">software</h2>
-              <p>
-                A unique, two-sided promotional and loyalty platform built to
-                level the playing field for independent bars and restaurants by
-                allowing them to utilize an app to acquire and retain customers
-                as easily and cost effectively as currently only chains can.
-              </p>
+              <h1 className="projects-desktop">{currentProject.name}</h1>
+              <h2 className="project-team projects-desktop">
+                {currentProject.type}
+              </h2>
+              <p>{currentProject.description}</p>
               <div className="view-project-div">
                 <button className="view-project-button">View</button>
               </div>
