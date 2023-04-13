@@ -6,11 +6,11 @@ const Events2 = () => {
   return (
     <div className="position-relative vw-100 vh-100 py-4 px-5">
       <div className="events-picture-container d-flex flex-wrap justify-content-between">
-        <div class="row gx-5">
-          <div class="col ps-5 pe-5">
+        <div class="row gx-5 flex-nowrap">
+          <div class="col">
             <div class ="shiftLeft">
               <div className = "MoraleBudget">
-              <p className="text-uppercase moral-budget-title">
+              <p className="text-uppercase moral-budget-title text-nowrap">
                 morale budget
               </p>
               <p className="t-4 r-3 l-5 moral-budget-text">
