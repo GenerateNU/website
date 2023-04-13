@@ -22,10 +22,10 @@ const NavBar = () => {
             <img style={{width: 'min(3.5vmin, 40px)', height: 'auto'}} src={GenerateLogo} onClick={navigateHome}/>
             <span className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center' onClick={navigateApply}>Apply</span>
             <span className='d-flex align-items-center' onClick={() => setShowMenu(true)}>
-                <a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-items-center'>
+                <a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-items-center m-1'>
                     Menu                     
                 </a>
-                <MenuIcon style={{height: 'min(2.5vmax, 35px)', width: 'auto'}}/>
+                <MenuIcon style={{height: '3.5vh', width: 'auto'}}/>
             </span>
 
             <Modal 
