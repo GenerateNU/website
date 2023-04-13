@@ -6,7 +6,6 @@ import './style.css';
 const WeAreSection = () => {
     return (
         <> 
-             <div className='mission-header-space'></div>
                 <div className="weare-header">
                     <h5 className="mb-0 our-mission-our-values we-are-values d-flex flex-row justify-content-end h-auto text-nowrap">
                         our values
