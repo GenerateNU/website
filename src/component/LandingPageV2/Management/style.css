@@ -1,17 +1,20 @@
 #skills {
-    width: 64vh;
-    height: 64vh;
-    left:12.36vh;
+    width: 70vh;
+    height: 70vh;
+    left: 12.36vh;
     margin: auto;
-    transform: rotate(320deg);
+    transform: rotate(0deg);
     margin-left: 12.36vh;
     margin-top: 12.36vh;
   }
   
   .center {
-    position: absolute;
-    top: 18.54vh;
-    left: 20vh;
+    position: relative;
+    align-self: center;
+    top: 22.7vh;
+    left: 22.7vh;
+    width: 0px;
+    height: 0px;
     z-index: 1000;
     border: 12.36vh solid white;
     border-radius: 50%;
@@ -39,33 +42,33 @@
   
   #part1 {
     background-color: #FFBF3C;
-    -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 41.2%, 100% 0);
-    clip-path: polygon(50% 0, 50% 50%, 100% 41.2%, 100% 0);
+    /* -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 41.2%, 100% 0); */
+    clip-path: polygon(11.875% 0, 50% 50%, 88.125% 0);
   }
   
   #part2 {
     background-color: #6FCF97;
-    -webkit-clip-path: polygon(50% 50%, 100% 41.2%, 100% 100%, 63.4% 100%);
-    clip-path: polygon(50% 50%, 100% 41.2%, 100% 100%, 63.4% 100%);
+    /* -webkit-clip-path: polygon(50% 50%, 100% 41.2%, 100% 100%, 63.4% 100%); */
+    clip-path: polygon(50% 50%, 88.125% 0, 100% 0, 100% 66.25%);
   }
   
   #part3 {
     background-color:  #187DFF;
-    -webkit-clip-path: polygon(50% 50%, 36.6% 100%, 63.4% 100%);
-    clip-path: polygon(50% 50%, 0% 100%, 63.4% 100%);
+    /* -webkit-clip-path: polygon(50% 50%, 36.6% 100%, 63.4% 100%); */
+    clip-path: polygon(50% 50%, 100% 66.25%, 100% 100%, 50% 100%);
   }
   
   
   #part4 {
     background-color: #FF6660;
     -webkit-clip-path: polygon(50% 50%, 0 36.6%, 0 100%);
-    clip-path: polygon(50% 50%, 0 36.6%, 0 100%);
+    clip-path: polygon(50% 50%, 50% 100%, 0 100%, 0 66.25%);
   }
   
   #part5 {
     background-color: #A559EC;
     -webkit-clip-path: polygon(50% 50%, 0 36.6%, 0 0, 50% 0);
-    clip-path: polygon(50% 50%, 0 36.6%, 0 0, 50% 0);
+    clip-path: polygon(50% 50%, 0 66.25%, 0 0, 11.875% 0);
   }
 
   #title {
@@ -91,30 +94,23 @@
     width: 20%;
     height: 20%;
     z-index: 100;
-    margin-bottom: 70%;
-    transform: rotate(40deg);
-    margin-left: 45%;
-    margin-top: 13%;
+    margin-top: -67%;
   }
 
   .image2 {
     width: 20%;
     height: 20%;
     z-index: 100;
-    margin-bottom: 70%;
-    transform: rotate(40deg);
-    margin-left: 60%;
-    margin-top: 58%;
+    margin-left: 63.4%;
+    margin-top: -20.6%;
   }
 
   .image3 {
     width: 20%;
     height: 18%;
     z-index: 100;
-    margin-bottom: 70%;
-    transform: rotate(40deg);
-    margin-right: 18%;
-    margin-top: 77%;
+    margin-left: 39.18%;
+    margin-top: 53.93%;
   }
 
 
@@ -122,10 +118,8 @@
     width: 20%;
     height: 18%;
     z-index: 100;
-    margin-bottom: 70%;
-    transform: rotate(40deg);
-    margin-right: 70%;
-    margin-top: 50%;
+    margin-left: -39.18%;
+    margin-top: 53.93%;
   }
 
 
@@ -133,10 +127,8 @@
     width: 20%;
     height: 20%;
     z-index: 100;
-    margin-bottom: 70%;
-    transform: rotate(40deg);
-    margin-right: 45%;
-    margin-top: 15%;
+    margin-left: -63.4%;
+    margin-top: -20.6%;
   }
 
   .button {
