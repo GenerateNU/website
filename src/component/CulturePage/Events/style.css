@@ -29,15 +29,13 @@
 .retreat-div {
   position: relative;
   width: 30vw;
-  top: 0vh;
-  height: fit-content;
+  top: 30vh;
 }
 
 .retreat-title {
   font-family: "Space Mono 700";
   font-style: normal;
   font-size: 7vh;
-  margin-top: 81%;
   text-transform: uppercase;
   color: #a559ec;
   text-align: left;
