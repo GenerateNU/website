@@ -1,5 +1,5 @@
 .showcase-div {
-    width: 40%;
+    width: 60vmin;
     /* margin-left: 2%; */
     margin-top: 10%;
   }
@@ -12,15 +12,12 @@
     margin-left: 5%; 
   }
   
-  .all-hands-div {
-    width: 40%;
-    margin-left: 5%;
-  }
+  
   .showcase-text {
-    width: 30vw;
+    width: 50vmin;
     height: 10%;
     color: black;
-    font-size: 3vh;
+    font-size: 3vmin;
     line-height: 160%;
     text-align: left;
     font-style: normal;
