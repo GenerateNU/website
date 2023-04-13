@@ -10,10 +10,10 @@
 }
 
 .moral-budget-text {
-  width: 30vw;
+  width: 50vmin;
   height: 10%;
   color: black;
-  font-size: 3vh;
+  font-size: 3vmin;
   /*line-height: 160%;*/
   text-align: left;
   font-style: normal;
@@ -32,10 +32,10 @@
 }
 
 .orientation-text {
-  width: 30vw;
+  width: 50vmin;
   height: 10%;
   color: black;
-  font-size: 3vh;
+  font-size: 3vmin;
   line-height: 160%;
   text-align: left;
   font-style: normal;
@@ -53,12 +53,13 @@
 
 .shiftLeft {
   margin-left: 20px;
-  margin-top: -15%;
 }
 
 
 .shiftleft3 {
   margin-right: 50px;
+  position: relative;
+  top: 10vh;
 }
 
 /* .inclined-img-container {
@@ -75,9 +76,8 @@
 }
 
 .MoraleBudget {
-  margin-top: -5%;
-  position: absolute;
-  bottom: 10vh;
+  position: relative;
+  top: 60vh;
   box-sizing: border-box;
 }
 
