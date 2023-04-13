@@ -8,7 +8,7 @@ const WeAreSection = () => {
         <> 
              <div className='mission-header-space'></div>
                 <div className="weare-header">
-                    <h5 className="mb-0 our-mission-our-values we-are-values w-auto h-auto text-end p-4">
+                    <h5 className="mb-0 our-mission-our-values we-are-values d-flex flex-row justify-content-end h-auto text-nowrap">
                         our values
                     </h5>
                     <h1 className="our-mission-we-are text-no-fill text-uppercase text-nowrap">
