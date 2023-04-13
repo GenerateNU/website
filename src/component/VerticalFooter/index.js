@@ -1,7 +1,6 @@
-import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./style.css";
-import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png";
+import GenerateLogo from "../../assets/images/landingpage-v2/footerlogo.svg";
 import InstaIcon from "../../assets/images/socialMediaIcons/Insta.png";
 import LinkedInIcon from "../../assets/images/socialMediaIcons/Linkedin.png";
 import FbIcon from "../../assets/images/socialMediaIcons/Facebook.png";
@@ -10,47 +9,124 @@ import MosaicIcon from "../../assets/images/socialMediaIcons/Mosaic.png";
 import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.png";
 import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
 
+const pages = [
+  { name: "Generate", link: "/" },
+  { name: "About", link: "/about" },
+  { name: "Culture", link: "/culture" },
+  { name: "Teams", link: "/teams" },
+  { name: "People", link: "/", disabled: true },
+  { name: "Apply", link: "/apply" },
+  { name: "Projects", link: "/projects" },
+];
 
+const FooterLink = ({ page, currentPage}) => {
+  const { name, link, disabled } = page;
+  const isCurrentPage = currentPage === link;
+
+  return (
+    <Row className="footer-text">
+      {disabled ? (
+        <a className="disabled-footer-text" href={link}>
+          {name}
+        </a>
+      ) : isCurrentPage ? (
+        <b>
+          <a href={link}>
+            {name} {"<"}
+          </a>
+        </b>
+      ) : (
+        <a href={link}>{name}</a>
+      )}
+    </Row>
+  );
+};
+
+const socialIcons = [
+  [
+    {
+      href: "https://www.instagram.com/generatenu/",
+      imgSrc: InstaIcon,
+    },
+  ],
+  [
+    {
+      href: "https://www.youtube.com/channel/UC2Y_rgZiPKPH0lSU1FyQJFw/featured",
+      imgSrc: YoutubeIcon,
+    },
+    {
+      href: "https://coe.northeastern.edu/orgs/generate/",
+      imgSrc: NortheasternIcon,
+    },
+  ],
+  [
+    {
+      href: "https://www.linkedin.com/company/generate-product-development/mycompany/",
+      imgSrc: LinkedInIcon,
+    },
+    {
+      href: "https://entrepreneurship.northeastern.edu/mosaic/",
+      imgSrc: MosaicIcon,
+    },
+  ],
+  [
+    {
+      href: "https://www.facebook.com/GenerateNU/",
+      imgSrc: FbIcon,
+    },
+    {
+      href: "https://sherman.center.northeastern.edu/",
+      imgSrc: Sherm,
+    },
+  ],
+];
+
+function SocialIcon({ href, imgSrc }) {
+  return (
+    <Col className="icon">
+      <a href={href}>
+        <img src={imgSrc} height="30vh" width="30vw" />
+      </a>
+    </Col>
+  );
+}
 
 function VerticalFooter() {
+  const currentPageUrl = window.location.href;
   return (
     <Container fluid className="footer-container">
       <Row>
         <div>
           <div className="sherm">
-            <img className="logo-placement logo-shadow" src={GenerateLogo} height="80%" width="60%" />
+            <a href="https://generatenu.com/">
+              <img
+                className="logo-placement"
+                src={GenerateLogo}
+                height="80%"
+                width="60%"
+                alt="Logo description" // Add alt text to the image for accessibility
+              />
+            </a>
           </div>
         </div>
       </Row>
-      <Row className="footer-text"> <a href="/about">About </a></Row>
-      <Row className="footer-text"> <a href="/culture">Culture</a></Row>
-      <Row className="footer-text"> <a href="/">Teams</a></Row>
-      <Row className="footer-text"> <a href="/">People</a></Row>
-      <Row className="footer-text"> <a href="/apply">Apply</a></Row>
-      <Row className="footer-text"> <a href="/">Projects</a></Row>
-
-      <div className="social-icons">
-        <Row>
-          <Col className="icon"><a href ='https://www.google.com/'> <img src={InstaIcon} height="30vh" width="30vw" /> </a></Col>
-        </Row>
-        <Row>
-        <Col className="icon"><a href ='https://www.youtube.com/channel/UC2Y_rgZiPKPH0lSU1FyQJFw/featured'> <img src={YoutubeIcon} height="30vh" width="30vw"/> </a></Col>
-        <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={NortheasternIcon} height="30vh" width="30vw" /></a></Col>
-        </Row>
-        <Row>
-          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={LinkedInIcon} height="30vh" width="30vw" /></a></Col>
-          <Col className="icon"><a href ='https://www.facebook.com/GenerateNU/'> <img src={MosaicIcon} height="30vh" width="30vw" /> </a></Col>
-        </Row>
-        <Row>
-          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={FbIcon} height="30vh" width="30vw" /></a></Col>
-          <Col className="icon"><a href ='https://www.linkedin.com/company/generate-product-development/mycompany/'> <img src={Sherm} height="30vh" width="30vw" /></a></Col>
-        </Row>
-        
-      </div>
-
-
+      <span id="footer-links">
+        <span id="footer-pages">
+          {pages.map((page, index) => (
+            <FooterLink key={index} page={page} currentPage={currentPageUrl.substring(currentPageUrl.lastIndexOf("/"))} />
+          ))}
+        </span>
+        <div className="social-icons">
+          {socialIcons.map((row, index) => (
+            <Row key={index}>
+              {row.map((icon, index) => (
+                <SocialIcon key={index} href={icon.href} imgSrc={icon.imgSrc} />
+              ))}
+            </Row>
+          ))}
+        </div>
+      </span>
     </Container>
-
   );
 }
 

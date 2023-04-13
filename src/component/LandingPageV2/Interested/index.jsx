@@ -1,5 +1,6 @@
 import Image from "react-bootstrap/Image";
 import ShermLogo from "../../../assets/images/landingpage/affiliateorgintros/Sherman_Center_Logo.png";
+import QuestionMark from "../../../assets/images/landingpage-v2/interestedbg.svg";
 import NavBar from "../../NavBar";
 import "./style.css";
 import { Row } from "react-bootstrap";
@@ -9,49 +10,53 @@ import ShadowedButton from "../../ShadowedButton";
 import leftcarrot from "../../LandingPageV2/Interested/chevron.png";
 
 const Interested = () => {
-  return (
-    <div className="bg-white interestedcontainer">
-      <div className="interestedText">Interested</div>
-      <div className="interestedflexbox">
-        <div className="interestedJoinNowBox">
-          <a href="/apply" className="joinCommunitytext">
-            join us
-          </a>
+  if (window.innerWidth/window.innerHeight <= 0.6) {
+    return (
+      <div className="bg-white interestedcontainer">
+        <div className="interestedText">Interested</div>
+        <div className="interestedflexbox">
+          <div className="interestedJoinNowBox">
+            <a href="/apply" className="joinCommunitytext">
+              join us
+            </a>
+          </div>
+          <span id="join-span">
+            <div className="leftcarrot">
+              <img id="join-carrot" src={leftcarrot} />
+            </div>
+            <div className="sentenceText">
+              Join a community that shares the same goal - turning ideas into
+              reality
+            </div>
+          </span>
         </div>
+      </div>
+    );
+  } else {
+    return (
+      <>
+      <div className="bg-white interestedcontainer">
+        <div className="interestedflexbox">
+          <div className="interestedText">Interested</div>
+          <div className="interestedJoinNowBox">
+            <a href="/apply" className="joinCommunitytext">
+              join us
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div className="bg-white questionMarkContainer">
         <div className="leftcarrot">
-          <img style={{width: "8vh"}} src={leftcarrot} />
+          <img style={{ width: "5vh" }} src={leftcarrot} />
         </div>
-      <div className="sentenceText">
-        Join a community that shares the same goal - turning ideas into reality
+        <div className="sentenceText">
+          Join a community that shares the same goal - turning ideas into reality
+        </div>
       </div>
-      {/* <div className="leftcarrot">
-        <img src={leftcarrot} height="50vh" width="50vw" />
-      </div>
-      <div className="sentenceText">
-        Join a community that shares the same goal - turning ideas into reality
-      </div> */}
-      </div>
-    </div>
-
-    // <div className="bg-white vw-100 vh-100 py-4 px-5">
-    //   <Row className="vh-33 p-5">
-    //     <div className="interested-word text-uppercase">Interested</div>
-    //   </Row>
-
-    //   <Row className="vh-23 p-5">
-    //     <Col>
-    //       <div className="box">join us</div>
-    //     </Col>
-
-    //     <Col>
-    //       <div className="phrase-text">
-    //         Join a community that shares the same goal - turning ideas into
-    //         reality
-    //       </div>
-    //     </Col>
-    //   </Row>
-    // </div>
-  );
+      </>
+    );
+  }
 };
 
 export default Interested;

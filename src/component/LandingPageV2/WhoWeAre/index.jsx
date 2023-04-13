@@ -5,7 +5,11 @@ import "./style.css";
 export default function WhoWeAre() {
     return (
         <>
+
             <div className="desktop">
+
+            <div className="whoWeAreContainer">
+
                 <div className="bluerectangle">
                     <div className="whowearetext"> Who we are</div>
                 </div>
@@ -24,6 +28,7 @@ export default function WhoWeAre() {
                     </p>
                 </div>
             </div>
+
             <div className="mobile">
                 <div className="bluerectanglemobile">
                     <div className="whowearetext"> Who we are</div>
@@ -44,6 +49,7 @@ export default function WhoWeAre() {
                 </div>
             </div>
         </>
+
 
     );
 }

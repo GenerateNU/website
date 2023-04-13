@@ -38,34 +38,36 @@ export default function Management() {
 
    
 
-    return (
-       <div>
-
-       <div id="skills">
-       <div class="center"></div>
-       <button id="part1" class="circle animate" onClick={Color}> 
-       <img class="image1" alt='image1' src={image1} />
-       </button>
-       <button id="part2" class="circle animate" onClick={Color2}>
-       <img class="image2" alt='image2' src={image2} /> </button>
-       <button id="part3" class="circle animate" onClick={Color3}> 
-       <img class="image3" alt='image3' src={image3} /> </button>
-       <button id="part4" class="circle animate" onClick={Color4}> 
-       <img class="image4" alt='image4' src={image4} /> </button>
-       <button id="part5" class="circle animate" onClick={Color5}> 
-       <img class="image5" alt='image5' src={image5} /> </button>
-       </div>
-       
-       <div id="title">
-        <div>MANAGEMENT</div>
+  return (
+    <>
+      <div className="management-wheel">
+        <div id="skills">
+        <div className="center"/>
+          <button id="part1" class="circle animate" onClick={Color}>
+            <img class="image1" alt='image1' src={image1} />
+          </button>
+          <button id="part2" class="circle animate" onClick={Color2}>
+            <img class="image2" alt='image2' src={image2} /> </button>
+          <button id="part3" class="circle animate" onClick={Color3}>
+            <img class="image3" alt='image3' src={image3} /> </button>
+          <button id="part4" class="circle animate" onClick={Color4}>
+            <img class="image4" alt='image4' src={image4} /> </button>
+          <button id="part5" class="circle animate" onClick={Color5}>
+            <img class="image5" alt='image5' src={image5} /> </button>
         </div>
-
+      </div>
+      <div className='management-spacer'/>
+      <div className="management-text">
+        <div id="title">
+          MANAGEMENT
+        </div>
         <div id="description">
-        The Management Team ensures alignment across our organization. 
-        The team drives our teams to excel through collaboration and innovative thinking - 
-        ensuring Generate is functioning at its peak. Our management team is responsible 
-        for directing Generate’s yearly focus. </div>
+          The Management Team ensures alignment across our organization.
+          The team drives our teams to excel through collaboration and innovative thinking -
+          ensuring Generate is functioning at its peak. Our management team is responsible
+          for directing Generate's yearly focus. </div>
         <a href="/apply"> <img class="button" alt='button' src={button} />  </a>
-        </div>
-    );
+      </div>
+    </>
+  );
 }

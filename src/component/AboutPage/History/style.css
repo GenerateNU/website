@@ -72,3 +72,31 @@
     border-color: black;
     border-width: 10px;
 }
+
+@media only screen and (max-device-width: 650px) {
+    .parent-orgs-and-history {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .our-history-header {
+        font-size: 6.2vh;
+        height: min-content!important;
+    }
+
+    .our-history {
+        width: 100vw;
+        margin-left: 11px;
+    }
+
+    .our-history-text-style {
+        font-size: 2vh;
+        margin-right: 0!important;
+        padding-right: 0!important;
+        width: 90%;
+    }
+
+    .parent-orgs-and-history {
+        height: unset!important;
+    }
+}

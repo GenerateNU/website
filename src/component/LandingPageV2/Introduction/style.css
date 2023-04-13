@@ -1,10 +1,35 @@
+/*
 .introductionContainer {
   margin: 0%;
   padding: 0%;
 }
 
+.desktop, .text-container {
+  position: relative;
+  left: 8vw;
+  top: max(35vh, 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.desktop {
+    position: relative;
+    left: 8vw;
+    /*right: max(10vw, 75px);
+    top: max(35vh, 90px);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    
+}
+
+
 .shermancenter {
-    /* position: absolute; */
+    /* position: absolute; 
     max-width: 100vw;
     height: 100vh;
     left: 0px;
@@ -47,7 +72,7 @@
 }
 
 .generatetext {
-  /* generate */
+  /* generate 
   position: relative;
   width: 149.39vh;
   height: 45.12vh;
@@ -147,8 +172,7 @@
   width: 110.39vh;
   height: 30.12vh;
   left: 1.17vh;
-  top: 1.19vh;
-
+  top: 6.0vh;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
@@ -160,27 +184,10 @@
   
 }
 
-.desktop {
-  /* generate */
-  display: inline;
-  position: relative;
-  width: 149.39vh;
-  height: 45.12vh;
-  left: 13.17vh;
-  top: 12.19vh;
 
-  font-family: "Space Mono";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30.48vh;
-  line-height: 45.12vh;
-  text-transform: uppercase;
-
-  color: #ffffff;
-}
 
 /* css to render appropriate intro on desktop vs. mobile by setting display size params
-*/
+
 @media only screen and (max-device-width: 650px) {
   .desktop {
     display: none;
@@ -192,12 +199,204 @@
 
 @media only screen and (min-device-width: 651px) {
   .desktop {
-    display: inline;
+    display: flex;
   }
   .comingsoontext {
     display: none
   }
 }
+
+.scrolltext {
+  /* scroll 
+  position: absolute;
+  width: 74px;
+  height: 30px;
+  left: 1340px;
+  top: 792px;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height, or 150% */
+  /* Black/White 
+  color: #ffffff;
+}
+
+.scrollarrow {
+  position: absolute;
+  width: 5.11vh;
+  height: 5.11vh;
+  left: 160.28vh;
+  top: 100.51vh;
+
+  background-image: url("../../../assets/images/landingpage/weare/ArrowSideways.png");
+  background-size: cover;
+}
+
+.whitebox {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 1230px;
+  top: 762px;
+
+  background-image: url("../../../assets/images/landingpage/weare/WhiteBox.png");
+  background-size: cover;
+}
+
+.scrollimg {
+  width: 15.04vh;
+  object-fit: contain;
+  margin-bottom: -70vh;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  padding-right: 2em;
+}
+
+.scrolltext {
+  font-size: 20px;
+  font-family: "Space Mono";
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.intro-navbar {
+  position: fixed;
+  z-index: 2;
+  margin-left: 3%;
+  padding-top: 2%;
+}
+
+@media only screen and (max-device-width: 376px) {
+  .comingsoontext {
+    display: inline;
+    margin-top: -10vh;
+    margin-left: 5vh;
+    top: -10vh;
+  }
+  
+  .generatetextmobile {
+    justify-content: left;
+    margin-left: 6vh;
+  }
+
+  .wearetextmobile {
+    left: 7vh;
+  }
+
+  .northeasternbest {
+    margin-left: 6vh;
+  }
+  
+  .productdevelopment {
+    justify-content: left;
+    margin-left: 6vh;
+  }
+
+  .studio {
+    margin-left: 6vh;
+  }
+
+  .scrollmobile {
+    margin-left: 4vh;
+
+
+.introductionContainer {
+  margin: 0%;
+  padding: 0%;
+}
+
+.shermancenter {
+    /* position: absolute; */
+    max-width: 100vw;
+    height: 100vh;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../../../assets/images/landingpage/weare/landing.jpg');
+    background-size: cover;
+}
+
+.wearetext {
+  width: 30vh;
+  padding-left: 10px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.39vh;
+  line-height: 10.46vh;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.generatetext {
+  /* generate */
+
+
+  width: 50vh;
+  /*height: 45.12vh;
+  top: 12.19vh; */
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17vw;
+  line-height: 25.12vh;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.comingsoontext {
+  display: inline;
+  position: relative;
+  width: 110.39vh;
+  height: 30.12vh;
+  left: 1.17vh;
+  top: 6.0vh;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10vh;
+  line-height: 8.12vh;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  
+}
+
+.text-container {
+  /* generate */
+  /*
+  display: inline;
+  position: relative;
+  width: 149.39vh;
+  height: 45.12vh;
+  left: 13.17vh;
+  top: calc(30vh - 90px);
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30.48vh;
+  line-height: 45.12vh;
+  text-transform: uppercase; */
+  position: relative;
+  left: 8vw;
+  top: max(35vh, 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+
 
 .scrolltext {
   /* scroll */
@@ -240,12 +439,14 @@
 }
 
 .scrollimg {
-  width: 10.04vh;
+  width: 15.04vh;
   object-fit: contain;
-  margin-bottom: -35vh;
+  margin-bottom: -70vh;
 }
 
 .scroll {
+  position: relative;
+  top: max(9vh, 10px);
   display: flex;
   flex-direction: row;
   float: right;
@@ -260,41 +461,56 @@
 }
 
 .intro-navbar {
-  margin-left: 3%;
-  padding-top: 2%;
+  position: fixed;
+  z-index: 6;
+  left: 1.5%;
+  top: 3%;
 }
+/* css to render appropriate intro on desktop vs. mobile by setting display size params
+*/
+@media only screen and (max-device-width: 650px) {
+  .text-container {
+    justify-content: center;
+  }
 
-@media only screen and (max-device-width: 376px) {
   .comingsoontext {
     display: inline;
-    margin-top: -10vh;
-    margin-left: 5vh;
-    top: -10vh;
-  }
-  
-  .generatetextmobile {
-    justify-content: left;
-    margin-left: 6vh;
   }
 
-  .wearetextmobile {
-    left: 7vh;
+  .desktop {
+    display: none;
   }
 
-  .northeasternbest {
-    margin-left: 6vh;
-  }
-  
-  .productdevelopment {
-    justify-content: left;
-    margin-left: 6vh;
+  .intro-navbar {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  .studio {
-    margin-left: 6vh;
+  .generatetext {
+    line-height: 5vh;
+    font-family: "Space Mono 700";
+  }
+  .wearetext {
+    font-size: 3vh;
+    line-height: 7vh;
+    font-family: "Space Mono 700";
   }
 
-  .scrollmobile {
-    margin-left: 4vh;
+  .scroll {
+    display: none;
+  }
+   
+  .intro-navbar {
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (min-device-width: 651px) {
+  .desktop {
+    display: flex;
+  }
+  .comingsoontext {
+    display: none
   }
 }

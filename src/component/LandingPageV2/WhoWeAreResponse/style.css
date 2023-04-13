@@ -1,49 +1,80 @@
-.whoWeAreResponseContainer{
-    width: 70%;
-    margin:0%;
-    padding: 0%;
+.whoWeAreResponseContainer {
+  width: 70%;
+  margin: 0%;
+  padding: 0%;
 }
 
-.greenrectangle{
-    /* width: 70%; */
-    height: 60vh;
-    background:  #6FCF97;;
+.greenrectangle {
+  /* width: 70%; */
+  height: 60vh;
+  background: #6fcf97;
 }
 
-.yellowrectangle{
-    /* width: 70%; */
-    height: 40vh;
-    background: #FFBF3C;;
+.yellowrectangle {
+  /* width: 70%; */
+  height: 40vh;
+  background: #ffbf3c;
 }
 
 .somesaytext {
-box-sizing: border-box;
-font-family: 'Space Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 8.78vh;
-line-height: 11.22vh;
-text-align: left;
-/* identical to box height, or 128% */
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7.5vmin;
+  line-height: 6vmax;
+  /* identical to box height, or 128% */
 
-text-transform: uppercase;
-color: #6FCF97;
-text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF;
+  text-transform: uppercase;
+  color: #6fcf97;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
 }
 
-
 .weareresponse {
-    padding:10%;
-font-family: 'Space Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 7.56vh;
-line-height: 11.22vh;
-text-transform: uppercase;
-color: white;
+  padding: 5%;
+  padding-top: 7%;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7.5vmin;
+  line-height: 6vmax;
+  text-transform: uppercase;
+  color: white;
+  overflow-wrap: break-word;
 }
 
 .generateLogoWhiteStyle {
-    padding: 2%;
+  padding: 2%;
+  height: 40vh;
+  object-fit: contain;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .whoWeAreResponseContainer {
+    width: 100%;
+  }
+
+  .yellowrectangle {
+    height: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .greenrectangle {
     height: 40vh;
+  }
+
+  .generateLogoWhiteStyle {
+    width: 25vw;
+    height: auto;
+  }
+
+  .logo-mobile {
+    display: contents;
+  }
 }

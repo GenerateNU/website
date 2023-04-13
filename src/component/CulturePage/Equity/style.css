@@ -4,7 +4,7 @@
 }
 
 .container {
-  width: 50vw;
+  width: unset;
   display: flex;
   flex-direction: row;
 }
@@ -14,8 +14,10 @@
 }
 
 .text-div-equity {
-  margin-top: 40%;
-  padding: 8em;
+  padding: 0 0 0 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .outline-equity {
@@ -31,5 +33,5 @@
 }
 
 .cultureThree-text {
-  margin-top: -30%;
+  font-size: max(2.5vmin, 1.5vw);
 }

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import "./style.css";
 import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png";
@@ -15,8 +15,8 @@ export default function VerticalFooter() {
     <Container fluid className="footer-container">
       <Row>
         <div className = "rectangleLogo">
-          <div className="logo-background sherm">
-            <img src={GenerateLogo} height="50vh" width="50vw" />
+          <div className="logo-background sherm"> <a href='https://generatenu.com/'>
+            <img src={GenerateLogo} height="50vh" width="50vw" /> </a>
           </div>
         </div>
       </Row>
