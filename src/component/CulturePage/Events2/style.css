@@ -44,50 +44,6 @@
   column-gap: 100px;
 }
 
-.all-hands-title {
-  font-family: "Space Mono 700";
-  font-style: normal;
-  font-size: 7vh;
-  margin-top: 50%;
-  text-transform: uppercase;
-  color: #187dff;
-  text-align: left;
-}
-
-.all-hands-text {
-  width: 30vw;
-  height: 10%;
-  color: black;
-  font-size: 1.36vw;
-  line-height: 160%;
-  text-align: left;
-  font-style: normal;
-  font-weight: 300;
-
-  column-gap: 100px;
-}
-
-.showcase-title {
-  font-family: "Space Mono 700";
-  font-style: normal;
-  font-size: 7vh;
-  margin-top: 81%;
-  text-transform: uppercase;
-  color: #187dff;
-  text-align: left;
-}
-
-.showcase-text {
-  width: 120%;
-  height: 10%;
-  color: black;
-  font-size: 1.35vw;
-  line-height: 160%;
-  text-align: left;
-  font-style: normal;
-  font-weight: 300;
-  column-gap: 100px;
-}
 
 .inclined-image {
   transform: rotate(-10deg);
