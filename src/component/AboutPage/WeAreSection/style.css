@@ -14,7 +14,7 @@
 
 .our-mission-we-are {
     color: #FFBF3C;
-    font-size: 15vw;
+    font-size: 35vh;
     line-height: 77%;
     font-family: 'Space Mono 700';
     word-spacing: -5vw;
@@ -22,7 +22,7 @@
 
 
 .value-card-sizing {
-    height: 35vh;
+    height: 30vh;
     aspect-ratio: 1.2 / 1;
 }
 
@@ -33,7 +33,7 @@
 .value-card-header {
     color: white;
     font-family: 'Space Mono 700';
-    font-size: 5vh;
+    font-size: 4vh;
     line-height: 100%;
     -webkit-text-stroke-width: 1.5px;
     height: 20%;
@@ -42,7 +42,7 @@
 .value-card-text {
     color: white;
     font-family: 'Outfit 300';
-    font-size: 2.3vh;
+    font-size: 2vh;
     line-height: 3vh;
     height: 80%;
     padding: 5%;
@@ -90,11 +90,13 @@
 }
 
 .our-mission-our-values {
+    width: 112vh;
     color: #FFBF3C;
-    font-size: 1.7vw;
+    font-size: 3vh;
     line-height: 100%;
     font-family: 'Space Mono';
     margin-right: 3%;
+    padding-top: 20vh;
 }
 
 @media only screen and (max-device-width: 650px) {
