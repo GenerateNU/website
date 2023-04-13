@@ -1,8 +1,7 @@
 .moral-budget-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 10vh;
+  font-size: 7vh;
   text-transform: uppercase;
   color: #a559ec;
   text-align: left;
@@ -23,10 +22,9 @@
 }
 
 .orientation-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 10vh;
+  font-size: 7vh;
 
   text-transform: uppercase;
   color: #187dff;
@@ -47,10 +45,9 @@
 }
 
 .all-hands-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 5%;
+  font-size: 7vh;
   margin-top: 50%;
   text-transform: uppercase;
   color: #187dff;
@@ -71,10 +68,9 @@
 }
 
 .showcase-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 5%;
+  font-size: 7vh;
   margin-top: 81%;
   text-transform: uppercase;
   color: #187dff;

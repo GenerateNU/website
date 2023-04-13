@@ -1,9 +1,8 @@
 
 .showcase-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 10vh;
+  font-size: 7vh;
   margin-top: 70%;
   text-transform: uppercase;
   color: #187dff;
@@ -35,10 +34,9 @@
 }
 
 .all-hands-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 10vh;
+  font-size: 7vh;
   margin-top: 30%;
   text-transform: uppercase;
   color: #187dff;
