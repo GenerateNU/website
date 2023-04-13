@@ -4,9 +4,10 @@ import CelebrateRepresent from "../Events2/CelebrateRepresent.png";
 
 const Events2 = () => {
   return (
-    <div className="position-relative vw-100 vh-100 py-4 px-5">
+    <>
+    {/*<div className="position-relative vw-100 vh-100 py-4 px-5">
       <div className="events-picture-container d-flex flex-wrap justify-content-between">
-        <div class="row gx-5 flex-nowrap">
+  <div class="row gx-5 flex-nowrap">*/}
           <div class="col">
             <div class ="shiftLeft">
               <div className = "MoraleBudget">
@@ -55,9 +56,10 @@ const Events2 = () => {
               Tincidunt sagittis nulla orci id.
             </p>
           </div> */}
-        </div>
+        {/*</div>
       </div>
-    </div>
+        </div>*/}
+    </>
   );
 };
 
