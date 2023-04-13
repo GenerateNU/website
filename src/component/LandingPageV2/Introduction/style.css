@@ -67,6 +67,7 @@
 .generatetextmobile {
   /* generate */
   position: relative;
+  display: flex;
   width: 149.39vh;
   height: 45.12vh;
   top: 11vh;
@@ -261,4 +262,39 @@
 .intro-navbar {
   margin-left: 3%;
   padding-top: 2%;
+}
+
+@media only screen and (max-device-width: 376px) {
+  .comingsoontext {
+    display: inline;
+    margin-top: -10vh;
+    margin-left: 5vh;
+    top: -10vh;
+  }
+  
+  .generatetextmobile {
+    justify-content: left;
+    margin-left: 6vh;
+  }
+
+  .wearetextmobile {
+    left: 7vh;
+  }
+
+  .northeasternbest {
+    margin-left: 6vh;
+  }
+  
+  .productdevelopment {
+    justify-content: left;
+    margin-left: 6vh;
+  }
+
+  .studio {
+    margin-left: 6vh;
+  }
+
+  .scrollmobile {
+    margin-left: 4vh;
+  }
 }
