@@ -15,7 +15,7 @@ const WeAreSection = () => {
                     </h1>
                 </div>
             {
-                valueData.map(value => <div className="desktop-card-container"><ValueCard value={value}/></div>)
+                valueData.map(value => <div className="card-container"><ValueCard value={value}/></div>)
             }
          
            
