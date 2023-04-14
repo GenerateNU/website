@@ -9,17 +9,10 @@ export default function FeaturedProjects() {
 
   const handleProject = (dir) => {
     const currentIndex = Projects.indexOf(currentProject);
-    setCurrentProject(Projects[(currentIndex + dir + Projects.length) % Projects.length]) 
-  }
-  const maxImage = Projects.map(project => project.image).reduce((max, image) => {
-    const imgObj = new Image();
-    imgObj.src = image;
-    if (imgObj.naturalWidth > max.width && imgObj.naturalHeight > max.height) {
-      return { width: imgObj.naturalWidth, height: imgObj.naturalHeight };
-    }
-    return max;
-  }, { width: 0, height: 0 });
-
+    setCurrentProject(
+      Projects[(currentIndex + dir + Projects.length) % Projects.length]
+    );
+  };
 
   return (
     <div className="projects-page-container">
@@ -56,8 +49,10 @@ export default function FeaturedProjects() {
         </div>
         <div className="projects">
           <div className="project">
-            <div className="image-container" style={{width:maxImage.width, height:maxImage.height}}>
-              <img src={currentProject.image}></img>
+            <div
+              className="image-container"
+            >
+              <img className="image"src={currentProject.image}></img>
             </div>
             <div className="project-text">
               <h1 className="projects-desktop">{currentProject.name}</h1>
