@@ -41,3 +41,13 @@
     margin-top: 8%;
     text-align: left;
 }
+
+.mobile {
+    display: block;
+}
+
+@media (min-width: 501px) {
+    .mobile {
+        display: none;
+    }
+}

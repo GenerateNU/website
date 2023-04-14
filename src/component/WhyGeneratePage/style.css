@@ -1,0 +1,19 @@
+.mobile {
+    display: block;
+    background-color: black;
+}
+
+.moregoodiestext {
+    color: #FF6660;
+    font-family:'Space Mono';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+}
+  
+@media only screen and (min-width: 500px) {
+    .mobile {
+      display: none;
+    }
+}
+  
