@@ -1,0 +1,23 @@
+.all-projects-container {
+    position: relative;
+    display: flex;
+}
+
+.all-projects-header {
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.all-projects-header .projects-title {
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+
+.all-projects {
+    display: flex;
+    flex-direction: column;
+}

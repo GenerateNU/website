@@ -1,10 +1,15 @@
 import React from "react";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
+import AllProjects from "./AllProjects/AllProjects";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 import Footer from "../VerticalFooter";
 
 export default function ProjectsPage() {
-  const children = [<FeaturedProjects />, <Footer />];
+  const children = [
+    <FeaturedProjects />,
+    <AllProjects />,
+    <Footer />
+  ];
 
   return (
     <DesktopMobileScrollAndBackgroundHandler

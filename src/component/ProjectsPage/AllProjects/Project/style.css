@@ -1,0 +1,23 @@
+.project-card {
+    display: flex;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-teams {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info .project-name {
+    font-family: "Space Mono 700";
+    font-size: 5vh;
+    color: black;
+}
+
+.project-row {
+    display: flex;
+}
