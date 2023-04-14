@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import Image from 'react-bootstrap/esm/Image';
@@ -23,7 +23,7 @@ export default function WhyGenerateCarousel() {
                     </div>
                     <Row className="h-100">
                         <Col xs={6} className='pe-3 h-100'>
-                            <Image src={whyGenerateData[currentSection].image} className='why-gen-fit-image' />
+                            <Image src={whyGenerateData[currentSection].image} className='why-gen-fit-image'/>
                             <p className="why-gen-text">
                                 {whyGenerateData[currentSection].text}
                             </p>
@@ -35,10 +35,12 @@ export default function WhyGenerateCarousel() {
                                          onMouseOver={() => setCurrentSection(index)}>
                                         <h3 className="m-0 p-0 fit-content why-gen-section"
                                             style={{color: currentSection === index ? d.color : 'white'}}>
-                                                        <span className={currentSection !== index ? 'd-none' : 'd-inline me-4'}>
+                                                        <span
+                                                            className={currentSection !== index ? 'd-none' : 'd-inline me-4'}>
                                                             &gt;
                                                         </span>
-                                            <span className={`text-nowrap ${currentSection !== index ? 'ms-5 ps-2'  : ''}`}>
+                                            <span
+                                                className={`text-nowrap ${currentSection !== index ? 'ms-5 ps-2' : ''}`}>
                                                             {d.section}
                                                         </span>
                                         </h3>
@@ -49,8 +51,45 @@ export default function WhyGenerateCarousel() {
                     </Row>
                 </div>
             </div>
-            <div className='mobile'>
-
+            <div className='mobile vh-100 vw-100 py-4 d-flex justify-content-center'>
+                <div className='why-gen-row-width-mobile h-100'>
+                    <div className=" mb-5">
+                        <h5 className="why-gen-goodies-mobile w-auto h-auto text-end">
+                            more goodies
+                        </h5>
+                        <h1 className="why-gen-why-generate-mobile text-uppercase fit-content">
+                            Why Generate?
+                        </h1>
+                    </div>
+                    <div className="h-100">
+                        <div className='pe-3 h-100'>
+                            <Image src={whyGenerateData[currentSection].image} className='why-gen-fit-image'/>
+                            <p className="why-gen-text-mobile">
+                                {whyGenerateData[currentSection].text}
+                            </p>
+                        </div>
+                        <div className='ps-5'>
+                            {
+                                whyGenerateData.map((d, index) =>
+                                    <div className='mb-5'
+                                         onMouseOver={() => setCurrentSection(index)}>
+                                        <h3 className="m-0 p-0 fit-content why-gen-section"
+                                            style={{color: currentSection === index ? d.color : 'white'}}>
+                                                        <span
+                                                            className={currentSection !== index ? 'd-none' : 'd-inline me-4'}>
+                                                            &gt;
+                                                        </span>
+                                            <span
+                                                className={`text-nowrap ${currentSection !== index ? 'ms-5 ps-2' : ''}`}>
+                                                            {d.section}
+                                                        </span>
+                                        </h3>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );

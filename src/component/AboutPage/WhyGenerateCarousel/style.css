@@ -1,10 +1,22 @@
 .why-gen-row-width {
     width: 60vw;
 }
+
+.why-gen-row-width-mobile {
+    width: 85vw;
+}
   
 .why-gen-goodies {
     color: #FF5751;
     font-size: 1.7vw;
+    line-height: 100%;
+    font-family: 'Space Mono';
+    margin-right: 8%;
+}
+
+.why-gen-goodies-mobile {
+    color: #FF5751;
+    font-size: 4.2vw;
     line-height: 100%;
     font-family: 'Space Mono';
     margin-right: 8%;
@@ -17,6 +29,12 @@
     font-family: 'Space Mono 700';
 }
 
+.why-gen-why-generate-mobile {
+    color: white;
+    font-size: 12vw;
+    line-height: 100%;
+    font-family: 'Space Mono 700';
+}
 .why-gen-section {
     font-family: 'Space Mono 700';
     color: white;
@@ -42,12 +60,28 @@
     text-align: left;
 }
 
+.why-gen-text-mobile {
+    height: 50%;
+    color: white;
+    font-size: 3.4vw;
+    line-height: 160%;
+    font-family: 'Outfit 300';
+    margin-top: 8%;
+    text-align: left;
+}
+
 .mobile {
-    display: block;
+    display: inline;
 }
 
 @media (min-width: 501px) {
     .mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .desktop {
         display: none;
     }
 }
