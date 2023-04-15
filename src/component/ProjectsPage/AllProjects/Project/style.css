@@ -29,3 +29,17 @@
 .project-images {
     display: flex;
 }
+
+@media only screen and (max-device-width: 650px) {
+    .project-card {
+        margin-bottom: 50px;
+    }
+
+    .project-images {
+        justify-content: center;
+    }
+
+    .project-card .project-name {
+        text-align: center;
+    }
+}

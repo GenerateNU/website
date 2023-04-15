@@ -31,3 +31,29 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media only screen and (max-device-width: 650px) {
+    .all-projects-container {
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    .all-projects-header .projects-title {
+        writing-mode: horizontal-tb;
+        transform: unset;
+    }
+
+    .all-projects-header, .projects-title {
+        width: 100%;
+        height: unset;
+    }
+
+    .all-projects {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .project-col {
+        align-items: center;
+    }
+}
