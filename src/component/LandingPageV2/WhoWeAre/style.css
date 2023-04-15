@@ -3,6 +3,35 @@
     margin: 0%;
     padding: 0%;
 }
+.desktop {
+    width: 60%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.mobile {
+
+}
+
+@media only screen and (max-device-width: 650px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: inline;
+    }
+}
+
+@media only screen and (min-device-width: 651px) {
+    .desktop {
+        display: inline;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
 
 .whowearetext {
     padding-top: 15vh; 
@@ -10,6 +39,7 @@
     font-family: 'Space Mono 700';
     font-style: normal;
     font-weight: 700;
+
     font-size: min(8.78vh, 6vw);
     line-height: 11.22vh;
     text-transform: uppercase;
@@ -24,13 +54,19 @@
     font-family: 'Space Mono 700';
     font-style: normal;
     font-weight: 700;
-    font-size: 5.5vh;
+
+    font-size: 3.78vh;
     line-height: 11.22vh;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
 .bluerectangle {
+    height: 40vh;
+    background: #187DFF;;
+}
+
+.bluerectanglemobile {
     height: 40vh;
     background: #187DFF;
     position: relative;
