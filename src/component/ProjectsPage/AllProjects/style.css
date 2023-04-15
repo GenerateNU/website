@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     max-width: unset;
-    width: 1250px;
+    width: calc(100vw + 25px);
 }
 
 .all-projects-header {

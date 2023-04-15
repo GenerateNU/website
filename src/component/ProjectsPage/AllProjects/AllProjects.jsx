@@ -6,17 +6,22 @@ export default function AllProjects() {
     {
       name: "Earnz",
       image: "",
-      teams: "",
+      teams: ["software", "hardware"],
+    },
+    {
+      name: "Earnz",
+      image: "",
+      teams: ["software", "hardware"],
     },
     {
       name: "SmartyPill",
       image: "",
-      teams: "",
+      teams: ["software", "hardware"],
     },
     {
       name: "SmartyPill",
       image: "",
-      teams: "",
+      teams: ["software", "hardware"],
     },
   ];
 

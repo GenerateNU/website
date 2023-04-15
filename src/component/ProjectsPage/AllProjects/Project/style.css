@@ -1,20 +1,23 @@
 .project-card {
     display: flex;
+    flex-direction: column;
     margin-left: 20%;
     margin-bottom: 10%;
-}
-
-.project-info {
-    display: flex;
-    flex-direction: column;
 }
 
 .project-teams {
     display: flex;
     flex-direction: column;
+    margin-left: 5px;
+    height: 100%;
+    justify-content: space-between;
 }
 
-.project-info .project-name {
+.project-teams img {
+    height: 48%;
+}
+
+.project-card .project-name {
     font-family: "Space Mono 700";
     font-size: 5vh;
     color: black;
@@ -23,4 +26,8 @@
 
 .project-link {
     box-shadow: -2vh 2vh black;
+}
+
+.project-images {
+    display: flex;
 }
