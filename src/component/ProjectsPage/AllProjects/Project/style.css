@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 5px;
-    height: 100%;
+    height: min(215px, 30vh);
     justify-content: space-between;
 }
 
@@ -24,6 +24,8 @@
 
 .project-link {
     box-shadow: -2vh 2vh black;
+    height: -moz-fit-content;
+    height: fit-content;
 }
 
 .project-images {
@@ -31,16 +33,19 @@
 }
 
 .project-link img {
-    width: 400px;
+    height: min(215px, 30vh);
+    width: auto;
 }
 
 @media only screen and (max-device-width: 650px) {
     .project-card {
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 
     .project-images {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .project-card .project-name {
@@ -48,6 +53,21 @@
     }
 
     .project-link img {
-        width: 100%;
+        width: 60vw;
+        height: auto;
+    }
+
+    .project-teams {
+        height: unset;
+        flex-direction: row;
+        width: 60vw;
+        margin-left: 0;
+        justify-content: space-evenly;
+    }
+
+    .project-teams img {
+        transform: rotate(-90deg);
+        width: 10%;
+        height: auto;
     }
 }

@@ -52,6 +52,7 @@
     .all-projects {
         flex-direction: column;
         justify-content: flex-start;
+        height: unset;
     }
 
     .project-col {
