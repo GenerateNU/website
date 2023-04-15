@@ -1,34 +1,38 @@
 import "./style.css"
 import Project from "./Project/Project"
+import Alia from "../../../assets/images/projectspage/alia.png";
+import Arctic from "../../../assets/images/projectspage/arctic.png";
+import Jurni from "../../../assets/images/projectspage/jurni.png";
+import ShowNxt from "../../../assets/images/projectspage/shownxt.png";
 
 export default function AllProjects() {
   const projects = [
     {
-      name: "Earnz",
-      image: "",
+      name: "Jurni",
+      image: Jurni,
+      teams: ["software"],
+    },
+    {
+      name: "Alia",
+      image: Alia,
+      teams: ["software"],
+    },
+    {
+      name: "Arctic Vision",
+      image: Arctic,
       teams: ["software", "hardware"],
     },
     {
-      name: "Earnz",
-      image: "",
-      teams: ["software", "hardware"],
-    },
-    {
-      name: "SmartyPill",
-      image: "",
-      teams: ["software", "hardware"],
-    },
-    {
-      name: "SmartyPill",
-      image: "",
-      teams: ["software", "hardware"],
+      name: "ShowNxt",
+      image: ShowNxt,
+      teams: ["software"],
     },
   ];
 
   const generateGrid = () => {
     const grid = [];
 
-    for (let i = 0; i < projects.length; i+=3) {
+    for (let i = 0; i < projects.length; i+=2) {
       grid.push(
         <div className="project-col">
           <Project
@@ -41,15 +45,6 @@ export default function AllProjects() {
               name={projects[i + 1].name}
               image={projects[i + 1].image}
               teams={projects[i + 1].teams}
-            />
-          ) : (
-            <div></div>
-          )}
-          {i + 2 < projects.length ? (
-            <Project
-              name={projects[i + 2].name}
-              image={projects[i + 2].image}
-              teams={projects[i + 2].teams}
             />
           ) : (
             <div></div>

@@ -18,10 +18,7 @@ export default function Project({ name, image, teams, ...props }) {
           className="project-link"
           href="/projects"
         >
-          {/* placeholder */}
-          <svg width="100%" height="100%">
-            <rect width="100%" height="100%" fill="red"></rect>
-          </svg>
+          <img alt={name} src={image}></img>
         </a>
         <div className="project-teams">
           {teams.map((team) => {

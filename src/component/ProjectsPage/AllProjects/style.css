@@ -3,6 +3,7 @@
     display: flex;
     max-width: unset;
     width: calc(100vw + 25px);
+    align-items: center;
 }
 
 .all-projects-header {
@@ -21,7 +22,7 @@
 
 .all-projects {
     display: flex;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     justify-content: space-evenly;
 }

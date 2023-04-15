@@ -30,6 +30,10 @@
     display: flex;
 }
 
+.project-link img {
+    width: 400px;
+}
+
 @media only screen and (max-device-width: 650px) {
     .project-card {
         margin-bottom: 50px;
@@ -41,5 +45,9 @@
 
     .project-card .project-name {
         text-align: center;
+    }
+
+    .project-link img {
+        width: 100%;
     }
 }
