@@ -25,7 +25,7 @@ export default class TeamsPage extends React.Component {
             })
           }
           <Footer />
-          <NextPage pageName="People" url="/about" />
+          <NextPage pageName="Projects" url="/projects" />
         </Row>
       </div>
     ]

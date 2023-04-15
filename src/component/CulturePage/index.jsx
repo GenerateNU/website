@@ -13,6 +13,7 @@ import VerticalFooter from "../VerticalFooter";
 import Showcase from "./Showcase";
 import "./style.css";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
+import NextPage from "../NextPage"
 
 export default class CulturePage extends React.Component {
   render() {
@@ -29,6 +30,7 @@ export default class CulturePage extends React.Component {
       <Showcase />,
       <CollageSection />,
       <VerticalFooter />,
+      <NextPage pageName="teams" url="/teams"/>
     ];
     return (
       <DesktopMobileScrollAndBackgroundHandler
