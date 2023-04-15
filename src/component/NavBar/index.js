@@ -1,52 +1,46 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./style.css";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
-const MenuItem = ({ text, href }) => (
-  <Row className="m-0 p-0">
-    <a
-      className="header-font-style fit-content text-decoration-none text-black"
-      href={href}
-    >
-      {text}
-    </a>
-  </Row>
-);
-
-const menuItems = [
-  { text: "Generate", href: "/" },
-  { text: "About", href: "/about" },
-  { text: "Culture", href: "/culture" },
-  { text: "Teams", href: "/teams" },
-  { text: "Apply", href: "/apply" },
-  { text: "Projects", href: "/projects" },
-];
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
+  const navigateHome = () => {
+    navigate("/");
+  };
+  const navigateApply = () => {
+    navigate("/apply");
+  };
   const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
 
   const nav = isBigScreen ? (
     <>
-      <a href="/">
-        <img style={{ width: "5vh", height: "5vh" }} src={GenerateLogo} />
-      </a>
-      <span className="p-3">
-        <a
-          className="bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover"
-          href="/apply"
-        >
-          Apply
-        </a>
+      {/* Todo : change the logo */}
+      <img
+        style={{ width: "min(3.5vmin, 40px)", height: "auto" }}
+        src={GenerateLogo}
+        onClick={navigateHome}
+      />
+      <span
+        className="font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center"
+        onClick={navigateApply}
+      >
+        Apply
       </span>
-      <span className="p-3" onClick={() => setShowMenu(true)}>
-        <div className="bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover">
-          Menu <MenuIcon />
-        </div>
+      <span
+        className="d-flex align-items-center"
+        onClick={() => setShowMenu(true)}
+      >
+        <a className="font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-items-center m-1">
+          Menu
+        </a>
+        <MenuIcon style={{ height: "3.5vh", width: "auto" }} />
       </span>
     </>
   ) : (
@@ -61,14 +55,7 @@ const NavBar = () => {
   );
 
   return (
-    <div
-      className={
-        isBigScreen
-          ? "bg-light p-3 mb-5 d-flex border border-dark h-10 w-10 "
-          : "wrapper-nav"
-      }
-    >
-      {/* Todo : change the logo */}
+    <div className="bg-light p-2 mb-5 d-flex bar-size justify-content-around align-items-center border border-dark h-10 w-10">
       {nav}
       <Modal
         show={showMenu}
@@ -82,15 +69,85 @@ const NavBar = () => {
           </Row>
           <Row className="m-0 p-0 vh-40 ps-5">
             <Col xs={5} className="m-0 p-0 text-uppercase">
-              {menuItems.slice(0, 3).map((item) => (
-                <MenuItem key={item.href} text={item.text} href={item.href} />
-              ))}
+              <Row className="m-0 p-0">
+                <a
+                  className="header-font-style fit-content text-decoration-none text-black"
+                  href="/"
+                >
+                  Generate
+                </a>
+              </Row>
+              <Row className="m-0 p-0">
+                <a
+                  className="header-font-style fit-content text-decoration-none text-black"
+                  href="/about"
+                >
+                  About
+                </a>
+              </Row>
+              <Row className="m-0 p-0">
+                <a
+                  className="header-font-style fit-content text-decoration-none text-black"
+                  href="/culture"
+                >
+                  Culture
+                </a>
+              </Row>
             </Col>
             <Col xs={5} className="m-0 p-0 text-uppercase">
-              {menuItems.slice(3).map((item) => (
-                <MenuItem key={item.href} text={item.text} href={item.href} />
-              ))}
+              <Row className="m-0 p-0">
+                <a
+                  className="header-font-style fit-content text-decoration-none text-black"
+                  href="/teams"
+                >
+                  Teams
+                </a>
+              </Row>
+              <Row className="m-0 p-0">
+                <a
+                  className="header-font-style fit-content text-decoration-none text-black"
+                  href="/apply"
+                >
+                  Apply
+                </a>
+              </Row>
+              <Row className="m-0 p-0">
+                <div className="disabled-font-style fit-content text-decoration-none text-black">
+                  Projects
+                </div>
+              </Row>
             </Col>
+            {/* <Col xs={2} className='m-0 p-0 pt-2'>
+                            <a className='list-font-style text-decoration-none text-black'
+                                href="/about"
+                            >
+                                our mission
+                            </a>
+                            <br/>
+                            <a className='list-font-style text-decoration-none text-black'
+                                href="/about"
+                            >
+                                our values
+                            </a>
+                            <br/>
+                            <a className='list-font-style text-decoration-none text-black'
+                                href="/about"
+                            >
+                                leadership
+                            </a>
+                            <br/>
+                            <a className='list-font-style text-decoration-none text-black'
+                                href="/about"
+                            >
+                                history
+                            </a>
+                            <br/>
+                            <a className='list-font-style text-decoration-none text-black'
+                                href="/about"
+                            >
+                                why Generate
+                            </a>
+                        </Col> */}
           </Row>
           <Col>
             <div className="v1"></div>
@@ -105,10 +162,19 @@ const NavBar = () => {
               width: "px",
             }}
           />
+          {/* <Row className='m-0 p-0 w-100 vh-15 footer-font-style ps-5'>
+                        <Col xs={6} className='m-0 p-0 ps-3 pe-5 text-decoration-underline'>
+                            generate@northeastern.edu
+                        </Col>
+                        <Col xs={6} className='m-0 p-0 ps-5 gen-float-end'>
+                            008C Hayden Hall
+                        </Col>
+                    </Row> */}
           <div class="flexbox">
             <div class="item"></div>
             <div class="item"></div>
             <div class="item"></div>
+
             <div class="flexbox2">
               <div class="item"></div>
               <div class="item"></div>
@@ -116,6 +182,7 @@ const NavBar = () => {
               <div class="item"></div>
             </div>
           </div>
+
           <div className="rectangleLogo"></div>
         </Modal.Body>
       </Modal>

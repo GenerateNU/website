@@ -36,13 +36,9 @@
   height: max(120px, 20vh);
 }
 
-.our-mission-we-are {
-  color: #ffbf3c;
-  font-size: 15vw;
-  line-height: 77%;
-  font-family: "Space Mono 700";
-  word-spacing: -5vw;
-}
+
+
+
 
 @media only screen and (max-device-width: 650px) {
   .quote-text {

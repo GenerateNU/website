@@ -550,5 +550,7 @@ a {
     position: fixed;
     left: 90%;
     transform: translateX(-50%);
+    margin-bottom: 0%;
+    margin-left: 0%;
   }
 }

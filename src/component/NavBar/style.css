@@ -5,6 +5,11 @@ span {
   text-transform: capitalize;
 }
 
+.bar-size {
+  height: max(50px, 7vmin);
+  width: max(250px, 35vmin);
+}
+
 .fit-content {
   height: fit-content;
   width: fit-content;
@@ -112,8 +117,11 @@ span {
   background-color: #ffbf3c;
   border-radius: 100%;
 }
-
 @media only screen and (max-device-width: 650px) {
+  .bar-size {
+    height: 5vh;
+    width: 5vh;
+  }
   .wrapper-nav {
     width: 5vh;
     height: 5vh;
