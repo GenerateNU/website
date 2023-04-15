@@ -78,8 +78,8 @@ const NavBar = () => {
                                 </a>
                             </Row>
                             <Row className='m-0 p-0'>
-                                <div className='disabled-font-style fit-content text-decoration-none text-black'
-                                    
+                                <div className='fit-content text-decoration-none text-black'
+                                href="/projects"
                                 >
                                     Projects
                                 </div>
