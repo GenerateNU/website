@@ -1,11 +1,11 @@
 .projects-page-container {
   min-width: 1107px;
-  width: calc(100vw - 36vh);
+  max-width: unset;
 }
 
 .featured-projects {
-  width: 120vw;
   display: flex;
+  width: 80vw;
 }
 
 .projects-title {
