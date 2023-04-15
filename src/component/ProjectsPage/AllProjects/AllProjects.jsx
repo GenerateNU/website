@@ -28,9 +28,9 @@ export default function AllProjects() {
   const generateGrid = () => {
     const grid = [];
 
-    for (let i = 0; i < projects.length; i+=2) {
+    for (let i = 0; i < projects.length; i+=3) {
       grid.push(
-        <div className="project-row">
+        <div className="project-col">
           <Project
             name={projects[i].name}
             image={projects[i].image}
@@ -42,7 +42,18 @@ export default function AllProjects() {
               image={projects[i + 1].image}
               teams={projects[i + 1].teams}
             />
-          ) : <div></div>}
+          ) : (
+            <div></div>
+          )}
+          {i + 2 < projects.length ? (
+            <Project
+              name={projects[i + 2].name}
+              image={projects[i + 2].image}
+              teams={projects[i + 2].teams}
+            />
+          ) : (
+            <div></div>
+          )}
         </div>
       );
     }

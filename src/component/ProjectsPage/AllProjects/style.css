@@ -21,10 +21,13 @@
 
 .all-projects {
     display: flex;
-    flex-direction: column;
-    width: -webkit-fill-available;
+    height: 90vh;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
-.project-row {
+.project-col {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

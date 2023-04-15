@@ -1,8 +1,6 @@
 .project-card {
     display: flex;
     flex-direction: column;
-    margin-left: 20%;
-    margin-bottom: 10%;
 }
 
 .project-teams {
