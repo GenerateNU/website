@@ -174,7 +174,7 @@ a {
     background: #6FCF97;
     /* Black */
     border: 1px solid #111111;
-    z-index: 1;
+    z-index: 15;
   }
 
   .blackRectangle {
@@ -201,7 +201,7 @@ a {
     /* White */
 
     color: #FFFFFF;
-    z-index: 1;
+    z-index: 15;
   }
 
   .paragraphTextThree {
@@ -240,13 +240,13 @@ a {
 
   .mountain-image{
     text-align: center;
-    z-index: 20;
+    z-index: 10;
     width: auto;
     height: auto;
     margin-top: auto;
     margin-bottom: auto;
     transform: scale(2.5);
-    transform: translate(-1%, -55%);
+    transform: translate(20%, -55%);
     /* position: fixed; */
     /* background-position: bottom; */
   }
@@ -260,13 +260,13 @@ a {
   @media only screen and (max-device-height: 1000px) {
     .mountain-image{
       text-align: center;
-      z-index: 20;
+      z-index: 10;
       width: auto;
       height: auto;
       margin-top: auto;
       margin-bottom: auto;
       transform: scale(1.5);
-      transform: translate(-5%, -100%);
+      transform: translate(38%, -100%);
       /* position: fixed; */
       /* background-position: bottom; */
     }
@@ -274,13 +274,13 @@ a {
     @media only screen and (max-device-height: 800px) {
       .mountain-image{
         text-align: center;
-        z-index: 20;
+        z-index: 10;
         width: auto;
         height: auto;
         margin-top: auto;
         margin-bottom: auto;
         transform: scale(1.5);
-        transform: translate(-5%, -80%);
+        transform: translate(28%, -80%);
         /* position: fixed; */
         /* background-position: bottom; */
       }

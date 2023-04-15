@@ -39,7 +39,7 @@ const GrowthMantra = () => {
               <img src={cooltriangle} height="400vh" width="600vw"/> 
             </div> */}
 
-        {/* <div className="applyNowBoxGrowthMantra">
+        <div className="applyNowBoxGrowthMantra">
           <a href="/apply" className="applyNowText">
             apply now
           </a>
@@ -52,7 +52,7 @@ const GrowthMantra = () => {
         <div className="paragraphTextThree">
           Join a community that shares the same goal - turning ideas into
           reality
-        </div> */}
+        </div>
       </div>
 
       <div className="mountain-image">
