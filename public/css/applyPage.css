@@ -523,7 +523,7 @@ a {
 /*  }*/
 /*}*/
 
-@media only screen and (max-device-width: 500px) {
+@media only screen and (max-device-width: 650px) {
   .ap_container {
     display: none;
   }
@@ -545,6 +545,10 @@ a {
     white-space: nowrap;
     padding: 4%;
   }
+
+  .navbar-style {
+    position: fixed;
+    left: 90%;
+    transform: translateX(-50%);
+  }
 }
-
-

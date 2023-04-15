@@ -28,10 +28,10 @@ const menuItems = [
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
 
-  return (
-    <div className="bg-light p-3 mb-5 d-flex border border-dark h-10 w-10">
-      {/* Todo : change the logo */}
+  const nav = isBigScreen ? (
+    <>
       <a href="/">
         <img style={{ width: "5vh", height: "5vh" }} src={GenerateLogo} />
       </a>
@@ -48,7 +48,28 @@ const NavBar = () => {
           Menu <MenuIcon />
         </div>
       </span>
+    </>
+  ) : (
+    <>
+      <div
+        className="bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover"
+        onClick={() => setShowMenu(true)}
+      >
+        <MenuIcon className="hamburger-mobile" />
+      </div>
+    </>
+  );
 
+  return (
+    <div
+      className={
+        isBigScreen
+          ? "bg-light p-3 mb-5 d-flex border border-dark h-10 w-10 "
+          : "wrapper-nav"
+      }
+    >
+      {/* Todo : change the logo */}
+      {nav}
       <Modal
         show={showMenu}
         onHide={() => setShowMenu(false)}
