@@ -1,8 +1,7 @@
-
- # What was the ticket?
-
-WT-54: Fixing values cards to resize properly. Specifically, this branch redoes the ticket so that cards do not scale down on narrow viewport widths.
-Link to ticket: https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-54
+# What was the ticket?
+WT-63 - Fix alignment for Generate logo on the navbar.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-63 
+ I also updated the menu icon to match the size of the text and be spaced slightly out from the menu text.
  
  # What did I do?
  
@@ -18,8 +17,7 @@ Link to ticket: https://generatenu.atlassian.net/jira/software/projects/WT/board
  Whether the relative positioning of the header texts and the cards is appropriate
  
  # Additional comments for the reviewers
-
-
+ I implemented a decent mobile look, although the styling will be changed entirely in a different ticket.
  
  # Screenshots
 
@@ -32,4 +30,3 @@ Link to ticket: https://generatenu.atlassian.net/jira/software/projects/WT/board
  ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.45.33%20PM.png)
  ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.45.41%20PM.png)
  ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.46.05%20PM.png)
-
