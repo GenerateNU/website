@@ -24,6 +24,8 @@ export default function LeadershipCard({
     fontFamily: "Space Mono 700",
   };
 
+  const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
+
   const detailsRowJustify = title ? "between" : "end";
 
   return (
@@ -33,9 +35,15 @@ export default function LeadershipCard({
         style={{ backgroundColor: color }}
       >
         <Row className="py-4 ps-5 pe-2 h-100 w-100">
-          <Col xs={2} className="p-0 position-relative">
+          <Col
+            xs={2}
+            className="p-0 position-relative mx-auto text-center"
+            style={{ right: !isBigScreen ? "2.5%" : "" }}
+          >
             <h1
-              className="m-0 gen-card-header position-absolute top-0 end-50"
+              className={`m-0 gen-card-header position-absolute top-0 ${
+                isBigScreen ? "end-50" : ""
+              }`}
               style={boldHeaderStyle}
             >
               {team}
@@ -88,7 +96,7 @@ export default function LeadershipCard({
         <Row className="py-4 ps-5 pe-2 h-100 w-100">
           <Col xs={2} className="p-0 position-relative">
             <h1
-              className="m-0 gen-card-header position-absolute top-0 end-50"
+              className="m-0 gen-card-header position-absolute top-0"
               style={boldHeaderStyle}
             >
               {team}
