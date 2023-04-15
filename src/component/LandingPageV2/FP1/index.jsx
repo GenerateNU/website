@@ -32,7 +32,7 @@ export default function FP1() {
             </div>
           </div>
           <div className="client-blurb" id="fp1-client-blurb">
-            <p style={{ width: "40vh" }}>{Earnz.description}</p>
+            <p style={{ width: "50vh" }}>{Earnz.description}</p>
             <a href="url">learn more</a>
           </div>
           <div className="bottom-corner">
@@ -84,16 +84,16 @@ export default function FP1() {
               </div>
             </div>
             <div>
-              <p style={{ width: "40vh" }} className="client-blurb">
+              <p style={{ width: "43vh" }} className="client-blurb">
                 {Earnz.description}
               </p>
               <a href="url">learn more</a>
             </div>
           </div>
           <div className="bottom-corner">
-            <img className="bottom-corner-img" src={BottomCorner} alt="" />
-          </div>
+          <img className="bottom-corner-img" src={BottomCorner} alt="" />
         </div>
+      </div>
         <div className="column-2">
           <div className="product-img-container" id="fp1-img-container">
             <img className="product-img" src={Earnz.image} alt="" />
