@@ -4,6 +4,7 @@ import Alia from "../../../assets/images/projectspage/alia.png";
 import Arctic from "../../../assets/images/projectspage/arctic.png";
 import Jurni from "../../../assets/images/projectspage/jurni.png";
 import ShowNxt from "../../../assets/images/projectspage/shownxt.png";
+import HotDate from "../../../assets/images/projectspage/hotdate.png";
 
 export default function AllProjects() {
   const projects = [
@@ -26,6 +27,11 @@ export default function AllProjects() {
       name: "ShowNxt",
       image: ShowNxt,
       teams: ["software"],
+    },
+    {
+      name: "Hot Date",
+      image: HotDate,
+      teams: ["hardware"],
     },
   ];
 
@@ -57,7 +63,9 @@ export default function AllProjects() {
   }
 
   return (
-    <div className="all-projects-container">
+    <div className="all-projects-container" style={
+      {width: Math.ceil(projects.length / 2) * 500 + 200}
+    }>
       <div className="all-projects-header">
         <h1 className="projects-title">All Projects</h1>
       </div>
