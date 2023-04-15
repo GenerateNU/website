@@ -78,11 +78,11 @@ const NavBar = () => {
                                 </a>
                             </Row>
                             <Row className='m-0 p-0'>
-                                <div className='fit-content text-decoration-none text-black'
+                                <a className='fit-content text-decoration-none text-black'
                                 href="/projects"
                                 >
                                     Projects
-                                </div>
+                                </a>
                             </Row>
                         </Col>
                         {/* <Col xs={2} className='m-0 p-0 pt-2'>
