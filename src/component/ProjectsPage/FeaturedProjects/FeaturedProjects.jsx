@@ -49,10 +49,8 @@ export default function FeaturedProjects() {
         </div>
         <div className="projects">
           <div className="project">
-            <div
-              className="image-container"
-            >
-              <img className="image"src={currentProject.image}></img>
+            <div className="image-container">
+              <img className="image" src={currentProject.image}></img>
             </div>
             <div className="project-text">
               <h1 className="projects-desktop">{currentProject.name}</h1>
