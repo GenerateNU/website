@@ -63,10 +63,11 @@
 .why-gen-text-mobile {
     height: 50%;
     color: white;
-    font-size: 3.4vw;
+    font-size: 4vw;
     line-height: 160%;
     font-family: 'Outfit 300';
-    margin-top: 8%;
+    margin-top: 12%;
+    margin-bottom: 12%;
     text-align: left;
 }
 
