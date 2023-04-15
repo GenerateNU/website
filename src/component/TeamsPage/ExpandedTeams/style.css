@@ -1,15 +1,36 @@
+.expanded-wrapper {
+    overflow-x: hidden;
+}
 
 .paragraph-title {
     font-family: "Space Mono 700";
     text-transform: capitalize;
     color: black;
     font-size: 10vh;
-    line-height: 5vw;
+    line-height: 10vh;
 }
 
 .paragraph-text {
     font-family: "Space Mono";
     color: black;
-    font-size: 5vh;
-    line-height: 2vw;
+    font-size: 3vh;
+    line-height: 3vh;
 }
+
+.paragraph-subtitle {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4vh;
+    line-height: 6vh;
+    color: black;
+}
+
+.teams-navbar {
+    position: fixed;
+    z-index: 2;
+    margin-left: 3%;
+    padding-top: 2%;
+    width: 42vh;
+    height: auto;
+  }

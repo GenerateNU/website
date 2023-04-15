@@ -10,18 +10,19 @@
     font-size: 20vh;
 }
 
-.testwrapper {
-    display: flex;
-    flex-direction: row;
-    /* width: 200vw; */
-}
-
 .card-container-flex {
     height: 100vh;
     width: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.link-wrapper {
+    height: 100vh;
+    width: 50vh;
+    margin: 0px;
+    padding: 0px;
 }
 
 .card-img {

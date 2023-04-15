@@ -30,23 +30,11 @@ export default class TeamsPage extends React.Component {
       </div>
     ]
     return (
-      <div class="testwrapper">
-        {/* <div class="test-hscroll"> */}
         <DesktopMobileScrollAndBackgroundHandler
           children={children}
           desktopBGColor={"white"}
           mobileBGColor={"black"}
         />
-        {/* </div> */}
-        <div class="testdiv">
-          text that goes off the page
-          text that goes off the page
-          text that goes off the page
-          text that goes off the page
-          text that goes off the page
-          text that goes off the page
-        </div>
-      </div>
     );
   }
 };

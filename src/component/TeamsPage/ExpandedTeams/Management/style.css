@@ -1,0 +1,95 @@
+.management-header {
+    width: 100vw;
+    height: 1000px;
+    margin-top: -608px;
+    background: linear-gradient(180deg, #A559EC 39.58%, #FFBF3C 100%);
+}
+
+.header-wrapper {
+    overflow-y: hidden;
+    height: 392px;
+    width: 100vw;
+}
+
+.header-title {
+    z-index: -10;
+    height: 15vh;
+    width: 100vh;
+    margin-top: -20vh;
+    margin-left: 15vh;
+    background-color: white;
+}
+
+.header-text {
+    height: 15vh;
+    width: 20vh;
+    font-family: "Space Mono 700";
+    text-transform: capitalize;
+    color: #FFBF3C;
+    font-size: 15vh;
+    margin-left: 4vh;
+    line-height: 15vh;
+    background-color: white;
+}
+
+.info-section {
+    width: 40vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* .info-pic {
+    width: 40vw;
+} */
+
+.text-row {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.roles-banner {
+    width: 40px;
+    height: 1312px;
+    /* left: 100px;
+    top: 1480px; */
+    background: linear-gradient(180deg, #FFBF3C 8.33%, #7B61FF 28.13%, #6FCF97 50.52%, #FF0000 72.92%, #1477F8 90.62%);
+}
+
+.roles-title {
+    margin-left: 10vw;
+}
+
+.roles-writing {
+    margin: 10vh;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.roles-section {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.roles{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.roles-desc{
+    width: 60vw;
+}
