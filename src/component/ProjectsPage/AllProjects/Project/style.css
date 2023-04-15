@@ -1,5 +1,7 @@
 .project-card {
     display: flex;
+    margin-left: 20%;
+    margin-bottom: 10%;
 }
 
 .project-info {
@@ -16,8 +18,9 @@
     font-family: "Space Mono 700";
     font-size: 5vh;
     color: black;
+    text-align: left;
 }
 
-.project-row {
-    display: flex;
+.project-link {
+    box-shadow: -2vh 2vh black;
 }

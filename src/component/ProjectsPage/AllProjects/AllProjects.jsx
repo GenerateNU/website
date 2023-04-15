@@ -31,13 +31,13 @@ export default function AllProjects() {
             image={projects[i].image}
             teams={projects[i].teams}
           />
-          {i + 1 < projects.length && (
+          {i + 1 < projects.length ? (
             <Project
               name={projects[i + 1].name}
               image={projects[i + 1].image}
               teams={projects[i + 1].teams}
             />
-          )}
+          ) : <div></div>}
         </div>
       );
     }

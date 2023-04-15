@@ -1,6 +1,8 @@
 .all-projects-container {
     position: relative;
     display: flex;
+    max-width: unset;
+    width: 1250px;
 }
 
 .all-projects-header {
@@ -20,4 +22,9 @@
 .all-projects {
     display: flex;
     flex-direction: column;
+    width: -webkit-fill-available;
+}
+
+.project-row {
+    display: flex;
 }
