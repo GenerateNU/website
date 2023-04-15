@@ -1,0 +1,24 @@
+.carousel {
+  overflow: hidden;
+  height: 100%
+}
+
+.dotbutton {
+  display: inline-block;
+  width: 1vh;
+  height: 1vh;
+  border-radius: 50%;
+  border: none;
+}
+
+.inner {
+  transition: transform 1s;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
