@@ -118,6 +118,11 @@
 }
 
 @media only screen and (max-device-width: 650px) {
+  .featured-projects {
+    width: unset;
+    margin-bottom: 50px;
+  }
+
   .projects-page-container {
     min-width: unset;
     width: unset;
@@ -134,8 +139,13 @@
     flex-direction: column;
   }
 
+  .projects {
+    height: auto;
+  }
+
   .project {
     flex-direction: column;
+    height: auto;
   }
 
   .featured-projects-text {
@@ -149,6 +159,8 @@
   .project img {
     margin-left: auto;
     margin-right: auto;
+    width: 50vw;
+    height: auto;
   }
 
   .projects-desktop {
@@ -195,10 +207,18 @@
   }
 
   .image-container {
-    width: 20vw;
-    height: 28vh;
+    width: 100%;
+    height: auto;
+  }
+
+  .view-project-button {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 10px 30px;
   }
   
   .image {
+
   }
 }
