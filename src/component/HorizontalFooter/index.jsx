@@ -14,11 +14,13 @@ export default function HorizontalFooter() {
   return (
     <Container fluid className="footer-container">
       <Row>
-        <div className="rectangleLogo">
-          <div className="logo-background sherm">
-            <img src={GenerateLogo} height="50vh" width="50vw" />
-          </div>
+      <div className="rectangleLogo">
+        <div className="logo-background sherm">
+           <a href="https://generatenu.com/">
+            <img src={GenerateLogo} height="50vh" width="50vw" alt="Logo description" />
+          </a>
         </div>
+      </div>
       </Row>
       <Row className="footer-text">
         {" "}

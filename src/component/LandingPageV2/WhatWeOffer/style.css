@@ -1,48 +1,93 @@
-.vh-50 {
-    height: 50vh;
-}
-
 .vh-20 {
-    height: 20vh;
+  height: 20vh;
 }
 
 .vh-30 {
-    height: 30vh;
+  height: 30vh;
 }
 
+.vh-50 {
+  height: 50vh;
+}
 .vh-60 {
-    height: 60vh;
+  height: 60vh;
 }
 
 .software-hardware-style {
-    font-family: "Space Mono 700";
-    font-size: 5vw;
-    line-height: 100%;
+  font-family: "Space Mono 700";
+  font-size: 5vw;
+  line-height: 100%;
 }
 
 .software-color {
-    color: #187DFF;
+  color: #187dff;
 }
+
 .software-color:hover {
-    color: white;
-    -webkit-text-stroke: 2px #187DFF;
+  color: white;
+  -webkit-text-stroke: 2px #187dff;
 }
 
 .hardware-color {
-    color: #FF5751;
+  color: #ff5751;
 }
 .hardware-color:hover {
-    color: black;
-    -webkit-text-stroke: 2px #ffffff;
+  color: black;
+  -webkit-text-stroke: 2px #ffffff;
 }
 
-
 .what-we-offer-style {
-    font-family: "Space Mono 700";
-    font-size: 16vw;
-    line-height: 75%;
+  font-family: "Space Mono 700";
+  font-size: 16vw;
+  line-height: 75%;
 }
 
 .info-heading {
-    font-family: "Outfit 600";
+  font-family: "Outfit 600";
+  font-size: 3vw;
+}
+
+.info-text {
+  font-size: 1.75vw;
+}
+
+.info-heading-mobile {
+  font-family: "Outfit 600";
+  font-size: 6vw;
+}
+
+.info-text-mobile {
+  font-size: 4vw;
+  padding: 5rem;
+  margin-top: 10%;
+}
+
+.software-hardware-style {
+  font-family: "Space Mono 700";
+  font-size: 5vw;
+  line-height: 100%;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .software-hardware-style {
+    font-size: max(6vw, 6vh);
+  }
+
+  .software-color {
+    text-decoration: underline;
+  }
+
+  .software-color:hover {
+    color: #187dff;
+    -webkit-text-stroke: initial;
+  }
+
+  .hardware-color {
+    text-decoration: underline;
+  }
+
+  .hardware-color:hover {
+    color: #ff5751;
+    -webkit-text-stroke: initial;
+  }
 }

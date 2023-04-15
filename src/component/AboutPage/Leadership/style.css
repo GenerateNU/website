@@ -1,86 +1,138 @@
+.vh-15 {
+  height: 15vh;
+}
+
+.container-h {
+  height: 375vh;
+}
+
 .card {
-    width: 27vw;
-    height: 62vh;
-    transition: all 0.6s ease;
+  width: 27vw;
+  height: 62vh;
+  transition: all 0.6s ease;
 }
 
 /* Card animations */
 /* Move cards on top of each other */
 .react-card-flip:not(:first-child) {
-    margin-left: -22vw;
+  margin-left: -22vw;
 }
 /* .react-card-flip:not(:last-child) {
     margin-right: -22vw;
 } */
 /* Reveal all of the selected card */
-.react-card-flip:hover~.react-card-flip {
-    transform: translateX(22vw);
+.react-card-flip:hover ~ .react-card-flip {
+  transform: translateX(22vw);
 }
 /* Move selected card up to distinguish from other cards */
 .react-card-flip:hover {
-    transform: translateY(-1rem);
+  transform: translateY(-1rem);
 }
 
 .gen-card-header {
-    font-family: 'Space Mono 700';
-    font-size: 3.2vw;
-    line-height: 150%;
-    transform-origin: bottom right;
-    transform: rotate(270deg);
-    text-transform: uppercase;
-    /* font-weight: 700; */
-    /* writing-mode: vertical-lr;
-    transform: rotate(180deg); */
+  font-family: "Space Mono 700";
+  font-size: calc(max(3.2vw, 3.2vh));
+  line-height: 150%;
+  transform-origin: bottom right;
+  transform: rotate(270deg);
+  text-transform: uppercase;
 }
 
 .gen-card-body {
-    height: 85%;
-    font-family: 'Outfit 300';
-    font-style: normal;
-    font-size: 1.2vw;
-    line-height: 150%;
+  height: 85%;
+  font-family: "Outfit 300";
+  font-style: normal;
+  font-size: 1.2vw;
+  line-height: 150%;
 }
 
 .position-details {
-    font-family: 'Outfit 400';
-    font-size: 1.2vw;
-    line-height: 135%;
-}
-
-.h-15 {
-    height: 15%;
+  font-family: "Outfit 400";
+  font-size: calc(max(1.2vw, 1.2vh));
+  line-height: 135%;
 }
 
 .no-right-margin {
-    margin-right: 0 !important;
-    float: right !important;
+  margin-right: 0 !important;
+  float: right !important;
 }
 
 .leadership-heading {
-    font-family: 'Space Mono';
-    color: #FFBF3C;
-    text-transform: lowercase;
-    font-size: 1.75em;
+  font-family: "Space Mono";
+  color: #ffbf3c;
+  text-transform: lowercase;
+  font-size: calc(max(1.5vw, 1.5vh));
+  height: calc(max(1.5vw, 1.5vh));
 }
 
 .meet-the-team {
-    font-family: 'Space Mono';
-    color: #FFFFFF;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 5.75em;
+  font-family: "Space Mono";
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: calc(max(5vw, 5vh));
+  height: calc(max(5vw, 5vh));
 }
 
 /* TODO: delete after move to public */
 .fit-image {
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .cards-display {
-    display: flex;
-    flex-wrap: wrap !important;
+  justify-content: center;
+}
+
+.mob {
+  display: none;
+}
+
+.s-butt-mob {
+  margin-top: 5%;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .mob {
+    display: block;
+  }
+  .cards-display {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 87.5vw;
+    height: 66.67vh;
+    margin-bottom: 5vh;
+  }
+
+  .react-card-flip:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .react-card-flip:hover ~ .react-card-flip {
+    transform: none;
+  }
+
+  .leadership-img {
+    width: 75%;
+    height: 75%;
+    margin-left: 10%;
+    object-fit: cover;
+  }
+
+  .gen-card-header {
+    font-size: max(4vw, 4vh);
+  }
+
+  .position-details {
+    font-family: "Outfit 400";
+    font-size: max(2vw, 2vh);
+    line-height: 135%;
+  }
 }

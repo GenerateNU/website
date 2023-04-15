@@ -145,6 +145,174 @@ h1 {
   font-size: 3vh;
 }
 
+@media only screen and (min-aspect-ratio: 6/10) {
+  .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20vh;
+    background-color: white;
+  }
+  
+  .column-1 {
+    width: max(60vh, 600px);
+    margin-top: -3vh;
+  }
+  
+  .column-1-text {
+    padding-top: 15vh;
+    padding-left: 25vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column-2 {
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vh;
+  }
+  
+  .column-3 {
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .client {
+    width: 50vh;
+    flex-direction: row;
+    padding-top: 3%;
+  }
+  
+  .client-text {
+    font-family: Outfit 500;
+    font-size: 3vh;
+    line-height: 3vh;
+    ;
+    font-weight: 700;
+    padding-right: 2vh;
+  }
+  
+  .name-text {
+    font-family: Outfit 500;
+    font-size: 3vh;
+  }
+  
+  .school {
+    font-family: Outfit 500;
+    font-size: 2vh;
+    text-transform: uppercase;
+  }
+  
+  .name-order {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10vh;
+  }
+  
+  .client-blurb {
+    width: 40vh;
+    padding-top: 6vh;
+    align-self: flex-end;
+    font-size: 3vh;
+  }
+  
+  .bottom-corner {
+    padding-bottom: 5vh;
+    align-self: flex-start;
+  }
+  
+  .bottom-corner-img {
+    margin-top: -23vh;
+    margin-left: 10vh;
+    height: 25vh;
+  }
+  
+  .product-img {
+    /* position: absolute; */
+    height: 80vh;
+    margin-top: -8vh;
+    margin-left: -4vh;
+    min-height: 100%;
+  }
+  
+  .product-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-left: 14vh;
+    margin-top: 14vh;
+  }
+  
+  .top-corner {
+    align-self: flex-end;
+    height: 40vh;
+  }
+  
+  .top-corner-img {
+    margin-top: 5vh;
+    margin-right: 8vh;
+    align-self: flex-end;
+    height: 25vh;
+  }
+  
+  blockquote {
+    font-family: "Outfit 300";
+    font-size: 2.5vh;
+    position: relative;
+    margin: 2vh;
+  }
+  
+  blockquote:before {
+    font-family: "Space Mono 700";
+    color: #ffbf3c;
+    position: absolute;
+    font-size: 6vh;
+    line-height: 1;
+    top: 0;
+    margin-left: -2vh;
+    left: -2vh;
+    content: "\201C";
+  }
+  
+  blockquote:after {
+    font-family: "Space Mono 700";
+    color: #ffbf3c;
+    position: absolute;
+    float: right;
+    font-size: 6vh;
+    margin-top: 2vh;
+    margin-right: 12vh;
+    line-height: 1;
+    right: 0vh;
+    bottom: -1vh;
+    content: "\201D";
+  }
+  
+  h1 {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 9vh;
+    line-height: 9vh;
+    text-transform: uppercase;
+  }
+  
+  .quote-container {
+    font-family: "Outfit 300";
+    font-size: 2.5vh;
+    position: relative;
+    margin: 2vh;
+    margin-left: 2vh;
+  }
+  
+  .block_quote {
+    margin-left: 13vh;
+  }
+}
+
 @media only screen and (max-device-width: 650px) {
   .parent {
     flex-direction: column;
@@ -161,7 +329,6 @@ h1 {
   .client-blurb {
     padding-top: 3vh;
     margin: auto;
-    margin-left: -6vw;
   }
 
   .name-order {
@@ -174,15 +341,20 @@ h1 {
 
   .client-blurb p {
     font-size: 2vh;
+    margin: auto;
+
   }
 
   .product-img-container {
     padding-top: 0;
     margin-top: 0;
+    padding-left: 0;
+
   }
 
   .mockup-img {
     width: unset;
+    margin-left: 0;
   }
 
   .bottom-corner, .top-corner {

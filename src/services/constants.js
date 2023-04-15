@@ -1,6 +1,10 @@
 export const constants = {
-   // Management
+   //Management
    // "Position_Executive_Director": "https://forms.gle/SFo5x49Xz8hcFDZj6",
+   "Position_Hardware_Director": "https://forms.gle/2A6tV8Xe2bp8q1TNA",
+   "Position_Software_Director": "https://forms.gle/tegB5SWsEkqe5YW17",
+   "Position_Operations_Director": "https://forms.gle/8jkatNqUu7VB88he8",
+   "Position_Engagement_Director": "https://forms.gle/vQXUHNKxhQkDpkns6",
 
    // Engagement
    // "Position_Online_Engagement_Coordinator": "https://forms.gle/FhTRWBm53eQFYVp68",
@@ -28,12 +32,9 @@ export const constants = {
    // "Position_Information_Architect/Copywriter": "https://forms.gle/CmNQCADrwxAMuo8aA",
 
    // SW + HW
-   // "Position_Hardware_Engineer":
-   //    "https://docs.google.com/forms/d/e/1FAIpQLSdTKaypAXMO1LYU6nx36uHReRgk8HF9mDo0TOUBzmuSJrdOlw/viewform?usp=sf_link",
-   // "Position_Hardware_Designer":
-   //    "https://docs.google.com/forms/d/e/1FAIpQLSeD0MLTJxVciJWcbyxYLHp4bNab87xiT0IZBEA1byyQPCzWCw/viewform?usp=sf_link",
-   // "Position_Software_Engineer": "https://forms.gle/9dfpE6ki6Tnpem6U9",
-   // "Position_Software_Designer": "https://forms.gle/wYoyFmowtEgGF5JA6",
    "Position_Hardware_Client": "https://docs.google.com/forms/d/e/1FAIpQLSc7TVI0FmZG6DujNi2GLEUeyGBQYlhAGtFUyf5AXzLIB0mF9Q/viewform?usp=sf_link",
    "Position_Software_Client": "https://docs.google.com/forms/d/e/1FAIpQLSfWrQlG1ewhGAtKYrVyLVmTQ4KPdm99j9lwm049UywL-yhL9w/viewform?usp=sf_link"
+
 };
+
+export default constants;

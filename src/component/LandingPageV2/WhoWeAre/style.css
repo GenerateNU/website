@@ -1,51 +1,89 @@
-.whoWeAreContainer{
-    width: 60%;
-    margin:0%;
+.whoWeAreContainer {
+    width: max(60%, 80vh);
+    margin: 0%;
     padding: 0%;
 }
 
-@media only screen and (max-device-width: 650px) {
-    .whoWeAreContainer{
-        width: 100%;
-        margin:0%;
-        padding: 0%;
-    }
-  }
-
 .whowearetext {
-padding-top: 25%;
-padding-left: 15%;
-font-family: 'Space Mono 700' ;
-font-style: normal;
-font-weight: 700;
-font-size: 8.78vh;
-line-height: 11.22vh;
-text-transform: uppercase;
-color: #FFFFFF;
+    padding-top: 15vh; 
+    padding-left: 15%;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-weight: 700;
+    font-size: min(8.78vh, 6vw);
+    line-height: 11.22vh;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 15px;
+}
+
+.whowearetextmobile {
+    padding-top: 25%;
+    padding-left: 15%;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.5vh;
+    line-height: 11.22vh;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .bluerectangle {
-height: 40vh;
-background:  #187DFF;;
+    height: 40vh;
+    background: #187DFF;
+    position: relative;
 }
 
 .purplerectangle {
-height: 60vh;
-background: #A559EC;
+    height: 60vh;
+    background: #A559EC;
 }
 
 .whoweareparagraph {
-    padding: 7%;
-    padding-left: 15%;
-width: 80%;
-height: 80%;
-left: 187.7vh;
-top: 46.83vh;
-text-align: left;
-font-family: 'Outfit 300';
-font-style: normal;
-font-weight: 300;
-font-size: 2.92vh;
-line-height: 4.15vh;
-color: #FFFFFF;
+    padding: 5%;
+    padding-left: 10%;
+    width: 90%;
+    height: 80%;
+    left: 187.7vh;
+    top: 46.83vh;
+    text-align: left;
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.5vh;
+    line-height: max(2.8vw, 3.5vh);
+    color: #FFFFFF;
+}
+
+@media only screen and (max-device-width: 650px) {
+    .whoWeAreContainer {
+        width: 100%;
+        height: 80vh;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .whowearetext {
+        padding-top: 20%;
+        padding-left: 15%;
+        font-size: 5vh;
+        line-height: 11.22vh;
+    }
+    
+    .bluerectangle {
+        height: 20vh;
+    }
+
+    .purplerectangle {
+        height: 60vh;
+    }
+
+    .whoweareparagraph {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: 3vh;
+    }
 }

@@ -1,35 +1,32 @@
- # What was the ticket?
- WT-41 - I worked on mobile responsiveness by attempting to code the mobile Featured Projects page panel to match the mobile UI in Figma.
- Link to Ticket: https://generatenu.atlassian.net/browse/WT-41?atlOrigin=eyJpIjoiMjY1ODFmZTRkMDVmNGY1N2ExZjc4MjJiYThlODNlMDUiLCJwIjoiaiJ9
-
+# What was the ticket?
+WT-63 - Fix alignment for Generate logo on the navbar.
+ Link to Ticket:https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-63 
+ I also updated the menu icon to match the size of the text and be spaced slightly out from the menu text.
  
  # What did I do?
  
-I changed some of the CSS properties of the text components on the Featured Projects panel when the display is switched to mobile via using selectors to specifically change properties such as DOM layout (padding, margins) and text font-size.
+ I removed the list of cards from their containing div and placed them directly under the JSX fragment, and added a container flex div around each card.
+ I also tweaked the mobile CSS to maintain its look.
  
  # How did I test it?
  
-Describe in detail steps you used to test the changes you have made.
- Key Parts
- - I checked the behavior of the page at various page lengths (desktop size, border between desktop and mobile, and mobile size)
- - Made sure text remained clearly visible and as close as possible to the mobile UI.
- 
- Required checks:
- 
- - [ ] Did you conduct a self-review?
- - [ ] Have you written unit or integration tests?
+ I resized the screen to narrow viewport heights and widths, zoomed in and out to the max values, and checked using mobile inspect.
 
  # What could go wrong in the future? What parts of your code should the reviewer pay the most attention to?
- 
- Describe aspects of the PR that may become problems in the future.
- Key Questions
- - There is a black line running down the left side of the mobile page of the Landing, needs to be looked into.
+
+ Whether the relative positioning of the header texts and the cards is appropriate
  
  # Additional comments for the reviewers
+ I implemented a decent mobile look, although the styling will be changed entirely in a different ticket.
  
  # Screenshots
- FIGMA
- ![alt text](public/images/PRImages/Featured_projects_mobile.png?raw=true "FIGMA") 
 
  MY VERSION
-![alt text](public/images/PRImages/Featured_projects_mobile_UI_local.png?raw=true "LOCAL")
+
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.44.30%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.44.43%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.45.02%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.45.17%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.45.33%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.45.41%20PM.png)
+ ![alt text](../public/images/PRImages/Screenshot%202023-04-12%20at%2010.46.05%20PM.png)

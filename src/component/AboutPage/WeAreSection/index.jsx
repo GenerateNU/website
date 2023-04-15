@@ -6,24 +6,17 @@ import './style.css';
 const WeAreSection = () => {
     return (
         <> 
-             <div >
-                <div className="fit-content">
-                    <h5 className="mb-0 our-mission-our-values we-are-values w-auto h-auto text-end p-4">
+                <div className="weare-header">
+                    <h5 className="mb-0 our-mission-our-values we-are-values d-flex flex-row justify-content-end h-auto text-nowrap">
                         our values
                     </h5>
-                    <h1 className="our-mission-we-are text-no-fill text-uppercase fit-content">
+                    <h1 className="our-mission-we-are text-no-fill text-uppercase text-nowrap">
                         We are
                     </h1>
                 </div>
-                <div className="we-are-header-space"></div>
-                <div className="d-flex align-items-center">
-                    {
-                        valueData.map(value => <ValueCard value={value} />)
-                    }
-                </div>
-            </div>
-            <div className="cards-space"></div>
-
+            {
+                valueData.map(value => <div className="card-container"><ValueCard value={value}/></div>)
+            }
          
            
         </>

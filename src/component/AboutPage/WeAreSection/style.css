@@ -1,3 +1,22 @@
+.card-container {
+    width: 40vh;
+    position: relative;
+    top: 60vh;
+    margin-right: 10vh;
+}
+
+.weare-header {
+    width: 1vw;
+}
+
+.our-mission-we-are {
+    color: #FFBF3C;
+    font-size: 35vh;
+    line-height: 77%;
+    font-family: 'Space Mono 700';
+    word-spacing: -5vw;
+}
+
 
 .value-card-sizing {
     height: 30vh;
@@ -11,7 +30,7 @@
 .value-card-header {
     color: white;
     font-family: 'Space Mono 700';
-    font-size: 200%;
+    font-size: 4vh;
     line-height: 100%;
     -webkit-text-stroke-width: 1.5px;
     height: 20%;
@@ -20,8 +39,8 @@
 .value-card-text {
     color: white;
     font-family: 'Outfit 300';
-    font-size: 100%;
-    line-height: 140%;
+    font-size: 2vh;
+    line-height: 2.8vh;
     height: 80%;
     padding: 5%;
 }
@@ -54,14 +73,74 @@
     width: fit-content;
 }
 
+
 .mw-content {
     width: max-content;
 }
 
 .we-are-header-space {
-    height: 20vh;
+    height: 10vh;
 }
 
 .cards-space {
     width: 60%;
+}
+
+.our-mission-our-values {
+    width: 112vh;
+    color: #FFBF3C;
+    font-size: 3vh;
+    line-height: 100%;
+    font-family: 'Space Mono';
+    margin-right: 3%;
+    padding-top: 20vh;
+}
+
+@media only screen and (max-device-width: 650px) {
+    .weare-header {
+        width: 90% !important;
+        padding-left: 5%;
+    }
+
+    .we-are-header-space {
+        height: 7vh;
+    }
+
+    .our-mission-our-values {
+        font-size: 2vh;
+        margin-right: 10vh;
+        padding: 0%;
+        width: 70vw;
+        padding-bottom: 2% !important;
+    }
+
+    .our-mission-we-are {
+        font-size: 10vh;
+    }
+
+    .card-container {
+        width: 100vw;
+        height: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5%;
+        position: static;
+    }
+
+
+    .value-card-sizing {
+        width: 85vw;
+        aspect-ratio: 1.2 / 1;
+        height: auto;
+    }
+
+    .value-card:not(:last-child) {
+        padding-right: .5rem;
+        padding-bottom: 5%;
+    }
+    
+    .value-card:last-child {
+        padding-right: .5rem;
+    }
 }

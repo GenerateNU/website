@@ -25,18 +25,65 @@
     color: #187DFF;
 }
 
-.our-mission-our-values {
-    color: #FFBF3C;
-    font-size: 1.7vw;
-    line-height: 100%;
-    font-family: 'Space Mono';
-    margin-right: 3%;
+.mission-navbar-container {
+    position:fixed;
+    z-index: 4;
+    left: 1.5%;
+    top: 3%;
+
 }
 
-.our-mission-we-are {
-    color: #FFBF3C;
-    font-size: 15vw;
-    line-height: 77%;
-    font-family: 'Space Mono 700';
-    word-spacing: -5vw;
+.mission-header-space {
+    height: max(120px, 20vh);
+}
+
+
+
+
+
+
+@media only screen and (max-device-width: 650px) {
+    .quote-text {
+        width: 100% !important;
+        padding: 0% !important;
+        flex-direction: column;
+    }
+
+    .our-mission-quote {
+        font-size: 3vh;
+    }
+
+    .our-mission-quotation-mark {
+        float: left;
+        font-size: 7vh;
+        line-height: 4vh;
+        height: 4vh;
+    }
+
+    .bottom-quote {
+        padding-top: 2vh !important;
+    }
+
+    .our-mission-header {
+        padding: 0% !important;
+        margin-top: 2vh;
+        font-size: 10vh;
+        line-height: 10vh;
+    }
+
+    .mission-mobile {
+        padding-left: 5% !important;
+        padding-right: 0% !important;
+        width: 100% !important;
+        height: 90vh !important;
+    }
+
+    .mission-navbar-container {
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 80%;
+        margin-left: 0%;
+        padding-top: 0%;
+    }
+
 }
