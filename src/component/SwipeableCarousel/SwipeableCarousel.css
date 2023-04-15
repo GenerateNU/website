@@ -1,12 +1,14 @@
 .carousel {
   overflow: hidden;
-  height: 100%
+  height: 100%;
 }
 
 .dotbutton {
   display: inline-block;
   width: 1vh;
   height: 1vh;
+  min-width: 35px;
+  min-height: 35px;
   border-radius: 50%;
   border: none;
 }
