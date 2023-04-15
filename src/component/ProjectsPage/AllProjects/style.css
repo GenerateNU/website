@@ -42,6 +42,10 @@
     .all-projects-header .projects-title {
         writing-mode: horizontal-tb;
         transform: unset;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: left;
+        margin-bottom: 10%;
     }
 
     .all-projects-header, .projects-title {
