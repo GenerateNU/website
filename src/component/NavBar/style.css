@@ -1,129 +1,102 @@
 span {
-    font-family: "Space Mono 700";
-    /* font-style: normal; */
-    /* font-weight: 700; */
-    font-size: 2.46vh;
-    line-height: 3.69vh;
-    text-transform: capitalize;
-  }
-  
+  font-family: "Space Mono 700";
+  font-size: 2.46vh;
+  line-height: 3.69vh;
+  text-transform: capitalize;
+}
+
+.bar-size {
+  height: max(50px, 7vmin);
+  width: max(250px, 35vmin);
+}
+
+.menu-hover {
+  cursor: pointer;
+}
+
+.menu-font-style {
+  font-family: "Space Mono 700";
+  font-size: 12vw;
+  line-height: 100%;
+}
+
+.header-font-style {
+  font-family: "Space Mono 700";
+  font-size: 4.5vw;
+  line-height: 128%;
+  font-size: fit-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.header-font-style:hover {
+  background-color: black;
+  color: #ffbf3c !important;
+}
+
+.header-font-style:hover,
+.header-font-style:active {
+  cursor: pointer;
+}
+
+.h-line {
+  position: absolute;
+  height: 1px;
+  background-color: black;
+}
+.v-line {
+  position: absolute;
+  width: 1px;
+  background-color: black;
+}
+
+.modal-header {
+  padding: 0 0 0 0;
+  border-bottom: none;
+}
+
+.menu-font-style {
+  font-size: 15vw;
+  text-transform: uppercase;
+}
+
+.newsletter-font {
+  font-size: 5vw;
+  font-family: "Space Mono 700";
+  line-height: 100%;
+  text-transform: uppercase;
+  transform: rotate(270deg);
+}
+
+@media only screen and (max-device-width: 650px) {
   .bar-size {
-      height: max(50px, 7vmin);
-      width: max(250px, 35vmin);
+    height: 5vh;
+    width: 5vh;
   }
-  
-  .fit-content {
-      height: fit-content;
-      width: fit-content;
+  .wrapper-nav {
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    border: 1px solid black;
   }
-  
-  .menu-hover {
-      cursor: pointer;
+  .hamburger-mobile {
+    transform: scale(2.5);
   }
-  
-  .menu-font-style {
-      font-family: "Space Mono 700";
-      font-size: 12vw;
-      line-height: 100%;
+  .modal-header {
+    padding: 2.5% 2.5% 0 0;
   }
-  
+
   .header-font-style {
-      font-family: "Space Mono 700";
-      font-size: 4.5vw;
-      line-height: 128%;
+    font-size: 10vw;
   }
-  
-  .header-font-style:hover {
-      background-color: black;
-      color: #FFBF3C !important;
+
+  .newsletter-font {
+    font-size: 12.5vw;
+    transform: none;
   }
-  
-  .header-font-style:hover, .header-font-style:active {
-      cursor: pointer;
-  }
-  
-  .list-font-style {
-      font-family: 'Space Mono 400';
-      font-size: 1.2vw;
-      line-height: 175%;
-  }
-  
-  .list-font-style:hover, .list-font-style:active {
-      cursor: pointer;
-      text-decoration: underline !important;
-  }
-  
-  .vh-45 {
-      height: 45vh;
-  }
-  
-  .vh-15 {
-      height: 15vh;
-  }
-  
-  .vh-40 {
-      height: 40vh;
-  }
-  
-  .footer-font-style {
-      font-family: 'Space Mono 400';
-      font-size: 1.2vw;
-      line-height: 150%;
-  }
-  
-  .gen-float-end {
-      float: right;
-  }
-  
-  .vl {
-      border-Left: 6px solid green;
-      height: 59.45vh;
-      left: 50%
-    }
-  
-    .rectangleMenu {
-      display: inline-block;
-      width: 12.55vh;
-      height: 12.55vh;
-      background: orange;
-    }
-  
-    .disabled-font-style {
-      font-family: "Space Mono 700";
-      font-size: 4.5vw;
-      line-height: 128%;
-      color: #e0e0e0 !important
-  }
-  
-  .flexbox {
-      display:flex;
-      flex-direction: row;
-      }
-  
-  
-  .flexbox2 {
-      display:flex;
-      flex-direction: row;
-      margin-left: 75.28vh;
-      }
-  
-  
-  .item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-right: 3.69vh;
-      width: 5vw;
-      height: 5vw;
-      background-color: #FFBF3C;
-      border-radius: 100%;
-      }
-  
-  
-  @media only screen and (max-device-width: 650px) {
-      .bar-size {
-          height: 16vw;
-          width: 80vw;
-      }
-  }
+}
