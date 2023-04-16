@@ -70,8 +70,8 @@ const NavBar = () => {
   const DESKTOP_RIGHT_V_LINE = 90;
   const TOP_H_LINE = 5;
   const BOTTOM_H_LINE = 90;
-  const MOBILE_MENU_TEXT_LEFT = 12.5;
-  const MOBILE_MENU_TEXT_TOP = 6;
+  const MENU_TEXT_LEFT = 12.5;
+  const MENU_TEXT_TOP = 6;
   const MOBILE_N_DOTS = 7;
   const DESKTOP_N_DOTS = 4;
   const YELLOW = "#ffbf3c";
@@ -117,8 +117,8 @@ const NavBar = () => {
           className="menu-font-style"
           style={{
             position: "absolute",
-            top: `${MOBILE_MENU_TEXT_TOP}%`,
-            left: `${MOBILE_MENU_TEXT_LEFT}%`,
+            top: `${MENU_TEXT_TOP}%`,
+            left: `${MENU_TEXT_LEFT}%`,
           }}
         >
           Menu
@@ -129,8 +129,8 @@ const NavBar = () => {
             className="header-font-style"
             style={{
               position: "absolute",
-              top: `${MOBILE_MENU_TEXT_TOP + 30 + 12 * (1 + index)}%`,
-              left: `${MOBILE_MENU_TEXT_LEFT}%`,
+              top: `${MENU_TEXT_TOP + 30 + 12 * (1 + index)}%`,
+              left: `${MENU_TEXT_LEFT}%`,
             }}
           >
             {item.text}
@@ -142,8 +142,8 @@ const NavBar = () => {
             className="header-font-style"
             style={{
               position: "absolute",
-              top: `${MOBILE_MENU_TEXT_TOP + 30 + 12 * (1 + index)}%`,
-              left: `${MOBILE_MENU_TEXT_LEFT + 35}%`,
+              top: `${MENU_TEXT_TOP + 30 + 12 * (1 + index)}%`,
+              left: `${MENU_TEXT_LEFT + 35}%`,
             }}
           >
             {item.text}
@@ -161,9 +161,9 @@ const NavBar = () => {
                 style={{
                   top: `${BOTTOM_H_LINE + 2.5}%`,
                   left: `${
-                    ((40 - MOBILE_MENU_TEXT_LEFT - 5) / (DESKTOP_N_DOTS - 1)) *
+                    ((40 - MENU_TEXT_LEFT - 5) / (DESKTOP_N_DOTS - 1)) *
                       index +
-                    MOBILE_MENU_TEXT_LEFT -
+                    MENU_TEXT_LEFT -
                     5
                   }%`,
                   position: "absolute",
@@ -182,9 +182,9 @@ const NavBar = () => {
                 style={{
                   top: `${BOTTOM_H_LINE + 2.5}%`,
                   left: `${
-                    ((40 - MOBILE_MENU_TEXT_LEFT - 5) / (DESKTOP_N_DOTS - 1)) *
+                    ((40 - MENU_TEXT_LEFT - 5) / (DESKTOP_N_DOTS - 1)) *
                       index +
-                    MOBILE_MENU_TEXT_LEFT +
+                    MENU_TEXT_LEFT +
                     47.5
                   }%`,
                   position: "absolute",
@@ -262,8 +262,8 @@ const NavBar = () => {
           className="menu-font-style"
           style={{
             position: "absolute",
-            top: `${MOBILE_MENU_TEXT_TOP}%`,
-            left: `${MOBILE_MENU_TEXT_LEFT}%`,
+            top: `${MENU_TEXT_TOP}%`,
+            left: `${MENU_TEXT_LEFT}%`,
           }}
         >
           Menu
@@ -274,8 +274,8 @@ const NavBar = () => {
             className="header-font-style"
             style={{
               position: "absolute",
-              top: `${MOBILE_MENU_TEXT_TOP + 5 + 5 * (1 + index)}%`,
-              left: `${MOBILE_MENU_TEXT_LEFT}%`,
+              top: `${MENU_TEXT_TOP + 5 + 5 * (1 + index)}%`,
+              left: `${MENU_TEXT_LEFT}%`,
             }}
           >
             {item.text}
@@ -289,9 +289,9 @@ const NavBar = () => {
                 style={{
                   top: `${BOTTOM_H_LINE - 5}%`,
                   left: `${
-                    ((82.5 - MOBILE_MENU_TEXT_LEFT) / (MOBILE_N_DOTS - 1)) *
+                    ((82.5 - MENU_TEXT_LEFT) / (MOBILE_N_DOTS - 1)) *
                       index +
-                    MOBILE_MENU_TEXT_LEFT
+                    MENU_TEXT_LEFT
                   }%`,
                   position: "absolute",
                   width: "4vh",
