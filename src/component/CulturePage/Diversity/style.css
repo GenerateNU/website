@@ -2,14 +2,13 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 90px;
-  padding: 0.5em;
 }
 
 .outline {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 90px;
-  padding: 0.5em;
+  padding: 0 10px 10px 10px;
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #6fcf97;
@@ -23,7 +22,7 @@ h2 {
 }
 
 .text-div-diversity {
-  padding: 0 0 0 8em;
+  padding: 0 0 0 100px;
   display: flex;
   flex-direction: column;
 }
@@ -44,5 +43,5 @@ h2 {
 }
 
 .cultureTwo-text {
-  font-size: max(2.5vmin, 1.5vw);
+  font-size: 25px;
 }

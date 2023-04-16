@@ -5,10 +5,10 @@ export default function Diversity() {
   return (
     <div className="container">
       <div className="vertical-div">
+        <span className="outline">Y</span>
         <span style={{ color: "#6FCF97" }} className="vertical">
           DIVERSITY
         </span>
-        <span className="outline">DIVERSITY</span>
         <span className="outline">DIVERSITY</span>
       </div>
 
