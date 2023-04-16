@@ -15,31 +15,31 @@ export default function FeaturedProjects() {
   };
 
   return (
-    <div className="projects-page-container">
-      <div className="navbar-style" id="projects-navbar">
+    <div className="pp-fp-projects-page-container">
+      <div className="navbar-style" id="pp-fp-projects-navbar">
         <NavBar />
       </div>
-      <div className="featured-projects">
-        <div className="featured-projects-text">
-          <h1 className="projects-title">Featured Projects</h1>
-          <p className="projects-text">
+      <div className="featured-pp-fp-projects">
+        <div className="featured-pp-fp-projects-text">
+          <h1 className="pp-fp-projects-title">Featured Projects</h1>
+          <p className="pp-fp-projects-text">
             Teams work side-by-side to ensure products and processes are beyond
             expectations
           </p>
-          <div className="featured-project-buttons">
-            <div className="projects-mobile">
+          <div className="featured-pp-fp-project-buttons">
+            <div className="pp-fp-projects-mobile">
               <h1>{currentProject.name}</h1>
-              <h2 className="project-team">{currentProject.type}</h2>
+              <h2 className="pp-fp-project-team">{currentProject.type}</h2>
             </div>
-            <div className="projects-buttons">
+            <div className="pp-fp-projects-buttons">
               <button
-                className="projects-button projects-forward"
+                className="pp-fp-projects-button pp-fp-projects-forward"
                 onClick={() => handleProject(1)}
               >
                 <img src={Arrow}></img>
               </button>
               <button
-                className="projects-button projects-back"
+                className="pp-fp-projects-button pp-fp-projects-back"
                 onClick={() => handleProject(-1)}
               >
                 <img src={Arrow}></img>
@@ -47,19 +47,19 @@ export default function FeaturedProjects() {
             </div>
           </div>
         </div>
-        <div className="projects">
-          <div className="project">
+        <div className="pp-fp-projects">
+          <div className="pp-fp-project">
             <div className="image-container">
-              <img className="image" src={currentProject.image}></img>
+              <img className="pp-fp-image" src={currentProject.image}></img>
             </div>
-            <div className="project-text">
-              <h1 className="projects-desktop">{currentProject.name}</h1>
-              <h2 className="project-team projects-desktop">
+            <div className="pp-fp-project-text">
+              <h1 className="pp-fp-projects-desktop">{currentProject.name}</h1>
+              <h2 className="pp-fp-project-team pp-fp-projects-desktop">
                 {currentProject.type}
               </h2>
               <p>{currentProject.description}</p>
-              <div className="view-project-div">
-                <button className="view-project-button">View</button>
+              <div className="view-pp-fp-project-div">
+                <button className="view-pp-fp-project-button">View</button>
               </div>
             </div>
           </div>
