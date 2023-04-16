@@ -16,7 +16,7 @@ export default function FeaturedProjects() {
 
   return (
     <div className="projects-page-container">
-      <div className="navbar-style" id="projects-navbar">
+      <div className="pp-fp-navbar-style" id="projects-navbar">
         <NavBar />
       </div>
       <div className="featured-projects">
