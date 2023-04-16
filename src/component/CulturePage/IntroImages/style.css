@@ -1,14 +1,14 @@
 .img-formatting {
   width: auto;
-  height: 50vh;
+  height: 400px;
   object-fit: cover;
   border: 1px solid;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .for-padding {
-  padding: 2em;
-  margin-top: min(20%, 30vh);
+  padding: 30px;
+  margin-top: 390px;
 }
 
 .intro-images {
