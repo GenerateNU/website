@@ -179,4 +179,7 @@
     width: 120px;
     height: 120px;
   }
+  .navbar-style {
+    position: fixed;
+  }
 }
