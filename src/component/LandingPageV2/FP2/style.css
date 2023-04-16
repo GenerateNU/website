@@ -1,3 +1,7 @@
+.fp2 {
+  margin-top: -0.5px;
+}
+
 .parent {
   display: flex;
   flex-direction: row;
