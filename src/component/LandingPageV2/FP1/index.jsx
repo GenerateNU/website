@@ -34,7 +34,7 @@ export default function FP1() {
             </div>
           </div>
           <div className="client-blurb" id="fp1-client-blurb">
-            <p style={{ width: "40vh" }}>
+            <p style={{ width: "50vh" }}>
               A unique, two-sided promotional and loyalty platform built to
               level the playing field for independent bars and restaurants by
               allowing them to utilize an app to acquire and retain customers as
