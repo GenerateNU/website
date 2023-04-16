@@ -51,16 +51,11 @@ span {
   background-color: black;
 }
 
-.close-button {
-  position: absolute;
-  font-size: 2.5vh;
-  top: 1%;
-  left: 93.5%;
-}
-
 .modal-header {
   padding: 0 0 0 0;
+  border-bottom: none;
 }
+
 .menu-font-style {
   font-size: 15vw;
   text-transform: uppercase;
@@ -92,10 +87,8 @@ span {
   .hamburger-mobile {
     transform: scale(2.5);
   }
-  .close-button {
-    font-size: 10vw;
-    top: 7.5%;
-    left: 77.5%;
+  .modal-header {
+    padding: 2.5% 2.5% 0 0;
   }
 
   .header-font-style {

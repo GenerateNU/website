@@ -39,12 +39,14 @@ const dotter = (n_dots, top, spread, start, length, dimensions) => {
   });
 };
 
-const LEFT_V_LINE = 5;
-const RIGHT_V_LINE = 95;
+const MOBILE_LEFT_V_LINE = 10;
+const MOBILE_RIGHT_V_LINE = 90;
+const DESKTOP_LEFT_V_LINE = 5;
 const DESKTOP_RIGHT_V_LINE = 90;
 const TOP_H_LINE = 5;
 const BOTTOM_H_LINE = 90;
-const MENU_TEXT_LEFT = 12.5;
+const MOBILE_MENU_TEXT_LEFT = 17.5;
+const DESKTOP_MENU_TEXT_LEFT = 12.5;
 const MENU_TEXT_TOP = 6;
 const MOBILE_N_DOTS = 7;
 const DESKTOP_N_DOTS = 4;
@@ -108,17 +110,95 @@ const yellowrectify = (top, left, width, height, contents = <></>) => {
     </div>
   );
 };
-const desktopModal = (
+
+const mobileModalContents = (
+  <>
+    <div className="h-line" style={{ top: `${TOP_H_LINE}%`, width: "100%" }} />
+    <div
+      className="v-line"
+      style={{ left: `${MOBILE_LEFT_V_LINE}%`, height: "90%" }}
+    />
+    <div
+      className="v-line"
+      style={{ left: `${MOBILE_RIGHT_V_LINE}%`, height: "90%" }}
+    />
+    <div
+      className="h-line"
+      style={{ top: `${BOTTOM_H_LINE}%`, width: "100%" }}
+    />
+    <Modal.Header
+      closeButton
+      style={{
+        fontSize: "max(1.25vh,1.25vw)",
+        position: "absolute",
+        top: `${TOP_H_LINE / 2 - 1.75}%`,
+        left: `${
+          MOBILE_RIGHT_V_LINE + (100 - MOBILE_RIGHT_V_LINE) / 2 - 1.75
+        }%`,
+        zIndex: 100,
+      }}
+    />
+
+    <Modal.Body className="overflow-hidden text-black">
+      <div
+        className="menu-font-style"
+        style={{
+          position: "absolute",
+          top: `${MENU_TEXT_TOP}%`,
+          left: `${MOBILE_MENU_TEXT_LEFT}%`,
+        }}
+      >
+        Menu
+      </div>
+      {menuItemsMapper(
+        [...menuItemsLeft, ...menuItemsRight],
+        (index) => MENU_TEXT_TOP + 5 + 7.5 * (1 + index),
+        MOBILE_MENU_TEXT_LEFT
+      )}
+      <div style={{ display: "flex" }}>
+        {dotter(
+          MOBILE_N_DOTS,
+          BOTTOM_H_LINE - 5,
+          MOBILE_MENU_TEXT_LEFT + 5,
+          MOBILE_MENU_TEXT_LEFT - 2.5,
+          82.5,
+          4
+        )}
+      </div>
+      {yellowrectify(
+        BOTTOM_H_LINE + 0.1,
+        0,
+        MOBILE_LEFT_V_LINE,
+        100 - BOTTOM_H_LINE
+      )}
+      {/* TODO: Implement newsletter redirect */}
+      {newsletterify(
+        BOTTOM_H_LINE + 0.1,
+        MOBILE_LEFT_V_LINE,
+        MOBILE_RIGHT_V_LINE - MOBILE_LEFT_V_LINE,
+        100 - BOTTOM_H_LINE
+      )}
+      {yellowrectify(
+        BOTTOM_H_LINE + 0.1,
+        MOBILE_RIGHT_V_LINE,
+        MOBILE_RIGHT_V_LINE,
+        100 - BOTTOM_H_LINE
+      )}
+    </Modal.Body>
+  </>
+);
+
+const desktopModalContents = (
   <>
     <div
       className="v-line"
-      style={{ left: `${LEFT_V_LINE}%`, height: "90%" }}
+      style={{ left: `${DESKTOP_LEFT_V_LINE}%`, height: "90%" }}
     />
     <div
       className="v-line"
       style={{
         top: `${BOTTOM_H_LINE}%`,
-        left: `${LEFT_V_LINE}%`,
+        left: `${DESKTOP_LEFT_V_LINE}%`,
         height: "90%",
       }}
     />
@@ -140,14 +220,25 @@ const desktopModal = (
       style={{ top: `${BOTTOM_H_LINE}%`, width: `${DESKTOP_RIGHT_V_LINE}%` }}
     />
 
-    <Modal.Header closeButton className="close-button" />
+    <Modal.Header
+      closeButton
+      style={{
+        fontSize: "max(1.25vh,1.25vw)",
+        position: "absolute",
+        top: `${TOP_H_LINE / 2 - 1.25}%`,
+        left: `${
+          DESKTOP_RIGHT_V_LINE + (100 - DESKTOP_RIGHT_V_LINE) / 2 - 1.25
+        }%`,
+        zIndex: 100,
+      }}
+    />
     <Modal.Body className="overflow-hidden text-black">
       <div
         className="menu-font-style"
         style={{
           position: "absolute",
           top: `${MENU_TEXT_TOP}%`,
-          left: `${MENU_TEXT_LEFT}%`,
+          left: `${DESKTOP_MENU_TEXT_LEFT}%`,
         }}
       >
         Menu
@@ -155,12 +246,12 @@ const desktopModal = (
       {menuItemsMapper(
         menuItemsLeft,
         (index) => MENU_TEXT_TOP + 25 + 12.5 * (1 + index),
-        MENU_TEXT_LEFT
+        DESKTOP_MENU_TEXT_LEFT
       )}
       {menuItemsMapper(
         menuItemsRight,
         (index) => MENU_TEXT_TOP + 25 + 12.5 * (1 + index),
-        MENU_TEXT_LEFT + 35
+        DESKTOP_MENU_TEXT_LEFT + 35
       )}
       <div
         style={{
@@ -170,16 +261,16 @@ const desktopModal = (
         {dotter(
           DESKTOP_N_DOTS,
           BOTTOM_H_LINE + 2.5,
-          MENU_TEXT_LEFT + 10,
-          MENU_TEXT_LEFT - 5,
+          DESKTOP_MENU_TEXT_LEFT + 10,
+          DESKTOP_MENU_TEXT_LEFT - 5,
           40,
           3
         )}
         {dotter(
           DESKTOP_N_DOTS,
           BOTTOM_H_LINE + 2.5,
-          MENU_TEXT_LEFT + 10,
-          MENU_TEXT_LEFT + 53.75,
+          DESKTOP_MENU_TEXT_LEFT + 10,
+          DESKTOP_MENU_TEXT_LEFT + 53.75,
           40,
           3
         )}
@@ -189,7 +280,7 @@ const desktopModal = (
         TOP_H_LINE,
         DESKTOP_RIGHT_V_LINE,
         100 - DESKTOP_RIGHT_V_LINE,
-        BOTTOM_H_LINE - TOP_H_LINE + 0.1
+        BOTTOM_H_LINE - TOP_H_LINE + 0.2
       )}
       {/* TODO: Implement newsletter redirect */}
       {yellowrectify(
@@ -198,66 +289,6 @@ const desktopModal = (
         100 - DESKTOP_RIGHT_V_LINE,
         100 - BOTTOM_H_LINE,
         <img src={Arrow} style={{ transform: "rotate(90deg)" }} alt="Arrow" />
-      )}
-    </Modal.Body>
-  </>
-);
-
-const mobileModal = (
-  <>
-    <div className="h-line" style={{ top: `${TOP_H_LINE}%`, width: "100%" }} />
-    <div
-      className="v-line"
-      style={{ left: `${LEFT_V_LINE}%`, height: "90%" }}
-    />
-    <div
-      className="v-line"
-      style={{ left: `${RIGHT_V_LINE}%`, height: "90%" }}
-    />
-    <div
-      className="h-line"
-      style={{ top: `${BOTTOM_H_LINE}%`, width: "100%" }}
-    />
-    <Modal.Header closeButton className="close-button" />
-    <Modal.Body className="overflow-hidden text-black">
-      <div
-        className="menu-font-style"
-        style={{
-          position: "absolute",
-          top: `${MENU_TEXT_TOP}%`,
-          left: `${MENU_TEXT_LEFT}%`,
-        }}
-      >
-        Menu
-      </div>
-      {menuItemsMapper(
-        [...menuItemsLeft, ...menuItemsRight],
-        (index) => MENU_TEXT_TOP + 5 + 7.5 * (1 + index),
-        MENU_TEXT_LEFT
-      )}
-      <div style={{ display: "flex" }}>
-        {dotter(
-          MOBILE_N_DOTS,
-          BOTTOM_H_LINE - 5,
-          MENU_TEXT_LEFT,
-          MENU_TEXT_LEFT - 2.5,
-          82.5,
-          4
-        )}
-      </div>
-      {yellowrectify(BOTTOM_H_LINE + 0.1, 0, LEFT_V_LINE, 100 - BOTTOM_H_LINE)}
-      {/* TODO: Implement newsletter redirect */}
-      {newsletterify(
-        BOTTOM_H_LINE + 0.1,
-        LEFT_V_LINE,
-        RIGHT_V_LINE - LEFT_V_LINE,
-        100 - BOTTOM_H_LINE
-      )}
-      {yellowrectify(
-        BOTTOM_H_LINE + 0.1,
-        RIGHT_V_LINE,
-        RIGHT_V_LINE,
-        100 - BOTTOM_H_LINE
       )}
     </Modal.Body>
   </>
@@ -316,7 +347,7 @@ const NavBar = () => {
         onHide={() => setShowMenu(false)}
         fullscreen={true}
       >
-        {isBigScreen ? desktopModal : mobileModal}
+        {isBigScreen ? desktopModalContents : mobileModalContents}
       </Modal>
     </div>
   );

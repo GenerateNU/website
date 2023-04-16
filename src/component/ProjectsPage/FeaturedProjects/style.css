@@ -204,6 +204,9 @@
   }
   .pp-fp-navbar-style {
     position: fixed;
+    left: 90%;
+    transform: translateX(-50%);
+    margin-left: 0;
   }
 
   .image-container {
