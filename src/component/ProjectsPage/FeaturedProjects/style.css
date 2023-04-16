@@ -1,7 +1,6 @@
 .projects-page-container {
   min-width: 1107px;
   max-width: 98vw;
-  width: calc(100vw - 36vh);
 }
 
 .featured-projects {

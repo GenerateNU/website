@@ -4,7 +4,6 @@ import AllProjects from "./AllProjects/AllProjects";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 import Footer from "../VerticalFooter";
 import NextPage from "../NextPage";
-import "./style.css";
 
 export default function ProjectsPage() {
   const children = [

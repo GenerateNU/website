@@ -3,6 +3,7 @@
     display: flex;
     max-width: unset;
     align-items: center;
+    margin-left: 10%;
 }
 
 .all-projects-header {
@@ -36,6 +37,7 @@
     .all-projects-container {
         width: 100vw!important;
         flex-direction: column;
+        margin-left: 0;
     }
 
     .all-projects-header .projects-title {
