@@ -216,7 +216,8 @@ const NavBar = () => {
           <div className="newsletter-font">Newsletter</div>
         </div>
         {/* TODO: Implement newsletter redirect */}
-        <div style={{
+        <div
+          style={{
             position: "absolute",
             top: `${BOTTOM_H_LINE}%`,
             left: `${DESKTOP_RIGHT_V_LINE}%`,
@@ -227,8 +228,13 @@ const NavBar = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-          }}>
-          <img src={Arrow} style={{transform:"rotate(90deg)"}}alt="Arrow"></img>
+          }}
+        >
+          <img
+            src={Arrow}
+            style={{ transform: "rotate(90deg)" }}
+            alt="Arrow"
+          ></img>
         </div>
       </Modal.Body>
     </>
