@@ -129,7 +129,7 @@ const NavBar = () => {
             className="header-font-style"
             style={{
               position: "absolute",
-              top: `${MOBILE_MENU_TEXT_TOP + 45 + 8 * (1 + index)}%`,
+              top: `${MOBILE_MENU_TEXT_TOP + 30 + 12 * (1 + index)}%`,
               left: `${MOBILE_MENU_TEXT_LEFT}%`,
             }}
           >
@@ -142,7 +142,7 @@ const NavBar = () => {
             className="header-font-style"
             style={{
               position: "absolute",
-              top: `${MOBILE_MENU_TEXT_TOP + 45 + 8 * (1 + index)}%`,
+              top: `${MOBILE_MENU_TEXT_TOP + 30 + 12 * (1 + index)}%`,
               left: `${MOBILE_MENU_TEXT_LEFT + 35}%`,
             }}
           >
