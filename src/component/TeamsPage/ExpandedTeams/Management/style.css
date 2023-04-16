@@ -13,36 +13,36 @@
 
 .header-title {
     z-index: -10;
-    height: 15vh;
-    width: 100vh;
+    height: max(7.25vw, 64px);
+    width: max(48vw, 412px);
     margin-top: -20vh;
-    margin-left: 15vh;
+    margin-left: 7.25vw;
     background-color: white;
 }
 
 .header-text {
-    height: 15vh;
-    width: 20vh;
+    height: max(7.25vw, 64px);
     font-family: "Space Mono 700";
     text-transform: capitalize;
     color: #FFBF3C;
-    font-size: 15vh;
-    margin-left: 4vh;
-    line-height: 15vh;
+    font-size: max(7.25vw, 64px);
+    margin-left: 2vw;
+    line-height: max(7.25vw, 64px);
     background-color: white;
 }
 
 .info-section {
-    width: 40vw;
+    width: 35vw;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-/* .info-pic {
-    width: 40vw;
-} */
+.info-pic {
+    width:  min(30vw, 40vh);
+    height: min(39.74vw, 52.98vh);
+}
 
 .text-row {
     margin-left: 10vw;
@@ -55,8 +55,8 @@
 }
 
 .roles-banner {
-    width: 40px;
-    height: 1312px;
+    width: 2.34vw;
+    height: max(76.8vw, 1100px);
     /* left: 100px;
     top: 1480px; */
     background: linear-gradient(180deg, #FFBF3C 8.33%, #7B61FF 28.13%, #6FCF97 50.52%, #FF0000 72.92%, #1477F8 90.62%);
@@ -67,7 +67,7 @@
 }
 
 .roles-writing {
-    margin: 10vh;
+    margin: 5vw;
     height: auto;
     display: flex;
     flex-direction: row;

@@ -22,14 +22,10 @@ const Management = () => {
                         the larger community.
                     </div>
                 </div>
-                <div className="info-pic">
-                    <img src={MngmtPH}></img>
-                </div>
+                <img src={MngmtPH} className="info-pic"></img>
             </div>
             <div className="text-row">
-                <div className="info-pic">
-                    <img src={MngmtPH}></img>
-                </div>
+                <img className="info-pic" src={MngmtPH}></img>
                 <div className="info-section">
                     <div className="paragraph-title">HOW WE WORK</div>
                     <div className="paragraph-text">
