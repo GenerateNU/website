@@ -232,7 +232,7 @@ const mobileModal = (
       </div>
       {menuItemsMapper(
         [...menuItemsLeft, ...menuItemsRight],
-        (index) => MENU_TEXT_TOP + 5 + 5 * (1 + index),
+        (index) => MENU_TEXT_TOP + 5 + 7.5 * (1 + index),
         MENU_TEXT_LEFT
       )}
       <div style={{ display: "flex" }}>

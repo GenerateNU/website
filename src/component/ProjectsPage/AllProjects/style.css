@@ -1,64 +1,66 @@
 .all-projects-container {
-    position: relative;
-    display: flex;
-    max-width: unset;
-    align-items: center;
+  position: relative;
+  display: flex;
+  max-width: unset;
+  align-items: center;
 }
 
 .all-projects-header {
-    display: flex;
-    height: 100vh;
-    justify-content: flex-start;
-    width: -moz-fit-content;
-    width: fit-content;
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .all-projects-header .projects-title {
-    transform: rotate(180deg);
-    writing-mode: vertical-lr;
-    text-align: center;
+  color: #187dff;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  text-align: center;
 }
 
 .all-projects {
-    display: flex;
-    height: 80vh;
-    width: 100%;
-    justify-content: space-evenly;
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .project-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media only screen and (max-device-width: 650px) {
-    .all-projects-container {
-        width: 100vw!important;
-        flex-direction: column;
-    }
+  .all-projects-container {
+    width: 100vw !important;
+    flex-direction: column;
+  }
 
-    .all-projects-header .projects-title {
-        writing-mode: horizontal-tb;
-        transform: unset;
-        margin-left: 5%;
-        margin-right: 5%;
-        text-align: left;
-        margin-bottom: 10%;
-    }
+  .all-projects-header .projects-title {
+    writing-mode: horizontal-tb;
+    transform: unset;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    margin-bottom: 10%;
+  }
 
-    .all-projects-header, .projects-title {
-        width: 100%;
-        height: unset;
-    }
+  .all-projects-header,
+  .projects-title {
+    width: 100%;
+    height: unset;
+  }
 
-    .all-projects {
-        flex-direction: column;
-        justify-content: flex-start;
-        height: unset;
-    }
+  .all-projects {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: unset;
+  }
 
-    .project-col {
-        align-items: center;
-    }
+  .project-col {
+    align-items: center;
+  }
 }
