@@ -1,23 +1,24 @@
 import React from "react";
 import "./style.css";
 import BottomCorner from "../../../assets/images/landingpage-v2/bottom_corner.png";
-import EarnzMockUp from "../../../assets/images/landingpage-v2/Earnz_Mock_Up.png";
 import TopCorner from "../../../assets/images/landingpage-v2/top_corner.png";
 import useDeviceDetection from "../../DesktopMobileHandler/isMobileDetection.hooks.jsx";
+import Projects from "../../../data/featuredProjectData.js";
 
 export default function FP1() {
   const isMobile = useDeviceDetection();
+  const Earnz = Projects[0];
 
-  if ((window.innerWidth / window.innerHeight <= 0.6) || isMobile) {
+  if (window.innerWidth / window.innerHeight <= 0.6 || isMobile) {
     return (
       <div className="parent">
         <div className="column-1">
           <div>
             <h1 style={{ fontSize: "7vh" }} className="earnz-header">
-              Earnz
+              {Earnz.title}
             </h1>
             <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
-              software
+              {Earnz.type}
             </p>
           </div>
           <div className="client">
@@ -26,20 +27,15 @@ export default function FP1() {
             </p>
             <div className="name-order">
               <p style={{ fontSize: "3vh" }} className="name-text">
-                Max Thalheimer
+                {Earnz.clientName}
               </p>
               <p style={{ fontSize: "2vh" }} className="school">
-                Northeastern Alumnus ‘20
+                {Earnz.clientSchool}
               </p>
             </div>
           </div>
           <div className="client-blurb" id="fp1-client-blurb">
-            <p style={{ width: "50vh" }}>
-              A unique, two-sided promotional and loyalty platform built to
-              level the playing field for independent bars and restaurants by
-              allowing them to utilize an app to acquire and retain customers as
-              easily and cost effectively as currently only chains can.
-            </p>
+            <p style={{ width: "50vh" }}>{Earnz.description}</p>
             <a href="url">learn more</a>
           </div>
           <div className="bottom-corner">
@@ -48,7 +44,7 @@ export default function FP1() {
         </div>
         <div className="column-2">
           <div className="product-img-container" id="fp1-img-container">
-            <img className="product-img" src={EarnzMockUp} alt="" />
+            <img className="product-img" src={Earnz.image} alt="" />
           </div>
         </div>
         <div className="column-3" id="fp1-c3">
@@ -60,13 +56,7 @@ export default function FP1() {
             />
           </div>
           <div className="quote-container" id="fp1-quote-container">
-            <blockquote>
-              Generate was great as a learning experience for me, as someone who
-              hadn’t built a tech company before. The team of experienced
-              Generate engineers knew what it takes to build a product like
-              earnz, how to package it all together, and ultimately how to come
-              together as a team.
-            </blockquote>
+            <blockquote>{Earnz.clientQuote}</blockquote>
           </div>
           <hr id="pageSeparator"></hr>
         </div>
@@ -78,9 +68,9 @@ export default function FP1() {
         <div className="column-1">
           <div className="column-1-text">
             <div>
-              <h1 style={{ fontSize: "9vh" }}>Earnz</h1>
+              <h1 style={{ fontSize: "9vh" }}>{Earnz.name}</h1>
               <p style={{ fontFamily: "Space Mono", fontSize: "3vh" }}>
-                software
+                {Earnz.type}
               </p>
             </div>
             <div className="client">
@@ -89,19 +79,16 @@ export default function FP1() {
               </p>
               <div className="name-order">
                 <p style={{ fontSize: "3vh" }} className="name-text">
-                  Max Thalheimer
+                  {Earnz.clientName}
                 </p>
                 <p style={{ fontSize: "2vh" }} className="school">
-                  Northeastern Alumnus ‘20
+                  {Earnz.clientSchool}
                 </p>
               </div>
             </div>
             <div>
-              <p style={{ width: "40vh" }} className="client-blurb">
-                A unique, two-sided promotional and loyalty platform built to
-                level the playing field for independent bars and restaurants by
-                allowing them to utilize an app to acquire and retain customers
-                as easily and cost effectively as currently only chains can.
+              <p style={{ width: "43vh" }} className="client-blurb">
+                {Earnz.description}
               </p>
               <a href="url">learn more</a>
             </div>
@@ -112,7 +99,7 @@ export default function FP1() {
         </div>
         <div className="column-2">
           <div className="product-img-container" id="fp1-img-container">
-            <img className="product-img" src={EarnzMockUp} alt="" />
+            <img className="product-img" src={Earnz.image} alt="" />
           </div>
         </div>
         <div className="column-3" id="fp1-c3">
@@ -120,13 +107,7 @@ export default function FP1() {
             <img className="top-corner-img" src={TopCorner} alt="" />
           </div>
           <blockquote className="block_quote">
-            <div className="quote-container">
-              Generate was great as a learning experience for me, as someone who
-              hadn't built a tech company before. The team of experienced
-              Generate engineers knew what it takes to build a product like
-              earnz, how to package it all together, and ultimately how to come
-              together as a team.
-            </div>
+            <div className="quote-container">{Earnz.clientQuote}</div>
           </blockquote>
         </div>
       </>

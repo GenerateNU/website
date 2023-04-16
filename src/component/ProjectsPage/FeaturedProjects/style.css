@@ -1,11 +1,11 @@
 .projects-page-container {
   min-width: 1107px;
-  width: calc(100vw - 36vh);
+  max-width: unset;
 }
 
 .featured-projects {
-  width: 100vw;
   display: flex;
+  width: 90vw;
 }
 
 .projects-title {
@@ -53,13 +53,7 @@
 
 .project {
   display: flex;
-  margin-top: 6%;
-}
-
-.project img {
-  max-width: 40vw;
-  max-height: 56vh;
-  object-fit: contain;
+  margin-top: 10px;
 }
 
 .project-text h1 {
@@ -88,8 +82,9 @@
   box-shadow: -0.5rem 0.6rem;
   font-family: "Space Mono";
   font-size: 3vh;
-  padding: 2% 20%;
-  margin-top: 45%;
+  position: relative;
+  width: 100px;
+  margin-left: 5px;
 }
 
 .projects-mobile {
@@ -103,7 +98,31 @@
   align-items: center;
 }
 
+.image-container {
+  width: 40vw;
+  height: 56vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-text {
+  margin-left: 5px;
+}
+
 @media only screen and (max-device-width: 650px) {
+  .featured-projects {
+    width: unset;
+    margin-bottom: 50px;
+  }
+
   .projects-page-container {
     min-width: unset;
     width: unset;
@@ -120,8 +139,13 @@
     flex-direction: column;
   }
 
+  .projects {
+    height: auto;
+  }
+
   .project {
     flex-direction: column;
+    height: auto;
   }
 
   .featured-projects-text {
@@ -130,11 +154,6 @@
 
   .projects-text {
     max-width: unset;
-  }
-
-  .project img {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .projects-desktop {
@@ -150,10 +169,13 @@
     align-items: center;
     justify-content: space-between;
     margin-right: 4%;
+    margin-bottom: 10%;
   }
 
   .project-team {
     margin-top: -10%;
+    width: 33vw;
+    height: 10vh;
   }
 
   .project-text p {
@@ -178,5 +200,18 @@
   .projects-button {
     width: 120px;
     height: 120px;
+  }
+
+  .image-container {
+    width: 100vw;
+    height: 25vh;
+    object-fit: contain;
+  }
+
+  .view-project-button {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 10px 30px;
   }
 }

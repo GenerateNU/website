@@ -33,7 +33,7 @@ export default class AboutPage extends React.Component {
         children={children}
         desktopBGColor={"black"}
         mobileBGColor={"black"}
-        className={"about-page"}
+        containerClassName={"about-page"}
       />
     );
   }
