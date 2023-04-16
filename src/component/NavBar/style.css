@@ -22,7 +22,7 @@ span {
 
 .header-font-style {
   font-family: "Space Mono 700";
-  font-size: 6vw;
+  font-size: 4.5vw;
   line-height: 128%;
   font-size: fit-content;
   text-decoration: none;
@@ -62,7 +62,7 @@ span {
   padding: 0 0 0 0;
 }
 .menu-font-style {
-  font-size: 20vw;
+  font-size: 15vw;
   text-transform: uppercase;
 }
 

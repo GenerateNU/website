@@ -154,12 +154,12 @@ const desktopModal = (
       </div>
       {menuItemsMapper(
         menuItemsLeft,
-        (index) => MENU_TEXT_TOP + 30 + 12 * (1 + index),
+        (index) => MENU_TEXT_TOP + 25 + 12.5 * (1 + index),
         MENU_TEXT_LEFT
       )}
       {menuItemsMapper(
         menuItemsRight,
-        (index) => MENU_TEXT_TOP + 30 + 12 * (1 + index),
+        (index) => MENU_TEXT_TOP + 25 + 12.5 * (1 + index),
         MENU_TEXT_LEFT + 35
       )}
       <div
