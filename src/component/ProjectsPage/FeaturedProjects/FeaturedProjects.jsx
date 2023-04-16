@@ -50,7 +50,7 @@ export default function FeaturedProjects() {
         <div className="pp-fp-projects">
           <div className="pp-fp-project">
             <div className="image-container">
-              <img className="image" src={currentProject.image}></img>
+              <img className="pp-fp-image" src={currentProject.image}></img>
             </div>
             <div className="pp-fp-project-text">
               <h1 className="pp-fp-projects-desktop">{currentProject.name}</h1>
