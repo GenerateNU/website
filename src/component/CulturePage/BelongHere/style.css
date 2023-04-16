@@ -25,7 +25,6 @@
 }
 
 .thrive-together {
-  width: 28.12em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -35,19 +34,19 @@
 .paragraphs {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  align-self: center;
-  height: 100%;
+  height: 400px;
 }
 
 .color-block {
   text-align: center;
   position: relative;
-  top: -150px;
+  top: -90px;
 } 
 
 .graphic {
-  height: 700px;
+  height: 900px;
 }
 
 #belong-here-container {
