@@ -171,9 +171,9 @@ const desktopModal = (
           DESKTOP_N_DOTS,
           BOTTOM_H_LINE + 2.5,
           MENU_TEXT_LEFT + 10,
-          MENU_TEXT_LEFT -5,
+          MENU_TEXT_LEFT - 5,
           40,
-          4
+          3
         )}
         {dotter(
           DESKTOP_N_DOTS,
@@ -181,7 +181,7 @@ const desktopModal = (
           MENU_TEXT_LEFT + 10,
           MENU_TEXT_LEFT + 53.75,
           40,
-          4
+          3
         )}
       </div>
       {/* TODO: Implement newsletter redirect */}
