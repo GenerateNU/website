@@ -1,7 +1,7 @@
 .generateMascotContainer {
   position: absolute;
-  right: 35%;
-  top: 10%;
+  right: 500px;
+  top: 70px;
 }
 
 .generateMascot {
@@ -11,36 +11,38 @@
 
 .our-culture-quote-positioning {
   position: absolute;
-  right: 0%;
-  top: 43%;
+  right: 220px;
+  top: 350px;
   min-height: 200px;
-  height: 20vh;
+  height: 160px;
   min-width: 400px;
-  width: 40vw;
+  width: 604px;
 }
 
 .our-culture-quote {
   color: #a559ec;
   font-family: "Space Mono 700";
-  font-size: calc(12px + 2.5vw);
-  line-height: 110%;
+  width: 650px;
+  height: 150px;
+  font-size: 70px;
+  line-height: 65px;
   font-style: bold;
   text-transform: uppercase;
 }
 
 .our-culture-big-positioning {
   position: absolute;
-  right: 50%;
-  bottom: 45%;
+  right: 750px;
+  top: 300px;
   min-height: 200px;
-  height: 20vh;
+  height: 160px;
   min-width: 400px;
-  width: 40vw;
+  width: 600px;
 }
 
 .our-culture-big {
   color: #187dff;
   font-family: "Space Mono 700";
-  font-size: calc(72px + 14vw);
-  line-height: 77%;
+  font-size: 250px;
+  line-height: 220px;
 }
