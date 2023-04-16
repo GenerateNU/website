@@ -2,6 +2,7 @@ import React from "react";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 import Footer from "../VerticalFooter";
+import "./style.css"
 
 export default function ProjectsPage() {
   const children = [<FeaturedProjects />, <Footer />];
@@ -11,6 +12,7 @@ export default function ProjectsPage() {
       children={children}
       desktopBGColor={"white"}
       mobileBGColor={"white"}
+      rowClassName="projects-page"
     />
   );
 }
