@@ -38,7 +38,7 @@ export default function LeadershipCard({
           <Col
             xs={2}
             className="p-0 position-relative mx-auto text-center"
-            style={{ right: !isBigScreen ? "2.5%" : "" }}
+            style={{ width: !isBigScreen ? "max(4vw,4vh)" : "" }}
           >
             <h1
               className={`m-0 gen-card-header position-absolute top-0 ${
