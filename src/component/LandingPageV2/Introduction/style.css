@@ -374,6 +374,50 @@
   color: #ffffff;
 }
 
+.northeasternbest {
+  /* generate */
+  position: relative;
+  height: 6.46vh;
+  right: -18vh;
+  top: -20vh;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 10;
+  font-size: 1.79vh;
+  line-height: 10.46vh;
+  color: #ffffff;
+}
+
+.productdevelopment {
+  /* generate */
+  position: relative;
+  height: 6.46vh;
+  right: -18vh;
+  top: -24vh;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 10;
+  font-size: 1.79vh;
+  line-height: 10.46vh;
+  text-transform: lowercase;
+  color: #ffbf00;
+}
+
+.studio {
+  /* generate */
+  position: relative;
+  height: 6.46vh;
+  right: -32vh;
+  top: -28vh;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 10;
+  font-size: 1.79vh;
+  line-height: 10.46vh;
+  text-transform: lowercase;
+  color: white;
+}
+
 .scrollmobile {
   position: relative;
   height: 210vh;
@@ -435,5 +479,35 @@
   }
   .comingsoontext {
     display: none
+  }
+}
+
+@media only screen and (max-device-width: 375px) {
+  .desktop {
+    display: none;
+  }
+  .comingsoontext {
+    display: inline;
+  }
+  .wearetextmobile {
+    margin-left: 6vh;
+  }
+  .generatetextmobile {
+    margin-left: 6vh;
+  }
+  .northeasternbest {
+    margin-left: 6vh;
+  }
+  .productdevelopment {
+    margin-left: 6vh;
+  }
+  .studio {
+    margin-left: 6vh;
+  }
+  .scrollmobile {
+    margin-left: 73vh;
+  }
+  .scrollmobile {
+    right: 50vh;
   }
 }
