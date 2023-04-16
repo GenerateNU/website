@@ -1,6 +1,6 @@
 import "./style.css";
-import Hardware from "../../../../assets/images/projectspage/hardware.png";
-import Software from "../../../../assets/images/projectspage/software.png";
+import Hardware from "../../../../assets/images/projectspage/hardware.svg";
+import Software from "../../../../assets/images/projectspage/software.svg";
 
 export default function Project({ name, image, teams, ...props }) {
   const teamImages = {

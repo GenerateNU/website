@@ -1,10 +1,11 @@
 import "./style.css"
 import Project from "./Project/Project"
-import Alia from "../../../assets/images/projectspage/alia.png";
-import Arctic from "../../../assets/images/projectspage/arctic.png";
-import Jurni from "../../../assets/images/projectspage/jurni.png";
-import ShowNxt from "../../../assets/images/projectspage/shownxt.png";
-import HotDate from "../../../assets/images/projectspage/hotdate.png";
+import Alia from "../../../assets/images/projectspage/alia.svg";
+import Arctic from "../../../assets/images/projectspage/arctic.svg";
+import Jurni from "../../../assets/images/projectspage/jurni.svg";
+import ShowNxt from "../../../assets/images/projectspage/shownxt.svg";
+import HotDate from "../../../assets/images/projectspage/hotdate.svg";
+import AutoPasser from "../../../assets/images/projectspage/autopasser.svg";
 
 export default function AllProjects() {
   const projects = [
@@ -31,6 +32,11 @@ export default function AllProjects() {
     {
       name: "Hot Date",
       image: HotDate,
+      teams: ["hardware"],
+    },
+    {
+      name: "Autopasser",
+      image: AutoPasser,
       teams: ["hardware"],
     },
   ];
