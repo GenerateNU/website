@@ -1,116 +1,129 @@
 span {
-  font-family: "Space Mono 700";
-  /* font-style: normal; */
-  /* font-weight: 700; */
-  font-size: 2.46vh;
-  line-height: 3.69vh;
-  text-transform: capitalize;
-}
-
-.fit-content {
-    height: fit-content;
-    width: fit-content;
-}
-
-.menu-hover {
-    cursor: pointer;
-}
-
-.menu-font-style {
     font-family: "Space Mono 700";
-    font-size: 12vw;
-    line-height: 100%;
-}
-
-.header-font-style {
-    font-family: "Space Mono 700";
-    font-size: 4.5vw;
-    line-height: 128%;
-}
-
-.header-font-style:hover {
-    background-color: black;
-    color: #FFBF3C !important;
-}
-
-.header-font-style:hover, .header-font-style:active {
-    cursor: pointer;
-}
-
-.list-font-style {
-    font-family: 'Space Mono 400';
-    font-size: 1.2vw;
-    line-height: 175%;
-}
-
-.list-font-style:hover, .list-font-style:active {
-    cursor: pointer;
-    text-decoration: underline !important;
-}
-
-.vh-45 {
-    height: 45vh;
-}
-
-.vh-15 {
-    height: 15vh;
-}
-
-.vh-40 {
-    height: 40vh;
-}
-
-.footer-font-style {
-    font-family: 'Space Mono 400';
-    font-size: 1.2vw;
-    line-height: 150%;
-}
-
-.gen-float-end {
-    float: right;
-}
-
-.vl {
-    border-Left: 6px solid green;
-    height: 59.45vh;
-    left: 50%
+    /* font-style: normal; */
+    /* font-weight: 700; */
+    font-size: 2.46vh;
+    line-height: 3.69vh;
+    text-transform: capitalize;
   }
-
-  .rectangleMenu {
-    display: inline-block;
-    width: 12.55vh;
-    height: 12.55vh;
-    background: orange;
+  
+  .bar-size {
+      height: max(50px, 7vmin);
+      width: max(250px, 35vmin);
   }
-
-  .disabled-font-style {
-    font-family: "Space Mono 700";
-    font-size: 4.5vw;
-    line-height: 128%;
-    color: #e0e0e0 !important
-}
-
-.flexbox {
-    display:flex;
-    flex-direction: row;
+  
+  .fit-content {
+      height: fit-content;
+      width: fit-content;
+  }
+  
+  .menu-hover {
+      cursor: pointer;
+  }
+  
+  .menu-font-style {
+      font-family: "Space Mono 700";
+      font-size: 12vw;
+      line-height: 100%;
+  }
+  
+  .header-font-style {
+      font-family: "Space Mono 700";
+      font-size: 4.5vw;
+      line-height: 128%;
+  }
+  
+  .header-font-style:hover {
+      background-color: black;
+      color: #FFBF3C !important;
+  }
+  
+  .header-font-style:hover, .header-font-style:active {
+      cursor: pointer;
+  }
+  
+  .list-font-style {
+      font-family: 'Space Mono 400';
+      font-size: 1.2vw;
+      line-height: 175%;
+  }
+  
+  .list-font-style:hover, .list-font-style:active {
+      cursor: pointer;
+      text-decoration: underline !important;
+  }
+  
+  .vh-45 {
+      height: 45vh;
+  }
+  
+  .vh-15 {
+      height: 15vh;
+  }
+  
+  .vh-40 {
+      height: 40vh;
+  }
+  
+  .footer-font-style {
+      font-family: 'Space Mono 400';
+      font-size: 1.2vw;
+      line-height: 150%;
+  }
+  
+  .gen-float-end {
+      float: right;
+  }
+  
+  .vl {
+      border-Left: 6px solid green;
+      height: 59.45vh;
+      left: 50%
     }
-
-
-.flexbox2 {
-    display:flex;
-    flex-direction: row;
-    margin-left: 75.28vh;
+  
+    .rectangleMenu {
+      display: inline-block;
+      width: 12.55vh;
+      height: 12.55vh;
+      background: orange;
     }
-
-
-.item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 3.69vh;
-    width: 5vw;
-    height: 5vw;
-    background-color: #FFBF3C;
-    border-radius: 100%;
-    }
+  
+    .disabled-font-style {
+      font-family: "Space Mono 700";
+      font-size: 4.5vw;
+      line-height: 128%;
+      color: #e0e0e0 !important
+  }
+  
+  .flexbox {
+      display:flex;
+      flex-direction: row;
+      }
+  
+  
+  .flexbox2 {
+      display:flex;
+      flex-direction: row;
+      margin-left: 75.28vh;
+      }
+  
+  
+  .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 3.69vh;
+      width: 5vw;
+      height: 5vw;
+      background-color: #FFBF3C;
+      border-radius: 100%;
+      }
+  
+  
+  @media only screen and (max-device-width: 650px) {
+      .bar-size {
+          height: 16vw;
+          width: 80vw;
+      }
+  }

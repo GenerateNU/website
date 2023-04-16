@@ -1,4 +1,3 @@
-
  # What was the ticket?
 
  WT-86 - I worked on adding the mountain image to the Growth Mantra section of the About Page (Landing)
@@ -30,12 +29,10 @@ Describe in detail steps you used to test the changes you have made.
  Describe aspects of the PR that may become problems in the future.
  Key Questions
  - This landing page has its own issues that need to be fixed that may impact the positioning and sizing of the mountain image
+
  
  # Additional comments for the reviewers
-
- The screenshots show bleeding from the previous Intro panel, but that is fixed in a different branch and has no bearing
- on the efficacy of this PR.
-
+ I implemented a decent mobile look, although the styling will be changed entirely in a different ticket.
  
  # Screenshots
  FIGMA

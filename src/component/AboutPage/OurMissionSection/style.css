@@ -28,8 +28,8 @@
 .mission-navbar-container {
     position:fixed;
     z-index: 4;
-    margin-left: 3%;
-    padding-top: 2%;
+    left: 1.5%;
+    top: 3%;
 
 }
 
@@ -39,13 +39,7 @@
 
 
 
-.our-mission-we-are {
-    color: #FFBF3C;
-    font-size: 15vw;
-    line-height: 77%;
-    font-family: 'Space Mono 700';
-    word-spacing: -5vw;
-}
+
 
 
 @media only screen and (max-device-width: 650px) {

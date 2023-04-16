@@ -8,20 +8,24 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Menu } from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const navigate = useNavigate();
+    const navigateHome = () => {navigate("/");};
+    const navigateApply = () => {navigate("/apply");};
 
     return (
-        <div className="bg-light p-3 mb-5 d-flex border border-dark h-10 w-10">
+        <div className="bg-light p-2 mb-5 d-flex bar-size justify-content-around align-items-center border border-dark h-10 w-10">
             {/* Todo : change the logo */}
-            <a href="/"><img style={{width: '5vh', height: '5vh'}} src={GenerateLogo} /></a>
-            <span className='p-3'><a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover' href="/apply">Apply</a></span>
-            <span className='p-3' onClick={() => setShowMenu(true)}>
-                <a className='bg-transparent shadow-none text-black border-0 text-decoration-none cursor-pointer menu-hover'>
-                    Menu <MenuIcon/>
-                    
+            <img style={{width: 'min(3.5vmin, 40px)', height: 'auto'}} src={GenerateLogo} onClick={navigateHome}/>
+            <span className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center' onClick={navigateApply}>Apply</span>
+            <span className='d-flex align-items-center' onClick={() => setShowMenu(true)}>
+                <a className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-items-center m-1'>
+                    Menu                     
                 </a>
+                <MenuIcon style={{height: '3.5vh', width: 'auto'}}/>
             </span>
 
             <Modal 
@@ -74,11 +78,11 @@ const NavBar = () => {
                                 </a>
                             </Row>
                             <Row className='m-0 p-0'>
-                                <div className='disabled-font-style fit-content text-decoration-none text-black'
-                                    
+                                <a className='header-font-style fit-content text-decoration-none text-black'
+                                href="/projects"
                                 >
                                     Projects
-                                </div>
+                                </a>
                             </Row>
                         </Col>
                         {/* <Col xs={2} className='m-0 p-0 pt-2'>

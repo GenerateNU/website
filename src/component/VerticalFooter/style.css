@@ -11,14 +11,11 @@ a {
 }
 
 .footer-text {
-  height: 30px;
+  max-height: 30px;
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
   color: #ffffff;
-  padding-left: 18%;
   margin: 5%;
   white-space: nowrap;
 }
@@ -58,13 +55,20 @@ a:hover {
 }
 
 .social-icons {
-  margin-top: 30%;
-  margin-left: 27%;
-  margin-right: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  width: 50%;
+}
+
+.social-icons .social-media {
+  width: 3.6vh;
+  height: auto;
 }
 
 .social-icons .row {
   flex-wrap: nowrap;
+  text-align: center;
 }
 
 .footer-two {
@@ -92,6 +96,18 @@ a:hover {
   padding-bottom: 10%;
 }
 
+#footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 23%);
+}
+
+#footer-pages {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media only screen and (max-device-width: 650px) {
   .footer-container {
     padding-bottom: 5vh;
@@ -99,13 +115,17 @@ a:hover {
   }
 
   #footer-links {
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    height: unset;
   }
 
   .footer-text {
     font-size: 5vw;
     padding-bottom: 2.5vh;
+    padding-left: 18%;
+    height: 30px;
+    line-height: 30px;
   }
 
   .footer-text:has(b) {
@@ -123,17 +143,16 @@ a:hover {
 
   .social-icons {
     margin: 0;
-    width: 50%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
     align-items: flex-end;
-    margin: 0;
     margin-right: 8vw;
   }
 
   .social-icons .row {
     padding-bottom: 2vh;
+    text-align: unset;
   }
 
   .social-icons .icon {
@@ -147,5 +166,9 @@ a:hover {
 
   .logo-placement {
     width: 40%;
+  }
+
+  .spacer {
+    padding: 0;
   }
 }

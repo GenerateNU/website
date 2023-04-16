@@ -43,23 +43,27 @@ export default function DesktopMobileScrollAndBackgroundHandler({
         ref={scrollContainerRef}
         // using dsktop to avoid naming collision...
         class={`vh-100 dsktop horizontal-scroll bg-${desktopBGColor} container-fluid ${
-          props.className ?? ""
+          props.containerClassName ?? ""
         }`}
         tabIndex="0"
       >
         {/* The content is wrapped in a Row component from the react-bootstrap library to ensure proper layout */}
-        <Row className="flex-nowrap vh-100">{children}</Row>
+        <Row className={`flex-nowrap vh-100 ${props.rowClassName ?? ""}`}>
+          {children}
+        </Row>
       </div>
 
       {/* Mobile view */}
       <div
         class={`vw-100 mobile vertical-scroll bg-${mobileBGColor} container-fluid ${
-          props.className ?? ""
+          props.containerClassName ?? ""
         }`}
         tabIndex="0"
       >
         {/* The content is wrapped in a Column component from the react-bootstrap library to ensure proper layout */}
-        <Column className="flex-nowrap vw-100">{children}</Column>
+        <Column className={`flex-nowrap vw-100 ${props.rowClassName ?? ""}`}>
+          {children}
+        </Column>
       </div>
     </>
   );
