@@ -55,7 +55,7 @@
 }
 
 .client-blurb {
-  width: 40vh;
+  width: 43vh;
   padding-top: 6vh;
   align-self: flex-end;
 }
@@ -184,7 +184,7 @@ h1 {
   }
   
   .client-blurb {
-    width: 40vh;
+    width: 44vh;
     padding-top: 6vh;
     align-self: flex-end;
     font-size: 3vh;
@@ -196,7 +196,7 @@ h1 {
   }
   
   .bottom-corner-img {
-    margin-top: -23vh;
+    margin-top: -25vh;
     margin-left: 10vh;
     height: 25vh;
   }

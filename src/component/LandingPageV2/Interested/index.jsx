@@ -8,9 +8,12 @@ import { Col } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import ShadowedButton from "../../ShadowedButton";
 import leftcarrot from "../../LandingPageV2/Interested/chevron.png";
+import useDeviceDetection from "../../DesktopMobileHandler/isMobileDetection.hooks.jsx";
 
-const Interested = () => {
-  if (window.innerWidth/window.innerHeight <= 0.6) {
+const Interested = (...props) => {
+  const isMobile = useDeviceDetection();
+
+  if ((window.innerWidth/window.innerHeight <= 0.6 && props?.page === "Landing") || isMobile) {
     return (
       <div className="bg-white interestedcontainer">
         <div className="interestedText">Interested</div>
