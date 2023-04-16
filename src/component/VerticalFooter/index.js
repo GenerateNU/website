@@ -85,7 +85,7 @@ function SocialIcon({ href, imgSrc }) {
   return (
     <Col className="icon">
       <a href={href}>
-        <img src={imgSrc} height="30vh" width="30vw" />
+        <img className={"social-media"} src={imgSrc}/>
       </a>
     </Col>
   );
@@ -113,14 +113,29 @@ function VerticalFooter() {
       <span id="footer-links">
         <span id="footer-pages">
           {pages.map((page, index) => (
-            <FooterLink key={index} page={page} currentPage={currentPageUrl.substring(currentPageUrl.lastIndexOf("/"))} />
+            <FooterLink
+              key={index}
+              page={page}
+              currentPage={currentPageUrl.substring(
+                currentPageUrl.lastIndexOf("/")
+              )}
+            />
           ))}
         </span>
         <div className="social-icons">
           {socialIcons.map((row, index) => (
             <Row key={index}>
               {row.map((icon, index) => (
-                <SocialIcon key={index} href={icon.href} imgSrc={icon.imgSrc} />
+                <>
+                  <SocialIcon
+                    key={index}
+                    href={icon.href}
+                    imgSrc={icon.imgSrc}
+                  />
+                  {icon.href.includes("instagram") && (
+                    <Col className={"spacer"}></Col>
+                  )}
+                </>
               ))}
             </Row>
           ))}
