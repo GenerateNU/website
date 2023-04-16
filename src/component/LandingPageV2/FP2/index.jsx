@@ -2,11 +2,14 @@ import React from "react";
 import "./style.css";
 import BottomCorner from "../../../assets/images/landingpage-v2/bottom_corner.png";
 import TopCorner from "../../../assets/images/landingpage-v2/top_corner.png";
+import useDeviceDetection from "../../DesktopMobileHandler/isMobileDetection.hooks.jsx";
 import Projects from "../../../data/featuredProjectData.js";
 
 export default function FP2() {
+  const isMobile = useDeviceDetection();
   const SmartyPill = Projects[1];
-  if (window.innerWidth / window.innerHeight <= 0.6) {
+
+  if (window.innerWidth / window.innerHeight <= 0.6 || isMobile) {
     return (
       <div className="parent">
         <div className="column-1">
