@@ -37,7 +37,6 @@
   color: #187dff;
   text-align: left;
   
-  margin-top: 120px;
 }
 
 .orientation-text {
@@ -52,48 +51,6 @@
   column-gap: 100px;
 }
 
-.all-hands-title {
-  font-family: "Space Mono 700";
-  font-style: normal;
-  font-size: 48px;
-  margin-top: 50%;
-  text-transform: uppercase;
-  color: #187dff;
-  text-align: left;
-}
-
-.all-hands-text {
-  width: 400px;
-  color: black;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: left;
-  font-style: normal;
-  font-weight: 300;
-
-  column-gap: 100px;
-}
-
-.showcase-title {
-  font-family: "Space Mono 700";
-  font-style: normal;
-  font-size: 48px;
-  margin-top: 81%;
-  text-transform: uppercase;
-  color: #187dff;
-  text-align: left;
-}
-
-.showcase-text {
-  width: 400px;
-  color: black;
-  font-size: 20px; 
-  line-height: 30px;
-  text-align: left;
-  font-style: normal;
-  font-weight: 300;
-  column-gap: 100px;
-}
 
 .inclined-image {
   width: 1000px;
@@ -125,8 +82,6 @@
 }
 
 .MoraleBudget {
-  margin-top: -5%;
 }
 .MoraleBudgetTitle {
-  margin-top: -15%;
 }
