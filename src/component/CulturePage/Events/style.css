@@ -5,7 +5,7 @@
 }
 
 .events-container {
-  width: 1100px;
+  width: 1000px;
 }
 
 .events-top {
@@ -33,17 +33,17 @@
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
-  margin-top: 81%;
+  margin-top: 400px;
   text-transform: uppercase;
   color: #a559ec;
   text-align: left;
 }
 
 .retreat-text {
-  width: 140%;
+  width: 500px;
   height: 10%;
   /* color: black; */
-  font-size: 1.36vw;
+  font-size: 20px;
   line-height: 160%;
   text-align: left;
   font-style: normal;
@@ -53,13 +53,13 @@
 .events-quotation-mark {
   color: #187dff;
   font-family: "Space Mono 700";
-  font-size: 6vw;
+  font-size: 90px;
   line-height: 75%;
 }
 
 .events-our-values {
   color: #ffbf3c;
-  font-size: 1.7vw;
+  font-size: 25px;
   line-height: 100%;
   font-family: "Space Mono";
   margin-right: 3%;
@@ -67,15 +67,15 @@
 
 .events-we-are {
   color: #ffbf3c;
-  font-size: 15vw;
+  font-size: 225px;
   line-height: 77%;
   font-family: "Space Mono 700";
-  word-spacing: -5vw;
+  word-spacing: -75px;
 }
 
 .img-formatting {
-  width: 18.75em;
-  height: 28.12em;
+  width: 300px;
+  height: 450px;
   object-fit: cover;
   border: 1px solid;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
