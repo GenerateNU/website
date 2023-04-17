@@ -1,8 +1,13 @@
+.events-row {
+  display: flex;
+  flex-direction: row;
+  width: 1500px;
+}
+
 .moral-budget-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 5%;
+  font-size: 48px;
   margin-top: 120%;
   text-transform: uppercase;
   color: #a559ec;
@@ -11,11 +16,11 @@
 }
 
 .moral-budget-text {
-  width: 120%;
+  width: 400px;
   height: 10%;
   color: black;
-  font-size: 1.36vw;
-  line-height: 160%;
+  font-size: 20px;
+  line-height: 30px;
   text-align: left;
   font-style: normal;
   font-weight: 300;
@@ -24,22 +29,22 @@
 }
 
 .orientation-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 5%;
+  font-size: 48px;
 
   text-transform: uppercase;
   color: #187dff;
   text-align: left;
+  
+  margin-top: 120px;
 }
 
 .orientation-text {
-  width: 120%;
-  height: 10%;
+  width: 400px;
   color: black;
-  font-size: 1.36vw;
-  line-height: 160%;
+  font-size: 20px;
+  line-height: 30px;
   text-align: left;
   font-style: normal;
   font-weight: 300;
@@ -48,10 +53,9 @@
 }
 
 .all-hands-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 5%;
+  font-size: 48px;
   margin-top: 50%;
   text-transform: uppercase;
   color: #187dff;
@@ -59,11 +63,10 @@
 }
 
 .all-hands-text {
-  width: 120%;
-  height: 10%;
+  width: 400px;
   color: black;
-  font-size: 1.36vw;
-  line-height: 160%;
+  font-size: 20px;
+  line-height: 30px;
   text-align: left;
   font-style: normal;
   font-weight: 300;
@@ -72,10 +75,9 @@
 }
 
 .showcase-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
-  font-size: 5%;
+  font-size: 48px;
   margin-top: 81%;
   text-transform: uppercase;
   color: #187dff;
@@ -83,11 +85,10 @@
 }
 
 .showcase-text {
-  width: 120%;
-  height: 10%;
+  width: 400px;
   color: black;
-  font-size: 1.35vw;
-  line-height: 160%;
+  font-size: 20px; 
+  line-height: 30px;
   text-align: left;
   font-style: normal;
   font-weight: 300;
@@ -95,9 +96,12 @@
 }
 
 .inclined-image {
-  transform: rotate(-10deg);
-  height: 100%;
-  width: 170%;
+  width: 1000px;
+  aspect-ratio: 1.7/1;
+  position: relative;
+  left: -500px;
+  top: 120px;
+
 }
 
 .shiftLeft {
@@ -110,17 +114,14 @@
   margin-right: 50px;
 }
 
-/* .inclined-img-container {
-  height: 100vh;
-  width: 170vw;
-} */
+ .inclined-img-container {
+  width: 100px;
+} 
 
 .celebrate-rep-container {
   /* width: 400px; */
-  width: 120%;
   height: 80%;
-  margin-top: -30%;
-  margin-left: -10%;
+  margin-left: 0px;
 }
 
 .MoraleBudget {

@@ -29,9 +29,8 @@
 }
 
 .retreat-title {
-  font-family: "Space Mono";
+  font-family: "Space Mono 700";
   font-style: normal;
-  font-weight: 700;
   font-size: 48px;
   margin-top: 400px;
   text-transform: uppercase;
@@ -44,7 +43,7 @@
   height: 10%;
   /* color: black; */
   font-size: 20px;
-  line-height: 160%;
+  line-height: 30px;
   text-align: left;
   font-style: normal;
   font-weight: 300;
