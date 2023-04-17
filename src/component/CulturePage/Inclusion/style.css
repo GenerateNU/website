@@ -4,11 +4,6 @@
   color: #a559ec;
 }
 
-.container {
-  width: unset;
-  display: flex;
-  flex-direction: row;
-}
 
 .outline-inclusion {
   writing-mode: vertical-rl;
@@ -22,6 +17,7 @@
 .text-div-inclusion {
   padding: 0 50px 0 100px;
   margin-top: 200px;
+  width: 650px;
   display: flex;
   flex-direction: column;
 }

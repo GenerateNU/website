@@ -4,11 +4,7 @@
   padding: 0 10px 10px 10px;
 }
 
-.container {
-  width: unset;
-  display: flex;
-  flex-direction: row;
-}
+
 
 .vertical-div {
   width: 50px;
@@ -16,6 +12,7 @@
 
 .text-div-equity {
   padding: 0 50px 0 100px;
+  width: 650px;
   margin-top: 300px;
   display: flex;
   flex-direction: column;
