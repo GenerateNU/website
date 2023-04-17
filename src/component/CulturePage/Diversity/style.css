@@ -29,7 +29,7 @@ h2 {
 }
 
 .container {
-  width: unset;
+  width: 750px;
   display: flex;
   flex-direction: row;
 }
@@ -43,6 +43,7 @@ h2 {
   padding: 5%;
 }
 
-.cultureTwo-text {
-  font-size: 25px;
+.culture-text {
+  font-size: 22px;
+  line-height: 10px;
 }
