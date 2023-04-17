@@ -5,7 +5,7 @@ import CelebrateRepresent from "../Events2/CelebrateRepresent.png";
 const Events2 = () => {
   return (
   <>
-          <div class="col ps-5 pe-5">
+          <div class="col event-col">
             <div class ="shiftLeft">
               <p className="text-uppercase moral-budget-title">
                 morale&nbsp;budget
@@ -17,12 +17,10 @@ const Events2 = () => {
           </div>
 
           <div class="col ps-5 pe-5 inclined-img-container">
-            <div className="celebrate-rep-container">
               <img className="inclined-image" src={CelebrateRepresent} alt="" />
-            </div>
           </div>
 
-          <div class="col">
+          <div class="col event-col">
             <div class="shiftleft3">
             <p className="text-uppercase orientation-title">orientation</p>
             <p className="orientation-text">
