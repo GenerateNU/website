@@ -1,0 +1,28 @@
+.mobile {
+    display: inline;
+}
+
+.tealbackground {
+    background-color: #6FCF97;
+}
+
+.vertical-text-fun {
+    writing-mode: vertical-rl; /* Sets the writing mode to vertical */
+    text-orientation: mixed; /* Sets the orientation of the text to upright */
+    font-family: "Space Mono";
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+
+.vertical-line {
+    height: 1px;
+    background: white;
+}
+
+
+.images {
+    width: 15rem;
+    height: 15rem;
+}

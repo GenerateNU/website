@@ -75,14 +75,8 @@
     display: inline;
 }
 
-@media (min-width: 501px) {
+@media screen and (min-device-width: 501px) {
     .mobile {
-        display: none;
-    }
-}
-
-@media (max-width: 500px) {
-    .desktop {
         display: none;
     }
 }

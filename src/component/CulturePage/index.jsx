@@ -10,32 +10,34 @@ import Inclusion from "./Inclusion";
 import Equity from "./Equity";
 import Diversity from "./Diversity";
 import VerticalFooter from "../VerticalFooter";
+import HaveSomeFun from "./HaveSomeFun"
 import Showcase from "./Showcase";
 import "./style.css";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 
 export default class CulturePage extends React.Component {
-  render() {
-    const children = [
-      <IntroSection />,
-      <IntroImages />,
-      <BelongHere />,
-      <Diversity />,
-      <Inclusion />,
-      <Equity />,
-      <Events />,
-      <Events2 />,
-      <Events3 />,
-      <Showcase />,
-      <CollageSection />,
-      <VerticalFooter />,
-    ];
-    return (
-      <DesktopMobileScrollAndBackgroundHandler
-        children={children}
-        desktopBGColor={"white"}
-        mobileBGColor={"white"}
-      />
-    );
-  }
+    render() {
+        const children = [
+            <IntroSection/>,
+            <IntroImages/>,
+            <BelongHere/>,
+            <HaveSomeFun/>,
+            <Diversity/>,
+            <Inclusion/>,
+            <Equity/>,
+            <Events/>,
+            <Events2/>,
+            <Events3/>,
+            <Showcase/>,
+            <CollageSection/>,
+            <VerticalFooter/>,
+        ];
+        return (
+            <DesktopMobileScrollAndBackgroundHandler
+                children={children}
+                desktopBGColor={"white"}
+                mobileBGColor={"white"}
+            />
+        );
+    }
 }
