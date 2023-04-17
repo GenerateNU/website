@@ -13,7 +13,7 @@
 
 .intro-images {
   display: flex;
-  flex-direction: row;
   width: 1050px;
   z-index: 1;
+  max-width: none;
 }
