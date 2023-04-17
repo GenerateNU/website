@@ -5,7 +5,7 @@ import "./style.css";
 
 export default function IntroSection() {
   return (
-    <div className="position-relative">
+    <div className="position-relative intro-container">
       <div className="intro-navbar">
         <NavBar />
       </div>
