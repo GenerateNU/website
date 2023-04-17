@@ -5,7 +5,7 @@ export default function Equity() {
   return (
     <div className="container">
       <div className="vertical-div">
-        <span className="outline-equity">USION</span>
+        <span className="outline-equity">SION</span>
         <span style={{ color: "#FFBF3C" }} className="vertical">
           INCLUSION
         </span>
