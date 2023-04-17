@@ -5,12 +5,12 @@ import "./style.css";
 
 export default function IntroSection() {
   return (
-    <div className="position-relative w-80 vh-100">
+    <div className="position-relative">
       <div className="intro-navbar">
         <NavBar />
       </div>
 
-      <div className="w-50 d-flex">
+      <div className="d-flex">
         <div className="generateMascotContainer">
           <img className="generateMascot" src={logo} alt="Generate Mascot" />
         </div>
