@@ -4,23 +4,28 @@
   -webkit-text-stroke-width: 2px;
 }
 
+.events-container {
+  width: 1100px;
+}
+
 .events-top {
   color: #a2a2a2;
   font-family: "Space Mono";
-  font-size: 1.3vw;
-  line-height: 150%;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 70px;
 }
 
 .events-header {
   font-family: "Space Mono";
-  font-size: 20vw;
-  line-height: 77%;
+  font-size: 250px;
+  line-height: 210px;
   color: #ff6660;
 }
 
 .events-picture-container {
-  font-size: 65vw;
-  line-height: 77%;
+  font-size: 982px;
+  line-height: 700px;
 }
 
 .retreat-title {
