@@ -9,7 +9,7 @@ export default function Inclusion() {
         <span style={{ color: "#A559EC" }} className="vertical">
           EQUITY
         </span>
-        <span className="outline-inclusion">EQU</span>
+        <span className="outline-inclusion">EQUITY</span>
       </div>
 
       <div className="text-div-inclusion">
