@@ -5,6 +5,7 @@
   font-weight: 700;
   color: black;
   text-align: left;
+  white-space: nowrap;
 }
 
 .headingTwo-text {
@@ -22,13 +23,16 @@
   text-align: left;
   position: relative;
   top: 1px;
+  width: 300px;
+  height: 400px;
 }
 
 .thrive-together {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   padding:1px;
+  width: 300px;
+  height: 400px;
 }
 
 .paragraphs {
@@ -37,20 +41,23 @@
   justify-content: space-around;
   align-items: center;
   height: 400px;
+  padding-top: 75px;
 }
 
 .color-block {
   text-align: center;
   position: relative;
-  top: -90px;
 } 
 
 .graphic {
   height: 900px;
+  width: auto;
 }
 
 #belong-here-container {
+  height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
+  top: -550px;
 }
