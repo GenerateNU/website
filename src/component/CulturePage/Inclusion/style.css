@@ -21,9 +21,9 @@
 }
 .text-div-inclusion {
   padding: 0 0 0 8em;
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .vertical-div {
