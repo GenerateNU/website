@@ -1,7 +1,7 @@
 .generateMascotContainer {
   position: absolute;
   right: 500px;
-  top: 70px;
+  top: 45px;
 }
 
 .generateMascot {
@@ -11,8 +11,8 @@
 
 .our-culture-quote-positioning {
   position: absolute;
-  right: 220px;
-  top: 350px;
+  right: 100px;
+  top: 325px;
   min-height: 200px;
   height: 160px;
   min-width: 400px;
@@ -32,8 +32,8 @@
 
 .our-culture-big-positioning {
   position: absolute;
-  right: 750px;
-  top: 300px;
+  right: 600px;
+  top: 275px;
   min-height: 200px;
   height: 160px;
   min-width: 400px;
