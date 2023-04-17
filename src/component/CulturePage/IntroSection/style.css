@@ -1,6 +1,6 @@
 .generateMascotContainer {
   position: absolute;
-  right: 500px;
+  left: 700px;
   top: 45px;
 }
 
@@ -11,7 +11,7 @@
 
 .our-culture-quote-positioning {
   position: absolute;
-  right: 100px;
+  left: 500px;
   top: 325px;
   min-height: 200px;
   height: 160px;
@@ -32,7 +32,7 @@
 
 .our-culture-big-positioning {
   position: absolute;
-  right: 600px;
+  left: 10px;
   top: 275px;
   min-height: 200px;
   height: 160px;
