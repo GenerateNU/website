@@ -13,7 +13,7 @@
 .text-div-equity {
   padding: 0 50px 0 100px;
   width: 650px;
-  margin-top: 240px;
+  margin-top: 17vw; /*240px;*/
   display: flex;
   flex-direction: column;
 }

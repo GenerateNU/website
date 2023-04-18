@@ -34,7 +34,7 @@
   font-family: "Space Mono 700";
   font-style: normal;
   font-size: 48px;
-  margin-top: 400px;
+  margin-top: 29vw; /*400px;*/
   text-transform: uppercase;
   color: #a559ec;
   text-align: left;
@@ -86,6 +86,10 @@
 .for-padding {
   padding: 2em;
   margin-top: 20%;
+}
+
+.retreat {
+  margin-top: 10vw;
 }
 
 .eventsTitle {
