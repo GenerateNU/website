@@ -42,10 +42,10 @@
 
 .pp-fp-projects-button {
   background: #ffffff;
-  border: 1px solid #111111;
+  border: 1px solid black;
   width: 90px;
   height: 90px;
-  box-shadow: -0.5rem 0.6rem;
+  box-shadow: -0.5rem 0.6rem black;
 }
 
 .pp-fp-projects-forward {
