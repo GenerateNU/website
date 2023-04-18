@@ -202,7 +202,6 @@ a {
     width: 20vh;
     height: 4.5vh;
     margin-left: 21%;
-    font-family: 'Space Mono 400';
     font-style: normal;
     /* font-weight: 400; */
     
@@ -231,6 +230,8 @@ a {
 @media only screen and (max-device-width: 650px) {
   .interestedcontainer {
     width: 100%;
+    background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center;
+    background-repeat: no-repeat;
     background-size: 65%;
     padding: 5vh 0;
     background-position: 80% 25%;
@@ -248,6 +249,8 @@ a {
   }
 
   #join-span {
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
     margin-right: 5vw;
   }
@@ -259,23 +262,25 @@ a {
   }
 
   .interestedJoinNowBox .joinCommunitytext {
+    height: inherit;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: unset;
+    margin-left: 0;
     font-size: 2vh;
   }
 
   .interestedflexbox .sentenceText {
     width: 70vw;
     font-size: 4.5vw;
-    line-height: 4vh;
-    /* margin-left: 7vw; */
+    line-height: 3vh;
+    margin-left: 7vw;
   }
 
   #join-carrot {
     width: 3vh;
     height: auto;
-  }
-
-  .leftcarrot {
-    margin-left: 10%;
   }
 }

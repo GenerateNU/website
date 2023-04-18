@@ -1,3 +1,4 @@
+
 # What was the ticket?
 
 WT-[ticket number] - [ticket title]
@@ -30,3 +31,4 @@ FIGMA
 MY VERSION
 
 ![alt text](public/images/PRImages/link_to_my_version_image.png?raw=true "LOCAL")
+

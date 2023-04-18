@@ -1,59 +1,29 @@
 .showcase-div {
-    width: 40%;
-    /* margin-left: 2%; */
-    margin-top: 20%;
+    width: 400px;
+    margin: 0 50px 0 50px;
   }
+
   .showcase-title {
-    font-family: "Space Mono";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    margin-top: 70%;
-    text-transform: uppercase;
-    color: #187dff;
-    text-align: left;
-  }
-  
+  font-family: "Space Mono 700";
+  font-style: normal;
+  font-size: 48px;
+  margin-top: 335px;
+  text-transform: uppercase;
+  color: #187dff;
+  text-align: left;
+}
+
+.showcase-text {
+  width: 400px;
+  color: black;
+  font-size: 20px; 
+  line-height: 30px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 300;
+  column-gap: 100px;
+}
   .showcase {
     margin-right:5%;
   }
   
-  .all-hands {
-    margin-left: 5%; 
-  }
-  
-  .all-hands-div {
-    width: 40%;
-    margin-left: 5%;
-  }
-  .showcase-text {
-    width: 80%;
-    height: 10%;
-    color: black;
-    font-size: 1.36vw;
-    line-height: 160%;
-    text-align: left;
-    font-style: normal;
-    font-weight: 300;
-    column-gap: 100px;
-  }
-  
-  .all-hands-title {
-    font-family: "Space Mono";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    margin-top: 38%;
-    text-transform: uppercase;
-    color: #187dff;
-    text-align: left;
-  }
-  
-  .shiftleft1 {
-    margin-right: 50px;
-  }
-  
-  .shiftleft2 {
-    /* margin-right: 20px; */
-    margin-bottom: 10px; 
-  }

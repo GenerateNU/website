@@ -34,7 +34,7 @@ export default class LandingPageV2 extends React.Component {
       <FP1 />,
       <FP2 />,
       <PreviousProjects />,
-      <Interested />,
+      <Interested page="Landing"/>,
       <Footer />,
       <NextPage pageName="about" url="/about" />,
     ];

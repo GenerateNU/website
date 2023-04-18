@@ -1,7 +1,16 @@
+.intro-container {
+  width: 1200px;
+  max-width: none;
+}
+
+.bottom-0-culture {
+  bottom: 5rem!important;
+}
+
 .generateMascotContainer {
   position: absolute;
-  right: 35%;
-  top: 10%;
+  left: 650px;
+  top: /*-2px;*/ 1.5vw;
 }
 
 .generateMascot {
@@ -11,36 +20,38 @@
 
 .our-culture-quote-positioning {
   position: absolute;
-  right: 0%;
-  top: 43%;
+  left: 510px;
+  top: 19.5vw; /*max(21vw, 267px);*/
   min-height: 200px;
-  height: 20vh;
+  height: 160px;
   min-width: 400px;
-  width: 40vw;
+  width: 604px;
 }
 
 .our-culture-quote {
   color: #a559ec;
   font-family: "Space Mono 700";
-  font-size: calc(12px + 2.5vw);
-  line-height: 110%;
+  width: 650px;
+  height: 160px;
+  font-size: 70px;
+  line-height: 65px;
   font-style: bold;
   text-transform: uppercase;
 }
 
 .our-culture-big-positioning {
   position: absolute;
-  right: 50%;
-  bottom: 45%;
+  left: 10px;
+  top: 20.75vw; /*max(22vw, 275px);*/
   min-height: 200px;
-  height: 20vh;
+  height: 150px;
   min-width: 400px;
-  width: 40vw;
+  width: 600px;
 }
 
 .our-culture-big {
   color: #187dff;
   font-family: "Space Mono 700";
-  font-size: calc(72px + 14vw);
-  line-height: 77%;
+  font-size: 250px;
+  line-height: 220px;
 }
