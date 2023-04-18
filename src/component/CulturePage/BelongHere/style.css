@@ -1,16 +1,17 @@
 .heading-text {
   font-family: 'Space Mono';
   text-transform: uppercase;
-  font-size: 5vmin;
+  font-size: 40px;
   font-weight: 700;
   color: black;
   text-align: left;
+  white-space: nowrap;
 }
 
 .headingTwo-text {
   font-family: 'Space Mono';
   text-transform: uppercase;
-  font-size: 5vmin;
+  font-size: 40px;
   font-weight: 700;
   color: black;
   text-align: left;
@@ -20,33 +21,45 @@
   padding:1px;
   color: black;
   text-align: left;
+  position: relative;
+  top: 1px;
+  width: 300px;
+  height: 400px;
 }
 
 .thrive-together {
-  width: 28.12em;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   padding:1px;
+  width: 300px;
+  height: 400px;
 }
 
 .paragraphs {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+  padding-top: 75px;
 }
 
 .color-block {
   text-align: center;
+  position: relative;
 } 
 
-.color-block .graphic {
-  height: 70vh;
-  margin-top: -42vh;
+.graphic {
+  height: 900px;
+  width: auto;
 }
 
 #belong-here-container {
-  height: 100vh;
+  height: 800px;
+  width: 1500px;
+  max-width: none;
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: -550px;
 }

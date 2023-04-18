@@ -1,37 +1,30 @@
 .vertical {
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  padding: 0 10px 10px 10px;
 }
 
-.container {
-  width: unset;
-  display: flex;
-  flex-direction: row;
-}
+
 
 .vertical-div {
   width: 50px;
 }
 
 .text-div-equity {
-  padding: 0 0 0 8em;
+  padding: 0 50px 0 100px;
+  width: 650px;
+  margin-top: 17vw; /*240px;*/
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .outline-equity {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 90px;
-  padding-bottom: 0.5em;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  padding: 0 10px 10px 10px;
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #ffbf3c;
 }
 
-.cultureThree-text {
-  font-size: max(2.5vmin, 1.5vw);
-}
