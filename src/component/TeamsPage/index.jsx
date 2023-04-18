@@ -25,16 +25,16 @@ export default class TeamsPage extends React.Component {
             })
           }
           <Footer />
-          <NextPage pageName="People" url="/about" />
+          <NextPage pageName="Projects" url="/projects" />
         </Row>
       </div>
     ]
     return (
-      <DesktopMobileScrollAndBackgroundHandler
-        children={children}
-        desktopBGColor={"white"}
-        mobileBGColor={"black"}
-      />
+        <DesktopMobileScrollAndBackgroundHandler
+          children={children}
+          desktopBGColor={"white"}
+          mobileBGColor={"black"}
+        />
     );
   }
 };

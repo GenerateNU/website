@@ -11,11 +11,11 @@ import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
 
 const pages = [
   { name: "Generate", link: "/" },
+  { name: "Apply", link: "/apply" },
   { name: "About", link: "/about" },
   { name: "Culture", link: "/culture" },
   { name: "Teams", link: "/teams" },
-  { name: "People", link: "/", disabled: true },
-  { name: "Apply", link: "/apply" },
+  // { name: "People", link: "/", disabled: true },
   { name: "Projects", link: "/projects" },
 ];
 

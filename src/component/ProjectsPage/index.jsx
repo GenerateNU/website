@@ -3,13 +3,14 @@ import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 import AllProjects from "./AllProjects/AllProjects";
 import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
 import Footer from "../VerticalFooter";
-import "./style.css"
+import NextPage from "../NextPage";
 
 export default function ProjectsPage() {
   const children = [
     <FeaturedProjects />,
     <AllProjects />,
-    <Footer />
+    <Footer />,
+    <NextPage pageName="Apply" url="/apply" />,
   ];
 
   return (

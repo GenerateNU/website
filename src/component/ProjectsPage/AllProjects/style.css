@@ -1,8 +1,8 @@
 .all-projects-container {
-  position: relative;
-  display: flex;
-  max-width: unset;
-  align-items: center;
+    position: relative;
+    display: flex;
+    max-width: unset;
+    align-items: center;
 }
 
 .all-projects-header {
@@ -34,10 +34,10 @@
 }
 
 @media only screen and (max-device-width: 650px) {
-  .all-projects-container {
-    width: 100vw !important;
-    flex-direction: column;
-  }
+    .all-projects-container {
+        width: 100vw!important;
+        flex-direction: column;
+    }
 
   .all-projects-header .projects-title {
     writing-mode: horizontal-tb;
