@@ -7,6 +7,7 @@
 .event-col {
   width: 500px;
   max-width: none;
+  margin-top: -65px;
 }
 
 .moral-budget-title {
@@ -63,7 +64,7 @@
   aspect-ratio: 1.7/1;
   position: relative;
   left: -500px;
-  top: 120px;
+  top: 70px;
 
 }
 
