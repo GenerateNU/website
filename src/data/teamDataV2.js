@@ -26,7 +26,7 @@ const teamDataV2 = [
     },
     {
         name: "Operations",
-        color: "#A559EC",
+        color: "#6FCF97",
         activeIcon: CommunityActiveIcon,
         inactiveIcon: CommunityInactiveIcon,
         largePic: OperationsLargePicture,
@@ -47,7 +47,7 @@ const teamDataV2 = [
     },
     {
         name: "Engagement",
-        color: "#6FCF97",
+        color: "#A559EC",
         activeIcon: OperationsActiveIcon,
         inactiveIcon: OperationsInactiveIcon,
         largePic: EngagementLargePicture,

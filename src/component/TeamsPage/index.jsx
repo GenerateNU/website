@@ -30,11 +30,11 @@ export default class TeamsPage extends React.Component {
       </div>
     ]
     return (
-      <DesktopMobileScrollAndBackgroundHandler
-        children={children}
-        desktopBGColor={"white"}
-        mobileBGColor={"black"}
-      />
+        <DesktopMobileScrollAndBackgroundHandler
+          children={children}
+          desktopBGColor={"white"}
+          mobileBGColor={"black"}
+        />
     );
   }
 };

@@ -42,7 +42,6 @@ export default function Management() {
     <>
       <div className="management-wheel">
         <div id="skills">
-        <div className="center"/>
           <button id="part1" class="circle animate" onClick={Color}>
             <img class="image1" alt='image1' src={image1} />
           </button>
@@ -54,6 +53,7 @@ export default function Management() {
             <img class="image4" alt='image4' src={image4} /> </button>
           <button id="part5" class="circle animate" onClick={Color5}>
             <img class="image5" alt='image5' src={image5} /> </button>
+          <div className="center"/>
         </div>
       </div>
       <div className='management-spacer'/>

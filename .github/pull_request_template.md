@@ -1,3 +1,4 @@
+
 # What was the ticket?
 No specific ticket: resizing the Culture page to be of constant size no matter the page size.
  # What did I do?
@@ -13,8 +14,9 @@ No specific ticket: resizing the Culture page to be of constant size no matter t
 Since this task had no resizing in mind, I sized the elements around slightly smaller than my laptop screen. While the code was also tested on my large monitor, it could be the case that 
 the sizes of this page are not suited for certain displays such as projectors.
  
- 
  # Screenshots
+ FIGMA
+ ![alt text](public/images/PRImages/FigmaMountains.png?raw=true "FIGMA") 
 
  MY VERSION
 
@@ -22,3 +24,4 @@ the sizes of this page are not suited for certain displays such as projectors.
  ![alt text](../public/images/PRImages/Screenshot%202023-04-17%20at%205.20.22%20AM.png)
  ![alt text](../public/images/PRImages/Screenshot%202023-04-17%20at%205.20.31%20AM.png)
  ![alt text](../public/images/PRImages/Screenshot%202023-04-17%20at%205.20.38%20AM.png)
+
