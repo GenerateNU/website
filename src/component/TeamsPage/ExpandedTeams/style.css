@@ -1,0 +1,36 @@
+.expanded-wrapper {
+    overflow-x: hidden;
+}
+
+.paragraph-title {
+    font-family: "Space Mono 700";
+    text-transform: capitalize;
+    color: black;
+    font-size: max(4.7vw, 30px);
+    line-height: max(5.2vw, 35px);
+}
+
+.paragraph-text {
+    font-family: "Space Mono";
+    color: black;
+    font-size: max(1.42vw, 13px);
+    line-height: max(1.42vw, 13px);
+}
+
+.paragraph-subtitle {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: max(1.9vw, 20px);
+    line-height: max(2.84vw, 25px);
+    color: black;
+}
+
+.teams-navbar {
+    position: fixed;
+    z-index: 2;
+    margin-left: 3%;
+    padding-top: 2%;
+    width: 42vh;
+    height: auto;
+  }
