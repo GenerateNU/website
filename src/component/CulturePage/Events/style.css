@@ -14,13 +14,14 @@
   font-family: "Space Mono";
   font-size: 20px;
   line-height: 30px;
-  margin-top: 70px;
+  margin-top: 32px;
 }
 
 .events-header {
   font-family: "Space Mono";
   font-size: 250px;
   line-height: 210px;
+  margin-top: 10px;
   color: #ff6660;
 }
 
@@ -79,7 +80,7 @@
   object-fit: cover;
   border: 1px solid;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: -15%;
+  margin-top: -35%;
 }
 
 .for-padding {

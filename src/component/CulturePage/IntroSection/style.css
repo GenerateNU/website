@@ -3,10 +3,14 @@
   max-width: none;
 }
 
+.bottom-0-culture {
+  bottom: 5rem!important;
+}
+
 .generateMascotContainer {
   position: absolute;
-  left: 700px;
-  top: 45px;
+  left: 650px;
+  top: -2px;
 }
 
 .generateMascot {
@@ -16,8 +20,8 @@
 
 .our-culture-quote-positioning {
   position: absolute;
-  left: 500px;
-  top: 325px;
+  left: 510px;
+  top: 267px;
   min-height: 200px;
   height: 160px;
   min-width: 400px;
@@ -28,7 +32,7 @@
   color: #a559ec;
   font-family: "Space Mono 700";
   width: 650px;
-  height: 150px;
+  height: 160px;
   font-size: 70px;
   line-height: 65px;
   font-style: bold;
@@ -40,7 +44,7 @@
   left: 10px;
   top: 275px;
   min-height: 200px;
-  height: 160px;
+  height: 150px;
   min-width: 400px;
   width: 600px;
 }

@@ -20,7 +20,7 @@ export default function IntroSection() {
           </div>
         </div>
         <div className="our-culture-big-positioning">
-          <div className="our-culture-big text-no-fill text-uppercase position-relative start-0 bottom-0 p-5">
+          <div className="our-culture-big text-no-fill text-uppercase position-relative start-0 bottom-0-culture p-5">
             Our Culture
           </div>
         </div>
