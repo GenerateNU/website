@@ -252,9 +252,9 @@ a {
   }
 
   .m-img{
-    /* width:100;
+    width:100;
     height:300%;
-    z-index: 20; */
+    z-index: 20;
   }
 
   @media only screen and (max-device-height: 1000px) {
