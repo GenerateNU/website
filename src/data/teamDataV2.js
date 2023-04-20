@@ -10,11 +10,11 @@ import SoftwareInactiveIcon from "../assets/icons/teams/gray/Software.png";
 import HardwareInactiveIcon from "../assets/icons/teams/gray/Hardware.png";
 import CommunityInactiveIcon from "../assets/icons/teams/gray/Community.png";
 
-import ManagementLargePicture from "../assets/images/TeamsPageImages/hoodie-42.jpg"
+import ManagementLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH1.png"
 import OperationsLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH2.png"
-import SoftwareLargePicture from "../assets/images/TeamsPageImages/IMG_3910.jpg"
-import HardwareLargePicture from "../assets/images/TeamsPageImages/IMG_8348.HEIC"
-import EngagementLargePicture from "../assets/images/TeamsPageImages/20230402_135105.jpg"
+import SoftwareLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH3.png"
+import HardwareLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH4.png"
+import EngagementLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH5.png"
 
 const teamDataV2 = [
     {
