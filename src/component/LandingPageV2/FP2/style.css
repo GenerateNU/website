@@ -2,6 +2,12 @@
   margin-top: -0.5px;
 }
 
+@media only screen and (max-device-width: 650px) {
+  .p {
+    width: 34px;
+  }
+}
+
 .parent {
   display: flex;
   flex-direction: row;
