@@ -35,7 +35,7 @@ export default function FP1() {
             </div>
           </div>
           <div className="client-blurb" id="fp1-client-blurb">
-            <p style={{ width: "50vh" }}>{Earnz.description}</p>
+            <p style={{ width: "45vh" }}>{Earnz.description}</p>
             <a href="url">learn more</a>
           </div>
           <div className="bottom-corner">
