@@ -13,6 +13,10 @@
   height: 60vh;
 }
 
+.cursor {
+  
+}
+
 .software-hardware-style {
   font-family: "Space Mono 700";
   font-size: 5vw;
@@ -66,6 +70,7 @@
   font-family: "Space Mono 700";
   font-size: 5vw;
   line-height: 100%;
+  cursor: pointer;
 }
 
 @media only screen and (max-device-width: 650px) {
