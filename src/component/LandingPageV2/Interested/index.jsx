@@ -18,7 +18,7 @@ const Interested = (...props) => {
       <div className="bg-white interestedcontainer">
         <div className="interestedText">Interested</div>
         <div className="interestedflexbox">
-          <div className="interestedJoinNowBox">
+          <div className="interestedJoinNowBox" style={{ zIndex : props.z.toString }}>
             <a href="/apply" className="joinCommunitytext">
               join us
             </a>
@@ -41,7 +41,7 @@ const Interested = (...props) => {
       <div className="bg-white interestedcontainer">
         <div className="interestedflexbox">
           <div className="interestedText">Interested</div>
-          <div className="interestedJoinNowBox">
+          <div style={{ zIndex : toString(props.z) }} className="interestedJoinNowBox">
             <a href="/apply" className="joinCommunitytext">
               join us
             </a>

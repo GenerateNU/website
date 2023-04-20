@@ -80,7 +80,7 @@ a {
   background: #187DFF;
   border: 1px solid #111111;
   box-shadow: -0.75vh 0.75vh;
-  ;
+  z-index: 30;
 }
 
 .joinCommunitytext {

@@ -24,7 +24,7 @@ export default class AboutPage extends React.Component {
       <Stats />,
       <WhyGenerateCarousel />,
       <GrowthMantra />,
-      <Interested page="About"/>,
+      <Interested page="About" z={30}/>,
       <Footer />,
       <NextPage pageName="culture" url="/culture" />,
     ];
