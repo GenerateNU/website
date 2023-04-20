@@ -343,6 +343,7 @@ const NavBar = () => {
     <div className="bg-light p-2 mb-5 d-flex bar-size justify-content-around align-items-center border border-dark h-10 w-10">
       {nav}
       <Modal
+        style={{ overflow: "hidden" }}
         show={showMenu}
         onHide={() => setShowMenu(false)}
         fullscreen={true}

@@ -1,4 +1,5 @@
 .button-style {
   font-family: "Space Mono";
-  box-shadow: -0.5rem 0.6rem #000000;
+  color: black;
+  box-shadow: -0.5rem 0.6rem black;
 }
