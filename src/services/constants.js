@@ -33,12 +33,12 @@ export const constants = {
    // HW
    "Position_Hardware_Client": "https://docs.google.com/forms/d/e/1FAIpQLSc7TVI0FmZG6DujNi2GLEUeyGBQYlhAGtFUyf5AXzLIB0mF9Q/viewform?usp=sf_link",
    "Position_Software_Client": "https://docs.google.com/forms/d/e/1FAIpQLSfWrQlG1ewhGAtKYrVyLVmTQ4KPdm99j9lwm049UywL-yhL9w/viewform?usp=sf_link",
-   "Postion_Lead_Engineer": "https://forms.gle/fVc1cmJQCWCU6CDn9",
+   "Position_Lead_Engineer": "https://forms.gle/fVc1cmJQCWCU6CDn9",
 
    //Sw
 
-   "Postion_Tech_Lead": "https://forms.gle/HTZMjFHDBWK9UWz89",
-   "Postion_Design_Lead": "https://forms.gle/7KxTtPbYKf7HWBJy7",
+   "Position_Tech_Lead": "https://forms.gle/HTZMjFHDBWK9UWz89",
+   "Position_Design_Lead": "https://forms.gle/7KxTtPbYKf7HWBJy7",
 
 };
 
