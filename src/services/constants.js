@@ -14,7 +14,7 @@ export const constants = {
    'Position_Relations_Specialist': 'https://docs.google.com/forms/d/e/1FAIpQLScMiJ5Ux0JggzpDtZCuapiyyAllUCZU7-GXQTv8Kxz7E_MFVw/viewform?usp=sf_link',
    'Position_Brand_Designer': 'https://docs.google.com/forms/d/e/1FAIpQLSdRu_kaL4nrOmqZgB57PEfJldOa6qSrd6ti3tIi8X-V9rNA4w/viewform?usp=sf_link',
    'Position_Social_Media_Manager': 'https://docs.google.com/forms/d/e/1FAIpQLSf8_FpLwYuZa5ib6pMUKjMVTPLU_syAZhDbQkrBBUvTzs5qsw/viewform?usp=sf_link',
-   'Position_Copy_Writer': 'https://docs.google.com/forms/d/e/1FAIpQLSemYVMhWVtTKSpGkM-CunyRrAszWmfjr50ziK5Gk0AbRRQQKA/viewform?usp=sf_link',
+   'Position_Copywriter': 'https://docs.google.com/forms/d/e/1FAIpQLSemYVMhWVtTKSpGkM-CunyRrAszWmfjr50ziK5Gk0AbRRQQKA/viewform?usp=sf_link',
    'Position_Photographer/Videographer': 'https://docs.google.com/forms/d/e/1FAIpQLSeqvm1MZIXdx1R-I0Q2tu_mo7xEnOWe1oPBZ9M-hjTlzHZRGw/viewform?usp=sf_link',
 
 
