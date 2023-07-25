@@ -35,8 +35,8 @@ export const constants = {
    // "Position_Hardware_Client": "https://docs.google.com/forms/d/e/1FAIpQLSc7TVI0FmZG6DujNi2GLEUeyGBQYlhAGtFUyf5AXzLIB0mF9Q/viewform?usp=sf_link",
    // "Position_Software_Client": "https://docs.google.com/forms/d/e/1FAIpQLSfWrQlG1ewhGAtKYrVyLVmTQ4KPdm99j9lwm049UywL-yhL9w/viewform?usp=sf_link",
    // "Position_Lead_Engineer": "https://forms.gle/fVc1cmJQCWCU6CDn9",
-   'Position_Hardware_Engineer': '',
-   'Position_Industrial_Designer': '',
+   'Position_Hardware_Engineer': 'https://docs.google.com/forms/d/1Yu2JaormaL2I1Q0fHXWfxKqoSCCu09j5dHMnKlLPViA/edit',
+   'Position_Industrial_Designer': 'https://docs.google.com/forms/d/1u_oN9kKyIH-uGBkkV_hKeU3hxlOGL1QYYb2HRn1856s/edit',
 
    //Sw
 
