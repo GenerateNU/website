@@ -1,6 +1,6 @@
 // Directors' profile pictures
 import Ben from "../assets/images/aboutpage/Ben.jpeg";
-import Josh from "../assets/images/aboutpage/Josh.jpg";
+import Ryan from '../assets/images/aboutpage/Ryan.jpg';
 import Kyle from "../assets/images/aboutpage/Kyle.png";
 import Liza from "../assets/images/aboutpage/Liza.jpg";
 import Victoria from "../assets/images/aboutpage/Victoria.JPG";
@@ -21,13 +21,13 @@ const directorData = [
   {
     title: "Executive Director",
     team: "Management",
-    color: "#FFBF3C",
+    color: "#187DFF",
     activeIcon: ManagementActiveIcon,
     inactiveIcon: ManagementInactiveIcon,
-    name: "Josh Batra",
-    image: Josh,
-    bio: "I’m Josh Batra, the Executive Director! I am a 4th year Mechanical Engineer from Needham, MA and this is my 5th semester in Generate. Previously I’ve been a Project Lead, Hardware Engineer, and the Hardware Director. Generate has been a huge piece of my college experience and my favorite part is the friends I’ve been able to make in the org. Outside of Generate I play trumpet in the Pep Band and love watching or playing soccer!",
-    emailUsername: "batra.j",
+    name: "Ryan Lonkart",
+    image: Ryan,
+    bio: "I`m Josh Batra, the Executive Director! I am a 4th year Mechanical Engineer from Needham, MA and this is my 5th semester in Generate. Previously I’ve been a Project Lead, Hardware Engineer, and the Hardware Director. Generate has been a huge piece of my college experience and my favorite part is the friends I’ve been able to make in the org. Outside of Generate I play trumpet in the Pep Band and love watching or playing soccer!",
+    emailUsername: "lonkart.r",
   },
   // {
   //     'title': 'Outreach Director',
@@ -43,7 +43,7 @@ const directorData = [
   {
     title: "Engagement Director",
     team: "Engagement",
-    color: "#6FCF97",
+    color: "#A559EC",
     activeIcon: OperationsActiveIcon,
     inactiveIcon: OperationsInactiveIcon,
     name: "Ben Frothingham",
@@ -54,7 +54,7 @@ const directorData = [
   {
     title: "Software Director",
     team: "Software",
-    color: "#187DFF",
+    color: '#FFBF3C',
     activeIcon: SoftwareActiveIcon,
     inactiveIcon: SoftwareInactiveIcon,
 
@@ -78,7 +78,7 @@ const directorData = [
   {
     title: "Operations Director",
     team: "Operations",
-    color: "#A559EC",
+    color: "#6FCF97",
     activeIcon: CommunityActiveIcon,
     inactiveIcon: CommunityInactiveIcon,
 
