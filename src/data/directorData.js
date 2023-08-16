@@ -1,9 +1,9 @@
 // Directors' profile pictures
-import Ben from "../assets/images/aboutpage/Ben.jpeg";
-import Ryan from '../assets/images/aboutpage/Ryan.jpg';
-import Kyle from "../assets/images/aboutpage/Kyle.png";
-import Liza from "../assets/images/aboutpage/Liza.jpg";
-import Victoria from "../assets/images/aboutpage/Victoria.JPG";
+import Ryan from '../assets/images/aboutpage/ryan.png';
+import Shannon from '../assets/images/aboutpage/shannon.png';
+import Alix from '../assets/images/aboutpage/alix.png';
+import Sam from '../assets/images/aboutpage/sam.png';
+import JoJo from '../assets/images/aboutpage/jojo.png';
 
 // Team icons
 import ManagementActiveIcon from "../assets/icons/teams/colored/Management.png";
@@ -26,30 +26,19 @@ const directorData = [
     inactiveIcon: ManagementInactiveIcon,
     name: "Ryan Lonkart",
     image: Ryan,
-    bio: "I`m Josh Batra, the Executive Director! I am a 4th year Mechanical Engineer from Needham, MA and this is my 5th semester in Generate. Previously I’ve been a Project Lead, Hardware Engineer, and the Hardware Director. Generate has been a huge piece of my college experience and my favorite part is the friends I’ve been able to make in the org. Outside of Generate I play trumpet in the Pep Band and love watching or playing soccer!",
+    bio: "Hi! I'm Ryan Lonkart, Generate's Executive Director! I am a 4th year Computer Engineering major, minoring in Business Administration, originally from Narragansett, RI. In my free time I love to ski, explore the outdoors, and try out new restaurants/coffee shops around Boston. In my role I help drive forward Generate's organizational vision, while exploring new opportunities for growth amongst our members and our overall organization.",
     emailUsername: "lonkart.r",
   },
-  // {
-  //     'title': 'Outreach Director',
-  //     'team': 'Outreach',
-  //     'color': '#56CCF2',
-  //     'activeIcon': OutreachActiveIcon,
-  //     'inactiveIcon': OutreachInactiveIcon,
-  //     'name': 'Avital Brodski',
-  //     'image': AvitalBrodski,
-  //     'bio': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  //     'emailUsername': '???',
-  // },
   {
     title: "Engagement Director",
     team: "Engagement",
     color: "#A559EC",
     activeIcon: OperationsActiveIcon,
     inactiveIcon: OperationsInactiveIcon,
-    name: "Ben Frothingham",
-    image: Ben,
-    bio: "I am Ben Frothingham, and I’m the Engagement Director. I am a 5th year Mechanical Engineer from Merrimack, NH, and I’ve been in Generate for 6 semesters now! Outside of Generate, I spend my time surfing and working on my capstone project (which is also a surfboard!). My incredible Engagement team covers a wide range of topics – from branding and creating merch, to hosting events for hundreds of attendees, to presenting about Generate to other organizations. ",
-    emailUsername: "frothingham.b",
+    name: "Shannon Murphy",
+    image: Shannon,
+    bio: "I'm Shannon Murphy, and I'm the Engagement Director. I am a 5th year studying International Affairs and Environmental studies from Salem, MA. I love to play piano, try new local restaurants, and spend time with my six nieces and nephews. My incredible Engagement team covers a wide range of topics - from branding and creating merch, to hosting events for hundreds of attendees, to presenting about Generate to other organizations.",
+    emailUsername: "murphy.shanno",
   },
   {
     title: "Software Director",
@@ -58,22 +47,22 @@ const directorData = [
     activeIcon: SoftwareActiveIcon,
     inactiveIcon: SoftwareInactiveIcon,
 
-    name: "Victoria",
-    image: Victoria,
-    bio: "I’m Victoria, the Software Director :) I am a 3rd year Computer Science and Design from Moscow, Russia. We are a community that fosters professional and technical development for its members and products through an iterative software development and design process. The favorite part of my role is when I get to see all the projects come together at the end of the semester. In my free time I’m usually hiking or in my hammock in some park around Boston!",
-    emailUsername: "brennick.v",
+    name: "Alix Heudebourg",
+    image: Alix,
+    bio: "Hellooo, I'm Alix, the Software Director :) I'm a fifth year CS and Design major from France. When I'm not running around the sherm or on co-op you can find me playing guitar with friends at home, organizing a very last minute firepit night or cross stiching. As the SD I get to oversee all the projects we take on this semester and make sure our members are learning, growing and having fun!",
+    emailUsername: "heudebourg.a",
   },
   {
     title: "Hardware Director",
     team: "Hardware",
-    color: "#FF5751",
+    color: "#FF6660",
     activeIcon: HardwareActiveIcon,
     inactiveIcon: HardwareInactiveIcon,
 
-    name: "Liza",
-    image: Liza,
-    bio: "My name is Liza, and I am so excited to be the Hardware Director this year! I’m a 5th year pursuing a BS in Mechanical Engineering and an MS in Engineering Management, and I’m from West Newbury, MA. In my free time, I love to play tennis, hike, surf, and cook! Hardware works with four clients every semester to create high quality, innovative, and intriguing mechanical or electromechanical  products. I am so unbelievably happy to be guiding our teams towards success!",
-    emailUsername: "russell.li",
+    name: "JoJo D'Amato",
+    image: JoJo,
+    bio: "My name is JoJo, and I am the Hardware Director this year! I am a 4th year majoring in Mechanical Engineering and Experience Design, and I am from Scituate, MA. In my free time I love to cook, swim, bike, make ceramics, and enjoy live music! Generate Hardware works to create quality products for four clients each semester and expand our technical abilities with electromechanical projects, with a focus on growth and learning of our members.",
+    emailUsername: "damato.j",
   },
   {
     title: "Operations Director",
@@ -82,10 +71,10 @@ const directorData = [
     activeIcon: CommunityActiveIcon,
     inactiveIcon: CommunityInactiveIcon,
 
-    name: "Kyle Janko",
-    image: Kyle,
-    bio: "I am Kyle Janko, the Operations Director for 2022-23. I’m a 4th year Mechanical Engineer and Designer from Stoneham, MA. Outside of Generate and Engineering, I enjoy industrial and fashion design. Operations handles the day-to-day of Generate, supporting financials, developing professional relationships with employers, and collecting and analyzing survey data. We also maintain and improve Generate spaces, internal organization, and technology",
-    emailUsername: "janko.k",
+    name: "Sam Yip",
+    image: Sam,
+    bio: "Hi! I'm Sam Yip, Generate's current Operations Director. I'm a fourth year Industrial Engineering major with a minor in Data Science and I'm originally from Fanwood, NJ. Outside of Generate I love bike riding, running, baking and arts & crafts! I love working with the Operations Team because they work to improve Generate's day-to-day like managing spaces, finances, internal data and collaborations with external partners.",
+    emailUsername: "yip.sa",
   },
 ];
 
