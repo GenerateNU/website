@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css';
 import Management from "./Management/index"
-import NavBar from "../../NavBar";
+import NavBar from "../../../component/NavBar";
 
 export default class ExpandedTeamsPage extends React.Component {
   render() {
