@@ -3,9 +3,17 @@ a {
     color: #ffffff;
 }
 
+.top-level-contaner {
+    height: 100vh;
+    background-color: #187dff;
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
 .footer-container {
     background-color: #187dff;
-    width: 15vh;
+    width: auto;
+    height: 100vh;
     overflow: hidden;
     text-align: left;
     float: left;
@@ -69,7 +77,6 @@ a:hover {
 
 .social-icons {
     margin-bottom: 10%;
-    width: 50%;
 }
 
 .social-icons .social-media {
@@ -105,6 +112,8 @@ a:hover {
 
 .icon {
     padding-bottom: 10%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #footer-links {
