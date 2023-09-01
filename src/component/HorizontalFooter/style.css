@@ -6,11 +6,18 @@ a {
 .footer-container {
     background-color: #187dff;
     text-align: left;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     width: 100%;
     float: left;
     height: auto;
+}
+
+.left-bar {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-text {
@@ -18,7 +25,7 @@ a {
     font-family: "Space Mono";
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 40px;
     line-height: 30px;
     color: #ffffff;
     padding-left: 15%;
@@ -32,29 +39,20 @@ a:hover {
 
 .sherm {
     padding: 5%;
-}
-
-.logo-background {
-    background-color: white;
-    width: 35%;
-    height: 50%;
+    margin-top: 0;
 }
 
 .logo-placement {
-    background-color: white;
-    width: 30%;
-    height: 45%;
-    box-shadow: 1.5rem 1.5rem black;
-}
-
-.logo-shadow {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px;
+    width: 14vh;
+    height: 18vh;
 }
 
 .social-icons {
     margin-right: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 10;
 }
 
 .footer-two {
@@ -78,5 +76,6 @@ a:hover {
 }
 
 .icon {
-    padding-bottom: 10%;
+    padding-top: 14%;
+    padding-bottom: 0;
 }
