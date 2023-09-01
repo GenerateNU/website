@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import "./style.css";
 import GenerateLogo from "../../assets/images/landingpage-v2/footerlogo.svg";
 import InstaIcon from "../../assets/images/socialMediaIcons/Insta.png";
@@ -8,6 +8,7 @@ import YoutubeIcon from "../../assets/images/socialMediaIcons/Youtube.png";
 import MosaicIcon from "../../assets/images/socialMediaIcons/Mosaic.png";
 import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.png";
 import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
+import { useNavigate } from "react-router-dom";
 
 const pages = [
   { name: "Generate", link: "/" },
@@ -19,26 +20,28 @@ const pages = [
   { name: "Projects", link: "/projects" },
 ];
 
-const FooterLink = ({ page, currentPage}) => {
+const FooterLink = ({ page, currentPage }) => {
   const { name, link, disabled } = page;
   const isCurrentPage = currentPage === link;
 
   return (
-    <Row className="footer-text">
+    <div>
       {disabled ? (
-        <a className="disabled-footer-text" href={link}>
+        <a className="footer-link-text disabled-footer-text" href={link}>
           {name}
         </a>
       ) : isCurrentPage ? (
         <b>
-          <a href={link}>
+          <a href={link} className="footer-link-bold">
             {name} {"<"}
           </a>
         </b>
       ) : (
-        <a href={link}>{name}</a>
+        <a className="footer-link-text" href={link}>
+          {name}
+        </a>
       )}
-    </Row>
+    </div>
   );
 };
 
@@ -85,7 +88,7 @@ function SocialIcon({ href, imgSrc }) {
   return (
     <Col className="icon">
       <a href={href}>
-        <img className={"social-media"} src={imgSrc}/>
+        <img className={"social-media"} src={imgSrc} alt="" />
       </a>
     </Col>
   );
@@ -93,23 +96,22 @@ function SocialIcon({ href, imgSrc }) {
 
 function VerticalFooter() {
   const currentPageUrl = window.location.href;
+  const navigate = useNavigate();
+  const handleOnClick = () => {
+    window.scrollTo(0, 0);
+    navigate("/");
+  };
+
   return (
-    <Container fluid className="footer-container">
-      <Row>
-        <div>
-          <div className="sherm">
-            <a href="https://generatenu.com/">
-              <img
-                className="logo-placement"
-                src={GenerateLogo}
-                height="80%"
-                width="60%"
-                alt="Logo description" // Add alt text to the image for accessibility
-              />
-            </a>
-          </div>
-        </div>
-      </Row>
+    <div className="footer-container">
+      <div className="sherm-placement">
+        <img
+          className="logo-alignment"
+          src={GenerateLogo}
+          onClick={handleOnClick}
+          alt="Logo description" // Add alt text to the image for accessibility
+        />
+      </div>
       <span id="footer-links">
         <span id="footer-pages">
           {pages.map((page, index) => (
@@ -141,7 +143,7 @@ function VerticalFooter() {
           ))}
         </div>
       </span>
-    </Container>
+    </div>
   );
 }
 

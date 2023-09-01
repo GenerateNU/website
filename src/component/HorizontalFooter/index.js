@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./style.css";
-import GenerateLogo from "../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png";
+import GenerateLogo from "../../assets/images/landingpage-v2/footerlogo.svg"  ;//"../../assets/images/landingpage-v2/footerlogo.svg";
 import InstaIcon from "../../assets/images/socialMediaIcons/Insta.png";
 import LinkedInIcon from "../../assets/images/socialMediaIcons/Linkedin.png";
 import FbIcon from "../../assets/images/socialMediaIcons/Facebook.png";
@@ -18,11 +18,10 @@ function HorizontalFooter() {
     navigate("/");
   };
   return (
-    <Container fluid className="footer-container">
+    <div className="footer-container">
       <Row>
         <div className="w-100">
           <div className="sherm d-flex justify-content-center align">
-
               <img            
                 className="logo-placement"
                 src={GenerateLogo}
@@ -112,7 +111,7 @@ function HorizontalFooter() {
           </Row>{" "}
         </div>{" "}
       </div>{" "}
-    </Container>
+    </div>
   );
 }
 

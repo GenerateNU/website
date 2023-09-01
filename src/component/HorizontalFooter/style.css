@@ -3,14 +3,14 @@ a {
     color: #ffffff;
 }
 
-*/ .footer-container {
+.footer-container {
     background-color: #187dff;
     text-align: left;
-    left: 0;
-    bottom: 0;
+    padding-left: 10vw;
+    padding-right: 10vw;
     width: 100%;
     float: left;
-    height: 30vh;
+    height: auto;
 }
 
 .footer-text {
@@ -42,8 +42,9 @@ a:hover {
 
 .logo-placement {
     background-color: white;
-    width: 40%;
-    height: 60%;
+    width: 30%;
+    height: 45%;
+    box-shadow: 1.5rem 1.5rem black;
 }
 
 .logo-shadow {

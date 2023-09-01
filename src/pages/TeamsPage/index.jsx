@@ -10,8 +10,9 @@ import WebTeamContainer from "./TeamPageAssets/WebTeamContainer";
 import MobileTeamContainer from "./TeamPageAssets/MobileTeamContainer";
 
 export default function TeamsPage() {
-  //const isWebsite = useWebsite();
+  const isWebsite = useWebsite();
   const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
+  const mobile = (!isBigScreen) || !isWebsite;
 
   const children = [
           teamsDataV2.map((team) => {
@@ -23,7 +24,7 @@ export default function TeamsPage() {
         })
   ]
   // todo; possibly rename component
-  return isBigScreen ? (
+  return !mobile ? (
     <NewDesktopContainer
       children={[<WebTeamContainer>{children}</WebTeamContainer>]}
       desktopBGColor={"white"}

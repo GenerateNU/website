@@ -4,10 +4,11 @@ import useWebsite from "../../shared/useMobile";
 import { Rotate90DegreesCcw } from "@material-ui/icons";
 
 const TeamCard = ({ color = "black", name = "Team", image = null }) => {
-  //const isWebsite = useWebsite();
+  const isWebsite = useWebsite();
   const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
-  console.log("is big screen;", isBigScreen);
-  return isBigScreen ? (
+  const mobile = (!isBigScreen) || !isWebsite;
+  
+  return !mobile ? (
     <a href={"/teams-expanded#" + name.toLowerCase()} className="link-wrapper">
       <div className="card-container-flex" style={{ backgroundColor: color }}>
         <img className="card-img" src={image} alt="" />

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function useWebsite() {
     const isBigScreen = !window.matchMedia("max-device-width: 650px").matches;
-    console.log("is it a big screen;", isBigScreen);
+    console.log("is it a big screen;", isBigScreen, " : ", console.log(window.innerWidth));
     const [isWebsite, setIsWebsite] = useState(isBigScreen);
     //choose the screen size
     const handleResize = () => {

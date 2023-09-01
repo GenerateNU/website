@@ -20,7 +20,7 @@ export default function WebTeamContainer({ children }) {
           <NavBar />
         </div>
         {childrenWithProps}
-        <Footer />
+          <Footer />
         <NextPage pageName="Projects" url="/projects" />
       </Row>
     </div>
