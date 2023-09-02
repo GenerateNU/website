@@ -55,10 +55,10 @@ function HorizontalFooter() {
   };
 
   return (
-    <Container className="footer-container">
+    <Container className="footer-container-mobile w-100">
       <div className="d-flex flex-row justify-content-between w-100">
-        <div className="left-bar">
-          <div className="w-100 d-flex flex-column justify-content-between">
+        <div className="left-bar-item">
+          <div className="w-100 d-flex flex-column justify-content-between align-items-flex-start">
             <div className="sherm">
               <img
                 className="logo-placement"

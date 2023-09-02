@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./footerStyle.css";
 import GenerateLogo from "../../../../assets/images/landingpage-v2/footerlogo.svg";
 import { useNavigate } from "react-router-dom";
-import useWebsite from "../../../../shared/useMobile";
+import useWebsite from "../../../../shared/useWebsite";
 import SocialIcons from "./SocialIcons";
 import ButtonUp from "../../../../assets/images/TeamsPageImages/TeamAssets/ButtonUp.svg";
 

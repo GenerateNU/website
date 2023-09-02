@@ -3,19 +3,19 @@ a {
     color: #ffffff;
 }
 
-.footer-container {
+.footer-container-mobile {
     background-color: #187dff;
     text-align: left;
     padding-left: 15vw;
-    padding-right: 15vw;
     padding-top: 5vh;
+    padding-right: 15vw;
     padding-bottom: 5vh;
-    width: 100%;
-    float: left;
+    width: 100vw;
+    margin: 0;
     height: auto;
 }
 
-.left-bar {
+.left-bar-item {
     display: flex;
     flex-direction: column;
 }

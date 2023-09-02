@@ -4,7 +4,7 @@ import teamsDataV2 from "../../data/teamDataV2";
 import TeamCard from "./TeamCard";
 //import DesktopMobileScrollAndBackgroundHandler from "../../component/DesktopMobileHandler";
 import NewDesktopContainer from "../../component/DesktopMobileHandler/NewWebContainer";
-import useWebsite from "../../shared/useMobile";
+import useWebsite from "../../shared/useWebsite";
 import NewMobileContainer from "../../component/DesktopMobileHandler/NewMobileContainer";
 import WebTeamContainer from "./TeamPageAssets/WebTeamContainer";
 import MobileTeamContainer from "./TeamPageAssets/MobileTeamContainer";

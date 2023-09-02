@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import useWebsite from "../../shared/useMobile";
+import useWebsite from "../../shared/useWebsite";
 import { Rotate90DegreesCcw } from "@material-ui/icons";
 
 const TeamCard = ({ color = "black", name = "Team", image = null }) => {

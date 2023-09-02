@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import MngmtPH from "../../../../assets/images/TeamsPageImages/TeamsPagePH1.png";
-import useWebsite from "../../../../shared/useMobile";
+import useWebsite from "../../../../shared/useWebsite";
 import TextRow from "../CommonTeam/textRow";
 import RoleContainer from "../CommonTeam/RoleContainer";
 import TeamPageFooter from "../CommonTeam/TeamPageFooter";

@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import useWebsite from "../../../../shared/useMobile";
+import useWebsite from "../../../../shared/useWebsite";
 
 export default function TextRow({title, description, picture, reverse}) {
   const isWebsite = useWebsite();
