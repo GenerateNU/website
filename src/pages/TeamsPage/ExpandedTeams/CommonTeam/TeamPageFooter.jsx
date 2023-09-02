@@ -127,13 +127,15 @@ function TeamPageFooter({ color, page }) {
 
   return (
     <Container className="footer-container">
-      <div
-        className={`divider-row ${
-          mobile ? "align-items-end" : "align-items-center"
-        }`}
-      >
-        <div className={`${mobile ? "left-bar-mobile" : "left-bar"}`}>
-          <div className="w-100 d-flex flex-column justify-content-between">
+      <div className={`${mobile ? "divider-col" : "divider-row"}`}>
+        <div className={`${mobile ? "top-bar-mobile" : "left-bar"}`}>
+          <div
+            className={`${
+              mobile
+                ? "d-flex flex-column flex-direction-start"
+                : "w-100 d-flex flex-column justify-content-between"
+            }`}
+          >
             <div className="sherm">
               <img
                 className="logo-placement"
@@ -143,20 +145,37 @@ function TeamPageFooter({ color, page }) {
               />
             </div>
           </div>
-          <span className="footer-links">
-            <FooterLinks />
-          </span>
-        </div>
-        <div>
-          <div className={`${mobile ? "right-box-mobile" : "right-box"}`}>
-            <SocialIcons mobile={mobile}/>
+          {mobile ? (
             <img
               src={ButtonUp}
               alt=""
               className={`${mobile ? "up-icon-mobile" : "up-icon"}`}
               onClick={handleScrollClick}
             />
-          </div>
+          ) : (
+            <span className="footer-links">
+              <FooterLinks />
+            </span>
+          )}
+        </div>
+        <div className={`${mobile ? "bot-box-mobile" : "right-box"}`}>
+          {mobile ? (
+            <span className="footer-links">
+              <FooterLinks />
+            </span>
+          ) : (
+            <SocialIcons mobile={mobile} />
+          )}
+          {mobile ? (
+            <SocialIcons mobile={mobile} />
+          ) : (
+            <img
+              src={ButtonUp}
+              alt=""
+              className={`${mobile ? "up-icon-mobile" : "up-icon"}`}
+              onClick={handleScrollClick}
+            />
+          )}
         </div>
       </div>
       <TitleCard color={color} title={page} mobile={mobile} />
