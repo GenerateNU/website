@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import teamsDataV2 from "../../data/teamDataV2";
+import teamsDataV2 from "../../data/TeamPageDetails";
 import TeamCard from "./TeamCard";
 //import DesktopMobileScrollAndBackgroundHandler from "../../component/DesktopMobileHandler";
 import NewDesktopContainer from "../../component/DesktopMobileHandler/NewWebContainer";

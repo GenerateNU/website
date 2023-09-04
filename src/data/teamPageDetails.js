@@ -17,7 +17,7 @@ import HardwareLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH4.
 import EngagementLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH5.png"
 
 // yellow - "#FFBF3C"
-const teamDataV2 = [{
+const TeamPageDetails = [{
         name: "Management",
         color: "#187DFF",
         activeIcon: ManagementActiveIcon,
@@ -54,4 +54,4 @@ const teamDataV2 = [{
     }
 ]
 
-export default teamDataV2;
+export default TeamPageDetails;

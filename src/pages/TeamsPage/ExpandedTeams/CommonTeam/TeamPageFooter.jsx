@@ -16,7 +16,7 @@ const pages = [
   // { name: "People", link: "/", disabled: true },
   { name: "Projects", link: "/projects" },
 ];
-const pages2 = [
+const pagesSplit = [
   [
     { name: "Generate", link: "/" },
     { name: "Apply", link: "/apply" },
@@ -75,7 +75,7 @@ function FooterLinks() {
   ) : (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <span className="footer-pages">
-        {pages2[0].map((page, index) => (
+        {pagesSplit[0].map((page, index) => (
           <FooterLink
             key={index}
             page={page}
@@ -86,7 +86,7 @@ function FooterLinks() {
         ))}
       </span>
       <span className="footer-pages">
-        {pages2[1].map((page, index) => (
+        {pagesSplit[1].map((page, index) => (
           <FooterLink
             key={index}
             page={page}
