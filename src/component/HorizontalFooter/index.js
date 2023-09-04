@@ -64,7 +64,7 @@ function HorizontalFooter() {
                 className="logo-placement"
                 src={GenerateLogo}
                 onClick={handleOnClick}
-                alt="Logo description" // Add alt text to the image for accessibility
+                alt="Logo description"
               />
             </div>
           </div>
@@ -82,7 +82,7 @@ function HorizontalFooter() {
             </span>
           </span>
         </div>
-        <div className="social-icons">
+        <div className="social-icons-mobile">
           <Row style={{ paddingBottom: 0 }}>
             <Col className="icon">
               <a href="https://www.google.com/">

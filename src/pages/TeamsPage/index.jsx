@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import teamsDataV2 from "../../data/TeamPageDetails";
+import teamPageDetails from "../../data/teamPageDetails";
 import TeamCard from "./TeamCard";
 //import DesktopMobileScrollAndBackgroundHandler from "../../component/DesktopMobileHandler";
 import NewDesktopContainer from "../../component/DesktopMobileHandler/NewWebContainer";
@@ -15,7 +15,7 @@ export default function TeamsPage() {
   const mobile = (!isBigScreen) || !isWebsite;
 
   const children = [
-          teamsDataV2.map((team) => {
+          teamPageDetails.map((team) => {
           return (
             <TeamCard
               {...{ color: team.color, name: team.name, image: team.largePic }}
