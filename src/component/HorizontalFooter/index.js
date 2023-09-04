@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./style.css";
 import GenerateLogo from "../../assets/images/landingpage-v2/footerlogo.svg"; //"../../assets/images/landingpage-v2/footerlogo.svg";
@@ -87,7 +87,7 @@ function HorizontalFooter() {
             <Col className="icon">
               <a href="https://www.google.com/">
                 {" "}
-                <img src={InstaIcon} height="30vh" width="30vw" alt="" />{" "}
+                <img src={InstaIcon} style={{height: "6vw", width: "6vw"}} alt="" />{" "}
               </a>{" "}
             </Col>{" "}
           </Row>{" "}
@@ -95,13 +95,13 @@ function HorizontalFooter() {
             <Col className="icon">
               <a href="https://www.youtube.com/channel/UC2Y_rgZiPKPH0lSU1FyQJFw/featured">
                 {" "}
-                <img src={YoutubeIcon} height="30vh" width="30vw" alt="" />{" "}
+                <img src={YoutubeIcon} style={{height: "6vw", width: "6vw"}} alt="" />{" "}
               </a>{" "}
             </Col>{" "}
             <Col className="icon">
               <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
                 {" "}
-                <img src={NortheasternIcon} height="30vh" width="30vw" alt="" />
+                <img src={NortheasternIcon} style={{height: "6vw", width: "6vw"}} alt="" />
               </a>{" "}
             </Col>{" "}
           </Row>{" "}
@@ -109,13 +109,13 @@ function HorizontalFooter() {
             <Col className="icon">
               <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
                 {" "}
-                <img src={LinkedInIcon} height="30vh" width="30vw" alt="" />
+                <img src={LinkedInIcon} style={{height: "6vw", width: "6vw"}} alt="" />
               </a>{" "}
             </Col>{" "}
             <Col className="icon">
               <a href="https://www.facebook.com/GenerateNU/">
                 {" "}
-                <img src={MosaicIcon} height="30vh" width="30vw" alt="" />{" "}
+                <img src={MosaicIcon} style={{height: "6vw", width: "6vw"}} alt="" />{" "}
               </a>{" "}
             </Col>{" "}
           </Row>{" "}
@@ -123,13 +123,13 @@ function HorizontalFooter() {
             <Col className="icon">
               <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
                 {" "}
-                <img src={FbIcon} height="30vh" width="30vw" alt="" />
+                <img src={FbIcon} style={{height: "6vw", width: "6vw"}} alt="" />
               </a>{" "}
             </Col>{" "}
             <Col className="icon">
               <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
                 {" "}
-                <img src={Sherm} height="30vh" width="30vw" alt="" />
+                <img src={Sherm} style={{height: "6vw", width: "6vw"}} alt="" />
               </a>{" "}
             </Col>{" "}
           </Row>{" "}
