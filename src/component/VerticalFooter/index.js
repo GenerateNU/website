@@ -1,5 +1,7 @@
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
+import { Row, Col } from "react-bootstrap";
 import "./style.css";
+import useWebsite from "../../shared/useWebsite";
 import GenerateLogo from "../../assets/images/landingpage-v2/footerlogo.svg";
 import InstaIcon from "../../assets/images/socialMediaIcons/Insta.png";
 import LinkedInIcon from "../../assets/images/socialMediaIcons/Linkedin.png";
@@ -8,6 +10,8 @@ import YoutubeIcon from "../../assets/images/socialMediaIcons/Youtube.png";
 import MosaicIcon from "../../assets/images/socialMediaIcons/Mosaic.png";
 import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.png";
 import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
+import { useNavigate } from "react-router-dom";
+import HorizontalFooter from "../HorizontalFooter";
 
 const pages = [
   { name: "Generate", link: "/" },
@@ -19,26 +23,32 @@ const pages = [
   { name: "Projects", link: "/projects" },
 ];
 
-const FooterLink = ({ page, currentPage}) => {
+const FooterLink = ({ page, currentPage }) => {
   const { name, link, disabled } = page;
   const isCurrentPage = currentPage === link;
 
   return (
-    <Row className="footer-text">
+    <div>
+      {" "}
       {disabled ? (
-        <a className="disabled-footer-text" href={link}>
-          {name}
+        <a className="footer-link-text disabled-footer-text" href={link}>
+          {" "}
+          {name}{" "}
         </a>
       ) : isCurrentPage ? (
         <b>
-          <a href={link}>
-            {name} {"<"}
-          </a>
+          <a href={link} className="footer-link-bold">
+            {" "}
+            {name} {"<"}{" "}
+          </a>{" "}
         </b>
       ) : (
-        <a href={link}>{name}</a>
-      )}
-    </Row>
+        <a className="footer-link-text" href={link}>
+          {" "}
+          {name}{" "}
+        </a>
+      )}{" "}
+    </div>
   );
 };
 
@@ -85,33 +95,37 @@ function SocialIcon({ href, imgSrc }) {
   return (
     <Col className="icon">
       <a href={href}>
-        <img className={"social-media"} src={imgSrc}/>
-      </a>
+        <img className={"social-media"} src={imgSrc} alt="" />
+      </a>{" "}
     </Col>
   );
 }
 
 function VerticalFooter() {
   const currentPageUrl = window.location.href;
-  return (
-    <Container fluid className="footer-container">
-      <Row>
-        <div>
-          <div className="sherm">
-            <a href="https://generatenu.com/">
-              <img
-                className="logo-placement"
-                src={GenerateLogo}
-                height="80%"
-                width="60%"
-                alt="Logo description" // Add alt text to the image for accessibility
-              />
-            </a>
-          </div>
-        </div>
-      </Row>
+  const navigate = useNavigate();
+  const handleOnClick = () => {
+    window.scrollTo(0, 0);
+    navigate("/");
+  };
+
+  const isWebsite = useWebsite();
+  const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
+  const mobile = !isBigScreen || !isWebsite;
+
+  return !mobile ? (
+    <Col fluid className="top-level-contaner">
+      <div className="sherm-placement">
+        <img
+          className="logo-alignment"
+          src={GenerateLogo}
+          onClick={handleOnClick}
+          alt="Logo description" // Add alt text to the image for accessibility
+        />
+      </div>{" "}
       <span id="footer-links">
         <span id="footer-pages">
+          {" "}
           {pages.map((page, index) => (
             <FooterLink
               key={index}
@@ -120,29 +134,31 @@ function VerticalFooter() {
                 currentPageUrl.lastIndexOf("/")
               )}
             />
-          ))}
-        </span>
+          ))}{" "}
+        </span>{" "}
         <div className="social-icons">
+          {" "}
           {socialIcons.map((row, index) => (
             <Row key={index}>
+              {" "}
               {row.map((icon, index) => (
                 <>
                   <SocialIcon
                     key={index}
                     href={icon.href}
                     imgSrc={icon.imgSrc}
-                  />
+                  />{" "}
                   {icon.href.includes("instagram") && (
-                    <Col className={"spacer"}></Col>
-                  )}
+                    <Col className={"spacer"}> </Col>
+                  )}{" "}
                 </>
-              ))}
+              ))}{" "}
             </Row>
-          ))}
-        </div>
-      </span>
-    </Container>
-  );
+          ))}{" "}
+        </div>{" "}
+      </span>{" "}
+    </Col>
+  ) : (<HorizontalFooter/>);
 }
 
 export default VerticalFooter;

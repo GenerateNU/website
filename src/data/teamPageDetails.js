@@ -16,27 +16,13 @@ import SoftwareLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH3.
 import HardwareLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH4.png"
 import EngagementLargePicture from "../assets/images/TeamsPageImages/TeamsPagePH5.png"
 
-const teamDataV2 = [
-    {
+// yellow - "#FFBF3C"
+const TeamPageDetails = [{
         name: "Management",
-        color: "#FFBF3C",
+        color: "#187DFF",
         activeIcon: ManagementActiveIcon,
         inactiveIcon: ManagementInactiveIcon,
         largePic: ManagementLargePicture,
-    },
-    {
-        name: "Operations",
-        color: "#6FCF97",
-        activeIcon: CommunityActiveIcon,
-        inactiveIcon: CommunityInactiveIcon,
-        largePic: OperationsLargePicture,
-    },
-    {
-        name: "Software",
-        color: "#187DFF",
-        activeIcon: SoftwareActiveIcon,
-        inactiveIcon: SoftwareInactiveIcon,
-        largePic: SoftwareLargePicture,
     },
     {
         name: "Hardware",
@@ -44,6 +30,20 @@ const teamDataV2 = [
         activeIcon: HardwareActiveIcon,
         inactiveIcon: HardwareInactiveIcon,
         largePic: HardwareLargePicture,
+    },
+    {
+        name: "Software",
+        color: "#FFBF3C",
+        activeIcon: SoftwareActiveIcon,
+        inactiveIcon: SoftwareInactiveIcon,
+        largePic: SoftwareLargePicture,
+    },
+    {
+        name: "Operations",
+        color: "#6FCF97",
+        activeIcon: CommunityActiveIcon,
+        inactiveIcon: CommunityInactiveIcon,
+        largePic: OperationsLargePicture,
     },
     {
         name: "Engagement",
@@ -54,4 +54,4 @@ const teamDataV2 = [
     }
 ]
 
-export default teamDataV2;
+export default TeamPageDetails;

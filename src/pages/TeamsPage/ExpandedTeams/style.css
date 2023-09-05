@@ -11,7 +11,7 @@
 }
 
 .paragraph-text {
-    font-family: "Space Mono";
+    font-family: "Outfit";
     color: black;
     font-size: max(1.42vw, 13px);
     line-height: max(1.42vw, 13px);
@@ -33,4 +33,4 @@
     padding-top: 2%;
     width: 42vh;
     height: auto;
-  }
+}
