@@ -19,12 +19,12 @@ a {
 
   .DevelopmentWheelThree {
     height: 63.11vh;
-    margin-top: calc(1.6*12.55vh);
+    margin-top: 30vh;
     margin-bottom: 12.55vh;
   }
     
   .DevelopmentWheelImageThree {
-    width: calc(0.8*min(64vh, 100vw));
+    width: calc(0.7*min(64vh, 100vw));
   }
 
 

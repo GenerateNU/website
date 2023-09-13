@@ -85,7 +85,7 @@ a {
   .alignItemsRight {
     display: flex;
     flex-direction: row;
-    margin-top: 4%;
+    margin-top: 12%;
   }
   
   @media only screen and (max-device-width: 650px) {
