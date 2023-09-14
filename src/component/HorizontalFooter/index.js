@@ -2,13 +2,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./style.css";
 import GenerateLogo from "../../assets/images/landingpage-v2/footerlogo.svg"; //"../../assets/images/landingpage-v2/footerlogo.svg";
-import InstaIcon from "../../assets/images/socialMediaIcons/Insta.png";
-import LinkedInIcon from "../../assets/images/socialMediaIcons/Linkedin.png";
-import FbIcon from "../../assets/images/socialMediaIcons/Facebook.png";
-import YoutubeIcon from "../../assets/images/socialMediaIcons/Youtube.png";
-import MosaicIcon from "../../assets/images/socialMediaIcons/Mosaic.png";
-import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.png";
-import Sherm from "../../assets/images/socialMediaIcons/Sherm.png";
+import InstaIcon from "../../assets/images/socialMediaIcons/Insta.svg";
+import LinkedInIcon from "../../assets/images/socialMediaIcons/Linkedin.svg";
+import FbIcon from "../../assets/images/socialMediaIcons/Facebook.svg";
+import YoutubeIcon from "../../assets/images/socialMediaIcons/Youtube.svg";
+import MosaicIcon from "../../assets/images/socialMediaIcons/Mosaic.svg";
+import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.svg";
+import Sherm from "../../assets/images/socialMediaIcons/Sherm.svg";
 import { useNavigate } from "react-router-dom";
 
 const pages = [
