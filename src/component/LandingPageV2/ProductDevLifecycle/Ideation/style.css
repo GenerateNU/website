@@ -58,7 +58,7 @@ a {
 
   .ideation {
     margin-left: 12.55vh;
-    margin-top: 12%;
+    margin-top: 8%;
   }
 
   .IdeationText {
@@ -82,6 +82,13 @@ a {
     /* Core/MNGMNT Yellow */
 
     color: #FFBF3C;
+  }
+
+  @media only screen and (max-width: 650px){
+    .ideation {
+      margin-left: 12.55vh;
+      margin-top: 0%;
+    }
   }
 
   
