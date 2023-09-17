@@ -80,8 +80,8 @@ a:hover {
 }
 
 .social-icons .social-media {
-    width: 3.6vh;
-    height: auto;
+    width: 10vw;
+    height: 7vh;
 }
 
 .social-icons .row {
@@ -129,6 +129,13 @@ a:hover {
     margin-right: 0;
 }
 
+@media (min-width: 600px) {
+    .social-icons .social-media {
+        width: 80vw;
+        height: 80vh;
+    }
+}
+
 @media only screen and (max-device-width: 650px) {
     .footer-container {
         padding-bottom: 5vh;
@@ -155,6 +162,7 @@ a:hover {
         margin: 0;
         width: 100%;
     }
+
     .social-icons {
         margin: 0;
         display: flex;
@@ -163,6 +171,12 @@ a:hover {
         align-items: flex-end;
         margin-right: 8vw;
     }
+
+    .social-icons-mobile .social-media {
+        width: 80vw;
+        height: 90vh;
+    }
+
     .social-icons .row {
         padding-bottom: 2vh;
         text-align: unset;

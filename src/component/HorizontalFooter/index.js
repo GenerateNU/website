@@ -1,15 +1,10 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import "./style.css";
 import GenerateLogo from "../../assets/images/landingpage-v2/footerlogo.svg"; //"../../assets/images/landingpage-v2/footerlogo.svg";
-import InstaIcon from "../../assets/images/socialMediaIcons/Insta.svg";
-import LinkedInIcon from "../../assets/images/socialMediaIcons/Linkedin.svg";
-import FbIcon from "../../assets/images/socialMediaIcons/Facebook.svg";
-import YoutubeIcon from "../../assets/images/socialMediaIcons/Youtube.svg";
-import MosaicIcon from "../../assets/images/socialMediaIcons/Mosaic.svg";
-import NortheasternIcon from "../../assets/images/socialMediaIcons/Northeaster.svg";
-import Sherm from "../../assets/images/socialMediaIcons/Sherm.svg";
+
 import { useNavigate } from "react-router-dom";
+import { SocialIcon, socialIcons } from "../SocialIcon";
 
 const pages = [
   { name: "Generate", link: "/" },
@@ -83,58 +78,20 @@ function HorizontalFooter() {
           </span>
         </div>
         <div className="social-icons-mobile">
-          <Row style={{ paddingBottom: 0 }}>
-            <Col className="icon">
-              <a href="https://www.google.com/">
-                {" "}
-                <img src={InstaIcon} style={{height: "6vw", width: "6vw"}} alt="" />{" "}
-              </a>{" "}
-            </Col>{" "}
-          </Row>{" "}
-          <Row style={{ paddingBottom: 0 }}>
-            <Col className="icon">
-              <a href="https://www.youtube.com/channel/UC2Y_rgZiPKPH0lSU1FyQJFw/featured">
-                {" "}
-                <img src={YoutubeIcon} style={{height: "6vw", width: "6vw"}} alt="" />{" "}
-              </a>{" "}
-            </Col>{" "}
-            <Col className="icon">
-              <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
-                {" "}
-                <img src={NortheasternIcon} style={{height: "6vw", width: "6vw"}} alt="" />
-              </a>{" "}
-            </Col>{" "}
-          </Row>{" "}
-          <Row style={{ paddingBottom: 0 }}>
-            <Col className="icon">
-              <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
-                {" "}
-                <img src={LinkedInIcon} style={{height: "6vw", width: "6vw"}} alt="" />
-              </a>{" "}
-            </Col>{" "}
-            <Col className="icon">
-              <a href="https://www.facebook.com/GenerateNU/">
-                {" "}
-                <img src={MosaicIcon} style={{height: "6vw", width: "6vw"}} alt="" />{" "}
-              </a>{" "}
-            </Col>{" "}
-          </Row>{" "}
-          <Row style={{ paddingBottom: 0 }}>
-            <Col className="icon">
-              <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
-                {" "}
-                <img src={FbIcon} style={{height: "6vw", width: "6vw"}} alt="" />
-              </a>{" "}
-            </Col>{" "}
-            <Col className="icon">
-              <a href="https://www.linkedin.com/company/generate-product-development/mycompany/">
-                {" "}
-                <img src={Sherm} style={{height: "6vw", width: "6vw"}} alt="" />
-              </a>{" "}
-            </Col>{" "}
-          </Row>{" "}
-        </div>{" "}
-      </div>{" "}
+        {socialIcons.map((row, index) => (
+            <Row key={index}>
+              {row.map((icon, index) => (
+                <>
+                  <SocialIcon
+                    key={index}
+                    href={icon.href}
+                    imgSrc={icon.imgSrc}
+                  />
+                </>
+              ))}
+            </Row>))}
+        </div>
+      </div>
     </Container>
   );
 }
