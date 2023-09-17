@@ -6,6 +6,8 @@
 }
 
 .weare-header {
+    position: sticky;
+    top: 20px;
     width: 1vw;
 }
 
@@ -87,6 +89,16 @@
 }
 
 .our-mission-our-values {
+    width: 960px;
+    color: #ffad04;
+    font-size: 3vh;
+    line-height: 100%;
+    font-family: "Space Mono";
+    margin-right: 3%;
+    padding-top: 20vh;
+    position: sticky;
+    top: 10;
+    /*
     width: 112vh;
     color: #FFBF3C;
     font-size: 3vh;
@@ -94,6 +106,7 @@
     font-family: 'Space Mono';
     margin-right: 3%;
     padding-top: 20vh;
+    */
 }
 
 @media only screen and (max-device-width: 650px) {
@@ -112,6 +125,7 @@
         padding: 0%;
         width: 70vw;
         padding-bottom: 2% !important;
+        
     }
 
     .our-mission-we-are {

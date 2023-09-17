@@ -33,6 +33,7 @@
 }
 
 .mission-header-space {
+  position: sticky;
   height: max(120px, 20vh);
 }
 

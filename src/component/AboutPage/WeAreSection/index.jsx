@@ -23,4 +23,4 @@ const WeAreSection = () => {
     );
 };
 
-export default WeAreSection;
+export default WeAreSection; 

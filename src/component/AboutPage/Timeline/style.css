@@ -278,7 +278,8 @@
   height: 0px;
   top: 50%;
   left: 20%;
-
+  line-height: 92px;
+  font-weight: 700;
   /* H1 */
 
   font-family: "Space Mono";
