@@ -90,22 +90,22 @@ a:hover {
 }
 
 .social-icons .social-media {
-    width: 6vw;
+    width: 7vw;
     height: 4vh;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 700px){
     .social-icons .social-media {
-        width: 3vw;
+        width: 4vw;
         height: 4vh;
-    }
+    }    
 }
 
-@media (min-width: 1224px) {
+@media (min-width: 1200px){
     .social-icons .social-media {
         width: 2vw;
         height: 4vh;
-    }
+    }    
 }
 
 @media only screen and (max-device-width: 700px) {

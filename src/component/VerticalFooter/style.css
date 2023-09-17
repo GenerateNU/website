@@ -129,13 +129,6 @@ a:hover {
     margin-right: 0;
 }
 
-@media (min-width: 600px) {
-    .social-icons .social-media {
-        width: 80vw;
-        height: 80vh;
-    }
-}
-
 @media only screen and (max-device-width: 650px) {
     .footer-container {
         padding-bottom: 5vh;
