@@ -26,6 +26,7 @@ export default function App() {
               {" "}
             </Route>{" "}
             <Route path="/apply" element={<ApplyPage />}>
+              <Route path=":team" element={<ApplyPage />} />
               {" "}
             </Route>{" "}
             <Route path="/positions/:id" element={<Position />}>

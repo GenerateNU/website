@@ -39,32 +39,32 @@
   transform-origin: center center;
 }
 
-#part1 {
+#part0 {
   background-color: #FFBF3C;
   /* -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 41.2%, 100% 0); */
   clip-path: polygon(11.875% 0, 50% 50%, 88.125% 0);
 }
 
-#part2 {
+#part1 {
   background-color: #6FCF97;
   /* -webkit-clip-path: polygon(50% 50%, 100% 41.2%, 100% 100%, 63.4% 100%); */
   clip-path: polygon(50% 50%, 88.125% 0, 100% 0, 100% 66.25%);
 }
 
-#part3 {
+#part2 {
   background-color:  #187DFF;
   /* -webkit-clip-path: polygon(50% 50%, 36.6% 100%, 63.4% 100%); */
   clip-path: polygon(50% 50%, 100% 66.25%, 100% 100%, 50% 100%);
 }
 
 
-#part4 {
+#part3 {
   background-color: #FF6660;
   -webkit-clip-path: polygon(50% 50%, 0 36.6%, 0 100%);
   clip-path: polygon(50% 50%, 50% 100%, 0 100%, 0 66.25%);
 }
 
-#part5 {
+#part4 {
   background-color: #A559EC;
   -webkit-clip-path: polygon(50% 50%, 0 36.6%, 0 0, 50% 0);
   clip-path: polygon(50% 50%, 0 66.25%, 0 0, 11.875% 0);
@@ -87,14 +87,14 @@
   margin-top: 2%;
 }
 
-.image1 {
+.image0 {
   width: 20%;
   height: 20%;
   z-index: 100;
   margin-top: -67%;
 }
 
-.image2 {
+.image1 {
   width: 20%;
   height: 20%;
   z-index: 100;
@@ -102,7 +102,7 @@
   margin-top: -20.6%;
 }
 
-.image3 {
+.image2 {
   width: 20%;
   height: 18%;
   z-index: 100;
@@ -111,7 +111,7 @@
 }
 
 
-.image4 {
+.image3 {
   width: 20%;
   height: 18%;
   z-index: 100;
@@ -120,7 +120,7 @@
 }
 
 
-.image5 {
+.image4 {
   width: 20%;
   height: 20%;
   z-index: 100;

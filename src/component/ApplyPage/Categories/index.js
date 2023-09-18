@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { findPositionsByCategory } from '../../../services/positionService';
 import { findAllCategories } from '../../../services/categoryService';
+import { useNavigate } from 'react-router-dom';
+
+const CATEGORIES = ["management", "clients", "software", "hardware", "operations", "engagement"];
 
 export default function Categories(props) {
-    
+    const navigate = useNavigate();
     const [categories, setCategories] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState("");
     const [management, setManagement] = useState([]);
     const [clients, setClients] = useState([]);
     const [software, setSoftware] = useState([]);
@@ -15,9 +18,17 @@ export default function Categories(props) {
     const [engagement, setEngagement] = useState([]);
 
     useEffect(() => {
+        if (props.selectedTeam) {
+            const content = document.getElementById(props.selectedTeam);
+            if (content) {
+                content.classList.toggle("toggle-container");
+                setSelectedCategory(props.selectedTeam);
+            }
+        }
+
         const getCategories = async () => {
             const data = await findAllCategories();
-            setCategories(data);
+            setCategories(data);            
         };
         getCategories();
     }, []);
@@ -43,11 +54,22 @@ export default function Categories(props) {
     }, [selectedCategory]);
 
 
-    const handleSelection = (selectedCategory, id) => {
-        setSelectedCategory(selectedCategory);
-        const content = document.getElementById(id);
-        console.log(content);
-        content.classList.toggle("toggle-container");
+    const handleSelection = (selected) => {
+        setSelectedCategory(selected === selectedCategory ? "" : selected);
+        const visible = document.getElementById(selected).classList.toggle("toggle-container");
+
+        if (visible) {
+            CATEGORIES.forEach((category) => {
+                const content = document.getElementById(category);
+                if (category !== selected && content.checkVisibility()) {
+                    content.classList.toggle("toggle-container")
+                }
+            })
+            navigate(`/apply/${selected.toLowerCase()}`);
+        } 
+        else { 
+            navigate(`/apply`);
+        }
     }
 
     return (
@@ -56,11 +78,11 @@ export default function Categories(props) {
             {
                 <div className="accordion">
 
-                    <div className="toggle-btn" onClick={() => handleSelection('Management', props.disp+13)}
+                    <div className="toggle-btn" onClick={() => handleSelection('management')}
                         id="toggle" name="toggle">
-                        {'Management'}
+                        {'management'}
                     </div>
-                    <div id={props.disp+13} className="accordion-content">
+                    <div id={'management'} className="accordion-content">
                         {
                             management.map(managementPositions =>
                                 <div className='accordion_link'
@@ -74,11 +96,11 @@ export default function Categories(props) {
                     </div>
 
 
-                    <div className="toggle-btn" onClick={() => handleSelection('Clients', props.disp+12)}
+                    <div className="toggle-btn" onClick={() => handleSelection('clients')}
                         id="toggle" name="toggle">
-                        {'Clients'}
+                        {'clients'}
                     </div>
-                    <div id={props.disp+12} className="accordion-content">
+                    <div id={'clients'} className="accordion-content">
                         {
                             clients.map(clientsPositions =>
                                 <div className='accordion_link'
@@ -92,11 +114,11 @@ export default function Categories(props) {
                     </div>
 
 
-                    <div className="toggle-btn" onClick={() => handleSelection('Software', props.disp+14)}
+                    <div className="toggle-btn" onClick={() => handleSelection('software')}
                         id="toggle" name="toggle">
-                        {'Software'}
+                        {'software'}
                     </div>
-                    <div id={props.disp+14} className="accordion-content">
+                    <div id={'software'} className="accordion-content">
                         {
                             software.map(softwarePositions =>
                                 <div className='accordion_link'
@@ -109,11 +131,11 @@ export default function Categories(props) {
                         }
                     </div>
 
-                    <div className="toggle-btn" onClick={() => handleSelection('Hardware', props.disp+7)}
+                    <div className="toggle-btn" onClick={() => handleSelection('hardware')}
                         id="toggle" name="toggle">
-                        {'Hardware'}
+                        {'hardware'}
                     </div>
-                    <div id={props.disp+7} className="accordion-content">
+                    <div id={'hardware'} className="accordion-content">
                         {
                             hardware.map(hardwarePositions =>
                                 <div className='accordion_link'
@@ -126,11 +148,11 @@ export default function Categories(props) {
                         }
                     </div>
 
-                    <div className="toggle-btn" onClick={() => handleSelection('Operations', props.disp+11)}
+                    <div className="toggle-btn" onClick={() => handleSelection('operations')}
                         id="toggle" name="toggle">
-                        {'Operations'}
+                        {'operations'}
                     </div>
-                    <div id={props.disp+11} className="accordion-content">
+                    <div id={'operations'} className="accordion-content">
                         {
                             operations.map(operationsPositions =>
                                 <div className='accordion_link'
@@ -144,11 +166,11 @@ export default function Categories(props) {
                     </div>
 
 
-                    <div className="toggle-btn" onClick={() => handleSelection('Engagement', props.disp+15)}
+                    <div className="toggle-btn" onClick={() => handleSelection('engagement')}
                         id="toggle" name="toggle">
-                        {'Engagement'}
+                        {'engagement'}
                     </div>
-                    <div id={props.disp+15} className="accordion-content">
+                    <div id={'engagement'} className="accordion-content">
                         {
                             engagement.map(engagementPositions =>
                                 <div className='accordion_link'
