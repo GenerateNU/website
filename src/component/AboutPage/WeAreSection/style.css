@@ -1,15 +1,28 @@
 .card-container {
     width: 40vh;
-    position: relative;
-    top: 60vh;
     margin-right: 10vh;
+    margin-top: 5vh;
+}
+
+.outside-card-container {
+    display: flex;
+    flex-direction: row;
 }
 
 .weare-header {
-    position: sticky;
-    top: 20px;
     width: 1vw;
+    position: sticky;
+    left: 8vw;
+
 }
+
+.we-are-our-values-container {
+    height: 100vh;
+    width: fit-content;
+    max-width: fit-content;
+}
+
+
 
 .our-mission-we-are {
     color: #FFBF3C;
