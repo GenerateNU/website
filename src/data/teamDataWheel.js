@@ -8,7 +8,7 @@ const teamDataWheel = [
     {
       team: 'MANAGEMENT',
       image: Management,
-      text: 'Setting the yearly vision and ensuring alignment across our organization, we ensure Generate is functioning at its peak. We drive our teams to excel through innovative thinking and build collaborations with other student organizations. Moreover, we work with Sherman Center and Mosaic leadership to position Generate for the future and align each of our goals.'
+      text: "The Management Team ensures alignment across our organization. The team drives our teams to excel through collaboration and innovative thinking - ensuring Generate is functioning at its peak. Our management team is responsible for directing Generate's yearly focus."
     },
     {
       team: 'OPERATIONS',

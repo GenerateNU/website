@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import button from '../Management/images/button.png'
 import teamDataWheel from '../../../data/teamDataWheel';
 
 export default function Management() {
   const [selected, setSelected] = useState({});
+
+  useEffect(() => {
+    setSelected(teamDataWheel.find((value) => value.team === "MANAGEMENT"));
+  }, [])
 
   const handlePress = (teamData) => {
     setSelected(teamData);
@@ -29,22 +33,6 @@ export default function Management() {
       <div className='management-spacer'/>
       <div className="management-text">
         {
-          !selected.team &&
-          <>
-            <div id="title">
-              MANAGEMENT
-            </div>
-            <div id="description">
-              The Management Team ensures alignment across our organization.
-              The team drives our teams to excel through collaboration and innovative thinking -
-              ensuring Generate is functioning at its peak. Our management team is responsible
-              for directing Generate's yearly focus.
-            </div>
-            <a id="join" href="/apply"> <img class="button" alt='button' src={button} />  </a>
-          </>
-        }
-        {
-          selected.team &&
               <>
                 <div id="title"> {selected.team} </div>
                 <div id="description"> {selected.text} </div>
