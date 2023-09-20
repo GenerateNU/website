@@ -28,7 +28,7 @@ export default function Categories(props) {
 
         const getCategories = async () => {
             const data = await findAllCategories();
-            setCategories(data);            
+            setCategories(data);  
         };
         getCategories();
     }, []);
@@ -73,7 +73,7 @@ export default function Categories(props) {
     }
 
     return (
-        categories.length > 0 &&
+        categories.length === 0 &&
         <div>
             {
                 <div className="accordion">

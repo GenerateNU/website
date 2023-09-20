@@ -33,13 +33,13 @@ export default function Management() {
       <div className='management-spacer'/>
       <div className="management-text">
         {
-              <>
-                <div id="title"> {selected.team} </div>
-                <div id="description"> {selected.text} </div>
-                <a id="join" href={`/apply/${selected.team?.toLowerCase()}`}> 
-                  <img class="button" alt="button" src={button} />  
-                </a>
-              </>
+          <>
+            <div id="title"> {selected.team} </div>
+            <div id="description"> {selected.text} </div>
+            <a id="join" href={`/apply/${selected.team?.toLowerCase()}`}> 
+              <img class="button" alt="button" src={button} />  
+            </a>
+          </>
         }
       </div>
     </>
