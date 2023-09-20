@@ -73,7 +73,7 @@ export default function Categories(props) {
     }
 
     return (
-        categories.length === 0 &&
+        categories.length > 0 &&
         <div>
             {
                 <div className="accordion">
