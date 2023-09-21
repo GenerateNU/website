@@ -58,22 +58,6 @@
   float: right !important;
 }
 
-.leadership-heading {
-  font-family: "Space Mono";
-  color: #ffbf3c;
-  text-transform: lowercase;
-  font-size: calc(max(1.5vw, 1.5vh));
-  height: calc(max(1.5vw, 1.5vh));
-}
-
-.meet-the-team {
-  font-family: "Space Mono";
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: calc(max(5vw, 5vh));
-  height: calc(max(5vw, 5vh));
-}
 
 /* TODO: delete after move to public */
 .fit-image {
@@ -95,6 +79,55 @@
 .s-butt-mob {
   margin-top: 5%;
 }
+
+.right-align-headings{
+  text-align: right;
+}
+
+.border{
+  border-color: white;
+  border-radius: 10px;
+}
+
+.leadership-heading {
+  font-family: "Space Mono";
+  color: #ffbf3c;
+  text-transform: lowercase;
+  font-size: calc(min(3vh, 3vw));
+  height: auto;
+  margin: 0px;
+  margin-left: auto;
+}
+
+.meet-the-team {
+  font-family: "Space Mono";
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: calc(min(10vh, 10vw));
+  height: auto; 
+  white-space: nowrap;
+  /* justify-content: right;
+  display: flex;  */
+}
+
+.leadership-header{
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-end; 
+  /* height: 100vh; /* Set a height to cover the entire viewport */
+  padding-top: calc(max(30vh, 120px));
+
+}
+
+.text-no-wrap{
+  white-space: nowrap;
+}
+
 
 @media only screen and (max-device-width: 650px) {
   .mob {
@@ -136,4 +169,9 @@
     font-size: max(2vw, 2vh);
     line-height: 135%;
   }
+
+ .no-top-padding {
+  padding-top: 0;
+ }
+ 
 }

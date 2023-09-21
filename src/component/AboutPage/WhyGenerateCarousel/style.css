@@ -41,3 +41,13 @@
     margin-top: 8%;
     text-align: left;
 }
+
+.section-text{
+    font-size: calc(min(5vh, 5vw));
+}
+
+.border{
+    border-radius: 1px;
+    border-color: white;
+    border-style: solid;
+}
