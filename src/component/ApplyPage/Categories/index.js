@@ -31,6 +31,7 @@ export default function Categories(props) {
             setCategories(data);  
         };
         getCategories();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     //Management, Client, Software, Hardware, Operations and Engagement
