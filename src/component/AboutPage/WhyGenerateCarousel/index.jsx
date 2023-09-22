@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import Image from 'react-bootstrap/esm/Image';
-import MissionCarouselImg from '../../../assets/images/aboutpage/generate_mission.png';
 import whyGenerateData from "../../../data/whyGenerateData";
 import './style.css';
 
@@ -37,7 +36,7 @@ export default function WhyGenerateCarousel() {
                                                         <span className={currentSection !== index ? 'd-none' : 'd-inline me-4'}>
                                                             &gt;
                                                         </span>
-                                                        <span className={`text-nowrap ${currentSection !== index ? 'ms-5 ps-2'  : ''}`}>
+                                                        <span className={`section-text text-nowrap ${currentSection !== index ? 'ms-5 ps-2'  : ''}`}>
                                                             {d.section}
                                                         </span>
                                                     </h3>

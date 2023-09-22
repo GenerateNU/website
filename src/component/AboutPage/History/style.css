@@ -61,6 +61,15 @@
     border-right-color: white;
 } */
 
+
+.our-history-text-style {
+    font-size: calc(min(2.5vh, 2vw));
+    margin-right: 0!important;
+    padding-right: 0!important;
+    width: 26vw;
+    margin-top: auto;
+}
+
 .tooltip.show {
     opacity: 1;
 }
@@ -77,7 +86,7 @@
     .parent-orgs-and-history {
         flex-direction: column;
         flex-wrap: nowrap;
-    }
+    }         
 
     .our-history-header {
         font-size: 6.2vh;
