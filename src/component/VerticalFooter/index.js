@@ -5,6 +5,7 @@ import GenerateLogo from "../../assets/images/landingpage-v2/footerlogo.svg";
 import { useNavigate } from "react-router-dom";
 import HorizontalFooter from "../HorizontalFooter";
 import { SocialIcon, socialIcons } from "../SocialIcon";
+import useWebsite from "../../shared/useWebsite";
 
 const pages = [
   { name: "Generate", link: "/" },
@@ -53,9 +54,10 @@ function VerticalFooter() {
     navigate("/");
   };
 
+  const website = useWebsite();
   const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
 
-  return isBigScreen ? (
+  return isBigScreen && website ? (
     <Col fluid className="top-level-contaner">
       <div className="sherm-placement">
         <img
@@ -73,7 +75,7 @@ function VerticalFooter() {
               key={index}
               page={page}
               currentPage={currentPageUrl.substring(
-                currentPageUrl.lastIndexOf("/")
+                currentPageUrl.lastIndexOf("/"),
               )}
             />
           ))}{" "}
@@ -90,9 +92,7 @@ function VerticalFooter() {
                     href={icon.href}
                     imgSrc={icon.imgSrc}
                   />
-                  {icon.href.includes("instagram") && (
-                    <div></div>
-                  )}
+                  {icon.href.includes("instagram") && <div></div>}
                 </>
               ))}{" "}
             </Row>
@@ -100,7 +100,9 @@ function VerticalFooter() {
         </div>{" "}
       </span>{" "}
     </Col>
-  ) : (<HorizontalFooter/>);
+  ) : (
+    <HorizontalFooter />
+  );
 }
 
 export default VerticalFooter;

@@ -119,7 +119,7 @@ a:hover {
 #footer-links {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center;
     height: calc(100vh - 23%);
 }
