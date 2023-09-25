@@ -1,0 +1,88 @@
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.vert-top-level-contaner {
+  height: 100vh;
+  background-color: #187dff;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+.vert-logo-placement {
+  width: 12vh;
+  height: 15vh;
+}
+
+.vert-footer-container {
+  background-color: #187dff;
+  width: auto;
+  height: 100vh;
+  overflow: hidden;
+  text-align: left;
+  float: left;
+}
+
+.footer-link-bold {
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  max-height: 30px;
+  font-size: 20px;
+}
+
+.footer-link-text {
+  color: #ffffff;
+  font-weight: 400;
+  white-space: nowrap;
+  max-height: 30px;
+  font-size: 20px;
+  font-family: 'Space Mono';
+}
+
+.vert-footer-links-general {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  margin-top: 60px;
+}
+
+.vert-social-icons {
+  margin-top: auto;
+}
+
+a:hover {
+  font-weight: 1000;
+  color: #ffffff;
+}
+
+.vert-sherm {
+  /* margin-top: 25%; */
+  display: flex;
+  margin-top: 5vh;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 0%;
+}
+
+.vert-sherm-placement {
+  display: flex;
+  margin-top: 5vh;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.vert-social-media {
+  width: 35px;
+  height: 35px;
+}
+
+.vert-icon {
+  height: 75px;
+}
+
+.social-media {
+  width: 35px;
+  height: 35px;
+}

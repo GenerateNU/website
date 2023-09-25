@@ -1,22 +1,22 @@
-import React from "react";
-import WhatWeOffer from "./WhatWeOffer";
-import Interested from "./Interested";
-import FeaturedProjects from "./FeaturedProjects";
-import FP1 from "./FP1";
-import PreviousProjects from "./PreviousProjects";
-import FP2 from "./FP2";
-import ProductDevelopment from "./ProductDevLifecycle/ProductDevelopment";
-import Ideation from "./ProductDevLifecycle/Ideation";
-import Prototype from "./ProductDevLifecycle/Prototype";
-import Production from "./ProductDevLifecycle/Production";
-import Intro from "./Introduction";
-import WhoWeAre from "./WhoWeAre";
-import WhoWeAreResponse from "./WhoWeAreResponse";
-import "./style.css";
-import Management from "./Management";
-import Footer from "../VerticalFooter";
-import NextPage from "../NextPage";
-import DesktopMobileScrollAndBackgroundHandler from "../DesktopMobileHandler";
+import React from 'react'
+import WhatWeOffer from './WhatWeOffer'
+import Interested from './Interested'
+import FeaturedProjects from './FeaturedProjects'
+import FP1 from './FP1'
+import PreviousProjects from './PreviousProjects'
+import FP2 from './FP2'
+import ProductDevelopment from './ProductDevLifecycle/ProductDevelopment'
+import Ideation from './ProductDevLifecycle/Ideation'
+import Prototype from './ProductDevLifecycle/Prototype'
+import Production from './ProductDevLifecycle/Production'
+import Intro from './Introduction'
+import WhoWeAre from './WhoWeAre'
+import WhoWeAreResponse from './WhoWeAreResponse'
+import './style.css'
+import Management from './Management'
+import Footer from '../Footer'
+import NextPage from '../NextPage'
+import DesktopMobileScrollAndBackgroundHandler from '../DesktopMobileHandler'
 
 export default class LandingPageV2 extends React.Component {
   render() {
@@ -34,16 +34,16 @@ export default class LandingPageV2 extends React.Component {
       <FP1 />,
       <FP2 />,
       <PreviousProjects />,
-      <Interested page="Landing"/>,
+      <Interested page='Landing' />,
       <Footer />,
-      <NextPage pageName="about" url="/about" />,
-    ];
+      <NextPage pageName='about' url='/about' />
+    ]
     return (
       <DesktopMobileScrollAndBackgroundHandler
         children={children}
-        desktopBGColor={"white"}
-        mobileBGColor={"black"}
+        desktopBGColor={'white'}
+        mobileBGColor={'black'}
       />
-    );
+    )
   }
 }
