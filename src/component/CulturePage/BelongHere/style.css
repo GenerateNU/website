@@ -63,3 +63,36 @@
   position: relative;
   top: -550px;
 }
+
+.belong-here-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 5%;
+}
+
+.heading-text-mobile {
+  color: #187DFF;
+  font-family: "Space Mono 700";
+  text-transform: uppercase;
+  font-size: 80px;
+  line-height: 100px;
+  padding-top: 10%;
+  overflow-wrap: break-word;
+}
+
+.culture-text-mobile {
+  color: #111111;
+  font-size: 40px;
+  font-family: "Outfit";
+  font-weight: 300;
+  line-height: 60px;
+  word-wrap: break-word
+}
+
+.graphic-mobile {
+  height: 40%;
+  width: auto;
+  margin-left: 70vw;
+}

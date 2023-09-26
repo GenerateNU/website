@@ -3,6 +3,14 @@
   max-width: none;
 }
 
+.intro-container-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 2000px;
+  margin-bottom: 10vh;
+}
+
 .bottom-0-culture {
   bottom: 5rem!important;
 }
@@ -16,6 +24,12 @@
 .generateMascot {
   position: absolute;
   margin: 0 auto;
+}
+
+.generateMascot-mobile {
+  width: 30%;
+  margin-right: 15%;
+  margin-left: auto;
 }
 
 .our-culture-quote-positioning {
@@ -39,6 +53,19 @@
   text-transform: uppercase;
 }
 
+.our-culture-quote-mobile {
+  width: 40%;
+  margin-top: 15%;
+  margin-right: 5%;
+  margin-left: auto;
+  color: #a559ec;
+  font-family: "Space Mono 700";
+  font-size: 85px;
+  line-height: 85px;
+  font-style: bold;
+  text-transform: uppercase;
+}
+
 .our-culture-big-positioning {
   position: absolute;
   left: 10px;
@@ -54,4 +81,13 @@
   font-family: "Space Mono 700";
   font-size: 250px;
   line-height: 220px;
+}
+
+.our-culture-big-mobile {
+  padding-left: 20%;
+  color: #187DFF;
+  font-family: "Space Mono 700";
+  font-size: 400px;
+  line-height: 400px;
+  transform: rotate(90deg);
 }
