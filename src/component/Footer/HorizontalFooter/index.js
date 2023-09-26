@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import './style.css'
+import '../style.css'
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg' //"../../assets/images/landingpage-v2/footerlogo.svg";
 import { FooterLink } from '..'
 import { useNavigate } from 'react-router-dom'

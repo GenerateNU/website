@@ -16,7 +16,6 @@
   justify-items: center;
   width: 100%;
   margin-top: 20vh;
-  border: blue 1px dotted;
   margin-left: auto;
 }
 
@@ -24,6 +23,7 @@
   margin-top: 25vh;
   font-family: 'Space Mono 700';
   font-style: normal;
+  margin-left: 5vw;
   font-size: 10vh;
   text-transform: uppercase;
   color: black;
@@ -33,7 +33,6 @@
   display: flex;
   width: 30vw;
   flex-direction: row;
-  border: 1px red dotted;
   align-items: center;
   justify-content: center;
   margin-bottom: auto;
@@ -93,7 +92,6 @@
     justify-items: center;
     width: 100%;
     margin-top: 20vh;
-    border: blue 1px dotted;
     margin-left: auto;
   }
 
@@ -102,13 +100,13 @@
     font-family: 'Space Mono 700';
     font-style: normal;
     font-size: 6vh;
+    margin-left: 0vw;
     text-transform: uppercase;
     color: black;
   }
 
   .questionMarkContainer {
     flex-direction: row;
-    border: 1px red dotted;
     margin-bottom: auto;
     margin-top: auto;
   }
@@ -164,7 +162,6 @@
     width: 100%;
     margin-top: 20vh;
     align-items: flex-start;
-    border: blue 1px dotted;
   }
 
   .interestedText {
@@ -183,7 +180,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px red dotted;
   }
 
   .interestedJoinNowBox {
@@ -214,7 +210,7 @@
     font-family: 'Outfit 300';
     font-style: normal;
     font-weight: bold;
-    font-size: 1.8vh;
+    font-size: 2.2vh;
     color: black;
   }
 }
@@ -240,7 +236,6 @@
     justify-items: center;
     width: fit-content;
     margin-top: 20vh;
-    border: blue 1px dotted;
   }
 
   .interestedText {
@@ -262,7 +257,6 @@
     margin-left: 12vw;
     justify-content: center;
     align-items: center;
-    border: 1px red dotted;
   }
 
   .interestedJoinNowBox {
@@ -273,6 +267,8 @@
     background: #187dff;
     border: 1px solid #111111;
     box-shadow: -0.75vh 0.75vh;
+    margin-right: auto;
+    margin-left: 10vw;
   }
 
   .joinCommunitytext {

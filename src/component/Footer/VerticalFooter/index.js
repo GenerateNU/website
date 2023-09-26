@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import './style.css'
+import '../style.css'
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg'
 import { useNavigate } from 'react-router-dom'
 import { SocialIcon, socialIcons } from '../../SocialIcon'
@@ -52,7 +52,7 @@ function VerticalFooter() {
                   {icon.href.includes('instagram') && (
                     <Col className='vert-icon'>
                       <a>
-                        <div className='vert-social-media' alt='' />
+                        <div className='social-media' alt='' />
                       </a>
                     </Col>
                   )}
