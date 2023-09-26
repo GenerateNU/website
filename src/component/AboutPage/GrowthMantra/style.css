@@ -23,7 +23,7 @@ a {
     font-style: normal;
     /* font-weight: 700; */
     font-size: 200px;
-    /* line-height: 444px; */
+    line-height: 340px;
     text-transform: uppercase;
 
     /* OPRATN Green */
@@ -62,7 +62,7 @@ a {
     font-style: normal;
     /* font-weight: 700; */
     font-size: 150px;
-    line-height: 296px;
+    line-height: 260px;
     text-transform: uppercase;
 
     /* Black */
@@ -83,7 +83,7 @@ a {
     font-style: normal;
     /* font-weight: 300; */
     font-size: 18px;
-    line-height: 34px;
+    line-height: 141.667%;
     /* or 142% */
 
 
@@ -104,7 +104,7 @@ a {
     font-style: normal;
     /* font-weight: 300; */
     font-size: 18px;
-    line-height: 34px;
+    line-height: 141.667%;
     /* or 142% */
 
 
