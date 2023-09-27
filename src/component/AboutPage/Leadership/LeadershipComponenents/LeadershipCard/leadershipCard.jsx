@@ -3,7 +3,7 @@ import ReactCardFlip from "react-card-flip";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import ShadowedButton from "../../ShadowedButton";
+import ShadowedButton from "../../../../ShadowedButton";
 import "./style.css";
 
 export default function LeadershipCard({
@@ -17,20 +17,60 @@ export default function LeadershipCard({
     image = null,
     bio = "",
     emailUsername = "",
+    zIndex=0,
   } = {},
 }) {
   const [flipped, setFlipped] = useState(false);
-  const boldHeaderStyle = {
-    fontFamily: "Space Mono 700",
-  };
-
   const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
 
-  const detailsRowJustify = title ? "between" : "end";
+  const yPad = isBigScreen ? ".5vh" : ".5vw";
+  const xPad = isBigScreen ? "1.5vh" : "1.5vw";
+  const buttonFontSize = isBigScreen ? "2.66vh" : "4vw";
+  const cardZIndex = isBigScreen ? zIndex : "0";
 
   return (
-    <ReactCardFlip isFlipped={flipped} flipDirection="vertical">
-      <div
+    <ReactCardFlip isFlipped={flipped} flipDirection="vertical" cardZIndex={cardZIndex}>
+      {/* Front of the card */}
+      <div className="card card-back rounded-0" style={{ backgroundColor: color }}>
+        <div className="card-team">{team}</div>
+          <img className="card-image" src={image} alt="Dave was here"></img>
+        <div className="card-person-role">
+          <div className="card-person">
+            {name}
+          </div>
+          <div className="card-role">
+            {title}
+          </div>
+        </div>
+        <div className="card-button">
+            <ShadowedButton
+              fillColor="white"
+              yPad={yPad}
+              xPad={xPad}
+              fontSize={buttonFontSize}
+              text="bio"
+              onClick={() => setFlipped((prev) => !prev)}
+            />
+          </div>
+      </div>
+      {/* Back of the card */}
+      <div className="card card-front rounded-0" style={{ backgroundColor: color }}>
+        <div className="card-team">{team}</div>
+        <div className="card-description">
+          {bio}
+        </div>
+        <div className="card-button">
+            <ShadowedButton
+              fillColor="white"
+              yPad={yPad}
+              xPad={xPad}
+              fontSize={buttonFontSize}
+              text="back"
+              onClick={() => setFlipped((prev) => !prev)}
+            />
+          </div>
+      </div>
+      {/* <div
         className="card card-back rounded-0"
         style={{ backgroundColor: color }}
       >
@@ -88,8 +128,8 @@ export default function LeadershipCard({
             </Row>
           </Col>
         </Row>
-      </div>
-      <div
+      </div> */}
+      {/* <div
         className="card card-front rounded-0"
         style={{ backgroundColor: color }}
       >
@@ -121,7 +161,7 @@ export default function LeadershipCard({
             </Row>
           </Col>
         </Row>
-      </div>
+      </div> */}
     </ReactCardFlip>
   );
 }

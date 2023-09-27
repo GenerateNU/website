@@ -6,172 +6,112 @@
   height: 375vh;
 }
 
-.card {
-  width: 27vw;
-  height: 62vh;
-  transition: all 0.6s ease;
-}
-
-/* Card animations */
-/* Move cards on top of each other */
-.react-card-flip:not(:first-child) {
-  margin-left: -22vw;
-}
-/* .react-card-flip:not(:last-child) {
-    margin-right: -22vw;
-} */
-/* Reveal all of the selected card */
-.react-card-flip:hover ~ .react-card-flip {
-  transform: translateX(22vw);
-}
-/* Move selected card up to distinguish from other cards */
-.react-card-flip:hover {
-  transform: translateY(-1rem);
-}
-
-.gen-card-header {
-  font-family: "Space Mono 700";
-  font-size: calc(max(3.2vw, 3.2vh));
-  line-height: 150%;
-  transform-origin: bottom right;
-  transform: rotate(270deg);
-  text-transform: uppercase;
-  right: 0%;
-}
-
-.gen-card-body {
-  height: 85%;
-  font-family: "Outfit 300";
-  font-style: normal;
-  font-size: 1.2vw;
-  line-height: 150%;
-}
-
-.position-details {
-  font-family: "Outfit 400";
-  font-size: calc(max(1.2vw, 1.2vh));
-  line-height: 135%;
-}
-
-.no-right-margin {
-  margin-right: 0 !important;
-  float: right !important;
-}
-
-
-/* TODO: delete after move to public */
-.fit-image {
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 .cards-display {
   justify-content: center;
-}
-
-.mob {
-  display: none;
-}
-
-.s-butt-mob {
-  margin-top: 5%;
-}
-
-.right-align-headings{
-  text-align: right;
 }
 
 .border{
   border-color: white;
   border-radius: 10px;
+  /* width: 1000px; */
+}
+/* Main container for section*/
+.leadership-section{
+  width: 184vh;
+  max-width: none;
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
 }
 
-.leadership-heading {
+.leadership-header{
+  margin-left: 10.72vh;
+  margin-right: auto;
+  margin-top: 14vh;
+  width: fit-content;
+  height: 12vh;
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack items vertically  */
+  padding:0px;
+}
+.leadership-text{
   font-family: "Space Mono";
   color: #ffbf3c;
   text-transform: lowercase;
-  font-size: calc(min(3vh, 3vw));
-  height: auto;
+  /* font-size: calc(min(3vh, 3vw)); */
+  font-size: 2.22vh;
+  height: min-content;
   margin: 0px;
   margin-left: auto;
+  box-sizing: border-box;
+  line-height: 2.33vh;
+  padding: 0px;
 }
 
-.meet-the-team {
+.meet-the-team-text{
   font-family: "Space Mono";
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: calc(min(10vh, 10vw));
-  height: auto; 
+  font-size: 10.2vh;
+  word-wrap: break-word;
+  height: 10.2vh;
+  line-height: 10.2vh;
+  width:fit-content;
   white-space: nowrap;
-  /* justify-content: right;
-  display: flex;  */
+  margin: 0px;
+  padding: 0px;
+  margin-top:0px;
+  box-sizing: border-box;
 }
 
-.leadership-header{
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-  height: fit-content;
-  display: flex; /* Make it a flex container */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: flex-end; 
-  /* height: 100vh; /* Set a height to cover the entire viewport */
-  padding-top: calc(max(30vh, 120px));
-
+.cards-section{
+  margin: 0x;
+  width: auto;
+  height: 66.44%;
+  /* margin-left: 62.44vh; */
+  margin-left: 67vh;
+  margin-right: 10.72vh;
+  /* margin-top: 2.88vh; */
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: row-reverse;
 }
+
 
 .text-no-wrap{
   white-space: nowrap;
 }
 
-
 @media only screen and (max-device-width: 650px) {
-  .mob {
-    display: block;
-  }
   .cards-display {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    z-index: 1;
   }
 
-  .card {
-    width: 87.5vw;
-    height: 66.67vh;
-    margin-bottom: 5vh;
+  .leadership-section{
+    width: auto;
+    height: 600vw;
   }
 
-  .react-card-flip:not(:first-child) {
-    margin-left: 0;
+  .leadership-header{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vw;
+    margin-top: 14vh;
+    width: 88.21vw;
+    height: 14.90vw;
   }
-
-  .react-card-flip:hover ~ .react-card-flip {
-    transform: none;
+  .leadership-text{
+    font-size: 4.5vw;
+    line-height: 4vw;
   }
-
-  .leadership-img {
-    width: 75%;
-    height: 75%;
-    margin-left: 10%;
-    object-fit: cover;
+  
+  .meet-the-team-text{
+    font-size: 11vw;
+    height: 14.90vw;
+    line-height: 11vw;
   }
-
-  .gen-card-header {
-    font-size: max(4vw, 4vh);
-  }
-
-  .position-details {
-    font-family: "Outfit 400";
-    font-size: max(2vw, 2vh);
-    line-height: 135%;
-  }
-
- .no-top-padding {
-  padding-top: 0;
- }
- 
 }

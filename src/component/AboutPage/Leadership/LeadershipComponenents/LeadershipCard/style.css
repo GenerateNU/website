@@ -1,0 +1,208 @@
+.vh-15 {
+  height: 15vh;
+}
+
+.container-h {
+  height: 375vh;
+}
+
+.card {
+  width: 58.11vh;
+  height: 66.44vh;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.card-team{
+  transform: rotate(90deg); 
+  color: #111111; 
+  font-size: 5.33vh; 
+  font-family: 'Space Mono'; 
+  font-weight: 700; 
+  width: fit-content;
+  transform-origin: 0 0;
+  position: fixed; /* Ensure positioning works correctly */
+  padding: 0px; 
+  left: 97%;
+  margin-top: 5.5%;
+  text-transform: uppercase;
+  
+}
+
+.card-image{
+  height:50.22vh;
+  width: 41vh;
+  /* width: auto; */
+  position: fixed;
+  margin-top: 3.22vh;
+  margin-left: 7.19%;
+  max-width: none; /* Disable the max-width property */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.card-person-role{
+  width: 47.52%;
+  height: 11.37%;
+  margin:0px;
+  margin-top: 55.88vh;
+  margin-left: 7.19%;
+  padding:0px;
+
+}
+
+.card-person{
+  color: #111111;
+  word-wrap: break-word;
+  font-family: "Outfit 300";
+  font-style: normal;
+  font-size: 2.66vh;
+  font-weight: bolder;
+  line-height: 3.77vh;
+}
+
+.card-role{
+  color: #111111;
+  font-size: 2.66vh;
+  line-height: 3.77vh;
+  word-wrap: break-word;
+  font-family: "Outfit 300";
+  font-style: normal;
+}
+
+.card-button{
+  text-align: right;
+  position: absolute;
+  top: 56.22vh;
+  margin-left: 35.5vh;
+}
+
+.card-description{
+  height:50.22vh;
+  width: 42.5vh;
+  /* width: auto; */
+  position: fixed;
+  margin-top: 3.22vh;
+  margin-left: 7.19%;
+  color: black;
+  font-size: 2.66vh;
+  font-family: "Outfit 300";
+  font-style: normal;
+  line-height: 3.77vh;
+  word-wrap: break-word;
+}
+/* Card animations */
+/* Move cards on top of each other */
+/* .react-card-flip:not(:first-child) {
+  margin-left: -46.2vh;
+} */
+
+/* .react-card-flip{
+  margin-left: -10vh;
+} */
+
+.react-card-flip:not(:first-child) {
+    margin-right: -46.75vh;
+}
+
+.react-card-flip:hover ~ .react-card-flip {
+  transform: translateX(-58.5vh);
+}
+
+
+/* Move selected card up to distinguish from other cards
+.react-card-flip:hover {
+  transform: translateY(-1rem);
+} */
+
+
+.cards-display {
+  justify-content: center;
+}
+
+.mob {
+  display: none;
+}
+
+.border{
+  border-color: white;
+  border-radius: 10px;
+  /* width: 1000px; */
+}
+
+.border1{
+  border-color: white;
+  border-radius: 10px;
+  width: 2000px;
+}
+
+.text-no-wrap{
+  white-space: nowrap;
+}
+
+
+@media only screen and (max-device-width: 650px) {
+  .mob {
+    display: block;
+  }
+  .cards-display {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 87.5vw;
+    height: 100vw;
+    margin-bottom: 15vw;
+  }
+  .card-image{
+    height: 75.64vw;
+    width: 64.36vw;
+  }
+
+  .card-team{
+    font-size: 8.05vw; 
+    margin-top: 7.5%;
+  }
+
+  .card-person-role{
+    width: 40.08vw;
+    height: 11.54vw;
+    margin:0px;
+    margin-top: 86vw;
+    margin-left: 7.19%;
+    padding:0px;
+  
+  }
+
+  .card-person, .card-role{
+    font-size: 4vw;
+    line-height: 5vw;
+    white-space: nowrap;
+  }
+  
+  .card-button{
+    text-align: right;
+    position: absolute;
+    top: 86vw;
+    margin-left: 58vw;
+  }
+  
+  .card-description{
+    height: 75.64vw;
+    width: 64.36vw;
+    font-size: 4.5vw;
+    line-height: 5vw;
+
+  }
+  
+
+  .react-card-flip:not(:first-child) {
+    margin-right: 0vh;
+  }
+
+  .react-card-flip:hover ~ .react-card-flip {
+    transform: none;
+  }
+ 
+}

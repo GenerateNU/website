@@ -28,6 +28,7 @@ const directorData = [
     image: Ryan,
     bio: "Hi! I'm Ryan Lonkart, Generate's Executive Director! I am a 4th year Computer Engineering major, minoring in Business Administration, originally from Narragansett, RI. In my free time I love to ski, explore the outdoors, and try out new restaurants/coffee shops around Boston. In my role I help drive forward Generate's organizational vision, while exploring new opportunities for growth amongst our members and our overall organization.",
     emailUsername: "lonkart.r",
+    zIndex: "5",
   },
   {
     title: "Engagement Director",
@@ -39,6 +40,7 @@ const directorData = [
     image: Shannon,
     bio: "I'm Shannon Murphy, and I'm the Engagement Director. I am a 5th year studying International Affairs and Environmental studies from Salem, MA. I love to play piano, try new local restaurants, and spend time with my six nieces and nephews. My incredible Engagement team covers a wide range of topics - from branding and creating merch, to hosting events for hundreds of attendees, to presenting about Generate to other organizations.",
     emailUsername: "murphy.shanno",
+    zIndex: "4",
   },
   {
     title: "Software Director",
@@ -51,6 +53,7 @@ const directorData = [
     image: Alix,
     bio: "Hellooo, I'm Alix, the Software Director :) I'm a fifth year CS and Design major from France. When I'm not running around the sherm or on co-op you can find me playing guitar with friends at home, organizing a very last minute firepit night or cross stiching. As the SD I get to oversee all the projects we take on this semester and make sure our members are learning, growing and having fun!",
     emailUsername: "heudebourg.a",
+    zIndex: "3",
   },
   {
     title: "Hardware Director",
@@ -63,6 +66,7 @@ const directorData = [
     image: JoJo,
     bio: "My name is JoJo, and I am the Hardware Director this year! I am a 4th year majoring in Mechanical Engineering and Experience Design, and I am from Scituate, MA. In my free time I love to cook, swim, bike, make ceramics, and enjoy live music! Generate Hardware works to create quality products for four clients each semester and expand our technical abilities with electromechanical projects, with a focus on growth and learning of our members.",
     emailUsername: "damato.j",
+    zIndex: "2",
   },
   {
     title: "Operations Director",
@@ -75,6 +79,7 @@ const directorData = [
     image: Sam,
     bio: "Hi! I'm Sam Yip, Generate's current Operations Director. I'm a fourth year Industrial Engineering major with a minor in Data Science and I'm originally from Fanwood, NJ. Outside of Generate I love bike riding, running, baking and arts & crafts! I love working with the Operations Team because they work to improve Generate's day-to-day like managing spaces, finances, internal data and collaborations with external partners.",
     emailUsername: "yip.sa",
+    zIndex: "1",
   },
 ];
 
