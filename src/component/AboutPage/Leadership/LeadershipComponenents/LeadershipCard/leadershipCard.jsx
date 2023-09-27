@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
 import ShadowedButton from "../../../../ShadowedButton";
 import "./style.css";
 

@@ -22,6 +22,7 @@
   padding: 0px;
   margin: 0px;
   background-color: black;
+  z-index: 2;
 }
 
 .leadership-header{
@@ -100,7 +101,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10vw;
-    margin-top: 14vh;
+    margin-top: 14vw;
     width: 88.21vw;
     height: 14.90vw;
   }
