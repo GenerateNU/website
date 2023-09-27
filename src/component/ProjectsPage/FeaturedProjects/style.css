@@ -57,12 +57,12 @@
 }
 
 .pp-fp-project-text h1 {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 7vh;
 }
 
 .pp-fp-project-team {
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-size: 3vh;
   color: #000;
   text-align: left;
@@ -80,7 +80,7 @@
   background-color: white;
   border: 1px solid #111111;
   box-shadow: -0.5rem 0.6rem;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-size: 3vh;
   position: relative;
   width: 100px;
@@ -123,6 +123,26 @@
     margin-bottom: 50px;
   }
 
+  .pp-fp-projects-bg {
+    background-color: #187dff;
+    margin: 0px;
+    padding: 0px;
+    min-width: 102vw;
+    margin-left: -2vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 5vw;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+  }
+
+  .pp-fp-projects-buttons {
+    margin-bottom: 10vh;
+  }
+
   .pp-fp-projects-page-container {
     min-width: unset;
     width: unset;
@@ -154,6 +174,7 @@
 
   .pp-fp-projects-text {
     max-width: unset;
+    color: white;
   }
 
   .pp-fp-projects-desktop {
@@ -195,6 +216,7 @@
 
   .pp-fp-projects-title {
     font-size: 6vh;
+    color: #ffffff;
   }
 
   .pp-fp-projects-button {
