@@ -47,6 +47,10 @@
   box-shadow: -0.5rem 0.6rem black;
 }
 
+.pp-fp-projects-button-2 {
+  display: none;
+}
+
 .pp-fp-projects-forward {
   margin-right: 40px;
 }
@@ -87,6 +91,18 @@
   margin-left: 5px;
 }
 
+.view-pp-fp-project-button-2 {
+  color: black;
+  background-color: white;
+  border: 1px solid #111111;
+  box-shadow: -0.5rem 0.6rem;
+  font-family: 'Space Mono';
+  font-size: 3vh;
+  position: relative;
+  width: 100px;
+  margin-left: 5px;
+}
+
 .pp-fp-projects-mobile {
   display: none;
 }
@@ -115,6 +131,11 @@
 
 .pp-fp-project-text {
   margin-left: 5px;
+}
+
+.view-pp-fp-project-div-2 {
+  display: none;
+  justify-content: center;
 }
 
 @media only screen and (max-device-width: 650px) {
@@ -209,6 +230,12 @@
     margin-bottom: 5%;
   }
 
+  .view-pp-fp-project-button-2 {
+    margin-top: 0;
+    margin-bottom: 5%;
+    display: block;
+  }
+
   .view-pp-fp-project-div {
     display: flex;
     justify-content: center;
@@ -222,7 +249,20 @@
   .pp-fp-projects-button {
     width: 120px;
     height: 120px;
+    display: none;
   }
+
+  .pp-fp-projects-button-2 {
+    background: #ffffff;
+    border: 1px solid black;
+    width: 90px;
+    height: 90px;
+    box-shadow: -0.5rem 0.6rem black;
+    width: 120px;
+    height: 120px;
+    display: block;
+  }
+
   .pp-fp-navbar-style {
     position: fixed;
     left: 90%;
@@ -241,5 +281,18 @@
     width: fit-content;
     margin: 0;
     padding: 10px 30px;
+    display: none;
+  }
+
+  .view-pp-fp-project-button-2 {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 10px 30px;
+  }
+
+  .view-pp-fp-project-div-2 {
+    display: flex;
+    justify-content: center;
   }
 }

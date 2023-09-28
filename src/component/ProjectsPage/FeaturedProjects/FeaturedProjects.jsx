@@ -47,6 +47,9 @@ export default function FeaturedProjects() {
               >
                 <img src={Arrow}></img>
               </button>
+              <div className='view-pp-fp-project-div-2'>
+                <button className='view-pp-fp-project-button-2'>View</button>
+              </div>
             </div>
           </div>
         </div>
@@ -63,6 +66,18 @@ export default function FeaturedProjects() {
               <p>{currentProject.description}</p>
               <div className='view-pp-fp-project-div'>
                 <button className='view-pp-fp-project-button'>View</button>
+                <button
+                  className='pp-fp-projects-button-2 pp-fp-projects-forward'
+                  onClick={() => handleProject(1)}
+                >
+                  <img src={Arrow}></img>
+                </button>
+                <button
+                  className='pp-fp-projects-button-2 pp-fp-projects-back'
+                  onClick={() => handleProject(-1)}
+                >
+                  <img src={Arrow}></img>
+                </button>
               </div>
             </div>
           </div>
