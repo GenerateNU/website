@@ -8,10 +8,10 @@ import "./style.css";
 const GrowthMantra = () => {
   return (
     // <div className="position-relative vw-100 vh-100 py-4 px-5">
-    <div className="h-100 background-fit-content">
-      <div className="bg-white h-100 growthMantraContainer">
+    <div className="background-fit-content">
+      <div className="background-white growthMantraContainer">
         <div className="alignItemsRightMantra">
-          <div className="mantra">
+          <div className="mantraAlignment">
             <p className="Growth-text">Growth</p>
             <p className="IsOurText">Is Our</p>
             <p className="MantraText">Mantra</p>

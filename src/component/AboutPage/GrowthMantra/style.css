@@ -10,16 +10,37 @@ a {
 }
 
 .background-fit-content {
-    width: fit-content;
+    width: 125vw;
+    max-width: 180vw;
+    background-color: white;
+    height: 100vh;
+}
+
+@media (min-aspect-ratio: 14/9) {
+    .background-fit-content {
+        width: 110vw;
+        max-width: 140vw;
+        background-color: white;
+        height: 100vh;
+    }
+}
+
+@media (min-aspect-ratio: 9/6) {
+    .background-fit-content {
+        width: 115vw;
+        max-width: 140vw;
+        background-color: white;
+        height: 100vh;
+    }
 }
 
 .growthMantraContainer {
     width: 155vw;
     margin-right: 12vw;
+    height: 100vh;
 }
 
 .Growth-text {
-    width: 1103px;
     z-index: 1;
     margin-bottom: 0px;
     /* top: -51px; */
@@ -34,7 +55,6 @@ a {
 }
 
 .IsOurText {
-    width: 40vw;
     left: 124px;
     z-index: 1;
     /* top: 288px; */
@@ -45,23 +65,20 @@ a {
     font-style: normal;
     font-weight: 700;
     font-size: max(9vh, 92px);
-    line-height: 95%;
+    line-height: 90%;
     margin-bottom: 0px;
     text-transform: uppercase;
 }
 
 .MantraText {
-    width: 50vw;
-    height: auto;
     left: 126px;
     z-index: 1;
-    margin-top: -40px;
     font-family: 'Space Mono 700';
     font-style: normal;
     /* font-weight: 700; */
     font-size: max(20vh, 200px);
     margin-bottom: 0px;
-    line-height: 90%;
+    line-height: 80%;
     text-transform: uppercase;
     /* Black */
     color: #111111;
@@ -149,11 +166,10 @@ a {
     z-index: 1;
 }
 
-.mantra {
+.mantraAlignment {
     display: flex;
     flex-direction: column;
     padding-top: 12vh;
-    width: 60%;
     z-index: 1;
 }
 
@@ -274,40 +290,95 @@ a {
     left: -16vw;
 }
 
-
-/* @media only screen and (max-device-height: 1000px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
+    .alignItemsRightMantra {
+        display: flex;
+        flex-direction: row;
+        margin-right: 0;
+        margin-top: 0px;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        align-items: center;
+        color: #000000;
+        z-index: 1;
+    }
+    .mantraAlignment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15vh;
+        margin-left: 0px;
+        width: 94vw;
+        z-index: 1;
+    }
+    .Growth-text {
+        z-index: 1;
+        margin-bottom: 0px;
+        font-family: 'Space Mono 700';
+        font-style: normal;
+        font-size: max(25vw, 99px);
+        line-height: 100%;
+        text-transform: uppercase;
+        /* OPRATN Green */
+        color: #6FCF97;
+    }
+    .IsOurText {
+        left: 124px;
+        z-index: 1;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: max(0.2vh, 1.5px);
+        font-family: 'Space Mono 700';
+        font-style: normal;
+        font-weight: 700;
+        font-size: max(9vw, 48px);
+        line-height: 110%;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+    }
+    .MantraText {
+        z-index: 1;
+        font-family: 'Space Mono 700';
+        font-style: normal;
+        /* font-weight: 700; */
+        font-size: max(20vw, 80px);
+        margin-bottom: 0px;
+        line-height: 100%;
+        text-transform: uppercase;
+        /* Black */
+        color: #111111;
+    }
+    .textAlignItemsRight {
+        padding-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 3.5vw;
+        padding-right: 3.5vw;
+        color: #000000;
+        z-index: 1;
+    }
     .m-img {
-        transform: scale(1.2);
-        width: 40vw;
-        height: 40vh;
-        z-index: 20;
-        z-index: 20;
-        /* position: fixed; */
-
-
-/* background-position: bottom; */
-
-
-/*
-
-}
-@media only screen and (max-device-height: 800px) {
-    .m-img {
-        text-align: center;
-        z-index: 10;
-        width: auto;
-        height: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        transform: scale(1.2);
-        transform: translate(24%, -80%);
-        /* position: fixed; */
-
-
-/* background-position: bottom; */
-
-
-/*
+        display: none;
+    }
+    .mantraParagraphText {
+        width: 93vw;
+        height: fit-content;
+        text-align: left;
+        font-family: 'Outfit 300';
+        font-size: max(5vw, 24px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        margin-bottom: 6vh;
+        color: #111111;
+        z-index: 3;
+    }
+    .background-fit-content {
+        width: 100vw;
+        height: fit-content;
+    }
+    .growthMantraContainer {
+        width: 100vw;
+        height: fit-content;
     }
 }
-*/
