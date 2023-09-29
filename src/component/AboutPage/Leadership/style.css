@@ -10,13 +10,13 @@
   justify-content: center;
 }
 
-.border{
+.border {
   border-color: white;
   border-radius: 10px;
   /* width: 1000px; */
 }
 /* Main container for section*/
-.leadership-section{
+.leadership-section {
   width: 184vh;
   max-width: none;
   padding: 0px;
@@ -25,7 +25,7 @@
   z-index: 2;
 }
 
-.leadership-header{
+.leadership-header {
   margin-left: 10.72vh;
   margin-right: auto;
   margin-top: 14vh;
@@ -33,10 +33,10 @@
   height: 12vh;
   display: flex; /* Make it a flex container */
   flex-direction: column; /* Stack items vertically  */
-  padding:0px;
+  padding: 0px;
 }
-.leadership-text{
-  font-family: "Space Mono";
+.leadership-text {
+  font-family: 'Space Mono';
   color: #ffbf3c;
   text-transform: lowercase;
   /* font-size: calc(min(3vh, 3vw)); */
@@ -49,8 +49,8 @@
   padding: 0px;
 }
 
-.meet-the-team-text{
-  font-family: "Space Mono";
+.meet-the-team-text {
+  font-family: 'Space Mono';
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
@@ -58,15 +58,15 @@
   word-wrap: break-word;
   height: 10.2vh;
   line-height: 10.2vh;
-  width:fit-content;
+  width: fit-content;
   white-space: nowrap;
   margin: 0px;
   padding: 0px;
-  margin-top:0px;
+  margin-top: 0px;
   box-sizing: border-box;
 }
 
-.cards-section{
+.cards-section {
   margin: 0x;
   width: auto;
   height: 66.44%;
@@ -79,8 +79,7 @@
   flex-direction: row-reverse;
 }
 
-
-.text-no-wrap{
+.text-no-wrap {
   white-space: nowrap;
 }
 
@@ -92,27 +91,27 @@
     z-index: 1;
   }
 
-  .leadership-section{
+  .leadership-section {
     width: auto;
     height: 600vw;
   }
 
-  .leadership-header{
+  .leadership-header {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10vw;
     margin-top: 0vw;
     width: 88.21vw;
-    height: 14.90vw;
+    height: 14.9vw;
   }
-  .leadership-text{
+  .leadership-text {
     font-size: 4.5vw;
     line-height: 4vw;
   }
-  
-  .meet-the-team-text{
+
+  .meet-the-team-text {
     font-size: 11vw;
-    height: 14.90vw;
+    height: 14.9vw;
     line-height: 11vw;
   }
 }
