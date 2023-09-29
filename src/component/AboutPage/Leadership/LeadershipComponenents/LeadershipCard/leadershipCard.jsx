@@ -18,12 +18,12 @@ export default function LeadershipCard({
   } = {},
 }) {
   const [flipped, setFlipped] = useState(false);
-  const isBigScreen = !window.matchMedia("(max-device-width: 650px)").matches;
+  const isDesktop = !window.matchMedia("(max-device-width: 650px)").matches;
 
-  const yPad = isBigScreen ? ".5vh" : ".5vw";
-  const xPad = isBigScreen ? "1.5vh" : "1.5vw";
-  const buttonFontSize = isBigScreen ? "2.66vh" : "4vw";
-  const cardZIndex = isBigScreen ? zIndex : "0";
+  const yPad = isDesktop ? ".5vh" : ".5vw";
+  const xPad = isDesktop ? "1.5vh" : "1.5vw";
+  const buttonFontSize = isDesktop ? "2.66vh" : "4vw";
+  const cardZIndex = isDesktop ? zIndex : "0";
 
   return (
     <ReactCardFlip isFlipped={flipped} flipDirection="vertical" cardZIndex={cardZIndex}>
