@@ -23,9 +23,10 @@ function VerticalFooter() {
           onClick={handleOnClick}
           alt='Logo description' // Add alt text to the image for accessibility
         />
-      </div>
+      </div>{' '}
       <div className='vert-footer-links-general'>
         <div className='vert-footer-pages'>
+          {' '}
           {pages.map((page, index) => (
             <div className='p-2'>
               <FooterLink
@@ -34,13 +35,15 @@ function VerticalFooter() {
                 currentPage={currentPageUrl.substring(
                   currentPageUrl.lastIndexOf('/')
                 )}
-              />
+              />{' '}
             </div>
-          ))}
-        </div>
+          ))}{' '}
+        </div>{' '}
         <div className='vert-social-icons'>
+          {' '}
           {socialIcons.map((row, index) => (
-            <Row key={index}>
+            <Row key={index} style={{ marginTop: '12px' }}>
+              {' '}
               {row.map((icon, index) => (
                 <>
                   <SocialIcon
@@ -48,20 +51,20 @@ function VerticalFooter() {
                     href={icon.href}
                     imgSrc={icon.imgSrc}
                     className='vert-icon'
-                  />
+                  />{' '}
                   {icon.href.includes('instagram') && (
                     <Col className='vert-icon'>
                       <a>
                         <div className='social-media' alt='' />
-                      </a>
+                      </a>{' '}
                     </Col>
-                  )}
+                  )}{' '}
                 </>
-              ))}
+              ))}{' '}
             </Row>
-          ))}
-        </div>
-      </div>
+          ))}{' '}
+        </div>{' '}
+      </div>{' '}
     </Col>
   )
 }
