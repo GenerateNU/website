@@ -16,26 +16,21 @@ a {
     height: 100vh;
 }
 
-@media (min-aspect-ratio: 14/9) {
+@media (min-aspect-ratio: 12/8) {
     .background-fit-content {
         width: 110vw;
         max-width: 140vw;
         background-color: white;
         height: 100vh;
     }
-}
-
-@media (min-aspect-ratio: 9/6) {
-    .background-fit-content {
-        width: 115vw;
-        max-width: 140vw;
-        background-color: white;
+    .growthMantraContainer {
+        width: 155vw;
+        margin-right: 12vw;
         height: 100vh;
     }
 }
 
 .growthMantraContainer {
-    width: 155vw;
     margin-right: 12vw;
     height: 100vh;
 }
@@ -47,7 +42,7 @@ a {
     font-family: 'Space Mono 700';
     font-style: normal;
     /* font-weight: 700; */
-    font-size: max(30vh, 300px);
+    font-size: max(10vh + 10vw, 150px);
     line-height: 80%;
     text-transform: uppercase;
     /* OPRATN Green */
@@ -64,7 +59,7 @@ a {
     font-family: 'Space Mono 700';
     font-style: normal;
     font-weight: 700;
-    font-size: max(9vh, 92px);
+    font-size: max(3vh + 3vw, 46px);
     line-height: 95%;
     margin-bottom: 0px;
     text-transform: uppercase;
@@ -75,7 +70,7 @@ a {
     font-family: 'Space Mono 700';
     font-style: normal;
     /* font-weight: 700; */
-    font-size: max(20vh, 200px);
+    font-size: max(8vh + 8vw, 100px);
     margin-bottom: 0px;
     line-height: 82%;
     text-transform: uppercase;
@@ -128,7 +123,7 @@ a {
     margin-right: 3vw;
     text-align: left;
     font-family: 'Outfit 300';
-    font-size: max(1vw + 1vh, 24px);
+    font-size: max(1vw + 1vh, 18px);
     font-style: normal;
     font-weight: 300;
     line-height: 140%;
@@ -289,6 +284,22 @@ a {
     left: -16vw;
 }
 
+@media (max-aspect-ratio: 12/8) {
+    .mantraParagraphText {
+        width: 50vw;
+        height: 30vh;
+        margin-right: 3vw;
+        text-align: left;
+        font-family: 'Outfit 300';
+        font-size: max(1vw + 1vh, 18px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        color: #111111;
+        z-index: 4;
+    }
+}
+
 @media (max-width: 650px) or (max-device-width: 650px) {
     .alignItemsRightMantra {
         display: flex;
@@ -379,5 +390,22 @@ a {
     .growthMantraContainer {
         width: 100vw;
         height: fit-content;
+    }
+}
+
+@media (max-aspect-ratio: 12/8) {
+    .background-fit-content {
+        width: 125vw;
+        max-width: 140vw;
+        background-color: white;
+        height: 100vh;
+    }
+    .growthMantraContainer {
+        width: 175vw;
+        margin-right: 12vw;
+        height: 100vh;
+    }
+    .m-img {
+        height: 48vh;
     }
 }
