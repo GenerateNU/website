@@ -65,20 +65,19 @@ a {
     font-style: normal;
     font-weight: 700;
     font-size: max(9vh, 92px);
-    line-height: 90%;
+    line-height: 95%;
     margin-bottom: 0px;
     text-transform: uppercase;
 }
 
 .MantraText {
-    left: 126px;
     z-index: 1;
     font-family: 'Space Mono 700';
     font-style: normal;
     /* font-weight: 700; */
     font-size: max(20vh, 200px);
     margin-bottom: 0px;
-    line-height: 80%;
+    line-height: 82%;
     text-transform: uppercase;
     /* Black */
     color: #111111;
@@ -134,7 +133,7 @@ a {
     font-weight: 300;
     line-height: 140%;
     color: #111111;
-    z-index: 3;
+    z-index: 4;
 }
 
 .paragraphTextTwo {
@@ -284,7 +283,7 @@ a {
 }
 
 .m-img {
-    height: 45vh;
+    height: calc(18vh + 18vw);
     z-index: 1;
     position: relative;
     left: -16vw;
