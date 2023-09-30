@@ -64,7 +64,7 @@
   top: -550px;
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-device-width: 650px) {
   .belong-here-container {
     display: flex;
     flex-direction: column;

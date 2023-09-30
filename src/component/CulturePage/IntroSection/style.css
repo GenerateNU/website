@@ -56,7 +56,7 @@
   line-height: 220px;
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-device-width: 650px) {
   .intro-container-mobile {
     display: flex;
     flex-direction: column;

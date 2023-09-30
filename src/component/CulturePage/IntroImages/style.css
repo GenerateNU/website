@@ -18,7 +18,7 @@
   max-width: none;
 }
 
-@media screen and (max-device-width: 650px) {
+@media (max-device-width: 650px) {
   .intro-images {
     height: 105vh;
     width: auto;
