@@ -16,15 +16,6 @@ a {
   height: 15vh;
 }
 
-.vert-footer-container {
-  background-color: #187dff;
-  width: auto;
-  height: 100vh;
-  overflow: hidden;
-  text-align: left;
-  float: left;
-}
-
 .footer-link-bold {
   font-weight: 600;
   color: #ffffff;
@@ -40,17 +31,6 @@ a {
   max-height: 30px;
   font-size: 2vh;
   font-family: 'Space Mono';
-}
-
-.vert-footer-links-general {
-  display: flex;
-  flex-direction: column;
-  height: 70vh;
-  margin-top: 60px;
-}
-
-.vert-social-icons {
-  margin-top: auto;
 }
 
 a:hover {
@@ -74,11 +54,6 @@ a:hover {
   justify-content: center;
 }
 
-.vert-icon {
-  height: 75px;
-  margin-top: 3vh;
-}
-
 .footer-container-mobile {
   background-color: #187dff;
   text-align: left;
@@ -89,11 +64,6 @@ a:hover {
   width: 100vw;
   margin: 0;
   height: auto;
-}
-
-.left-bar-item {
-  display: flex;
-  flex-direction: column;
 }
 
 .footer-text {
@@ -114,11 +84,6 @@ a:hover {
   margin-top: auto;
 }
 
-.hor-icon {
-  height: 2.5vh;
-  margin-bottom: 40px;
-}
-
 .sherm {
   padding: 5%;
   margin-top: 0;
@@ -133,11 +98,6 @@ a:hover {
   margin-top: auto;
   display: flex;
   flex-direction: column-reverse;
-}
-
-.footer-two {
-  background-color: orange;
-  align-items: right;
 }
 
 .rectangle {
