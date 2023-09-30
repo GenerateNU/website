@@ -22,12 +22,12 @@ const desktopContent = () => {
 
 const mobileContent = () => {
   return (
-    <div className="intro-images-container-mobile">
-      <text className="fun-text-mobile"> HAVE SOME FUN WITH US </text>
-      <img className="img-formatting-mobile" src={IntroImg1} alt="IntroImage1" />
-      <img className="img-formatting-mobile" src={IntroImg2} alt="IntroImage2" />
-      <img className="img-formatting-mobile" src={IntroImg3} alt="IntroImage3" />
-      <div className="line-mobile" />
+    <div className="intro-images">
+      <text className="fun-text"> HAVE SOME FUN WITH US </text>
+      <img className="img-formatting" src={IntroImg1} alt="IntroImage1" />
+      <img className="img-formatting" src={IntroImg2} alt="IntroImage2" />
+      <img className="img-formatting" src={IntroImg3} alt="IntroImage3" />
+      <div className="line" />
     </div>
   );
 }

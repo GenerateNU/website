@@ -32,16 +32,16 @@ const desktopContent = () => (
 );
 
 const mobileContent = () => (
-  <div className="belong-here-container-mobile">
-    <h2 className="heading-text-mobile">Belong Here</h2>
-    <p className="culture-text-mobile">
+  <div className="belong-here-container">
+    <h2 className="heading-text">Belong Here</h2>
+    <p className="culture-text">
       Here at Generate, we do everything we can to create a sense of belonging within each and every Generate member. We want Generate to be more than a group of peers: a group of friends and acquaintances that work together to make every member feel welcome, respected, and valued.
     </p>        
-    <h2 className="heading-text-mobile">Thrive Together</h2>
-    <p className="culture-text-mobile">
+    <h2 className="headingTwo-text">Thrive Together</h2>
+    <p className="culture-text">
       With each team working to achieve their own goals, Generate also works to create a cohesive and integrated group culture; we all succeed together, and any struggles of one group can be helped by another. The Generate family learns and grows together, continuously adapting and improving. 
     </p>
-    <img className="graphic-mobile" src={ColorBlock} alt="" />
+    <img className="graphic" src={ColorBlock} alt="" />
   </div>
 )
 

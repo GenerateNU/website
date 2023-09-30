@@ -33,9 +33,9 @@ const mobileContent = () => (
       <NavBar />
     </div>
     <div className="intro-container-mobile">
-      <text className="our-culture-big-mobile text-no-fill"> OUR CULTURE </text>
-      <text className="our-culture-quote-mobile"> We make wicked projects &amp; plan wicked events </text>
-      <img className="generateMascot-mobile" src={logo} alt="Generate Mascot" />
+      <text className="our-culture-big text-no-fill"> Our Culture </text>
+      <text className="our-culture-quote"> We make wicked projects &amp; plan wicked events </text>
+      <img className="generateMascot" src={logo} alt="Generate Mascot" />
     </div>
   </>
 )

@@ -17,3 +17,13 @@
     -webkit-text-stroke: 1px #DFDFDF;
     font-size: 100px;
 }
+
+@media only screen and (max-device-width: 650px) {
+    .culture-text {
+        color: #111111;
+        font-size: 40px;
+        line-height: 60px;
+        word-wrap: break-word;
+        padding-top: 5%;
+    }
+}
