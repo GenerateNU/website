@@ -69,15 +69,15 @@
     position: static;
     width: 30vw;
     height: auto;
-    margin-right: 15%;
+    margin-right: 20%;
     margin-left: auto;
   }
 
   .our-culture-quote {
     width: 40vw;
     height: auto;
-    margin-top: 13%;
-    margin-right: 5%;
+    margin-top: 10%;
+    margin-right: 10%;
     margin-left: auto;
     font-size: 85px;
     line-height: 85px;
@@ -85,8 +85,9 @@
 
   .our-culture-big {
     padding-left: 20%;
+    padding-top: 10%;
     font-size: 400px;
-    line-height: 450px;
+    line-height: 400px;
     transform: rotate(90deg);
     text-transform: uppercase;
   }
