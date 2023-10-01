@@ -2,12 +2,27 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   color: #a559ec;
+  padding: 0 10px 10px 10px;
+}
+
+.vertical-div {
+  width: max-content;
+  margin: 0px;
+}
+
+.text-div-equity {
+  padding: 0 50px 0 100px;
+  width: 650px;
+  margin-top: 300px; /*240px;*/
+  display: flex;
+  flex-direction: column;
 }
 
 .outline-equity {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 90px;
+  line-height: 90px;
   padding: 0 10px 10px 10px;
   color: white;
   -webkit-text-stroke-width: 1px;
