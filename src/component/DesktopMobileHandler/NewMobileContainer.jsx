@@ -19,7 +19,6 @@ export default function NewMobileContainer({
   mobileBGColor,
   ...props
 }) {
-
   return (
     <>
       {/* Mobile view */}
