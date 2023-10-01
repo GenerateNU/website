@@ -62,7 +62,7 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 2000px;
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
   }
 
   .generateMascot {
@@ -86,7 +86,7 @@
   .our-culture-big {
     padding-left: 20%;
     font-size: 400px;
-    line-height: 400px;
+    line-height: 450px;
     transform: rotate(90deg);
     text-transform: uppercase;
   }
