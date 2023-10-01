@@ -453,6 +453,7 @@
     position: fixed;
     left: 90%;
     transform: translateX(-50%);
+    width: auto;
   }
 
   .generatetext {

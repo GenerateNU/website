@@ -15,11 +15,11 @@ export default function abouthistory() {
           <div className="Orgs">
             <div className="Sherm">
               <p>The Sherm</p>
-              <img src={ShermImg} alt="" />
+              <img src={ShermImg} alt="" className="logo"/>
             </div>
             <div className="Mosaic">
               <p>Mosaic</p>
-              <img src={MosaicImg} alt="" height="25%" width="25%"/>
+              <img src={MosaicImg} alt="" className="logo" />
             </div>
             <p></p>
           </div>

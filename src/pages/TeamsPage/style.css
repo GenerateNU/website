@@ -82,6 +82,7 @@
 
 @media only screen and (max-device-width: 650px) {
     .teams-navbar {
+        position: fixed;
         left: 90%;
         transform: translateX(-50%);
         width: auto;

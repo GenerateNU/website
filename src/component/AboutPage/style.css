@@ -50,8 +50,8 @@ p {
 }
 
 .logo {
-    max-width: 75%;
-    max-height: 75%;
+    width: 100%;
+    height: auto;
 }
 
 
