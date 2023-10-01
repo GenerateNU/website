@@ -78,11 +78,7 @@ span {
     transform: rotate(270deg);
 }
 
-@media only screen and (max-device-width: 650px) {
-    .bar-size {
-        height: 5vh;
-        width: 5vh;
-    }
+@media (max-device-width: 650px) {
     .wrapper-nav {
         width: 5vh;
         height: 5vh;
@@ -96,6 +92,9 @@ span {
     .hamburger-mobile {
         transform: scale(2.5);
     }
+}
+
+@media (max-width: 650px) or (max-device-width: 650px) {
     .modal-header {
         padding: 2.5% 2.5% 0 0;
     }
@@ -105,5 +104,9 @@ span {
     .newsletter-font {
         font-size: 12.5vw;
         transform: none;
+    }
+    .bar-size {
+        height: 5vh;
+        width: 5vh;
     }
 }
