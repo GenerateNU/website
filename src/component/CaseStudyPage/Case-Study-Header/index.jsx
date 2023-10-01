@@ -1,16 +1,91 @@
 import ClientProjectsJSON from '../client-projects-json'
+import clsx from 'clsx'
 import './style.css'
+import useWebsite from '../../../shared/useWebsite'
+import React from 'react'
 
 export default function CaseStudyHeader() {
-  const smartyPill = ClientProjectsJSON.projects.at(0)
+  const casestudy = ClientProjectsJSON.projects.find(
+    (cs) => cs.title === 'SmartyPill'
+  )
+
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const isDesktop = isBigScreen && isWebsite
+
+  return isDesktop ? (
+    <Header casestudy={casestudy} />
+  ) : (
+    <MobileHeader casestudy={casestudy} />
+  )
+}
+
+function Header({ casestudy }) {
   return (
-    <div>
+    <div className='cs-flex-container'>
       <div className='cs-title-container'>
-        <div className='cs-title-style'>{smartyPill.title}</div>
+        <div className='cs-title-style'>{casestudy.title}</div>
         <div className='cs-teams-container'>
-          {smartyPill.teams.map((team) => (
-            <img alt={'matt was here'} src={team} />
+          {casestudy.teams.map((team, index) => (
+            <img
+              key={index}
+              className={clsx(
+                'cs-team-sizing',
+                index == 0 ? '' : 'cs-team-spacing'
+              )}
+              alt={'matt was here'}
+              src={team}
+            />
           ))}
+        </div>
+        <div className='cs-company-description'>
+          {casestudy.companyDescription}
+        </div>
+        <div className='cs-client-container'>
+          <div className='cs-client-style'>Client</div>
+          <div className='cs-client-name-container'>
+            <div className='cs-client-name-style'>{casestudy.client.name}</div>
+            <div className='cs-client-title-style'>
+              {casestudy.client.title}
+            </div>
+          </div>
+        </div>
+      </div>
+      <img className='cs-image' alt={'matt was here'} src={casestudy.image} />
+    </div>
+  )
+}
+
+function MobileHeader({ casestudy }) {
+  return (
+    <div className=''>
+      <div className='cs-title-container'>
+        <div className='cs-title-style'>{casestudy.title}</div>
+        <div className='cs-teams-container'>
+          {casestudy.teams.map((team, index) => (
+            <img
+              key={index}
+              className={clsx(
+                'cs-team-sizing',
+                index == 0 ? '' : 'cs-team-spacing'
+              )}
+              alt={'matt was here'}
+              src={team}
+            />
+          ))}
+        </div>
+        <img className='cs-image' alt={'matt was here'} src={casestudy.image} />
+        <div className='cs-company-description'>
+          {casestudy.companyDescription}
+        </div>
+        <div className='cs-client-container'>
+          <div className='cs-client-style'>Client</div>
+          <div className='cs-client-name-container'>
+            <div className='cs-client-name-style'>{casestudy.client.name}</div>
+            <div className='cs-client-title-style'>
+              {casestudy.client.title}
+            </div>
+          </div>
         </div>
       </div>
     </div>

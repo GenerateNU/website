@@ -36,7 +36,7 @@ const ClientProjectsJSON = {
         'eget rutrum magna odio ut tortor. Maecenas pretiu',
       brandIdentityImage: BrandIdentityImage,
       palette: ['FFBF3C', '6FCF97', '187DFF', 'FF6660'],
-      heightlights: [
+      highlights: [
         {
           title: '',
           image: [SmartyPillHighLight1Image],

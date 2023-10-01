@@ -1,6 +1,14 @@
+.cs-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20vh;
+}
+
 .cs-title-style {
   font-family: 'Space Mono';
-  font-size: 48px;
+  font-size: 5vw;
+  padding-bottom: 1vw;
   font-weight: 700;
   line-height: 58px;
   letter-spacing: 0em;
@@ -8,12 +16,79 @@
   text-transform: uppercase;
 }
 
+.cs-client-container {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.cs-client-style {
+  color: #111;
+  font-family: 'Outfit';
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 34px;
+}
+
+.cs-client-name-container {
+  margin-left: 1vw;
+}
+
+.cs-client-name-style {
+  color: #111;
+  font-family: 'Outfit';
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.cs-client-title-style {
+  font-family: 'Outfit';
+  font-size: 0.8vw;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
 .cs-title-container {
-  padding-top: 20vh;
-  padding-left: 5vw;
+  padding-left: 10vw;
+  width: 40vw;
 }
 
 .cs-teams-container {
-  margin: auto;
-  padding: auto;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1vw;
+}
+
+.cs-team-spacing {
+  margin-left: 1vh;
+}
+
+.cs-team-sizing {
+  width: 8vw;
+  /* This is the base width of the svg */
+  min-width: 81px;
+}
+
+.cs-company-description {
+  padding-top: 2vh;
+  font-family: 'Outfit';
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.cs-image {
+  width: 40vw;
+  max-width: 600px;
+  min-width: 300px;
+  height: 60vw;
+  max-height: 400px;
+  margin-left: auto;
+  padding-right: 5vw;
 }
