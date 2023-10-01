@@ -1,120 +1,108 @@
 a {
-    text-decoration: none;
-    color: #FFFFFF;
-  }
+  text-decoration: none;
+  color: #ffffff;
+}
 
-  .productDevcontainer{
-    width: 100vh;
-    padding-left: 5%;
+.productDevcontainer {
+  width: 100vh;
+  padding-left: 5%;
+}
+
+.background-black {
+  background-color: black;
+}
+
+.ProductDevText {
+  width: 50vh;
+  height: 35vh;
+  left: 20.95vh;
+  top: 23.46vh;
+  margin-left: -2.5vh;
+  margin-bottom: -2vh;
+
+  /* H1 */
+
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11.22vmin;
+  line-height: 11.22vh;
+  /* or 100% */
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.mainDevCycleParagraph {
+  margin-left: -2.5vh;
+}
+
+.paragraphText {
+  width: 75.28vh;
+  height: 29.86vh;
+  top: 71.14vh;
+  margin-top: 5.27vh;
+  /* B1 */
+  font-family: 'Outfit 400';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vh;
+  line-height: 3.51vh;
+  /* or 156% */
+
+  color: #ffffff;
+}
+.ourProcessText {
+  width: 30vh;
+  height: 3.76vh;
+  left: 18.78vh;
+  top: 20.58vh;
+  margin-top: 12.55vh;
+  margin-left: -2.5vh;
+
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vh;
+  line-height: 3.76vh;
+  /* identical to box height, or 150% */
+
+  /* Core/MNGMNT Yellow */
+
+  color: #ffbf3c;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.alignItemsRight {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12%;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .column {
   }
 
   .background-black {
-    background-color: black;
-  }
-
-  .ProductDevText {
-    width: 50vh;
-    height: 30vh;
-    left: 20.95vh;
-    top: 23.46vh;
-    margin-left: -2.5vh;
-    margin-bottom: -2vh;
-    
-    /* H1 */
-    
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 11.22vmin;
-    line-height: 11.22vh;
-    /* or 100% */
-    
-    text-transform: uppercase;
-    
-    color: #FFFFFF;
-    
-  }
-
-  .mainDevCycleParagraph {
-    margin-left: -2.5vh;
-  }
-
-  .paragraphText {
-    width: 75.28vh;
-    height: 29.86vh;
-    top: 71.14vh;
-    margin-top: 5.27vh;
-    /* B1 */
-    font-family: 'Outfit 400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5vh;
-    line-height: 3.51vh;
-    /* or 156% */
-    
-    
-    color: #FFFFFF;
-  }
-  .ourProcessText {
-    width: 30vh;
-    height: 3.76vh;
-    left: 18.78vh;
-    top: 20.58vh;
-    margin-top: 12.55vh;
-    margin-left: -2.5vh;
-
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5vh;
-    line-height: 3.76vh;
-    /* identical to box height, or 150% */
-
-
-    /* Core/MNGMNT Yellow */
-
-    color: #FFBF3C;
-  }
-
-
-  .column{
-    display: flex;
-    flex-direction: column;
+    width: 100vw;
   }
 
   .alignItemsRight {
-    display: flex;
-    flex-direction: row;
-    margin-top: 12%;
-  }
-  
-  @media only screen and (max-device-width: 650px) {
-    .column {
-    }
-
-    .background-black {
-      width: 100vw;
-    }
-  
-    .alignItemsRight {
-      padding-right: 5%;
-    }
-  
-    .ProductDevText {
-      font-family: "Space Mono 700";
-      font-size: 12vw;
-      line-height: 7vh;
-    }
-  
-    .paragraphText {
-      width: 90vw;
-    }
-     
+    padding-right: 5%;
   }
 
-  
-  
+  .ProductDevText {
+    font-family: 'Space Mono 700';
+    font-size: 12vw;
+    line-height: 7vh;
+  }
 
-  
- 
-   
+  .paragraphText {
+    width: 90vw;
+  }
+}

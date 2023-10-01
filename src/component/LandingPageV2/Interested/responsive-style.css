@@ -1,0 +1,297 @@
+.interestedcontainer {
+  width: 60vw;
+  background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
+    center;
+  background-repeat: no-repeat;
+  background-size: 20vw;
+  background-position: 80% 40%;
+  align-items: center;
+  justify-items: center;
+}
+
+.interestedflexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  margin-top: 20vh;
+  margin-left: auto;
+}
+
+.interestedText {
+  margin-top: 25vh;
+  font-family: 'Space Mono 700';
+  font-style: normal;
+  margin-left: 5vw;
+  font-size: 10vh;
+  text-transform: uppercase;
+  color: black;
+}
+
+.questionMarkContainer {
+  display: flex;
+  width: 30vw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.interestedJoinNowBox {
+  width: 320px;
+  height: 90px;
+  background: #187dff;
+  border: 1px solid #111111;
+  box-shadow: -0.75vh 0.75vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.joinCommunitytext {
+  height: inherit;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 2vh;
+  line-height: 6vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.sentenceText {
+  width: 30vh;
+  font-family: 'Outfit 300';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5vh;
+  margin-left: 50px;
+  color: black;
+}
+
+@media (max-width: 1200px) {
+  .interestedcontainer {
+    width: 60vw;
+    background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
+      center;
+    background-repeat: no-repeat;
+    background-size: 30vw;
+    background-position: 80% 40%;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .interestedflexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    margin-top: 20vh;
+    margin-left: auto;
+  }
+
+  .interestedText {
+    margin-top: 25vh;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-size: 6vh;
+    margin-left: 0vw;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .questionMarkContainer {
+    flex-direction: row;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+
+  .interestedJoinNowBox {
+    width: 200px;
+    height: 56px;
+    background: #187dff;
+    border: 1px solid #111111;
+    box-shadow: -0.75vh 0.75vh;
+    margin-right: auto;
+  }
+
+  .joinCommunitytext {
+    height: inherit;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 2vh;
+    line-height: 6vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  .sentenceText {
+    width: 30vh;
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8vh;
+    color: black;
+  }
+}
+
+@media (max-width: 650px) {
+  .interestedcontainer {
+    width: 100vw;
+    background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
+      center;
+    background-repeat: no-repeat;
+    background-size: 70vw;
+    background-position: 80% 40%;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .interestedflexbox {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-top: 20vh;
+    align-items: flex-start;
+  }
+
+  .interestedText {
+    margin-top: 25vh;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-size: 6vh;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .questionMarkContainer {
+    width: 45vh;
+    display: flex;
+    margin-bottom: 80px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .interestedJoinNowBox {
+    width: 200px;
+    height: 56px;
+    background: #187dff;
+    border: 1px solid #111111;
+    box-shadow: -0.75vh 0.75vh;
+    margin: 0;
+  }
+
+  .joinCommunitytext {
+    height: inherit;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 2vh;
+    line-height: 6vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  .sentenceText {
+    width: 30vh;
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2vh;
+    color: black;
+  }
+}
+
+@media only screen and (max-device-width: 650px) {
+  .interestedcontainer {
+    width: 100%;
+    background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
+      center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    padding: 5vh 0;
+    background-position: 80% 25%;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .interestedflexbox {
+    display: flex;
+    margin-left: -6vw;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-items: center;
+    width: fit-content;
+    margin-top: 20vh;
+  }
+
+  .interestedText {
+    margin-left: 3vw;
+    margin-top: 10vh;
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-size: 6vh;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .questionMarkContainer {
+    width: 45vh;
+    display: flex;
+    margin-bottom: 80px;
+    flex-direction: row;
+    margin-top: 5vh;
+    margin-left: 12vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .interestedJoinNowBox {
+    width: 25vh;
+    height: 8vh;
+    margin-top: 10vh;
+    margin-bottom: 50px;
+    background: #187dff;
+    border: 1px solid #111111;
+    box-shadow: -0.75vh 0.75vh;
+    margin-right: auto;
+    margin-left: 10vw;
+  }
+
+  .joinCommunitytext {
+    height: inherit;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 2vh;
+    line-height: 6vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+
+  .sentenceText {
+    width: 30vh;
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.8vh;
+    color: black;
+    padding-left: 10%;
+  }
+}
