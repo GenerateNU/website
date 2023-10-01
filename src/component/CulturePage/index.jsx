@@ -9,7 +9,7 @@ import BelongHere from "./BelongHere";
 import Inclusion from "./Inclusion";
 import Equity from "./Equity";
 import Diversity from "./Diversity";
-import VerticalFooter from "../VerticalFooter";
+import Footer from "../Footer";
 import Showcase from "./Showcase";
 import "./style.css";
 import NextPage from "../NextPage"
@@ -34,7 +34,7 @@ export default function CulturePage() {
     <Events3 />,
     <Showcase />,
     <CollageSection />,
-    <VerticalFooter />,
+    <Footer />,
     <NextPage pageName="teams" url="/teams"/>
   ];
 
