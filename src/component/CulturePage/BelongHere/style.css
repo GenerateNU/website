@@ -18,7 +18,7 @@
 }
 
 .belong-here {
-  padding:1px;
+  padding: 1px;
   color: black;
   text-align: left;
   position: relative;
@@ -30,7 +30,7 @@
 .thrive-together {
   display: flex;
   flex-direction: column;
-  padding:1px;
+  padding: 1px;
   width: 300px;
   height: 400px;
 }
@@ -47,7 +47,7 @@
 .color-block {
   text-align: center;
   position: relative;
-} 
+}
 
 .graphic {
   height: 900px;
@@ -74,7 +74,7 @@
   }
 
   .heading-text {
-    color: #187DFF;
+    color: #187dff;
     font-size: 80px;
     line-height: 100px;
     padding-top: 10%;
@@ -82,7 +82,7 @@
   }
 
   .headingTwo-text {
-    color: #187DFF;
+    color: #187dff;
     font-size: 80px;
     line-height: 100px;
     padding-top: 10%;

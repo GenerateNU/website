@@ -22,7 +22,7 @@
   .intro-images {
     height: 105vh;
     width: auto;
-    background-color: #6FCF97;
+    background-color: #6fcf97;
     flex-direction: column;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -33,7 +33,7 @@
     object-fit: contain;
     width: 20vh;
     height: 30vh;
-    background: linear-gradient(0deg, white 0%, white 100%); 
+    background: linear-gradient(0deg, white 0%, white 100%);
     border: 1px #111111 solid;
     margin: 25px;
   }
@@ -42,7 +42,7 @@
     position: absolute;
     color: white;
     font-size: 90px;
-    font-family: "Space Mono 700";
+    font-family: 'Space Mono 700';
     transform: rotate(90deg);
     margin-top: 55%;
     margin-left: 16%;

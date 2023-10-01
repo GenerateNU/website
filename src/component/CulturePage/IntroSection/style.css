@@ -4,7 +4,7 @@
 }
 
 .bottom-0-culture {
-  bottom: 5rem!important;
+  bottom: 5rem !important;
 }
 
 .generateMascotContainer {
@@ -30,7 +30,7 @@
 
 .our-culture-quote {
   color: #a559ec;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   width: 650px;
   height: 160px;
   font-size: 70px;
@@ -51,7 +51,7 @@
 
 .our-culture-big {
   color: #187dff;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 250px;
   line-height: 220px;
 }
