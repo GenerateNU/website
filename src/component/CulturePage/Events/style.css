@@ -11,14 +11,14 @@
 
 .events-top {
   color: #a2a2a2;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-size: 20px;
   line-height: 30px;
   margin-top: 32px;
 }
 
 .events-header {
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-size: 250px;
   line-height: 210px;
   margin-top: 10px;
@@ -31,10 +31,10 @@
 }
 
 .retreat-title {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-style: normal;
   font-size: 48px;
-  margin-top: 29vw; /*400px;*/
+  margin-top: 320px;
   text-transform: uppercase;
   color: #a559ec;
   text-align: left;
@@ -53,7 +53,7 @@
 
 .events-quotation-mark {
   color: #187dff;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 90px;
   line-height: 75%;
 }
@@ -62,7 +62,7 @@
   color: #ffbf3c;
   font-size: 25px;
   line-height: 100%;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   margin-right: 3%;
 }
 
@@ -70,7 +70,7 @@
   color: #ffbf3c;
   font-size: 225px;
   line-height: 77%;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   word-spacing: -75px;
 }
 
@@ -110,7 +110,7 @@
 
   /* Core/HRDWRE Red */
 
-  border: 2px solid #FF6660;
+  border: 2px solid #ff6660;
 }
 
 @media (max-device-width: 650px) {
