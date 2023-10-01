@@ -1,0 +1,37 @@
+.csm-mobile-flex-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10vh;
+  margin-left: 5vw;
+}
+
+.csm-title-style {
+  font-family: 'Space Mono';
+  font-size: 10vw;
+  padding-bottom: 1vw;
+  font-weight: bolder;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.csm-image {
+  width: 80vw;
+  height: 60vw;
+  margin-top: 5vh;
+}
+
+.csm-description-style {
+  padding-top: 4vh;
+  font-family: 'Outfit';
+  font-size: 5vw;
+  font-weight: lighter;
+  line-height: 8vw;
+}
+
+.csm-team-sizing {
+  width: 20vw;
+  /* This is the base width of the svg */
+  min-width: 81px;
+}

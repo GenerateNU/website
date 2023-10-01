@@ -1,4 +1,4 @@
-import SmartyPillImage from './Case-Study-Images/SmartyPill/SmartyPillMockUp.png'
+import SmartyPillImage from './Case-Study-Images/SmartyPill/SmartyPillMockUp.svg'
 import BrandIdentityImage from './Case-Study-Images/SmartyPill/BrandIdentity.png'
 import SmartyPillHighLight1Image from './Case-Study-Images/SmartyPill/Highlight1.png'
 import SmartyPillHighlight2Image1 from './Case-Study-Images/SmartyPill/Highlight2v1.png'
