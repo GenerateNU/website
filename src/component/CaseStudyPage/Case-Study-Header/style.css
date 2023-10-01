@@ -1,0 +1,19 @@
+.cs-title-style {
+  font-family: 'Space Mono';
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.cs-title-container {
+  padding-top: 20vh;
+  padding-left: 5vw;
+}
+
+.cs-teams-container {
+  margin: auto;
+  padding: auto;
+}
