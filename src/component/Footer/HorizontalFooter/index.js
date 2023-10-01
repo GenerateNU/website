@@ -1,20 +1,10 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
 import '../style.css'
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg' //"../../assets/images/landingpage-v2/footerlogo.svg";
 import { FooterLink } from '..'
 import { useNavigate } from 'react-router-dom'
 import { SocialIcon, socialIcons } from '../../SocialIcon'
-
-const pages = [
-  { name: 'Generate', link: '/' },
-  { name: 'Apply', link: '/apply' },
-  { name: 'About', link: '/about' },
-  { name: 'Culture', link: '/culture' },
-  { name: 'Teams', link: '/teams' },
-  // { name: "People", link: "/", disabled: true },
-  { name: 'Projects', link: '/projects' }
-]
+import { pages } from '..'
 
 function HorizontalFooter() {
   const navigate = useNavigate()
@@ -25,62 +15,40 @@ function HorizontalFooter() {
   }
 
   return (
-    <Container className='footer-container-mobile w-100'>
-      <div className='d-flex flex-row justify-content-between w-100'>
-        <div className='left-bar-item'>
-          <div className='w-100 d-flex flex-column justify-content-between align-items-flex-start'>
-            <div className='sherm'>
-              <img
-                className='logo-placement'
-                src={GenerateLogo}
-                onClick={handleOnClick}
-                alt='Logo description'
-              />
-            </div>
-          </div>
-          <div className='hor-footer-links'>
-            <div className='hor-footer-pages'>
-              {pages.map((page, index) => (
-                <FooterLink
-                  key={index}
-                  page={page}
-                  currentPage={currentPageUrl.substring(
-                    currentPageUrl.lastIndexOf('/')
-                  )}
-                />
-              ))}
-            </div>
-          </div>
+    <div className='footer-container-mobile w-100'>
+      <div className='sherm'>
+        <img
+          className='logo-placement'
+          src={GenerateLogo}
+          onClick={handleOnClick}
+          alt='matt was here'
+        />
+      </div>
+      <div className='mobile-links-container'>
+        <div className='pages-align'>
+          {pages.map((page, index) => (
+            <FooterLink
+              key={index}
+              page={page}
+              currentPage={currentPageUrl.substring(
+                currentPageUrl.lastIndexOf('/')
+              )}
+            />
+          ))}
         </div>
-        <div className='hor-social-icons'>
-          {socialIcons.map((row, index) => (
-            <Row key={index}>
-              {row.map((icon, index) => (
-                <>
-                  <SocialIcon
-                    key={index}
-                    href={icon.href}
-                    imgSrc={icon.imgSrc}
-                    className={
-                      icon.href.includes('instagram')
-                        ? 'insta-icon'
-                        : 'hor-icon'
-                    }
-                  />
-                  {icon.href.includes('instagram') && (
-                    <Col className='icon'>
-                      <a>
-                        <div className='social-media' alt='' />
-                      </a>
-                    </Col>
-                  )}
-                </>
+        <div className='mobile-social-icons-align'>
+          {socialIcons.map((si, index) => (
+            <div key={index} className='mobile-social-icon-row'>
+              {si.map((s) => (
+                <div className='mobile-social-icon-col'>
+                  <SocialIcon key={index} href={s.href} imgSrc={s.imgSrc} />
+                </div>
               ))}
-            </Row>
+            </div>
           ))}
         </div>
       </div>
-    </Container>
+    </div>
   )
 }
 

@@ -48,7 +48,7 @@ export const socialIcons = [
 
 export function SocialIcon({ href, imgSrc, className }) {
   return (
-    <Col className={className ?? 'icon'}>
+    <Col>
       <a href={href}>
         <img className='social-media' src={imgSrc} alt='' />
       </a>
