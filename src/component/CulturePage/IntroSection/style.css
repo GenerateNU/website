@@ -4,7 +4,7 @@
 }
 
 .bottom-0-culture {
-  bottom: 5rem!important;
+  bottom: 5rem !important;
 }
 
 .generateMascotContainer {
@@ -30,7 +30,7 @@
 
 .our-culture-quote {
   color: #a559ec;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   width: 650px;
   height: 160px;
   font-size: 70px;
@@ -51,7 +51,45 @@
 
 .our-culture-big {
   color: #187dff;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 250px;
   line-height: 220px;
+}
+
+@media (max-device-width: 650px) {
+  .intro-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 2000px;
+    margin-bottom: 15vh;
+  }
+
+  .generateMascot {
+    position: static;
+    width: 30vw;
+    height: auto;
+    margin-right: 20%;
+    margin-left: auto;
+    margin-top: 4%;
+  }
+
+  .our-culture-quote {
+    width: 40vw;
+    height: auto;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: auto;
+    font-size: 85px;
+    line-height: 85px;
+  }
+
+  .our-culture-big {
+    padding-left: 20%;
+    padding-top: 10%;
+    font-size: 400px;
+    line-height: 400px;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+  }
 }
