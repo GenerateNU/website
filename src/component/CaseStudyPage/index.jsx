@@ -1,7 +1,6 @@
 import React from 'react'
 import CaseStudyHeader from './Case-Study-Header'
 import NavBar from '../NavBar'
-import TeamPageFooter from '../../pages/TeamsPage/ExpandedTeams/CommonTeam/TeamPageFooter'
 
 import './style.css'
 export default class CaseStudy extends React.Component {
@@ -12,7 +11,6 @@ export default class CaseStudy extends React.Component {
           <NavBar />
         </div>
         <CaseStudyHeader />
-        <TeamPageFooter color={'#187DFF'} />
       </div>
     )
   }

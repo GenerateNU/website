@@ -50,7 +50,7 @@ export default function FeaturedProjects() {
               <div className='view-pp-fp-project-div-2'>
                 <a
                   className='view-pp-fp-project-button-2'
-                  href={`/case-study${currentProject.name.toLowerCase()}`}
+                  href={`/case-study/${currentProject.name.toLowerCase()}`}
                 >
                   View
                 </a>
