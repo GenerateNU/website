@@ -1,5 +1,5 @@
 .csm-back {
-  padding-top: 10vh;
+  padding-top: 2vh;
   padding-left: 10vw;
   padding-bottom: 3vh;
   color: #000;
@@ -30,6 +30,7 @@
 .csm-mobile-flex-container {
   display: flex;
   flex-direction: row;
+  margin-top: 8vh;
   margin-left: 5vw;
   margin-right: 5vw;
 }
