@@ -48,7 +48,12 @@ export default function FeaturedProjects() {
                 <img src={Arrow}></img>
               </button>
               <div className='view-pp-fp-project-div-2'>
-                <button className='view-pp-fp-project-button-2'>View</button>
+                <a
+                  className='view-pp-fp-project-button-2'
+                  href={`/case-study${currentProject.name.toLowerCase()}`}
+                >
+                  View
+                </a>
               </div>
             </div>
           </div>
@@ -65,7 +70,9 @@ export default function FeaturedProjects() {
               </h2>
               <p>{currentProject.description}</p>
               <div className='view-pp-fp-project-div'>
-                <button className='view-pp-fp-project-button'>View</button>
+                <a href={`/case-study/${currentProject.name.toLowerCase()}`}>
+                  <button className='view-pp-fp-project-button'>View</button>
+                </a>
                 <button
                   className='pp-fp-projects-button-2 pp-fp-projects-forward'
                   onClick={() => handleProject(1)}

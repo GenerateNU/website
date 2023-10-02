@@ -7,66 +7,77 @@ import SoftwareTeam from './Case-Study-Images/software.svg'
 import HardwareTeam from './Case-Study-Images/hardware.svg'
 
 const ClientProjectsJSON = {
-  projects: [
-    {
-      title: 'SmartyPill',
-      teams: [SoftwareTeam, HardwareTeam],
-      image: SmartyPillImage,
-      companyDescription:
-        'SmartyPill is an automatic pill and water dispenser that ensures youre taking the right pills at the right time.' +
-        ' With customizable alerts and a connected app, SmartyPill is the perfect in-home companion for any medication' +
-        ' adherent lifestyle.',
-      client: {
-        name: 'Matthew Swenson',
-        title: "Northeastern Alumnus '20"
+  smartypill: {
+    title: 'SmartyPill',
+    teams: [SoftwareTeam, HardwareTeam],
+    image: SmartyPillImage,
+    companyDescription:
+      'SmartyPill is an automatic pill and water dispenser that ensures youre taking the right pills at the right time.' +
+      ' With customizable alerts and a connected app, SmartyPill is the perfect in-home companion for any medication' +
+      ' adherent lifestyle.',
+    client: {
+      name: 'Matthew Swenson',
+      title: "Northeastern Alumnus '20"
+    },
+    teamMembers: [
+      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
+      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
+      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
+      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
+      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
+      { name: 'Matthew Swenson', title: 'Project Lead', image: '' }
+    ],
+    companyLogo: null,
+    brandIdentityTitle: '',
+    brandIdentity:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque.' +
+      'Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis,' +
+      'eget rutrum magna odio ut tortor. Maecenas pretiu',
+    brandIdentityImage: BrandIdentityImage,
+    palette: ['FFBF3C', '6FCF97', '187DFF', 'FF6660'],
+    highlights: [
+      {
+        title: '',
+        image: [SmartyPillHighLight1Image],
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque.' +
+          'Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis,' +
+          'eget rutrum magna odio ut tortor. Maecenas pretiu'
       },
-      teamMembers: [
-        { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-        { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-        { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-        { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-        { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-        { name: 'Matthew Swenson', title: 'Project Lead', image: '' }
-      ],
-      companyLogo: null,
-      brandIdentityTitle: '',
-      brandIdentity:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque.' +
-        'Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis,' +
-        'eget rutrum magna odio ut tortor. Maecenas pretiu',
-      brandIdentityImage: BrandIdentityImage,
-      palette: ['FFBF3C', '6FCF97', '187DFF', 'FF6660'],
-      highlights: [
-        {
-          title: '',
-          image: [SmartyPillHighLight1Image],
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque.' +
-            'Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis,' +
-            'eget rutrum magna odio ut tortor. Maecenas pretiu'
-        },
-        {
-          title: '',
-          image: [SmartyPillHighlight2Image1, SmartyPillHighlight2Image2],
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque.' +
-            'Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis,' +
-            'eget rutrum magna odio ut tortor. Maecenas pretiu'
-        },
-        {
-          title: '',
-          image: [SmartyPillHighlight2Image1, SmartyPillHighlight2Image2],
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque.' +
-            'Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis,' +
-            'eget rutrum magna odio ut tortor. Maecenas pretiu'
-        }
-      ],
-      clientQuote:
-        'The biggest benefit that Generate provided for me was just the amount of work that was put into SmartyPill,' +
-        'and the knowledge gained from prototyping and writing software for it.'
+      {
+        title: '',
+        image: [SmartyPillHighlight2Image1, SmartyPillHighlight2Image2],
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque.' +
+          'Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis,' +
+          'eget rutrum magna odio ut tortor. Maecenas pretiu'
+      },
+      {
+        title: '',
+        image: [SmartyPillHighlight2Image1, SmartyPillHighlight2Image2],
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque.' +
+          'Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis,' +
+          'eget rutrum magna odio ut tortor. Maecenas pretiu'
+      }
+    ],
+    clientQuote:
+      'The biggest benefit that Generate provided for me was just the amount of work that was put into SmartyPill,' +
+      'and the knowledge gained from prototyping and writing software for it.'
+  },
+  earnz: {
+    title: 'Earnz',
+    teams: [SoftwareTeam],
+    image: SmartyPillImage,
+    companyDescription:
+      'A unique, two-sided promotional and loyalty platform built to level the playing field for independent bars' +
+      ' and restaurants by allowing them to utilize an app to acquire and retain customers as easily and cost' +
+      'effectively as currently only chains can.',
+    client: {
+      name: 'Matthew Swenson',
+      title: "Northeastern Alumnus '20"
     }
-  ]
+  }
 }
 
 export default ClientProjectsJSON

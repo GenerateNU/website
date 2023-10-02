@@ -6,9 +6,8 @@ import useWebsite from '../../../shared/useWebsite'
 import React from 'react'
 
 export default function CaseStudyHeader() {
-  const casestudy = ClientProjectsJSON.projects.find(
-    (cs) => cs.title === 'SmartyPill'
-  )
+  const casestudy =
+    ClientProjectsJSON[window.location.pathname.split('/').pop()]
 
   const isWebsite = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
@@ -83,11 +82,13 @@ function MobileHeader({ casestudy }) {
         <div className='csm-description-style'>
           {casestudy.companyDescription}
         </div>
-        <div className=''>
-          <div className=''>Client</div>
+        <div className='csm-client-container'>
+          <div className='csm-client-style'>Client</div>
           <div className=''>
-            <div className=''>{casestudy.client.name}</div>
-            <div className=''>{casestudy.client.title}</div>
+            <div className='csm-client-name-style'>{casestudy.client.name}</div>
+            <div className='csm-client-title-style'>
+              {casestudy.client.title}
+            </div>
           </div>
         </div>
       </div>

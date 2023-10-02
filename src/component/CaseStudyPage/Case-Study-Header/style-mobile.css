@@ -35,3 +35,38 @@
   /* This is the base width of the svg */
   min-width: 81px;
 }
+
+.csm-client-style {
+  color: #111;
+  font-family: 'Outfit';
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 34px;
+}
+
+.csm-client-name-container {
+  margin-left: 1vw;
+}
+
+.csm-client-name-style {
+  color: #111;
+  font-family: 'Outfit';
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.csm-client-title-style {
+  font-family: 'Outfit';
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.csm-client-container {
+  padding-top: 2vh;
+}
