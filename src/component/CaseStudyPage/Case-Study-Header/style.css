@@ -1,9 +1,38 @@
+.cs-back-button-style {
+  color: #000;
+  font-family: 'Space Mono';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  text-decoration-line: underline;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.cs-back {
+  padding-top: 20vh;
+  padding-left: 10vw;
+  color: #000;
+  font-family: 'Space Mono';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  display: flex;
+  flex-direction: row;
+}
+
 .cs-flex-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 20vh;
 }
 
 .cs-title-style {

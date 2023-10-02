@@ -1,4 +1,5 @@
 import SmartyPillImage from './Case-Study-Images/SmartyPill/SmartyPillMockUp.svg'
+import EarnzImage from './Case-Study-Images/Earnz/EarnzMockUp.svg'
 import BrandIdentityImage from './Case-Study-Images/SmartyPill/BrandIdentity.png'
 import SmartyPillHighLight1Image from './Case-Study-Images/SmartyPill/Highlight1.png'
 import SmartyPillHighlight2Image1 from './Case-Study-Images/SmartyPill/Highlight2v1.png'
@@ -68,13 +69,13 @@ const ClientProjectsJSON = {
   earnz: {
     title: 'Earnz',
     teams: [SoftwareTeam],
-    image: SmartyPillImage,
+    image: EarnzImage,
     companyDescription:
       'A unique, two-sided promotional and loyalty platform built to level the playing field for independent bars' +
       ' and restaurants by allowing them to utilize an app to acquire and retain customers as easily and cost' +
       'effectively as currently only chains can.',
     client: {
-      name: 'Matthew Swenson',
+      name: 'Max Thalheimer',
       title: "Northeastern Alumnus '20"
     }
   }
