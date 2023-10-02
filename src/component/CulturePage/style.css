@@ -24,6 +24,16 @@
     font-size: 40px;
     line-height: 60px;
     word-wrap: break-word;
+    padding-top: 7%;
+  }
+
+  .culture-outline {
+    -webkit-text-stroke: 3px #dfdfdf;
+    font-size: 200px;
+    text-align: left;
+  }
+
+  .culture-div {
     padding-top: 5%;
   }
 }

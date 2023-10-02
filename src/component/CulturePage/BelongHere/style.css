@@ -64,18 +64,19 @@
   top: -550px;
 }
 
-@media (max-device-width: 650px) {
+@media (max-device-width: 650px) or (max-width: 650px) {
   .belong-here-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100vh;
+    height: 200vw;
     padding: 5%;
+    margin-bottom: 300px;
   }
 
   .heading-text {
     color: #187dff;
-    font-size: 80px;
+    font-size: 90px;
     line-height: 100px;
     padding-top: 10%;
     white-space: nowrap;
@@ -83,7 +84,7 @@
 
   .headingTwo-text {
     color: #187dff;
-    font-size: 80px;
+    font-size: 90px;
     line-height: 100px;
     padding-top: 10%;
     white-space: normal;
@@ -91,8 +92,10 @@
   }
 
   .graphic {
-    height: 40vh;
+    position: relative;
+    bottom: 100px;
+    height: 100vw;
     transform: rotate(-90deg);
-    margin-left: 60vw;
+    margin-left: 50vw;
   }
 }
