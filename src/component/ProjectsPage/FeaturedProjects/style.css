@@ -1,6 +1,12 @@
 .pp-fp-projects-page-container {
   min-width: 1007px;
-  max-width: 98vw;
+  max-width: 95vw;
+}
+
+@media (max-width: 1500px) {
+  .pp-fp-projects-page-container {
+    margin-right: 25vw;
+  }
 }
 
 .featured-pp-fp-projects {
@@ -11,6 +17,7 @@
 .pp-fp-projects-title {
   color: #187dff;
   font-weight: 700;
+  font-size: 6vh;
 }
 
 #pp-fp-projects-navbar {
