@@ -1,9 +1,20 @@
 .vertical {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  color: #a559ec;
+  padding: 0 10px 10px 10px;
 }
 
+.vertical-div {
+  width: 50px;
+}
+
+.text-div-inclusion {
+  padding: 0 50px 0 100px;
+  width: 650px;
+  margin-top: 17vw; /*240px;*/
+  display: flex;
+  flex-direction: column;
+}
 
 .outline-inclusion {
   writing-mode: vertical-rl;
@@ -12,21 +23,26 @@
   padding: 0 10px 10px 10px;
   color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #a559ec;
-}
-.text-div-inclusion {
-  padding: 0 50px 0 100px;
-  margin-top: 11.5vw;
-  width: 650px;
-  display: flex;
-  flex-direction: column;
+  -webkit-text-stroke-color: #ffbf3c;
 }
 
-.vertical-div {
-  width: 50px;
-}
+@media (max-device-width: 650px) or (max-width: 650px) {
+  .inclusion-container {
+    padding: 5%;
+    height: 170vw;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.text-div {
-  margin: 5%;
-  padding: 5%;
+  .inclusion-outline {
+    position: relative;
+    margin-right: 50px;
+    writing-mode: horizontal-tb;
+    font-size: 90px;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffbf3c;
+  }
 }

@@ -26,9 +26,9 @@ export default function CulturePage() {
     <IntroSection disp={mobile} />,
     <IntroImages disp={mobile} />,
     <BelongHere disp={mobile} />,
-    <Diversity />,
-    <Inclusion />,
-    <Equity />,
+    <Diversity disp={mobile} />,
+    <Equity disp={mobile} />,
+    <Inclusion disp={mobile} />,
     <Events />,
     <Events2 />,
     <Events3 />,
@@ -40,13 +40,9 @@ export default function CulturePage() {
 
   return !mobile ? (
     <NewDesktopContainer desktopBGColor={'white'}>
-      {' '}
-      {children}{' '}
+      {children}
     </NewDesktopContainer>
   ) : (
-    <NewMobileContainer mobileBGColor={'white'}>
-      {' '}
-      {children}{' '}
-    </NewMobileContainer>
+    <NewMobileContainer mobileBGColor={'white'}>{children}</NewMobileContainer>
   )
 }
