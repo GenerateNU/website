@@ -160,6 +160,13 @@ a:hover {
   margin-top: auto;
 }
 
+@media (max-device-width: 650px) {
+  .social-media {
+    width: 6vw;
+    height: 8vw;
+  }
+}
+
 .mobile-social-icons-align {
   display: flex;
   flex-direction: column-reverse;
