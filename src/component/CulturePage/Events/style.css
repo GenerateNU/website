@@ -113,7 +113,7 @@
   border: 2px solid #ff6660;
 }
 
-@media (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .text-no-fill {
     -webkit-text-stroke-width: 0.25vh;
   }
