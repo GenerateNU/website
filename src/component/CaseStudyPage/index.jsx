@@ -7,7 +7,7 @@ export default class CaseStudy extends React.Component {
   render() {
     return (
       <div>
-        <div className='teams-navbar'>
+        <div className='intro-navbar'>
           <NavBar />
         </div>
         <CaseStudyHeader />

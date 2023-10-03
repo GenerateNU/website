@@ -54,10 +54,6 @@
   box-shadow: -0.5rem 0.6rem black;
 }
 
-.pp-fp-projects-button-2 {
-  display: none;
-}
-
 .pp-fp-projects-forward {
   margin-right: 40px;
 }
@@ -106,12 +102,8 @@
   font-family: 'Space Mono';
   font-size: 3vh;
   position: relative;
-  width: 100px;
+  width: 40vw;
   margin-left: 5px;
-}
-
-.pp-fp-projects-mobile {
-  display: none;
 }
 
 .pp-fp-projects {
@@ -141,7 +133,6 @@
 }
 
 .view-pp-fp-project-div-2 {
-  display: none;
   justify-content: center;
 }
 
@@ -149,6 +140,14 @@
   .featured-pp-fp-projects {
     width: unset;
     margin-bottom: 50px;
+  }
+
+  .pp-fp-project-text {
+    width: 95vw;
+  }
+
+  .pp-fp-projects-forward {
+    margin-right: 20vw;
   }
 
   .pp-fp-projects-bg {
@@ -169,6 +168,8 @@
 
   .pp-fp-projects-buttons {
     margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
   }
 
   .pp-fp-projects-page-container {
@@ -205,20 +206,16 @@
     color: white;
   }
 
-  .pp-fp-projects-desktop {
-    display: none;
-  }
-
   .pp-fp-projects-mobile {
     display: block;
+    margin-right: auto;
   }
 
   .featured-pp-fp-project-buttons {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 4%;
+    flex-direction: row;
     margin-bottom: 10%;
+    width: 95vw;
   }
 
   .pp-fp-project-team {
@@ -256,7 +253,6 @@
   .pp-fp-projects-button {
     width: 120px;
     height: 120px;
-    display: none;
   }
 
   .pp-fp-projects-button-2 {
@@ -288,12 +284,9 @@
     width: fit-content;
     margin: 0;
     padding: 10px 30px;
-    display: none;
   }
 
   .view-pp-fp-project-button-2 {
-    width: -moz-fit-content;
-    width: fit-content;
     margin: 0;
     padding: 10px 30px;
   }
@@ -302,4 +295,8 @@
     display: flex;
     justify-content: center;
   }
+}
+
+.mobile-view-pt {
+  margin-top: 2vh;
 }

@@ -68,7 +68,7 @@ function Header({ casestudy }) {
 
 function MobileHeader({ casestudy }) {
   return (
-    <div>
+    <div className='csm-header-container'>
       <div className='csm-back'>
         {`< --`}
         <a href='/projects'>
