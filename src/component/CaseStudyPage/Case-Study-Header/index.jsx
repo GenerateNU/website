@@ -1,5 +1,4 @@
 import ClientProjectsJSON from '../client-projects-json'
-import clsx from 'clsx'
 import './style.css'
 import './style-mobile.css'
 import useWebsite from '../../../shared/useWebsite'
@@ -36,10 +35,11 @@ function Header({ casestudy }) {
             {casestudy.teams.map((team, index) => (
               <img
                 key={index}
-                className={clsx(
-                  'cs-team-sizing',
-                  index == 0 ? '' : 'cs-team-spacing'
-                )}
+                className={
+                  index == 0
+                    ? 'cs-team-sizing'
+                    : 'cs-team-sizing cs-team-spacing'
+                }
                 alt={'matt was here'}
                 src={team}
               />
@@ -83,10 +83,11 @@ function MobileHeader({ casestudy }) {
             {casestudy.teams.map((team, index) => (
               <img
                 key={index}
-                className={clsx(
-                  'csm-team-sizing',
-                  index == 0 ? '' : 'cs-team-spacing'
-                )}
+                className={
+                  index == 0
+                    ? 'csm-team-sizing'
+                    : 'csm-team-sizing csm-team-spacing'
+                }
                 alt={'matt was here'}
                 src={team}
               />

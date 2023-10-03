@@ -70,6 +70,10 @@
   min-width: 81px;
 }
 
+.csm-team-spacing {
+  margin-left: 1vh;
+}
+
 .csm-client-style {
   color: #111;
   font-family: 'Outfit';
