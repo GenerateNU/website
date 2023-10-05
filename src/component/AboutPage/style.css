@@ -1,99 +1,98 @@
 .horizontal-scroll {
-    overflow-x: auto;
-    overflow-y: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .vh-25 {
-    height: 25vh;
+  height: 25vh;
 }
 
 .vh-30 {
-    height: 30vh;
+  height: 30vh;
 }
 
 .vh-40 {
-    height: 40vh;
+  height: 40vh;
 }
 
 .vh-75 {
-    height: 75vh;
+  height: 75vh;
 }
 
 h2 {
-    font-family: 'Space Mono 700';
-    font-size: 7vw;
-    line-height: 100%;
+  font-family: 'Space Mono 700';
+  font-size: 7vw;
+  line-height: 100%;
 }
 
 h3 {
-    font-family: 'Space Mono 700';
-    font-size: 6.5vw;
-    line-height: 100%;
+  font-family: 'Space Mono 700';
+  font-size: 6.5vw;
+  line-height: 100%;
 }
 
 h5 {
-    font-family: 'Outfit 300';
-    font-size: 2.3vw;
-    line-height: 85%;
+  font-family: 'Outfit 300';
+  font-size: 2.3vw;
+  line-height: 85%;
 }
 
 p {
-    font-family: 'Outfit 300';
-    font-size: 1.2vw;
-    line-height: 150%;
+  font-family: 'Outfit 300';
+  font-size: 1.2vw;
+  line-height: 150%;
 }
 
 .meet-the-team-style {
-    color: rgba(255, 255, 255, 0.2);
-    line-height: 55%;
-    margin-left: 6rem !important;
+  color: rgba(255, 255, 255, 0.2);
+  line-height: 55%;
+  margin-left: 6rem !important;
 }
 
 .logo {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-
 
 /* TODO: delete after move to public */
 
 .fit-content {
-    height: fit-content;
-    width: fit-content;
+  height: fit-content;
+  width: fit-content;
 }
 
 .left-text-style {
-    text-align: right;
+  text-align: right;
 }
 
 .parent-orgs-style {
-    word-spacing: 9999rem;
+  word-spacing: 9999rem;
 }
 
 .our-history-text-style {
-    margin-top: -1rem;
+  margin-top: -1rem;
 }
 
 .about-page .interestedJoinNowBox {
-    background: #6FCF97;
+  background: #6fcf97;
 }
 
 .about-page .interestedcontainer {
-    background: url("../../assets/images/aboutpage/interestedbg.svg") center;
-    background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: 80% 20%;
+  background: url('../../assets/images/aboutpage/interestedbg.svg') center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 80% 20%;
 }
 
 @media only screen and (max-device-width: 650px) {
-    .mobile {
-        padding-left: 0% !important;
-    }
-    .about-page .interestedText {
-        margin-top: 20%;
-    }
-    .about-page .interestedcontainer {
-        background-size: 65%;
-        background-position: 80% 10%;
-    }
+  .mobile {
+    padding-left: 0% !important;
+  }
+  .about-page .interestedText {
+    margin-top: 20%;
+  }
+  .about-page .interestedcontainer {
+    background-size: 65%;
+    background-position: 80% 10%;
+  }
 }

@@ -1,38 +1,38 @@
 import React from 'react'
-import ShermImg from './NU_ShermanCenter.png' 
+import ShermImg from './NU_ShermanCenter.png'
 import MosaicImg from './MosaicLogo.png'
 
 export default function abouthistory() {
   return (
     <div>
-      <div className="left_panel">
-        <div className="leftPanel_container">
-          <div className="dir">
+      <div className='left_panel'>
+        <div className='leftPanel_container'>
+          <div className='dir'>
             <p>PARENT</p>
             <p>ORGS</p>
           </div>
 
-          <div className="Orgs">
-            <div className="Sherm">
+          <div className='Orgs'>
+            <div className='Sherm'>
               <p>The Sherm</p>
-              <img src={ShermImg} alt="" className="logo"/>
+              <img src={ShermImg} alt='' className='logo' />
             </div>
-            <div className="Mosaic">
+            <div className='Mosaic'>
               <p>Mosaic</p>
-              <img src={MosaicImg} alt="" className="logo" />
+              <img src={MosaicImg} alt='' className='logo' />
             </div>
             <p></p>
           </div>
         </div>
       </div>
-      <div className="right_panel">
-        <div className="rightPanel_container">
-          <div className="rightPanel_Head">
+      <div className='right_panel'>
+        <div className='rightPanel_container'>
+          <div className='rightPanel_Head'>
             <p>OUR</p>
             <p>HISTORY</p>
           </div>
 
-          <div className="rightPanel_text">
+          <div className='rightPanel_text'>
             <p>
               There was a hole in Northeastern University’s entrepreneurial
               ecosystem, and a lack of opportunities for student ventures to
@@ -47,5 +47,3 @@ export default function abouthistory() {
     </div>
   )
 }
-
-
