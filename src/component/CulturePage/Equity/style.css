@@ -13,7 +13,7 @@
 .text-div-equity {
   padding: 0 50px 0 100px;
   width: 650px;
-  margin-top: 300px; /*240px;*/
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
 }
@@ -27,13 +27,6 @@
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #a559ec;
-}
-.text-div-equity {
-  padding: 0 50px 0 100px;
-  margin-top: 11.5vw;
-  width: 650px;
-  display: flex;
-  flex-direction: column;
 }
 
 .vertical-div {
