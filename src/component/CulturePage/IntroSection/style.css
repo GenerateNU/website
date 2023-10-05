@@ -55,7 +55,7 @@
   font-size: 250px;
   line-height: 220px;
 }
-
+/* The values should all be based on vw: font-sizes and margins */
 @media (max-width: 650px) or (max-device-width: 650px) {
   .intro-container-mobile {
     display: flex;
@@ -77,18 +77,18 @@
   .our-culture-quote {
     width: 40vw;
     height: auto;
-    margin-top: 10%;
-    margin-right: 10%;
-    margin-left: auto;
-    font-size: 85px;
-    line-height: 85px;
+    margin-top: 10vw;
+    margin-right: 10vw;
+    margin-left: 30vw;
+    font-size: 5vw;
+    line-height: 5vw;
   }
 
   .our-culture-big {
-    padding-left: 20%;
-    padding-top: 10%;
-    font-size: 400px;
-    line-height: 400px;
+    padding-left: 0vw;
+    padding-top: 10vw;
+    font-size: 50vw;
+    line-height: 40vw;
     transform: rotate(90deg);
     text-transform: uppercase;
   }
