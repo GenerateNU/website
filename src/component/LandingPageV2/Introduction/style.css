@@ -421,19 +421,9 @@
     text-decoration: underline;
 }
 
-@media (max-width: 650px) {
-    .intro-navbar {
-        position: fixed;
-        left: 90%;
-        transform: translateX(-50%);
-    }
-}
-
-
 /* css to render appropriate intro on desktop vs. mobile by setting display size params
 */
-
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
     .text-container {
         justify-content: center;
     }
@@ -447,6 +437,7 @@
         position: fixed;
         left: 90%;
         transform: translateX(-50%);
+        width: auto;
     }
     .generatetext {
         line-height: 5vh;
@@ -498,8 +489,6 @@
     }
     .scrollmobile {
         margin-left: 73vh;
-    }
-    .scrollmobile {
         right: 50vh;
     }
 }

@@ -16,7 +16,7 @@ export default function MobileTeamContainer({ children }) {
   return (
     <div className='d-flex flex-row' tab-index='0'>
       <Row className='flex-nowrap'>
-        <div className='teams-navbar'>
+        <div className='intro-navbar'>
           <NavBar />
         </div>
         <div className='d-flex flex-column'>

@@ -65,14 +65,14 @@
 }
 
 .title-text {
-    font-family: "Space Mono 700";
+    font-family: 'Space Mono 700';
     font-weight: 700;
     font-size: 7.5vh;
     line-height: 5vh;
     text-transform: uppercase;
 }
 
-.teams-navbar {
+.intro-navbar {
     position: fixed;
     z-index: 2;
     margin-left: 3%;
@@ -80,8 +80,18 @@
     width: 42vh;
 }
 
+@media (max-width: 650px) or (max-device-width: 650px) {
+    .intro-navbar {
+        position: fixed;
+        left: 90%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+}
+
 @media only screen and (max-device-width: 650px) {
     .teams-navbar {
+        position: fixed;
         left: 90%;
         transform: translateX(-50%);
         width: auto;

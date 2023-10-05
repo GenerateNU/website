@@ -7,7 +7,7 @@ export default class ExpandedTeamsPage extends React.Component {
   render() {
     return (
       <div class="expanded-wrapper">
-        <div className="teams-navbar">
+        <div className="intro-navbar">
             <NavBar />
         </div>
         <Management/>
