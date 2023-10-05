@@ -16,7 +16,7 @@ export default function WebTeamContainer({ children }) {
   return (
     <div className='vh-100 bg-white container-fluid' tab-index='0'>
       <Row className='flex-nowrap'>
-        <div className='teams-navbar'>
+        <div className='intro-navbar'>
           <NavBar />
         </div>
         {childrenWithProps}
