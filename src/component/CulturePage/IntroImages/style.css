@@ -20,7 +20,7 @@
 
 @media (max-device-width: 650px) {
   .intro-images {
-    height: 105vh;
+    height: 210vw;
     width: auto;
     background-color: #6fcf97;
     flex-direction: column;
@@ -31,8 +31,8 @@
 
   .img-formatting {
     object-fit: contain;
-    width: 20vh;
-    height: 30vh;
+    width: 40vw;
+    height: 60vw;
     background: linear-gradient(0deg, white 0%, white 100%);
     border: 1px #111111 solid;
     margin: 25px;
@@ -51,7 +51,7 @@
 
   .line {
     position: absolute;
-    height: 25vh;
+    height: 60vw;
     width: 0;
     align-self: flex-end;
     margin-right: 20%;
