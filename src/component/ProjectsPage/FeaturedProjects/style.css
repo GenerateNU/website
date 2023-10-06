@@ -1,6 +1,6 @@
 .pp-fp-projects-page-container {
   min-width: 1007px;
-  max-width: 95vw;
+  max-width: 80vw;
 }
 
 @media (max-width: 1500px) {
@@ -42,16 +42,13 @@
   transform: rotate(180deg);
 }
 
-.featured-pp-fp-project-buttons {
-  margin-top: 15%;
-}
-
 .pp-fp-projects-button {
   background: #ffffff;
   border: 1px solid black;
-  width: 90px;
-  height: 90px;
+  width: 10vh;
+  height: 10vh;
   box-shadow: -0.5rem 0.6rem black;
+  margin-top: 10vh;
 }
 
 .pp-fp-projects-forward {
@@ -77,6 +74,18 @@
   font-weight: 400;
 }
 
+.pp-fp-desc {
+  font-family: 'Outfit';
+  font-size: 2vh;
+  font-weight: 300;
+  line-height: 2vh;
+  letter-spacing: 0em;
+  text-align: left;
+  width: fit-content;
+  margin-right: 80vw;
+  margin-top: 3vh;
+}
+
 .pp-fp-project-text p {
   max-width: 250px;
   font-size: 2vh;
@@ -90,8 +99,9 @@
   font-family: 'Space Mono';
   font-size: 3vh;
   position: relative;
-  width: 100px;
+  width: 10vw;
   margin-left: 5px;
+  margin-top: 10vh;
 }
 
 .view-pp-fp-project-button-2 {
@@ -100,9 +110,10 @@
   border: 1px solid #111111;
   box-shadow: -0.5rem 0.6rem;
   font-family: 'Space Mono';
-  font-size: 3vh;
+  font-size: 2vh;
   position: relative;
-  width: 40vw;
+  height: 10vw;
+  width: 35vw;
   margin-left: 5px;
 }
 
@@ -222,6 +233,10 @@
     margin-top: -10%;
     width: 33vw;
     height: 10vh;
+  }
+
+  .pp-fp-project-name {
+    font-size: 8vw;
   }
 
   .pp-fp-project-text p {

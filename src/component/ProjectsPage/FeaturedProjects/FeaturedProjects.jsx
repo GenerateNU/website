@@ -57,13 +57,13 @@ function DesktopFeaturedProjects({ handleProject, currentProject }) {
               className='pp-fp-projects-button pp-fp-projects-forward'
               onClick={() => handleProject(1)}
             >
-              <img src={Arrow}></img>
+              <img width={'40vh'} src={Arrow}></img>
             </button>
             <button
               className='pp-fp-projects-button pp-fp-projects-back'
               onClick={() => handleProject(-1)}
             >
-              <img src={Arrow}></img>
+              <img width={'40vh'} src={Arrow}></img>
             </button>
           </div>
         </div>
@@ -77,7 +77,7 @@ function DesktopFeaturedProjects({ handleProject, currentProject }) {
           <h2 className='pp-fp-project-team pp-fp-projects-desktop'>
             {currentProject.type}
           </h2>
-          <p>{currentProject.description}</p>
+          <div className='pp-fp-desc'>{currentProject.description}</div>
           <div className='view-pp-fp-project-div'>
             <a href={`/case-study/${currentProject.name.toLowerCase()}`}>
               <button className='view-pp-fp-project-button'>View</button>
@@ -102,7 +102,7 @@ function MobileFeaturedProjects({ handleProject, currentProject }) {
         </div>
         <div className='featured-pp-fp-project-buttons'>
           <div className='pp-fp-projects-mobile'>
-            <h1>{currentProject.name}</h1>
+            <h1 className='pp-fp-project-name'>{currentProject.name}</h1>
             <h2 className='pp-fp-project-team'>{currentProject.type}</h2>
           </div>
           <div className='mobile-view-pt'>

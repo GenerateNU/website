@@ -86,5 +86,5 @@
   display: block;
   margin-top: auto;
   padding: 10px 4px 10px 80px;
-  background: transparent no-repeat 20px url(./search.svg); /* Replace with your own image */
+  background: transparent no-repeat 20px url(./search.svg);
 }
