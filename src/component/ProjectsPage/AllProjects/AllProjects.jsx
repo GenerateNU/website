@@ -9,40 +9,16 @@ import Jurni from '../../../assets/images/projectspage/jurni.svg'
 import ShowNxt from '../../../assets/images/projectspage/shownxt.svg'
 import HotDate from '../../../assets/images/projectspage/hotdate.svg'
 import AutoPasser from '../../../assets/images/projectspage/autopasser.svg'
-import { InputAdornment } from '@material-ui/core'
 
 const SearchBar = ({ setSearchQuery }) => (
-  <form>
-    <TextField
-      onInput={(e) => {
-        setSearchQuery(e.target.value)
-      }}
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position='start'>
-            <SearchIcon
-              style={{
-                marginTop: '40px',
-                fill: 'grey',
-                width: '50px',
-                height: '50px'
-              }}
-            />
-          </InputAdornment>
-        ),
-        inputProps: {
-          style: { fontSize: '3em', marginTop: '40px' }
-        },
-        style: {
-          height: '140px',
-          width: '75vw',
-
-          justifyContent: 'center'
-        }
-      }}
-      variant='outlined'
-    />
-  </form>
+  <input
+    className='search-bar search-icon'
+    placeholder='Search...'
+    style={{
+      border: '1px #D9D9D9 solid'
+    }}
+    onChange={(e) => setSearchQuery(e.target.value)}
+  />
 )
 
 const filterData = (query, data) => {

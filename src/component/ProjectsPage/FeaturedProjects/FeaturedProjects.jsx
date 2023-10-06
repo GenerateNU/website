@@ -3,10 +3,13 @@ import NavBar from '../../NavBar'
 import './style.css'
 import Arrow from '../../../assets/images/projectspage/arrowbutton.svg'
 import Projects from '../../../data/featuredProjectData.js'
+import useWebsite from '../../../shared/useWebsite'
 
 export default function FeaturedProjects() {
   const [currentProject, setCurrentProject] = useState(Projects[0])
+  const isWebsite = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
 
   const handleProject = (dir) => {
     const currentIndex = Projects.indexOf(currentProject)
@@ -21,7 +24,7 @@ export default function FeaturedProjects() {
         <NavBar />
       </div>
       <div className='featured-pp-fp-projects'>
-        {isBigScreen ? (
+        {!mobile ? (
           <DesktopFeaturedProjects
             handleProject={handleProject}
             currentProject={currentProject}
@@ -121,13 +124,13 @@ function MobileFeaturedProjects({ handleProject, currentProject }) {
                 className='pp-fp-projects-button-2 pp-fp-projects-forward'
                 onClick={() => handleProject(1)}
               >
-                <img src={Arrow}></img>
+                <img width={40} src={Arrow}></img>
               </button>
               <button
                 className='pp-fp-projects-button-2 pp-fp-projects-back'
                 onClick={() => handleProject(-1)}
               >
-                <img src={Arrow}></img>
+                <img width={40} src={Arrow}></img>
               </button>
             </div>
           </div>

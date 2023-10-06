@@ -37,7 +37,7 @@
   display: none;
 }
 
-@media only screen and (max-device-width: 650px) {
+@media only screen and (max-width: 650px), (max-device-width: 650px) {
   .all-projects-container {
     width: 100vw !important;
     flex-direction: column;
@@ -71,12 +71,20 @@
 
   .search-bar {
     display: block;
-    align-self: center;
-    justify-content: center;
-    flex-direction: column;
     z-index: 1;
-    width: 100vw;
-    padding-left: 5vw;
-    padding-bottom: 10vh;
+    margin-right: auto;
+    margin-left: 3vw;
+    width: 70vw;
+    height: 4.5vh;
+    margin-bottom: 5vh;
+    font-size: 2vh;
   }
+}
+
+.search-icon {
+  border: 1px solid #555;
+  display: block;
+  margin-top: auto;
+  padding: 10px 4px 10px 80px;
+  background: transparent no-repeat 20px url(./search.svg); /* Replace with your own image */
 }

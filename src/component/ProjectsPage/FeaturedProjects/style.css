@@ -136,7 +136,7 @@
   justify-content: center;
 }
 
-@media only screen and (max-device-width: 650px) {
+@media only screen and (max-width: 650px), (max-device-width: 650px) {
   .featured-pp-fp-projects {
     width: unset;
     margin-bottom: 50px;
@@ -258,11 +258,9 @@
   .pp-fp-projects-button-2 {
     background: #ffffff;
     border: 1px solid black;
-    width: 90px;
-    height: 90px;
     box-shadow: -0.5rem 0.6rem black;
-    width: 120px;
-    height: 120px;
+    width: 12vw;
+    height: 12vw;
     display: block;
   }
 
