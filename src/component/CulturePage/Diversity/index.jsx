@@ -5,7 +5,7 @@ const desktopContent = () => (
   <div className='container'>
     <div className='vertical-div'>
       <span className='outline'>Y</span>
-      <span style={{ color: '#6FCF97' }} className='vertical'>
+      <span style={{ color: '#6FCF97' }} className='outline'>
         DIVERSITY
       </span>
       <span className='outline'>DIVERSITY</span>

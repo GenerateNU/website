@@ -4,7 +4,7 @@
 
 .culture-text {
   font-family: 'Outfit 300';
-  font-size: 25px;
+  font-size: 24px;
   line-height: 30px;
 }
 
@@ -18,7 +18,7 @@
   font-size: 100px;
 }
 
-@media (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .culture-text {
     color: #111111;
     font-size: 40px;
