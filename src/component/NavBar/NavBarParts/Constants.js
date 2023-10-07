@@ -1,0 +1,12 @@
+export const MOBILE_LEFT_V_LINE = 10;
+export const MOBILE_RIGHT_V_LINE = 90;
+export const DESKTOP_LEFT_V_LINE = 5;
+export const DESKTOP_RIGHT_V_LINE = 90;
+export const TOP_H_LINE = 5;
+export const BOTTOM_H_LINE = 90;
+export const MOBILE_MENU_TEXT_LEFT = 17.5;
+export const DESKTOP_MENU_TEXT_LEFT = 12.5;
+export const MENU_TEXT_TOP = 6;
+export const MOBILE_N_DOTS = 7;
+export const DESKTOP_N_DOTS = 4;
+export const YELLOW = "#ffbf3c";

@@ -2,7 +2,7 @@ import React from "react";
 import cooltriangle from "../../AboutPage/GrowthMantra/Green.png";
 import leftcarrot from "../../AboutPage/GrowthMantra/chevron.png";
 import mountains from "../../AboutPage/GrowthMantra/Mountains.svg";
-import "./style.css";
+import './style.css';
 
 
 const GrowthMantra = () => {

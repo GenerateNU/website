@@ -15,25 +15,25 @@
 }
 
 h2 {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 7vw;
   line-height: 100%;
 }
 
 h3 {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 6.5vw;
   line-height: 100%;
 }
 
 h5 {
-  font-family: "Outfit 300";
+  font-family: 'Outfit 300';
   font-size: 2.3vw;
   line-height: 85%;
 }
 
 p {
-  font-family: "Outfit 300";
+  font-family: 'Outfit 300';
   font-size: 1.2vw;
   line-height: 150%;
 }
@@ -45,8 +45,8 @@ p {
 }
 
 .logo {
-  max-width: 75%;
-  max-height: 75%;
+  max-width: 80%;
+  height: auto;
 }
 
 .fit-content {

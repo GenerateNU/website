@@ -1,8 +1,7 @@
 .logo {
   width: 25vmin;
-  padding: 4vmin;
+  margin-left: 40%;
   object-fit: contain;
-
 }
 
 .image {
