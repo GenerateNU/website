@@ -59,6 +59,8 @@
 
 @media (max-width: 650px) or (max-device-width: 650px) {
   .stats-mob {
+    margin-top: -1px;
+    padding-top: 5vw;
     width: 100vw;
     height: auto;
     padding-bottom: 10vw;

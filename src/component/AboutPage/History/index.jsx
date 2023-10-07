@@ -90,7 +90,7 @@ export default function History() {
             </Col>
           </Row>
         </Col>
-        <Col className='bg-white h-100 p-5 pt-5 our-history border'>
+        <Col className='bg-white h-100 p-5 pt-5 our-history'>
           <h3 className='vh-40 mt-5 pb-5 mb-0 text-uppercase text-black our-history-header'>
             Our History
           </h3>
@@ -153,7 +153,7 @@ export default function History() {
             Our History
           </h3>
           <p className='our-history-text-style'>
-            There was a hole in Northeastern University’s entrepreneurial
+            There was a hole in Northeastern University's entrepreneurial
             ecosystem, and a lack of opportunities for student ventures to
             elicit support from product builders. To fix that, Generate was
             created to bridge the gap for students, and our journey began.
