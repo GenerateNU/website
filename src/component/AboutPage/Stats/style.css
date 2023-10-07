@@ -23,7 +23,6 @@
 }
 
 .stat-title {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +31,7 @@
   margin-right: 20%;
 }
 
-  /*
+/*
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,8 +39,6 @@
   width: 50%;
   margin-right: 20%;
   */
-
-
 
 .stat_number {
   display: flex;
@@ -52,64 +49,54 @@
   width: 105px;
 }
 
-@media only screen and (max-device-width: 650px) {
+/* @media only screen and (max-device-width: 650px) {
   .today-stats-container {
     flex-direction: column;
-    height: unset!important;
+    height: unset !important;
     margin-top: -1px;
   }
-}
+} */
 
-  @media only screen and (min-device-width: 650px) {
-    .today-stats-container {
-      flex-direction: row;
-      height: unset!important;
-      margin-top: 0px;
-      position: relatieve;
-      width: 786px;
-    }
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .stats-mob {
+    width: 100vw;
+    height: auto;
+    padding-bottom: 10vw;
+  }
 
   .today-container {
     width: 100%;
     height: unset;
-
+    justify-content: center;
   }
 
   .today-container h1 {
-    font-size: 75pxpx;
-    height: min-content!important;
+    font-size: 12vw;
+    height: min-content !important;
     font-family: 'Space Mono 700';
     text-align: center;
   }
 
-  .stats-container {
-    flex-direction: row;
-    height: unset;
-    width: unset;
-    flex-wrap: wrap;
+  .stats-container-mob {
+    margin-left: 13.08vw;
+    margin-right: 13.08vw;
+    overflow: wrap;
+    /* justify-content: space-between; */
   }
 
-  .stat-container {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .stat-title {
-    height: unset;
-    width: unset;
-    margin-right: 0;
-    font-family: 'Space Mono';
-    font-size: 24px;
+  .stat-container-mob {
+    width: 36.9vw;
+    height: 35vw;
     text-align: center;
-    right: 158px;
-    top: -60px;
-    position: relative;
-  
+    overflow: hidden;
   }
 
-  .stat-number {
-    font-family: 'Outfit 400';
-    font-weight: bolder;
-    font-size: 70px;
+  .stat-title-mob {
+    font-size: 5.64vw;
+    text-align: center;
+  }
+
+  .stat-number-mob {
+    font-size: 17vw;
   }
 }
