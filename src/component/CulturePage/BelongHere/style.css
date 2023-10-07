@@ -71,21 +71,21 @@
     align-items: flex-start;
     height: 200vw;
     padding: 5%;
-    margin-bottom: 300px;
+    margin-bottom: 30vw;
   }
 
   .heading-text {
     color: #187dff;
-    font-size: 90px;
-    line-height: 100px;
+    font-size: 9vw;
+    line-height: 10vw;
     padding-top: 10%;
     white-space: nowrap;
   }
 
   .headingTwo-text {
     color: #187dff;
-    font-size: 90px;
-    line-height: 100px;
+    font-size: 9vw;
+    line-height: 10vw;
     padding-top: 10%;
     white-space: normal;
     width: 20vw;
@@ -93,7 +93,7 @@
 
   .graphic {
     position: relative;
-    bottom: 100px;
+    bottom: 10vw;
     height: 100vw;
     transform: rotate(-90deg);
     margin-left: 50vw;

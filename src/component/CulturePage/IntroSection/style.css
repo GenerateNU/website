@@ -56,7 +56,7 @@
   line-height: 220px;
 }
 
-@media (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .intro-container-mobile {
     display: flex;
     flex-direction: column;
@@ -80,15 +80,15 @@
     margin-top: 10%;
     margin-right: 10%;
     margin-left: auto;
-    font-size: 85px;
-    line-height: 85px;
+    font-size: 8.5vw;
+    line-height: 8.5vw;
   }
 
   .our-culture-big {
     padding-left: 20%;
     padding-top: 10%;
-    font-size: 400px;
-    line-height: 400px;
+    font-size: 40vw;
+    line-height: 40vw;
     transform: rotate(90deg);
     text-transform: uppercase;
   }

@@ -38,11 +38,11 @@
 
   .inclusion-outline {
     position: relative;
-    margin-right: 50px;
+    margin-right: 5vw;
     writing-mode: horizontal-tb;
-    font-size: 90px;
+    font-size: 9vw;
     color: white;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 0.2vw;
     -webkit-text-stroke-color: #ffbf3c;
   }
 }

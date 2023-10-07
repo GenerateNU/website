@@ -7,11 +7,11 @@
 .event-col {
   width: 500px;
   max-width: none;
-  margin-top: -2.25vw;/*-65px;*/
+  margin-top: -2.25vw; /*-65px;*/
 }
 
 .moral-budget-title {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-style: normal;
   font-size: 48px;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
 }
 
 .orientation-title {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-style: normal;
   font-size: 48px;
 
@@ -43,7 +43,6 @@
   text-align: left;
 
   margin-top: 60px;
-  
 }
 
 .orientation-text {
@@ -58,27 +57,63 @@
   column-gap: 100px;
 }
 
-
 .inclined-image {
   width: 1000px;
   aspect-ratio: 1.7/1;
   position: relative;
   left: -500px;
   top: 70px;
-
 }
 
 .shiftLeft {
   margin-left: 20px;
 }
 
-
 .shiftleft3 {
   margin-right: 50px;
 }
 
- .inclined-img-container {
+.inclined-img-container {
   width: 100px;
-} 
+}
 
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .events-2-container {
+    display: flex;
+    flex-direction: column;
+    height: 340vw;
+  }
 
+  .events-2-section-header-top {
+    color: #187dff;
+    font-size: 12vw;
+    font-family: 'Space Mono 700';
+    text-transform: uppercase;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 8vw;
+  }
+
+  .events-2-section-header {
+    color: #187dff;
+    font-size: 9vw;
+    font-family: 'Space Mono 700';
+    text-transform: uppercase;
+    word-wrap: break-word;
+    margin-left: 7vw;
+    margin-top: 20vw;
+    line-height: 9vw;
+  }
+
+  .events-2-text {
+    color: black;
+    font-size: 4.5vw;
+    font-family: 'Outfit 300';
+    line-height: 6.7vw;
+    word-wrap: break-word;
+    height: auto;
+    width: auto;
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+}
