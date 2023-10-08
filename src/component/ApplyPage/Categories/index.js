@@ -26,18 +26,18 @@ export default function Categories(props) {
             }
         }
 
-        const getCategories = async () => {
-            const data = await findAllCategories();
-            setCategories(data);  
+        const getCategories = async() => {
+            //const data = await findAllCategories();
+            setCategories(CATEGORIES);
         };
         getCategories();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     //Management, Client, Software, Hardware, Operations and Engagement
 
     useEffect(() => {
-        const getPositions = async () => {
+        const getPositions = async() => {
             var data = await findPositionsByCategory('Management');
             setManagement(data);
             data = await findPositionsByCategory('Clients');
@@ -67,124 +67,159 @@ export default function Categories(props) {
                 }
             })
             navigate(`/apply/${selected.toLowerCase()}`);
-        } 
-        else { 
+        } else {
             navigate(`/apply`);
         }
     }
 
     return (
         categories.length > 0 &&
-        <div>
-            {
-                <div className="accordion">
+        <
+        div > { <
+            div className = "accordion" >
 
-                    <div className="toggle-btn" onClick={() => handleSelection('management')}
-                        id="toggle" name="toggle">
-                        {'management'}
-                    </div>
-                    <div id={'management'} className="accordion-content">
-                        {
-                            management.map(managementPositions =>
-                                <div className='accordion_link'
-                                    key={managementPositions.id}>
-                                    <Link style={{ textDecoration: 'none', color: '#187DFF' }} to={`/positions/${managementPositions.id}`}>
-                                        {managementPositions.attributes.positionTitle}
-                                    </Link>
-                                </div>
-                            )
-                        }
-                    </div>
-
-
-                    <div className="toggle-btn" onClick={() => handleSelection('clients')}
-                        id="toggle" name="toggle">
-                        {'clients'}
-                    </div>
-                    <div id={'clients'} className="accordion-content">
-                        {
-                            clients.map(clientsPositions =>
-                                <div className='accordion_link'
-                                    key={clientsPositions.id}>
-                                    <Link style={{ textDecoration: 'none', color: '#187DFF' }} to={`/positions/${clientsPositions.id}`}>
-                                        {clientsPositions.attributes.positionTitle}
-                                    </Link>
-                                </div>
-                            )
-                        }
-                    </div>
+            <
+            div className = "toggle-btn"
+            onClick = {
+                () => handleSelection('management') }
+            id = "toggle"
+            name = "toggle" > { 'management' } <
+            /div> <
+            div id = { 'management' }
+            className = "accordion-content" > {
+                management.map(managementPositions =>
+                    <
+                    div className = 'accordion_link'
+                    key = { managementPositions.id } >
+                    <
+                    Link style = {
+                        { textDecoration: 'none', color: '#187DFF' } }
+                    to = { `/positions/${managementPositions.id}` } > { managementPositions.attributes.positionTitle } <
+                    /Link> <
+                    /div>
+                )
+            } <
+            /div>
 
 
-                    <div className="toggle-btn" onClick={() => handleSelection('software')}
-                        id="toggle" name="toggle">
-                        {'software'}
-                    </div>
-                    <div id={'software'} className="accordion-content">
-                        {
-                            software.map(softwarePositions =>
-                                <div className='accordion_link'
-                                    key={softwarePositions.id}>
-                                    <Link style={{ textDecoration: 'none', color: '#187DFF' }} to={`/positions/${softwarePositions.id}`}>
-                                        {softwarePositions.attributes.positionTitle}
-                                    </Link>
-                                </div>
-                            )
-                        }
-                    </div>
-
-                    <div className="toggle-btn" onClick={() => handleSelection('hardware')}
-                        id="toggle" name="toggle">
-                        {'hardware'}
-                    </div>
-                    <div id={'hardware'} className="accordion-content">
-                        {
-                            hardware.map(hardwarePositions =>
-                                <div className='accordion_link'
-                                    key={hardwarePositions.id}>
-                                    <Link style={{ textDecoration: 'none', color: '#187DFF' }} to={`/positions/${hardwarePositions.id}`}>
-                                        {hardwarePositions.attributes.positionTitle}
-                                    </Link>
-                                </div>
-                            )
-                        }
-                    </div>
-
-                    <div className="toggle-btn" onClick={() => handleSelection('operations')}
-                        id="toggle" name="toggle">
-                        {'operations'}
-                    </div>
-                    <div id={'operations'} className="accordion-content">
-                        {
-                            operations.map(operationsPositions =>
-                                <div className='accordion_link'
-                                    key={operationsPositions.id}>
-                                    <Link style={{ textDecoration: 'none', color: '#187DFF' }} to={`/positions/${operationsPositions.id}`}>
-                                        {operationsPositions.attributes.positionTitle}
-                                    </Link>
-                                </div>
-                            )
-                        }
-                    </div>
+            <
+            div className = "toggle-btn"
+            onClick = {
+                () => handleSelection('clients') }
+            id = "toggle"
+            name = "toggle" > { 'clients' } <
+            /div> <
+            div id = { 'clients' }
+            className = "accordion-content" > {
+                clients.map(clientsPositions =>
+                    <
+                    div className = 'accordion_link'
+                    key = { clientsPositions.id } >
+                    <
+                    Link style = {
+                        { textDecoration: 'none', color: '#187DFF' } }
+                    to = { `/positions/${clientsPositions.id}` } > { clientsPositions.attributes.positionTitle } <
+                    /Link> <
+                    /div>
+                )
+            } <
+            /div>
 
 
-                    <div className="toggle-btn" onClick={() => handleSelection('engagement')}
-                        id="toggle" name="toggle">
-                        {'engagement'}
-                    </div>
-                    <div id={'engagement'} className="accordion-content">
-                        {
-                            engagement.map(engagementPositions =>
-                                <div className='accordion_link'
-                                    key={engagementPositions.id}>
-                                    <Link style={{ textDecoration: 'none', color: '#187DFF' }} to={`/positions/${engagementPositions.id}`}>
-                                        {engagementPositions.attributes.positionTitle}
-                                    </Link>
-                                </div>
-                            )
-                        }
-                    </div>-
-                </div>
-            }
-        </div>
+            <
+            div className = "toggle-btn"
+            onClick = {
+                () => handleSelection('software') }
+            id = "toggle"
+            name = "toggle" > { 'software' } <
+            /div> <
+            div id = { 'software' }
+            className = "accordion-content" > {
+                software.map(softwarePositions =>
+                    <
+                    div className = 'accordion_link'
+                    key = { softwarePositions.id } >
+                    <
+                    Link style = {
+                        { textDecoration: 'none', color: '#187DFF' } }
+                    to = { `/positions/${softwarePositions.id}` } > { softwarePositions.attributes.positionTitle } <
+                    /Link> <
+                    /div>
+                )
+            } <
+            /div>
+
+            <
+            div className = "toggle-btn"
+            onClick = {
+                () => handleSelection('hardware') }
+            id = "toggle"
+            name = "toggle" > { 'hardware' } <
+            /div> <
+            div id = { 'hardware' }
+            className = "accordion-content" > {
+                hardware.map(hardwarePositions =>
+                    <
+                    div className = 'accordion_link'
+                    key = { hardwarePositions.id } >
+                    <
+                    Link style = {
+                        { textDecoration: 'none', color: '#187DFF' } }
+                    to = { `/positions/${hardwarePositions.id}` } > { hardwarePositions.attributes.positionTitle } <
+                    /Link> <
+                    /div>
+                )
+            } <
+            /div>
+
+            <
+            div className = "toggle-btn"
+            onClick = {
+                () => handleSelection('operations') }
+            id = "toggle"
+            name = "toggle" > { 'operations' } <
+            /div> <
+            div id = { 'operations' }
+            className = "accordion-content" > {
+                operations.map(operationsPositions =>
+                    <
+                    div className = 'accordion_link'
+                    key = { operationsPositions.id } >
+                    <
+                    Link style = {
+                        { textDecoration: 'none', color: '#187DFF' } }
+                    to = { `/positions/${operationsPositions.id}` } > { operationsPositions.attributes.positionTitle } <
+                    /Link> <
+                    /div>
+                )
+            } <
+            /div>
+
+
+            <
+            div className = "toggle-btn"
+            onClick = {
+                () => handleSelection('engagement') }
+            id = "toggle"
+            name = "toggle" > { 'engagement' } <
+            /div> <
+            div id = { 'engagement' }
+            className = "accordion-content" > {
+                engagement.map(engagementPositions =>
+                    <
+                    div className = 'accordion_link'
+                    key = { engagementPositions.id } >
+                    <
+                    Link style = {
+                        { textDecoration: 'none', color: '#187DFF' } }
+                    to = { `/positions/${engagementPositions.id}` } > { engagementPositions.attributes.positionTitle } <
+                    /Link> <
+                    /div>
+                )
+            } <
+            /div>- <
+            /div>
+        } <
+        /div>
     );
 }
