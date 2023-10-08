@@ -9,6 +9,7 @@ import CulturePage from './component/CulturePage'
 import TeamsPage from './pages/TeamsPage'
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams'
 import ProjectsPage from './component/ProjectsPage'
+import CaseStudy from './component/CaseStudyPage'
 
 /**
  *
@@ -22,33 +23,23 @@ export default function App() {
         <div>
           <ScrollToTop />
           <Routes>
-            <Route path='/' element={<LandingPageV2 />}>
-              {' '}
-            </Route>{' '}
+            <Route path='/' element={<LandingPageV2 />} />
             <Route path='/apply' element={<ApplyPage />}>
-              <Route path=':team' element={<ApplyPage />} />{' '}
-            </Route>{' '}
-            <Route path='/positions/:id' element={<Position />}>
-              {' '}
-            </Route>{' '}
-            <Route path='/about' element={<AboutPage />}>
-              {' '}
-            </Route>{' '}
-            <Route path='/culture' element={<CulturePage />}>
-              {' '}
-            </Route>{' '}
-            <Route path='/teams' element={<TeamsPage />}>
-              {' '}
-            </Route>{' '}
-            <Route path='/projects' element={<ProjectsPage />}>
-              {' '}
-            </Route>{' '}
-            <Route path='/teams-expanded/:team' element={<ExpandedTeamsPage />}>
-              {' '}
-            </Route>{' '}
-          </Routes>{' '}
-        </div>{' '}
-      </Router>{' '}
+              <Route path=':team' element={<ApplyPage />} />
+            </Route>
+            <Route path='/positions/:id' element={<Position />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/culture' element={<CulturePage />} />
+            <Route path='/teams' element={<TeamsPage />} />
+            <Route path='/projects' element={<ProjectsPage />} />
+            <Route path='/case-study/:project' element={<CaseStudy />} />
+            <Route
+              path='/teams-expanded/:team'
+              element={<ExpandedTeamsPage />}
+            />
+          </Routes>
+        </div>
+      </Router>
     </div>
   )
 }

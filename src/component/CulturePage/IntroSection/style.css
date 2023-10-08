@@ -10,7 +10,7 @@
 .generateMascotContainer {
   position: absolute;
   left: 650px;
-  top: /*-2px;*/ 1.5vw;
+  top: 25px; /*max(22vw, 275px);*/
 }
 
 .generateMascot {
@@ -21,7 +21,7 @@
 .our-culture-quote-positioning {
   position: absolute;
   left: 510px;
-  top: 19.5vw; /*max(21vw, 267px);*/
+  top: 305px; /*max(22vw, 275px);*/
   min-height: 200px;
   height: 160px;
   min-width: 400px;
@@ -42,7 +42,7 @@
 .our-culture-big-positioning {
   position: absolute;
   left: 10px;
-  top: 20.75vw; /*max(22vw, 275px);*/
+  top: 337px; /*max(22vw, 275px);*/
   min-height: 200px;
   height: 150px;
   min-width: 400px;
@@ -55,8 +55,8 @@
   font-size: 250px;
   line-height: 220px;
 }
-
-@media (max-device-width: 650px) {
+/* The values should all be based on vw: font-sizes and margins */
+@media (max-width: 650px) or (max-device-width: 650px) {
   .intro-container-mobile {
     display: flex;
     flex-direction: column;
@@ -77,18 +77,18 @@
   .our-culture-quote {
     width: 40vw;
     height: auto;
-    margin-top: 10%;
-    margin-right: 10%;
-    margin-left: auto;
-    font-size: 85px;
-    line-height: 85px;
+    margin-top: 10vw;
+    margin-right: 10vw;
+    margin-left: 30vw;
+    font-size: 5vw;
+    line-height: 5vw;
   }
 
   .our-culture-big {
-    padding-left: 20%;
-    padding-top: 10%;
-    font-size: 400px;
-    line-height: 400px;
+    padding-left: 0vw;
+    padding-top: 10vw;
+    font-size: 50vw;
+    line-height: 40vw;
     transform: rotate(90deg);
     text-transform: uppercase;
   }
