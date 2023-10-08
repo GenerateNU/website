@@ -198,14 +198,14 @@
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url("../../../assets/images/landingpage/weare/landing.jpg");
+    url('../../../assets/images/landingpage/weare/landing.jpg');
   background-size: cover;
 }
 
 .wearetext {
   width: 30vh;
   padding-left: 10px;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 700;
   font-size: 4.39vh;
@@ -221,7 +221,7 @@
   /*height: 45.12vh;
   top: 12.19vh; */
 
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 700;
   font-size: 17vw;
@@ -231,14 +231,20 @@
   color: #ffffff;
 }
 
+.mobilePageContainer {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  padding: 5vw;
+  padding-top: 25vh;
+}
+
 .comingsoontext {
   display: inline;
   position: relative;
-  width: 110.39vh;
-  height: 30.12vh;
-  left: 1.17vh;
+  width: 100vw;
   top: 6vh;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 700;
   font-size: 10vh;
@@ -281,7 +287,7 @@
   left: 1340px;
   top: 792px;
 
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -298,7 +304,7 @@
   left: 160.28vh;
   top: 100.51vh;
 
-  background-image: url("../../../assets/images/landingpage/weare/ArrowSideways.png");
+  background-image: url('../../../assets/images/landingpage/weare/ArrowSideways.png');
   background-size: cover;
 }
 
@@ -309,7 +315,7 @@
   left: 1230px;
   top: 762px;
 
-  background-image: url("../../../assets/images/landingpage/weare/WhiteBox.png");
+  background-image: url('../../../assets/images/landingpage/weare/WhiteBox.png');
   background-size: cover;
 }
 
@@ -330,7 +336,7 @@
 
 .scrolltext {
   font-size: 20px;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-weight: 400;
   color: #ffffff;
 }
@@ -343,13 +349,7 @@
 }
 
 .wearetextmobile {
-  position: relative;
-  width: 16.2vh;
-  height: 6.46vh;
-  left: 1.24vh;
-  top: 19vh;
-
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 700;
   font-size: 2.79vh;
@@ -360,16 +360,12 @@
 
 .generatetextmobile {
   /* generate */
-  position: relative;
-  width: 149.39vh;
-  height: 45.12vh;
-  top: 11vh;
 
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 700;
   font-size: 8vh;
-  line-height: 25.12vh;
+  line-height: 2vh;
   text-transform: uppercase;
 
   color: #ffffff;
@@ -377,44 +373,47 @@
 
 .northeasternbest {
   /* generate */
+  /*
   position: relative;
   height: 6.46vh;
   right: -18vh;
   top: -20vh;
-  font-family: "Space Mono";
+  */
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 10;
-  font-size: 1.79vh;
-  line-height: 10.46vh;
+  font-size: 2.2vh;
   color: #ffffff;
 }
 
 .productdevelopment {
   /* generate */
+  /*
   position: relative;
   height: 6.46vh;
   right: -18vh;
   top: -24vh;
-  font-family: "Space Mono";
+  */
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 10;
-  font-size: 1.79vh;
-  line-height: 10.46vh;
+  font-size: 2.2vh;
   text-transform: lowercase;
   color: #ffbf00;
 }
 
 .studio {
   /* generate */
+  /*
   position: relative;
   height: 6.46vh;
   right: -32vh;
   top: -28vh;
-  font-family: "Space Mono";
+  */
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 10;
-  font-size: 1.79vh;
-  line-height: 10.46vh;
+  font-size: 2.2vh;
   text-transform: lowercase;
   color: white;
 }
@@ -424,7 +423,7 @@
   height: 210vh;
   right: -19vh;
   top: 5vh;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 10;
   font-size: 1.79vh;
@@ -457,12 +456,12 @@
 
   .generatetext {
     line-height: 5vh;
-    font-family: "Space Mono 700";
+    font-family: 'Space Mono 700';
   }
   .wearetext {
     font-size: 3vh;
     line-height: 7vh;
-    font-family: "Space Mono 700";
+    font-family: 'Space Mono 700';
   }
 
   .scroll {
@@ -481,20 +480,31 @@
   .comingsoontext {
     display: none;
   }
+  .mobilePageContainer {
+    display: none;
+  }
 }
 
-@media only screen and (max-device-width: 375px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .desktop {
     display: none;
   }
   .comingsoontext {
-    display: inline;
+    display: flex;
+    width: 100vw;
   }
   .wearetextmobile {
-    margin-left: 6vh;
+    font-size: 6vw;
   }
   .generatetextmobile {
-    margin-left: 6vh;
+    font-size: 18.5vw;
+  }
+  .text-container-mobile {
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    padding: 5vw;
+    margin-left: 28.5vw;
   }
   .northeasternbest {
     margin-left: 6vh;

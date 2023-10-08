@@ -18,6 +18,7 @@ a {
   .alignItemsRight {
     display: flex;
     flex-direction: row;
+    padding: 5vw;
   }
 
   .DevelopmentWheelTwo {
