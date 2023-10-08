@@ -1,73 +1,73 @@
 .project-card {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-teams {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-    height: min(215px, 30vh);
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  height: min(215px, 30vh);
+  justify-content: space-between;
 }
 
 .project-teams img {
-    height: 48%;
+  height: 48%;
 }
 
 .project-card .project-name {
-    font-family: "Space Mono 700";
-    font-size: 5vh;
-    color: black;
-    text-align: left;
+  font-family: 'Space Mono 700';
+  font-size: 5vh;
+  color: black;
+  text-align: left;
 }
 
 .project-link {
-    box-shadow: -2vh 2vh black;
-    height: -moz-fit-content;
-    height: fit-content;
+  box-shadow: -2vh 2vh black;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .project-images {
-    display: flex;
+  display: flex;
 }
 
 .project-link img {
-    height: min(215px, 30vh);
-    width: auto;
+  height: min(215px, 30vh);
+  width: auto;
 }
 
-@media only screen and (max-device-width: 650px) {
-    .project-card {
-        margin-bottom: 100px;
-    }
+@media only screen and (max-device-width: 650px), (max-width: 650px) {
+  .project-card {
+    margin-bottom: 100px;
+  }
 
-    .project-images {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
+  .project-images {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .project-card .project-name {
-        text-align: center;
-    }
+  .project-card .project-name {
+    text-align: center;
+  }
 
-    .project-link img {
-        width: 60vw;
-        height: auto;
-    }
+  .project-link img {
+    width: 60vw;
+    height: auto;
+  }
 
-    .project-teams {
-        height: unset;
-        flex-direction: row;
-        width: 60vw;
-        margin-left: 0;
-        justify-content: space-evenly;
-    }
+  .project-teams {
+    height: unset;
+    flex-direction: row;
+    width: 60vw;
+    margin-left: 0;
+    justify-content: space-evenly;
+  }
 
-    .project-teams img {
-        transform: rotate(-90deg);
-        width: 10%;
-        height: auto;
-    }
+  .project-teams img {
+    transform: rotate(-90deg);
+    width: 10%;
+    height: auto;
+  }
 }
