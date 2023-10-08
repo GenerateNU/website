@@ -1,53 +1,132 @@
 .why-gen-row-width {
-    width: 60vw;
+  width: 60vw;
 }
-  
+
 .why-gen-goodies {
-    color: #FF5751;
-    font-size: 1.7vw;
-    line-height: 100%;
-    font-family: 'Space Mono';
-    margin-right: 8%;
+  color: #ff5751;
+  font-size: 1.7vw;
+  line-height: 100%;
+  font-family: 'Space Mono';
+  margin-right: 8%;
 }
 
 .why-gen-why-generate {
-    color: white;
-    font-size: 6vw;
-    line-height: 100%;
-    font-family: 'Space Mono 700';
+  color: white;
+  font-size: 6vw;
+  line-height: 100%;
+  font-family: 'Space Mono 700';
 }
 
 .why-gen-section {
-    font-family: 'Space Mono 700';
-    color: white;
-    font-size: 3.5vw;
-    line-height: 75%;
+  font-family: 'Space Mono 700';
+  color: white;
+  font-size: 3.5vw;
+  line-height: 75%;
 }
 
 .why-gen-fit-image {
-    max-height: 50%;
-    max-width: 100%;
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
+  max-height: 50%;
+  max-width: 100%;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
 }
 
 .why-gen-text {
-    height: 50%;
+  height: 50%;
+  color: white;
+  font-size: 1.4vw;
+  line-height: 160%;
+  font-family: 'Outfit 300';
+  margin-top: 8%;
+  text-align: left;
+}
+
+.section-text {
+  font-size: calc(min(5vh, 5vw));
+}
+
+.border {
+  border-radius: 1px;
+  border-color: white;
+  border-style: solid;
+}
+
+.why-gen-dsktop {
+  display: flex;
+}
+
+.why-gen-mob {
+  display: none;
+}
+
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .why-gen-dsktop {
+    display: none;
+  }
+
+  .why-gen-mob {
+    display: block;
+  }
+  .why-generate-header-mob {
+    margin-left: 6.15vw;
+    margin-right: 6.15vw;
+    margin-top: 12.8vw;
+    margin-bottom: 4.62vw;
+  }
+
+  .why-gen-goodies-mob {
+    font-size: 4.19vw;
+    color: #ff5751;
+    text-align: end;
+    line-height: 100%;
+  }
+
+  .why-gen-why-generate-mob {
+    font-size: 12.3vw;
     color: white;
-    font-size: 1.4vw;
-    line-height: 160%;
-    font-family: 'Outfit 300';
-    margin-top: 8%;
+    line-height: 120%; /* 57.6px */
+  }
+  .why-generate-body-mob {
+    margin-left: 6.15vw;
+    margin-right: 6.15vw;
+    margin-bottom: 16.4vw;
+  }
+
+  .why-generate-img-mob {
+    width: 87.69vw;
+    height: 87.69vw;
+
+    object-fit: cover;
+  }
+
+  .why-gen-text-mob {
+    font-size: 4.1vw;
+    color: white;
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 24px */
+    margin-top: 10.23vw;
+  }
+
+  .why-gen-carousel-mob {
+    margin-top: 6.15vw;
+    justify-content: center;
+  }
+
+  .why-gen-carousel-item-mob {
+    width: 43vw;
+    height: auto;
+    overflow: hidden;
     text-align: left;
-}
+    font-size: 6.15vw;
+    line-height: 12.05vw;
+    margin-bottom: 3vw;
+    text-decoration: underline;
+  }
 
-.section-text{
-    font-size: calc(min(5vh, 5vw));
-}
-
-.border{
-    border-radius: 1px;
-    border-color: white;
-    border-style: solid;
+  .underline {
+    text-decoration: underline;
+  }
 }
