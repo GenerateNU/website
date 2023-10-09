@@ -27,7 +27,7 @@ export default function Categories(props) {
   const [operations, setOperations] = useState([]);
   const [engagement, setEngagement] = useState([]);
   const navigatePosition = (team, id) => {
-    navigate(`/positions/${team}/${id}`)
+    return `/positions/${team}/${id}`;
   }
 
   useEffect(() => {
@@ -133,13 +133,12 @@ export default function Categories(props) {
             <div id={'clients'} className='accordion-content'>
               
               {clients && clients.map((clPos, index) => (
-                <div 
-                    className='accordion_link' 
-                    key={clPos.positionTitle}
+                <div className='accordion_link' key={clPos.positionTitle}>
+                    <Link
                     style={{ textDecoration: 'none', color: '#187DFF' }}
-                    onClick={() => navigatePosition(clPos.categoryType.toLowerCase(), index)}>
-                    {console.log(clPos.categoryType, clPos.positionTitle)}
-                    {clPos.positionTitle}
+                    to={navigatePosition(clPos.categoryType.toLowerCase(), index)}>
+                        {clPos.positionTitle}
+                    </Link>
                 </div>
               ))}
             </div>
