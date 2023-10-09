@@ -32,12 +32,15 @@ export function Roles({ team, children }) {
               : 'paragraph-subtitle'
           }`}
         >
-          {RolesJSON[team].Director.header}
+          {children
+            ? RolesJSON[team].Director.header.toUpperCase()
+            : RolesJSON[team].Director.header}
         </div>
         <div
           className={`role-desc ${
             mobile ? 'paragraph-text-mobile' : 'paragraph-text'
           }`}
+          style={{ marginBottom: '4vh' }}
         >
           {RolesJSON[team].Director.desc}
         </div>
@@ -60,7 +63,7 @@ export function Members({ team }) {
             mobile ? 'paragraph-title-mobile' : 'paragraph-title'
           }`}
         >
-          {role.header}
+          {role.header.toUpperCase()}
         </div>
         <MembersContainer role={role} mobile={mobile} />
       </>
@@ -91,37 +94,20 @@ function MembersContainer({ role, mobile }) {
       )}
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         {role.members.map((member, index) => {
-          return index % 2 == 0 ? (
-            <div
-              style={{
-                display: `${mobile ? '' : 'flex'}`,
-                flexDirection: 'row'
-              }}
-            >
+          return (
+            index % 2 == 0 && (
               <div
                 style={{
-                  marginBottom: '4vh',
-                  marginTop: '4vh',
-                  marginRight: '2vw'
+                  display: `${mobile ? '' : 'flex'}`,
+                  flexDirection: 'row'
                 }}
               >
                 <div
-                  className={`role-name ${
-                    mobile ? 'paragraph-subtitle-mobile' : 'paragraph-subtitle'
-                  }`}
+                  style={{
+                    marginRight: '2vw',
+                    marginTop: '2vh'
+                  }}
                 >
-                  {member.subheader}
-                </div>
-                <div
-                  className={`role-desc ${
-                    mobile ? 'paragraph-text-mobile' : 'paragraph-text'
-                  }`}
-                >
-                  {member.desc}
-                </div>
-              </div>
-              {index + 1 < role.members.length ? (
-                <div>
                   <div
                     className={`role-name ${
                       mobile
@@ -129,24 +115,46 @@ function MembersContainer({ role, mobile }) {
                         : 'paragraph-subtitle'
                     }`}
                   >
-                    {role.members[index + 1].subheader}
+                    {member.subheader}
                   </div>
                   <div
                     className={`role-desc ${
                       mobile ? 'paragraph-text-mobile' : 'paragraph-text'
                     }`}
                   >
-                    {role.members[index + 1].desc}
+                    {member.desc}
                   </div>
                 </div>
-              ) : index != 0 ? (
-                <div style={{ marginLeft: '40vw' }}></div>
-              ) : (
-                <></>
-              )}
-            </div>
-          ) : (
-            <></>
+                {index + 1 < role.members.length ? (
+                  <div
+                    style={{
+                      marginTop: '2vh'
+                    }}
+                  >
+                    <div
+                      className={`role-name ${
+                        mobile
+                          ? 'paragraph-subtitle-mobile'
+                          : 'paragraph-subtitle'
+                      }`}
+                    >
+                      {role.members[index + 1].subheader}
+                    </div>
+                    <div
+                      className={`role-desc ${
+                        mobile ? 'paragraph-text-mobile' : 'paragraph-text'
+                      }`}
+                    >
+                      {role.members[index + 1].desc}
+                    </div>
+                  </div>
+                ) : index != 0 ? (
+                  <div style={{ marginLeft: '40vw' }}></div>
+                ) : (
+                  <></>
+                )}
+              </div>
+            )
           )
         })}
       </div>
