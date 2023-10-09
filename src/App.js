@@ -28,6 +28,7 @@ export default function App() {
               <Route path=':team' element={<ApplyPage />} />
             </Route>
             <Route path='/positions/:id' element={<Position />} />
+            <Route path='/positions/:categoryType/:index' element={<Position />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/culture' element={<CulturePage />} />
             <Route path='/teams' element={<TeamsPage />} />
