@@ -33,10 +33,7 @@ export default function App() {
             <Route path='/teams' element={<TeamsPage />} />
             <Route path='/projects' element={<ProjectsPage />} />
             <Route path='/case-study/:project' element={<CaseStudy />} />
-            <Route
-              path='/teams-expanded/:team'
-              element={<ExpandedTeamsPage />}
-            />
+            <Route path='/teams-expanded/*' element={<ExpandedTeamsPage />} />
           </Routes>
         </div>
       </Router>
