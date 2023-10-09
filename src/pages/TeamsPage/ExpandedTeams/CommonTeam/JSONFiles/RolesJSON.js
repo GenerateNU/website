@@ -1,3 +1,4 @@
+// The Order of these is how it will appear on the management expanded teams page
 export const Teams = ['management', 'operations']
 
 export const RolesJSON = {

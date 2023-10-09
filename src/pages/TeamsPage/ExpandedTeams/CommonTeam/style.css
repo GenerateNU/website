@@ -94,7 +94,7 @@
   margin-top: 10vh;
   margin-bottom: 10vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
