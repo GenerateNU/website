@@ -23,7 +23,13 @@ export function Roles({ team, children }) {
       <div>
         <div
           className={`role-name ${
-            mobile ? 'paragraph-title-mobile' : 'paragraph-title'
+            children
+              ? mobile
+                ? 'paragraph-title-mobile'
+                : 'paragraph-title'
+              : mobile
+              ? 'paragraph-subtitle-mobile'
+              : 'paragraph-subtitle'
           }`}
         >
           {RolesJSON[team].Director.header}
@@ -65,27 +71,40 @@ export function Members({ team }) {
 function MembersContainer({ role, mobile }) {
   return (
     <div>
-      <div>
-        <div
-          className={`role-name ${
-            mobile ? 'paragraph-subtitle-mobile' : 'paragraph-subtitle'
-          }`}
-        >
-          {role.lead.subheader}
+      {role.lead && (
+        <div>
+          <div
+            className={`role-name ${
+              mobile ? 'paragraph-subtitle-mobile' : 'paragraph-subtitle'
+            }`}
+          >
+            {role.lead.subheader}
+          </div>
+          <div
+            className={`role-desc ${
+              mobile ? 'paragraph-text-mobile' : 'paragraph-text'
+            }`}
+          >
+            {role.lead.desc}
+          </div>
         </div>
-        <div
-          className={`role-desc ${
-            mobile ? 'paragraph-text-mobile' : 'paragraph-text'
-          }`}
-        >
-          {role.lead.desc}
-        </div>
-      </div>
+      )}
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         {role.members.map((member, index) => {
           return index % 2 == 0 ? (
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-              <div>
+            <div
+              style={{
+                display: `${mobile ? '' : 'flex'}`,
+                flexDirection: 'row'
+              }}
+            >
+              <div
+                style={{
+                  marginBottom: '4vh',
+                  marginTop: '4vh',
+                  marginRight: '2vw'
+                }}
+              >
                 <div
                   className={`role-name ${
                     mobile ? 'paragraph-subtitle-mobile' : 'paragraph-subtitle'

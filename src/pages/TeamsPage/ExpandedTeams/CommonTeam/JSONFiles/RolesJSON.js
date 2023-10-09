@@ -1,5 +1,11 @@
 // The Order of these is how it will appear on the management expanded teams page
-export const Teams = ['management', 'operations']
+export const Teams = [
+  'management',
+  'hardware',
+  'software',
+  'operations',
+  'engagement'
+]
 
 export const RolesJSON = {
   management: {
@@ -66,5 +72,23 @@ export const RolesJSON = {
         ]
       }
     ]
+  },
+  software: {
+    Director: {
+      header: 'Software Director',
+      desc: 'The software director is responsible for overseeing the software projects, the software chief team, and the software clients. As the software director you work closely with the Project leads, guiding them through the hiring, scoping, and product development process. You will work with the leads to support the projects and prodive educational content through workshops and our wiki. You will work with clients to provide resources and ensure they have a successful Generate experience. You will also work with the management team to cultivate close connections within the organization and uphold Generates values.'
+    }
+  },
+  hardware: {
+    Director: {
+      header: 'Hardware Director',
+      desc: 'The hardware director is responsible for overseeing the hardware projects, the hardware chief team, and the hardware clients. As the hardware director you work closely with the Project leads, guiding them through the hiring, scoping, and product development process. You will work with the chiefs to support the projects and produce educational content through workshops and our wiki. You will work with clients to provide resources and ensure they have a successful Generate experience. You will also work with the management team to cultivate close connections within the organization and uphold Generates values.'
+    }
+  },
+  engagement: {
+    Director: {
+      header: 'Engagement Director',
+      desc: 'The engagement director is responsible for managing student involvement in Generate. They oversee events, recruitment for both students and clients and our branding/marketing content. As engagement director, you will work with your team to create an inclusive culture where students can build lasting connections. You will oversee major events, manage outreach within the Northeastern community, and work internally to build a thriving culture.'
+    }
   }
 }

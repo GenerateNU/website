@@ -163,7 +163,7 @@
   text-transform: capitalize;
   color: black;
   margin-top: 10;
-  font-size: max(8vw, 32px);
+  font-size: max(5vw, 26px);
   line-height: max(12vw, 40px);
 }
 
