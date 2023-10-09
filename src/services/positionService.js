@@ -1,10 +1,12 @@
 import axios from 'axios';
 import qs from 'qs';
+import applicationsByTeams from '../data/ApplyData/allApps';
+
 
 const API_URI = process.env.REACT_APP_API_URI;
 const POSITIONS_API = `${API_URI}/positions`;
 
-export const findAllPositions = async () => {
+export const findAllPositions = async() => {
     const response = await axios.get(POSITIONS_API);
     console.log("positionsddjs", response.data.data);
     return response.data.data;
@@ -38,6 +40,14 @@ export const findPositionsByCategory = async currentCategory => {
 
     const response = await axios.get(`${POSITIONS_API}?${query}`);
     const positions = response.data.data;
+    return positions;
+};
+
+export const findPositionsByCategory2 = async currentCategory => {
+    console.log("got into service here");
+    const positions = applicationsByTeams[currentCategory];
+    console.log("positions in service are;")
+    console.log(positions);
     return positions;
 };
 
