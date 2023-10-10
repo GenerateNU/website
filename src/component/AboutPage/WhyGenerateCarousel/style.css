@@ -52,22 +52,23 @@
   border-style: solid;
 }
 
-.why-gen-dsktop {
-  display: flex;
+.dsktop {
+  display: block;
 }
 
-.why-gen-mob {
+.mob {
   display: none;
 }
 
 @media (max-width: 650px) or (max-device-width: 650px) {
-  .why-gen-dsktop {
+  .dsktop {
     display: none;
   }
 
-  .why-gen-mob {
+  .mob {
     display: block;
   }
+
   .why-generate-header-mob {
     margin-left: 6.15vw;
     margin-right: 6.15vw;

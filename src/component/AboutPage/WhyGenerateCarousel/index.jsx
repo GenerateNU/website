@@ -10,7 +10,7 @@ export default function WhyGenerateCarousel() {
 
   return (
     <>
-      <div className='why-gen-dsktop'>
+      <div className='dsktop'>
         <div className='vh-100 vw-100 py-4 d-flex justify-content-center'>
           <div className='why-gen-row-width h-100'>
             <div className='fit-content mb-5'>
@@ -66,7 +66,7 @@ export default function WhyGenerateCarousel() {
         </div>
       </div>
 
-      <div className='why-gen-mob'>
+      <div className='mob'>
         <div className='bg-black text-white'>
           <div className='why-generate-header-mob'>
             <h5 className='why-gen-goodies-mob'>more goodies</h5>
