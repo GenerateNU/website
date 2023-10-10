@@ -117,7 +117,7 @@
     */
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .we-are-our-values-container {
     height: auto;
     width: fit-content;
