@@ -103,8 +103,10 @@ function FooterLinks() {
 function TitleCard({ title, color, mobile }) {
   return (
     <div style={{ marginTop: '6vw' }} className={`${mobile ? 'spacing' : ''}`}>
-      <div class='title'>
-        <div style={{ marginTop: '-10%', marginBottom: '-10%' }}>{title}</div>
+      <div className='title'>
+        <div style={{ marginTop: '-10%', marginBottom: '-10%', color: color }}>
+          {title}
+        </div>
       </div>
     </div>
   )
@@ -126,7 +128,7 @@ function TeamPageFooter({ color, page }) {
   const mobile = !isBigScreen || !isWebsite
 
   return (
-    <Container className='footer-container'>
+    <Container className='footer-container' style={{ backgroundColor: color }}>
       <div className={`${mobile ? 'divider-col' : 'divider-row'}`}>
         <div className={`${mobile ? 'top-bar-mobile' : 'left-bar'}`}>
           <div
