@@ -29,11 +29,11 @@ export default function CulturePage() {
     <Diversity disp={mobile} />,
     <Equity disp={mobile} />,
     <Inclusion disp={mobile} />,
-    <Events />,
-    <Events2 />,
-    <Events3 />,
-    <Showcase />,
-    <CollageSection />,
+    <Events disp={mobile} />,
+    <Events2 disp={mobile} />,
+    mobile ? undefined : <Events3 />,
+    mobile ? undefined : <Showcase />,
+    <CollageSection disp={mobile} />,
     <Footer />,
     <NextPage pageName='teams' url='/teams' />
   ]

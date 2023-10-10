@@ -63,12 +63,12 @@ h2 {
 
   .diversity-outline {
     position: relative;
-    right: 70px;
-    margin-right: 50px;
+    right: 6vw;
+    margin-right: 5vw;
     writing-mode: horizontal-tb;
-    font-size: 100px;
+    font-size: 10vw;
     color: white;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 0.2vw;
     -webkit-text-stroke-color: #6fcf97;
   }
 }

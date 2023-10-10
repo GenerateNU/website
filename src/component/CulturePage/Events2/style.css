@@ -76,3 +76,44 @@
 .inclined-img-container {
   width: 100px;
 }
+
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .events-2-container {
+    display: flex;
+    flex-direction: column;
+    height: 300vw;
+  }
+
+  .events-2-section-header-top {
+    color: #187dff;
+    font-size: 12vw;
+    font-family: 'Space Mono 700';
+    text-transform: uppercase;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 8vw;
+  }
+
+  .events-2-section-header {
+    color: #187dff;
+    font-size: 9vw;
+    font-family: 'Space Mono 700';
+    text-transform: uppercase;
+    word-wrap: break-word;
+    margin-left: 7vw;
+    margin-top: 20vw;
+    line-height: 9vw;
+  }
+
+  .events-2-text {
+    color: black;
+    font-size: 4.5vw;
+    font-family: 'Outfit 300';
+    line-height: 6.7vw;
+    word-wrap: break-word;
+    height: auto;
+    width: auto;
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+}

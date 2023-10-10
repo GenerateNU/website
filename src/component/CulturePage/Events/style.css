@@ -113,8 +113,102 @@
   border: 2px solid #ff6660;
 }
 
-@media (max-width: 650px) or (max-device-width: 650px) {
+@media (max-device-width: 650px) or (max-width: 650px) {
   .text-no-fill {
     -webkit-text-stroke-width: 0.25vh;
+  }
+
+  .events-container {
+    display: flex;
+    flex-direction: column;
+    height: 360vw;
+    width: auto;
+    background-color: #7b61ff;
+  }
+
+  .events-top-container {
+    display: flex;
+    height: 160vw;
+    width: auto;
+  }
+
+  .events-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50vw;
+  }
+
+  .events-images-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50vw;
+  }
+
+  .events-header-text {
+    color: #7b61ff;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    font-family: 'Space Mono 700';
+    font-size: 34vw;
+    -webkit-text-stroke-width: 0.3vw;
+    -webkit-text-stroke-color: #ffffff;
+    margin-top: 15vw;
+    margin-left: 8vw;
+    line-height: 26vw;
+  }
+
+  .events-header-subtext {
+    color: #ffffff;
+    font-family: 'Space Mono 400';
+    font-size: 5vw;
+    line-height: 7vw;
+    margin-left: 7vw;
+    margin-top: 7vw;
+  }
+
+  .events-image {
+    object-fit: contain;
+    width: 45vw;
+    height: 67.5vw;
+    background: linear-gradient(0deg, white 0%, white 100%);
+    border: 1px #111111 solid;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 8vw;
+    margin-top: 12.5vw;
+  }
+
+  .events-section-header {
+    color: #ffffff;
+    font-size: 9vw;
+    font-family: 'Space Mono 700';
+    text-transform: uppercase;
+    word-wrap: break-word;
+    margin-left: 7vw;
+    margin-top: 20vw;
+    line-height: 9vw;
+  }
+
+  .events-section-header-bottom {
+    color: #ffffff;
+    font-size: 12vw;
+    font-family: 'Space Mono 700';
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: auto;
+    line-height: 10vw;
+  }
+
+  .events-text {
+    color: white;
+    font-size: 4.5vw;
+    font-family: 'Outfit 300';
+    line-height: 6.7vw;
+    word-wrap: break-word;
+    height: auto;
+    width: auto;
+    margin-left: 7vw;
+    margin-right: 7vw;
   }
 }

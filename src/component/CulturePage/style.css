@@ -21,15 +21,15 @@
 @media (max-width: 650px) or (max-device-width: 650px) {
   .culture-text {
     color: #111111;
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 4vw;
+    line-height: 6vw;
     word-wrap: break-word;
     padding-top: 7%;
   }
 
   .culture-outline {
-    -webkit-text-stroke: 3px #dfdfdf;
-    font-size: 200px;
+    -webkit-text-stroke: 0.3vw #dfdfdf;
+    font-size: 20vw;
     text-align: left;
   }
 
