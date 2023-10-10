@@ -56,8 +56,22 @@
     margin-top: -1px;
   }
 } */
+.dsktop {
+  display: block;
+}
+
+.mob {
+  display: none;
+}
 
 @media (max-width: 650px) or (max-device-width: 650px) {
+  .dsktop {
+    display: none;
+  }
+
+  .mob {
+    display: block;
+  }
   .stats-mob {
     margin-top: -1px;
     padding-top: 5vw;
