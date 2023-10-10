@@ -11,30 +11,34 @@ import Interested from '../LandingPageV2/Interested'
 import Footer from '../Footer'
 import NextPage from '../NextPage'
 import './style.css'
-import DesktopMobileScrollAndBackgroundHandler from '../DesktopMobileHandler'
+import useWebsite from '../../shared/useWebsite'
+import NewDesktopContainer from '../../component/DesktopMobileHandler/NewWebContainer'
+import NewMobileContainer from '../DesktopMobileHandler/NewMobileContainer'
 
-export default class AboutPage extends React.Component {
-  render() {
-    const children = [
-      <OurMissionSection />,
-      <WeAreSection />,
-      <Leadership />,
-      <History />,
-      <Timeline />,
-      <Stats />,
-      <WhyGenerateCarousel />,
-      <GrowthMantra />,
-      <Interested page='About' />,
-      <Footer />,
-      <NextPage pageName='culture' url='/culture' />
-    ]
-    return (
-      <DesktopMobileScrollAndBackgroundHandler
-        children={children}
-        desktopBGColor={'black'}
-        mobileBGColor={'black'}
-        containerClassName={'about-page'}
-      />
-    )
-  }
+export default function AboutPage() {
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
+
+  const children = [
+    <OurMissionSection />,
+    <WeAreSection />,
+    <Leadership />,
+    <History />,
+    <Timeline />,
+    <Stats />,
+    <WhyGenerateCarousel />,
+    <GrowthMantra />,
+    <Interested page='About' />,
+    <Footer />,
+    <NextPage pageName='culture' url='/culture' />
+  ]
+
+  return !mobile ? (
+    <NewDesktopContainer desktopBGColor={'black'}>
+      {children}
+    </NewDesktopContainer>
+  ) : (
+    <NewMobileContainer mobileBGColor={'black'}>{children}</NewMobileContainer>
+  )
 }
