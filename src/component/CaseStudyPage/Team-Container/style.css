@@ -1,0 +1,75 @@
+.cs-title-style {
+  font-family: 'Space Mono';
+  font-size: 5vw;
+  padding-bottom: 1vw;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.cs-team-container {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-team-style {
+  color: #111;
+  font-family: 'Outfit';
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 34px;
+}
+
+.cs-team-with-image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cs-team-name-container {
+  margin-left: 4vw;
+}
+
+.cs-team-layout-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4vh;
+}
+
+.cs-team-layout-beside {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4vh;
+}
+
+.cs-team-inner-name-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cs-team-name-style {
+  color: #111;
+  padding-bottom: 0.1vw;
+  font-family: 'Outfit';
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.cs-team-title-style {
+  font-family: 'Outfit';
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.cs-title-container {
+  padding-left: 10vw;
+  width: 98vw;
+}

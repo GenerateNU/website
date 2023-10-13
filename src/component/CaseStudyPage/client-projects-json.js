@@ -4,6 +4,7 @@ import BrandIdentityImage from './Case-Study-Images/SmartyPill/BrandIdentity.png
 import SmartyPillHighLight1Image from './Case-Study-Images/SmartyPill/Highlight1.png'
 import SmartyPillHighlight2Image1 from './Case-Study-Images/SmartyPill/Highlight2v1.png'
 import SmartyPillHighlight2Image2 from './Case-Study-Images/SmartyPill/Highlight2v2.png'
+import TeamStock from './Case-Study-Images/SmartyPill/TeamStock.svg'
 import SoftwareTeam from './Case-Study-Images/software.svg'
 import HardwareTeam from './Case-Study-Images/hardware.svg'
 
@@ -21,13 +22,19 @@ const ClientProjectsJSON = {
       title: "Northeastern Alumnus '20"
     },
     teamMembers: [
-      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-      { name: 'Matthew Swenson', title: 'Project Lead', image: '' },
-      { name: 'Matthew Swenson', title: 'Project Lead', image: '' }
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#FFBF3C' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#6FCF97' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#187DFF' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#FF6660' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#A559EC' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#FFBF3C' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#6FCF97' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#187DFF' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#FF6660' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#A559EC' },
+      { name: 'Matthew Swenson', title: 'Project Lead', color: '#56CCF2' }
     ],
+    teamImage: { image: TeamStock, bgColor: '#187DFF' },
     companyLogo: null,
     brandIdentityTitle: '',
     brandIdentity:
