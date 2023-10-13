@@ -3,7 +3,7 @@
     width: 1440px;
     height: 904px;
     left: 0px;
-    top: 0px;
+    top: 100px;
 
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../../assets/images/landingpage/weare/The_Sherman_Center.jpg');
     background-size: cover;
@@ -78,6 +78,24 @@
     width: 441px;
     height: 92px;
     left: 1540px;
+
+    top: 500px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 92px;
+    /* identical to box height, or 128% */
+    text-transform: uppercase;
+    /* Black/White */
+    color: #FFFFFF;
+}
+
+.whowearetextmobile {
+    position: absolute;
+    width: 441px;
+    height: 80px;
+    left: 24px;
     top: 228px;
     font-family: 'Space Mono';
     font-style: normal;
