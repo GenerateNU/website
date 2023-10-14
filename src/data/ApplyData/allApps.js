@@ -1,12 +1,12 @@
-import Clients from "./clients";
+import Clients from './clients'
 
 const applicationsByTeams = {
-    clients: Clients,
-    hardware: [],
-    software: [],
-    operations: [],
-    managment: [],
-    engagement: []
+  clients: Clients,
+  hardware: [],
+  software: [],
+  operations: [],
+  management: [],
+  engagement: []
 }
 
-export default applicationsByTeams;
+export default applicationsByTeams
