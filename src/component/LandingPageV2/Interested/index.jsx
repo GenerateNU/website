@@ -1,6 +1,6 @@
-import './responsive-style.css';
-import React from 'react';
-import leftcarrot from '../../LandingPageV2/Interested/chevron.png';
+import './responsive-style.css'
+import React from 'react'
+import leftcarrot from '../../LandingPageV2/Interested/chevron.png'
 
 const Interested = (...props) => {
   return (
@@ -21,7 +21,7 @@ const Interested = (...props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Interested;
+export default Interested

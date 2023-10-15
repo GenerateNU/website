@@ -62,7 +62,11 @@ export default function History() {
                     </h5>
                   </Col>
                   <Col xs={3} className='h-auto p-0 pe-2'>
-                    <Image src={ShermLogo} fluid className='logo float-right' />
+                    <Image
+                      src={ShermLogo}
+                      fluid
+                      className='history-logo float-right'
+                    />
                   </Col>
                 </Row>
               </OverlayTrigger>
@@ -83,7 +87,7 @@ export default function History() {
                     </h5>
                   </Col>
                   <Col xs={3} className='h-auto p-0 pe-2'>
-                    <Image src={MosaicLogo} fluid className='logo' />
+                    <Image src={MosaicLogo} fluid className='history-logo' />
                   </Col>
                 </Row>
               </OverlayTrigger>

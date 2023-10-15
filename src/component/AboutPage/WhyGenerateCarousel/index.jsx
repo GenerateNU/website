@@ -84,25 +84,58 @@ export default function WhyGenerateCarousel() {
             {whyGenerateData[currentSection].text}
           </div>
           <div className='why-gen-carousel-mob d-flex flex-row flex-wrap'>
-            {whyGenerateData.map((d, index) => (
-              <div
-                className='why-gen-carousel-item-mob'
-                onMouseOver={() => setCurrentSection(index)}
-              >
-                <h3
-                  className='m-0 p-0 fit-content'
-                  style={{
-                    color: currentSection === index ? d.color : 'white'
-                  }}
-                >
-                  <span
-                    className={`${currentSection === index ? 'underline' : ''}`}
-                  >
-                    {d.section}
-                  </span>
-                </h3>
-              </div>
-            ))}
+            <div>
+              {whyGenerateData.map(
+                (d, index) =>
+                  index < 3 && (
+                    <div
+                      className='why-gen-carousel-item-mob'
+                      onMouseOver={() => setCurrentSection(index)}
+                    >
+                      <h3
+                        className='m-0 p-0 fit-content'
+                        style={{
+                          color: currentSection === index ? d.color : 'white'
+                        }}
+                      >
+                        <span
+                          className={`${
+                            currentSection === index ? 'underline' : ''
+                          }`}
+                        >
+                          {d.section}
+                        </span>
+                      </h3>
+                    </div>
+                  )
+              )}
+            </div>
+            <div>
+              {whyGenerateData.map(
+                (d, index) =>
+                  index >= 3 && (
+                    <div
+                      className='why-gen-carousel-item-mob'
+                      onMouseOver={() => setCurrentSection(index)}
+                    >
+                      <h3
+                        className='m-0 p-0 fit-content'
+                        style={{
+                          color: currentSection === index ? d.color : 'white'
+                        }}
+                      >
+                        <span
+                          className={`${
+                            currentSection === index ? 'underline' : ''
+                          }`}
+                        >
+                          {d.section}
+                        </span>
+                      </h3>
+                    </div>
+                  )
+              )}
+            </div>
           </div>
         </div>
       </div>

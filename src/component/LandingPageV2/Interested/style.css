@@ -2,7 +2,8 @@
 
 .interestedcontainer {
   width: 65%;
-  background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center;
+  background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
+    center;
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 80% 20%;
@@ -16,7 +17,6 @@ a {
 .background-white {
   background-color: white;
 }
-
 
 .interestedflexbox {
   display: flex;
@@ -39,7 +39,7 @@ a {
   height: 10vh;
   margin-left: 2vh;
   margin-top: 20vh;
-  background: #187DFF;
+  background: #187dff;
   border: 1px solid #111111;
 }
 
@@ -49,7 +49,6 @@ a {
   height: 10vh;
   background: black;
   margin-left: 10vh;
-
 }
 
 .sentenceText {
@@ -77,10 +76,9 @@ a {
   height: 10vh;
   margin-left: 10%;
   margin-top: 15%;
-  background: #187DFF;
+  background: #187dff;
   border: 1px solid #111111;
   box-shadow: -0.75vh 0.75vh;
-  ;
 }
 
 .joinCommunitytext {
@@ -94,7 +92,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 #join-span {
@@ -115,27 +113,26 @@ a {
     background-size: 80%;
     background-position: 100% 30%;
   }
-  
+
   .questionMarkContainer {
     width: 45vh;
     margin-top: -11vh;
   }
-  
+
   a {
     text-decoration: none;
     color: #ffffff;
   }
-  
+
   .background-white {
     background-color: white;
   }
-  
-  
+
   .interestedflexbox {
     display: flex;
     flex-direction: column;
   }
-  
+
   .interestedText {
     margin-left: 6%;
     margin-top: 30vh;
@@ -145,17 +142,17 @@ a {
     text-transform: uppercase;
     color: black;
   }
-  
+
   .applyNowBox {
     display: inline-block;
     width: 34vh;
     height: 10vh;
     margin-left: 2vh;
     margin-top: 20vh;
-    background: #187DFF;
+    background: #187dff;
     border: 1px solid #111111;
   }
-  
+
   .blackRectangle {
     display: inline-block;
     width: 30vh;
@@ -163,7 +160,7 @@ a {
     background: black;
     margin-left: 10vh;
   }
-  
+
   .sentenceText {
     margin-left: -5vh;
     margin-top: -10vh;
@@ -175,44 +172,43 @@ a {
     color: black;
     padding-left: 10%;
   }
-  
+
   .cooltriangle {
     margin-left: -5vh;
     margin-top: 15vh;
   }
-  
+
   .leftcarrot {
     margin-left: -15vh;
     margin-top: 70.5vh;
   }
-  
-  
+
   .interestedJoinNowBox {
     width: 34vh;
     height: 10vh;
     margin-left: 10%;
     margin-top: 20%;
     padding-top: 4%;
-    background: #187DFF;
+    background: #187dff;
     border: 1px solid #111111;
     box-shadow: -10px 10px;
   }
-  
+
   .joinCommunitytext {
     width: 20vh;
     height: 4.5vh;
     margin-left: 21%;
     font-style: normal;
     /* font-weight: 400; */
-    
+
     font-size: 4vh;
     line-height: 6vh;
-  
+
     /* White */
-  
-    color: #FFFFFF;
+
+    color: #ffffff;
   }
-  
+
   .questionMark {
     width: 10vh;
     height: 10vh;
@@ -227,10 +223,11 @@ a {
   }
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .interestedcontainer {
     width: 100%;
-    background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center;
+    background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
+      center;
     background-repeat: no-repeat;
     background-size: 65%;
     padding: 5vh 0;

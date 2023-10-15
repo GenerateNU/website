@@ -4,6 +4,9 @@
   line-height: 100%;
   text-align: left;
 }
+.history-logo {
+  width: 15vh;
+}
 
 /* .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
     border-top-color: red;
