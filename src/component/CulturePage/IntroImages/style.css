@@ -17,3 +17,45 @@
   z-index: 1;
   max-width: none;
 }
+
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .intro-images {
+    height: 210vw;
+    width: auto;
+    background-color: #6fcf97;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+  }
+
+  .img-formatting {
+    object-fit: contain;
+    width: 40vw;
+    height: 60vw;
+    background: linear-gradient(0deg, white 0%, white 100%);
+    border: 1px #111111 solid;
+    margin: 2.5vw;
+  }
+
+  .fun-text {
+    position: absolute;
+    color: white;
+    font-size: 9.25vw;
+    font-family: 'Space Mono 700';
+    transform: rotate(90deg);
+    margin-top: 55%;
+    margin-left: 16%;
+    white-space: nowrap;
+  }
+
+  .line {
+    position: absolute;
+    height: 60vw;
+    width: 0;
+    align-self: flex-end;
+    margin-right: 20%;
+    margin-top: 130%;
+    border: 0.25vw white solid;
+  }
+}

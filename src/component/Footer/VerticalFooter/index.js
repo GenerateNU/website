@@ -1,5 +1,4 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
 import '../style.css'
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg'
 import { useNavigate } from 'react-router-dom'
@@ -15,57 +14,38 @@ function VerticalFooter() {
   }
 
   return (
-    <Col fluid className='vert-top-level-contaner'>
+    <div className='vert-top-level-contaner'>
       <div className='vert-sherm-placement'>
         <img
           className='vert-logo-placement'
           src={GenerateLogo}
           onClick={handleOnClick}
-          alt='Logo description' // Add alt text to the image for accessibility
+          alt='matt was here'
         />
-      </div>{' '}
-      <div className='vert-footer-links-general'>
-        <div className='vert-footer-pages'>
-          {' '}
+      </div>
+      <div className='links-container'>
+        <div className='pages-align'>
           {pages.map((page, index) => (
-            <div className='p-2'>
-              <FooterLink
-                key={index}
-                page={page}
-                currentPage={currentPageUrl.substring(
-                  currentPageUrl.lastIndexOf('/')
-                )}
-              />{' '}
+            <FooterLink
+              key={index}
+              page={page}
+              currentPage={currentPageUrl.substring(
+                currentPageUrl.lastIndexOf('/')
+              )}
+            />
+          ))}
+        </div>
+        <div className='social-icons-align'>
+          {socialIcons.map((si, index) => (
+            <div className='social-icon-row'>
+              {si.map((s) => (
+                <SocialIcon key={index} href={s.href} imgSrc={s.imgSrc} />
+              ))}
             </div>
-          ))}{' '}
-        </div>{' '}
-        <div className='vert-social-icons'>
-          {' '}
-          {socialIcons.map((row, index) => (
-            <Row key={index} style={{ marginTop: '12px' }}>
-              {' '}
-              {row.map((icon, index) => (
-                <>
-                  <SocialIcon
-                    key={index}
-                    href={icon.href}
-                    imgSrc={icon.imgSrc}
-                    className='vert-icon'
-                  />{' '}
-                  {icon.href.includes('instagram') && (
-                    <Col className='vert-icon'>
-                      <a>
-                        <div className='social-media' alt='' />
-                      </a>{' '}
-                    </Col>
-                  )}{' '}
-                </>
-              ))}{' '}
-            </Row>
-          ))}{' '}
-        </div>{' '}
-      </div>{' '}
-    </Col>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 

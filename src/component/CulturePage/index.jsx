@@ -12,32 +12,37 @@ import Diversity from './Diversity'
 import Footer from '../Footer'
 import Showcase from './Showcase'
 import './style.css'
-import DesktopMobileScrollAndBackgroundHandler from '../DesktopMobileHandler'
 import NextPage from '../NextPage'
+import useWebsite from '../../shared/useWebsite'
+import NewDesktopContainer from '../../component/DesktopMobileHandler/NewWebContainer'
+import NewMobileContainer from '../DesktopMobileHandler/NewMobileContainer'
 
-export default class CulturePage extends React.Component {
-  render() {
-    const children = [
-      <IntroSection />,
-      <IntroImages />,
-      <BelongHere />,
-      <Diversity />,
-      <Inclusion />,
-      <Equity />,
-      <Events />,
-      <Events2 />,
-      <Events3 />,
-      <Showcase />,
-      <CollageSection />,
-      <Footer />,
-      <NextPage pageName='teams' url='/teams' />
-    ]
-    return (
-      <DesktopMobileScrollAndBackgroundHandler
-        children={children}
-        desktopBGColor={'white'}
-        mobileBGColor={'white'}
-      />
-    )
-  }
+export default function CulturePage() {
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
+
+  const children = [
+    <IntroSection disp={mobile} />,
+    <IntroImages disp={mobile} />,
+    <BelongHere disp={mobile} />,
+    <Diversity disp={mobile} />,
+    <Equity disp={mobile} />,
+    <Inclusion disp={mobile} />,
+    <Events disp={mobile} />,
+    <Events2 disp={mobile} />,
+    mobile ? undefined : <Events3 />,
+    mobile ? undefined : <Showcase />,
+    <CollageSection disp={mobile} />,
+    <Footer />,
+    <NextPage pageName='teams' url='/teams' />
+  ]
+
+  return !mobile ? (
+    <NewDesktopContainer desktopBGColor={'white'}>
+      {children}
+    </NewDesktopContainer>
+  ) : (
+    <NewMobileContainer mobileBGColor={'white'}>{children}</NewMobileContainer>
+  )
 }

@@ -1,0 +1,123 @@
+.cs-back-button-style {
+  color: #000;
+  font-family: 'Space Mono';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  text-decoration-line: underline;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.cs-back {
+  padding-top: 20vh;
+  padding-left: 10vw;
+  color: #000;
+  font-family: 'Space Mono';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  display: flex;
+  flex-direction: row;
+}
+
+.cs-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-title-style {
+  font-family: 'Space Mono';
+  font-size: 5vw;
+  padding-bottom: 1vw;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.cs-client-container {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.cs-client-style {
+  color: #111;
+  font-family: 'Outfit';
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 34px;
+}
+
+.cs-client-name-container {
+  margin-left: 1vw;
+}
+
+.cs-client-name-style {
+  color: #111;
+  padding-bottom: 0.1vw;
+  font-family: 'Outfit';
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.cs-client-title-style {
+  font-family: 'Outfit';
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.cs-title-container {
+  padding-left: 10vw;
+  width: 50vw;
+}
+
+.cs-teams-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1vw;
+}
+
+.cs-team-spacing {
+  margin-left: 1vh;
+}
+
+.cs-team-sizing {
+  width: 8vw;
+  /* This is the base width of the svg */
+  min-width: 81px;
+}
+
+.cs-company-description {
+  padding-top: 2vh;
+  font-family: 'Outfit';
+  font-size: 1.5vw;
+  font-style: normal;
+  line-height: 3vh;
+}
+
+.cs-image {
+  width: 50vw;
+  max-width: 800px;
+  min-width: 300px;
+  height: 80vh;
+  max-height: 600px;
+  margin-left: auto;
+  padding-right: 5vw;
+}

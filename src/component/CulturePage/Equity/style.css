@@ -1,19 +1,19 @@
 .vertical {
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  color: #a559ec;
   padding: 0 10px 10px 10px;
 }
 
-
-
 .vertical-div {
-  width: 50px;
+  width: max-content;
+  margin: 0px;
 }
 
 .text-div-equity {
   padding: 0 50px 0 100px;
   width: 650px;
-  margin-top: 17vw; /*240px;*/
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
 }
@@ -22,9 +22,40 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 90px;
+  line-height: 90px;
   padding: 0 10px 10px 10px;
   color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ffbf3c;
+  -webkit-text-stroke-color: #a559ec;
 }
 
+.vertical-div {
+  width: 50px;
+}
+
+.text-div {
+  margin: 5%;
+  padding: 5%;
+}
+
+@media (max-device-width: 650px) or (max-width: 650px) {
+  .equity-container {
+    padding: 5%;
+    height: 120vw;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .equity-outline {
+    position: relative;
+    right: 6vw;
+    margin-right: 5vw;
+    writing-mode: horizontal-tb;
+    font-size: 9vw;
+    color: white;
+    -webkit-text-stroke-width: 0.2vw;
+    -webkit-text-stroke-color: #a559ec;
+  }
+}

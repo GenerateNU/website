@@ -18,7 +18,7 @@ export const FooterLink = ({ page, currentPage }) => {
   const isCurrentPage = currentPage === link
 
   return (
-    <div className='p-2'>
+    <div className='footer-padding'>
       {disabled ? (
         <a className='footer-link-text disabled-footer-text' href={link}>
           {name}

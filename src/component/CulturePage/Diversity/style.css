@@ -8,6 +8,7 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 90px;
+  line-height: 90px;
   padding: 0 10px 10px 10px;
   color: white;
   -webkit-text-stroke-width: 1px;
@@ -48,4 +49,26 @@ h2 {
 .culture-text {
   font-size: 22px;
   line-height: 10px;
+}
+
+@media (max-device-width: 650px) or (max-width: 650px) {
+  .diversity-container {
+    padding: 5%;
+    height: 90vw;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .diversity-outline {
+    position: relative;
+    right: 6vw;
+    margin-right: 5vw;
+    writing-mode: horizontal-tb;
+    font-size: 10vw;
+    color: white;
+    -webkit-text-stroke-width: 0.2vw;
+    -webkit-text-stroke-color: #6fcf97;
+  }
 }

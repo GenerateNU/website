@@ -1,70 +1,72 @@
 .nextPage {
-    background: #FFBF3C;
-    width: 21.5vh;
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3% 4%;
+  background: #ffbf3c;
+  width: 21.5vh;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 4%;
 }
 
 .nextPage a {
-    width: 12vh;
-    height: 100%;
+  width: 12vh;
+  height: 100%;
 }
 
 .nextPageButton {
-    color: white;
-    background: black;
-    font-family: 'Space Mono 700';
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20%;
-    box-sizing: border-box;
-    height: 100%;
-    flex-direction: column;
-    box-shadow: -1vh 1vh 0 0 #ffbf3c, -1vh 1vh 0 2px black;
+  color: white;
+  background: black;
+  font-family: 'Space Mono 700';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20%;
+  box-sizing: border-box;
+  height: 100%;
+  flex-direction: column;
+  box-shadow:
+    -1vh 1vh 0 0 #ffbf3c,
+    -1vh 1vh 0 2px black;
 }
 
 .nextPageArrow {
-    margin: 1vh 0;
-    width: 6vh;
+  margin: 1vh 0;
+  width: 6vh;
 }
 
 .nextPageName {
-    font-size: 10vh;
-    text-transform: uppercase;
-    transform: rotate(90deg);
+  font-size: 10vh;
+  text-transform: uppercase;
+  transform: rotate(90deg);
 }
 
-@media only screen and (max-device-width: 650px) {
-    .nextPageArrow {
-        transform: rotate(90deg);
-        width: 4vh;
-    }
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .nextPageArrow {
+    transform: rotate(90deg);
+    width: 4vh;
+  }
 
-    .nextPageName {
-        transform: unset;
-        font-size: 5vh;
-    }
+  .nextPageName {
+    transform: unset;
+    font-size: 5vh;
+  }
 
-    .nextPageButton {
-        flex-direction: row;
-        padding: 3%;
-    }
+  .nextPageButton {
+    flex-direction: row;
+    padding: 3%;
+  }
 
-    .nextPage {
-        width: 100vw;
-        height: unset;
-        padding: 10% 5%;
-    }
+  .nextPage {
+    width: 100vw;
+    height: unset;
+    padding: 10% 5%;
+  }
 
-    .nextPage a {
-        margin-left: 0.5vh;
-        width: 90vw;
-        height: 100%;
-    }
+  .nextPage a {
+    margin-left: 0.5vh;
+    width: 90vw;
+    height: 100%;
+  }
 }

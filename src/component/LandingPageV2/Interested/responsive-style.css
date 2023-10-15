@@ -40,13 +40,36 @@
 }
 
 .interestedJoinNowBox {
-  width: 320px;
-  height: 90px;
+  width: 16vw;
+  height: 11vh;
   background: #187dff;
   border: 1px solid #111111;
   box-shadow: -0.75vh 0.75vh;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (max-height: 650px) {
+  .interestedJoinNowBox {
+    width: 8vw;
+    height: 10vh;
+    background: #187dff;
+    border: 1px solid #111111;
+    box-shadow: -0.75vh 0.75vh;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .interestedcontainer {
+    width: 20vw;
+    background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
+      center;
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    background-position: 80% 40%;
+    align-items: center;
+    justify-items: center;
+  }
 }
 
 .joinCommunitytext {
@@ -112,8 +135,8 @@
   }
 
   .interestedJoinNowBox {
-    width: 200px;
-    height: 56px;
+    width: 16vw;
+    height: 11vh;
     background: #187dff;
     border: 1px solid #111111;
     box-shadow: -0.75vh 0.75vh;
@@ -146,11 +169,11 @@
 
 @media (max-width: 650px) {
   .interestedcontainer {
-    width: 100vw;
+    width: 60vh;
     background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
       center;
     background-repeat: no-repeat;
-    background-size: 70vw;
+    background-size: 30vh;
     background-position: 80% 40%;
     align-items: center;
     justify-items: center;
@@ -176,15 +199,15 @@
   .questionMarkContainer {
     width: 45vh;
     display: flex;
-    margin-bottom: 80px;
+    margin-bottom: 10vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 
   .interestedJoinNowBox {
-    width: 200px;
-    height: 56px;
+    width: 60vw;
+    height: 11vh;
     background: #187dff;
     border: 1px solid #111111;
     box-shadow: -0.75vh 0.75vh;
@@ -293,5 +316,16 @@
     font-size: 1.8vh;
     color: black;
     padding-left: 10%;
+  }
+}
+
+@media (max-height: 650px) {
+  .interestedJoinNowBox {
+    width: 20vw;
+    height: 10vh;
+    background: #187dff;
+    border: 1px solid #111111;
+    box-shadow: -0.75vh 0.75vh;
+    margin-right: auto;
   }
 }

@@ -4,13 +4,13 @@
 }
 
 .bottom-0-culture {
-  bottom: 5rem!important;
+  bottom: 5rem !important;
 }
 
 .generateMascotContainer {
   position: absolute;
   left: 650px;
-  top: /*-2px;*/ 1.5vw;
+  top: 25px; /*max(22vw, 275px);*/
 }
 
 .generateMascot {
@@ -21,7 +21,7 @@
 .our-culture-quote-positioning {
   position: absolute;
   left: 510px;
-  top: 19.5vw; /*max(21vw, 267px);*/
+  top: 305px; /*max(22vw, 275px);*/
   min-height: 200px;
   height: 160px;
   min-width: 400px;
@@ -30,7 +30,7 @@
 
 .our-culture-quote {
   color: #a559ec;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   width: 650px;
   height: 160px;
   font-size: 70px;
@@ -42,7 +42,7 @@
 .our-culture-big-positioning {
   position: absolute;
   left: 10px;
-  top: 20.75vw; /*max(22vw, 275px);*/
+  top: 337px; /*max(22vw, 275px);*/
   min-height: 200px;
   height: 150px;
   min-width: 400px;
@@ -51,7 +51,45 @@
 
 .our-culture-big {
   color: #187dff;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 250px;
   line-height: 220px;
+}
+
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .intro-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 200vw;
+    margin-bottom: 15vh;
+  }
+
+  .generateMascot {
+    position: static;
+    width: 30vw;
+    height: auto;
+    margin-right: 20%;
+    margin-left: auto;
+    margin-top: 4%;
+  }
+
+  .our-culture-quote {
+    width: 40vw;
+    height: auto;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: auto;
+    font-size: 8.5vw;
+    line-height: 8.5vw;
+  }
+
+  .our-culture-big {
+    padding-left: 20%;
+    padding-top: 10%;
+    font-size: 40vw;
+    line-height: 40vw;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+  }
 }

@@ -127,6 +127,8 @@
   font-size: 20px;
   line-height: 30px;
   /* identical to box height, or 150% */
+
+
 /* Black/White 
   color: #ffffff;
 }
@@ -182,8 +184,8 @@
 */
 
 .introductionContainer {
-  margin: 0%;
-  padding: 0%;
+    margin: 0%;
+    padding: 0%;
 }
 
 .shermancenter {
@@ -215,10 +217,9 @@
 }
 
 .generatetext {
-  /* generate */
-
-  width: 50vh;
-  /*height: 45.12vh;
+    /* generate */
+    width: 50vh;
+    /*height: 45.12vh;
   top: 12.19vh; */
 
   font-family: 'Space Mono';
@@ -255,8 +256,8 @@
 }
 
 .text-container {
-  /* generate */
-  /*
+    /* generate */
+    /*
   display: inline;
   position: relative;
   width: 149.39vh;
@@ -270,13 +271,13 @@
   font-size: 30.48vh;
   line-height: 45.12vh;
   text-transform: uppercase; */
-  position: relative;
-  left: 8vw;
-  top: max(35vh, 90px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #ffffff;
+    position: relative;
+    left: 8vw;
+    top: max(35vh, 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
 }
 
 .scrolltext {
@@ -320,18 +321,18 @@
 }
 
 .scrollimg {
-  width: 15.04vh;
-  object-fit: contain;
-  margin-bottom: -70vh;
+    width: 15.04vh;
+    object-fit: contain;
+    margin-bottom: -70vh;
 }
 
 .scroll {
-  position: relative;
-  top: max(9vh, 10px);
-  display: flex;
-  flex-direction: row;
-  float: right;
-  padding-right: 2em;
+    position: relative;
+    top: max(9vh, 10px);
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding-right: 2em;
 }
 
 .scrolltext {
@@ -342,10 +343,10 @@
 }
 
 .intro-navbar {
-  position: fixed;
-  z-index: 6;
-  left: 1.5%;
-  top: 3%;
+    position: fixed;
+    z-index: 6;
+    left: 1.5%;
+    top: 3%;
 }
 
 .wearetextmobile {
