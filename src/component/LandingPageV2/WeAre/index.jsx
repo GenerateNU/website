@@ -17,7 +17,7 @@ import './style.css';
                  <p className="scrolltext">scroll</p>
                  <div className="bluerectangle" />
                  <div className="purplerectangle" />
-                 <p className="whowearetext">WHO we are</p>
+                 <p className="whowearetext">WHO we are </p>
                  <p className="whoweareparagraph">Generate is a student-led product development studio, providing 
                   professional product design experience, leadership training and more to Northeastern students.
                  Generate offers a unique and supportive learning experience for all through professional product 
