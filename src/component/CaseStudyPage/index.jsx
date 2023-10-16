@@ -10,6 +10,8 @@ import ClientProjectsJSON from './client-projects-json'
 import useWebsite from '../../shared/useWebsite'
 import NavBar from '../NavBar'
 import './style.css'
+import TeamPageFooter from '../../pages/TeamsPage/ExpandedTeams/CommonTeam/TeamPageFooter'
+import NextPage from '../NextPage'
 
 export default function CaseStudy() {
   const isWebsite = useWebsite()
@@ -31,6 +33,8 @@ export default function CaseStudy() {
       <Highlight isDesktop={isDesktop} casestudy={casestudy} />
       <Quote isDesktop={isDesktop} casestudy={casestudy} />
       <UpNext isDesktop={isDesktop} casestudy={casestudy} />
+      <TeamPageFooter />
+      <NextPage pageName='Apply' url='/apply' />
     </div>
   )
 }

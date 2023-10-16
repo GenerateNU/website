@@ -180,7 +180,7 @@ function TeamPageFooter({ color, page }) {
           )}
         </div>
       </div>
-      <TitleCard color={color} title={page} mobile={mobile} />
+      {page && <TitleCard color={color} title={page} mobile={mobile} />}
     </Container>
   )
 }
