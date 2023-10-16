@@ -1,15 +1,10 @@
-import ClientProjectsJSON from '../client-projects-json'
-import './style.css'
-import './style-mobile.css'
-import useWebsite from '../../../shared/useWebsite'
 import React from 'react'
 import { ReactComponent as Circle } from './Circle.svg'
-import { ReactComponent as Rectangle } from './Rectangle.svg'
 import { SvgIcon } from '@mui/material'
+import './style.css'
+import './style-mobile.css'
 
-export default function TeamContainer({ isDesktop }) {
-  const casestudy =
-    ClientProjectsJSON[window.location.pathname.split('/').pop()]
+export default function TeamContainer({ isDesktop, casestudy }) {
   return (
     <div style={{ paddingBottom: '10vh' }}>
       <div className='cs-title-container'>
@@ -26,10 +21,9 @@ export default function TeamContainer({ isDesktop }) {
                           component={Circle}
                           inheritViewBox
                           sx={{
-                            fontSize: 48,
+                            fontSize: isDesktop ? 48 : '20vw',
                             color: tm.color,
-                            marginRight: '1vh',
-                            '&:hover': { color: 'black' }
+                            marginRight: isDesktop ? '1vh' : ''
                           }}
                         />
                         <div>
@@ -45,9 +39,9 @@ export default function TeamContainer({ isDesktop }) {
                             component={Circle}
                             inheritViewBox
                             sx={{
-                              fontSize: 48,
+                              fontSize: isDesktop ? 48 : '20vw',
                               color: casestudy.teamMembers.at(index + 1).color,
-                              marginRight: '1vh'
+                              marginRight: isDesktop ? '1vh' : ''
                             }}
                           />
                           <div>
@@ -67,7 +61,15 @@ export default function TeamContainer({ isDesktop }) {
                 )
               )}
             </div>
-            {isDesktop && <TeamImageContainer casestudy={casestudy} />}
+            <div style={{ marginLeft: 'auto' }}>
+              {isDesktop && (
+                <ImageContainer
+                  imageWithBGColor={casestudy.teamImage}
+                  isOffsetRight={true}
+                  isDesktop={isDesktop}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -75,35 +77,35 @@ export default function TeamContainer({ isDesktop }) {
   )
 }
 
-function TeamImageContainer({ casestudy }) {
+export function ImageContainer({ imageWithBGColor, isOffsetRight, isDesktop }) {
+  const { bgColor, image } = imageWithBGColor
   return (
-    <div style={{ marginLeft: 'auto' }}>
+    <div
+      style={{
+        width: isDesktop ? '40vw' : '90vw',
+        display: 'flex',
+        paddingTop: '10vh'
+      }}
+    >
       <div
+        className='selector'
         style={{
-          position: 'relative',
-          width: '40vw',
-          height: '20vw',
-          alignItems: 'center',
-          display: 'flex'
+          width: isDesktop ? '30vw' : '70vw',
+          backgroundColor: bgColor,
+          color: bgColor,
+          marginTop: 'auto',
+          marginLeft: 'auto'
         }}
       >
-        <SvgIcon
-          component={Rectangle}
-          inheritViewBox
-          sx={{
-            fontSize: '30vw',
-            marginLeft: '5vw',
-            color: casestudy.teamImage.bgColor,
-            position: 'absolute'
-          }}
-        />
         <img
-          src={casestudy.teamImage.image}
+          src={image}
+          className='selector'
           style={{
-            marginLeft: 'auto',
-            width: '30vw',
-            marginBottom: '10vw',
-            position: 'absolute'
+            width: isDesktop ? '30vw' : '70vw',
+            position: 'relative',
+            bottom: '3vw',
+            left: isOffsetRight ? '' : '5vw',
+            right: isOffsetRight ? '5vw' : ''
           }}
         />
       </div>

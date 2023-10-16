@@ -3,10 +3,7 @@ import './style.css'
 import './style-mobile.css'
 import React from 'react'
 
-export default function CaseStudyHeader({ isDesktop }) {
-  const casestudy =
-    ClientProjectsJSON[window.location.pathname.split('/').pop()]
-
+export default function CaseStudyHeader({ isDesktop, casestudy }) {
   return isDesktop ? (
     <Header casestudy={casestudy} />
   ) : (

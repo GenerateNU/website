@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .cs-team-name-container {
@@ -47,6 +48,7 @@
 }
 
 .cs-team-inner-name-container {
+  align-items: center;
   display: flex;
   flex-direction: row;
 }
@@ -72,4 +74,47 @@
 .cs-title-container {
   padding-left: 10vw;
   width: 98vw;
+}
+
+.cs-team-image {
+  width: 30vw;
+}
+
+@media screen and (max-device-width: 650px), (max-width: 650px) {
+  .cs-team-style {
+    font-size: 6vw;
+  }
+
+  .cs-team-name-style {
+    font-size: 3vw;
+  }
+
+  .cs-team-title-style {
+    font-size: 2.5vw;
+  }
+
+  .cs-team-layout-container {
+    width: 100vw;
+  }
+
+  .cs-team-inner-name-container {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cs-team-name-container {
+    margin-left: auto;
+    margin-right: 100px;
+  }
+}
+
+.selector {
+  width: fit-content;
+}
+
+.transition {
+  right: 25px;
+  top: 25px;
+  background-color: red;
 }

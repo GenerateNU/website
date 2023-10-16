@@ -26,6 +26,7 @@
   line-height: 34px;
   display: flex;
   flex-direction: row;
+  width: fit-content;
 }
 
 .cs-flex-container {

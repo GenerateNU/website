@@ -1,0 +1,47 @@
+.cs-brandidentity-para-container {
+  margin-top: 10vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-brandidentity-para-title {
+  font-family: 'Space Mono';
+  font-size: 4vw;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.cs-brandidentity-para-body {
+  margin-top: 2vw;
+  font-family: 'Outfit';
+  font-weight: 300;
+  text-align: left;
+}
+
+.brandIdentityImage-style {
+  width: '10vw';
+}
+
+.cs-bi-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.palette-text-style {
+  font-family: 'Outfit';
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.color-text-style {
+  font-family: 'Outfit';
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+}

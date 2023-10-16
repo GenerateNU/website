@@ -1,0 +1,29 @@
+.cs-highligh-title-style {
+  font-family: 'Space Mono';
+  font-size: 4vw;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cs-image-style {
+  justify-content: center;
+  display: flex;
+  width: 98vw;
+  height: 40vw;
+}
+
+.cs-highlight-body-style {
+  font-family: 'Outfit';
+  font-weight: 300;
+  text-align: left;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.cs-singleimagehighlight-container {
+  display: 'flex';
+  flex-direction: 'column';
+  width: '90vw';
+  align-items: 'center';
+  justify-content: 'center';
+}

@@ -1,0 +1,7 @@
+.cs-company-logo-banner {
+  height: '200px';
+  width: '100vw';
+  display: 'flex';
+  align-items: 'center';
+  justify-content: 'center';
+}
