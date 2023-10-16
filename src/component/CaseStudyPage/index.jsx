@@ -4,12 +4,13 @@ import TeamContainer from './Team-Container'
 import CompanyLogo from './CompanyLogo'
 import Highlight from './Highlight'
 import BrandIdentity from './BrandIdentity'
+import UpNext from './UpNext'
 import Quote from './Quote'
 import ClientProjectsJSON from './client-projects-json'
 import useWebsite from '../../shared/useWebsite'
 import NavBar from '../NavBar'
-
 import './style.css'
+
 export default function CaseStudy() {
   const isWebsite = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
@@ -29,6 +30,7 @@ export default function CaseStudy() {
       <BrandIdentity isDesktop={isDesktop} casestudy={casestudy} />
       <Highlight isDesktop={isDesktop} casestudy={casestudy} />
       <Quote isDesktop={isDesktop} casestudy={casestudy} />
+      <UpNext isDesktop={isDesktop} casestudy={casestudy} />
     </div>
   )
 }
