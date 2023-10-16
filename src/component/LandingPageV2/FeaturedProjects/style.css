@@ -42,12 +42,12 @@ h2 {
   justify-content: center;
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .mobile {
     display: flex;
   }
   .projects-container {
-    font-size: 8em;
+    font-size: 17vw;
     text-align: left;
     max-width: 90vw;
   }

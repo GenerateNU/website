@@ -7,7 +7,9 @@
 }
 
 .column-1 {
+  /*
   margin-top: 10vh;
+  */
   display: flex;
   flex-direction: column;
 }
@@ -68,7 +70,6 @@
 .product-img {
   /* position: absolute; */
   height: 80vh;
-  margin-top: -8vh;
   margin-left: -4vh;
   min-height: 100%;
 }
@@ -118,6 +119,7 @@ h1 {
   text-transform: uppercase;
 }
 
+/*
 @media only screen and (min-aspect-ratio: 6/10) {
   .parent {
     display: flex;
@@ -202,7 +204,7 @@ h1 {
   }
   
   .product-img {
-    /* position: absolute; */
+    /* position: absolute; 
     height: 80vh;
     margin-top: -8vh;
     margin-left: -4vh;
@@ -284,14 +286,17 @@ h1 {
     margin-left: 13vh;
   }
 }
+*/
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   /*.parent {*/
   /*  flex-direction: column;*/
   /*}*/
   .column-1{
+    /*
     margin-left: -3vh;
     margin-top: -3vh;
+    */
   }
 
   .client-blurb#fp1-client-blurb {
@@ -306,12 +311,9 @@ h1 {
 
   .product-img {
     height: auto;
-    margin-top: 1vh;
-    min-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 50%;
-    transform: translateX(17%);
+    width: 80vw;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   #fp1-img-container {
@@ -319,10 +321,7 @@ h1 {
   }
 
   .quote-container#fp1-quote-container{
-    margin-left: -3.5vh;
-    margin-top: -1vh;
-    margin-bottom: -2vh;
-    width: 800px;
+    width: 55vh;
     font-family: Outfit 300;
     font-size: 2.5vh;
     position: relative;
@@ -394,7 +393,8 @@ h1 {
 
 }
 
-  @media only screen and (device-width: 375px) and (device-height: 667px) {
+    /*
+ @media (max-width: 650px) or (max-device-width: 650px) {
     .parent {
       flex-direction: column;
       padding-top: 3vh;
@@ -403,21 +403,21 @@ h1 {
     }
 
     .column-1{
-      margin-left: -1.75vh;
+      /*margin-left: -1.75vh; 
     }
 
     .client-blurb#fp1-client-blurb{
       /*padding-top: 2vh;*/
       /*padding-bottom: 2vh;*/
       /*padding-left: 3.5vh;*/
-      /*display: center;*/
+      /*display: center;
       font-family: Outfit 300;
       font-size: 2.5vh;
       position: relative;
     }
 
     .product-img {
-      /* position: absolute; */
+      /* position: absolute; 
       height: auto;
       margin-top: 1vh;
       margin-left: auto;
@@ -437,15 +437,17 @@ h1 {
 
   }
 
+
     @media only screen and (device-width: 412px) and (device-height: 915px) {
       .parent {
         flex-direction: column;
+        width: 100vw;
       }
   
       .client-blurb#fp1-client-blurb {
         padding-top: 3vh;
         padding-bottom: 3vh;
-        /* padding-left: 4vh; */
+        /* padding-left: 4vh; 
         padding-right: 4vh;
         display: center;
         font-family: Outfit 300;
@@ -454,10 +456,10 @@ h1 {
       }
   
       .product-img {
-        /* position: absolute; */
+        /* position: absolute; 
       height: auto;
       margin-top: 1vh;
-      /* margin-left: -0.5vh; */
+      /* margin-left: -0.5vh; 
       min-height: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -471,6 +473,6 @@ h1 {
       }
 
     }
-
+*/
 
 

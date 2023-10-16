@@ -47,7 +47,7 @@ a {
   color: #187dff;
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .background-black-text {
     width: 100vw;
     height: 60vh;

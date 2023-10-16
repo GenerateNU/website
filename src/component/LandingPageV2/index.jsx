@@ -17,9 +17,16 @@ import Management from './Management'
 import Footer from '../Footer'
 import NextPage from '../NextPage'
 import DesktopMobileScrollAndBackgroundHandler from '../DesktopMobileHandler'
+import useWebsite from '../../shared/useWebsite'
+import NewDesktopContainer from '../../component/DesktopMobileHandler/NewWebContainer'
+import NewMobileContainer from '../DesktopMobileHandler/NewMobileContainer'
 
-export default class LandingPageV2 extends React.Component {
-  render() {
+
+export default function LandingPageV2() {
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
+
     const children = [
       <Intro />,
       <WhoWeAre />,
@@ -38,12 +45,13 @@ export default class LandingPageV2 extends React.Component {
       <Footer />,
       <NextPage pageName='about' url='/about' />
     ]
-    return (
-      <DesktopMobileScrollAndBackgroundHandler
-        children={children}
-        desktopBGColor={'white'}
-        mobileBGColor={'black'}
-      />
-    )
-  }
+
+    return !mobile ? (
+    <NewDesktopContainer desktopBGColor={'white'}>
+      {children}
+    </NewDesktopContainer>
+  ) : (
+    <NewMobileContainer mobileBGColor={'black'}>{children}</NewMobileContainer>
+  )
 }
+

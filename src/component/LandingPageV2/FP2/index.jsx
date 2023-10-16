@@ -4,15 +4,19 @@ import BottomCorner from "../../../assets/images/landingpage-v2/bottom_corner.pn
 import TopCorner from "../../../assets/images/landingpage-v2/top_corner.png";
 import useDeviceDetection from "../../DesktopMobileHandler/isMobileDetection.hooks.jsx";
 import Projects from "../../../data/featuredProjectData.js";
+import useWebsite from "../../../shared/useWebsite";
+
 
 export default function FP2() {
-  const isMobile = useDeviceDetection();
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
   const SmartyPill = Projects[1];
 
-  if (window.innerWidth / window.innerHeight <= 0.6 || isMobile) {
+  if (mobile) {
     return (
       <div className="parent">
-        <div className="column-1">
+        <div>
           <div className="heading-container">
             <h1 id="fp2-header">{SmartyPill.title}</h1>
             <p id="fp2-teams">{SmartyPill.type}</p>
@@ -36,12 +40,12 @@ export default function FP2() {
             <img style={{ height: "25vh" }} src={BottomCorner} alt="" />
           </div>
         </div>
-        <div className="column-2">
+        <div>
           <div className="product-img-container">
             <img className="mockup-img" src={SmartyPill.image} alt="" />
           </div>
         </div>
-        <div className="column-3">
+        <div>
           <div className="top-corner">
             <img
               style={{ height: "25vh" }}

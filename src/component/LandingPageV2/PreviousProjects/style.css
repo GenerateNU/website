@@ -61,7 +61,7 @@
 
 
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .prev-proj-wrapper .wrapper {
     flex-direction: column;
     margin-left: 0;
@@ -78,7 +78,6 @@
   .prev-proj-wrapper .col-2,
   .prev-proj-wrapper .col-3 {
     align-items: center;
-    width: unset;
   }
 
   .prev-proj-wrapper .logo img {

@@ -227,7 +227,7 @@ a {
   }
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .interestedcontainer {
     width: 100%;
     background: url("../../../assets/images/landingpage-v2/interestedbg.svg") center;
