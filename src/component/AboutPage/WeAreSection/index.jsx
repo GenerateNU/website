@@ -7,10 +7,8 @@ const WeAreSection = () => {
   return (
     <div className='we-are-our-values-container'>
       <div className='weare-header'>
-        <h5 className='mb-0 our-mission-our-values we-are-values d-flex flex-row justify-content-end h-auto text-nowrap'>
-          our values
-        </h5>
-        <h1 className='our-mission-we-are text-no-fill text-uppercase text-nowrap'>
+        <h5 className='mb-0 our-mission-our-values text-nowrap'>our values</h5>
+        <h1 className='our-mission-we-are text-no-fill text-uppercase text-nowrap '>
           We are
         </h1>
       </div>

@@ -10,9 +10,12 @@
 }
 
 .weare-header {
-  width: 1vw;
+  width: fit-content;
   position: sticky;
   left: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .we-are-our-values-container {
@@ -97,15 +100,17 @@
 }
 
 .our-mission-our-values {
-  width: 960px;
+  width: fit-content;
   color: #ffad04;
   font-size: 3vh;
   line-height: 100%;
   font-family: 'Space Mono';
-  margin-right: 3%;
+  /* margin-right: 3%; */
   padding-top: 20vh;
   position: sticky;
   top: 10;
+  margin-left: auto;
+  margin-right: 3vh;
   /*
     width: 112vh;
     color: #FFBF3C;
@@ -125,8 +130,9 @@
   }
 
   .weare-header {
-    width: 90% !important;
+    width: fit-content;
     padding-left: 0px;
+    margin-left: 10vw;
   }
 
   .we-are-header-space {
@@ -136,10 +142,10 @@
   .our-mission-our-values {
     font-size: 2vh;
     line-height: 3vh;
-    margin-right: 0vh;
     padding: 0%;
-    width: 70vw;
     padding-bottom: 0px !important;
+    margin-left: auto;
+    margin-right: 1vw;
   }
 
   .our-mission-we-are {
