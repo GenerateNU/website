@@ -69,7 +69,6 @@
         padding-top: 20%;
         padding-left: 15%;
         font-size: 5vh;
-        line-height: 11.22vh;
     }
     
     .bluerectangle {
@@ -80,10 +79,22 @@
         height: 60vh;
     }
 
+
     .whoweareparagraph {
         width: 100%;
         padding-left: 5%;
         padding-right: 5%;
         line-height: 3vh;
+    }
+
+    .generatelogowhiteone {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left: 75vw;
+        top: 220px;
+    
+        background-image: url('../../../assets/images/landingpage/weare/GenerateLogoWhite.png');
+        background-size: cover;
     }
 }
