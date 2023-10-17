@@ -9,8 +9,6 @@ import TeamStock from './Case-Study-Images/SmartyPill/TeamStock.svg'
 import SoftwareTeam from './Case-Study-Images/software.svg'
 import HardwareTeam from './Case-Study-Images/hardware.svg'
 
-const ClientProjectsJSONOrder = ['smartypill', 'earnz']
-
 const ClientProjectsJSON = {
   smartypill: {
     title: 'SmartyPill',
