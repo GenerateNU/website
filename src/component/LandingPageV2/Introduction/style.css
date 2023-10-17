@@ -502,19 +502,10 @@
   }
   .text-container-mobile {
     display: flex;
-    width: 70vw;
+    width: 100%;
     flex-direction: column;
-    padding: 5vw;
-    margin-left: 28.5vw;
-  }
-  .northeasternbest {
-    margin-left: 6vh;
-  }
-  .productdevelopment {
-    margin-left: 6vh;
-  }
-  .studio {
-    margin-left: 6vh;
+    padding-top: 5vw;
+    align-items: flex-end;
   }
   .scrollmobile {
     margin-left: 73vh;

@@ -74,9 +74,9 @@
 }
 
 .product-img-container {
-      margin-top: 12px;
-        display: flex;
-        height: fit-content;
+  margin-top: 12px;
+  display: flex;
+  height: fit-content;
   /*
   padding-top: 5vh;
   padding-left: 14vh;
@@ -121,17 +121,17 @@ blockquote {
 }
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
 blockquote:before {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   color: #ffbf3c;
   position: absolute;
   font-size: 6vh;
   line-height: 1;
   top: 0;
   left: -1.5vh;
-  content: "\201C";
+  content: '\201C';
 }
 blockquote:after {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   color: #ffbf3c;
   position: absolute;
   float: right;
@@ -139,11 +139,11 @@ blockquote:after {
   line-height: 1;
   right: 0vh;
   bottom: -1vh;
-  content: "\201D";
+  content: '\201D';
 }
 
 h1 {
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: bolder;
   font-size: 4.5em;
@@ -155,7 +155,7 @@ h1 {
 }
 
 #fp2-teams {
-  font-family: "Space Mono"; 
+  font-family: 'Space Mono';
   font-size: 3vh;
 }
 
@@ -355,13 +355,12 @@ h1 {
   }
 
   .client {
-    align-items: baseline
+    align-items: baseline;
   }
 
   .client-blurb p {
     font-size: 2vh;
     margin: auto;
-
   }
 
   .product-img-container {
@@ -375,7 +374,8 @@ h1 {
     width: 80vw;
   }
 
-  .bottom-corner, .top-corner {
+  .bottom-corner,
+  .top-corner {
     display: none;
   }
 

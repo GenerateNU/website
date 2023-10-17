@@ -34,7 +34,7 @@
 .client-text {
   font-family: Outfit 500;
   font-size: 3vh;
-  line-height: 3vh;;
+  line-height: 3vh;
   font-weight: 700;
   padding-right: 2vh;
 }
@@ -87,7 +87,7 @@ blockquote {
 }
 
 blockquote:before {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   color: #ffbf3c;
   position: absolute;
   font-size: 6vh;
@@ -95,10 +95,10 @@ blockquote:before {
   top: 0;
   margin-left: -2vh;
   left: -2vh;
-  content: "\201C";
+  content: '\201C';
 }
 blockquote:after {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   color: #ffbf3c;
   position: absolute;
   float: right;
@@ -107,11 +107,11 @@ blockquote:after {
   line-height: 1;
   right: 0vh;
   bottom: -1vh;
-  content: "\201D";
+  content: '\201D';
 }
 
 h1 {
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: bolder;
   font-size: 9vh;
@@ -292,13 +292,12 @@ h1 {
   /*.parent {*/
   /*  flex-direction: column;*/
   /*}*/
+  /*
   .column-1{
-    /*
     margin-left: -3vh;
     margin-top: -3vh;
-    */
   }
-
+        */
   .client-blurb#fp1-client-blurb {
     /*font-size: 2vh;*/
     /* margin-left: 0.8vh; */
@@ -320,7 +319,7 @@ h1 {
     padding-left: 0;
   }
 
-  .quote-container#fp1-quote-container{
+  .quote-container#fp1-quote-container {
     width: 55vh;
     font-family: Outfit 300;
     font-size: 2.5vh;
@@ -336,26 +335,25 @@ h1 {
     position: relative;
   }
 
-  #pageSeparator{
+  #pageSeparator {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 5vh;
     margin-bottom: -1vh;
-    color:black;
+    color: black;
     opacity: 100%;
     width: 75%;
     margin-left: 2vh;
     font-weight: bold;
     height: 3px;
-
   }
 
-  .column-3#fp1-quote-container{
+  .column-3#fp1-quote-container {
     letter-spacing: normal;
   }
 
-  blockquote#fp1-client-blurb:before{
+  blockquote#fp1-client-blurb:before {
     margin-left: 1.05vh;
   }
 
@@ -364,12 +362,12 @@ h1 {
     margin-bottom: -2vh;
   }
 
-  blockquote:before{
+  blockquote:before {
     color: white;
   }
 
   blockquote:after {
-    font-family: "Space Mono 700";
+    font-family: 'Space Mono 700';
     color: white;
     position: absolute;
     float: right;
@@ -378,22 +376,19 @@ h1 {
     line-height: 1;
     right: 0vh;
     bottom: -1vh;
-    content: "\201D";
+    content: '\201D';
   }
 
-  #earnPage{
+  #earnPage {
     margin-top: 6vh;
     margin-left: -1vh;
     font-family: Outfit 300;
     font-size: 2.5vh;
     position: relative;
-
   }
-
-
 }
 
-    /*
+/*
  @media (max-width: 650px) or (max-device-width: 650px) {
     .parent {
       flex-direction: column;
@@ -408,9 +403,9 @@ h1 {
 
     .client-blurb#fp1-client-blurb{
       /*padding-top: 2vh;*/
-      /*padding-bottom: 2vh;*/
-      /*padding-left: 3.5vh;*/
-      /*display: center;
+/*padding-bottom: 2vh;*/
+/*padding-left: 3.5vh;*/
+/*display: center;
       font-family: Outfit 300;
       font-size: 2.5vh;
       position: relative;
@@ -474,5 +469,3 @@ h1 {
 
     }
 */
-
-
