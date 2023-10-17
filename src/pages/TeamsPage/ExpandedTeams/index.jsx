@@ -8,8 +8,9 @@ import { Routes, Route } from 'react-router-dom'
 import useWebsite from '../../../shared/useWebsite'
 import OperationsContainer from './Operations'
 import ManagementContainer from './Management'
-import SoftwareContainer from "./Software";
+import SoftwareContainer from './Software'
 
+import EngagementContainer from '../Engagement'
 
 export default function ExpandedTeamsPage() {
   const isWebsite = useWebsite()
@@ -33,6 +34,7 @@ export default function ExpandedTeamsPage() {
             <Route path='/management' element={<ManagementContainer />} />
             <Route path='/operations' element={<OperationsContainer />} />
             <Route path='/software' element={<SoftwareContainer />} />
+            <Route path='/engagement' element={<EngagementContainer />} />
           </Routes>
         </div>
         <TeamPageFooter
