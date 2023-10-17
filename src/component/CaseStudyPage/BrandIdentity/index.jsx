@@ -56,14 +56,15 @@ function Palette({ colors, isDesktop }) {
       style={{
         display: 'flex',
         flexDirection: isDesktop ? 'column' : 'column',
-        marginTop: isDesktop ? '' : '10vw'
+        marginTop: isDesktop ? '' : '10vw',
+        marginLeft: isDesktop ? '' : '10vw'
       }}
     >
       <div
         className='palette-text-style'
         style={{
-          marginLeft: isDesktop ? '' : '10px',
-          fontSize: isDesktop ? '2vw' : '6vw'
+          fontSize: isDesktop ? '2vw' : '6vw',
+          marginLeft: '10px'
         }}
       >
         Palette
@@ -71,7 +72,10 @@ function Palette({ colors, isDesktop }) {
       <div
         style={{
           display: 'flex',
-          flexDirection: isDesktop ? 'column' : 'row'
+          flexWrap: 'wrap',
+          flexDirection: isDesktop ? 'column' : 'row',
+          marginRight: isDesktop ? '10vw' : '',
+          height: isDesktop ? '40vw' : ''
         }}
       >
         {colors.map((color, index) => (
@@ -81,7 +85,7 @@ function Palette({ colors, isDesktop }) {
               display: 'flex',
               flexDirection: isDesktop ? 'row' : 'column',
               alignItems: 'center',
-              marginLeft: isDesktop ? '' : '10px'
+              marginLeft: '10px'
             }}
           >
             <SvgIcon

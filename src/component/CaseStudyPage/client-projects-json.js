@@ -42,7 +42,17 @@ const ClientProjectsJSON = {
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed elit id velit congue pellentesque. Ut at tincidunt enim. Vivamus gravida, velit sit amet imperdiet suscipit, erat nulla faucibus turpis, eget rutrum magna odio ut tortor. Maecenas pretium tellus nec nisi rhoncus scelerisque. In hac habitasse platea dictumst. Donec sodales, libero id congue sagittis, mauris arcu consequat purus, vitae laoreet lorem risus vel risus. Duis at orci quis justo convallis congue.',
       image: { image: BrandIdentityImage, bgColor: '#22B0A5' }
     },
-    palette: ['#FFBF3C', '#6FCF97', '#187DFF', '#FF6660'],
+    palette: [
+      '#FFBF3C',
+      '#6FCF97',
+      '#187DFF',
+      '#FF6660',
+      '#FF6660',
+      '#FF6660',
+      '#FF6660',
+      '#FF6660',
+      '#FF6660'
+    ],
     highlights: [
       {
         title: 'Highlight 1',
