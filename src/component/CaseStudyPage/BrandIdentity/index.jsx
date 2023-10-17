@@ -74,8 +74,9 @@ function Palette({ colors, isDesktop }) {
           flexDirection: isDesktop ? 'column' : 'row'
         }}
       >
-        {colors.map((color) => (
+        {colors.map((color, index) => (
           <div
+            key={index}
             style={{
               display: 'flex',
               flexDirection: isDesktop ? 'row' : 'column',

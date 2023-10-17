@@ -10,8 +10,8 @@ export default function Highlight({ isDesktop, casestudy }) {
         marginLeft: '2vw'
       }}
     >
-      {casestudy.highlights.map((highlight) => (
-        <div style={{ marginBottom: '10vw' }}>
+      {casestudy.highlights.map((highlight, index) => (
+        <div style={{ marginBottom: '10vw' }} key={index}>
           {highlight.images.length == 1 ? (
             <SingleImageHighlightContainer
               isDesktop={isDesktop}

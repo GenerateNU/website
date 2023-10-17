@@ -12,53 +12,55 @@ export default function TeamContainer({ isDesktop, casestudy }) {
           <div className='cs-team-style'>Team</div>
           <div className='cs-team-with-image-container'>
             <div className='cs-team-layout-container'>
-              {casestudy.teamMembers.map((tm, index) =>
-                index % 2 == 0 ? (
-                  <div className='cs-team-layout-beside'>
-                    <div>
-                      <div className='cs-team-inner-name-container'>
-                        <SvgIcon
-                          component={Circle}
-                          inheritViewBox
-                          sx={{
-                            fontSize: isDesktop ? 48 : '20vw',
-                            color: tm.color,
-                            marginRight: isDesktop ? '1vh' : ''
-                          }}
-                        />
-                        <div>
-                          <div className='cs-team-name-style'>{tm.name}</div>
-                          <div className='cs-team-title-style'>{tm.title}</div>
-                        </div>
-                      </div>
-                    </div>
-                    {index + 1 < casestudy.teamMembers.length && (
-                      <div className='cs-team-name-container'>
+              {casestudy.teamMembers.map(
+                (tm, index) =>
+                  index % 2 == 0 && (
+                    <div className='cs-team-layout-beside' key={index}>
+                      <div>
                         <div className='cs-team-inner-name-container'>
                           <SvgIcon
                             component={Circle}
                             inheritViewBox
                             sx={{
                               fontSize: isDesktop ? 48 : '20vw',
-                              color: casestudy.teamMembers.at(index + 1).color,
+                              color: tm.color,
                               marginRight: isDesktop ? '1vh' : ''
                             }}
                           />
                           <div>
-                            <div className='cs-team-name-style'>
-                              {casestudy.teamMembers.at(index + 1).name}
-                            </div>
+                            <div className='cs-team-name-style'>{tm.name}</div>
                             <div className='cs-team-title-style'>
-                              {casestudy.teamMembers.at(index + 1).title}
+                              {tm.title}
                             </div>
                           </div>
                         </div>
                       </div>
-                    )}
-                  </div>
-                ) : (
-                  <></>
-                )
+                      {index + 1 < casestudy.teamMembers.length && (
+                        <div className='cs-team-name-container'>
+                          <div className='cs-team-inner-name-container'>
+                            <SvgIcon
+                              component={Circle}
+                              inheritViewBox
+                              sx={{
+                                fontSize: isDesktop ? 48 : '20vw',
+                                color: casestudy.teamMembers.at(index + 1)
+                                  .color,
+                                marginRight: isDesktop ? '1vh' : ''
+                              }}
+                            />
+                            <div>
+                              <div className='cs-team-name-style'>
+                                {casestudy.teamMembers.at(index + 1).name}
+                              </div>
+                              <div className='cs-team-title-style'>
+                                {casestudy.teamMembers.at(index + 1).title}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )
               )}
             </div>
             <div style={{ marginLeft: 'auto', marginRight: '-2vw' }}>

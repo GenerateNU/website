@@ -1,5 +1,3 @@
-import './style.css'
-
 export default function CompanyLogo({ isDesktop, casestudy }) {
   return (
     <div
