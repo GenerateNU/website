@@ -34,7 +34,7 @@ export default function CaseStudy() {
       <Quote isDesktop={isDesktop} casestudy={casestudy} />
       <UpNext isDesktop={isDesktop} casestudy={casestudy} />
       <TeamPageFooter />
-      <NextPage pageName='Apply' url='/apply' />
+      {!isDesktop && <NextPage pageName='Apply' url='/apply' />}
     </div>
   )
 }

@@ -6,10 +6,8 @@ export default function Highlight({ isDesktop, casestudy }) {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
         width: '90vw',
-        margin: 'auto'
+        marginLeft: '2vw'
       }}
     >
       {casestudy.highlights.map((highlight) => (
@@ -33,16 +31,19 @@ export default function Highlight({ isDesktop, casestudy }) {
 
 function SingleImageHighlightContainer({ isDesktop, highlight }) {
   return (
-    <div className='cs-singleimagehighlight-container'>
+    <div style={{ width: '90vw', margin: '3vw' }}>
       <div className='cs-highligh-title-style'>
         {highlight.title.toUpperCase()}
       </div>
-      <div className='cs-image-style'>
-        <img src={highlight.images.at(0)} style={{ width: '70vw' }} />
+      <div>
+        <img
+          src={highlight.images.at(0)}
+          style={{ objectFit: 'cover', height: '100%', width: '100%' }}
+        />
       </div>
       <div
         className='cs-highlight-body-style'
-        style={{ fontSize: isDesktop ? '2vw' : '3vw' }}
+        style={{ fontSize: isDesktop ? '2.5vw' : '3vw' }}
       >
         {highlight.body}
       </div>
@@ -52,7 +53,7 @@ function SingleImageHighlightContainer({ isDesktop, highlight }) {
 
 function DoubleImageHighlightContainer({ isDesktop, highlight }) {
   return (
-    <div className='cs-singleimagehighlight-container'>
+    <div style={{ width: '90vw', margin: '3vw' }}>
       <div className='cs-highligh-title-style'>
         {highlight.title.toUpperCase()}
       </div>
@@ -60,9 +61,7 @@ function DoubleImageHighlightContainer({ isDesktop, highlight }) {
         style={{
           display: 'flex',
           flexDirection: isDesktop ? 'row' : 'column',
-          width: 'fit-content',
-          justifyContent: 'center',
-          alignItems: 'center'
+          width: 'fit-content'
         }}
       >
         <div
@@ -74,22 +73,25 @@ function DoubleImageHighlightContainer({ isDesktop, highlight }) {
         >
           <img
             src={highlight.images.at(0)}
-            style={{ width: '30vw', height: '100%', objectFit: 'cover' }}
+            style={{ width: '45vw', height: '100%', objectFit: 'cover' }}
           />
           <img
             src={highlight.images.at(1)}
             style={{
-              width: '30vw',
+              width: '45vw',
               height: '100%',
+              objectFit: 'cover',
               marginLeft: isDesktop ? '' : '10px',
-              marginTop: isDesktop ? '10px' : '',
-              objectFit: 'cover'
+              marginTop: isDesktop ? '10px' : ''
             }}
           />
         </div>
         <div
           className='cs-highlight-body-style'
-          style={{ fontSize: isDesktop ? '2vw' : '3vw' }}
+          style={{
+            fontSize: isDesktop ? '2.5vw' : '3vw',
+            marginLeft: isDesktop ? '3vw' : ''
+          }}
         >
           {highlight.body}
         </div>

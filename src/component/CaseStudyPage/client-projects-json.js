@@ -80,16 +80,7 @@ const ClientProjectsJSON = {
     },
     teamMembers: [
       { name: 'Matt McCoy', title: 'Project Lead', color: '#FFBF3C' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#6FCF97' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#187DFF' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#FF6660' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#A559EC' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#FFBF3C' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#6FCF97' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#187DFF' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#FF6660' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#A559EC' },
-      { name: 'Matt McCoy', title: 'Project Lead', color: '#56CCF2' }
+      { name: 'Matt McCoy', title: 'Project Lead', color: '#6FCF97' }
     ],
     teamImage: { image: TeamStock, bgColor: '#187DFF' },
     companyLogo: { image: CompanyLogoStock, bgColor: '#22B0A5' },

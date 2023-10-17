@@ -27,8 +27,6 @@
 .cs-team-with-image-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 .cs-team-name-container {
