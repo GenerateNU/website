@@ -85,7 +85,7 @@
 }
 
 .cs-title-container {
-  padding-left: 10vw;
+  padding-left: 8vw;
   width: 50vw;
 }
 
@@ -110,7 +110,6 @@
   font-family: 'Outfit';
   font-size: 1.5vw;
   font-style: normal;
-  line-height: 3vh;
 }
 
 .cs-image {

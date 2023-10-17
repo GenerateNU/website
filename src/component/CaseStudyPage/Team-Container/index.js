@@ -61,7 +61,7 @@ export default function TeamContainer({ isDesktop, casestudy }) {
                 )
               )}
             </div>
-            <div style={{ marginLeft: 'auto' }}>
+            <div style={{ marginLeft: 'auto', marginRight: '-2vw' }}>
               {isDesktop && (
                 <ImageContainer
                   imageWithBGColor={casestudy.teamImage}
@@ -90,7 +90,7 @@ export function ImageContainer({ imageWithBGColor, isOffsetRight, isDesktop }) {
       <div
         className='selector'
         style={{
-          width: isDesktop ? '30vw' : '70vw',
+          width: isDesktop ? '40vw' : '70vw',
           backgroundColor: bgColor,
           color: bgColor,
           marginTop: 'auto',
@@ -101,7 +101,7 @@ export function ImageContainer({ imageWithBGColor, isOffsetRight, isDesktop }) {
           src={image}
           className='selector'
           style={{
-            width: isDesktop ? '30vw' : '70vw',
+            width: isDesktop ? '40vw' : '70vw',
             position: 'relative',
             bottom: '3vw',
             left: isOffsetRight ? '' : '5vw',
