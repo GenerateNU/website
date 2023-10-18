@@ -1,0 +1,38 @@
+.upnext-style {
+  font-family: 'Space Mono';
+  font-size: 3vw;
+  margin-top: 6vw;
+  font-weight: 700;
+}
+
+.project-style {
+  font-family: 'Space Mono';
+  margin-top: 3vw;
+  font-size: 5vw;
+  font-weight: 700;
+  text-align: left;
+}
+
+.date-style {
+  font-family: 'Outfit';
+  font-size: 3vw;
+  font-weight: 300;
+}
+
+.view-cs-fp-project-div {
+  display: flex;
+  margin-left: auto;
+}
+
+.view-cs-fp-project-button {
+  color: black;
+  background-color: #ffbf3c;
+  border: 1px solid #111111;
+  box-shadow: -0.5rem 0.6rem;
+  font-family: 'Space Mono';
+  font-size: 2vw;
+  position: relative;
+  width: 25vw;
+  height: 8vw;
+  margin-left: 5px;
+}

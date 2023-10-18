@@ -1,17 +1,9 @@
 import ClientProjectsJSON from '../client-projects-json'
 import './style.css'
 import './style-mobile.css'
-import useWebsite from '../../../shared/useWebsite'
 import React from 'react'
 
-export default function CaseStudyHeader() {
-  const casestudy =
-    ClientProjectsJSON[window.location.pathname.split('/').pop()]
-
-  const isWebsite = useWebsite()
-  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
-  const isDesktop = isBigScreen && isWebsite
-
+export default function CaseStudyHeader({ isDesktop, casestudy }) {
   return isDesktop ? (
     <Header casestudy={casestudy} />
   ) : (
