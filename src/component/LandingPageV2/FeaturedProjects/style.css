@@ -1,5 +1,5 @@
 h2 {
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
@@ -10,19 +10,30 @@ h2 {
 
 .projects-container {
   padding: 2vh;
-  font-family: "Space Mono 700";
-  font-style: normal;
+  width: 60vh;
+  font-family: 'Space Mono 700';
   font-weight: bolder;
-  text-transform: uppercase;
+  font-size: 10vh;
   line-height: 12vh;
-  color: white;
+  color: #fff;
+}
+
+.projects-container,
+h2 {
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .blurb-container {
-  font-family: 'Outfit 300';;
+  width: 53vh;
+  text-align: left;
+  padding: 2vh;
+  font-family: 'Outfit 300';
   font-style: normal;
+  font-size: 2.5vh;
   line-height: 3.5vh;
-  color: black;
+  color: #000;
 }
 
 .featured_projects_container {
@@ -39,11 +50,13 @@ h2 {
   .mobile {
     display: flex;
   }
+
   .projects-container {
     font-size: 17vw;
     text-align: center;
     max-width: 90vw;
   }
+
   .blurb-container {
     text-align: left;
     padding: 3.5vw;
@@ -51,6 +64,7 @@ h2 {
     font-size: 4.5vw;
     width: 90vw;
   }
+
   .featured_projects_container {
     padding-top: 8em;
     width: 100vw;

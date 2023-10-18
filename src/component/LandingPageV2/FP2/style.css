@@ -2,12 +2,13 @@
   margin-top: -0.5px;
 }
 
+/*
 @media only screen and (max-device-width: 650px) {
   .p {
     width: 34px;
   }
 }
-
+*/
 .parent {
   display: flex;
   flex-direction: row;
@@ -74,20 +75,16 @@
 }
 
 .product-img-container {
-  margin-top: 12px;
-  display: flex;
-  height: fit-content;
-  /*
   padding-top: 5vh;
   padding-left: 14vh;
   margin-top: 14vh;
-  */
 }
 
 .mockup-img {
   /* position: absolute; */
   /* height: 30em; */
   width: 74vh;
+  margin-left: -12vh;
   min-height: 100%;
 }
 
@@ -121,17 +118,17 @@ blockquote {
 }
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
 blockquote:before {
-  font-family: 'Space Mono 700';
+  font-family: "Space Mono 700";
   color: #ffbf3c;
   position: absolute;
   font-size: 6vh;
   line-height: 1;
   top: 0;
   left: -1.5vh;
-  content: '\201C';
+  content: "\201C";
 }
 blockquote:after {
-  font-family: 'Space Mono 700';
+  font-family: "Space Mono 700";
   color: #ffbf3c;
   position: absolute;
   float: right;
@@ -139,11 +136,11 @@ blockquote:after {
   line-height: 1;
   right: 0vh;
   bottom: -1vh;
-  content: '\201D';
+  content: "\201D";
 }
 
 h1 {
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   font-style: normal;
   font-weight: bolder;
   font-size: 4.5em;
@@ -155,13 +152,12 @@ h1 {
 }
 
 #fp2-teams {
-  font-family: 'Space Mono';
+  font-family: "Space Mono"; 
   font-size: 3vh;
 }
 
 /*
-
-@media only screen and (min-aspect-ratio: 6/10) {
+@media (min-width: 651px) or (min-device-width: 651px) {
   .parent {
     display: flex;
     flex-direction: row;
@@ -246,7 +242,7 @@ h1 {
   }
   
   .product-img {
-     position: absolute; 
+    /* position: absolute; 
     height: 80vh;
     margin-top: -8vh;
     margin-left: -4vh;
@@ -328,9 +324,7 @@ h1 {
     margin-left: 13vh;
   }
 }
-
 */
-
 @media (max-width: 650px) or (max-device-width: 650px) {
   .parent {
     flex-direction: column;
@@ -399,4 +393,7 @@ h1 {
     left: -0.5vh;
     bottom: -6vh;
   }
+        .p {
+          width: 34px;
+        }
 }

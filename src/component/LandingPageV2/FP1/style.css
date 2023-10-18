@@ -7,9 +7,7 @@
 }
 
 .column-1 {
-  /*
   margin-top: 10vh;
-  */
   display: flex;
   flex-direction: column;
 }
@@ -34,7 +32,7 @@
 .client-text {
   font-family: Outfit 500;
   font-size: 3vh;
-  line-height: 3vh;
+  line-height: 3vh;;
   font-weight: 700;
   padding-right: 2vh;
 }
@@ -70,6 +68,7 @@
 .product-img {
   /* position: absolute; */
   height: 80vh;
+  margin-top: -8vh;
   margin-left: -4vh;
   min-height: 100%;
 }
@@ -87,7 +86,7 @@ blockquote {
 }
 
 blockquote:before {
-  font-family: 'Space Mono 700';
+  font-family: "Space Mono 700";
   color: #ffbf3c;
   position: absolute;
   font-size: 6vh;
@@ -95,10 +94,10 @@ blockquote:before {
   top: 0;
   margin-left: -2vh;
   left: -2vh;
-  content: '\201C';
+  content: "\201C";
 }
 blockquote:after {
-  font-family: 'Space Mono 700';
+  font-family: "Space Mono 700";
   color: #ffbf3c;
   position: absolute;
   float: right;
@@ -107,11 +106,11 @@ blockquote:after {
   line-height: 1;
   right: 0vh;
   bottom: -1vh;
-  content: '\201D';
+  content: "\201D";
 }
 
 h1 {
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   font-style: normal;
   font-weight: bolder;
   font-size: 9vh;
@@ -119,7 +118,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/*
+
 @media only screen and (min-aspect-ratio: 6/10) {
   .parent {
     display: flex;
@@ -204,7 +203,7 @@ h1 {
   }
   
   .product-img {
-    /* position: absolute; 
+    /* position: absolute; */
     height: 80vh;
     margin-top: -8vh;
     margin-left: -4vh;
@@ -286,18 +285,18 @@ h1 {
     margin-left: 13vh;
   }
 }
-*/
+
 
 @media (max-width: 650px) or (max-device-width: 650px) {
-  /*.parent {*/
-  /*  flex-direction: column;*/
-  /*}*/
-  /*
-  .column-1{
-    margin-left: -3vh;
-    margin-top: -3vh;
+
+  .parent {
+   flex-direction: column;
   }
-        */
+  
+  .column-1{
+
+  }
+        
   .client-blurb#fp1-client-blurb {
     /*font-size: 2vh;*/
     /* margin-left: 0.8vh; */
@@ -320,7 +319,7 @@ h1 {
   }
 
   .quote-container#fp1-quote-container {
-    width: 55vh;
+    width: 80%;
     font-family: Outfit 300;
     font-size: 2.5vh;
     position: relative;
@@ -389,7 +388,7 @@ h1 {
 }
 
 /*
- @media (max-width: 650px) or (max-device-width: 650px) {
+  @media only screen and (device-width: 375px) and (device-height: 667px) {
     .parent {
       flex-direction: column;
       padding-top: 3vh;
@@ -398,14 +397,14 @@ h1 {
     }
 
     .column-1{
-      /*margin-left: -1.75vh; 
+      margin-left: -1.75vh;
     }
 
     .client-blurb#fp1-client-blurb{
       /*padding-top: 2vh;*/
-/*padding-bottom: 2vh;*/
-/*padding-left: 3.5vh;*/
-/*display: center;
+      /*padding-bottom: 2vh;*/
+      /*padding-left: 3.5vh;*/
+      /*display: center;
       font-family: Outfit 300;
       font-size: 2.5vh;
       position: relative;
@@ -432,11 +431,10 @@ h1 {
 
   }
 
-
+  
     @media only screen and (device-width: 412px) and (device-height: 915px) {
       .parent {
         flex-direction: column;
-        width: 100vw;
       }
   
       .client-blurb#fp1-client-blurb {
@@ -469,3 +467,5 @@ h1 {
 
     }
 */
+
+
