@@ -33,6 +33,7 @@
   flex-wrap: wrap;
   width: 91vw;
   background-color: white;
+  opacity: 0.8;
   padding: 4vw;
   min-height: 15vw;
   margin-top: 3vw;
@@ -43,7 +44,7 @@
   font-family: 'Outfit 600';
   font-size: 20px;
   margin: 2vw;
-  width: 20vw;
+  width: 16vw;
   word-wrap: normal;
 }
 
@@ -58,9 +59,8 @@
   font-family: 'Outfit 600';
   font-size: 20px;
   margin: 2vw;
-  width: 20vw;
+  width: 16vw;
   word-wrap: normal;
-  cursor: pointer;
 }
 
 .no-positions-text {
@@ -74,33 +74,37 @@
 
 @media (max-width: 650px) or (max-device-width: 650px) {
   .teams-button {
-    font-size: 9vw;
-    line-height: 11vw;
+    font-size: 12vw;
+    line-height: 12vw;
+    margin-top: 8vw;
   }
-
   .teams-button:hover {
     -webkit-text-stroke: 0.2vw white;
   }
-
   .teams-button-selected {
-    font-size: 9vw;
-    line-height: 11vw;
+    font-size: 12vw;
+    line-height: 12vw;
     -webkit-text-stroke: 0.2vw white;
+    margin-top: 8vw;
   }
-
+  .positions-container {
+    width: 88vw;
+    min-height: 15vw;
+    margin-top: 3vw;
+  }
   .position-text {
-    font-size: 2vw;
+    font-size: 4vw;
+    width: 45%;
   }
-
   .position-text:hover {
     -webkit-text-stroke: 0.1vw #187dff;
   }
-
   .position-text-disabled {
-    font-size: 2vw;
+    font-size: 4vw;
+    width: 45%;
   }
-
   .no-positions-text {
-    font-size: 2vw;
+    font-size: 4vw;
+    width: 40%;
   }
 }
