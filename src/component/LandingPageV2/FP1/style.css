@@ -193,6 +193,7 @@ h1 {
     .product-img {
         /* position: absolute; */
         height: 80vh;
+        width: auto;
         margin-top: -8vh;
         margin-left: -4vh;
         min-height: 100%;
