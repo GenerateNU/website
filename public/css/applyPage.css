@@ -32,24 +32,11 @@
   font-family: 'Space Mono';
   font-weight: 700;
   font-size: 36px;
+  line-height: 36px;
+  padding: 5px;
   background: #187dff;
-  padding: 0.02em;
   width: fit-content;
   top: 10%;
-  margin-bottom: 1%;
-  margin-left: 4%;
-}
-
-.ap_text_mobile_second {
-  width: fit-content;
-  color: white;
-  font-family: 'Space Mono';
-  font-weight: 700;
-  font-size: 6vw;
-  line-height: 5vw;
-  padding: 1vw;
-  background: #187dff;
-  margin-right: 6vh;
   margin-bottom: 1%;
   margin-left: 4%;
 }
