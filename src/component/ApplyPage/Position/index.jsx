@@ -158,23 +158,12 @@ export default function Position() {
           <div className='position-title'> {position.positionTitle}</div>
           <div className='position-team'> {position.categoryType} </div>
           <div className='header-button-container'>
-            <ShadowedButton
-              fillColor='#FFBF3C'
-              fontSize='4vw'
-              text='apply now'
-              xPad='16vw'
-              yPad='4vw'
-              lnk={position.positionTitle}
-              onClick={handleApply}
-            />
-            <ShadowedButton
-              fillColor='white'
-              fontSize='4vw'
-              text='share'
-              xPad='8vw'
-              yPad='4vw'
-              onClick={copyShareLink}
-            />
+            <button className='header-apply-button' onClick={handleApply}>
+              {'apply now'}
+            </button>
+            <button className='header-share-button' onClick={copyShareLink}>
+              {'share'}
+            </button>
           </div>
         </div>
         <div className='info-container'>

@@ -1,9 +1,10 @@
 import Clients from './clients'
+import Software from './software'
 
 const applicationsByTeams = {
   clients: Clients,
   hardware: [],
-  software: [],
+  software: Software,
   operations: [],
   management: [],
   engagement: []

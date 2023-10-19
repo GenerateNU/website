@@ -153,7 +153,7 @@ h1.position-title {
   .header-button-container {
     display: flex;
     margin-top: auto;
-    margin-bottom: 20vw;
+    margin-bottom: 17vw;
     margin-left: 5vw;
   }
 
@@ -219,5 +219,24 @@ h1.position-title {
     font-size: 3.75vw;
     font-family: 'Outfit';
     font-weight: 400;
+  }
+
+  .header-apply-button {
+    background-color: #ffbf3c;
+    padding: 4vw 16vw;
+    font-size: 4vw;
+    font-family: 'Space Mono';
+    color: black;
+    box-shadow: -0.5rem 0.6rem black;
+  }
+
+  .header-share-button {
+    background-color: white;
+    padding: 4vw 8vw;
+    font-size: 4vw;
+    font-family: 'Space Mono';
+    color: black;
+    box-shadow: -0.5rem 0.6rem black;
+    margin-left: 5vw;
   }
 }
