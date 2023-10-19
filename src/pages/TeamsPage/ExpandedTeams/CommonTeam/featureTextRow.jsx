@@ -1,7 +1,8 @@
 import { React } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import useWebsite from '../../../../shared/useWebsite'
 import buttonIMG from './exploredeeper.png'
+import ShadowedButton from '../../../../component/ShadowedButton'
 import './style.css'
 export default function FeatureTextRow({
   description,
@@ -12,6 +13,12 @@ export default function FeatureTextRow({
   const isWebsite = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
   const mobile = !isBigScreen || !isWebsite
+  const navigate = useNavigate()
+
+  const handleOnClick = (link) => {
+    navigate(link)
+  }
+
   return (
     <div className={`${mobile ? 'text-row-mobile-feature' : 'text-row'}`}>
       {(reverse || mobile) && (
@@ -23,10 +30,15 @@ export default function FeatureTextRow({
         >
           {description}
         </div>
+
         <div className='feature-link'>
-          <Link exact to={button}>
-            <img src={buttonIMG} className='feature-button ' alt=''></img>
-          </Link>
+          <ShadowedButton
+            className='feature-button'
+            fillColor='white'
+            right={false}
+            text={'explore deeper'}
+            onClick={() => handleOnClick(button)}
+          ></ShadowedButton>
         </div>
       </div>
       {!reverse && !mobile && (

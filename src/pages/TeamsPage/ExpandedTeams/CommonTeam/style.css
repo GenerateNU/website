@@ -251,14 +251,15 @@
 }
 
 .feature-button {
-  width: 100%;
-  height: auto;
   overflow: hidden;
+  padding: 1vw;
 }
 
 .feature-link {
   margin-top: min(5vh, 5vw);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 650px) or (max-device-width: 650px) {
@@ -272,6 +273,7 @@
     width: 50%;
     height: auto;
     margin-left: auto;
+    justify-content: end;
   }
 
   .text-row-mobile-feature {
