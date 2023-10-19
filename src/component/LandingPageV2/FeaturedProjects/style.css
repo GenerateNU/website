@@ -1,68 +1,74 @@
 h2 {
-  font-family: "Space Mono";
-  font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 8.78vh;
-  color: white;
-  text-align: center;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 8.78vh;
+    color: white;
+    text-align: center;
 }
 
 .projects-container {
-  padding: 2vh;
-  width: 60vh;
-  font-family: "Space Mono 700";
-  font-style: normal;
-  font-weight: bolder;
-  text-transform: uppercase;
-  font-size: 10vh;
-  line-height: 12vh;
-  color: white;
-  text-align: center;
+    padding: 2vh;
+    width: 60vh;
+    font-family: 'Space Mono 700';
+    font-weight: bolder;
+    font-size: 10vh;
+    line-height: 12vh;
+    color: #fff;
+}
+
+.projects-container,
+h2 {
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .blurb-container {
-  width: 53vh;;
-  text-align: left;
-  padding: 2vh;
-  font-family: 'Outfit 300';;
-  font-style: normal;
-  font-size: 2.5vh;
-  line-height: 3.5vh;
-  color: black;
+    width: 53vh;
+    text-align: left;
+    padding: 2vh;
+    font-family: 'Outfit 300';
+    font-style: normal;
+    font-size: 2.5vh;
+    line-height: 3.5vh;
+    color: #000;
 }
 
 .featured_projects_container {
-  background-color: #6fcf97;
-  width: 85vh;
-  height: 100vh;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-@media only screen and (max-device-width: 650px) {
-  .mobile {
-    display: flex;
-  }
-  .projects-container {
-    font-size: 8em;
-    text-align: left;
-    max-width: 90vw;
-  }
-  .blurb-container {
-    text-align: left;
-    padding: 3.5vw;
-    font-size: 4.5vw;
-    max-width: 90vw;
-  }
-  .featured_projects_container {
-    padding-top: 8em;
-    width: 100vw;
+    background-color: #6fcf97;
+    width: 85vh;
+    height: 100vh;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+}
+
+@media (max-width: 650px) or (max-device-width: 650px) {
+    .mobile {
+        display: flex;
+    }
+    .projects-container {
+        font-size: 17vw;
+        text-align: center;
+        width: 90vw;
+    }
+    .blurb-container {
+        text-align: left;
+        padding: 3.5vw;
+        padding-bottom: 10vw;
+        font-size: 4.5vw;
+        width: 90vw;
+    }
+    .featured_projects_container {
+        padding-top: 8em;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+    }
 }

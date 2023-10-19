@@ -83,14 +83,14 @@ a {
   color: #ffbf3c;
 }
 
-@media only screen and (max-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .ideation {
     margin-left: 12.55vh;
     margin-top: 3vh;
   }
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .DevelopmentWheelOne {
     size: 30.11vh;
     height: 45vh;

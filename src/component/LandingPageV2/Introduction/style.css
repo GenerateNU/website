@@ -233,11 +233,7 @@
 }
 
 .mobilePageContainer {
-  display: flex;
-  width: 100vw;
-  flex-direction: column;
-  padding: 5vw;
-  padding-top: 25vh;
+  display: none;
 }
 
 .comingsoontext {
@@ -474,14 +470,11 @@
   }
 }
 
-@media only screen and (min-device-width: 651px) {
+@media (min-device-width: 651px) or (min-width: 651px) {
   .desktop {
     display: flex;
   }
   .comingsoontext {
-    display: none;
-  }
-  .mobilePageContainer {
     display: none;
   }
 }
@@ -489,6 +482,13 @@
 @media (max-width: 650px) or (max-device-width: 650px) {
   .desktop {
     display: none;
+  }
+  .mobilePageContainer {
+      display: flex;
+      width: 100vw;
+      flex-direction: column;
+      padding: 5vw;
+      padding-top: 25vh;
   }
   .comingsoontext {
     display: flex;
@@ -502,19 +502,10 @@
   }
   .text-container-mobile {
     display: flex;
-    width: 70vw;
+    width: 100%;
     flex-direction: column;
-    padding: 5vw;
-    margin-left: 28.5vw;
-  }
-  .northeasternbest {
-    margin-left: 6vh;
-  }
-  .productdevelopment {
-    margin-left: 6vh;
-  }
-  .studio {
-    margin-left: 6vh;
+    padding-top: 5vw;
+    align-items: flex-end;
   }
   .scrollmobile {
     margin-left: 73vh;
