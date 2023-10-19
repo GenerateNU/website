@@ -10,8 +10,7 @@ import useWebsite from '../../../shared/useWebsite'
 import OperationsContainer from './Operations'
 import ManagementContainer from './Management'
 import SoftwareContainer from './Software'
-
-import EngagementContainer from '../Engagement'
+import EngagementContainer from './Engagement'
 
 export default function ExpandedTeamsPage() {
   const isWebsite = useWebsite()
