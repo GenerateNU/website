@@ -368,7 +368,7 @@ h1 {
     }
     .mockup-img {
         width: 80vw;
-        height: auto;
+        height: 100%;
     }
     .bottom-corner,
     .top-corner {

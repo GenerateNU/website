@@ -193,7 +193,7 @@ h1 {
     .product-img {
         /* position: absolute; */
         height: 80vh;
-        width: auto;
+        width: 100%;
         margin-top: -8vh;
         margin-left: -4vh;
         min-height: 100%;
@@ -281,7 +281,7 @@ h1 {
         position: relative;
     }
     .product-img {
-        height: auto;
+        height: 100%;
         width: 80vw;
         margin-left: 0;
         margin-right: 0;
