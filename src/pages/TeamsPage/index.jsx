@@ -8,7 +8,6 @@ import useWebsite from '../../shared/useWebsite'
 import NewMobileContainer from '../../component/DesktopMobileHandler/NewMobileContainer'
 import WebTeamContainer from './TeamPageAssets/WebTeamContainer'
 import MobileTeamContainer from './TeamPageAssets/MobileTeamContainer'
-import ScrollToTop from '../../component/ScrollToTop'
 
 export default function TeamsPage() {
   const isWebsite = useWebsite()
