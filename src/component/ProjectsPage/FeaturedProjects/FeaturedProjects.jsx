@@ -4,6 +4,7 @@ import './style.css'
 import Arrow from '../../../assets/images/projectspage/arrowbutton.svg'
 import Projects from '../../../data/featuredProjectData.js'
 import useWebsite from '../../../shared/useWebsite'
+import ShadowedButton from '../../ShadowedButton'
 
 export default function FeaturedProjects() {
   const [currentProject, setCurrentProject] = useState(Projects[0])
@@ -28,11 +29,13 @@ export default function FeaturedProjects() {
           <DesktopFeaturedProjects
             handleProject={handleProject}
             currentProject={currentProject}
+            mobile={mobile}
           />
         ) : (
           <MobileFeaturedProjects
             handleProject={handleProject}
             currentProject={currentProject}
+            mobile={mobile}
           />
         )}
       </div>
@@ -40,7 +43,7 @@ export default function FeaturedProjects() {
   )
 }
 
-function DesktopFeaturedProjects({ handleProject, currentProject }) {
+function DesktopFeaturedProjects({ handleProject, currentProject, mobile }) {
   return (
     <>
       <div className='featured-pp-fp-projects-text'>
@@ -52,19 +55,25 @@ function DesktopFeaturedProjects({ handleProject, currentProject }) {
           </p>
         </div>
         <div className='featured-pp-fp-project-buttons'>
-          <div className='pp-fp-projects-buttons'>
-            <button
-              className='pp-fp-projects-button pp-fp-projects-forward'
+          <div className='pp-fp-projects-buttons' style={{ marginTop: '10vw' }}>
+            <ShadowedButton
+              fillColor='white'
+              className='pp-fp-projects-forward'
+              xPad={mobile ? '15vw' : '2vw'}
+              yPad={mobile ? '6vw' : '2vw'}
+              textColor='white'
+              text={<img width={'40vh'} src={Arrow} />}
               onClick={() => handleProject(1)}
-            >
-              <img width={'40vh'} src={Arrow}></img>
-            </button>
-            <button
-              className='pp-fp-projects-button pp-fp-projects-back'
+            />
+            <ShadowedButton
+              fillColor='white'
+              className='pp-fp-projects-back'
+              xPad={mobile ? '15vw' : '2vw'}
+              yPad={mobile ? '6vw' : '2vw'}
+              textColor='white'
+              text={<img width={'40vh'} src={Arrow} />}
               onClick={() => handleProject(-1)}
-            >
-              <img width={'40vh'} src={Arrow}></img>
-            </button>
+            />
           </div>
         </div>
       </div>
@@ -78,10 +87,18 @@ function DesktopFeaturedProjects({ handleProject, currentProject }) {
             {currentProject.type}
           </h2>
           <div className='pp-fp-desc'>{currentProject.description}</div>
-          <div className='view-pp-fp-project-div'>
-            <a href={`/case-study/${currentProject.name.toLowerCase()}`}>
-              <button className='view-pp-fp-project-button'>View</button>
-            </a>
+          <div className='view-pp-fp-project-div' style={{ marginTop: '10vw' }}>
+            <ShadowedButton
+              fillColor='white'
+              xPad={mobile ? '12vw' : '60px'}
+              yPad={mobile ? '2vw' : '20px'}
+              textColor='black'
+              fontSize='2vh'
+              text='view'
+              onClick={() =>
+                (window.location.href = `/case-study/${currentProject.name.toLowerCase()}`)
+              }
+            />
           </div>
         </div>
       </div>
@@ -89,7 +106,7 @@ function DesktopFeaturedProjects({ handleProject, currentProject }) {
   )
 }
 
-function MobileFeaturedProjects({ handleProject, currentProject }) {
+function MobileFeaturedProjects({ handleProject, currentProject, mobile }) {
   return (
     <>
       <div className='featured-pp-fp-projects-text'>
@@ -106,9 +123,17 @@ function MobileFeaturedProjects({ handleProject, currentProject }) {
             <h2 className='pp-fp-project-team'>{currentProject.type}</h2>
           </div>
           <div className='mobile-view-pt'>
-            <a href={`/case-study/${currentProject.name.toLowerCase()}`}>
-              <button className='view-pp-fp-project-button-2'>View</button>
-            </a>
+            <ShadowedButton
+              fillColor='white'
+              xPad={mobile ? '12vw' : '4vw'}
+              yPad={mobile ? '2vw' : '4vw'}
+              textColor='black'
+              fontSize='2vh'
+              text='view'
+              onClick={() =>
+                (window.location.href = `/case-study/${currentProject.name.toLowerCase()}`)
+              }
+            />
           </div>
         </div>
       </div>
@@ -120,18 +145,24 @@ function MobileFeaturedProjects({ handleProject, currentProject }) {
           <p>{currentProject.description}</p>
           <div className='view-pp-fp-project-div-2'>
             <div className='pp-fp-projects-buttons'>
-              <button
-                className='pp-fp-projects-button-2 pp-fp-projects-forward'
+              <ShadowedButton
+                fillColor='white'
+                className='pp-fp-projects-forward'
+                xPad={mobile ? '3vw' : '4vw'}
+                yPad={mobile ? '3vw' : '4vw'}
+                textColor='white'
+                text={<img width={'40vh'} src={Arrow} />}
                 onClick={() => handleProject(1)}
-              >
-                <img width={40} src={Arrow}></img>
-              </button>
-              <button
-                className='pp-fp-projects-button-2 pp-fp-projects-back'
+              />
+              <ShadowedButton
+                fillColor='white'
+                className='pp-fp-projects-back'
+                xPad={mobile ? '3vw' : '4vw'}
+                yPad={mobile ? '3vw' : '4vw'}
+                textColor='white'
+                text={<img width={'40vh'} src={Arrow} />}
                 onClick={() => handleProject(-1)}
-              >
-                <img width={40} src={Arrow}></img>
-              </button>
+              />
             </div>
           </div>
         </div>

@@ -17,11 +17,15 @@ a {
 }
 
 .footer-link-bold {
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
   white-space: nowrap;
   max-height: 30px;
   font-size: 2vh;
+}
+
+.footer-link-bold:hover {
+  color: #187dff;
 }
 
 .footer-link-text {
@@ -33,9 +37,12 @@ a {
   font-family: 'Space Mono';
 }
 
+.footer-link-text:hover {
+  color: #187dff;
+}
+
 a:hover {
-  font-weight: 1000;
-  color: #ffffff;
+  -webkit-text-stroke: 0.5px white;
 }
 
 .vert-sherm {

@@ -1,11 +1,12 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import Arrow from '../../../../assets/images/projectspage/arrowbutton.svg'
+import ShadowedButton from '../../../../component/ShadowedButton'
 import './footerStyle.css'
 import GenerateLogo from '../../../../assets/images/landingpage-v2/footerlogo.svg'
 import { useNavigate } from 'react-router-dom'
 import useWebsite from '../../../../shared/useWebsite'
 import SocialIcons from './SocialIcons'
-import ButtonUp from '../../../../assets/images/TeamsPageImages/TeamAssets/ButtonUp.svg'
 
 const pages = [
   { name: 'Generate', link: '/' },
@@ -32,7 +33,12 @@ const pagesSplit = [
 
 const FooterLink = ({ page, currentPage }) => {
   const { name, link, disabled } = page
-  const isCurrentPage = link.includes('/teams')
+  const currentURI = window.location.pathname.split('/').at(1)
+  var isCurrentPage = `/${currentURI}`.includes(link) && link != '/'
+
+  if (currentURI == 'case-study' && link == '/projects') {
+    isCurrentPage = true
+  }
 
   return (
     <div>
@@ -66,9 +72,7 @@ function FooterLinks() {
         <FooterLink
           key={index}
           page={page}
-          currentPage={currentPageUrl.substring(
-            currentPageUrl.lastIndexOf('/')
-          )}
+          currentPage={currentPageUrl.substring(currentPageUrl.indexOf('/'))}
         />
       ))}
     </span>
@@ -139,19 +143,28 @@ function TeamPageFooter({ color, page }) {
             }`}
           >
             <div className='sherm'>
-              <img
-                className='logo-placement'
-                src={GenerateLogo}
+              <ShadowedButton
+                fillColor='white'
+                right={true}
+                text={
+                  <img
+                    style={{ marginTop: '10px' }}
+                    width={!isBigScreen ? '200vw' : '100vw'}
+                    src={GenerateLogo}
+                    alt='matt was here'
+                  />
+                }
                 onClick={handleOnClick}
-                alt='Logo description' // Add alt text to the image for accessibility
               />
             </div>
           </div>
           {mobile ? (
-            <img
-              src={ButtonUp}
-              alt=''
-              className={`${mobile ? 'up-icon-mobile' : 'up-icon'}`}
+            <ShadowedButton
+              className='up-icon-mobile'
+              xPad={mobile ? '3vw' : '2vw'}
+              yPad={mobile ? '2vw' : '2vw'}
+              textColor='white'
+              text={<img width={'40vh'} src={Arrow} />}
               onClick={handleScrollClick}
             />
           ) : (
@@ -171,10 +184,12 @@ function TeamPageFooter({ color, page }) {
           {mobile ? (
             <SocialIcons mobile={mobile} />
           ) : (
-            <img
-              src={ButtonUp}
-              alt=''
-              className={`${mobile ? 'up-icon-mobile' : 'up-icon'}`}
+            <ShadowedButton
+              className='up-icon'
+              xPad={mobile ? '15vw' : '2vw'}
+              yPad={mobile ? '6vw' : '2vw'}
+              textColor='white'
+              text={<img width={'40vh'} src={Arrow} />}
               onClick={handleScrollClick}
             />
           )}

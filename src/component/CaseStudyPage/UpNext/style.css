@@ -36,3 +36,7 @@
   height: 8vw;
   margin-left: 5px;
 }
+
+.view-cs-fp-project-button:hover {
+  box-shadow: 0 0;
+}

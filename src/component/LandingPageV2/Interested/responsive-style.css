@@ -14,9 +14,11 @@
   flex-direction: row;
   align-items: center;
   justify-items: center;
+  position: relative;
   width: 100%;
   margin-top: 20vh;
   margin-left: auto;
+  z-index: 80;
 }
 
 .interestedText {
@@ -44,7 +46,7 @@
   height: 11vh;
   background: #187dff;
   border: 1px solid #111111;
-  box-shadow: -0.75vh 0.75vh;
+  box-shadow: -0.75vh 0.75vh black;
   margin-right: auto;
   margin-left: auto;
 }

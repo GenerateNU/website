@@ -15,6 +15,7 @@ a {
   width: 100%;
   height: auto;
   margin-top: 10vw;
+  cursor: pointer;
 }
 
 .title {
@@ -76,11 +77,6 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 3vw;
-}
-
-a:hover {
-  font-weight: 1000;
-  color: #ffffff;
 }
 
 .sherm {
@@ -152,18 +148,22 @@ a:hover {
 }
 
 .up-icon {
-  width: 80px;
-  height: 80px;
   flex-shrink: 0;
   margin-left: 3vw;
+  background: #ffbf3c;
+  border: 1px solid black;
+  box-shadow: -0.5rem 0.6rem black;
 }
 
 .up-icon-mobile {
-  width: 20vw;
-  height: 20vw;
-  padding-top: 3vw;
+  width: 15vw;
+  height: 15vw;
   flex-shrink: 0;
-  margin-bottom: 3vw;
+  margin-right: 2vw;
+  background: #ffbf3c;
+  border: 1px solid black;
+  box-shadow: -0.8rem 0.8rem black;
+  cursor: pointer;
 }
 
 .footer-two {
