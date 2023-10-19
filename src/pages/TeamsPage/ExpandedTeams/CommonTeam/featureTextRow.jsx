@@ -1,5 +1,5 @@
-import { React, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { React } from 'react'
+import { Link } from 'react-router-dom'
 import useWebsite from '../../../../shared/useWebsite'
 import buttonIMG from './exploredeeper.png'
 import './style.css'
