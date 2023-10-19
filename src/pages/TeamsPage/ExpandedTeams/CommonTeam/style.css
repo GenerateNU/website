@@ -82,6 +82,12 @@
   height: min(39.74vw, 52.98vh);
 }
 
+.feature-info-pic {
+  width: 42.22vw;
+  height: auto;
+  object-fit: cover;
+}
+
 .text-row {
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -242,4 +248,38 @@
 #management {
   padding-left: 10vw;
   padding-right: 10vw;
+}
+
+.feature-button {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.feature-link {
+  margin-top: min(5vh, 5vw);
+  cursor: pointer;
+}
+
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .feature-info-pic {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5vw;
+  }
+
+  .feature-link {
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+  }
+
+  .text-row-mobile-feature {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
