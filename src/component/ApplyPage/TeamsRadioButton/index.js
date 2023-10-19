@@ -8,8 +8,10 @@ export const TeamsRadioButton = ({ team, isSelected, onClick }) => {
 
   const positionsData = useMemo(() => findPositionsByCategory(team), [team])
 
-  const handlePositionClick = (id) => {
-    navigate(`/positions/${team}/${id}`)
+  const handlePositionClick = (id, isActive) => {
+    if (isActive) {
+      navigate(`/positions/${team}/${id}`)
+    }
   }
   return (
     <div className='teams-button-container'>
@@ -31,7 +33,8 @@ export const TeamsRadioButton = ({ team, isSelected, onClick }) => {
                   className={
                     position.active ? 'position-text' : 'position-text-disabled'
                   }
-                  onClick={() => handlePositionClick(index)}
+                  onClick={() => handlePositionClick(index, position.active)}
+                  d
                 >
                   {position.positionTitle}
                 </div>

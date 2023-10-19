@@ -60,7 +60,6 @@
   margin: 2vw;
   width: 20vw;
   word-wrap: normal;
-  cursor: pointer;
 }
 
 .no-positions-text {
@@ -74,8 +73,9 @@
 
 @media (max-width: 650px) or (max-device-width: 650px) {
   .teams-button {
-    font-size: 9vw;
-    line-height: 11vw;
+    font-size: 12vw;
+    line-height: 12vw;
+    margin-top: 8vw;
   }
 
   .teams-button:hover {
@@ -83,13 +83,21 @@
   }
 
   .teams-button-selected {
-    font-size: 9vw;
-    line-height: 11vw;
+    font-size: 12vw;
+    line-height: 12vw;
     -webkit-text-stroke: 0.2vw white;
+    margin-top: 8vw;
+  }
+
+  .positions-container {
+    width: 88vw;
+    min-height: 15vw;
+    margin-top: 3vw;
   }
 
   .position-text {
-    font-size: 2vw;
+    font-size: 4vw;
+    width: 45%;
   }
 
   .position-text:hover {
@@ -97,10 +105,12 @@
   }
 
   .position-text-disabled {
-    font-size: 2vw;
+    font-size: 4vw;
+    width: 45%;
   }
 
   .no-positions-text {
-    font-size: 2vw;
+    font-size: 4vw;
+    width: 40%;
   }
 }
