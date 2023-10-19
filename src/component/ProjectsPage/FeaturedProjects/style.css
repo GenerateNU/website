@@ -104,6 +104,13 @@
   margin-top: 10vh;
 }
 
+/* Hover effect will only effect mouse devices */
+@media (hover: hover), (-moz-touch-enabled: 0) {
+  .hoverButton:hover {
+    box-shadow: 0 0;
+  }
+}
+
 .view-pp-fp-project-button-2 {
   color: black;
   background-color: white;
@@ -312,4 +319,6 @@
 
 .mobile-view-pt {
   margin-top: 2vh;
+  display: flex;
+  margin-left: 10vw;
 }

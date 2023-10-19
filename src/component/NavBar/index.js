@@ -35,16 +35,16 @@ const NavBar = () => {
         alt='Generate Logo'
       />
       <span
-        className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center'
+        className='font-size bg-transparent shadow-none border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center'
         onClick={navigateApply}
       >
         Apply{' '}
       </span>{' '}
       <span
-        className='d-flex align-items-center'
+        className='d-flex align-items-center group'
         onClick={() => setShowMenu(true)}
       >
-        <div className='font-size bg-transparent shadow-none text-black border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-items-center m-1'>
+        <div className='font-size bg-transparent shadow-none border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-items-center m-1'>
           Menu{' '}
         </div>{' '}
         <MenuIcon style={{ height: '3.5vh', width: 'auto' }} />{' '}

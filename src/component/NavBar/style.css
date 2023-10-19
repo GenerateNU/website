@@ -1,112 +1,118 @@
 span {
-    font-family: "Space Mono 700";
-    font-size: 2.46vh;
-    line-height: 3.69vh;
-    text-transform: capitalize;
+  font-family: 'Space Mono 700';
+  font-size: 2.46vh;
+  line-height: 3.69vh;
+  text-transform: capitalize;
 }
 
 .bar-size {
-    height: max(50px, 7vmin);
-    width: max(250px, 35vmin);
+  height: max(50px, 7vmin);
+  width: max(250px, 35vmin);
 }
 
 .menu-hover {
-    cursor: pointer;
+  cursor: pointer;
+  color: black;
+}
+
+.menu-hover:hover {
+  color: white;
+  -webkit-text-stroke: 0.5px black;
 }
 
 .menu-navbar {
-    width: fit-content;
-    max-width: auto;
-    padding-left: 2px;
-    padding-right: 2px;
-    height: auto;
+  width: fit-content;
+  max-width: auto;
+  padding-left: 2px;
+  padding-right: 2px;
+  height: auto;
 }
 
 .menu-font-style {
-    font-family: "Space Mono 700";
-    font-size: 12vw;
-    line-height: 100%;
+  font-family: 'Space Mono 700';
+  font-size: 12vw;
+  line-height: 100%;
 }
 
 .header-font-style {
-    font-family: "Space Mono 700";
-    font-size: 4.5vw;
-    line-height: 128%;
-    font-size: fit-content;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
+  font-family: 'Space Mono 700';
+  font-size: 4.5vw;
+  line-height: 128%;
+  font-size: fit-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
 }
 
 .header-font-style:hover {
-    background-color: black;
-    color: #ffbf3c !important;
+  background-color: black;
+  color: #ffbf3c !important;
 }
 
 .header-font-style:hover,
 .header-font-style:active {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .h-line {
-    position: absolute;
-    height: 1px;
-    background-color: black;
+  position: absolute;
+  height: 1px;
+  background-color: black;
 }
 
 .v-line {
-    position: absolute;
-    width: 1px;
-    background-color: black;
+  position: absolute;
+  width: 1px;
+  background-color: black;
 }
 
 .modal-header {
-    padding: 0 0 0 0;
-    border-bottom: none;
+  padding: 0 0 0 0;
+  border-bottom: none;
 }
 
 .menu-font-style {
-    font-size: 15vw;
-    text-transform: uppercase;
+  font-size: 15vw;
+  text-transform: uppercase;
 }
 
 .newsletter-font {
-    font-size: 5vw;
-    font-family: "Space Mono 700";
-    line-height: 100%;
-    text-transform: uppercase;
-    transform: rotate(270deg);
+  font-size: 5vw;
+  font-family: 'Space Mono 700';
+  line-height: 100%;
+  text-transform: uppercase;
+  transform: rotate(270deg);
 }
 
 @media (max-device-width: 650px) {
-    .wrapper-nav {
-        width: 5vh;
-        height: 5vh;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-        background-color: white;
-        border: 1px solid black;
-    }
-    .hamburger-mobile {
-        transform: scale(2.5);
-    }
+  .wrapper-nav {
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    border: 1px solid black;
+  }
+  .hamburger-mobile {
+    transform: scale(2.5);
+  }
 }
 
 @media (max-width: 650px) or (max-device-width: 650px) {
-    .modal-header {
-        padding: 2.5% 2.5% 0 0;
-    }
-    .header-font-style {
-        font-size: 10vw;
-    }
-    .newsletter-font {
-        font-size: 12.5vw;
-        transform: none;
-    }
-    .bar-size {
-        height: 5vh;
-        width: 5vh;
-    }
+  .modal-header {
+    padding: 2.5% 2.5% 0 0;
+  }
+  .header-font-style {
+    font-size: 10vw;
+  }
+  .newsletter-font {
+    font-size: 12.5vw;
+    transform: none;
+  }
+  .bar-size {
+    height: 5vh;
+    width: 5vh;
+  }
 }

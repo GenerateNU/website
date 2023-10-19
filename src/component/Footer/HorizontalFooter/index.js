@@ -5,6 +5,7 @@ import { FooterLink } from '..'
 import { useNavigate } from 'react-router-dom'
 import { SocialIcon, socialIcons } from '../../SocialIcon'
 import { pages } from '..'
+import ShadowedButton from '../../ShadowedButton'
 
 function HorizontalFooter() {
   const navigate = useNavigate()
@@ -17,11 +18,20 @@ function HorizontalFooter() {
   return (
     <div className='footer-container-mobile w-100'>
       <div className='sherm'>
-        <img
-          className='logo-placement'
-          src={GenerateLogo}
+        <ShadowedButton
+          fillColor='white'
+          yPad={'0.5px'}
+          xPad={'0.5px'}
+          right={true}
+          text={
+            <img
+              style={{ marginTop: '10px' }}
+              width={'90px'}
+              src={GenerateLogo}
+              alt='matt was here'
+            />
+          }
           onClick={handleOnClick}
-          alt='matt was here'
         />
       </div>
       <div className='mobile-links-container'>
