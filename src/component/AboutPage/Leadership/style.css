@@ -83,7 +83,22 @@
   white-space: nowrap;
 }
 
-@media only screen and (max-device-width: 650px) {
+.dsktop {
+  display: block;
+}
+
+.mob {
+  display: none;
+}
+
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .dsktop {
+    display: none;
+  }
+
+  .mob {
+    display: block;
+  }
   .cards-display {
     justify-content: flex-start;
     align-items: center;

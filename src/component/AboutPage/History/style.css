@@ -1,8 +1,11 @@
 .tooltip-text {
-    font-family: 'Outfit 300';
-    font-size: 1.2vw;
-    line-height: 100%;
-    text-align: left;
+  font-family: 'Outfit 300';
+  font-size: 1.2vw;
+  line-height: 100%;
+  text-align: left;
+}
+.history-logo {
+  width: 15vh;
 }
 
 /* .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
@@ -61,51 +64,111 @@
     border-right-color: white;
 } */
 
-
 .our-history-text-style {
-    font-size: calc(min(2.5vh, 2vw));
-    margin-right: 0!important;
-    padding-right: 0!important;
-    width: 26vw;
-    margin-top: auto;
+  font-size: calc(min(2.5vh, 2vw));
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+  width: 26vw;
+  margin-top: auto;
 }
 
 .tooltip.show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .tooltip-inner {
-    background-color: rgb(233, 233, 233);
-    max-width: 30vw;
-    border-radius: 0;
-    border-color: black;
-    border-width: 10px;
+  background-color: rgb(233, 233, 233);
+  max-width: 30vw;
+  border-radius: 0;
+  border-color: black;
+  border-width: 10px;
 }
 
-@media only screen and (max-device-width: 650px) {
-    .parent-orgs-and-history {
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }         
+.dsktop {
+  display: block;
+}
 
-    .our-history-header {
-        font-size: 6.2vh;
-        height: min-content!important;
-    }
+.mob {
+  display: none;
+}
 
-    .our-history {
-        width: 100vw;
-        margin-left: 11px;
-    }
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .dsktop {
+    display: none;
+  }
 
-    .our-history-text-style {
-        font-size: 2vh;
-        margin-right: 0!important;
-        padding-right: 0!important;
-        width: 90%;
-    }
+  .mob {
+    display: block;
+  }
+  .parent-orgs-and-history {
+    margin-top: 20vw;
+    height: auto;
+  }
 
-    .parent-orgs-and-history {
-        height: unset!important;
-    }
+  .parent-orgs {
+    margin-top: 10vw;
+    margin-bottom: 15vw;
+    height: auto;
+  }
+
+  .parent-orgs-text {
+    font-size: 12.3vw;
+    line-height: 14.77vw;
+    margin-bottom: 7.22vw;
+  }
+
+  .mosaic-logo {
+    width: 21.03vw;
+    height: 26.66vw;
+    margin-bottom: 7.2vw;
+  }
+
+  .sherm-logo {
+    /* transform: rotate(90deg) scaleX(-1); */
+    /* width: 28.97vw;
+    height: 26.15vw; */
+    /* width: 21.03vw;
+    height: 26.66vw; */
+    width: 23vw;
+    padding-top: 5vw;
+    margin-bottom: 7.2vw;
+  }
+
+  .parent-org-name-text {
+    font-size: 4.62vw;
+    line-height: 5vw;
+    width: auto;
+    text-align: center;
+    white-space: wrap;
+    text-decoration: underline;
+  }
+
+  .our-history-header {
+    width: 52.8vw;
+    font-size: 12.3vw;
+    height: min-content !important;
+    padding-top: 18.46vw;
+    margin-left: 6.15vw;
+    margin-bottom: 6.15vw;
+  }
+
+  .our-history {
+    width: 100vw;
+    margin-left: 11px;
+  }
+
+  .our-history-text-style {
+    font-size: 4.62vw;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 6.15vw;
+    width: 87.7vw;
+    margin-bottom: -10px;
+  }
+
+  .parent-orgs-style-mob {
+    font-size: 13vw;
+    font-weight: 700;
+    /* line-height: 57.6px; */
+  }
 }

@@ -6,20 +6,20 @@
 
 .our-mission-quotation-mark {
   color: #187dff;
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 6vw;
   line-height: 75%;
 }
 
 .our-mission-quote {
   color: white;
-  font-family: "Outfit 400";
+  font-family: 'Outfit 400';
   font-size: 1.7vw;
   line-height: 170%;
 }
 
 .our-mission-header {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 17vw;
   line-height: 77%;
   color: #187dff;
@@ -37,7 +37,7 @@
   height: max(120px, 20vh);
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .quote-text {
     width: 100% !important;
     padding: 0% !important;

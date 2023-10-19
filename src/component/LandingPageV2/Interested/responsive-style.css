@@ -169,9 +169,9 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .interestedcontainer {
-    width: 60vh;
+    width: 100vw;
     background: url('../../../assets/images/landingpage-v2/interestedbg.svg')
       center;
     background-repeat: no-repeat;
@@ -179,6 +179,8 @@
     background-position: 80% 40%;
     align-items: center;
     justify-items: center;
+    padding-bottom: 5vw;
+    padding-left: 5vw;
   }
 
   .interestedflexbox {
@@ -190,7 +192,7 @@
   }
 
   .interestedText {
-    margin-top: 25vh;
+    margin-top: 0vh;
     font-family: 'Space Mono 700';
     font-style: normal;
     font-size: 6vh;
