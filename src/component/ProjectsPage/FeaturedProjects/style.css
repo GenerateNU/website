@@ -1,6 +1,12 @@
 .pp-fp-projects-page-container {
   min-width: 1007px;
-  max-width: 98vw;
+  max-width: 80vw;
+}
+
+@media (max-width: 1500px) {
+  .pp-fp-projects-page-container {
+    margin-right: 25vw;
+  }
 }
 
 .featured-pp-fp-projects {
@@ -11,6 +17,7 @@
 .pp-fp-projects-title {
   color: #187dff;
   font-weight: 700;
+  font-size: 6vh;
 }
 
 #pp-fp-projects-navbar {
@@ -35,16 +42,13 @@
   transform: rotate(180deg);
 }
 
-.featured-pp-fp-project-buttons {
-  margin-top: 15%;
-}
-
 .pp-fp-projects-button {
   background: #ffffff;
   border: 1px solid black;
-  width: 90px;
-  height: 90px;
+  width: 10vh;
+  height: 10vh;
   box-shadow: -0.5rem 0.6rem black;
+  margin-top: 10vh;
 }
 
 .pp-fp-projects-forward {
@@ -57,17 +61,29 @@
 }
 
 .pp-fp-project-text h1 {
-  font-family: "Space Mono 700";
+  font-family: 'Space Mono 700';
   font-size: 7vh;
 }
 
 .pp-fp-project-team {
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-size: 3vh;
   color: #000;
   text-align: left;
   text-transform: none;
   font-weight: 400;
+}
+
+.pp-fp-desc {
+  font-family: 'Outfit';
+  font-size: 2vh;
+  font-weight: 300;
+  line-height: 2vh;
+  letter-spacing: 0em;
+  text-align: left;
+  width: fit-content;
+  margin-right: 80vw;
+  margin-top: 3vh;
 }
 
 .pp-fp-project-text p {
@@ -80,15 +96,32 @@
   background-color: white;
   border: 1px solid #111111;
   box-shadow: -0.5rem 0.6rem;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-size: 3vh;
   position: relative;
-  width: 100px;
+  width: 10vw;
   margin-left: 5px;
+  margin-top: 10vh;
 }
 
-.pp-fp-projects-mobile {
-  display: none;
+/* Hover effect will only effect mouse devices */
+@media (hover: hover), (-moz-touch-enabled: 0) {
+  .hoverButton:hover {
+    box-shadow: 0 0;
+  }
+}
+
+.view-pp-fp-project-button-2 {
+  color: black;
+  background-color: white;
+  border: 1px solid #111111;
+  box-shadow: -0.5rem 0.6rem;
+  font-family: 'Space Mono';
+  font-size: 2vh;
+  position: relative;
+  height: 10vw;
+  width: 35vw;
+  margin-left: 5px;
 }
 
 .pp-fp-projects {
@@ -117,10 +150,44 @@
   margin-left: 5px;
 }
 
-@media only screen and (max-device-width: 650px) {
+.view-pp-fp-project-div-2 {
+  justify-content: center;
+}
+
+@media only screen and (max-width: 650px), (max-device-width: 650px) {
   .featured-pp-fp-projects {
     width: unset;
     margin-bottom: 50px;
+  }
+
+  .pp-fp-project-text {
+    width: 95vw;
+  }
+
+  .pp-fp-projects-forward {
+    margin-right: 20vw;
+  }
+
+  .pp-fp-projects-bg {
+    background-color: #187dff;
+    margin: 0px;
+    padding: 0px;
+    min-width: 102vw;
+    margin-left: -2vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 5vw;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+  }
+
+  .pp-fp-projects-buttons {
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
   }
 
   .pp-fp-projects-page-container {
@@ -154,28 +221,29 @@
 
   .pp-fp-projects-text {
     max-width: unset;
-  }
-
-  .pp-fp-projects-desktop {
-    display: none;
+    color: white;
   }
 
   .pp-fp-projects-mobile {
     display: block;
+    margin-right: auto;
   }
 
   .featured-pp-fp-project-buttons {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 4%;
+    flex-direction: row;
     margin-bottom: 10%;
+    width: 95vw;
   }
 
   .pp-fp-project-team {
     margin-top: -10%;
     width: 33vw;
     height: 10vh;
+  }
+
+  .pp-fp-project-name {
+    font-size: 8vw;
   }
 
   .pp-fp-project-text p {
@@ -188,6 +256,12 @@
     margin-bottom: 5%;
   }
 
+  .view-pp-fp-project-button-2 {
+    margin-top: 0;
+    margin-bottom: 5%;
+    display: block;
+  }
+
   .view-pp-fp-project-div {
     display: flex;
     justify-content: center;
@@ -195,12 +269,23 @@
 
   .pp-fp-projects-title {
     font-size: 6vh;
+    color: #ffffff;
   }
 
   .pp-fp-projects-button {
     width: 120px;
     height: 120px;
   }
+
+  .pp-fp-projects-button-2 {
+    background: #ffffff;
+    border: 1px solid black;
+    box-shadow: -0.5rem 0.6rem black;
+    width: 12vw;
+    height: 12vw;
+    display: block;
+  }
+
   .pp-fp-navbar-style {
     position: fixed;
     left: 90%;
@@ -220,4 +305,20 @@
     margin: 0;
     padding: 10px 30px;
   }
+
+  .view-pp-fp-project-button-2 {
+    margin: 0;
+    padding: 10px 30px;
+  }
+
+  .view-pp-fp-project-div-2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mobile-view-pt {
+  margin-top: 2vh;
+  display: flex;
+  margin-left: 10vw;
 }

@@ -1,11 +1,18 @@
-.toggle-container, .accordion-content {
-    display: inline !important;
-    cursor: 'pointer';
+.toggle-container,
+.accordion-content {
+  display: inline !important;
+  cursor: 'pointer';
 }
 
-@media only screen and (max-device-width: 650px) {
-    .toggle-container {
-        display: inline;
-        cursor: 'pointer !important';
-    }
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4vw;
+}
+
+@media (max-width: 650px) and (max-device-width: 650px) {
+  .toggle-container {
+    display: inline;
+    cursor: 'pointer !important';
+  }
 }

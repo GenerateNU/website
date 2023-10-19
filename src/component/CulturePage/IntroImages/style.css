@@ -18,7 +18,7 @@
   max-width: none;
 }
 
-@media (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .intro-images {
     height: 210vw;
     width: auto;
@@ -35,13 +35,13 @@
     height: 60vw;
     background: linear-gradient(0deg, white 0%, white 100%);
     border: 1px #111111 solid;
-    margin: 25px;
+    margin: 2.5vw;
   }
 
   .fun-text {
     position: absolute;
     color: white;
-    font-size: 90px;
+    font-size: 9.25vw;
     font-family: 'Space Mono 700';
     transform: rotate(90deg);
     margin-top: 55%;
@@ -56,6 +56,6 @@
     align-self: flex-end;
     margin-right: 20%;
     margin-top: 130%;
-    border: 2px white solid;
+    border: 0.25vw white solid;
   }
 }

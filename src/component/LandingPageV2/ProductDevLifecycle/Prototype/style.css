@@ -18,6 +18,7 @@ a {
   .alignItemsRight {
     display: flex;
     flex-direction: row;
+    padding: 5vw;
   }
 
   .DevelopmentWheelTwo {
@@ -53,7 +54,7 @@ a {
     color: #FF6660;
   }
 
-  @media only screen and (max-device-width: 650px) {
+    @media (max-width: 650px) or (max-device-width: 650px) {
     .DevelopmentWheelTwo {
       size: 30.11vh;
       height: 45vh;

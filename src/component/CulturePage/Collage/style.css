@@ -4,7 +4,6 @@ body {
   margin: 0px;
 }
 
-
 .flex-parent {
   height: 35vh;
   display: flex;
@@ -39,4 +38,49 @@ body {
 .img3 {
   -webkit-mask-image: linear-gradient(to right, transparent 15%, black 85%);
   mask-image: linear-gradient(to right, transparent 15%, black 85%);
+}
+
+@media (max-width: 650px) or (max-device-width: 650px) {
+  .collage-container {
+    display: flex;
+    height: 280vw;
+  }
+
+  .collage-col-1-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+  }
+
+  .collage-col-2-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+  }
+
+  .img-gradient {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 15%, black 85%);
+    mask-image: linear-gradient(to bottom, transparent 15%, black 85%);
+    object-fit: cover;
+    width: 50vw;
+  }
+
+  .img-gradient-long {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 15%, black 85%);
+    mask-image: linear-gradient(to bottom, transparent 15%, black 85%);
+    object-fit: cover;
+    width: 50vw;
+    height: 65vw;
+  }
+
+  .img-no-gradient {
+    object-fit: cover;
+    width: 50vw;
+  }
+
+  .img-no-gradient-long {
+    object-fit: cover;
+    width: 50vw;
+    height: 65vw;
+  }
 }

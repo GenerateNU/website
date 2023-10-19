@@ -13,7 +13,7 @@
 }
 
 .ap_img {
-  background-image: url("/images/ApplyPageImages/showcase.jpg");
+  background-image: url('/images/ApplyPageImages/showcase.jpg');
   height: 100%;
   width: 100%;
   position: fixed;
@@ -27,7 +27,7 @@
 
 .ap_text {
   color: white;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-weight: 700;
   font-size: 36px;
   background: #187dff;
@@ -40,9 +40,9 @@
 
 .ap_text_mobile {
   color: white;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-weight: 700;
-  font-size: 60px;
+  font-size: 6vw;
   background: #187dff;
   margin-right: 6vh;
   padding: 0.5em;
@@ -53,7 +53,7 @@
 }
 
 .ap_text2 {
-  font-family: "Outfit 400";
+  font-family: 'Outfit 400';
   font-size: 20px;
   line-height: 30px;
   color: white;
@@ -64,9 +64,9 @@
 }
 
 .ap_text2_mobile {
-  font-family: "Outfit 400";
-  font-size: 40px;
-  line-height: 30px;
+  font-family: 'Outfit 400';
+  font-size: 3vw;
+  line-height: 4vw;
   color: white;
   width: 90%;
   margin-top: 5%;
@@ -82,7 +82,7 @@
 
 .ap_link1 {
   color: white;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-weight: 700;
   font-size: 92px;
   line-height: 130px;
@@ -92,6 +92,11 @@
 }
 
 .accordion .toggle-btn:hover {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+
+.accordion_link .toggle-btn:hover {
   -webkit-text-stroke: 2px white;
   color: transparent;
 }
@@ -111,7 +116,7 @@
 
 .accordion {
   position: relative;
-  content: "";
+  content: '';
   display: table;
   clear: both;
   margin-left: 4%;
@@ -126,7 +131,7 @@
   padding: 4%;
 }
 
-.accordion input[type="checkbox"] {
+.accordion input[type='checkbox'] {
   position: absolute;
   top: 0;
   left: 0;
@@ -136,7 +141,7 @@
 
 .accordion .toggle-btn {
   color: white;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-weight: 700;
   font-size: 92px;
   line-height: 130px;
@@ -148,7 +153,7 @@
   color: #187dff;
   font-size: 20px;
   line-height: 24px;
-  font-family: "Outfit 600";
+  font-family: 'Outfit 600';
   padding: 1.5%;
   float: left;
   width: 30%;
@@ -176,7 +181,7 @@
 
 .accordion2 {
   position: relative;
-  content: "";
+  content: '';
   display: table;
   clear: both;
   margin-left: 4%;
@@ -193,7 +198,7 @@
   margin-left: -4%;
 }
 
-.accordion2 input[type="checkbox"] {
+.accordion2 input[type='checkbox'] {
   position: absolute;
   top: 0;
   left: 0;
@@ -203,7 +208,7 @@
 
 .accordion2 .toggle-btn2 {
   color: white;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-weight: 700;
   font-size: 92px;
   line-height: 130px;
@@ -214,7 +219,7 @@
   color: #187dff;
   font-size: 20px;
   line-height: 24px;
-  font-family: "Outfit 600";
+  font-family: 'Outfit 600';
   padding: 1%;
   float: left;
   width: 25%;
@@ -269,7 +274,7 @@ body {
 }
 
 .dir p {
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   margin: 1% 0 1% 0;
   color: white;
@@ -287,7 +292,7 @@ body {
 
 .mgt p {
   color: transparent;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
   margin: 0;
   -webkit-text-stroke: 2px white;
@@ -303,13 +308,13 @@ body {
 .button_apply button {
   background-color: #ffbf3c;
   padding: 1rem 3rem;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
 }
 
 .button_share button {
   background-color: #ffffff;
   padding: 1rem 2rem;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
 }
 
 /* ---------------------- RIGHT PANEL ---------------------- */
@@ -324,7 +329,7 @@ body {
   font-style: normal;
   margin-top: 10%;
   margin-bottom: 10%;
-  font-family: "Outfit 500";
+  font-family: 'Outfit 500';
   line-height: 34px;
   font-style: normal;
 }
@@ -334,7 +339,7 @@ body {
   font-weight: 300, lighter;
   font-style: normal;
   color: #1477f8;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-style: normal;
 }
 
@@ -342,7 +347,7 @@ body {
   font-size: 20px;
   font-weight: 300, lighter;
   font-style: normal;
-  font-family: "Outfit 300";
+  font-family: 'Outfit 300';
   margin: 2% 0 3% 0;
   line-height: 30px;
 }
@@ -353,7 +358,7 @@ body {
 }
 
 .rightPanel_container ul li::before {
-  content: "\2022";
+  content: '\2022';
   color: #1477f8;
   font-weight: bold;
   display: inline-block;
@@ -370,7 +375,7 @@ body {
 .duration h4 {
   color: rgba(17, 17, 17, 0.7);
   font-style: normal;
-  font-family: "Outfit 300";
+  font-family: 'Outfit 300';
   font-size: 20px;
   line-height: 30px;
 }
@@ -378,7 +383,7 @@ body {
 .duration h2 {
   color: #111111;
   font-style: normal;
-  font-family: "Outfit 500";
+  font-family: 'Outfit 500';
   font-size: 24px;
   line-height: 34px;
 }
@@ -393,7 +398,7 @@ a {
 
 .notice {
   color: white;
-  font-family: "Space Mono";
+  font-family: 'Space Mono';
   font-weight: 400;
   font-size: 24px;
   position: relative;
@@ -416,16 +421,13 @@ a {
   .ap_container {
     display: none;
   }
-
   .ap_mobile {
     display: inline;
     height: 100vh;
   }
-
   .toggle-container {
     display: inline;
   }
-
   .accordion-content {
     display: inline;
     width: 95vw;
@@ -434,11 +436,20 @@ a {
     white-space: nowrap;
     padding: 4%;
   }
-
   .navbar-style {
     position: relative;
     left: 90%;
     transform: translateX(-50%);
     margin-left: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .ap_text {
+    font-size: 3.6vw;
+  }
+  .ap_text2 {
+    font-size: 2vw;
+    line-height: 3vw;
   }
 }

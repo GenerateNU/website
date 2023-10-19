@@ -5,10 +5,10 @@ const desktopContent = (
   <div className='container'>
     <div className='vertical-div'>
       <span className='outline-inclusion'>SION</span>
-      <span style={{ color: '#FFBF3C' }} className='vertical'>
+      <span style={{ color: '#FFBF3C' }} className='outline-inclusion'>
         INCLUSION
       </span>
-      <span className='outline-incluion'>INCLUSION</span>
+      <span className='outline-inclusion'>INCLUSION</span>
     </div>
 
     <div className='text-div-inclusion'>

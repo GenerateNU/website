@@ -5,7 +5,7 @@ const desktopContent = (
   <div className='container' id='equity-container'>
     <div className='vertical-div'>
       <span className='outline-equity'>UITY</span>
-      <span style={{ color: '#A559EC' }} className='vertical'>
+      <span style={{ color: '#A559EC' }} className='outline-equity'>
         EQUITY
       </span>
       <span className='outline-equity'>EQUITY</span>

@@ -84,7 +84,7 @@ a {
   margin-top: 12%;
 }
 
-@media only screen and (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
   .column {
   }
 
