@@ -32,7 +32,7 @@ export default function FP2() {
             </div>
           </div>
           <div className='client-blurb' id='fp2-client-blurb'>
-            <p style={{ width: '40vh' }}>{SmartyPill.description}</p>
+            <p >{SmartyPill.description}</p>
             <a href='url'>learn more</a>
           </div>
           <div className='bottom-corner'>

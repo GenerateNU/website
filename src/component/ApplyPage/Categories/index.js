@@ -20,8 +20,12 @@ export default function Categories() {
   const handleClick = (selectedTeam) => {
     if (selectedCategory !== selectedTeam) {
       navigate(`/apply/${selectedTeam}`)
+      setSelectedCategory(selectedTeam)
+    } else {
+      // same button is clicked again, close section
+      navigate('/apply')
+      setSelectedCategory('')
     }
-    setSelectedCategory(selectedTeam)
   }
 
   return (

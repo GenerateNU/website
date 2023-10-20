@@ -6,8 +6,14 @@ import Row from 'react-bootstrap/Row'
 import ShadowedButton from '../../ShadowedButton'
 import './style.css'
 import applicationsByTeams from '../../../data/ApplyData/allApps'
+import useWebsite from '../../../shared/useWebsite'
+import NavBar from '../../NavBar'
 
 export default function Position() {
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
+
   const { categoryType, index } = useParams()
   const [position, setPosition] = useState(
     applicationsByTeams[categoryType][index]
@@ -33,7 +39,7 @@ export default function Position() {
   }
 
   if (position) {
-    return (
+    return !mobile ? (
       <Container fluid className='position-relative p-0'>
         <Row className='vh-100 m-0'>
           {/* Left */}
@@ -143,6 +149,64 @@ export default function Position() {
           </Col>
         </Row>
       </Container>
+    ) : (
+      <div className='position-container'>
+        <div className='header-container'>
+          <div className='header-navbar'>
+            <NavBar />
+          </div>
+          <div className='position-title'> {position.positionTitle}</div>
+          <div className='position-team'> {position.categoryType} </div>
+          <div className='header-button-container'>
+            <button className='header-apply-button' onClick={handleApply}>
+              {'apply now'}
+            </button>
+            <button className='header-share-button' onClick={copyShareLink}>
+              {'share'}
+            </button>
+          </div>
+        </div>
+        <div className='info-container'>
+          <a className='blue-text' href='/apply'>
+            &lt; -- <u> positions</u>
+          </a>
+          <div className='info-section-text'> {position.description} </div>
+          <div className='info-section-header'> What you'll do </div>
+          <ul>
+            {parseList(position.responsibilities).map((info, index) => (
+              <li key={index} className='info-list-item'>
+                {info}
+              </li>
+            ))}
+          </ul>
+          <div className='info-section-header'> Requirements </div>
+          <ul>
+            {parseList(position.requirements).map((info, index) => (
+              <li key={index} className='info-list-item'>
+                {info}
+              </li>
+            ))}
+          </ul>
+          <div className='bottom-container'>
+            <div className='time-container'>
+              <div className='time-section-header'> Duration </div>
+              <div className='time-section-text'>
+                {position.startDate} to {position.endDate}
+              </div>
+            </div>
+            <div className='time-container'>
+              <div className='time-section-header'> Weekly Commitment </div>
+              <div className='time-section-text'>
+                {`Up to ${position.workCommitment} hours`}
+              </div>
+            </div>
+          </div>
+          <div className='info-section-text'> {position.remarks} </div>
+          <a className='blue-text' href='/about'>
+            <u>learn more</u> -- &gt;
+          </a>
+        </div>
+      </div>
     )
   } else {
     return null
