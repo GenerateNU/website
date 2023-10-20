@@ -285,6 +285,10 @@ h1 {
         padding-left: 14vh;
         margin-top: 14vh;
     }
+    .product-img-container section:first-child {
+        display: flex;
+        align-items: flex-start;
+    }
     .client-blurb#fp1-client-blurb {
         /*font-size: 2vh;*/
         /* margin-left: 0.8vh; */

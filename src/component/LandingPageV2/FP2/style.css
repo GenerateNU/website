@@ -368,6 +368,10 @@ h1 {
         align-items: flex-start;
         justify-content: center;
     }
+    .product-img-container section:first-child {
+        display: flex;
+        align-items: flex-start;
+    }
     .mockup-img {
         width: 80vw;
         margin-left: -18vh;
