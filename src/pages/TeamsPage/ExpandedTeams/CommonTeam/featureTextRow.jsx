@@ -31,9 +31,12 @@ export default function FeatureTextRow({
           {description}
         </div>
 
-        <div className='feature-link'>
+        <div className={`feature-link`}>
           <ShadowedButton
-            className='feature-button'
+            className={`feature-button ${reverse ? 'ml-5 me-0' : ''}`}
+            xPad={mobile ? '4vw' : '5vw'}
+            yPad={mobile ? '3vw' : '2vw'}
+            fontSize={mobile ? '3vw' : '2vw'}
             fillColor='white'
             right={false}
             text={'explore deeper'}
