@@ -377,6 +377,7 @@ h1 {
         height: 100%;
         margin: 0;
         margin-left: -4vw;
+        padding-top: 5vh;
         max-height: 30vh;
     }
     .bottom-corner,
