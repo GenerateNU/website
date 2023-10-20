@@ -348,7 +348,7 @@
     /* generate */
     font-family: 'Space Mono 700';
     font-style: normal;
-    font-size: 10vh;
+    font-size: 10vw;
     line-height: 10vh;
     text-transform: uppercase;
     color: #ffffff;
@@ -481,7 +481,7 @@
         font-style: "Space Mono 700";
     }
     .generatetextmobile {
-        font-size: 18vw;
+        font-size: 18.6vw;
         line-height: 20vw;
         font-style: "Space Mono 700";
     }
