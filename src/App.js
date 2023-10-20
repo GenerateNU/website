@@ -23,20 +23,22 @@ export default function App() {
         <div>
           <ScrollToTop />
           <Routes>
-            <Route path='/' element={<LandingPageV2 />} />
-            <Route path='/apply' element={<ApplyPage />}>
-              <Route path=':team' element={<ApplyPage />} />
+            <Route path='/' element={<> <ScrollToTop /><LandingPageV2 /></>} />
+            <Route path='/apply' element={<> <ScrollToTop /> <ApplyPage /></>}>
+              <Route path=':team' element={<> <ScrollToTop /><ApplyPage /></>} />
             </Route>
-            <Route path='/positions/:id' element={<Position />} />
-            <Route path='/positions/:categoryType/:index' element={<Position />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/culture' element={<CulturePage />} />
-            <Route path='/teams' element={<TeamsPage />} />
-            <Route path='/projects' element={<ProjectsPage />} />
-            <Route path='/case-study/:project' element={<CaseStudy />} />
-            <Route path='/teams-expanded/*' element={<ExpandedTeamsPage />} />
+            <Route path='/positions/:id' element={<> <ScrollToTop /> <Position /></>} />
+            <Route path='/positions/:categoryType/:index' element={<> <ScrollToTop /> <Position /></>} />
+            <Route path='/about' element={<> <ScrollToTop /> <AboutPage /></>} />
+            <Route path='/culture' element={<> <ScrollToTop /> <CulturePage /></>} />
+            <Route path='/teams' element={<>    <ScrollToTop /><TeamsPage /></>} />
+            <Route path='/projects' element={<> <ScrollToTop /> <ProjectsPage /></>} />
+            <Route path='/case-study/:project' element={<> <ScrollToTop /> <CaseStudy /></>} />
+            <Route path='/teams-expanded/*' element={<> <ScrollToTop /> <ExpandedTeamsPage /></>} />
           </Routes>
         </div>
+
+
       </Router>
     </div>
   )

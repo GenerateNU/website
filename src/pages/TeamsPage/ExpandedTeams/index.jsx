@@ -2,14 +2,15 @@ import React from 'react'
 import './style.css'
 import NavBar from '../../../component/NavBar'
 import TextRow from './CommonTeam/textRow'
+import FeatureTextRow from './CommonTeam/featureTextRow'
 import TeamPageFooter from './CommonTeam/TeamPageFooter'
 import { ExpandedTeamsJSON } from './CommonTeam/JSONFiles/ExpandedTeamsJSON'
 import { Routes, Route } from 'react-router-dom'
 import useWebsite from '../../../shared/useWebsite'
 import OperationsContainer from './Operations'
 import ManagementContainer from './Management'
-import SoftwareContainer from "./Software";
-
+import SoftwareContainer from './Software'
+import EngagementContainer from './Engagement'
 
 export default function ExpandedTeamsPage() {
   const isWebsite = useWebsite()
@@ -33,6 +34,7 @@ export default function ExpandedTeamsPage() {
             <Route path='/management' element={<ManagementContainer />} />
             <Route path='/operations' element={<OperationsContainer />} />
             <Route path='/software' element={<SoftwareContainer />} />
+            <Route path='/engagement' element={<EngagementContainer />} />
           </Routes>
         </div>
         <TeamPageFooter
@@ -103,5 +105,34 @@ function ExpandedTeamsMobileHeader({ team }) {
         </div>
       </div>
     </div>
+  )
+}
+
+export function Featured({ team }) {
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
+  return (
+    <>
+      <div className={mobile ? 'paragraph-title-mobile' : 'paragraph-title'}>
+        {ExpandedTeamsJSON[team].featured.header}
+      </div>
+      {ExpandedTeamsJSON[team].featured.items.map((value, index) => (
+        <div
+          className={`role-desc ${
+            mobile ? 'paragraph-text-mobile' : 'paragraph-text'
+          }`}
+          style={{ marginBottom: '4vh' }}
+        >
+          <FeatureTextRow
+            key={index}
+            description={value.description}
+            picture={value.image}
+            reverse={value.invert}
+            button={value.button}
+          />
+        </div>
+      ))}
+    </>
   )
 }

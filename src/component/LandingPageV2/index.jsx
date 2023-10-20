@@ -21,32 +21,31 @@ import useWebsite from '../../shared/useWebsite'
 import NewDesktopContainer from '../../component/DesktopMobileHandler/NewWebContainer'
 import NewMobileContainer from '../DesktopMobileHandler/NewMobileContainer'
 
-
 export default function LandingPageV2() {
   const isWebsite = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
   const mobile = !isBigScreen || !isWebsite
 
-    const children = [
-      <Intro />,
-      <WhoWeAre />,
-      <WhoWeAreResponse />,
-      <WhatWeOffer />,
-      <ProductDevelopment />,
-      <Ideation />,
-      <Prototype />,
-      <Production />,
-      <Management />,
-      <FeaturedProjects />,
-      <FP1 />,
-      <FP2 />,
-      <PreviousProjects />,
-      <Interested page='Landing' />,
-      <Footer />,
-      <NextPage pageName='about' url='/about' />
-    ]
+  const children = [
+    <Intro />,
+    <WhoWeAre />,
+    <WhoWeAreResponse />,
+    <WhatWeOffer />,
+    <ProductDevelopment />,
+    <Ideation />,
+    <Prototype />,
+    <Production />,
+    <Management />,
+    <FeaturedProjects />,
+    <FP1 />,
+    <FP2 />,
+    <PreviousProjects />,
+    <Interested page='Landing' />,
+    <Footer />,
+    <NextPage pageName='about' url='/about' />
+  ]
 
-    return !mobile ? (
+  return !mobile ? (
     <NewDesktopContainer desktopBGColor={'white'}>
       {children}
     </NewDesktopContainer>
@@ -54,4 +53,3 @@ export default function LandingPageV2() {
     <NewMobileContainer mobileBGColor={'black'}>{children}</NewMobileContainer>
   )
 }
-

@@ -51,12 +51,61 @@ export const ExpandedTeamsJSON = {
         image: TeamsStock,
         invert: true
       }
-    ]
+    ],
+    featured: {
+      header: 'Featured Projects',
+      items: [
+        {
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisc elit. Est sed nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus adipiscing mi eleifend proin nisl ac graa.',
+          image: TeamsStock,
+          invert: false,
+          button: '../../teams'
+        },
+        {
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisc elit. Est sed nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus adipiscing mi eleifend proin nisl ac graa.',
+          image: TeamsStock,
+          invert: true,
+          button: '../../projects'
+        }
+      ]
+    }
   },
   hardware: {
     color: '#FF6660'
   },
   engagement: {
-    color: '#A559EC'
+    abbv: 'ENGMNT',
+    color: '#A559EC',
+    about: [
+      {
+        header: 'WHAT WE DO',
+        body: "Our management team is the driving force behind Generate, empowering each member to grow and build innovative products. They work directly with members and clients to support their growth and the team's vision.They build our professional image and position the organization strategically within the Northeastern ecosystem, bridging our internal operations with the larger community.",
+        image: TeamsStock
+      },
+      {
+        header: 'HOW WE WORK',
+        body: 'Generate is entirely student-led. Our management team offers a unique opportunity for students to gain leadership experience in a fast-paced, innovative culture. The team is united through the yearly vision set by the executive director and builds initiatives around those goals. Each member leaves their own mark on Generate, continuously improving for the future.',
+        image: TeamsStock,
+        invert: true
+      }
+    ],
+    featured: {
+      header: 'Featured Events',
+      items: [
+        {
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisc elit. Est sed nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus adipiscing mi eleifend proin nisl ac graa.',
+          image: TeamsStock,
+          invert: false,
+          button: '../../teams'
+        },
+        {
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisc elit. Est sed nunc porttitor arcu etiam. Eget duis sapien, faucibus nunc nec elit tempus risus. Tincidunt sagittis nulla orci id. Augue risus adipiscing mi eleifend proin nisl ac graa.',
+          image: TeamsStock,
+          invert: true,
+          button: '../../projects'
+        }
+      ]
+    }
   }
+
 }
