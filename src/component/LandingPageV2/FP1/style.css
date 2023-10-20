@@ -220,7 +220,7 @@ h1 {
         font-family: "Outfit 300";
         font-size: 2.5vh;
         position: relative;
-        margin: 2vh;
+        margin: 0;
     }
     blockquote:before {
         font-family: "Space Mono 700";
@@ -270,15 +270,26 @@ h1 {
     .parent {
         flex-direction: column;
     }
+    .product-img {
+        height: 100%;
+        max-height: 60vh;
+        width: 80vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
     .column-1 {}
     .client-blurb#fp1-client-blurb {
         /*font-size: 2vh;*/
         /* margin-left: 0.8vh; */
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
         font-family: Outfit 300;
         font-size: 2.5vh;
         position: relative;
+    }
+    .client-blurb p {
+        width: 80vw;
+        margin: 0;
     }
     .product-img {
         height: 100%;
@@ -290,7 +301,7 @@ h1 {
         padding-left: 0;
     }
     .quote-container#fp1-quote-container {
-        width: 80%;
+        width: 80vw;
         font-family: Outfit 300;
         font-size: 2.5vh;
         position: relative;

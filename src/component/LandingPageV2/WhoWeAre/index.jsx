@@ -7,9 +7,9 @@ export default function WhoWeAre() {
       <div className='whoWeAreContainer'>
         <div className='bluerectangle'>
           <div className='whowearetext'>
-            {' '}
-            Who we are <div className='generatelogowhiteone'></div>
+            Who we are
           </div>
+          <div className='generatelogowhiteone'></div>
         </div>
         <div className='purplerectangle'>
           <p className='whoweareparagraph'>
