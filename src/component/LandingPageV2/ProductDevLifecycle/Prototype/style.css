@@ -1,76 +1,62 @@
 a {
     text-decoration: none;
     color: #FFFFFF;
-  }
-  .background-black {
+}
+
+.background-black {
     background-color: black;
-  }
-  
+}
 
-
-
-
-  .column{
+.column {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .alignItemsRight {
+.alignItemsRight {
     display: flex;
     flex-direction: row;
     padding: 5vw;
-  }
+}
 
-  .DevelopmentWheelTwo {
+.DevelopmentWheelTwo {
     height: 63.11vh;
     margin-top: 20vh;
     margin-bottom: 12.55vh;
-  }
+}
 
-  .DevelopmentWheelImageTwo {
+.DevelopmentWheelImageTwo {
     width: calc(min(64vh, 100vw));
-  }
+}
 
-  .PrototypeText{
+.PrototypeText {
     width: 44.29vh;
     height: 11.22vh;
-    left:  96.23vh;
+    left: 96.23vh;
     top: 33vh;
     margin-top: 12.55vh;
-
     /* H2 */
-
-    font-family: 'Space Mono';
+    font-family: 'Space Mono 700';
     font-style: normal;
-    font-weight: 700;
     font-size: min(7.5vh, 10vw);
     line-height: 11.22vh;
     /* identical to box height, or 128% */
-
     text-transform: uppercase;
-
-    
-
     color: #FF6660;
-  }
+}
 
-    @media (max-width: 650px) or (max-device-width: 650px) {
+@media (max-width: 650px) or (max-device-width: 650px) {
     .DevelopmentWheelTwo {
-      size: 30.11vh;
-      height: 45vh;
-      margin-right: 11%;
+        size: 30.11vh;
+        height: 45vh;
+        margin-right: 11%;
     }
     .DevelopmentWheelImageTwo {
-      width: 42vh;
+        width: 42vh;
     }
-
     .PrototypeText {
-      font-size: 15vw;
-      line-height: 7vh;
-      height: 10vh;
-      margin-top: 0%;
+        font-size: 15vw;
+        line-height: 7vh;
+        height: 10vh;
+        margin-top: 0%;
     }
-
-  }
-  
- 
+}

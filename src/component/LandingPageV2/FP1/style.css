@@ -112,7 +112,7 @@ blockquote:after {
 }
 
 h1 {
-    font-family: "Space Mono";
+    font-family: "Space Mono 700";
     font-style: normal;
     font-weight: bolder;
     font-size: 9vh;
@@ -247,7 +247,7 @@ h1 {
         content: "\201D";
     }
     h1 {
-        font-family: "Space Mono";
+        font-family: "Space Mono 700";
         font-style: normal;
         font-weight: bolder;
         font-size: 9vh;

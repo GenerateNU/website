@@ -1,137 +1,125 @@
 a {
-  text-decoration: none;
-  color: #ffffff;
+    text-decoration: none;
+    color: #ffffff;
 }
+
 .background-black-wheel {
-  background-color: black;
-  width: 70vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    background-color: black;
+    width: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .background-black-text {
-  background-color: black;
-  width: 80vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    background-color: black;
+    width: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .paragraphText {
-  /*width: 55vh;*/
-  width: min(55vh, calc(80vw - 10vh));
-  height: 29.86vh;
-  top: 71.14vh;
-  margin-top: 2vw;
-  /* B1 */
-  font-family: 'Outfit 400';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.5vh;
-  line-height: 3.51vh;
-  /* or 156% */
-
-  color: #ffffff;
+    /*width: 55vh;*/
+    width: min(55vh, calc(80vw - 10vh));
+    height: 29.86vh;
+    top: 71.14vh;
+    margin-top: 2vw;
+    /* B1 */
+    font-family: 'Outfit 400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vh;
+    line-height: 3.51vh;
+    /* or 156% */
+    color: #ffffff;
 }
 
 .column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .alignItemsRight {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .DevelopmentWheelOne {
-  height: 63.11;
-  margin-top: 20vh;
-  margin-bottom: 12.55vh;
+    height: 63.11;
+    margin-top: 20vh;
+    margin-bottom: 12.55vh;
 }
 
 .DevelopmentWheelImageOne {
-  width: min(64vh, 100vw);
+    width: min(64vh, 100vw);
 }
 
 .ideation {
-  margin-left: 12.55vh;
-  margin-top: 10vh;
+    margin-left: 12.55vh;
+    margin-top: 10vh;
 }
 
 .IdeationText {
-  width: 10vh;
-  height: 11.22vh;
-  left: 95.23vh;
-  top: 33vh;
-  margin-top: 12.55vh;
-
-  /* H2 */
-
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-size: min(7.5vh, 10vw);
-  line-height: 11.22vh;
-  /* identical to box height, or 128% */
-
-  text-transform: uppercase;
-
-  /* Core/MNGMNT Yellow */
-
-  color: #ffbf3c;
+    width: 10vh;
+    height: 11.22vh;
+    left: 95.23vh;
+    top: 33vh;
+    margin-top: 12.55vh;
+    /* H2 */
+    font-family: 'Space Mono 700';
+    font-style: normal;
+    font-size: min(7.5vh, 10vw);
+    line-height: 11.22vh;
+    /* identical to box height, or 128% */
+    text-transform: uppercase;
+    /* Core/MNGMNT Yellow */
+    color: #ffbf3c;
 }
 
 @media (max-width: 650px) or (max-device-width: 650px) {
-  .ideation {
-    margin-left: 12.55vh;
-    margin-top: 3vh;
-  }
+    .ideation {
+        margin-left: 12.55vh;
+        margin-top: 3vh;
+    }
 }
 
 @media (max-width: 650px) or (max-device-width: 650px) {
-  .DevelopmentWheelOne {
-    size: 30.11vh;
-    height: 45vh;
-    margin-right: 20%;
-  }
-
-  .DevelopmentWheelImageOne {
-    width: 42vh;
-  }
-
-  .paragraphText {
-    width: 90vw;
-    font-size: 2vh;
-    margin-top: 0%;
-  }
-
-  .ideation {
-    width: 100vw;
-    margin-left: 0%;
-  }
-
-  .IdeationText {
-    font-size: 15vw;
-    line-height: 7vh;
-    height: 10vh;
-    margin-top: 0%;
-  }
-
-  .background-black-text {
-    width: 100vw;
-    height: 60vh;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .background-black-wheel {
-    width: 100vw;
-    height: 70vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10vw;
-  }
+    .DevelopmentWheelOne {
+        size: 30.11vh;
+        height: 45vh;
+        margin-right: 20%;
+    }
+    .DevelopmentWheelImageOne {
+        width: 42vh;
+    }
+    .paragraphText {
+        width: 90vw;
+        font-size: 2vh;
+        margin-top: 0%;
+    }
+    .ideation {
+        width: 100vw;
+        margin-left: 0%;
+    }
+    .IdeationText {
+        font-size: 15vw;
+        line-height: 7vh;
+        height: 10vh;
+        margin-top: 0%;
+    }
+    .background-black-text {
+        width: 100vw;
+        height: 60vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .background-black-wheel {
+        width: 100vw;
+        height: 70vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10vw;
+    }
 }

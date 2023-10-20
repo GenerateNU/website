@@ -335,9 +335,8 @@
 }
 
 .wearetextmobile {
-    font-family: 'Space Mono';
+    font-family: 'Space Mono 700';
     font-style: normal;
-    font-weight: 600;
     font-size: 2.79vh;
     margin-bottom: 0px;
     line-height: 10.46vh;
@@ -347,10 +346,9 @@
 
 .generatetextmobile {
     /* generate */
-    font-family: 'Space Mono';
+    font-family: 'Space Mono 700';
     font-style: normal;
-    font-weight: 600;
-    font-size: 8vh;
+    font-size: 10vh;
     line-height: 10vh;
     text-transform: uppercase;
     color: #ffffff;
@@ -480,10 +478,12 @@
     }
     .wearetextmobile {
         font-size: 6vw;
+        font-style: "Space Mono 700";
     }
     .generatetextmobile {
         font-size: 18vw;
         line-height: 20vw;
+        font-style: "Space Mono 700";
     }
     .text-container-mobile {
         display: flex;

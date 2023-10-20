@@ -148,9 +148,8 @@ blockquote:after {
 }
 
 h1 {
-    font-family: "Space Mono";
+    font-family: "Space Mono 700";
     font-style: normal;
-    font-weight: bolder;
     font-size: 4.5em;
     text-transform: uppercase;
 }
@@ -160,7 +159,7 @@ h1 {
 }
 
 #fp2-teams {
-    font-family: "Space Mono";
+    font-family: "Space Mono 700";
     font-size: 3vh;
 }
 

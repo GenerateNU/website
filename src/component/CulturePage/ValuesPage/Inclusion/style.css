@@ -1,69 +1,68 @@
 /* H1 */
+
 .sidetexti {
-  font-family: "Space Mono";
-  font-style: bold;
-  font-weight: 700;
-  font-size: 92px;
-  line-height: 92px;
-  text-shadow: -1px 0 #a559ec, 0 1px #a559ec, 1px 0 #a559ec, 0 -1px #a559ec;
-  transform: rotate(90deg);
-  text-transform: uppercase;
+    font-family: "Space Mono 700";
+    font-style: bold;
+    font-size: 92px;
+    line-height: 92px;
+    text-shadow: -1px 0 #a559ec, 0 1px #a559ec, 1px 0 #a559ec, 0 -1px #a559ec;
+    transform: rotate(90deg);
+    text-transform: uppercase;
 }
 
 .numbertexti {
-  color: white;
-  font-family: "Space Mono";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 92px;
-  text-transform: uppercase;
-  text-shadow: -2px 0 #dfdfdf, 0 2px #dfdfdf, 2px 0 #dfdfdf, 0 -2px #dfdfdf;
+    color: white;
+    font-family: "Space Mono 700";
+    font-style: normal;
+    font-size: 92px;
+    text-transform: uppercase;
+    text-shadow: -2px 0 #dfdfdf, 0 2px #dfdfdf, 2px 0 #dfdfdf, 0 -2px #dfdfdf;
 }
 
 .inclusion {
-  position: relative;
-  height: 1634px;
-  width: 600px;
-  left: 300px;
+    position: relative;
+    height: 1634px;
+    width: 600px;
+    left: 300px;
 }
 
 .descriptions_i {
-  position: absolute;
-  width: 450px;
-  height: 276px;
-  left: 565px;
-  top: 383px;
+    position: absolute;
+    width: 450px;
+    height: 276px;
+    left: 565px;
+    top: 383px;
 }
 
 .paragraphi {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 34px;
-  color: #111111;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 34px;
+    color: #111111;
 }
 
 .sideways_i {
-  position: absolute;
-  left: -417px;
-  top: 545px;
-  width: 1634px;
-  height: 92px;
+    position: absolute;
+    left: -417px;
+    top: 545px;
+    width: 1634px;
+    height: 92px;
 }
 
 div.number2 {
-  position: absolute;
-  width: 169px;
-  height: 92px;
-  left: 565px;
-  top: 275px;
+    position: absolute;
+    width: 169px;
+    height: 92px;
+    left: 565px;
+    top: 275px;
 }
 
 .white-text {
-  color: white;
+    color: white;
 }
 
 .purple-text {
-  color: #a559ec;
+    color: #a559ec;
 }
