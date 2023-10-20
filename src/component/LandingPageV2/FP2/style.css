@@ -374,8 +374,9 @@ h1 {
     }
     .mockup-img {
         width: 80vw;
-        margin-left: -18vh;
         height: 100%;
+        margin: 0;
+        margin-left: -4vw;
         max-height: 30vh;
     }
     .bottom-corner,

@@ -39,11 +39,7 @@ export default function FP2() {
             <img style={{ height: '25vh' }} src={BottomCorner} alt='' />
           </div>
         </div>
-        <div>
-          <div className='product-img-container'>
-            <img className='mockup-img' src={SmartyPill.image} alt='' />
-          </div>
-        </div>
+        <img className='mockup-img' src={SmartyPill.image} alt='' />
         <div>
           <div className='top-corner'>
             <img

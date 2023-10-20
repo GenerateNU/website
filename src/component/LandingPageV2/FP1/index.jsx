@@ -45,11 +45,7 @@ export default function FP1() {
             <img style={{ height: '25vh' }} src={BottomCorner} alt='' />
           </div>
         </div>
-        <div>
-          <div className='product-img-container' id='fp1-img-container'>
-            <img className='product-img' src={Earnz.image} alt='' />
-          </div>
-        </div>
+          <img className='product-img' src={Earnz.image} alt='' />
         <div>
           <div className='top-corner'>
             <img
