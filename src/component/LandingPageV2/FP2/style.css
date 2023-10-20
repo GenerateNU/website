@@ -365,10 +365,12 @@ h1 {
         margin-top: 12px;
         display: flex;
         height: fit-content;
+        align-items: flex-start;
         justify-content: center;
     }
     .mockup-img {
         width: 80vw;
+        margin-left: -18vh;
         height: 100%;
         max-height: 30vh;
     }

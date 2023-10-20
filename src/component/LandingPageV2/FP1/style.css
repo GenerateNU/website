@@ -277,7 +277,14 @@ h1 {
         margin-left: 0;
         margin-right: 0;
     }
-    .column-1 {}
+    .product-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 5vh;
+        padding-left: 14vh;
+        margin-top: 14vh;
+    }
     .client-blurb#fp1-client-blurb {
         /*font-size: 2vh;*/
         /* margin-left: 0.8vh; */
