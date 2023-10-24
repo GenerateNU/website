@@ -13,7 +13,7 @@ export function WhatYouLearnContainer() {
   const team = window.location.pathname.split('/').pop()
   return (
     <div className='roles-section'>
-      <div className='roles-title paragraph-title'>WHAT YOU WILL LEARN</div>
+      <div className='roles-title paragraph-title'>WHAT YOU'LL LEARN</div>
        <WhatYouWillLearn team={team} />
        </div>
   )

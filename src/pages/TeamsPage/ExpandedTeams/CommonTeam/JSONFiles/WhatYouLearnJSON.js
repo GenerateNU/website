@@ -11,12 +11,12 @@ export const WhatYouLearnJSON = {
       {
         header: 'Design',
         body: 'Generate is entirely student-led. Our management team offers a unique opportunity for students to gain leadership experience in a fast-paced, innovative culture. The team is united through the yearly vision set by the executive director and builds initiatives around those goals. Each member leaves their own mark on Generate, continuously improving for the future.',
-        image: TeamsStock,
+        image: TeamsStock
       },
-       {
+      {
         header: 'Leadership',
         body: 'Generate is entirely student-led. Our management team offers a unique opportunity for students to gain leadership experience in a fast-paced, innovative culture. The team is united through the yearly vision set by the executive director and builds initiatives around those goals. Each member leaves their own mark on Generate, continuously improving for the future.',
-        image: TeamsStock,
+        image: TeamsStock
       }
     ]
   },
@@ -30,13 +30,13 @@ export const WhatYouLearnJSON = {
       {
         header: 'Design',
         body: 'Generate is entirely student-led. Our management team offers a unique opportunity for students to gain leadership experience in a fast-paced, innovative culture. The team is united through the yearly vision set by the executive director and builds initiatives around those goals. Each member leaves their own mark on Generate, continuously improving for the future.',
-        image: TeamsStock,
+        image: TeamsStock
       },
-       {
+      {
         header: 'Leadership',
         body: 'Generate is entirely student-led. Our management team offers a unique opportunity for students to gain leadership experience in a fast-paced, innovative culture. The team is united through the yearly vision set by the executive director and builds initiatives around those goals. Each member leaves their own mark on Generate, continuously improving for the future.',
-        image: TeamsStock,
+        image: TeamsStock
       }
     ]
-  },
+  }
 }

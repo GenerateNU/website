@@ -12,7 +12,7 @@ import OperationsContainer from './Operations'
 import ManagementContainer from './Management'
 import SoftwareContainer from './Software'
 import EngagementContainer from './Engagement'
-import WhatYouLearn from './CommonTeam/WhatYouLearn'
+import HardwareContainer from './Hardware'
 
 export default function ExpandedTeamsPage() {
   const isWebsite = useWebsite()
@@ -36,6 +36,7 @@ export default function ExpandedTeamsPage() {
             <Route path='/management' element={<ManagementContainer />} />
             <Route path='/operations' element={<OperationsContainer />} />
             <Route path='/software' element={<SoftwareContainer />} />
+            <Route path='/hardware' element={<HardwareContainer />} />
             <Route path='/engagement' element={<EngagementContainer />} />
           </Routes>
         </div>
@@ -65,24 +66,6 @@ function WhatWeDoHowWeWork({ team }) {
     </>
   )
 }
-
-function WhatYouWillLearn({ team }) {
-  const teamTopSection = WhatYouLearnJSON[team]
-  return (
-    <>
-      {teamTopSection.about.map((section, index) => (
-        <WhatYouLearn
-          key={index}
-          title={section.header}
-          description={section.body}
-          picture={section.image}
-          reverse={section.invert}
-        />
-      ))}
-    </>
-  )
-}
-
 
 function ExpandedTeamsHeader({ team }) {
   const teamTopSection = ExpandedTeamsJSON[team]

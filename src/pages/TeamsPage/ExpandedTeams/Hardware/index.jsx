@@ -5,19 +5,19 @@ import './style.css'
 import useWebsite from '../../../../shared/useWebsite'
 import { WhatYouLearnContainer } from '../CommonTeam/WhatYouLearnContainer'
 
-export default function SoftwareContainer() {
+export default function HardwareContainer() {
   const isWebsite = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
   const mobile = !isBigScreen || !isWebsite
   return (
     <>
-      <WhatYouLearnContainer team='software'> </WhatYouLearnContainer>
-      <OurRoles team='software'>
-        <Roles team='software'>
-          <Members team='software' />
+      <WhatYouLearnContainer team='hardware'> </WhatYouLearnContainer>
+      <OurRoles team='hardware'>
+        <Roles team='hardware'>
+          <Members team='hardware' />
         </Roles>
       </OurRoles>
-      <Featured team='software'></Featured>
+      <Featured team='hardware'></Featured>
     </>
   )
 }
