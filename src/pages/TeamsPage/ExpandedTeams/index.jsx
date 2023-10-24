@@ -5,12 +5,14 @@ import TextRow from './CommonTeam/textRow'
 import FeatureTextRow from './CommonTeam/featureTextRow'
 import TeamPageFooter from './CommonTeam/TeamPageFooter'
 import { ExpandedTeamsJSON } from './CommonTeam/JSONFiles/ExpandedTeamsJSON'
+import { WhatYouLearnJSON } from './CommonTeam/JSONFiles/WhatYouLearnJSON'
 import { Routes, Route } from 'react-router-dom'
 import useWebsite from '../../../shared/useWebsite'
 import OperationsContainer from './Operations'
 import ManagementContainer from './Management'
 import SoftwareContainer from './Software'
 import EngagementContainer from './Engagement'
+import HardwareContainer from './Hardware'
 
 export default function ExpandedTeamsPage() {
   const isWebsite = useWebsite()
@@ -34,6 +36,7 @@ export default function ExpandedTeamsPage() {
             <Route path='/management' element={<ManagementContainer />} />
             <Route path='/operations' element={<OperationsContainer />} />
             <Route path='/software' element={<SoftwareContainer />} />
+            <Route path='/hardware' element={<HardwareContainer />} />
             <Route path='/engagement' element={<EngagementContainer />} />
           </Routes>
         </div>

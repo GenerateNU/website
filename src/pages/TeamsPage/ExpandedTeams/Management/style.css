@@ -75,8 +75,8 @@
 }
 
 .text-row {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -99,6 +99,7 @@
 }
 
 .roles-title {
+  margin-top: 10vh;
   margin-left: 0vw;
 }
 
@@ -117,6 +118,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 5vh;
 }
 
 .roles {
