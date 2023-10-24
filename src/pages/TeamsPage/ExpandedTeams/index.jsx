@@ -5,12 +5,14 @@ import TextRow from './CommonTeam/textRow'
 import FeatureTextRow from './CommonTeam/featureTextRow'
 import TeamPageFooter from './CommonTeam/TeamPageFooter'
 import { ExpandedTeamsJSON } from './CommonTeam/JSONFiles/ExpandedTeamsJSON'
+import { WhatYouLearnJSON } from './CommonTeam/JSONFiles/WhatYouLearnJSON'
 import { Routes, Route } from 'react-router-dom'
 import useWebsite from '../../../shared/useWebsite'
 import OperationsContainer from './Operations'
 import ManagementContainer from './Management'
 import SoftwareContainer from './Software'
 import EngagementContainer from './Engagement'
+import WhatYouLearn from './CommonTeam/WhatYouLearn'
 
 export default function ExpandedTeamsPage() {
   const isWebsite = useWebsite()
@@ -63,6 +65,24 @@ function WhatWeDoHowWeWork({ team }) {
     </>
   )
 }
+
+function WhatYouWillLearn({ team }) {
+  const teamTopSection = WhatYouLearnJSON[team]
+  return (
+    <>
+      {teamTopSection.about.map((section, index) => (
+        <WhatYouLearn
+          key={index}
+          title={section.header}
+          description={section.body}
+          picture={section.image}
+          reverse={section.invert}
+        />
+      ))}
+    </>
+  )
+}
+
 
 function ExpandedTeamsHeader({ team }) {
   const teamTopSection = ExpandedTeamsJSON[team]
