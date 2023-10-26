@@ -95,7 +95,7 @@ function MembersContainer({ role, mobile }) {
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         {role.members.map((member, index) => {
           return (
-            index % 2 == 0 && (
+            index % 2 === 0 && (
               <div
                 style={{
                   display: `${mobile ? '' : 'flex'}`,
@@ -148,7 +148,7 @@ function MembersContainer({ role, mobile }) {
                       {role.members[index + 1].desc}
                     </div>
                   </div>
-                ) : index != 0 ? (
+                ) : index !== 0 ? (
                   <div style={{ marginLeft: '40vw' }}></div>
                 ) : (
                   <></>

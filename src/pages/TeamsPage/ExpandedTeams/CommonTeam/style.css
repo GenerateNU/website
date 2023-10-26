@@ -82,11 +82,6 @@
   height: min(39.74vw, 52.98vh);
 }
 
-.text-row {
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-}
-
 .common-info-pic {
   width: 35vw;
   height: 25vw;
