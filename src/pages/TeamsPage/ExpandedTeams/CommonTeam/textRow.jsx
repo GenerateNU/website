@@ -9,7 +9,7 @@ export default function TextRow({ title, description, picture, reverse }) {
   return (
     <div className={`${mobile ? 'text-row-mobile' : 'text-row'}`}>
       {(reverse || mobile) && (
-        <img src={picture} className='info-pic' alt=''></img>
+        <img src={picture} className='common-info-pic' alt=''></img>
       )}
       <div className={`${mobile ? 'info-section-mobile' : 'info-section'}`}>
         <div
@@ -24,7 +24,7 @@ export default function TextRow({ title, description, picture, reverse }) {
         </div>
       </div>
       {!reverse && !mobile && (
-        <img src={picture} className='info-pic' alt=''></img>
+        <img src={picture} className='common-info-pic ' alt=''></img>
       )}
     </div>
   )

@@ -75,8 +75,8 @@
 }
 
 .text-row {
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 10vh;
+  margin-bottom: 0vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
