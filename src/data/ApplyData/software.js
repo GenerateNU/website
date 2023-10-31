@@ -1,5 +1,22 @@
 const Software = [
   {
+    positionTitle: 'Project Lead',
+    categoryType: 'Software',
+    description:
+      "Generate's project leads are key members of the organization who guide projects and build community amongst their team members. PLs are responsible for keeping their project on track, managing their team members, and setting up the semester to come.",
+    responsibilities:
+      'Scope out a semester’s worth of work.Hire a team of leads, engineers and designers.Lead weekly team meetings.Overseeing assignments and project progress.Communicate updates the the client',
+    requirements:
+      'Responsible, organized approach to management.Demonstrated excitement for Generate’s community.Understanding of software and/or design timelines and requirements',
+    startDate: '11/20/2023',
+    endDate: '4/19/2023',
+    workCommitment: 10,
+    active: true,
+    remarks:
+      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
+    applicationLink: ''
+  },
+  {
     positionTitle: 'Chief Frontend Architect',
     categoryType: 'Software',
     description:
@@ -59,23 +76,6 @@ const Software = [
       'Oversee brand design on up to 4 software teams. Work with Generate’s own brand. Run workshops & bootcamps to set up semesters and improve brand design in Generate. Meet with team design leads weekly and check-in on progress & blockers.',
     requirements:
       'Experience developing at least one brand (personal projects work). Skills needed to lead workshops. Good critiquing skills. Interest in mentoring and teaching',
-    startDate: '11/20/2023',
-    endDate: '4/19/2023',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Project Lead',
-    categoryType: 'Software',
-    description:
-      "Generate's project leads are key members of the organization who guide projects and build community amongst their team members. PLs are responsible for keeping their project on track, managing their team members, and setting up the semester to come.",
-    responsibilities:
-      'Scope out a semester’s worth of work. Hire a team of leads, engineers and designers.  Lead weekly team meetings. Overseeing assignments and project progress. Communicate updates the the client',
-    requirements:
-      'Responsible, organized approach to management. Demonstrated excitement for Generate’s community. Understanding of software and/or design timelines and requirements',
     startDate: '11/20/2023',
     endDate: '4/19/2023',
     workCommitment: 10,
