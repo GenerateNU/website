@@ -13,7 +13,7 @@ const Software = [
     workCommitment: 10,
     active: true,
     remarks:
-      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
+      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close November 7th at 11:59pm.',
     applicationLink: ''
   },
   {

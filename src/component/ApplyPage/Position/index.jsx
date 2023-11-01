@@ -135,11 +135,9 @@ export default function Position() {
             </Row>
 
             <div className='pt-4'></div>
-            {parseList(position.remarks).map((info, index) => (
-              <h4 key={index} className='pb-3'>
-                {info}
-              </h4>
-            ))}
+            <h4 key={index} className='pb-3'>
+              {position.remarks}
+            </h4>
             <div className='pt-4'></div>
 
             {/* Link to information about position type */}

@@ -13,7 +13,7 @@ const Hardware = [
     workCommitment: 10,
     active: true,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/d5neFKZZFEMHoYGp6'
   },
   {
@@ -30,7 +30,7 @@ const Hardware = [
     workCommitment: 10,
     active: true,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
   },
   {
@@ -47,7 +47,7 @@ const Hardware = [
     workCommitment: 10,
     active: true,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
   },
   {
@@ -64,7 +64,7 @@ const Hardware = [
     workCommitment: 10,
     active: true,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
   },
   {
@@ -81,7 +81,7 @@ const Hardware = [
     workCommitment: 10,
     active: true,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
   },
   {
@@ -98,7 +98,7 @@ const Hardware = [
     workCommitment: 10,
     active: true,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/WoESCr6f9GB7fSky7'
   },
   {
@@ -115,7 +115,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: ''
   },
   {
@@ -130,7 +130,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: ''
   },
   {
@@ -146,7 +146,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: ''
   },
   {
@@ -162,7 +162,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early August with an expected time commitment of  8-10 hours/week. Applications close July 23 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: ''
   }
 ]
