@@ -14,7 +14,7 @@ const Software = [
     active: true,
     remarks:
       'Please note that these positions are in-person, semester-long roles and begin in early December with an expected time commitment of 10 hrs/week. Applications close November 7th at 11:59pm.',
-    applicationLink: ''
+    applicationLink: 'https://forms.gle/gLtnZU15VixE4hwJ9'
   },
   {
     positionTitle: 'Chief Frontend Architect',
