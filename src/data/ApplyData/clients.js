@@ -13,7 +13,7 @@ const Clients = [
     workCommitment: 5,
     active: true,
     remarks:
-      'The position begins and ends with the Northeastern academic semester. The last day to apply is November 10th.',
+      'The position begins and ends with the Northeastern academic semester. The last day to apply is November 17th.',
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSd8PPVmILgy92GdVZCn8cYm1sSgsnKZVxnaNDxA8KKL1JxYSg/viewform?usp=sharing'
   }
