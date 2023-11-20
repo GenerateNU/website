@@ -10,7 +10,7 @@ const Engagement = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of 10 hrs/week\nApplications close November 7th at 11:59pm',
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdkBkEw11NnBc-O0AZo8CjuhDb4_2Qi75qPAJXxKwfUuMjHtg/viewform?usp=sf_link'

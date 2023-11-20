@@ -1,5 +1,37 @@
 const Hardware = [
   {
+    positionTitle: 'Lead Mechanical Engineer',
+    categoryType: 'Hardware',
+    description:
+      "At Generate, our Hardware design leads are passionate about the product design process. They are enthusiastic about tackling both UI/UX and brand design challenges for our clients, while also displaying confidence in leading a team of talented designers. Their goal is to foster growth within their team's design skills and contribute to the development of beautiful Hardware projects through an iterative design and feedback process. Design leads are dually responsible for effectively communicating with their project lead to ensure that the team aligns with the client's objectives and for enabling the successful execution of the design scope within their timeline. A design lead serves as the primary manager for the designers on their team, overseeing the progress of design work.",
+    responsibilities:
+      'Lead and mentor team members in technical design work. Assist the project lead in interviewing, evaluating, and hiring designers for your team during August and September. Assist the project lead in developing a semester long project scope, and ensuring the team stays on track to fulfill expectations. Communicate with the project lead to help create and delegate development goals for the team over the course of the semester. Communicate with team members, chief designers, and Hardware director to plan, schedule, and run occasional cross-team critiques and weekly design reviews which provide feedback to team members on a regular basis. Contribute to designs whenever and wherever applicable',
+    requirements:
+      'Desire to lead a team of designers. Experience participating and running design critique sessions. Experience with interactive design tool (Figma). Understanding of the UI/UX design process including but not limited to creating user flows, lo-fi wireframes, and hi-fi prototypes. Comfortable working with and/or creating brand design systems',
+    startDate: '1/1/2024',
+    endDate: '4/19/2024',
+    workCommitment: 10,
+    active: true,
+    remarks:
+      'Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+    applicationLink: 'https://forms.gle/W4uxEDTLiZbAPTEn7'
+  },
+  {
+    positionTitle: 'Lead Electrical Engineer',
+    categoryType: 'Hardware',
+    description:
+      'A Technical Lead is enthusiastic about the Hardware development process. Additionally, they are expected to strive in a collaborative environment, which includes both their team and outside clients. Furthermore, they are confident in their leadership in order to lead a team of talented, driven engineers to execute their vision and to grow their team members’ skills. As the Single Point of Accountability for their project’s development team, the Technical Lead is expected to ensure development work stays on track by mentoring newer engineers, appropriately delegating tasks, and by making personal contributions to the codebase. An essential aspect of this responsibility is keeping their Project Lead, the Chief Hardware Architect, and the Chief Frontend Architect up to date on their progress.',
+    responsibilities: '',
+    requirements: '',
+    startDate: '1/1/2024',
+    endDate: '4/19/2024',
+    workCommitment: 10,
+    active: true,
+    remarks:
+      'Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
+    applicationLink: 'https://forms.gle/W4uxEDTLiZbAPTEn7'
+  },
+  {
     positionTitle: 'Chief Lead',
     categoryType: 'Hardware',
     description:
@@ -11,7 +43,7 @@ const Hardware = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/d5neFKZZFEMHoYGp6'
@@ -28,7 +60,7 @@ const Hardware = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
@@ -45,7 +77,7 @@ const Hardware = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
@@ -62,7 +94,7 @@ const Hardware = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
@@ -79,7 +111,7 @@ const Hardware = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
@@ -96,42 +128,10 @@ const Hardware = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/WoESCr6f9GB7fSky7'
-  },
-  {
-    positionTitle: 'Lead Mechanical Engineer',
-    categoryType: 'Hardware',
-    description:
-      "At Generate, our Hardware design leads are passionate about the product design process. They are enthusiastic about tackling both UI/UX and brand design challenges for our clients, while also displaying confidence in leading a team of talented designers. Their goal is to foster growth within their team's design skills and contribute to the development of beautiful Hardware projects through an iterative design and feedback process. Design leads are dually responsible for effectively communicating with their project lead to ensure that the team aligns with the client's objectives and for enabling the successful execution of the design scope within their timeline. A design lead serves as the primary manager for the designers on their team, overseeing the progress of design work.",
-    responsibilities:
-      'Lead and mentor team members in technical design work. Assist the project lead in interviewing, evaluating, and hiring designers for your team during August and September. Assist the project lead in developing a semester long project scope, and ensuring the team stays on track to fulfill expectations. Communicate with the project lead to help create and delegate development goals for the team over the course of the semester. Communicate with team members, chief designers, and Hardware director to plan, schedule, and run occasional cross-team critiques and weekly design reviews which provide feedback to team members on a regular basis. Contribute to designs whenever and wherever applicable',
-    requirements:
-      'Desire to lead a team of designers. Experience participating and running design critique sessions. Experience with interactive design tool (Figma). Understanding of the UI/UX design process including but not limited to creating user flows, lo-fi wireframes, and hi-fi prototypes. Comfortable working with and/or creating brand design systems',
-    startDate: '1/1/2024',
-    endDate: '4/19/2024',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Lead Electrical Engineer',
-    categoryType: 'Hardware',
-    description:
-      'A Technical Lead is enthusiastic about the Hardware development process. Additionally, they are expected to strive in a collaborative environment, which includes both their team and outside clients. Furthermore, they are confident in their leadership in order to lead a team of talented, driven engineers to execute their vision and to grow their team members’ skills. As the Single Point of Accountability for their project’s development team, the Technical Lead is expected to ensure development work stays on track by mentoring newer engineers, appropriately delegating tasks, and by making personal contributions to the codebase. An essential aspect of this responsibility is keeping their Project Lead, the Chief Hardware Architect, and the Chief Frontend Architect up to date on their progress.',
-    responsibilities: '',
-    requirements: '',
-    startDate: '1/1/2024',
-    endDate: '4/19/2024',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
-    applicationLink: ''
   },
   {
     positionTitle: 'Hardware Engineer',

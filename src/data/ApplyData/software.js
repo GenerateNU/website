@@ -1,5 +1,37 @@
 const Software = [
   {
+    positionTitle: 'Design Lead',
+    categoryType: 'Software',
+    description:
+      "At Generate, our software design leads are passionate about the product design process. They are enthusiastic about tackling both UI/UX and brand design challenges for our clients, while also displaying confidence in leading a team of talented designers. Their goal is to foster growth within their team's design skills and contribute to the development of beautiful software projects through an iterative design and feedback process. Design leads are dually responsible for effectively communicating with their project lead to ensure that the team aligns with the client's objectives and for enabling the successful execution of the design scope within their timeline. A design lead serves as the primary manager for the designers on their team, overseeing the progress of design work.",
+    responsibilities:
+      'Lead and mentor team members in technical design work. Assist the project lead in interviewing, evaluating, and hiring designers for your team during August and September. Assist the project lead in developing a semester long project scope, and ensuring the team stays on track to fulfill expectations. Communicate with the project lead to help create and delegate development goals for the team over the course of the semester. Communicate with team members, chief designers, and software director to plan, schedule, and run occasional cross-team critiques and weekly design reviews which provide feedback to team members on a regular basis. Contribute to designs whenever and wherever applicable',
+    requirements:
+      'Desire to lead a team of designers. Experience participating and running design critique sessions. Experience with interactive design tool (Figma). Understanding of the UI/UX design process including but not limited to creating user flows, lo-fi wireframes, and hi-fi prototypes. Comfortable working with and/or creating brand design systems',
+    startDate: '12/11/2023',
+    endDate: '4/19/2023',
+    workCommitment: 10,
+    active: true,
+    remarks:
+      'Please note that this is an are in-person, semester-long position starting in late December. Applications close Wednesday, November 27th at 11:59pm.',
+    applicationLink: 'https://forms.gle/2D5FNbvU5a7oh5Rs7'
+  },
+  {
+    positionTitle: 'Technical Lead',
+    categoryType: 'Software',
+    description:
+      "At Generate, each team of Engineers is now guided by two Technical Leads who collaborate with the engineers on their team, the Project Lead, and the Design Lead to develop a product in alignment with their team's and client's goals.\nA Technical Lead is passionate about the software development process and is expected to excel in collaborative environments, both within their team and with external stakeholders. Proficiency in collaborative decision-making is crucial, especially concerning technical decisions, as they guide a team of talented engineers and foster skill development.\nThe dual Technical Leads play a pivotal role in maintaining the project's momentum. This involves ensuring the team builds strong, extensible foundations, mentoring both new and experienced engineers, and actively contributing to the codebase. Additionally, this involves keeping key stakeholders, such as the Project Lead, Chief Software Architect, and Chief Frontend Architect, informed of progress in an accurate and complete manner.",
+    responsibilities: '',
+    requirements: '',
+    startDate: '',
+    endDate: '4/19/2023',
+    workCommitment: 10,
+    active: true,
+    remarks:
+      'Please note that this is an are in-person, semester-long position starting in late December. Applications close Wednesday, November 27th at 11:59pm.',
+    applicationLink: 'https://forms.gle/aKHPvDKey7Ksxfts8'
+  },
+  {
     positionTitle: 'Project Lead',
     categoryType: 'Software',
     description:
@@ -11,7 +43,7 @@ const Software = [
     startDate: '11/20/2023',
     endDate: '4/19/2023',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Please note that these positions are in-person, semester-long roles and begin in early December with an expected time commitment of 10 hrs/week. Applications close November 7th at 11:59pm.',
     applicationLink: 'https://forms.gle/gLtnZU15VixE4hwJ9'
@@ -77,38 +109,6 @@ const Software = [
     requirements:
       'Experience developing at least one brand (personal projects work). Skills needed to lead workshops. Good critiquing skills. Interest in mentoring and teaching',
     startDate: '11/20/2023',
-    endDate: '4/19/2023',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Design Lead',
-    categoryType: 'Software',
-    description:
-      "At Generate, our software design leads are passionate about the product design process. They are enthusiastic about tackling both UI/UX and brand design challenges for our clients, while also displaying confidence in leading a team of talented designers. Their goal is to foster growth within their team's design skills and contribute to the development of beautiful software projects through an iterative design and feedback process. Design leads are dually responsible for effectively communicating with their project lead to ensure that the team aligns with the client's objectives and for enabling the successful execution of the design scope within their timeline. A design lead serves as the primary manager for the designers on their team, overseeing the progress of design work.",
-    responsibilities:
-      'Lead and mentor team members in technical design work. Assist the project lead in interviewing, evaluating, and hiring designers for your team during August and September. Assist the project lead in developing a semester long project scope, and ensuring the team stays on track to fulfill expectations. Communicate with the project lead to help create and delegate development goals for the team over the course of the semester. Communicate with team members, chief designers, and software director to plan, schedule, and run occasional cross-team critiques and weekly design reviews which provide feedback to team members on a regular basis. Contribute to designs whenever and wherever applicable',
-    requirements:
-      'Desire to lead a team of designers. Experience participating and running design critique sessions. Experience with interactive design tool (Figma). Understanding of the UI/UX design process including but not limited to creating user flows, lo-fi wireframes, and hi-fi prototypes. Comfortable working with and/or creating brand design systems',
-    startDate: '12/11/2023',
-    endDate: '4/19/2023',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Technical Lead',
-    categoryType: 'Software',
-    description:
-      'A Technical Lead is enthusiastic about the software development process. Additionally, they are expected to strive in a collaborative environment, which includes both their team and outside clients. Furthermore, they are confident in their leadership in order to lead a team of talented, driven engineers to execute their vision and to grow their team members’ skills. As the Single Point of Accountability for their project’s development team, the Technical Lead is expected to ensure development work stays on track by mentoring newer engineers, appropriately delegating tasks, and by making personal contributions to the codebase. An essential aspect of this responsibility is keeping their Project Lead, the Chief Software Architect, and the Chief Frontend Architect up to date on their progress.',
-    responsibilities: '',
-    requirements: '',
-    startDate: '',
     endDate: '4/19/2023',
     workCommitment: 10,
     active: false,

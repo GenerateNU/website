@@ -11,7 +11,7 @@ const Operations = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfZ6sGNtUQr3SkzXx7f1VcJkXNlYUceWZcNk5Vj_2eyQ_Kscw/viewform?usp=sf_link'
@@ -28,7 +28,7 @@ const Operations = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdceh_MFnbmaW7XiDY-n2H7uE8NHwuElyjy0tBUafoqCyBZqQ/viewform?usp=sf_link'
@@ -45,7 +45,7 @@ const Operations = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdtp1IkFRnrOYa-m3smhYo7ss-bNjrvbFNoxhuyrWKKS4zx2A/viewform?usp=sf_link'

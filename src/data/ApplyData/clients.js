@@ -11,7 +11,7 @@ const Clients = [
     startDate: '1/8/2024',
     endDate: '4/19/2024',
     workCommitment: 5,
-    active: true,
+    active: false,
     remarks:
       'The position begins and ends with the Northeastern academic semester. The last day to apply is November 17th.',
     applicationLink:
