@@ -11,7 +11,7 @@ const Software = [
     startDate: '12/11/2023',
     endDate: '4/19/2023',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Please note that this is an are in-person, semester-long position starting in late December. Applications close Wednesday, November 27th at 11:59pm.',
     applicationLink: 'https://forms.gle/2D5FNbvU5a7oh5Rs7'
@@ -26,7 +26,7 @@ const Software = [
     startDate: '',
     endDate: '4/19/2023',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Please note that this is an are in-person, semester-long position starting in late December. Applications close Wednesday, November 27th at 11:59pm.',
     applicationLink: 'https://forms.gle/aKHPvDKey7Ksxfts8'

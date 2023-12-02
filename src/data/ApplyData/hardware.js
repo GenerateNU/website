@@ -11,7 +11,7 @@ const Hardware = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/W4uxEDTLiZbAPTEn7'
@@ -26,7 +26,7 @@ const Hardware = [
     startDate: '1/1/2024',
     endDate: '4/19/2024',
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks:
       'Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/W4uxEDTLiZbAPTEn7'
