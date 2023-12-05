@@ -1,4 +1,54 @@
+const remarks = "Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of 10 hrs/week.\nApplications close December 13th at 11:59pm";
+const startDate = '1/1/2024';
+const endDate = '4/19/2024';
+
 const Software = [
+
+  {
+    positionTitle: 'UI/UX Designer',
+    categoryType: 'Software',
+    description:
+      "UI/UX Designers work on a project team to contribute to the completion of high-quality, professional fully prototyped hi-fi wireframes for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. In the past, designers have designed complete UI/UX workflows for apps and websites. Designs created for the team are implemented by the engineers so you can see your work come to life! Designers also work closely with clients and customers to understand user needs & needed functionality",
+    responsibilities:
+      "Attend and actively participate in regular team meetings.Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital productHost user testing to get real feedback on designs and support the iterative process.Accept and give feedback to peers, for both soft and hard skills.Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience.Assist the clients in making their product marketable, unique, and appealing.Iterate rapidly on client feedback",
+    requirements: '',
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeRm2c1KOjPyytj6NYxhsDiMeu2ewWc1B1oVL7dxaV1PF6h3g/viewform?usp=sf_link'
+  },
+  {
+    positionTitle: 'Brand Designer',
+    categoryType: 'Software',
+    description:
+      "Brand Designers work on a project team to contribute to the completion of high-quality, professional brands for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. Brand designers  work closely with clients and customers to produce logos, marketing materials, and branding guidelines.",
+      responsibilities:
+      "Attend and actively participate in regular team meetings.Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital productHost user testing to get real feedback on designs and support the iterative process.Accept and give feedback to peers, for both soft and hard skills.Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience.Assist the clients in making their product marketable, unique, and appealing.Iterate rapidly on client feedback",
+    requirements: '',
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeRm2c1KOjPyytj6NYxhsDiMeu2ewWc1B1oVL7dxaV1PF6h3g/viewform?usp=sf_link'
+  },
+  {
+    positionTitle: 'Software Engineer',
+    categoryType: 'Software',
+    description:
+    "Generate Software Engineers work on a software project team to contribute to the completion of high-quality, professional work for Generate clients. They are excellent at working in a team and tackling complex technical problems. Past projects have included both front-end and back-end engineering for apps, websites and more!",
+    responsibilities:
+    "Work with a team of talented developers and designers to build a full-stack project for a clien.tAccept and give feedback to peers, both for soft and hard skills to grow as individuals and a team.Attend and actively participate in regular team meetings and code reviews",
+    requirements: '',
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeh4uRxgeuDWIRkzFar9yoPfGf3zJ8TygWwQn3woFjyObvoqg/viewform?usp=sf_link'
+  },
   {
     positionTitle: 'Design Lead',
     categoryType: 'Software',
@@ -114,36 +164,6 @@ const Software = [
     active: false,
     remarks:
       'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Software Designer',
-    categoryType: 'Software',
-    description:
-      'Software Designers work on a project team to contribute to the completion of high-quality, professional fully prototyped hi-fi wireframes and brand books for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. In the past, designers have designed complete UI/UX workflows for apps and websites. Designs created for the team are implemented by the engineers so you can see your work come to life! Designers also work closely with clients and customers to produce logos, marketing materials, and branding guidelines.',
-    responsibilities:
-      'Attend and actively participate in regular team meetings. Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital product. Host user testing to get real feedback on designs and support the iterative process.. Accept and give feedback to peers, for both soft and hard skills. Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience. Assist the clients in making their product marketable, unique, and appealing. Iterate rapidly on client feedback',
-    requirements: '',
-    startDate: '1/1/2024',
-    endDate: '4/19/2023',
-    workCommitment: 10,
-    active: false,
-    remarks: '',
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Software Engineer',
-    categoryType: 'Software',
-    description:
-      'Generate Software Engineers work on a software project team to contribute to the completion of high-quality, professional work for Generate clients. They are excellent at working in a team and tackling complex technical problems. Past projects have included both front-end and back-end engineering for apps, websites and more!',
-    responsibilities:
-      'Work with a team of talented developers and designers to build a full-stack project for a client. Accept and give feedback to peers, both for soft and hard skills to grow as individuals and a team. Attend and actively participate in regular team meetings and code reviews',
-    requirements: '',
-    startDate: '1/1/2024',
-    endDate: '4/19/2023',
-    workCommitment: 10,
-    active: false,
-    remarks: '',
     applicationLink: ''
   }
 ]

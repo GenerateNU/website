@@ -1,4 +1,38 @@
+const remarks = "Please note that these positions are in-person, semester-long roles and begin in September with an expected time commitment of 5-8 hours/week. Applications close August 9 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!";
+const startDate = '1/1/2024';
+const endDate = '4/19/2024';
+
 const Hardware = [
+  {
+    positionTitle: 'Hardware Engineer',
+    categoryType: 'Hardware',
+    description:
+      "Mechanical Hardware Engineers will focus on designing, testing, and prototyping mechanical concepts such as part design, design for manufacturing, 3D printing, motor integration, etc. with the team. Electrical Hardware Engineers focus on designing, testing, and prototyping electronic concepts such as electromechanical integration, control and sensor systems, PCB design, etc. All engineers focus on greater development of their client project and deliverables.",
+    responsibilities:
+      "Hardware engineers are key members of the organization who make up the majority of our four unique project teams. The role is an opportunity for growth at all levels, whether starting out your engineering career or developing advanced skills and techniques.",
+    requirements: "Attends all team meetings, communicates well, and completes work outside of meetings. Brings a curious mind and excited attitude to the table regardless of prior experience level. Is interested in the greater Generate community beyond just their project team. They are a strong team-player with positive time management and organizational skills.",
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdrzsBXGnfznjbbThXbH5E_nLZxgpFdKSLcAHia7JvSK4tMJw/viewform?usp=sf_link'
+  },
+  {
+    positionTitle: 'Industrial Designer',
+    categoryType: 'Hardware',
+    description:
+      "Industrial Designers on project teams focus on a variety of design-related things depending on the client and project they are assigned to. Tasks may include but are not limited to branding design, GUI development, material selection, design of a chassis/housing/etc., rendering and animations, and more.",
+    responsibilities:
+      "Industrial Designers are key members of the organization who bring client's aesthetic visions for their products to life in conjunction with the engineering teams. The role is an opportunity for growth at all levels, whether starting out your design career or developing advanced skills and techniques.",
+    requirements: "Attends all team meetings, communicates well, and completes work outside of meetings. Brings a curious mind and excited attitude to the table regardless of prior experience level. Is interested in the greater Generate community beyond just their project team. They are a strong team-player with positive time management and organizational skills.",
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSccY9rhVJz9srVMPSKYGsC9xLIr5Jr_mRdgbBoIwM_3l-VeRw/viewform?usp=sf_link'
+  },
   {
     positionTitle: 'Lead Mechanical Engineer',
     categoryType: 'Hardware',
@@ -132,38 +166,6 @@ const Hardware = [
     remarks:
       'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
     applicationLink: 'https://forms.gle/WoESCr6f9GB7fSky7'
-  },
-  {
-    positionTitle: 'Hardware Engineer',
-    categoryType: 'Hardware',
-    description:
-      'Hardware Designers work on a project team to contribute to the completion of high-quality, professional fully prototyped hi-fi wireframes and brand books for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. In the past, designers have designed complete UI/UX workflows for apps and websites. Designs created for the team are implemented by the engineers so you can see your work come to life! Designers also work closely with clients and customers to produce logos, marketing materials, and branding guidelines.',
-    responsibilities:
-      'Attend and actively participate in regular team meetings. Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital product. Host user testing to get real feedback on designs and support the iterative process.. Accept and give feedback to peers, for both soft and hard skills. Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience. Assist the clients in making their product marketable, unique, and appealing. Iterate rapidly on client feedback',
-    requirements: '',
-    startDate: '1/1/2024',
-    endDate: '4/19/2024',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Hardware Designer',
-    categoryType: 'Hardware',
-    description:
-      'Generate Hardware Engineers work on a Hardware project team to contribute to the completion of high-quality, professional work for Generate clients. They are excellent at working in a team and tackling complex technical problems. Past projects have included both front-end and back-end engineering for apps, websites and more!',
-    responsibilities:
-      'Work with a team of talented developers and designers to build a full-stack project for a client. Accept and give feedback to peers, both for soft and hard skills to grow as individuals and a team. Attend and actively participate in regular team meetings and code reviews',
-    requirements: '',
-    startDate: '1/1/2024',
-    endDate: '4/19/2024',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      'Check out our updated team structure here to see how this role fits into the greater organization and to find out more about our different roles: Generate FL23 HARDWARE Org Structure.\nPlease note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of  8-10 hours/week. Applications close November 7th at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!',
-    applicationLink: ''
   }
 ]
 

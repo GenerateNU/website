@@ -1,4 +1,102 @@
+const remarks = "Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of 10 hrs/week. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nApplications close December 13th at 11:59pm";
+const startDate = '1/1/2024';
+const endDate = '4/19/2024';
+
 const Operations = [
+
+  {
+    positionTitle: 'Corporate Partnerships Coordinator',
+    categoryType: 'Operations',
+    description: "The role of the Corporate Partnership Coordinator is to foster mutually beneficial relationships between Generate and potential employers and corporate sponsors.\n\nThe Coordinator will collaborate with members from Generate's Engagement team as well as Sherman Center staff to foster external relationships.",
+    responsibilities: "Developmenting professional relationships with corporate/external companies. Communicating with recruiters and other professionals. ",
+    requirements: "The ideal candidate has confident and professional communication skills, and is creative and self-motivated, coming up with new and exciting methods to create meaningful corporate relationships.",
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdRGd12UHhCOdLiDeVSjuSDiDnjv2pkL7UJ-QViYCf0zXp44A/viewform?usp=sf_link'
+  },
+  {
+    positionTitle: 'Data Engineer',
+    categoryType: 'Operations',
+    description: "Data Engineers play a vital role within the Data and Strategy Team, serving as the backbone of our data-driven operations. This role works with the Data & Strategy Lead to implement data models that support our analytical projects. ",
+    responsibilities: "Responsibilities for this role include designing and developing data pipelines, performing data cleansing and validation, and developing/maintaining data documentation. This role is an opportunity to utilize your technical expertise within an entrepreneurial setting.",
+    requirements: "Previous experience using programming languages. Ability to effectively communicate. ",
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfuZjasfFVrp6fuLCMKq-RGRJDro81-HB3GZMvWqiCl1qzdDQ/viewform?usp=sf_link'
+  },
+  {
+    positionTitle: 'Member Development Specialist',
+    categoryType: 'Operations',
+    description: "The role of the Member Development Specialist is to create methods of active reflection and acknowledgment of members' personal and professional growth, as well as advise on how to put this growth into digestible words for resumes and interviews.\n\nThe specialist will implement new templates and systems for advisement of writing resumes, preparing for interviews, and overall self-recognition of the growth and leadership in individual Generate members experience. This might come in the form of creating and executing workshops and mock interviews, creating systems for 1:1 mentoring in these areas, or implementing completely new ideas!",
+    responsibilities: "Develop initiatives and resources for current and future Generate leaders. Build upon the current system that facilities and encourages the growth of our members.",
+    requirements: "The ideal candidate has impressive interpersonal skills, a passion for mentorship, and is creative and self-motivated, coming up with new and exciting methods to foster active acknowledgment of member growth.",
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdgWvDtFCb8FDOJJLd62bbnmUhgf6QR1ZdDP3thlq5ljD5CFg/viewform?usp=sf_link'
+  },
+  {
+    positionTitle: 'Financial Analyst',
+    categoryType: 'Operations',
+    description: "The Financial Analyst works hand-in-hand with the Sherman Center's Director, Generate's Operations Director, and Generate's Operational Support Lead. This role is responsible for all Generate purchasing and creating and monitoring the budget. As a result, they must ensure that all teams in Generate have the necessary supplies to complete their initiatives throughout the semester and are aware of and following their budget. In order to ensure steady and successful team progression, the Financial Analyst is responsible for tracking orders on a regular schedule and managing and developing relationships with external vendors.",
+    responsibilities: "Order all needed supplies and materials needed for projects, member development, events, etc. Oversee the budget of the organization and maintain the spending habits of each team. ",
+    requirements: "Must have prior experience managing finances. Will be evaluated and further interviewed by the Sherman Center Director.",
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeAs4ugY3xjaJ_0GdFlwqDsIvzi7vR0mfTKtZq0IByQinSpPQ/viewform?usp=sf_link'
+  },
+  // {
+  //   positionTitle: 'Archive Analyst',
+  //   categoryType: 'Operations',
+  //   description: '',
+  //   responsibilities: '',
+  //   requirements: '',
+  //   startDate: startDate,
+  //   endDate: endDate,
+  //   workCommitment: 10,
+  //   active: true,
+  //   remarks: remarks,
+  //   applicationLink: ''
+  // },
+
+  {
+    positionTitle: 'Tech Operations Consultant',
+    categoryType: 'Operations',
+    description: "The Tech Operations Consultant is responsible for improving and streamlining Generates Operations as a whole. You will play a pivotal role in analyzing the organization's functionality, integrating new technologies, improving workflows and, enhancing efficiency in processes in the organization. With dedication to driving efficiency and fostering collaboration, as a Tech Operations Consultant, you will contribute significantly to Generates success as a dynamic, tech-forward student organization, fostering innovation and growth.",
+    responsibilities: "Oversee the management of our space booking software, enabling members to maximize its potential. ",
+    requirements: "Flexible and adaptability. Creative thinking ",
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLScvNWF5YuMa-IZhIup5V4Y5JJ2zpDi12NtAzakHPurwZHp9TA/viewform?usp=sf_link'
+  },
+
+  {
+    positionTitle: 'Technical Writer ',
+    categoryType: 'Operations',
+    description: "The Technical Writer role is responsible for improving and streamlining our internal documents and forms. You will play a pivotal role in ensuring the efficiency and consistency of our internal processes through the creation of user-friendly templates. Additionally, the Technical Writer will be responsible for researching and compiling best practices for the creation of internal documents.",
+    responsibilities: "Organize and maintain the progress of internal documentation. Centralizing any Generate wide resources and information. ",
+    requirements: "Ability to think creatively and demonstrate organization skills.",
+    startDate: startDate,
+    endDate: endDate,
+    workCommitment: 10,
+    active: true,
+    remarks: remarks,
+    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfnWMqtajHFHbQ43L09KT4QIZ8fiHF4zr_aR_YsekpUXyNdBw/viewform?usp=sf_link'
+  },
   {
     positionTitle: 'Data & Strategy Lead',
     categoryType: 'Operations',
@@ -50,107 +148,6 @@ const Operations = [
       "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdtp1IkFRnrOYa-m3smhYo7ss-bNjrvbFNoxhuyrWKKS4zx2A/viewform?usp=sf_link'
   },
-
-  {
-    positionTitle: 'Corporate Partnerships Coordinator',
-    categoryType: 'Operations',
-    description: '',
-    responsibilities: '',
-    requirements: '',
-    startDate: '',
-    endDate: '',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Data Engineer',
-    categoryType: 'Operations',
-    description: '',
-    responsibilities: '',
-    requirements: '',
-    startDate: '',
-    endDate: '',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Member Development Specialist',
-    categoryType: 'Operations',
-    description: '',
-    responsibilities: '',
-    requirements: '',
-    startDate: '',
-    endDate: '',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Financial Analyst',
-    categoryType: 'Operations',
-    description: '',
-    responsibilities: '',
-    requirements: '',
-    startDate: '',
-    endDate: '',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
-    applicationLink: ''
-  },
-  {
-    positionTitle: 'Archive Analyst',
-    categoryType: 'Operations',
-    description: '',
-    responsibilities: '',
-    requirements: '',
-    startDate: '',
-    endDate: '',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
-    applicationLink: ''
-  },
-
-  {
-    positionTitle: 'Business Analyst',
-    categoryType: 'Operations',
-    description: '',
-    responsibilities: '',
-    requirements: '',
-    startDate: '',
-    endDate: '',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
-    applicationLink: ''
-  },
-
-  {
-    positionTitle: 'Tech Specialist',
-    categoryType: 'Operations',
-    description: '',
-    responsibilities: '',
-    requirements: '',
-    startDate: '',
-    endDate: '',
-    workCommitment: 10,
-    active: false,
-    remarks:
-      "Please note this is an in-person, semester-long role and it begins in early January with an expected time commitment of  5-10 hours/week. Applications close on November 7th, 2023 at 11:59pm. Please contact operations@generatenu.com or @Sam Yip on Sherman Center Slack with any questions or concerns.\nCheck out our organization's structure here to see how this role fits into the larger Operations Team: Generate Operations F23 Org Structure",
-    applicationLink: ''
-  }
 ]
 
 export default Operations
