@@ -13,7 +13,7 @@ const Operations = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdRGd12UHhCOdLiDeVSjuSDiDnjv2pkL7UJ-QViYCf0zXp44A/viewform?usp=sf_link'
   },
@@ -26,7 +26,7 @@ const Operations = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfuZjasfFVrp6fuLCMKq-RGRJDro81-HB3GZMvWqiCl1qzdDQ/viewform?usp=sf_link'
   },
@@ -39,7 +39,7 @@ const Operations = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdgWvDtFCb8FDOJJLd62bbnmUhgf6QR1ZdDP3thlq5ljD5CFg/viewform?usp=sf_link'
   },
@@ -52,7 +52,7 @@ const Operations = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeAs4ugY3xjaJ_0GdFlwqDsIvzi7vR0mfTKtZq0IByQinSpPQ/viewform?usp=sf_link'
   },
@@ -65,7 +65,7 @@ const Operations = [
   //   startDate: startDate,
   //   endDate: endDate,
   //   workCommitment: 10,
-  //   active: true,
+  //   active: false,
   //   remarks: remarks,
   //   applicationLink: ''
   // },
@@ -79,7 +79,7 @@ const Operations = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLScvNWF5YuMa-IZhIup5V4Y5JJ2zpDi12NtAzakHPurwZHp9TA/viewform?usp=sf_link'
   },
@@ -93,7 +93,7 @@ const Operations = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfnWMqtajHFHbQ43L09KT4QIZ8fiHF4zr_aR_YsekpUXyNdBw/viewform?usp=sf_link'
   },

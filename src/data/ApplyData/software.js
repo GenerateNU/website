@@ -15,7 +15,7 @@ const Software = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeRm2c1KOjPyytj6NYxhsDiMeu2ewWc1B1oVL7dxaV1PF6h3g/viewform?usp=sf_link'
   },
@@ -30,7 +30,7 @@ const Software = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeRm2c1KOjPyytj6NYxhsDiMeu2ewWc1B1oVL7dxaV1PF6h3g/viewform?usp=sf_link'
   },
@@ -45,7 +45,7 @@ const Software = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeh4uRxgeuDWIRkzFar9yoPfGf3zJ8TygWwQn3woFjyObvoqg/viewform?usp=sf_link'
   },

@@ -14,7 +14,7 @@ const Hardware = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdrzsBXGnfznjbbThXbH5E_nLZxgpFdKSLcAHia7JvSK4tMJw/viewform?usp=sf_link'
   },
@@ -29,7 +29,7 @@ const Hardware = [
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
-    active: true,
+    active: false,
     remarks: remarks,
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSccY9rhVJz9srVMPSKYGsC9xLIr5Jr_mRdgbBoIwM_3l-VeRw/viewform?usp=sf_link'
   },
