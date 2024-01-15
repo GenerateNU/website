@@ -24,7 +24,7 @@ const Software = [
     categoryType: 'Software',
     description:
       "Brand Designers work on a project team to contribute to the completion of high-quality, professional brands for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. Brand designers  work closely with clients and customers to produce logos, marketing materials, and branding guidelines.",
-      responsibilities:
+    responsibilities:
       "Attend and actively participate in regular team meetings.Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital productHost user testing to get real feedback on designs and support the iterative process.Accept and give feedback to peers, for both soft and hard skills.Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience.Assist the clients in making their product marketable, unique, and appealing.Iterate rapidly on client feedback",
     requirements: '',
     startDate: startDate,
@@ -38,9 +38,9 @@ const Software = [
     positionTitle: 'Software Engineer',
     categoryType: 'Software',
     description:
-    "Generate Software Engineers work on a software project team to contribute to the completion of high-quality, professional work for Generate clients. They are excellent at working in a team and tackling complex technical problems. Past projects have included both front-end and back-end engineering for apps, websites and more!",
+      "Generate Software Engineers work on a software project team to contribute to the completion of high-quality, professional work for Generate clients. They are excellent at working in a team and tackling complex technical problems. Past projects have included both front-end and back-end engineering for apps, websites and more!",
     responsibilities:
-    "Work with a team of talented developers and designers to build a full-stack project for a clien.tAccept and give feedback to peers, both for soft and hard skills to grow as individuals and a team.Attend and actively participate in regular team meetings and code reviews",
+      "Work with a team of talented developers and designers to build a full-stack project for a clien.tAccept and give feedback to peers, both for soft and hard skills to grow as individuals and a team.Attend and actively participate in regular team meetings and code reviews",
     requirements: '',
     startDate: startDate,
     endDate: endDate,
@@ -58,12 +58,12 @@ const Software = [
       'Lead and mentor team members in technical design work. Assist the project lead in interviewing, evaluating, and hiring designers for your team during August and September. Assist the project lead in developing a semester long project scope, and ensuring the team stays on track to fulfill expectations. Communicate with the project lead to help create and delegate development goals for the team over the course of the semester. Communicate with team members, chief designers, and software director to plan, schedule, and run occasional cross-team critiques and weekly design reviews which provide feedback to team members on a regular basis. Contribute to designs whenever and wherever applicable',
     requirements:
       'Desire to lead a team of designers. Experience participating and running design critique sessions. Experience with interactive design tool (Figma). Understanding of the UI/UX design process including but not limited to creating user flows, lo-fi wireframes, and hi-fi prototypes. Comfortable working with and/or creating brand design systems',
-    startDate: '12/11/2023',
-    endDate: '4/19/2023',
+    startDate: startDate,
+    endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks:
-      'Please note that this is an are in-person, semester-long position starting in late December. Applications close Wednesday, November 27th at 11:59pm.',
+      remarks,
     applicationLink: 'https://forms.gle/2D5FNbvU5a7oh5Rs7'
   },
   {
@@ -73,12 +73,12 @@ const Software = [
       "At Generate, each team of Engineers is now guided by two Technical Leads who collaborate with the engineers on their team, the Project Lead, and the Design Lead to develop a product in alignment with their team's and client's goals.\nA Technical Lead is passionate about the software development process and is expected to excel in collaborative environments, both within their team and with external stakeholders. Proficiency in collaborative decision-making is crucial, especially concerning technical decisions, as they guide a team of talented engineers and foster skill development.\nThe dual Technical Leads play a pivotal role in maintaining the project's momentum. This involves ensuring the team builds strong, extensible foundations, mentoring both new and experienced engineers, and actively contributing to the codebase. Additionally, this involves keeping key stakeholders, such as the Project Lead, Chief Software Architect, and Chief Frontend Architect, informed of progress in an accurate and complete manner.",
     responsibilities: '',
     requirements: '',
-    startDate: '',
-    endDate: '4/19/2023',
+    startDate: startDate,
+    endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks:
-      'Please note that this is an are in-person, semester-long position starting in late December. Applications close Wednesday, November 27th at 11:59pm.',
+      remarks,
     applicationLink: 'https://forms.gle/aKHPvDKey7Ksxfts8'
   },
   {
@@ -90,12 +90,12 @@ const Software = [
       'Scope out a semester’s worth of work.Hire a team of leads, engineers and designers.Lead weekly team meetings.Overseeing assignments and project progress.Communicate updates the the client',
     requirements:
       'Responsible, organized approach to management.Demonstrated excitement for Generate’s community.Understanding of software and/or design timelines and requirements',
-    startDate: '11/20/2023',
-    endDate: '4/19/2023',
+    startDate: startDate,
+    endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks:
-      'Please note that these positions are in-person, semester-long roles and begin in early December with an expected time commitment of 10 hrs/week. Applications close November 7th at 11:59pm.',
+      remarks,
     applicationLink: 'https://forms.gle/gLtnZU15VixE4hwJ9'
   },
   {
@@ -107,12 +107,12 @@ const Software = [
       'Oversee frontend development on 5 software teams. Run frontend workshops geared at different expertise levels. Help debug when needed',
     requirements:
       'Demonstrated frontend development skills. Debugging skills. Interest in mentoring and teaching.',
-    startDate: '',
-    endDate: '4/19/2023',
+    startDate: startDate,
+    endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks:
-      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
+      remarks,
     applicationLink: ''
   },
   {
@@ -124,12 +124,12 @@ const Software = [
       'Oversee structure & development on 5 software teams. Run workshops & bootcamps to set up semesters and improve Generate’s knowledge base.  Meet with team tech leads weekly and check-in on progress & blockers. Advise project leads during pre-semester period',
     requirements:
       'Strong understanding of how to structure projects. Demonstrated development skills. Debugging skills. Interest in mentoring and teaching',
-    startDate: '',
-    endDate: '4/19/2023',
+    startDate: startDate,
+    endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks:
-      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
+      remarks,
     applicationLink: ''
   },
   {
@@ -141,12 +141,12 @@ const Software = [
       'Oversee structure & design on 5 software teams. Run workshops & bootcamps to set up semesters and improve Generate’s knowledge base.  Meet with team design leads weekly and check-in on progress & blockers. Advise project leads during pre-semester period',
     requirements:
       'Experience designing intricate interfaces in Figma. Skills needed to lead workshops. Good critiquing skills. Interest in mentoring and teaching',
-    startDate: '',
-    endDate: '4/19/2023',
+    startDate: startDate,
+    endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks:
-      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
+      remarks,
     applicationLink: ''
   },
   {
@@ -158,12 +158,12 @@ const Software = [
       'Oversee brand design on up to 4 software teams. Work with Generate’s own brand. Run workshops & bootcamps to set up semesters and improve brand design in Generate. Meet with team design leads weekly and check-in on progress & blockers.',
     requirements:
       'Experience developing at least one brand (personal projects work). Skills needed to lead workshops. Good critiquing skills. Interest in mentoring and teaching',
-    startDate: '11/20/2023',
-    endDate: '4/19/2023',
+    startDate: startDate,
+    endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks:
-      'Please note that these positions are in-person, year-long roles and begin in early July with an expected time commitment of 10 hrs/week. Applications close June 11 at 11:59pm.',
+      remarks,
     applicationLink: ''
   }
 ]
