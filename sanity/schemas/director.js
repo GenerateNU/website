@@ -8,8 +8,7 @@ export default defineType({
     defineField({
       name: 'team',
       title: 'Team',
-      type: 'reference',
-      to: [{type: 'teamOverview'}],
+      type: 'string',
     }),
     defineField({
       name: 'title',
@@ -68,7 +67,7 @@ export default defineType({
       image: 'image',
       bio: 'bio',
       email: 'email',
-      color: 'color', // Or team.color
+      color: 'color',
       activeIcon: 'activeIcon',
       inactiveIcon: 'inactiveIcon',
       zIndex: 'zIndex',
