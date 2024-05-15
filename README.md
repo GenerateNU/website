@@ -1,4 +1,4 @@
-graves# TODOs
+# TODOs
 
 0. Rename component to components
 1. Delete dead code, repeated image assets
