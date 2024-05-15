@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import ExternalRedirect from './component/ExternalRedirect'
 import ApplyPage from './component/ApplyPage'
 import Position from './component/ApplyPage/Position'
 import AboutPage from './component/AboutPage'
@@ -24,6 +25,7 @@ export default function App() {
           <ScrollToTop />
           <Routes>
             <Route path='/' element={<> <ScrollToTop /><LandingPageV2 /></>} />
+            <Route path='/clientapps' element={<ExternalRedirect to="https://docs.google.com/forms/d/e/1FAIpQLSd8PPVmILgy92GdVZCn8cYm1sSgsnKZVxnaNDxA8KKL1JxYSg/viewform?usp=sf_link" />} />
             <Route path='/apply' element={<> <ScrollToTop /> <ApplyPage /></>}>
               <Route path=':team' element={<> <ScrollToTop /><ApplyPage /></>} />
             </Route>
@@ -35,6 +37,7 @@ export default function App() {
             <Route path='/projects' element={<> <ScrollToTop /> <ProjectsPage /></>} />
             <Route path='/case-study/:project' element={<> <ScrollToTop /> <CaseStudy /></>} />
             <Route path='/teams-expanded/*' element={<> <ScrollToTop /> <ExpandedTeamsPage /></>} />
+            <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </div>
 
