@@ -24,8 +24,8 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
+      name: 'text',
+      title: 'Text',
       type: 'text',
     }),
   ],
@@ -34,7 +34,7 @@ export default defineType({
       title: 'title',
       color: 'color',
       image: 'image',
-      description: 'description',
+      text: 'text',
     },
   },
 })

@@ -4,7 +4,7 @@ import './style.css';
 
 export default function ValueCard({
     value = {
-        'type': '',
+        'title': '',
         'color': '',
         'image': null,
         'text': '',
@@ -27,7 +27,7 @@ export default function ValueCard({
                     </p>
                     <h4 className='value-card-header text-uppercase position-absolute start-0 bottom-0 ms-2'
                         style={{WebkitTextStrokeColor: value.color}}>
-                        {value.type}
+                        {value.title}
                     </h4>
                 </div>
             </div>

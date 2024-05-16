@@ -8,17 +8,11 @@ import {useSanity} from '../../../services/useSanity'
 export default function Leadership() {
   const query = `*[_type == "director"] | order(zIndex desc)`
 
-  const directors = useSanity(query, {}, (data) => {
-    if (data) {
-      const mappedDirectors = data.map((director) => ({
-        ...director,
-        color: director.color.hex,
-        image: urlFor(director.image),
-      }));
-      return mappedDirectors;
-    }
-    return [];
-  });
+  const directors = useSanity(query, {}, (data) => data ? data.map((director) => ({
+    ...director,
+    color: director.color.hex,
+    image: urlFor(director.image),
+  })) : []);
 
   return (
     <>

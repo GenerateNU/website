@@ -1,9 +1,18 @@
 import React from 'react'
 import ValueCard from './valueCard'
-import valueData from '../../../data/valueData'
 import './style.css'
+import { urlFor } from '../../../client'
+import {useSanity} from '../../../services/useSanity'
 
 const WeAreSection = () => {
+  const query = `*[_type == "value"]`
+
+  const values = useSanity(query, {}, (data) => data ? data.map((value) => ({
+    ...value,
+    color: value.color.hex,
+    image: urlFor(value.image),
+  })) : []);
+  
   return (
     <div className='we-are-our-values-container'>
       <div className='weare-header'>
@@ -13,7 +22,7 @@ const WeAreSection = () => {
         </h1>
       </div>
       <div className='outside-card-container'>
-        {valueData.map((value) => (
+        {values.map((value) => (
           <div className='card-container'>
             <ValueCard value={value} />
           </div>
