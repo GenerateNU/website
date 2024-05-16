@@ -1,18 +1,18 @@
 import { client } from '../client'
 import { useState, useEffect } from 'react'
 
-export function useSanity(query, params = {}) {
+export function useSanity(query, params = {}, modifier = (data) => data) {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    client
-      .fetch(query, params)
-      .then((fetchedData) => {
-        setData(fetchedData)
-      })
-      .catch((error) => {
-        console.error('Error fetching Sanity data:', error)
-      })
-  })
+    const fetchData = async () => {
+      const fetchedData = await client.fetch(query, params)
+      const modifiedData = modifier(fetchedData)
+      setData(modifiedData)
+      console.log('Set data: ', modifiedData)
+    }
+    fetchData()
+  }, [])
+
   return data
 }
