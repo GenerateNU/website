@@ -8,8 +8,6 @@ export default function LeadershipCard({
     title = '',
     team = '',
     color = '',
-    activeIcon = null,
-    inactiveIcon = null,
     name = '',
     image = null,
     bio = '',

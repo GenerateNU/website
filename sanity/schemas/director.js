@@ -44,16 +44,6 @@ export default defineType({
       type: 'color',
     }),
     defineField({
-      name: 'activeIcon',
-      title: 'Active Icon',
-      type: 'image',
-    }),
-    defineField({
-      name: 'inactiveIcon',
-      title: 'Inctive Icon',
-      type: 'image',
-    }),
-    defineField({
       name: 'zIndex',
       title: 'Z Index',
       type: 'number',
@@ -61,15 +51,13 @@ export default defineType({
   ],
   preview: {
     select: {
-      team: 'team.name',
+      team: 'team',
       title: 'title',
       name: 'name',
       image: 'image',
       bio: 'bio',
       email: 'email',
       color: 'color',
-      activeIcon: 'activeIcon',
-      inactiveIcon: 'inactiveIcon',
       zIndex: 'zIndex',
     },
   },
