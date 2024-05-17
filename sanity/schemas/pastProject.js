@@ -56,15 +56,8 @@ export default defineType({
   ],
   preview: {
     select: {
-      name: 'name',
-      clientName: 'clientName',
-      clientTitle: 'clientTitle',
-      semester: 'semester',
-      teamResponsible: 'teamResponsible',
-      image: 'image',
-      description: 'description',
-      quote: 'quote',
-      featured: 'featured',
+      title: 'name',
+      media: 'image',
     },
   },
 })

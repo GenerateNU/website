@@ -67,16 +67,6 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      team: 'team',
-      description: 'description',
-      activeApplication: 'activeApplication',
-      responsibilities: 'responsibilities',
-      requirements: 'requirements',
-      startDate: 'startDate',
-      endDate: 'endDate',
-      workCommitment: 'workCommitment',
-      remarks: 'remarks',
-      applicationLink: 'applicationLink',
     },
   },
 })

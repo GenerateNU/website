@@ -51,14 +51,8 @@ export default defineType({
   ],
   preview: {
     select: {
-      team: 'team',
       title: 'title',
-      name: 'name',
-      image: 'image',
-      bio: 'bio',
-      email: 'email',
-      color: 'color',
-      zIndex: 'zIndex',
+      media: 'image',
     },
   },
 })
