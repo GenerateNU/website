@@ -1,45 +1,62 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import ExternalRedirect from './component/ExternalRedirect'
 import ApplyPage from './component/ApplyPage'
 import Position from './component/ApplyPage/Position'
 import AboutPage from './component/AboutPage'
 import ScrollToTop from './component/ScrollToTop'
-import LandingPageV2 from './component/LandingPageV2/'
+import LandingPageV2 from './component/LandingPageV2'
 import CulturePage from './component/CulturePage'
 import TeamsPage from './pages/TeamsPage'
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams'
 import ProjectsPage from './component/ProjectsPage'
 import CaseStudy from './component/CaseStudyPage'
+import { useSanity } from './services/useSanity'
 
-/**
- *
- * The app.js the routes to the different pages are located.
- * @returns
- */
+function AppRoutes({ sanityRoutes }) {
+  const routes = [
+    { path: '/', element: <LandingPageV2 /> },
+    {
+      path: '/apply',
+      element: <ApplyPage />,
+      children: [{ path: ':team', element: <ApplyPage /> }]
+    },
+    { path: '/positions/:id', element: <Position /> },
+    { path: '/positions/:categoryType/:index', element: <Position /> },
+    { path: '/about', element: <AboutPage /> },
+    { path: '/culture', element: <CulturePage /> },
+    { path: '/teams', element: <TeamsPage /> },
+    { path: '/projects', element: <ProjectsPage /> },
+    { path: '/case-study/:project', element: <CaseStudy /> },
+    { path: '/teams-expanded/*', element: <ExpandedTeamsPage /> },
+    ...sanityRoutes,
+    { path: '*', element: <LandingPageV2 /> }
+  ]
+
+  const allRoutes = useRoutes(routes)
+  return allRoutes
+}
+
 export default function App() {
+  const query = `*[_type == "generateLink"]`
+  const links = useSanity(query)
+  const [sanityRoutes, setSanityRoutes] = useState([])
+
+  useEffect(() => {
+    if (links.length > 0) {
+      const newRoutes = links.map((link) => ({
+        path: `/${link.slug.current}`,
+        element: <ExternalRedirect to={link.url} />
+      }))
+      setSanityRoutes(newRoutes)
+    }
+  }, [links])
+
   return (
     <div className='App'>
       <Router>
-        <div>
-          <ScrollToTop />
-          <Routes>
-            <Route path='/' element={<> <ScrollToTop /><LandingPageV2 /></>} />
-            <Route path='/clientapp' element={<ExternalRedirect to="https://docs.google.com/forms/d/e/1FAIpQLSd8PPVmILgy92GdVZCn8cYm1sSgsnKZVxnaNDxA8KKL1JxYSg/viewform?usp=sf_link" />} />
-            <Route path='/apply' element={<> <ScrollToTop /> <ApplyPage /></>}>
-              <Route path=':team' element={<> <ScrollToTop /><ApplyPage /></>} />
-            </Route>
-            <Route path='/positions/:id' element={<> <ScrollToTop /> <Position /></>} />
-            <Route path='/positions/:categoryType/:index' element={<> <ScrollToTop /> <Position /></>} />
-            <Route path='/about' element={<> <ScrollToTop /> <AboutPage /></>} />
-            <Route path='/culture' element={<> <ScrollToTop /> <CulturePage /></>} />
-            <Route path='/teams' element={<>    <ScrollToTop /><TeamsPage /></>} />
-            <Route path='/projects' element={<> <ScrollToTop /> <ProjectsPage /></>} />
-            <Route path='/case-study/:project' element={<> <ScrollToTop /> <CaseStudy /></>} />
-            <Route path='/teams-expanded/*' element={<> <ScrollToTop /> <ExpandedTeamsPage /></>} />
-            <Route path="/*" element={<Navigate to="/" />} />
-          </Routes>
-        </div>
+        <ScrollToTop />
+        <AppRoutes sanityRoutes={sanityRoutes} />
       </Router>
     </div>
   )
