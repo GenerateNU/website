@@ -10,6 +10,7 @@ import useWebsite from '../../../shared/useWebsite'
 import NavBar from '../../NavBar'
 
 export default function Position() {
+
   const isWebsite = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
   const mobile = !isBigScreen || !isWebsite

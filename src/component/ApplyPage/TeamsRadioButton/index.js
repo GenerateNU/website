@@ -2,8 +2,19 @@ import React, { useMemo } from 'react'
 import './style.css'
 import { findPositionsByCategory } from '../../../services/positionService'
 import { useNavigate } from 'react-router-dom'
+import {useSanity} from '../../../services/useSanity'
 
 export const TeamsRadioButton = ({ team, isSelected, onClick }) => {
+
+  const query = `*[_type == "application" && team == ${team}] | order(zIndex desc)`
+
+  const applications = useSanity(query, {}, (data) => data ? data.map((application) => ({
+      ...application,
+      startDate: new Date(application.startDate),
+      endDate: new Date(application.endDate),
+    })) : []
+  );
+
   const navigate = useNavigate()
 
   const positionsData = useMemo(() => findPositionsByCategory(team), [team])
@@ -26,7 +37,7 @@ export const TeamsRadioButton = ({ team, isSelected, onClick }) => {
           {positionsData.length === 0 ? (
             <div className='no-positions-text'>No Positions Available</div>
           ) : (
-            positionsData.map((position, index) => {
+            applications.map((position, index) => {
               return (
                 <div
                   key={position.positionTitle}
