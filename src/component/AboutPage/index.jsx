@@ -25,11 +25,11 @@ export default function AboutPage() {
     <WeAreSection />,
     <Leadership />,
     <History />,
-    <Timeline />,
-    <Stats />,
-    <WhyGenerateCarousel />,
-    <GrowthMantra />,
-    <Interested page='About' />,
+    // <Timeline />,
+    // <Stats />,
+    // <WhyGenerateCarousel />,
+    // <GrowthMantra />,
+    // <Interested page='About' />,
     <Footer />,
     <NextPage pageName='culture' url='/culture' />
   ]
