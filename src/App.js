@@ -24,7 +24,7 @@ export default function App() {
         <div>
           <ScrollToTop />
           <Routes>
-            <Route path='/' element={<> <ScrollToTop /><LandingPageV2 /></>} />
+            <Route path='/' element={<> <ScrollToTop /><ApplyPage /></>} />
             <Route path='/clientapp' element={<ExternalRedirect to="https://docs.google.com/forms/d/e/1FAIpQLSd8PPVmILgy92GdVZCn8cYm1sSgsnKZVxnaNDxA8KKL1JxYSg/viewform?usp=sf_link" />} />
             <Route path='/apply' element={<> <ScrollToTop /> <ApplyPage /></>}>
               <Route path=':team' element={<> <ScrollToTop /><ApplyPage /></>} />

@@ -94,7 +94,7 @@ export default function History() {
             </Col>
           </Row>
         </Col>
-        <Col className='bg-white h-100 p-5 pt-5 our-history'>
+        {/* <Col className='bg-white h-100 p-5 pt-5 our-history'>
           <h3 className='vh-40 mt-5 pb-5 mb-0 text-uppercase text-black our-history-header'>
             Our History
           </h3>
@@ -104,7 +104,7 @@ export default function History() {
             elicit support from product builders. To fix that, Generate was
             created to bridge the gap for students, and our journey began.
           </p>
-        </Col>
+        </Col> */}
       </Row>
       {/* Mobile */}
       <div className='mob'>
@@ -152,7 +152,7 @@ export default function History() {
             </OverlayTrigger>
           </div>
         </div>
-        <div className='history bg-white'>
+        {/* <div className='history bg-white'>
           <h3 className='text-uppercase text-black our-history-header'>
             Our History
           </h3>
@@ -162,7 +162,7 @@ export default function History() {
             elicit support from product builders. To fix that, Generate was
             created to bridge the gap for students, and our journey began.
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   )
