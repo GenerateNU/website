@@ -29,11 +29,6 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
-      type: 'text',
-    }),
-    defineField({
       name: 'email',
       title: 'NU Email Prefix',
       type: 'string',
