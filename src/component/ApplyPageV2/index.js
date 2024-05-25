@@ -1,7 +1,7 @@
 import React from 'react'
 import Categories from '../ApplyPage/Categories'
 import NavBar from '../NavBar'
-import MemberApplicationDropdown from './MemberApplicationDropdown'
+import MemberApplicationDropdown from './TeamApplicationCard'
 import './style.css'
 
 const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches

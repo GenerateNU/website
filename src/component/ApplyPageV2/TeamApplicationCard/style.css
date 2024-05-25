@@ -33,12 +33,24 @@
   gap: 10px;
 }
 
+.desc-text-style {
+  color: white;
+  font-family: "Outfit";
+  /* font-style: normal; */
+  /* font-weight: 400;
+  line-height: 30px; */
+  margin: 10px;
+}
+
 .interactive-container {
   display: flex;
-  flex: 1;
+  width: 100% !important;
   flex-direction: row;
+  align-items: center;
   padding: 10px;
+  padding-left: 20px;
   background-color: white;
+  border: 0;
 }
 
 .interactive-text-style {
@@ -49,4 +61,13 @@
   font-weight: 700;
   text-transform: uppercase;
   margin: 10px;
+}
+
+.expanded-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: white;
+  border: 0;
 }
