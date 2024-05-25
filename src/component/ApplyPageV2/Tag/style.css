@@ -1,0 +1,17 @@
+.tag-container {
+    display: flex;
+    height: 32px;
+    padding: 4px 12px;
+    max-width: fit-content;
+    align-items: center;
+    background: #FFF;
+}
+
+.tag-text {
+    color: #000;
+    font-family: "Outfit";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}

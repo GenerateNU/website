@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import ExternalRedirect from './component/ExternalRedirect'
-import ApplyPage from './component/ApplyPage'
+import ApplyPageV2 from './component/ApplyPageV2'
 import Position from './component/ApplyPage/Position'
 import AboutPage from './component/AboutPage'
 import ScrollToTop from './component/ScrollToTop'
@@ -18,8 +18,8 @@ function AppRoutes({ sanityRoutes }) {
     { path: '/', element: <LandingPageV2 /> },
     {
       path: '/apply',
-      element: <ApplyPage />,
-      children: [{ path: ':team', element: <ApplyPage /> }]
+      element: <ApplyPageV2 />,
+      children: [{ path: ':team', element: <ApplyPageV2 /> }]
     },
     { path: '/positions/:id', element: <Position /> },
     { path: '/positions/:categoryType/:index', element: <Position /> },

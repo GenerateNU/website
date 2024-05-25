@@ -1,0 +1,21 @@
+.join-header {
+    color: #FFF;
+    font-family: 'Space Mono 700';
+    font-size: 9vw;
+    line-height: 100%;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 4%;
+}
+
+.join-text {
+    color: #FFF;
+    font-family: "Outfit";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    width: 70%;
+    margin-left: 4%;
+}
