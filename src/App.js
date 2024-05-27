@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import ExternalRedirect from './component/ExternalRedirect'
-import ApplyPageV2 from './component/ApplyPageV2'
+import ApplyPage from './component/ApplyPage'
 import Position from './component/ApplyPage/Position'
 import AboutPage from './component/AboutPage'
 import ScrollToTop from './component/ScrollToTop'
-import LandingPageV2 from './component/LandingPageV2'
 import CulturePage from './component/CulturePage'
 import TeamsPage from './pages/TeamsPage'
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams'
@@ -15,11 +14,11 @@ import { useSanity } from './services/useSanity'
 
 function AppRoutes({ sanityRoutes }) {
   const routes = [
-    { path: '/', element: <LandingPageV2 /> },
+    { path: '/', element: <ApplyPage /> },
     {
       path: '/apply',
-      element: <ApplyPageV2 />,
-      children: [{ path: ':team', element: <ApplyPageV2 /> }]
+      element: <ApplyPage />,
+      children: [{ path: ':team', element: <ApplyPage /> }]
     },
     { path: '/positions/:id', element: <Position /> },
     { path: '/positions/:categoryType/:index', element: <Position /> },
@@ -30,7 +29,7 @@ function AppRoutes({ sanityRoutes }) {
     { path: '/case-study/:project', element: <CaseStudy /> },
     { path: '/teams-expanded/*', element: <ExpandedTeamsPage /> },
     ...sanityRoutes,
-    { path: '*', element: <LandingPageV2 /> }
+    { path: '*', element: <ApplyPage /> }
   ]
 
   const allRoutes = useRoutes(routes)
