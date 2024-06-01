@@ -1,12 +1,15 @@
-import application from './application'
+import applicationv2 from './applicationV2'
 import director from './director'
 import pastProjects from './pastProject'
 import value from './value'
+import teams from './teams'
+
 
 export const schemaTypes = [
   // Documents
-  application,
+  applicationv2,
   director,
   pastProjects,
   value,
+  teams
 ]

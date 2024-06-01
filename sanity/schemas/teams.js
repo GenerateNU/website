@@ -11,8 +11,8 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'pills',
-      title: 'Pills',
+      name: 'tags',
+      title: 'Tags',
       type: 'array',
       of: [{type: 'string'}],
     }),
@@ -23,8 +23,8 @@ export default defineType({
       of: [{type: 'block'}],
     }),
     defineField({
-      name: 'builders',
-      title: 'Builders',
+      name: 'ic',
+      title: 'Individual Contributors',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'applicationv2'}]}],
     }),
@@ -43,10 +43,10 @@ export default defineType({
   ],
   preview: {
     select: {
-      team: 'team',
-      pills: 'pills',
+      title: 'team',
+      tags: 'tags',
       description: 'description',
-      builders: 'builders',
+      ic: 'ic',
       leaders: 'leaders',
       chiefs: 'chiefs',
     },

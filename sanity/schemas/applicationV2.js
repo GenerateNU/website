@@ -6,8 +6,8 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'role',
+      title: 'Role',
       type: 'string',
     }),
     defineField({
@@ -28,7 +28,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'role',
       activeApplication: 'activeApplication',
       applicationLink: 'applicationLink',
     },
