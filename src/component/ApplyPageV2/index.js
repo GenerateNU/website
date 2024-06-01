@@ -13,10 +13,10 @@ const quote =
 const teams = [
   {
     name: 'Client',
-    color: '#FFBF3C',
-    tags: ['Full Stack', 'UI/UX', 'Branding', 'Mobile/Web Dev'],
+    color: '#A1A1A1',
+    tags: ['Entrpreneurship', 'Boop'],
     teamDescription: 'Pitch your idea blah blah blah blah.',
-    expand: false
+    externalLink: 'https://www.google.com'
   },
   {
     name: 'Software',
@@ -30,8 +30,7 @@ const teams = [
     leadRoles: ['Role 1', 'Role 2', 'Role 3'],
     chiefDescription:
       'Establish standards across Generate’s Software team blah blah blah blah.',
-    chiefRoles: ['Role 1', 'Role 2', 'Role 3'],
-    expand: true
+    chiefRoles: ['Role 1', 'Role 2', 'Role 3']
   }
 ]
 const halfLength = Math.ceil(teams.length / 2)
@@ -56,11 +55,11 @@ const desktopContent = () => {
                   name: team.name,
                   color: team.color,
                   tags: team.tags,
-                  description: team.description,
+                  teamDescription: team.teamDescription,
                   contributorRoles: team.contributorRoles,
                   leadRoles: team.leadRoles,
                   chiefRoles: team.chiefRoles,
-                  expand: team.expand
+                  externalLink: team.externalLink
                 }}
               />
             ))}
@@ -72,11 +71,11 @@ const desktopContent = () => {
                   name: team.name,
                   color: team.color,
                   tags: team.tags,
-                  description: team.description,
+                  teamDescription: team.teamDescription,
                   contributorRoles: team.contributorRoles,
                   leadRoles: team.leadRoles,
                   chiefRoles: team.chiefRoles,
-                  expand: team.expand
+                  externalLink: team.externalLink
                 }}
               />
             ))}
