@@ -7,13 +7,3 @@
     text-decoration-line: underline;
     margin-bottom: 10px;
 }
-
-.links {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-}
-
-.column {
-    flex: 1;
-}

@@ -2,9 +2,8 @@ import React from 'react'
 import Categories from '../ApplyPage/Categories'
 import NavBar from '../NavBar'
 import TeamApplicationCard from './TeamApplicationCard'
+import useWebsite from '../../shared/useWebsite'
 import './style.css'
-
-const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
 
 const header = 'join generate'
 const quote =
@@ -30,7 +29,38 @@ const teams = [
     leadRoles: ['Role 1', 'Role 2', 'Role 3'],
     chiefDescription:
       'Establish standards across Generate’s Software team blah blah blah blah.',
-    chiefRoles: ['Role 1', 'Role 2', 'Role 3']
+    chiefRoles: ['Role 1', 'Role 2', 'Role 3'],
+    externalLink: ''
+  },
+  {
+    name: 'Hardware',
+    color: '#FF6660',
+    tags: ['Full Stack', 'UI/UX', 'Branding', 'Mobile/Web Dev'],
+    teamDescription: 'Blah blah hardware description',
+    contributorDescription: 'Become an IC to hone your technical skills.',
+    contributorRoles: ['Role 1', 'Role 2', 'Role 3'],
+    leadDescription:
+      'Take on a leadership role blah blah blah blah. Work directly with clients and blah blah blah.',
+    leadRoles: ['Role 1', 'Role 2', 'Role 3'],
+    chiefDescription:
+      'Establish standards across Generate’s Hardware team blah blah blah blah.',
+    chiefRoles: ['Role 1', 'Role 2', 'Role 3'],
+    externalLink: ''
+  },
+  {
+    name: 'Engagement',
+    color: '#A559EC',
+    tags: ['Vibes'],
+    teamDescription: 'Blah blah hardware description',
+    contributorDescription: 'Become an IC to hone your technical skills.',
+    contributorRoles: ['Role 1', 'Role 2', 'Role 3'],
+    leadDescription:
+      'Take on a leadership role blah blah blah blah. Work directly with clients and blah blah blah.',
+    leadRoles: ['Role 1', 'Role 2', 'Role 3'],
+    chiefDescription:
+      'Establish standards across Generate’s Hardware team blah blah blah blah.',
+    chiefRoles: ['Role 1', 'Role 2', 'Role 3'],
+    externalLink: ''
   }
 ]
 const halfLength = Math.ceil(teams.length / 2)
@@ -47,37 +77,15 @@ const desktopContent = () => {
         </div>
         <div className='join-header'>{header}</div>
         <div className='join-text'>{quote}</div>
-        <div>
-          <div>
+        <div className='column-container'>
+          <div className='left-team-column'>
             {firstColumn.map((team) => (
-              <TeamApplicationCard
-                team={{
-                  name: team.name,
-                  color: team.color,
-                  tags: team.tags,
-                  teamDescription: team.teamDescription,
-                  contributorRoles: team.contributorRoles,
-                  leadRoles: team.leadRoles,
-                  chiefRoles: team.chiefRoles,
-                  externalLink: team.externalLink
-                }}
-              />
+              <TeamApplicationCard team={team} />
             ))}
           </div>
-          <div>
+          <div className='right-team-column'>
             {secondColumn.map((team) => (
-              <TeamApplicationCard
-                team={{
-                  name: team.name,
-                  color: team.color,
-                  tags: team.tags,
-                  teamDescription: team.teamDescription,
-                  contributorRoles: team.contributorRoles,
-                  leadRoles: team.leadRoles,
-                  chiefRoles: team.chiefRoles,
-                  externalLink: team.externalLink
-                }}
-              />
+              <TeamApplicationCard team={team} />
             ))}
           </div>
         </div>
@@ -86,6 +94,7 @@ const desktopContent = () => {
     </>
   )
 }
+
 const mobileContent = () => {
   return (
     <>
@@ -100,6 +109,11 @@ const mobileContent = () => {
     </>
   )
 }
+
 export default function ApplyPage() {
-  return isBigScreen ? desktopContent() : mobileContent()
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
+
+  return !mobile ? desktopContent() : mobileContent()
 }

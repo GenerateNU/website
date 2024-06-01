@@ -5,30 +5,16 @@ import { ReactComponent as DownArrow } from '../../../assets/images/applypage-v2
 import { ReactComponent as RightArrow } from '../../../assets/images/applypage-v2/RightArrow.svg'
 import './style.css'
 
-export default function TeamApplicationCard({
-  team: {
-    name = '',
-    color = '',
-    tags = [],
-    teamDescription = '',
-    contributorRoles = [],
-    contributorDescription = '',
-    leadRoles = [],
-    leadDescription = '',
-    chiefRoles = [],
-    chiefDescription = '',
-    expand = true,
-    externalLink = ''
-  } = {}
-}) {
+export default function TeamApplicationCard({ team }) {
   const [expanded, setExpanded] = useState(false)
+  const expand = team.externalLink === ''
 
   const boxStyle = {
-    boxShadow: `-1rem 1rem ${color}`
+    boxShadow: `-1rem 1rem ${team.color}`
   }
 
   const viewRoles = 'View Roles'
-  const partnerWithGenerate = 'Partner with Generate'
+  const workWithUs = 'Work with Us'
 
   return (
     <div
@@ -36,17 +22,17 @@ export default function TeamApplicationCard({
       style={boxStyle}
     >
       <div className='header-container'>
-        <div className='header' style={{ color: color }}>
-          {name}
+        <div className='header' style={{ color: team.color }}>
+          {team.name}
         </div>
         <div className='tags-container'>
-          {tags.map((tag) => (
+          {team.tags.map((tag) => (
             <Tag title={tag}></Tag>
           ))}
         </div>
         {expanded && (
           <div className='paragraph' style={{ color: 'white' }}>
-            <p>{teamDescription}</p>
+            {team.teamDescription}
           </div>
         )}
       </div>
@@ -61,33 +47,33 @@ export default function TeamApplicationCard({
           </button>
           {expanded && (
             <div className='expanded-container'>
-              {contributorRoles.length > 0 && (
+              {team.contributorRoles.length > 0 && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Individual Contributors',
-                    description: contributorDescription,
-                    roles: contributorRoles,
-                    color: color
+                    description: team.contributorDescription,
+                    roles: team.contributorRoles,
+                    color: team.color
                   }}
                 />
               )}
-              {leadRoles.length > 0 && (
+              {team.leadRoles.length > 0 && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Leaders',
-                    description: leadDescription,
-                    roles: leadRoles,
-                    color: color
+                    description: team.leadDescription,
+                    roles: team.leadRoles,
+                    color: team.color
                   }}
                 />
               )}
-              {chiefRoles.length > 0 && (
+              {team.chiefRoles.length > 0 && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Chiefs',
-                    description: chiefDescription,
-                    roles: chiefRoles,
-                    color: color
+                    description: team.chiefDescription,
+                    roles: team.chiefRoles,
+                    color: team.color
                   }}
                 />
               )}
@@ -95,10 +81,10 @@ export default function TeamApplicationCard({
           )}
         </div>
       ) : (
-        <a href={externalLink} target='_blank' rel='noopener noreferrer'>
+        <a href={team.externalLink} target='_blank' rel='noopener noreferrer'>
           <button className='interactive-button'>
             <RightArrow />
-            <div className='subheader'>{partnerWithGenerate}</div>
+            <div className='subheader'>{workWithUs}</div>
           </button>
         </a>
       )}

@@ -1,8 +1,7 @@
 .card-container {
   display: flex;
-  margin-left: 4%;
-  width: 45% !important;
   flex-direction: column;
+  width: 42vw !important;
 }
 
 .card-container:hover:not(.expanded) {
@@ -13,8 +12,8 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 20px;
   background-color: black;
+  padding: 15px;
   gap: 15px;
 }
 
@@ -26,14 +25,15 @@
 
 .interactive-button {
   display: flex;
-  width: 100% !important;
+  width: 100%;
+  flex: 1;
   flex-direction: row;
   align-items: center;
+  background-color: white;
   padding: 10px;
   padding-left: 20px;
-  background-color: white;
-  border: 0;
   gap: 10px;
+  border: 0;
 }
 
 .expanded-container {
@@ -42,30 +42,25 @@
   padding: 10px;
   padding-left: 20px;
   background-color: white;
-  border: 0;
 }
 
 .header {
   font-family: 'Space Mono 700';
-  font-size: 7vw;
-  line-height: 90px;
+  font-size: 6.5vw;
+  line-height: 100%;
   text-transform: uppercase;
-  font-style: normal;
-  font-weight: 700;
 }
 
 .subheader {
   color: black;
   font-family: 'Space Mono 700';
-  font-size: 36px;
+  font-size: 3vw;
   line-height: 100%;
-  font-style: normal;
-  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 8px;
 }
 
 .paragraph {
   color: black;
+  font-size: 2vh;
   font-family: "Outfit";
 }

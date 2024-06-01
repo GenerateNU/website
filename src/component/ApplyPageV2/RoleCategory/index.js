@@ -13,10 +13,8 @@ export default function RoleCategory(
   return (
     <div>
       <div className='subheader'>{name}</div>
-      <div className='paragraph'>
-        <p>{description}</p>
-      </div>
-      <div className='links'>
+      <div className='paragraph'>{description}</div>
+      <div className='column-container'>
         <div className='column'>
           {firstColumn.map((role) => (
             <a
