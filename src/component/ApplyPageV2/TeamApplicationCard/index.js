@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import RoleCategory from '../RoleCategory'
 import Tag from '../Tag'
-import { ReactComponent as DownArrow } from '../../../assets/images/applypage-v2/DownArrow.svg'
+import { ReactComponent as DownArrow } from '../../../assets/images/applypage-v2/downArrow.svg'
 import { ReactComponent as RightArrow } from '../../../assets/images/applypage-v2/RightArrow.svg'
+import { useSanity } from '../../../services/useSanity'
 import './style.css'
 
 export default function TeamApplicationCard({
@@ -26,7 +27,7 @@ export default function TeamApplicationCard({
   const boxStyle = {
     boxShadow: `-1rem 1rem ${color}`
   }
-
+  
   const viewRoles = 'View Roles'
   const partnerWithGenerate = 'Partner with Generate'
 

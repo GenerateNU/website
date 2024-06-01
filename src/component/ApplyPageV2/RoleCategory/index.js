@@ -5,10 +5,15 @@ export default function RoleCategory(
     roleCategory: { name = '', description = '', roles = [], color = '' } = {}
   },
   desktopContent
+
+  
 ) {
+
+
   const halfLength = Math.ceil(roles.length / 2)
   const firstColumn = roles.slice(0, halfLength)
   const secondColumn = roles.slice(halfLength)
+
 
   return (
     <div>
