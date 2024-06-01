@@ -1,59 +1,106 @@
 import React, { useState } from 'react'
+import RoleCategory from '../RoleCategory'
 import Tag from '../Tag'
 import { ReactComponent as DownArrow } from '../../../assets/images/applypage-v2/DownArrow.svg'
+import { ReactComponent as RightArrow } from '../../../assets/images/applypage-v2/RightArrow.svg'
 import './style.css'
 
-export default function TeamApplicationCard(props) {
+export default function TeamApplicationCard({
+  team: {
+    name = '',
+    color = '',
+    tags = [],
+    teamDescription = '',
+    contributorRoles = [],
+    contributorDescription = '',
+    leadRoles = [],
+    leadDescription = '',
+    chiefRoles = [],
+    chiefDescription = '',
+    expand = true,
+    externalLink = ''
+  } = {}
+}) {
   const [expanded, setExpanded] = useState(false)
 
   const boxStyle = {
-    boxShadow: `-1rem 1rem ${props.color}`
+    boxShadow: `-1rem 1rem ${color}`
   }
 
   const viewRoles = 'View Roles'
   const partnerWithGenerate = 'Partner with Generate'
 
   return (
-    <div className='card-container' style={boxStyle}>
+    <div
+      className={`card-container ${expanded ? 'expanded' : ''}`}
+      style={boxStyle}
+    >
       <div className='header-container'>
-        <div className='header-text-style' style={{ color: props.color }}>
-          {props.team}
+        <div className='header' style={{ color: color }}>
+          {name}
         </div>
-        <div className='pill-container'>
-          {props.tags.map((tag) => (
+        <div className='tags-container'>
+          {tags.map((tag) => (
             <Tag title={tag}></Tag>
           ))}
         </div>
         {expanded && (
-          <div className='desc-text-style'>
-            <p>
-              We are looking for passionate individuals who are ready to learn
-              and grow. We have opportunities that run broad and deep. If you
-              don’t see anything right now drop an email and we’ll let you know
-              when positions open up again.
-            </p>
+          <div className='paragraph' style={{ color: 'white' }}>
+            <p>{teamDescription}</p>
           </div>
         )}
       </div>
-      {props.expand ? (
+      {expand ? (
         <div>
           <button
-            className='interactive-container'
+            className='interactive-button'
             onClick={() => setExpanded(!expanded)}
           >
             <DownArrow />
-            <div className='interactive-text-style'>{viewRoles}</div>
+            <div className='subheader'>{viewRoles}</div>
           </button>
           {expanded && (
             <div className='expanded-container'>
-              <p>Example</p>
+              {contributorRoles.length > 0 && (
+                <RoleCategory
+                  roleCategory={{
+                    name: 'Individual Contributors',
+                    description: contributorDescription,
+                    roles: contributorRoles,
+                    color: color
+                  }}
+                />
+              )}
+              {leadRoles.length > 0 && (
+                <RoleCategory
+                  roleCategory={{
+                    name: 'Leaders',
+                    description: leadDescription,
+                    roles: leadRoles,
+                    color: color
+                  }}
+                />
+              )}
+              {chiefRoles.length > 0 && (
+                <RoleCategory
+                  roleCategory={{
+                    name: 'Chiefs',
+                    description: chiefDescription,
+                    roles: chiefRoles,
+                    color: color
+                  }}
+                />
+              )}
             </div>
           )}
         </div>
       ) : (
-        <div className='interactive-container'>
-          <div className='interactive-text-style'>{partnerWithGenerate}</div>
-        </div>
+        <a href={externalLink} target='_blank' rel='noopener noreferrer'>
+          <button className='interactive-button'>
+            <RightArrow />
+            <div className='subheader'>{partnerWithGenerate}</div>
+          </button>
+        </a>
       )}
     </div>
   )

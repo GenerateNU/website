@@ -1,11 +1,11 @@
 .card-container {
   display: flex;
   margin-left: 4%;
-  width: 617px !important;
+  width: 45% !important;
   flex-direction: column;
 }
 
-.card-container:hover {
+.card-container:hover:not(.expanded) {
   box-shadow: 0 0 !important;
 }
 
@@ -13,36 +13,18 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   background-color: black;
+  gap: 15px;
 }
 
-.header-text-style {
-  font-family: 'Space Mono 700';
-  font-size: 9vw;
-  line-height: 100%;
-  font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.pill-container {
+.tags-container {
   display: flex;
   flex-direction: row;
-  padding: 10px;
   gap: 10px;
 }
 
-.desc-text-style {
-  color: white;
-  font-family: "Outfit";
-  /* font-style: normal; */
-  /* font-weight: 400;
-  line-height: 30px; */
-  margin: 10px;
-}
-
-.interactive-container {
+.interactive-button {
   display: flex;
   width: 100% !important;
   flex-direction: row;
@@ -51,16 +33,7 @@
   padding-left: 20px;
   background-color: white;
   border: 0;
-}
-
-.interactive-text-style {
-  font-family: 'Space Mono 700';
-  font-size: 36px;
-  line-height: 100%;
-  font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 10px;
+  gap: 10px;
 }
 
 .expanded-container {
@@ -70,4 +43,29 @@
   padding-left: 20px;
   background-color: white;
   border: 0;
+}
+
+.header {
+  font-family: 'Space Mono 700';
+  font-size: 7vw;
+  line-height: 90px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.subheader {
+  color: black;
+  font-family: 'Space Mono 700';
+  font-size: 36px;
+  line-height: 100%;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.paragraph {
+  color: black;
+  font-family: "Outfit";
 }
