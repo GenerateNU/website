@@ -14,21 +14,21 @@ export default function RoleCategory(
     <div>
       <div className='subheader'>{name}</div>
       <div className='paragraph'>{description}</div>
-      <div className='column-container'>
-        <div className='column'>
+      <div className='link-column-container'>
+        <div className='link-column'>
           {firstColumn.map((role) => (
             <a
-              href={role.link}
+              href={role.applicationLink}
               target='_blank'
               rel='noopener noreferrer'
               className='link-text'
               style={{ color: color }}
             >
-              {role}
+              {role.role}
             </a>
           ))}
         </div>
-        <div className='column'>
+        <div className='link-column'>
           {secondColumn.map((role) => (
             <a
               href={role.link}
@@ -37,7 +37,7 @@ export default function RoleCategory(
               className='link-text'
               style={{ color: color }}
             >
-              {role}
+              {role.role}
             </a>
           ))}
         </div>

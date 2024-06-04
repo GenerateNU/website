@@ -85,7 +85,7 @@ const Operations = [
   },
 
   {
-    positionTitle: 'Technical Writer ',
+    positionTitle: 'Technical Writer',
     categoryType: 'Operations',
     description: "The Technical Writer role is responsible for improving and streamlining our internal documents and forms. You will play a pivotal role in ensuring the efficiency and consistency of our internal processes through the creation of user-friendly templates. Additionally, the Technical Writer will be responsible for researching and compiling best practices for the creation of internal documents.",
     responsibilities: "Organize and maintain the progress of internal documentation. Centralizing any Generate wide resources and information. ",

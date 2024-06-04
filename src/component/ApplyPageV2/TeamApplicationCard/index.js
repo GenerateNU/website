@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import RoleCategory from '../RoleCategory'
 import Tag from '../Tag'
-import { ReactComponent as DownArrow } from '../../../assets/images/applypage-v2/DownArrow.svg'
+import { ReactComponent as DownArrow } from '../../../assets/images/applypage-v2/downArrow.svg'
 import { ReactComponent as RightArrow } from '../../../assets/images/applypage-v2/RightArrow.svg'
 import './style.css'
 
 export default function TeamApplicationCard({ team }) {
-  const [expanded, setExpanded] = useState(false)
-  const expand = team.externalLink === ''
-
   const boxStyle = {
     boxShadow: `-1rem 1rem ${team.color}`
   }
-
+  const [expanded, setExpanded] = useState(false)
+  const expand = team.team !== 'Client'
   const viewRoles = 'View Roles'
   const workWithUs = 'Work with Us'
 
@@ -23,12 +21,10 @@ export default function TeamApplicationCard({ team }) {
     >
       <div className='header-container'>
         <div className='header' style={{ color: team.color }}>
-          {team.name}
+          {team.team}
         </div>
         <div className='tags-container'>
-          {team.tags.map((tag) => (
-            <Tag title={tag}></Tag>
-          ))}
+          {team.tags ? team.tags.map((tag) => <Tag title={tag}></Tag>) : null}
         </div>
         {expanded && (
           <div className='paragraph' style={{ color: 'white' }}>
@@ -47,7 +43,7 @@ export default function TeamApplicationCard({ team }) {
           </button>
           {expanded && (
             <div className='expanded-container'>
-              {team.contributorRoles.length > 0 && (
+              {team.contributorRoles && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Individual Contributors',
@@ -57,7 +53,7 @@ export default function TeamApplicationCard({ team }) {
                   }}
                 />
               )}
-              {team.leadRoles.length > 0 && (
+              {team.leadRoles && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Leaders',
@@ -67,7 +63,7 @@ export default function TeamApplicationCard({ team }) {
                   }}
                 />
               )}
-              {team.chiefRoles.length > 0 && (
+              {team.chiefRoles && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Chiefs',
