@@ -15,7 +15,7 @@ export default function RoleCategory(
 
   return (
     <div>
-      <div className='subheader'>{name}</div>
+      <div className='team-subheader'>{name}</div>
       <div className='paragraph'>{description}</div>
       <div className='link-column-container'>
         <div className='link-column'>
