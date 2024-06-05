@@ -10,17 +10,17 @@ export default function TeamApplicationCard({ team }) {
     boxShadow: `-1rem 1rem ${team.color}`
   }
   const [expanded, setExpanded] = useState(false)
-  const expand = team.team !== 'Client'
+  const expand = team.team !== 'Clients'
   const viewRoles = 'View Roles'
   const workWithUs = 'Work with Us'
 
   return (
     <div
-      className={`card-container ${expanded ? 'expanded' : ''}`}
+      className={`team-card-container ${expanded ? 'expanded' : ''}`}
       style={boxStyle}
     >
-      <div className='header-container'>
-        <div className='header' style={{ color: team.color }}>
+      <div className='team-header-container'>
+        <div className='team-header' style={{ color: team.color }}>
           {team.team}
         </div>
         <div className='tags-container'>
@@ -39,11 +39,11 @@ export default function TeamApplicationCard({ team }) {
             onClick={() => setExpanded(!expanded)}
           >
             <DownArrow />
-            <div className='subheader'>{viewRoles}</div>
+            <div className='team-subheader'>{viewRoles}</div>
           </button>
           {expanded && (
             <div className='expanded-container'>
-              {team.contributorRoles && (
+              {team.contributorRoles && team.contributorRoles.length > 0 && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Individual Contributors',
@@ -53,7 +53,7 @@ export default function TeamApplicationCard({ team }) {
                   }}
                 />
               )}
-              {team.leadRoles && (
+              {team.leadRoles && team.leadRoles.length > 0 && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Leaders',
@@ -63,7 +63,7 @@ export default function TeamApplicationCard({ team }) {
                   }}
                 />
               )}
-              {team.chiefRoles && (
+              {team.chiefRoles && team.chiefRoles.length > 0 && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Chiefs',
@@ -80,7 +80,7 @@ export default function TeamApplicationCard({ team }) {
         <a href={team.externalLink} target='_blank' rel='noopener noreferrer'>
           <button className='interactive-button'>
             <RightArrow />
-            <div className='subheader'>{workWithUs}</div>
+            <div className='team-subheader'>{workWithUs}</div>
           </button>
         </a>
       )}

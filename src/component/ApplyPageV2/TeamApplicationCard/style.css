@@ -1,15 +1,14 @@
-.card-container {
+.team-card-container {
   display: flex;
   flex-direction: column;
-  width: 42vw !important;
-  margin-bottom: 20px;
+  margin-bottom: 7vh;
 }
 
-.card-container:hover:not(.expanded) {
+.team-card-container:hover:not(.expanded) {
   box-shadow: 0 0 !important;
 }
 
-.header-container {
+.team-header-container {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -45,23 +44,24 @@
   background-color: white;
 }
 
-.header {
+.team-header {
   font-family: 'Space Mono 700';
   font-size: 6.5vw;
   line-height: 100%;
   text-transform: uppercase;
 }
 
-.subheader {
+.team-subheader {
   color: black;
   font-family: 'Space Mono 700';
   font-size: 3vw;
   line-height: 100%;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .paragraph {
   color: black;
-  font-size: 2vh;
+  font-size: 1.5vw;
   font-family: "Outfit";
 }

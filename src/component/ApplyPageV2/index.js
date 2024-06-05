@@ -20,12 +20,12 @@ const desktopContent = (firstColumn, secondColumn) => {
         <div className='join-header'>{header}</div>
         <div className='join-text'>{quote}</div>
         <div className='column-container'>
-          <div className='left-team-column'>
+          <div className='left-column'>
             {firstColumn.map((team) => (
               <TeamApplicationCard team={team} />
             ))}
           </div>
-          <div className='right-team-column'>
+          <div className='right-column'>
             {secondColumn.map((team) => (
               <TeamApplicationCard team={team} />
             ))}
@@ -40,18 +40,16 @@ const desktopContent = (firstColumn, secondColumn) => {
 const mobileContent = (teams) => {
   return (
     <>
-      <div className='ap_mobile'>
-        <div className='ap_img' />
-        <div className='navbar-style'>
-          <NavBar />
-        </div>
-        <div className='join-header'>{header}</div>
-        <div className='join-text'>{quote}</div>
-        <div className='column-container'>
-          {teams.map((team) => (
-            <TeamApplicationCard team={team} />
-          ))}
-        </div>
+      <div className='ap_img' />
+      <div className='navbar-style'>
+        <NavBar />
+      </div>
+      <div className='join-header'>{header}</div>
+      <div className='join-text'>{quote}</div>
+      <div className='mobile-column'>
+        {teams.map((team) => (
+          <TeamApplicationCard team={team} />
+        ))}
       </div>
     </>
   )
@@ -62,13 +60,19 @@ export default function ApplyPage() {
     ...,
     "contributorRoles": contributorRoles[]-> {
       role,
-      applicationLink},
+      applicationLink,
+      activeApplication
+    },
     "leadRoles": leadRoles[]-> {
       role,
-      applicationLink  },
+      applicationLink,
+      activeApplication
+    },
     "chiefRoles": chiefRoles[]-> {
       role,
-      applicationLink  }
+      applicationLink,
+      activeApplication
+    }
   }| order(zIndex desc)`
   const teams = useSanity(query, {}, (data) =>
     data

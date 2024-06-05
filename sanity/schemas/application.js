@@ -19,6 +19,7 @@ export default defineType({
       name: 'activeApplication',
       title: 'Active Application',
       type: 'boolean',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'applicationLink',

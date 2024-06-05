@@ -6,9 +6,12 @@ export default function RoleCategory(
   },
   desktopContent
 ) {
-  const halfLength = Math.ceil(roles.length / 2)
-  const firstColumn = roles.slice(0, halfLength)
-  const secondColumn = roles.slice(halfLength)
+  const activeApps = roles.filter(
+    (role) => role.activeApplication === true && role.applicationLink
+  )
+  const halfLength = Math.ceil(activeApps.length / 2)
+  const firstColumn = activeApps.slice(0, halfLength)
+  const secondColumn = activeApps.slice(halfLength)
 
   return (
     <div>
@@ -31,7 +34,7 @@ export default function RoleCategory(
         <div className='link-column'>
           {secondColumn.map((role) => (
             <a
-              href={role.link}
+              href={role.applicationLink}
               target='_blank'
               rel='noopener noreferrer'
               className='link-text'
