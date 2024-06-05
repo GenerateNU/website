@@ -22,8 +22,8 @@ const WeAreSection = () => {
         </h1>
       </div>
       <div className='outside-card-container'>
-        {values.map((value) => (
-          <div className='card-container'>
+        {values.map((value, index) => (
+          <div className='card-container' key={index}>
             <ValueCard value={value} />
           </div>
         ))}
