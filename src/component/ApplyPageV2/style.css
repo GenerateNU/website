@@ -2,7 +2,7 @@
     color: #FFF;
     font-family: 'Space Mono 700';
     font-size: 10vw;
-    line-height: 100%;
+    line-height: 80%;
     text-transform: uppercase;
     margin-left: 2vw;
     margin-bottom: 2vh;
@@ -11,10 +11,10 @@
 .join-text {
     color: #FFF;
     font-family: "Outfit";
-    font-size: 3vh;
+    font-size: 1.25em;
     width: 90vw;
     margin-left: 2vw;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
 }
 
 .column-container {
