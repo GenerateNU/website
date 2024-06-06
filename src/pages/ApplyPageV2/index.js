@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../NavBar'
+import NavBar from '../../component/NavBar'
 import TeamApplicationCard from './TeamApplicationCard'
 import useWebsite from '../../shared/useWebsite'
 import { useSanity } from '../../services/useSanity'
