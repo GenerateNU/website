@@ -1,10 +1,19 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
-import directorData from '../../../data/directorData'
 import LeadershipCard from './LeadershipComponenents/LeadershipCard/leadershipCard'
 import './style.css'
+import { urlFor } from '../../../client'
+import {useSanity} from '../../../services/useSanity'
 
 export default function Leadership() {
+  const query = `*[_type == "director"] | order(zIndex desc)`
+
+  const directors = useSanity(query, {}, (data) => data ? data.map((director) => ({
+    ...director,
+    color: director.color.hex,
+    image: urlFor(director.image),
+  })) : []);
+
   return (
     <>
       <div className='leadership-section dsktop bg-black'>
@@ -13,7 +22,7 @@ export default function Leadership() {
           <div className='meet-the-team-text'>Meet the team</div>
         </div>
         <div className='cards-section'>
-          {directorData
+          {directors
             .map((dir) => {
               return <LeadershipCard director={dir} key={dir.title} />
             })
@@ -27,7 +36,7 @@ export default function Leadership() {
           <div className='meet-the-team-text'>Meet the team</div>
         </div>
         <div className='vh-75 p-5 d-flex cards-display'>
-          {directorData.map((dir) => {
+          {directors.map((dir) => {
             return <LeadershipCard director={dir} key={dir.title} />
           })}
         </div>

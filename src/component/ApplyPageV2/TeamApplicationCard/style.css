@@ -1,0 +1,67 @@
+.team-card-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7vh;
+}
+
+.team-card-container:hover:not(.expanded) {
+  box-shadow: 0 0 !important;
+}
+
+.team-header-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: black;
+  padding: 15px;
+  gap: 15px;
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.interactive-button {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  padding-left: 20px;
+  gap: 10px;
+  border: 0;
+}
+
+.expanded-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: white;
+}
+
+.team-header {
+  font-family: 'Space Mono 700';
+  font-size: 4em;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.team-subheader {
+  color: black;
+  font-family: 'Space Mono 700';
+  font-size: 2em;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  color: black;
+  font-size: 1em;
+  font-family: "Outfit";
+}

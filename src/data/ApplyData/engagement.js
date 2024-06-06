@@ -17,7 +17,7 @@ const Engagement = [
     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLScIodICkaQbA1rMfrKb2kKF4q-F2atLExaCUTjlf9st30NOEg/viewform?usp=sf_link'
   },
   {
-    positionTitle: 'Photograher',
+    positionTitle: 'Photographer',
     categoryType: 'Engagement',
     description: "As Photographer/Videographer you'll work with the content team to create photo and video content on a regular basis and at larger events as well as brainstorm new ideas to increase engagement!",
     responsibilities: 'Responsible for documenting the semester, attending weekly meetings and events to do so.',

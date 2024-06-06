@@ -8,11 +8,8 @@ export default function LeadershipCard({
     title = '',
     team = '',
     color = '',
-    activeIcon = null,
-    inactiveIcon = null,
     name = '',
     image = null,
-    bio = '',
     emailUsername = '',
     zIndex = 0
   } = {}
@@ -27,7 +24,7 @@ export default function LeadershipCard({
 
   return (
     <ReactCardFlip
-      isFlipped={flipped}
+      isFlipped={false}
       flipDirection='vertical'
       cardZIndex={cardZIndex}
     >
@@ -42,7 +39,7 @@ export default function LeadershipCard({
           <div className='card-person'>{name}</div>
           <div className='card-role'>{title}</div>
         </div>
-        <div className='card-button'>
+        {/* <div className='card-button'>
           <ShadowedButton
             fillColor='white'
             yPad={yPad}
@@ -51,7 +48,7 @@ export default function LeadershipCard({
             text='bio'
             onClick={() => setFlipped((prev) => !prev)}
           />
-        </div>
+        </div> */}
       </div>
       {/* Back of the card */}
       <div
@@ -59,7 +56,7 @@ export default function LeadershipCard({
         style={{ backgroundColor: color }}
       >
         <div className='card-team'>{team}</div>
-        <div className='card-description'>{bio}</div>
+        {/* <div className='card-description'>{bio}</div> */}
         <div className='card-button'>
           <ShadowedButton
             fillColor='white'

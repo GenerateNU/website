@@ -1,0 +1,23 @@
+.link-column-container{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.link-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.link-text {
+    font-family: Outfit;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 200%;
+    text-decoration-line: underline;
+    margin-bottom: 10px;
+}
