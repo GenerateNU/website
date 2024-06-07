@@ -18,10 +18,17 @@
 }
 
 .column-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     margin: 3vw;
     padding-bottom: 10vh;
     justify-content: center;
+}
+
+@media (min-width: 900px) {
+    .column-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .left-column {

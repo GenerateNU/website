@@ -10,9 +10,10 @@ export default function TeamApplicationCard({ team }) {
     boxShadow: `-1rem 1rem ${team.color}`
   }
   const [expanded, setExpanded] = useState(false)
-  const expand = team.team !== 'Clients'
+  const expand = team.team !== 'Clients' && team.team !== 'Management'
   const viewRoles = 'View Roles'
   const workWithUs = 'Work with Us'
+  const meetTheTeam = 'Meet the team'
 
   return (
     <div
@@ -28,11 +29,9 @@ export default function TeamApplicationCard({ team }) {
             ? team.tags.map((tag) => <Tag key={tag} title={tag} />)
             : null}
         </div>
-        {expanded && (
-          <div className='paragraph' style={{ color: 'white' }}>
-            {team.teamDescription}
-          </div>
-        )}
+        <div className='paragraph' style={{ color: 'white' }}>
+          {team.teamDescription}
+        </div>
       </div>
       {expand ? (
         <div>
@@ -82,7 +81,7 @@ export default function TeamApplicationCard({ team }) {
         <a href={team.externalLink} target='_blank' rel='noopener noreferrer'>
           <button className='interactive-button'>
             <RightArrow />
-            <div className='team-subheader'>{workWithUs}</div>
+            <div className='team-subheader'>{team.team === "Clients" ? workWithUs : meetTheTeam}</div>
           </button>
         </a>
       )}
