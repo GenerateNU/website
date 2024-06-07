@@ -1,11 +1,13 @@
 .team-card-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 7vh;
+  margin-bottom: 5vh;
+  transition: all 0.3s ease-in-out;
 }
 
 .team-card-container:hover:not(.expanded) {
   box-shadow: 0 0 !important;
+  transition: all 0.3s ease-in-out;
 }
 
 .team-header-container {
@@ -19,6 +21,7 @@
 
 .tags-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 10px;
 }
@@ -39,9 +42,15 @@
 .expanded-container {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  padding-left: 20px;
   background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+.team-card-container.expanded .expanded-container {
+  max-height: 1000px;
+  padding: 10px 20px;
 }
 
 .team-header {

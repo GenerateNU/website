@@ -10,9 +10,10 @@ export default function TeamApplicationCard({ team }) {
     boxShadow: `-1rem 1rem ${team.color}`
   }
   const [expanded, setExpanded] = useState(false)
-  const expand = team.team !== 'Clients'
+  const expand = team.externalLink === undefined
   const viewRoles = 'View Roles'
   const workWithUs = 'Work with Us'
+  const meetTheTeam = 'Meet the team'
 
   return (
     <div
@@ -24,13 +25,13 @@ export default function TeamApplicationCard({ team }) {
           {team.team}
         </div>
         <div className='tags-container'>
-          {team.tags ? team.tags.map((tag) => <Tag title={tag}></Tag>) : null}
+          {team.tags
+            ? team.tags.map((tag) => <Tag key={tag} title={tag} />)
+            : null}
         </div>
-        {expanded && (
-          <div className='paragraph' style={{ color: 'white' }}>
-            {team.teamDescription}
-          </div>
-        )}
+        <div className='paragraph' style={{ color: 'white' }}>
+          {team.teamDescription}
+        </div>
       </div>
       {expand ? (
         <div>
@@ -41,9 +42,10 @@ export default function TeamApplicationCard({ team }) {
             <DownArrow />
             <div className='team-subheader'>{viewRoles}</div>
           </button>
-          {expanded && (
-            <div className='expanded-container'>
-              {team.contributorRoles && team.contributorRoles.length > 0 && (
+          <div className={`expanded-container ${expanded ? 'expanded' : ''}`}>
+            {expanded &&
+              team.contributorRoles &&
+              team.contributorRoles.length > 0 && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Individual Contributors',
@@ -53,34 +55,35 @@ export default function TeamApplicationCard({ team }) {
                   }}
                 />
               )}
-              {team.leadRoles && team.leadRoles.length > 0 && (
-                <RoleCategory
-                  roleCategory={{
-                    name: 'Leaders',
-                    description: team.leadDescription,
-                    roles: team.leadRoles,
-                    color: team.color
-                  }}
-                />
-              )}
-              {team.chiefRoles && team.chiefRoles.length > 0 && (
-                <RoleCategory
-                  roleCategory={{
-                    name: 'Chiefs',
-                    description: team.chiefDescription,
-                    roles: team.chiefRoles,
-                    color: team.color
-                  }}
-                />
-              )}
-            </div>
-          )}
+            {expanded && team.leadRoles && team.leadRoles.length > 0 && (
+              <RoleCategory
+                roleCategory={{
+                  name: 'Leaders',
+                  description: team.leadDescription,
+                  roles: team.leadRoles,
+                  color: team.color
+                }}
+              />
+            )}
+            {expanded && team.chiefRoles && team.chiefRoles.length > 0 && (
+              <RoleCategory
+                roleCategory={{
+                  name: 'Chiefs',
+                  description: team.chiefDescription,
+                  roles: team.chiefRoles,
+                  color: team.color
+                }}
+              />
+            )}
+          </div>
         </div>
       ) : (
         <a href={team.externalLink} target='_blank' rel='noopener noreferrer'>
           <button className='interactive-button'>
             <RightArrow />
-            <div className='team-subheader'>{workWithUs}</div>
+            <div className='team-subheader'>
+              {team.team === 'Clients' ? workWithUs : meetTheTeam}
+            </div>
           </button>
         </a>
       )}

@@ -21,6 +21,7 @@ export default function RoleCategory(
         <div className='link-column'>
           {firstColumn.map((role) => (
             <a
+              key={role.role}
               href={role.applicationLink}
               target='_blank'
               rel='noopener noreferrer'
@@ -34,6 +35,7 @@ export default function RoleCategory(
         <div className='link-column'>
           {secondColumn.map((role) => (
             <a
+              key={role.role}
               href={role.applicationLink}
               target='_blank'
               rel='noopener noreferrer'

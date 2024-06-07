@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import ExternalRedirect from './component/ExternalRedirect'
-import ApplyPageV2 from './component/ApplyPageV2'
+import ApplyPageV2 from './pages/ApplyPageV2'
 import Position from './component/ApplyPage/Position'
 import AboutPage from './component/AboutPage'
 import ScrollToTop from './component/ScrollToTop'

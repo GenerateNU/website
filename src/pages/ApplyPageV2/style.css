@@ -2,7 +2,7 @@
     color: #FFF;
     font-family: 'Space Mono 700';
     font-size: 10vw;
-    line-height: 100%;
+    line-height: 80%;
     text-transform: uppercase;
     margin-left: 2vw;
     margin-bottom: 2vh;
@@ -11,17 +11,24 @@
 .join-text {
     color: #FFF;
     font-family: "Outfit";
-    font-size: 3vh;
+    font-size: 1.25em;
     width: 90vw;
     margin-left: 2vw;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
 }
 
 .column-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     margin: 3vw;
     padding-bottom: 10vh;
     justify-content: center;
+}
+
+@media (min-width: 900px) {
+    .column-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .left-column {
