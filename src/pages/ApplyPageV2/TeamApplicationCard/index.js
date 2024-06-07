@@ -10,7 +10,6 @@ export default function TeamApplicationCard({ team }) {
     boxShadow: `-1rem 1rem ${team.color}`
   }
   const [expanded, setExpanded] = useState(false)
-  console.log(team.team, team.externalLink)
   const expand = team.externalLink === undefined
   const viewRoles = 'View Roles'
   const workWithUs = 'Work with Us'
