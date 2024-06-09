@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../../component/NavBar'
 import TeamApplicationCard from './TeamApplicationCard'
 import { useSanity } from '../../services/useSanity'
+import useWebsite from '../../shared/useWebsite'
 import './style.css'
 
 const header = 'join generate'
@@ -29,6 +30,26 @@ const desktopContent = (firstColumn, secondColumn) => {
               <TeamApplicationCard team={team} />
             ))}
           </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const mobileContent = (teams) => {
+  return (
+    <>
+      <div className='ap_mobile'>
+        <div className='ap_img' />
+        <div className='navbar-style'>
+          <NavBar />
+        </div>
+        <div className='join-header'>{header}</div>
+        <div className='join-text'>{quote}</div>
+        <div className='mobile-column'>
+          {teams.map((team) => (
+            <TeamApplicationCard team={team} />
+          ))}
         </div>
       </div>
     </>
@@ -67,5 +88,9 @@ export default function ApplyPage() {
   const leftCol = teams.slice(0, halfLength)
   const rightCol = teams.slice(halfLength)
 
-  return desktopContent(leftCol, rightCol)
+  const isWebsite = useWebsite()
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  const mobile = !isBigScreen || !isWebsite
+
+  return !mobile ? desktopContent(leftCol, rightCol) : mobileContent(teams)
 }
