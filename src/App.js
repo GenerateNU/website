@@ -5,7 +5,7 @@ import ApplyPageV2 from './pages/ApplyPageV2'
 import Position from './component/ApplyPage/Position'
 import AboutPage from './component/AboutPage'
 import ScrollToTop from './component/ScrollToTop'
-import LandingPageV2 from './component/LandingPageV2'
+import LandingPageV3 from './pages/LandingPageV3'
 import CulturePage from './component/CulturePage'
 import TeamsPage from './pages/TeamsPage'
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams'
@@ -15,7 +15,7 @@ import { useSanity } from './services/useSanity'
 
 function AppRoutes({ sanityRoutes }) {
   const routes = [
-    { path: '/', element: <LandingPageV2 /> },
+    { path: '/', element: <LandingPageV3 /> },
     {
       path: '/apply',
       element: <ApplyPageV2 />,
@@ -30,7 +30,7 @@ function AppRoutes({ sanityRoutes }) {
     { path: '/case-study/:project', element: <CaseStudy /> },
     { path: '/teams-expanded/*', element: <ExpandedTeamsPage /> },
     ...sanityRoutes,
-    { path: '*', element: <LandingPageV2 /> }
+    { path: '*', element: <LandingPageV3 /> }
   ]
 
   const allRoutes = useRoutes(routes)
