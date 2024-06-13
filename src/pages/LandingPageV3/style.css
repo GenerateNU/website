@@ -136,7 +136,7 @@
 
 #what-is-generate {
   padding: 3rem;
-  padding-top: 8rem;
+  padding-top: 5rem;
 }
 
 #we-are {
@@ -145,7 +145,6 @@
 
 #values-wrapper {
   position: relative;
-  
 }
 
 #values-container {
@@ -172,15 +171,15 @@
 }
 
 #socials {
-display: flex;
-flex-direction: row;
-gap: 1.5rem;
-margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-top: 4rem;
 }
 
 .social-icon {
   width: 3rem;
-  height: 3rem; 
+  height: 3rem;
 }
 
 .social-icon:hover {
@@ -203,6 +202,15 @@ margin-top: 4rem;
   font-style: normal;
   font-weight: 500;
   max-width: 85vw;
+  margin-bottom: 0.5rem;
+}
+
+.we-are-image {
+  /* max-width: min(40vw, '40rem') !important; */
+  /* height: min(40vw, '40rem'); */
+  width: max(40vw, 18rem);
+  object-fit: contain;
+  margin-top: '1vw';
 }
 
 @media (max-width: 840px) {
@@ -218,6 +226,12 @@ margin-top: 4rem;
   }
   #values-container {
     align-items: end;
+  }
+  .white-header-text {
+    margin-bottom: 1.5rem;
+  }
+  .white-p-text {
+    margin-bottom: 0rem;
   }
 
   .value {
