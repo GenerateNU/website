@@ -43,7 +43,7 @@
 
 #ll4-row {
   min-height: 1017px;
-  max-height: 1017px;
+  /* max-height: 1017px; */
   padding: 4rem;
 }
 
