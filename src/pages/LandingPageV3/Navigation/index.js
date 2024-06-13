@@ -49,8 +49,9 @@ export default function Navigation({ scrollToWhatIsGenerate }) {
           </button>
 
           <div id='socials'>
-            {icons.map((si) => (
+            {icons.map((si, index) => (
               <a
+                key={index}
                 className='social-link'
                 href={si.href}
                 target='_blank'

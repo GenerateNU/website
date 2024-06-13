@@ -32,13 +32,14 @@ export default function HowWereStrctured() {
             {teamDataWheel.map((data, index) => {
               return (
                 <button
+                  key={`part${index}`}
                   id={`part${index}`}
-                  class='circle animate'
+                  className='circle animate'
                   onClick={() => handlePress(data)}
                   onMouseEnter={() => handleHover(data)}
                 >
                   <img
-                    class={`image${index}`}
+                    className={`image${index}`}
                     alt={data.team}
                     src={data.image}
                   />
@@ -52,7 +53,7 @@ export default function HowWereStrctured() {
           {
             <>
               <div className='white-h2-text'> {selected.team} </div>
-              <div class='white-p-text'> {selected.text} </div>
+              <div className='white-p-text'> {selected.text} </div>
               <div
                 className='view-pp-fp-project-div'
                 style={{ paddingTop: '5vw' }}

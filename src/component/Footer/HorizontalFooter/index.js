@@ -38,7 +38,7 @@ function HorizontalFooter() {
         <div className='pages-align'>
           {pages.map((page, index) => (
             <FooterLink
-              key={index}
+              key={`footer-link-${index}`}
               page={page}
               currentPage={currentPageUrl.substring(
                 currentPageUrl.lastIndexOf('/')
@@ -48,10 +48,10 @@ function HorizontalFooter() {
         </div>
         <div className='mobile-social-icons-align'>
           {socialIcons.map((si, index) => (
-            <div key={index} className='mobile-social-icon-row'>
-              {si.map((s) => (
-                <div className='mobile-social-icon-col'>
-                  <SocialIcon key={index} href={s.href} imgSrc={s.imgSrc} />
+            <div key={`social-icon-row-${index}`} className='mobile-social-icon-row'>
+              {si.map((s, subIndex) => (
+                <div key={`social-icon-col-${subIndex}`} className='mobile-social-icon-col'>
+                  <SocialIcon key={`social-icon-${subIndex}`} href={s.href} imgSrc={s.imgSrc} />
                 </div>
               ))}
             </div>
