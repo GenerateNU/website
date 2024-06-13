@@ -4,7 +4,7 @@ import './style.css'
 function WhatIsGenerate(props, ref) {
   return (
     <div ref={ref} className='grid-bg bg-row' id="ll2-row">
-      <div className='half-container blue-bg padded' id="what-is-generate">
+      <div className='half-container blue-bg' id="what-is-generate">
         <div className='white-header-text'>What is Generate?</div>
         <div className='white-p-text'>
           Generate is Northeastern’s premiere student-led product development
