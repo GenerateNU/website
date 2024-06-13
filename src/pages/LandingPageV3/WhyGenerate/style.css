@@ -1,0 +1,22 @@
+.why-gen-bg {
+    background-image: url('../../../assets/images/landingpage-v3/GridBg.svg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: top left;
+}
+
+.why-gen-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5vw;
+}
+
+.why-gen-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45vw;
+    width: 30vw;
+}

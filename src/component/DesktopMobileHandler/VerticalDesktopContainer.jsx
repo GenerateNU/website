@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useRef } from "react";
-import Column from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
 import "./style.css";
 
 /**
@@ -36,15 +36,15 @@ export default function VerticalDesktopContainer({
       <div
         ref={scrollContainerRef}
         // using dsktop to avoid naming collision...
-        class={`vh-100 dsktop vertical-scroll bg-${desktopBGColor} container-fluid ${
+        class={`vh-100 dsktop vertical-scroll bg-${desktopBGColor} ${
           props.containerClassName ?? ""
         }`}
         tabIndex="0"
       >
         {/* The content is wrapped in a Column component from the react-bootstrap library to ensure proper layout */}
-        <Column className={`${props.rowClassName ?? ""}`}>
+        <Col className={`${props.rowClassName ?? ""}`}>
           {children}
-        </Column>
+        </Col>
       </div>
     </>
   );

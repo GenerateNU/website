@@ -1,34 +1,28 @@
-import React from 'react'
-import WhatWeOffer from '../../component/LandingPageV2/WhatWeOffer'
-import Interested from '../../component/LandingPageV2/Interested'
-import ProductDevelopment from '../../component/LandingPageV2/ProductDevLifecycle/ProductDevelopment'
-import Ideation from '../../component/LandingPageV2/ProductDevLifecycle/Ideation'
-import Prototype from '../../component/LandingPageV2/ProductDevLifecycle/Prototype'
-import Production from '../../component/LandingPageV2/ProductDevLifecycle/Production'
-import Intro from '../../component/LandingPageV2/Introduction'
-import WhoWeAre from '../../component/LandingPageV2/WhoWeAre'
-import WhoWeAreResponse from '../../component/LandingPageV2/WhoWeAreResponse'
-import Management from '../../component/LandingPageV2/Management'
-import Footer from '../../component/Footer'
-import NextPage from '../../component/NextPage'
+import React, { useRef } from 'react'
+import Navigation from './Navigation'
+import Footer from '../../component/Footer/HorizontalFooter'
 import useWebsite from '../../shared/useWebsite'
 import VerticalDesktopContainer from '../../component/DesktopMobileHandler/VerticalDesktopContainer'
 import NewMobileContainer from '../../component/DesktopMobileHandler/NewMobileContainer'
+import WhatIsGenerate from './WhatIsGenerate'
+import WeAre from './WeAre'
+import WhyGenerate from './WhyGenerate'
+import HowWereStrctured from './HowWereStructured'
+import './style.css'
 
 export default function LandingPageV3() {
+  const whatIsGenerateRef = useRef(null)
   const children = [
-    <Intro />,
-    <WhoWeAre />,
-    <WhoWeAreResponse />,
-    <WhatWeOffer />,
-    <ProductDevelopment />,
-    <Ideation />,
-    <Prototype />,
-    <Production />,
-    <Management />,
-    <Interested page='Landing' />,
-    <Footer />,
-    <NextPage pageName='about' url='/about' />
+    <Navigation
+      scrollToWhatIsGenerate={() =>
+        whatIsGenerateRef.current.scrollIntoView({ behavior: 'smooth' })
+      }
+    />,
+    <WhatIsGenerate ref={whatIsGenerateRef} />,
+    <WeAre />,
+    <WhyGenerate />,
+    <HowWereStrctured />,
+    <Footer />
   ]
 
   const isWebsite = useWebsite()
@@ -36,8 +30,8 @@ export default function LandingPageV3() {
   const mobile = !isBigScreen || !isWebsite
 
   return !mobile ? (
-    <VerticalDesktopContainer children={children} desktopBGColor={'white'} />
+    <VerticalDesktopContainer children={children} desktopBGColor={'black'} />
   ) : (
-    <NewMobileContainer children={children} mobileBGColor={'white'} />
+    <NewMobileContainer children={children} mobileBGColor={'black'} />
   )
 }

@@ -1,0 +1,57 @@
+.grid-bg {
+    background-image: url('../../assets/images/landingpage-v3/GridBg.svg');
+    width: 100vw;
+    height: 60vw;
+    background-size: cover;
+    background-position: top left;
+}
+
+.bg-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.right-landing-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.blue-left-container {
+    height: 70vw;
+    width: 50vw;
+    background-color: #1477f8;
+}
+
+.padded-container {
+    padding: 5vh;
+}
+
+.white-header-text {
+    color: white;
+    font-family: "Space Mono 700";
+    font-size: 7vw;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 2vw;
+}
+
+.white-h2-text {
+    color: white;
+    font-family: "Space Mono 700";
+    font-size: 4vw;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.white-p-text {
+    color: white;
+    font-family: Outfit;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    max-width: 85vw;
+}
