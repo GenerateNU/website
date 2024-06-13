@@ -171,6 +171,22 @@
   text-align: end;
 }
 
+#socials {
+display: flex;
+flex-direction: row;
+gap: 1.5rem;
+margin-top: 4rem;
+}
+
+.social-icon {
+  width: 3rem;
+  height: 3rem; 
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
 .white-header-text {
   color: white;
   font-family: 'Space Mono 700';
