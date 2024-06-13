@@ -1,11 +1,10 @@
 import React from 'react'
-// import { ReactComponent as Lines } from '../../../assets/images/landingpage-v3/LandingLines2.svg'
 import './style.css'
 
 function WhatIsGenerate(props, ref) {
   return (
-    <div ref={ref} className='grid-bg'>
-      <div className='blue-left-container padded-container'>
+    <div ref={ref} className='grid-bg bg-row' id="ll2-row">
+      <div className='half-container blue-bg padded' id="what-is-generate">
         <div className='white-header-text'>What is Generate?</div>
         <div className='white-p-text'>
           Generate is Northeastern’s premiere student-led product development
@@ -24,8 +23,8 @@ function WhatIsGenerate(props, ref) {
           community where tech-minded builders thrive!
         </div>
       </div>
-      <div className='right-landing-container'>
-        {/* <Lines /> */}
+      <div className='ll-container'>
+        <div id="landing-lines-2" className='landing-lines' />
       </div>
     </div>
   )

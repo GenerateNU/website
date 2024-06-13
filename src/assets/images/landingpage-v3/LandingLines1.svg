@@ -1,19 +1,24 @@
-<svg width="100%" height="100%" viewBox="0 0 500 822" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M100 624.5L100 524.5L100 475L250 475L400 475L400 325L100 325L100 249.5L325 249.5L325 49.5" stroke="url(#paint0_linear_12610_22794)" stroke-width="50" stroke-linecap="round"/>
-<path d="M325 625L325 600L350 600L350 625L325 625ZM175 550L150 550L150 525L175 525L175 550ZM475 550L500 550L500 575L475 575L475 550ZM450 375C450 361.193 461.193 350 475 350C488.807 350 500 361.193 500 375L450 375ZM175 625L175 650L150 650L150 625L175 625ZM350 796.5L350 821.5L300 821.5L300 796.5L350 796.5ZM175 525L475 525L475 575L175 575L175 525ZM450 550L450 375L500 375L500 550L450 550ZM325 650L175 650L175 600L325 600L325 650ZM150 625L150 550L200 550L200 625L150 625ZM350 625L350 796.5L300 796.5L300 625L350 625Z" fill="url(#paint1_linear_12610_22794)"/>
-<path d="M325.5 400L175 400L25 400L25 175L250 175L250 -25" stroke="url(#paint2_linear_12610_22794)" stroke-width="50" stroke-linecap="round"/>
+<svg width="655" height="750" viewBox="0 0 655 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_12625_11155)">
+<path d="M179.5 624.5L179.5 524.5L179.5 475L329.5 475L479.5 475L479.5 325L179.5 325L179.5 249.5L404.5 249.5L404.5 49.5" stroke="url(#paint0_linear_12625_11155)" stroke-width="50" stroke-linecap="round"/>
+<path d="M404.5 625L404.5 600L429.5 600L429.5 625L404.5 625ZM254.5 550L229.5 550L229.5 525L254.5 525L254.5 550ZM554.5 550L579.5 550L579.5 575L554.5 575L554.5 550ZM529.5 375C529.5 361.193 540.693 350 554.5 350C568.307 350 579.5 361.193 579.5 375L529.5 375ZM254.5 625L254.5 650L229.5 650L229.5 625L254.5 625ZM429.5 796.5L429.5 821.5L379.5 821.5L379.5 796.5L429.5 796.5ZM254.5 525L554.5 525L554.5 575L254.5 575L254.5 525ZM529.5 550L529.5 375L579.5 375L579.5 550L529.5 550ZM404.5 650L254.5 650L254.5 600L404.5 600L404.5 650ZM229.5 625L229.5 550L279.5 550L279.5 625L229.5 625ZM429.5 625L429.5 796.5L379.5 796.5L379.5 625L429.5 625Z" fill="url(#paint1_linear_12625_11155)"/>
+<path d="M405 400L254.5 400L104.5 400L104.5 175L329.5 175L329.5 -25" stroke="url(#paint2_linear_12625_11155)" stroke-width="50" stroke-linecap="round"/>
+</g>
 <defs>
-<linearGradient id="paint0_linear_12610_22794" x1="251" y1="49.5" x2="251" y2="749.5" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_12625_11155" x1="330.5" y1="49.5" x2="330.5" y2="749.5" gradientUnits="userSpaceOnUse">
 <stop offset="0.390625" stop-color="#FFBF3C"/>
 <stop offset="1" stop-color="#6FCF97"/>
 </linearGradient>
-<linearGradient id="paint1_linear_12610_22794" x1="325.25" y1="365.5" x2="325.25" y2="866.5" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_12625_11155" x1="404.75" y1="365.5" x2="404.75" y2="866.5" gradientUnits="userSpaceOnUse">
 <stop stop-color="#6FCF97"/>
 <stop offset="0.771982" stop-color="#187DFF"/>
 </linearGradient>
-<linearGradient id="paint2_linear_12610_22794" x1="200.25" y1="475" x2="200.25" y2="-102" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_12625_11155" x1="279.75" y1="475" x2="279.75" y2="-102" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FF6660"/>
 <stop offset="1" stop-color="#A559EC"/>
 </linearGradient>
+<clipPath id="clip0_12625_11155">
+<rect width="655" height="750" fill="white"/>
+</clipPath>
 </defs>
 </svg>

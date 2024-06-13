@@ -1,57 +1,231 @@
-.grid-bg {
-    background-image: url('../../assets/images/landingpage-v3/GridBg.svg');
-    width: 100vw;
-    height: 60vw;
-    background-size: cover;
-    background-position: top left;
+#page-bg {
+  background-image: url('../../assets/images/landingpage-v3/GridBg.svg');
+  background-repeat: repeat; /* repeat the bg infinitely down the y-axis*/
+  background-size: 64rem;
+}
+
+.ll-container {
+  width: max(50%, 400px);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-lines {
+  width: 600px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: -10;
+}
+
+#ll1-row {
+  min-height: 750px;
+  max-height: 750px;
+}
+
+#ll2-row {
+  min-height: 950px;
+  max-height: 950px;
+  padding-bottom: 12rem;
+}
+
+#ll3-row {
+  min-height: 683px;
+  max-height: 683px;
+}
+
+#ll4-row {
+  min-height: 1017px;
+  max-height: 1017px;
+}
+
+#landing-lines-1 {
+  background-image: url('../../assets/images/landingpage-v3/LandingLines1.svg');
+}
+
+#landing-lines-2 {
+  background-image: url('../../assets/images/landingpage-v3/LandingLines2.svg');
+}
+
+#landing-lines-3 {
+  background-image: url('../../assets/images/landingpage-v3/LandingLines3.svg');
+}
+
+#landing-lines-4 {
+  background-image: url('../../assets/images/landingpage-v3/LandingLines4.svg');
 }
 
 .bg-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 0;
 }
 
-.right-landing-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 50vw;
-    align-items: center;
-    justify-content: flex-start;
+.landing-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 4rem;
+  padding-top: 2rem;
 }
 
-.blue-left-container {
-    height: 70vw;
-    width: 50vw;
-    background-color: #1477f8;
+.half-container {
+  width: 50%;
 }
 
-.padded-container {
-    padding: 5vh;
+.blue-bg {
+  background-color: #1477f8;
+}
+
+#about-down-arrow {
+  height: 6vw;
+}
+
+.landing-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: 'Space Mono 700';
+  font-size: 5vw;
+  text-transform: uppercase;
+  height: 30vh;
+  gap: 1rem;
+  color: #1777f8;
+  padding: 1rem;
+}
+
+#generate-logo {
+  min-width: 60px;
+  min-height: 60px;
+  width: max(6vw);
+  height: max(6vw);
+}
+
+.landing-nav-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: max(3rem, 5vw);
+  text-transform: uppercase;
+}
+
+.landing-nav-link:hover {
+  color: transparent;
+  -webkit-text-stroke: 1.5px white;
+}
+
+.button-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  gap: 1.5vw;
+}
+
+#what-is-generate {
+  padding: 3rem;
+  padding-top: 8rem;
+}
+
+#we-are {
+  padding-left: 5rem;
+}
+
+#values-wrapper {
+  position: relative;
+  
+}
+
+#values-container {
+  padding-top: 3rem;
+  padding-right: 3rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.value {
+  color: white;
+  font-family: 'Space Mono 700';
+  font-size: max(4rem, 5vw);
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: end;
 }
 
 .white-header-text {
-    color: white;
-    font-family: "Space Mono 700";
-    font-size: 7vw;
-    line-height: 100%;
-    text-transform: uppercase;
-    margin-bottom: 2vw;
-}
-
-.white-h2-text {
-    color: white;
-    font-family: "Space Mono 700";
-    font-size: 4vw;
-    font-style: normal;
-    text-transform: uppercase;
+  color: white;
+  font-family: 'Space Mono 700';
+  font-size: max(4rem, 5vw);
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .white-p-text {
-    color: white;
-    font-family: Outfit;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    max-width: 85vw;
+  color: white;
+  font-family: Outfit;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  max-width: 85vw;
+}
+
+@media (max-width: 840px) {
+  .half-container {
+    width: 90%;
+  }
+  .ll-container {
+    opacity: 0%;
+    transform: scaleX(0%);
+  }
+  .landing-header {
+    font-size: 4rem;
+  }
+  #values-container {
+    align-items: end;
+  }
+
+  .value {
+    padding: 0.25rem;
+    font-size: 2.5rem;
+  }
+
+  #value-dri {
+    background-color: #55c9ef;
+  }
+
+  #value-emp {
+    background-color: #ff5752;
+  }
+
+  #value-go {
+    background-color: #6fcf97;
+  }
+
+  #value-inno {
+    background-color: #a056e3;
+  }
+
+  #value-spi {
+    background-color: #ffbf3b;
+  }
 }
