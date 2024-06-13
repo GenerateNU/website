@@ -12,8 +12,8 @@ export function useSanity(query, params = {}, modifier = (data) => data) {
       console.log('Set data: ', modifiedData)
     }
 
-    // fetchData()
-  }, [query, params, modifier])
+    fetchData()
+  }, [])
 
   return data
 }
