@@ -13,7 +13,7 @@ export function useSanity(query, params = {}, modifier = (data) => data) {
     }
 
     fetchData()
-  }, [])
+  }, [query, params, modifier])
 
   return data
 }
