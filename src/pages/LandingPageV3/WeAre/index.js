@@ -1,31 +1,31 @@
 import Placeholder from '../../../assets/images/landingpage/weare/landing.jpg'
+import { useSanity } from '../../../services/useSanity'
 
 export default function WeAre() {
+  const query = `*[_type == "value"] {value, index} | order(index asc)`
+  const values = useSanity(query)
+
   return (
     <div id='ll3-row' className='bg-row'>
       <div className='blue-left-container' id='we-are'>
         <div className='white-header-text'>We Are...</div>
-        <img
-          className='we-are-image'
-          src={Placeholder}
-          alt='Placeholder'
-        />
+        <img className='we-are-image' src={Placeholder} alt='Placeholder' />
         <div id='values'>
           <div id='values-container'>
-            <div id='value-dri' className='value'>
-              Driven
+            <div id='value-0' className='value'>
+              {values && values[0] && values[0].value}
             </div>
-            <div id='value-emp' className='value'>
-              Empathetic
+            <div id='value-1' className='value'>
+              {values && values[1] && values[1].value}
             </div>
-            <div id='value-go' className='value'>
-              Growth-oriented
+            <div id='value-2' className='value'>
+              {values && values[2] && values[2].value}
             </div>
-            <div id='value-inno' className='value'>
-              Innovative
+            <div id='value-3' className='value'>
+              {values && values[3] && values[3].value}
             </div>
-            <div id='value-spi' className='value'>
-              Sprited
+            <div id='value-4' className='value'>
+              {values && values[4] && values[4].value}
             </div>
           </div>
         </div>
