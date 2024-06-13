@@ -105,6 +105,10 @@
   padding: 1rem;
 }
 
+.landing-header:hover {
+  color: #1477f8;
+}
+
 #generate-logo {
   min-width: 60px;
   min-height: 60px;
