@@ -15,7 +15,7 @@
 }
 
 .ap_img {
-    background-image: url('/images/ApplyPageImages/showcase.jpg');
+    background-image: url('/images/ApplyPageImages/applyBg.jpg');
     height: 100%;
     width: 100%;
     position: fixed;
@@ -24,7 +24,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    filter: brightness(50%);
+    filter: brightness(80%);
 }
 
 .ap_text {
