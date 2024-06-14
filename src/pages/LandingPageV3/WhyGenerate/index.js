@@ -1,57 +1,57 @@
 import Placeholder from '../../../assets/images/landingpage/weare/landing.jpg'
+import { useSanity } from '../../../services/useSanity'
 import './style.css'
 
 export default function WhyGenerate() {
+  const query1 = `*[_type == "copy" && key == "why-generate-1"]{header, content}`
+  const whyGenerate1 = useSanity(query1)
+  const query2 = `*[_type == "copy" && key == "why-generate-2"]{header, content}`
+  const whyGenerate2 = useSanity(query2)
+  const query3 = `*[_type == "copy" && key == "why-generate-3"]{header, content}`
+  const whyGenerate3 = useSanity(query3)
+
   return (
     <div className='bg-row' id='ll4-row'>
       <div>
         <div className='white-header-text'>Why Generate?</div>
         <div className='why-gen-container'>
           <div className='why-gen-col'>
-            <div className='white-h2-text'>Members</div>
-            <div className='why-gen-col-content'>
-            <p className='white-p-text'>
-              Generate offers a supportive experiential learning opportunity
-              where students learn and practice product development and
-              leadership in their respective disciplines. In addition to real
-              experience working with industry best practices for real clients,
-              Generate{'’'}s focuses on community and ensuring members become
-              life-long friends.
-            </p>
-            <img
-              src={Placeholder}
-              className='why-gen-img'
-              alt='Placeholder'
-            />
+            <div className='white-h2-text'>
+              {whyGenerate1 && whyGenerate1[0].header}
             </div>
-          </div>
-          <div className='why-gen-col'>
-            <div className='white-h2-text'>Clients</div>
-            <div className='why-gen-col-content' id="wgcc-rev">
-            <img
-              src={Placeholder}
-              className='why-gen-img'
-              alt='Placeholder'
-            />
-            <p className='white-p-text'>
-              We collaborate with clients across the global Northeastern
-              community to help scale their ventures! Over a semester, you’ll
-              collaborate with a dedicated team of students to agree on
-              priorities, deliverables, and outcomes so that they can build your
-              product while you dedicate time to growing your userbase and
-              gathering funding!
-            </p>
-            </div>
-          </div>
-          <div className='why-gen-col'>
-            <div className='white-h2-text'>Partners</div>
             <div className='why-gen-col-content'>
               <p className='white-p-text'>
-                Generate’s students are experienced builders and team players
-                with experiential, real-world experience. As part of a
-                collaborative community, they build each other up and look out
-                for one another. Partnering with Generate ensures your
-                visibility to our students.
+                {whyGenerate1 && whyGenerate1[0].content[0]}
+              </p>
+              <img
+                src={Placeholder}
+                className='why-gen-img'
+                alt='Placeholder'
+              />
+            </div>
+          </div>
+          <div className='why-gen-col'>
+            <div className='white-h2-text'>
+              {whyGenerate2 && whyGenerate2[0].header}
+            </div>
+            <div className='why-gen-col-content' id='wgcc-rev'>
+              <img
+                src={Placeholder}
+                className='why-gen-img'
+                alt='Placeholder'
+              />
+              <p className='white-p-text'>
+                {whyGenerate2 && whyGenerate2[0].content[0]}
+              </p>
+            </div>
+          </div>
+          <div className='why-gen-col'>
+            <div className='white-h2-text'>
+              {whyGenerate3 && whyGenerate3[0].header}
+            </div>
+            <div className='why-gen-col-content'>
+              <p className='white-p-text'>
+                {whyGenerate3 && whyGenerate3[0].content[0]}
               </p>
               <img
                 src={Placeholder}

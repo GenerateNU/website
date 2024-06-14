@@ -5,7 +5,6 @@ import './style.css'
 function WhatIsGenerate(props, ref) {
   const query = `*[_type == "copy" && key == "what-is-generate-landing"]{header, content}`
   const headerCopy = useSanity(query)
-  // console.log(headerCopy[0].copy)
 
   return (
     <div ref={ref} className='grid-bg bg-row' id='ll2-row'>
