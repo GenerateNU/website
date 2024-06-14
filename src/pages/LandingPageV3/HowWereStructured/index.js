@@ -1,51 +1,64 @@
 import React, { useEffect, useState } from 'react'
-import teamDataWheel from '../../../data/teamDataWheel'
+import { useSanity } from '../../../services/useSanity'
+import { urlFor } from '../../../client'
 import './style.css'
 
 export default function HowWereStrctured() {
-  // TODO: use Sanity to fetch team data
+  const copyQuery = `*[_type == "copy" && key == "how-were-structured"]{header, content}`
+  const copy = useSanity(copyQuery)
+
+  const teamQuery = `*[_type == "team" && team != "Clients"] {team, image, teamDescription, zIndex} | order(zIndex)`
+  const teams = useSanity(teamQuery, {}, (data) =>
+    data
+      ? data.map((value) => ({
+          ...value,
+          image: urlFor(value.image)
+        }))
+      : []
+  )
+
   const [selected, setSelected] = useState({})
 
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * teamDataWheel.length)
-    setSelected(teamDataWheel[randomIndex])
-  }, [])
+    if (teams.length > 0) {
+      const randomIndex = Math.floor(Math.random() * teams.length)
+      setSelected(teams[randomIndex])
+    }
+  }, [teams])
 
-  const handlePress = (teamData) => {
-    setSelected(teamData)
-  }
   const handleHover = (teamData) => {
     setSelected(teamData)
   }
 
   return (
-    <div className='grid-bg padded-container'>
-      <div className='white-header-text'>How We're Structured</div>
+    <div className='grid-bg' id='ll5-row'>
+      <div className='white-header-text'>
+        {copy && copy[0] && copy[0].header}
+      </div>
       <div className='white-p-text'>
-        We organize around our functions of expertise, to ensure each member
-        dedicates time and attention to what they do best, and how they want to
-        grow!
+        {copy && copy[0] && copy[0].content[0]}
       </div>
       <div className='wheel-content'>
         <div className='management-wheel'>
           <div id='skills'>
-            {teamDataWheel.map((data, index) => {
-              return (
-                <button
-                  key={`part${index}`}
-                  id={`part${index}`}
-                  className='circle animate'
-                  onClick={() => handlePress(data)}
-                  onMouseEnter={() => handleHover(data)}
-                >
-                  <img
-                    className={`image${index}`}
-                    alt={data.team}
-                    src={data.image}
-                  />
-                </button>
-              )
-            })}
+            {teams &&
+              teams[0] &&
+              teams.map((team, index) => {
+                return (
+                  <button
+                    key={`slice${index}`}
+                    id={`slice${index}`}
+                    className='circle animate'
+                    onMouseEnter={() => handleHover(team)}
+                  >
+                    <img
+                      className={`image${index}`}
+                      alt={team.team}
+                      src={team.image}
+                    />
+                  </button>
+                )
+              })}
             <div className='center' />
           </div>
         </div>
@@ -53,7 +66,7 @@ export default function HowWereStrctured() {
           {
             <>
               <div className='white-h2-text'> {selected.team} </div>
-              <div className='white-p-text'> {selected.text} </div>
+              <div className='white-p-text'> {selected.teamDescription} </div>
               <div
                 className='view-pp-fp-project-div'
                 style={{ paddingTop: '5vw' }}

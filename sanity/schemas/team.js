@@ -16,6 +16,14 @@ export default defineType({
       type: 'color',
     }),
     defineField({
+      name: 'image',
+      title: 'Team Wheel Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
@@ -73,6 +81,7 @@ export default defineType({
   preview: {
     select: {
       title: 'team',
+      media: 'image',
     },
   },
 })
