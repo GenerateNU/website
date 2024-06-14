@@ -17,11 +17,11 @@ export default function WhyGenerate() {
         <div className='why-gen-container'>
           <div className='why-gen-col'>
             <div className='white-h2-text'>
-              {whyGenerate1 && whyGenerate1[0].header}
+              {whyGenerate1 && whyGenerate1[0] && whyGenerate1[0].header}
             </div>
             <div className='why-gen-col-content'>
               <p className='white-p-text'>
-                {whyGenerate1 && whyGenerate1[0].content[0]}
+                {whyGenerate1 && whyGenerate1[0] && whyGenerate1[0].content[0]}
               </p>
               <img
                 src={Placeholder}
@@ -32,7 +32,7 @@ export default function WhyGenerate() {
           </div>
           <div className='why-gen-col'>
             <div className='white-h2-text'>
-              {whyGenerate2 && whyGenerate2[0].header}
+              {whyGenerate2 && whyGenerate2[0] && whyGenerate2[0].header}
             </div>
             <div className='why-gen-col-content' id='wgcc-rev'>
               <img
@@ -41,17 +41,17 @@ export default function WhyGenerate() {
                 alt='Placeholder'
               />
               <p className='white-p-text'>
-                {whyGenerate2 && whyGenerate2[0].content[0]}
+                {whyGenerate2 && whyGenerate2[0] && whyGenerate2[0].content[0]}
               </p>
             </div>
           </div>
           <div className='why-gen-col'>
             <div className='white-h2-text'>
-              {whyGenerate3 && whyGenerate3[0].header}
+              {whyGenerate3 && whyGenerate3[0] && whyGenerate3[0].header}
             </div>
             <div className='why-gen-col-content'>
               <p className='white-p-text'>
-                {whyGenerate3 && whyGenerate3[0].content[0]}
+                {whyGenerate3 && whyGenerate3[0] && whyGenerate3[0].content[0]}
               </p>
               <img
                 src={Placeholder}
