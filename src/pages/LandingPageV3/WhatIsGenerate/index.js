@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSanity } from '../../../services/useSanity'
-import './style.css'
 
 function WhatIsGenerate(props, ref) {
   const query = `*[_type == "copy" && key == "what-is-generate-landing"]{header, content}`

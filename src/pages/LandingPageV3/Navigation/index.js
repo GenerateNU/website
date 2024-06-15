@@ -1,6 +1,5 @@
 import { ReactComponent as GenerateLogo } from '../../../assets/images/landingpage-v3/GenerateLogo.svg'
 import { ReactComponent as DownArrow } from '../../../assets/images/landingpage-v3/DownArrow.svg'
-import './style.css'
 import { ReactComponent as Instagram } from '../../../assets/icons/socials/Instagram.svg'
 import { ReactComponent as Email } from '../../../assets/icons/socials/Email.svg'
 import { ReactComponent as LinkedIn } from '../../../assets/icons/socials/LinkedIn.svg'
