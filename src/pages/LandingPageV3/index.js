@@ -24,7 +24,7 @@ export default function LandingPageV3() {
       <WhyGenerate />
       <HowWereStrctured />
       <ChooseYourCharacter />
-      {/* <CelebrateOurWins /> */}
+      <CelebrateOurWins />
       {/* <Footer /> */}
     </div>
   )
