@@ -26,6 +26,10 @@ export default function HowWereStrctured() {
     }
   }, [teams])
 
+  const handlePress = (teamData) => {
+    setSelected(teamData)
+  }
+
   const handleHover = (teamData) => {
     setSelected(teamData)
   }
@@ -49,6 +53,7 @@ export default function HowWereStrctured() {
                     key={`slice${index}`}
                     id={`slice${index}`}
                     className='circle animate'
+                    onPress={() => handlePress(team)}
                     onMouseEnter={() => handleHover(team)}
                   >
                     <img
@@ -63,16 +68,12 @@ export default function HowWereStrctured() {
           </div>
         </div>
         <div className='management-text'>
-          {
-            <>
-              <div className='white-h2-text'> {selected.team} </div>
-              <div className='white-p-text'> {selected.teamDescription} </div>
-              <div
-                className='view-pp-fp-project-div'
-                style={{ paddingTop: '5vw' }}
-              ></div>
-            </>
-          }
+          <div className='white-h2-text'> {selected.team} </div>
+          <div className='white-p-text'> {selected.teamDescription} </div>
+          <div
+            className='view-pp-fp-project-div'
+            style={{ paddingTop: '5vw' }}
+          ></div>
         </div>
       </div>
     </div>

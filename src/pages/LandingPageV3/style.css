@@ -42,7 +42,8 @@
 }
 
 #ll4-row {
-  padding: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 #ll5-row {
@@ -150,6 +151,11 @@
   padding-left: 4rem;
 }
 
+#why-generate {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 #values-wrapper {
   position: relative;
 }
@@ -221,12 +227,17 @@
   margin-bottom: 0.5rem;
 }
 
-.we-are-image {
-  /* max-width: min(40vw, '40rem') !important; */
-  /* height: min(40vw, '40rem'); */
+/* TODO: fix resize */
+.we-are-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.we-are-img {
   width: max(40vw, 18rem);
   object-fit: contain;
-  margin-top: '1vw';
+  margin-top: 14vh;
 }
 
 .why-gen-container {
@@ -254,7 +265,18 @@
   object-fit: contain;
 }
 
+.arcade-mascot:nth-child(odd) {
+  margin-top: -20px; /* Adjust upward for odd items */
+}
+
+.arcade-mascot:nth-child(even) {
+  margin-top: 20px; /* Adjust downward for even items */
+}
+
 @media (max-width: 1200px) {
+  .we-are-container {
+    flex-direction: column;
+  }
   .why-gen-container {
     flex-direction: column;
   }
