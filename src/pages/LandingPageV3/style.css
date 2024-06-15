@@ -17,6 +17,56 @@
   justify-content: center;
 }
 
+.footer-container-new {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* Align items to the start (left) */
+  align-items: center;
+  background-color: #187dff;
+  background-color: #4285F4;
+  padding: 3vh;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  color: white;
+}
+
+
+.links-containerr {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 3vw;
+    /* Stack links vertically */
+}
+
+.link-new {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 20px;
+   margin-bottom: 0.3vh;
+   width: 30vw;
+    align-content: space-evenly;
+}
+
+.icon-container-new {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding:
+}
+
+.social-link {
+  padding: 1vw;
+}
+
+.shadow-arrow-container-2 {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 6vh;
+}
+
+
 .landing-lines {
   width: 600px;
   height: 100%;

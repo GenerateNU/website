@@ -1,12 +1,12 @@
 import React, { useRef } from 'react'
 import Navigation from './Navigation'
-import Footer from '../../component/Footer/HorizontalFooter'
 import WhatIsGenerate from './WhatIsGenerate'
 import WeAre from './WeAre'
 import WhyGenerate from './WhyGenerate'
 import HowWereStrctured from './HowWereStructured'
 import ChooseYourCharacter from './ChooseYourCharacter'
 import CelebrateOurWins from './CelebrateOurWins'
+import WebFooter from './Footer/WebFooter'
 import './style.css'
 
 export default function LandingPageV3() {
@@ -25,6 +25,7 @@ export default function LandingPageV3() {
       <HowWereStrctured />
       <ChooseYourCharacter />
       <CelebrateOurWins />
+      <WebFooter />
       {/* <Footer /> */}
     </div>
   )
