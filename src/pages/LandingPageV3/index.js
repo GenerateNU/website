@@ -5,6 +5,8 @@ import WhatIsGenerate from './WhatIsGenerate'
 import WeAre from './WeAre'
 import WhyGenerate from './WhyGenerate'
 import HowWereStrctured from './HowWereStructured'
+import ChooseYourCharacter from './ChooseYourCharacter'
+import CelebrateOurWins from './CelebrateOurWins'
 import './style.css'
 
 export default function LandingPageV3() {
@@ -21,7 +23,9 @@ export default function LandingPageV3() {
       <WeAre />
       <WhyGenerate />
       <HowWereStrctured />
-      <Footer />
+      <ChooseYourCharacter />
+      {/* <CelebrateOurWins /> */}
+      {/* <Footer /> */}
     </div>
   )
 }

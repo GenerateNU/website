@@ -265,12 +265,64 @@
   object-fit: contain;
 }
 
-.arcade-mascot:nth-child(odd) {
-  margin-top: -20px; /* Adjust upward for odd items */
+.choose-character-row {
+  display: flex;
+  flex-direction: row;
 }
 
-.arcade-mascot:nth-child(even) {
-  margin-top: 20px; /* Adjust downward for even items */
+.choose-character-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.choose-character-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+  gap: 2rem;
+}
+
+.mascot-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mascot-button {
+  cursor: 'pointer';
+}
+
+#generate-mascot {
+  width: 8vw;
+  height: auto;
+}
+
+.mascot-button:nth-child(odd) {
+  transform: translateY(-1rem);
+}
+
+.mascot-button:nth-child(even) {
+  transform: translateY(1rem);
+}
+
+#arcade-text{
+  width: 50vw;
+  height: auto;
+}
+
+#rainbow-trim {
+  width: 80vw;
+  height: auto;
+  margin-bottom: 4rem;
+}
+
+#arcade-machine {
+  margin-left: -18rem;
+  width: 35vw;
+  height: auto;
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 1200px) {

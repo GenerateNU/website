@@ -115,7 +115,6 @@
 
 @media (max-width: 840px) {
   .wheel-content {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
