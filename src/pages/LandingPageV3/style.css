@@ -31,6 +31,7 @@
   color: white;
 }
 
+
 .links-containerr {
   display: flex;
   justify-content: flex-start;
@@ -46,22 +47,35 @@
   margin-bottom: 0.3vh;
   width: 30vw;
   align-content: space-evenly;
+    flex-wrap: wrap;
+      /* Wrap icons if they overflow */
+      flex-basis: auto;
+      /* Allow container to shrink */
 }
 
 .icon-container-new {
   display: flex;
   justify-content: flex-end;
-  margin-left: auto;
+  margin-left: auto;  
+    flex-wrap: wrap;
+      /* Wrap icons if they overflow */
+      flex-basis: auto;
+      /* Allow container to shrink */
 }
 
 .social-link {
   padding: 1vw;
+
 }
 
 .shadow-arrow-container-2 {
   display: flex;
   justify-content: flex-end;
-  margin-left: 6vh;
+  margin-left: 3vw;
+  flex-wrap: wrap;
+    /* Wrap icons if they overflow */
+    flex-basis: auto;
+    /* Allow container to shrink */
 }
 
 .landing-lines {
@@ -420,7 +434,7 @@
   .links-containerr-mobile {
     display: flex;
     flex-direction: row;
-    margin-left: 3vw;
+    margin-left: 6vw;
     /* Stack links vertically */
   }
 
