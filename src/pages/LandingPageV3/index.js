@@ -7,6 +7,8 @@ import HowWereStrctured from './HowWereStructured'
 import ChooseYourCharacter from './ChooseYourCharacter'
 import CelebrateOurWins from './CelebrateOurWins'
 import WebFooter from './Footer/WebFooter'
+import MobileFooter from './Footer/MobileFooter'
+import Footer from './Footer'
 import './style.css'
 
 export default function LandingPageV3() {
@@ -25,7 +27,7 @@ export default function LandingPageV3() {
       <HowWereStrctured />
       <ChooseYourCharacter />
       <CelebrateOurWins />
-      <WebFooter />
+      <Footer />
       {/* <Footer /> */}
     </div>
   )

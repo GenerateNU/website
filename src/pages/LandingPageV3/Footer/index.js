@@ -1,6 +1,7 @@
 import React from 'react'
 import WebFooter from './WebFooter'
 import useWebsite from '../../../shared/useWebsite'
+import MobileFooter from './MobileFooter'
 
 export const pages = [
   { name: 'Projects', link: '/projects' },
@@ -39,7 +40,7 @@ function Footer() {
   const website = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
 
-  return isBigScreen && website ? <WebFooter /> : <WebFooter />
+  return isBigScreen && website ? <WebFooter /> : <MobileFooter />
 }
 
 export default Footer

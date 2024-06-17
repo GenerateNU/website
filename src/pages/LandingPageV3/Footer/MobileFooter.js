@@ -8,9 +8,9 @@ import ShadowedButton from '../../../component/ShadowedButton'
 import { ReactComponent as Instagram } from '../../../assets/icons/socials/Instagram.svg'
 import { ReactComponent as Email } from '../../../assets/icons/socials/Email.svg'
 import { ReactComponent as LinkedIn } from '../../../assets/icons/socials/LinkedIn.svg'
-import UpArrow from '../../../assets/icons/arrows/upArrow.svg'
+import UpArrowMobile from '../../../assets/icons/arrows/upArrowMobile.svg'
 
-function WebFooter() {
+function MobileFooter() {
   const navigate = useNavigate()
   const currentPageUrl = window.location.href
   const handleOnClick = () => {
@@ -37,24 +37,9 @@ function WebFooter() {
   ]
 
   return (
-    <div className='footer-container-new '>
-      <ShadowedButton
-        fillColor='white'
-        yPad={'0.5px'}
-        xPad={'0.5px'}
-        right={false}
-        text={
-          <img
-            style={{ marginTop: '10px' }}
-            width={'100px'}
-            src={GenerateLogo}
-            alt='matt was here'
-          />
-        }
-        onClick={handleOnClick}
-      />
-      <div className='links-containerr'>
-        <div className='link-new'>
+    <div className='footer-container-new-mobile '>
+      <div className='links-containerr-mobile'>
+        <div className='link-new-mobile'>
           {pages.map((page, index) => (
             <FooterLink
               key={`footer-link-${index}`}
@@ -65,12 +50,31 @@ function WebFooter() {
             />
           ))}
         </div>
-      </div>
-      <div className='icon-container-new'>
+      <div className='shadow-arrow-container-2-mobile'>
+        <ShadowedButton
+          fillColor='white'
+          yPad={'15px'}
+          xPad={'0px'}
+          right={false}
+          text={
+            <img
+              style={{ marginTop: '3px' }}
+              width={'70px'}
+              src={UpArrowMobile}
+              alt='matt was here'
+            />
+          }
+          onClick={handleOnClick}
+        />
+                </div>
+
+    </div>
+
+      <div className='icon-container-new-mobile'>
         {icons.map((si, index) => (
           <a
             key={index}
-            className='social-link'
+            className='social-link-mobile'
             href={si.href}
             target='_blank'
             rel='noopener noreferrer'
@@ -79,26 +83,9 @@ function WebFooter() {
             {si.symbol}
           </a>
         ))}
-        <div className='shadow-arrow-container-2'>
-          <ShadowedButton
-            fillColor='white'
-            yPad={'10px'}
-            xPad={'2px'}
-            right={false}
-            text={
-              <img
-                style={{ marginTop: '10px' }}
-                width={'105px'}
-                src={UpArrow}
-                alt='matt was here'
-              />
-            }
-            onClick={handleOnClick}
-          />
-        </div>
       </div>
     </div>
   )
 }
 
-export default WebFooter
+export default MobileFooter
