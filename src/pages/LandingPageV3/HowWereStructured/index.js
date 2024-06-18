@@ -17,8 +17,10 @@ export default function HowWereStrctured() {
       : []
   )
 
+  const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState({})
 
+  // Showcase a random team each time component renders
   useEffect(() => {
     if (teams.length > 0) {
       const randomIndex = Math.floor(Math.random() * teams.length)
@@ -29,10 +31,14 @@ export default function HowWereStrctured() {
   const handlePress = (teamData) => {
     setSelected(teamData)
   }
-
   const handleHover = (teamData) => {
-    setSelected(teamData)
+    setHovered(teamData)
   }
+  const handleLeave = () => {
+    setHovered(null)
+  }
+
+  const displayedTeam = hovered || selected
 
   return (
     <div className='grid-bg' id='ll5-row'>
@@ -55,6 +61,7 @@ export default function HowWereStrctured() {
                     className='circle animate'
                     onPress={() => handlePress(team)}
                     onMouseEnter={() => handleHover(team)}
+                    onMouseLeave={() => handleLeave()}
                   >
                     <img
                       className={`image${index}`}
@@ -68,8 +75,8 @@ export default function HowWereStrctured() {
           </div>
         </div>
         <div className='management-text'>
-          <div className='white-h2-text'> {selected.team} </div>
-          <div className='white-p-text'> {selected.teamDescription} </div>
+          <div className='white-h2-text'> {displayedTeam.team} </div>
+          <div className='white-p-text'> {displayedTeam.teamDescription} </div>
           <div
             className='view-pp-fp-project-div'
             style={{ paddingTop: '5vw' }}
