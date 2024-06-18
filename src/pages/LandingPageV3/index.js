@@ -6,6 +6,7 @@ import WhyGenerate from './WhyGenerate'
 import HowWereStrctured from './HowWereStructured'
 import ChooseYourCharacter from './ChooseYourCharacter'
 import CelebrateOurWins from './CelebrateOurWins'
+import ParentOrgs from './ParentOrgs'
 import Footer from './Footer'
 import './style.css'
 
@@ -25,6 +26,7 @@ export default function LandingPageV3() {
       <HowWereStrctured />
       <ChooseYourCharacter />
       <CelebrateOurWins />
+      <ParentOrgs />
       <Footer />
     </div>
   )
