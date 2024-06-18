@@ -1,11 +1,8 @@
 import './style.css'
 
-export default function RoleCategory(
-  {
-    roleCategory: { name = '', description = '', roles = [], color = '' } = {}
-  },
-  desktopContent
-) {
+export default function RoleCategory({
+  roleCategory: { name = '', description = '', roles = [], color = '' } = {}
+}) {
   const activeApps = roles.filter(
     (role) => role.activeApplication === true && role.applicationLink
   )
@@ -16,7 +13,7 @@ export default function RoleCategory(
   return (
     <div>
       <div className='team-subheader'>{name}</div>
-      <div className='paragraph'>{description}</div>
+      <div className='paragraph' style={{color: 'white'}}>{description}</div>
       <div className='link-column-container'>
         <div className='link-column'>
           {firstColumn.map((role) => (

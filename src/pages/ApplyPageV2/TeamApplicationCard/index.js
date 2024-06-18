@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import RoleCategory from '../RoleCategory'
 import Tag from '../Tag'
-import { ReactComponent as DownArrow } from '../../../assets/images/applypage-v2/downArrow.svg'
-import { ReactComponent as RightArrow } from '../../../assets/images/applypage-v2/RightArrow.svg'
+import { ReactComponent as WhiteDownArrow } from '../../../assets/images/applypage-v2/WhiteDownArrow.svg'
+import { ReactComponent as WhiteUpArrow } from '../../../assets/images/applypage-v2/WhiteUpArrow.svg'
+import RightArrow from '../../../assets/images/applypage-v2/RightArrow.js'
 import './style.css'
 
 export default function TeamApplicationCard({ team }) {
-  const boxStyle = {
-    boxShadow: `-1rem 1rem ${team.color}`
-  }
   const [expanded, setExpanded] = useState(false)
   const expand = team.externalLink === undefined
   const viewRoles = 'View Roles'
@@ -16,22 +14,15 @@ export default function TeamApplicationCard({ team }) {
   const meetTheTeam = 'Meet the team'
 
   return (
-    <div
-      className={`team-card-container ${expanded ? 'expanded' : ''}`}
-      style={boxStyle}
-    >
-      <div className='team-header-container'>
-        <div className='team-header' style={{ color: team.color }}>
-          {team.team}
-        </div>
+    <div className={`team-card-container ${expanded ? 'expanded' : ''}`}>
+      <div className='team-header-container' style={{ background: team.color }}>
+        <div className='team-header'>{team.team}</div>
         <div className='tags-container'>
           {team.tags
             ? team.tags.map((tag) => <Tag key={tag} title={tag} />)
             : null}
         </div>
-        <div className='paragraph' style={{ color: 'white' }}>
-          {team.teamDescription}
-        </div>
+        <div className='paragraph'>{team.teamDescription}</div>
       </div>
       {expand ? (
         <div>
@@ -39,7 +30,7 @@ export default function TeamApplicationCard({ team }) {
             className='interactive-button'
             onClick={() => setExpanded(!expanded)}
           >
-            <DownArrow />
+            {expanded ? <WhiteUpArrow /> : <WhiteDownArrow />}
             <div className='team-subheader'>{viewRoles}</div>
           </button>
           <div className={`expanded-container ${expanded ? 'expanded' : ''}`}>
@@ -80,7 +71,7 @@ export default function TeamApplicationCard({ team }) {
       ) : (
         <a href={team.externalLink} target='_blank' rel='noopener noreferrer'>
           <button className='interactive-button'>
-            <RightArrow />
+            <RightArrow color='white' />
             <div className='team-subheader'>
               {team.team === 'Clients' ? workWithUs : meetTheTeam}
             </div>
