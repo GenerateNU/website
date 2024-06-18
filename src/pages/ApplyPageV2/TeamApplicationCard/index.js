@@ -9,20 +9,34 @@ import './style.css'
 export default function TeamApplicationCard({ team }) {
   const [expanded, setExpanded] = useState(false)
   const expand = team.externalLink === undefined
+  const clientCard = team.team === 'Clients'
   const viewRoles = 'View Roles'
   const workWithUs = 'Work with Us'
   const meetTheTeam = 'Meet the team'
 
   return (
-    <div className={`team-card-container ${expanded ? 'expanded' : ''}`}>
-      <div className='team-header-container' style={{ background: team.color }}>
-        <div className='team-header'>{team.team}</div>
+    <div
+      className={`team-card-container ${expanded ? 'expanded' : ''} ${clientCard ? 'client-border' : ''}`}
+      style={{ boxShadow: clientCard ? `-1rem 1rem ${team.color}` : '' }}
+    >
+      <div
+        className={`team-header-container ${clientCard ? 'client-header' : ''}`}
+        style={{ background: team.color }}
+      >
+        <div
+          className='team-header'
+          style={{ color: clientCard ? team.color : '' }}
+        >
+          {team.team}
+        </div>
         <div className='tags-container'>
           {team.tags
             ? team.tags.map((tag) => <Tag key={tag} title={tag} />)
             : null}
         </div>
-        <div className='paragraph'>{team.teamDescription}</div>
+        <div className='paragraph' style={{ color: clientCard ? 'white' : '' }}>
+          {team.teamDescription}
+        </div>
       </div>
       {expand ? (
         <div>
@@ -70,10 +84,16 @@ export default function TeamApplicationCard({ team }) {
         </div>
       ) : (
         <a href={team.externalLink} target='_blank' rel='noopener noreferrer'>
-          <button className='interactive-button'>
-            <RightArrow color='white' />
-            <div className='team-subheader'>
-              {team.team === 'Clients' ? workWithUs : meetTheTeam}
+          <button
+            className='interactive-button'
+            style={{ backgroundColor: clientCard ? 'white' : 'black' }}
+          >
+            <RightArrow color={clientCard ? 'black' : 'white'} />
+            <div
+              className='team-subheader'
+              style={{ color: clientCard ? 'black' : 'white' }}
+            >
+              {clientCard ? workWithUs : meetTheTeam}
             </div>
           </button>
         </a>

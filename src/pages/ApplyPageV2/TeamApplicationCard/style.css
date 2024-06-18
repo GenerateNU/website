@@ -3,8 +3,12 @@
   flex-direction: column;
   margin-bottom: 5vh;
   transition: all 0.3s ease-in-out;
-  border: 2px solid black;
   box-shadow: -1rem 1rem white;
+  border: 2px solid black;
+}
+
+.client-border {
+  border: 2px solid white;
 }
 
 .team-card-container:hover:not(.expanded) {
@@ -18,6 +22,10 @@
   flex-direction: column;
   padding: 15px;
   gap: 15px;
+}
+
+.client-header {
+  background: black !important;
 }
 
 .tags-container {
