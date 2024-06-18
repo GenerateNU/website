@@ -1,6 +1,4 @@
 import React from 'react'
-import '../style.css'
-import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg' //"../../assets/images/landingpage-v2/footerlogo.svg";
 import { FooterLink } from '.'
 import { useNavigate } from 'react-router-dom'
 import { pages } from '.'
@@ -50,25 +48,24 @@ function MobileFooter() {
             />
           ))}
         </div>
-      <div className='shadow-arrow-container-2-mobile'>
-        <ShadowedButton
-          fillColor='white'
-          yPad={'15px'}
-          xPad={'0px'}
-          right={false}
-          text={
-            <img
-              style={{ marginTop: '3px' }}
-              width={'70px'}
-              src={UpArrowMobile}
-              alt='matt was here'
-            />
-          }
-          onClick={handleOnClick}
-        />
-                </div>
-
-    </div>
+        <div className='shadow-arrow-container-2-mobile'>
+          <ShadowedButton
+            fillColor='white'
+            yPad={'15px'}
+            xPad={'0px'}
+            right={false}
+            text={
+              <img
+                style={{ marginTop: '3px' }}
+                width={'70px'}
+                src={UpArrowMobile}
+                alt='matt was here'
+              />
+            }
+            onClick={handleOnClick}
+          />
+        </div>
+      </div>
 
       <div className='icon-container-new-mobile'>
         {icons.map((si, index) => (

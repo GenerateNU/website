@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import Placeholder from '../../../assets/images/landingpage/weare/landing.jpg'
-import { ReactComponent as LeftArrow } from '../../../assets/icons/arrows/carouselArrowLeft.svg'
-import { ReactComponent as RightArrow } from '../../../assets/icons/arrows/carouselArrowRight.svg'
 import { useSanity } from '../../../services/useSanity'
 
 export default function CelebrateOurWins() {
@@ -44,8 +41,8 @@ export default function CelebrateOurWins() {
         </div>
       </div>
       <div className='showcase-carousel'>
-        <button className="button-link" onClick={handleLeftButtonClick}>
-          <LeftArrow />
+        <button className='button-link' onClick={handleLeftButtonClick}>
+          {/* <LeftArrow /> */}
         </button>
         {showcases.map((showcase, index) => (
           <div key={index} className='showcase-item'>
@@ -59,8 +56,8 @@ export default function CelebrateOurWins() {
             />
           </div>
         ))}
-        <button className="button-link" onClick={handleRightButtonClick}>
-          <RightArrow />
+        <button className='button-link' onClick={handleRightButtonClick}>
+          {/* <RightArrow /> */}
         </button>
       </div>
     </div>

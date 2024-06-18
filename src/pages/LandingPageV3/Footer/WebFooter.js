@@ -1,5 +1,4 @@
 import React from 'react'
-import '../style.css'
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg' //"../../assets/images/landingpage-v2/footerlogo.svg";
 import { FooterLink } from '.'
 import { useNavigate } from 'react-router-dom'

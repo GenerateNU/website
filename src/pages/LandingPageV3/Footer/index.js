@@ -7,8 +7,6 @@ export const pages = [
   { name: 'Projects', link: '/projects' },
   { name: 'Clients', link: '/about' },
   { name: 'Apply', link: '/apply' },
-  { name: 'Apply', link: '/culture' },
-
 ]
 
 export const FooterLink = ({ page, currentPage }) => {
