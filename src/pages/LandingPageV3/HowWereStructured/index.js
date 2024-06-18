@@ -19,8 +19,8 @@ export default function HowWereStrctured() {
 
   const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState({})
+  const displayedTeam = hovered || selected
 
-  // Showcase a random team each time component renders
   useEffect(() => {
     if (teams.length > 0) {
       const randomIndex = Math.floor(Math.random() * teams.length)
@@ -28,7 +28,7 @@ export default function HowWereStrctured() {
     }
   }, [teams])
 
-  const handlePress = (teamData) => {
+  const handleClick = (teamData) => {
     setSelected(teamData)
   }
   const handleMouseEnter = (teamData) => {
@@ -37,8 +37,6 @@ export default function HowWereStrctured() {
   const handleMouseLeave = () => {
     setHovered(null)
   }
-
-  const displayedTeam = hovered || selected
 
   return (
     <div className='grid-bg' id='ll5-row'>
@@ -59,7 +57,7 @@ export default function HowWereStrctured() {
                     key={`slice${index}`}
                     id={`slice${index}`}
                     className='circle animate'
-                    onPress={() => handlePress(team)}
+                    onClick={() => handleClick(team)}
                     onMouseEnter={() => handleMouseEnter(team)}
                     onMouseLeave={() => handleMouseLeave()}
                   >

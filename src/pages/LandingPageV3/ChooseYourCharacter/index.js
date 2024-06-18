@@ -44,7 +44,7 @@ const MascotRadioButton = ({
   return (
     <div
       className={`mascot-button mascot-button-${index}`}
-      onPress={() => onPress(index)}
+      onClick={() => onPress(index)}
       onMouseEnter={() => onMouseEnter(index)}
       onMouseLeave={onMouseLeave}
     >
@@ -71,6 +71,7 @@ export default function ChooseYourCharacter() {
 
   const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState(0)
+  const displayedIndex = hovered || selected
 
   const handlePress = (index) => {
     setSelected(index)
@@ -81,8 +82,6 @@ export default function ChooseYourCharacter() {
   const handleMouseLeave = () => {
     setHovered(null)
   }
-
-  const displayedIndex = hovered || selected
 
   return (
     <div className='bg-row'>
