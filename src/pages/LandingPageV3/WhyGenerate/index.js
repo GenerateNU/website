@@ -1,6 +1,5 @@
 import Placeholder from '../../../assets/images/landingpage/weare/landing.jpg'
 import { useSanity } from '../../../services/useSanity'
-import './style.css'
 
 export default function WhyGenerate() {
   const query1 = `*[_type == "copy" && key == "why-generate-1"]{header, content}`
