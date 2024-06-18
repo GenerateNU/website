@@ -31,10 +31,10 @@ export default function HowWereStrctured() {
   const handlePress = (teamData) => {
     setSelected(teamData)
   }
-  const handleHover = (teamData) => {
+  const handleMouseEnter = (teamData) => {
     setHovered(teamData)
   }
-  const handleLeave = () => {
+  const handleMouseLeave = () => {
     setHovered(null)
   }
 
@@ -60,8 +60,8 @@ export default function HowWereStrctured() {
                     id={`slice${index}`}
                     className='circle animate'
                     onPress={() => handlePress(team)}
-                    onMouseEnter={() => handleHover(team)}
-                    onMouseLeave={() => handleLeave()}
+                    onMouseEnter={() => handleMouseEnter(team)}
+                    onMouseLeave={() => handleMouseLeave()}
                   >
                     <img
                       className={`image${index}`}

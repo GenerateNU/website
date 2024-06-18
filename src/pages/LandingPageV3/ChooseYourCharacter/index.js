@@ -33,9 +33,8 @@ const teamAbbreviations = ['MNGMNT', 'ENGMNT', 'SFTWRE', 'HRDWRE', 'OPRATN']
 
 const MascotRadioButton = ({
   index,
-  isSelected,
-  isHovered,
-  onClick,
+  isDisplayed,
+  onPress,
   onMouseEnter,
   onMouseLeave
 }) => {
@@ -45,11 +44,11 @@ const MascotRadioButton = ({
   return (
     <div
       className={`mascot-button mascot-button-${index}`}
-      onClick={() => onClick(index)}
+      onPress={() => onPress(index)}
       onMouseEnter={() => onMouseEnter(index)}
       onMouseLeave={onMouseLeave}
     >
-      {isSelected || isHovered ? (
+      {isDisplayed ? (
         <ColoredMascot id='generate-mascot' />
       ) : (
         <GrayMascot id='generate-mascot' />
@@ -69,22 +68,21 @@ export default function ChooseYourCharacter() {
         }))
       : []
   )
-  // const [selectedDirector, setSelectedDirector] = useState(directors[0])
 
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const [hoveredIndex, setHoveredIndex] = useState(null)
+  const [hovered, setHovered] = useState(null)
+  const [selected, setSelected] = useState(0)
 
+  const handlePress = (index) => {
+    setSelected(index)
+  }
   const handleMouseEnter = (index) => {
-    setHoveredIndex(index)
+    setHovered(index)
   }
-
   const handleMouseLeave = () => {
-    setHoveredIndex(null)
+    setHovered(null)
   }
 
-  const handleClick = (index) => {
-    setSelectedIndex(index)
-  }
+  const displayedIndex = hovered || selected
 
   return (
     <div className='bg-row'>
@@ -98,30 +96,29 @@ export default function ChooseYourCharacter() {
                   <MascotRadioButton
                     key={index}
                     index={index}
-                    isSelected={index === selectedIndex}
-                    isHovered={index === hoveredIndex}
-                    onClick={handleClick}
+                    isDisplayed={index === displayedIndex}
+                    onPress={handlePress}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   />
                 ))}
             </div>
-            {directors && directors[selectedIndex] && (
+            {directors && directors[displayedIndex] && (
               <ArcadeText
                 id='arcade-text'
-                color={directors[selectedIndex].color}
-                director={directors[selectedIndex]}
+                color={directors[displayedIndex].color}
+                director={directors[displayedIndex]}
               />
             )}
           </div>
           <RainbowTrim id='rainbow-trim' />
         </div>
-        {directors && directors[selectedIndex] && (
+        {directors && directors[displayedIndex] && (
           <ArcadeMachine
             id='arcade-machine'
-            color={directors[selectedIndex].color}
-            text={teamAbbreviations[selectedIndex]}
-            imgUrl={directors[selectedIndex].image}
+            color={directors[displayedIndex].color}
+            text={teamAbbreviations[displayedIndex]}
+            imgUrl={directors[displayedIndex].image}
           />
         )}
       </div>
