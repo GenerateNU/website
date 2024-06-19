@@ -10,7 +10,9 @@ export default function WeAre() {
       <div id='we-are'>
         <div className='white-header-text'>We Are...</div>
         <div className='we-are-container'>
-          <img className='we-are-img' src={Placeholder} alt='Placeholder' />
+          <div className='we-are-img-div'>
+            <img className='we-are-img' src={Placeholder} alt='Placeholder' />
+          </div>
           <div id='values'>
             <div id='values-container'>
               <div id='value-0' className='value'>
