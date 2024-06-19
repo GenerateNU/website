@@ -118,8 +118,8 @@
 }
 
 #ll7-row {
-  min-height: 1400px;
-  max-height: 1400px;
+  /* min-height: 1400px;
+  max-height: 1400px; */
   padding-left: 4rem;
   padding-right: 4rem;
 }
@@ -360,11 +360,18 @@
 .choose-character-row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-bottom: -4rem;
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
 }
 
 .choose-character-col {
   display: flex;
   flex-direction: column;
+  width: 50%;
   gap: 2rem;
 }
 
@@ -378,47 +385,108 @@
 .mascot-row {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   align-items: center;
+  justify-content: space-around;
+  padding-right: 6rem;
 }
 
 .mascot-button {
   cursor: pointer;
-}
-
-#generate-mascot {
-  width: 8vw;
-  height: auto;
-}
-
-.mascot-colored {
-  opacity: 100;
+  padding: 1.5rem;
+  margin: -1rem;
 }
 
 .mascot-button:nth-child(odd) {
-  transform: translateY(-1rem);
+  margin-top: 1rem;
+  padding-top: 3rem;
 }
 
 .mascot-button:nth-child(even) {
-  transform: translateY(1rem);
-}
-
-#arcade-text {
-  width: 50vw;
-  height: auto;
+  margin-bottom: 1rem;
+  padding-bottom: 3rem;
 }
 
 #rainbow-trim {
-  width: 80vw;
-  height: auto;
-  margin-bottom: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 100% 100%;
+  padding-top: 50%;
+  background-repeat: no-repeat;
+  z-index: -5;
+  background-image: url('../../assets/images/landingpage-v3/RainbowTrim.svg');
+  object-fit: fill;
+}
+
+.arcade-link {
+  opacity: 0.6;
+}
+
+.arcade-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 #arcade-machine {
-  margin-left: -18rem;
-  width: 35vw;
-  height: auto;
-  margin-top: 4rem;
+  width: 30%;
+  z-index: 1;
+}
+
+@media (max-width: 1400px) {
+  .choose-character-row {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: -8rem;
+    margin-bottom: 2rem;
+  }
+
+  .choose-character-col {
+    gap: 0rem;
+  }
+  #choose-text {
+    align-self: center;
+    text-align: center;
+  }
+
+  .dynamic-icon {
+    min-width: 400px;
+    align-self: center;
+  }
+
+  #rainbow-trim {
+    margin-bottom: 50%;
+  }
+
+  .mascot-button {
+    cursor: pointer;
+    height: 4vw;
+    width: 4vw;
+    scale: 0.5;
+    translate: 0 -3rem;
+    padding: 1.5rem;
+    margin: -1rem;
+  }
+
+  .mascot-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 400px;
+    align-self: center;
+    justify-content: space-around;
+    padding-right: 6rem;
+  }
+
+  #arcade-machine {
+    width: min(20rem, 50%);
+    height: fit-content;
+    margin: auto;
+    z-index: 1;
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+  }
 }
 
 #showcase-large-stars {

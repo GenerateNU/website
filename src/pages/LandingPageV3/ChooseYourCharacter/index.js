@@ -38,7 +38,6 @@ const MascotRadioButton = ({
   onMouseEnter,
   onMouseLeave
 }) => {
-  const GrayMascot = mascotsGray[index]
   const ColoredMascot = mascotsColor[index]
 
   return (
@@ -49,8 +48,10 @@ const MascotRadioButton = ({
       onMouseLeave={onMouseLeave}
     >
       <ColoredMascot
-        id='generate-mascot'
-        className={isDisplayed ? 'mascot-colored' : ''}
+        style={{
+          opacity: isDisplayed ? 1 : 0.5,
+          filter: isDisplayed ? '' : 'grayscale(100%)'
+        }}
       />
     </div>
   )
@@ -74,9 +75,11 @@ export default function ChooseYourCharacter() {
 
   const handlePress = (index) => {
     setSelected(index)
+    console.log('press', selected)
   }
   const handleMouseEnter = (index) => {
     setHovered(index)
+    console.log('hovered', index)
   }
   const handleMouseLeave = () => {
     setHovered(null)
@@ -87,10 +90,10 @@ export default function ChooseYourCharacter() {
       <div className='choose-character-row'>
         <div className='choose-character-col'>
           <div className='choose-character-container'>
-            <div className='white-h2-text'>Choose Your Character</div>
+            <div className='white-h2-text' id="choose-text">Choose Your Character</div>
             <div className='mascot-row'>
               {directors &&
-                directors.map((_type, index) => (
+                directors.map((_, index) => (
                   <MascotRadioButton
                     key={index}
                     index={index}
@@ -103,13 +106,12 @@ export default function ChooseYourCharacter() {
             </div>
             {directors && directors[displayedIndex] && (
               <ArcadeText
-                id='arcade-text'
                 color={directors[displayedIndex].color}
                 director={directors[displayedIndex]}
               />
             )}
           </div>
-          <RainbowTrim id='rainbow-trim' />
+          <div id='rainbow-trim' />
         </div>
         {directors && directors[displayedIndex] && (
           <ArcadeMachine
