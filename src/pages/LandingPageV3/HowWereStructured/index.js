@@ -30,6 +30,8 @@ export default function HowWereStrctured() {
 
   const handleClick = (teamData) => {
     setSelected(teamData)
+    console.log("click", teamData)
+    console.log("selected", selected)
   }
   const handleMouseEnter = (teamData) => {
     setHovered(teamData)
@@ -56,7 +58,10 @@ export default function HowWereStrctured() {
                   <button
                     key={`slice${index}`}
                     id={`slice${index}`}
-                    className='circle animate'
+                    className={
+                      'circle animate ' +
+                      (selected.team === team.team ? 'selected' : '')
+                    }
                     onClick={() => handleClick(team)}
                     onMouseEnter={() => handleMouseEnter(team)}
                     onMouseLeave={() => handleMouseLeave()}
@@ -69,7 +74,6 @@ export default function HowWereStrctured() {
                   </button>
                 )
               })}
-            <div className='center' />
           </div>
         </div>
         <div className='management-text'>

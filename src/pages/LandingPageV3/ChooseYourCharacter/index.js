@@ -48,11 +48,10 @@ const MascotRadioButton = ({
       onMouseEnter={() => onMouseEnter(index)}
       onMouseLeave={onMouseLeave}
     >
-      {isDisplayed ? (
-        <ColoredMascot id='generate-mascot' />
-      ) : (
-        <GrayMascot id='generate-mascot' />
-      )}
+      <ColoredMascot
+        id='generate-mascot'
+        className={isDisplayed ? 'mascot-colored' : ''}
+      />
     </div>
   )
 }

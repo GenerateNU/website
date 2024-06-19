@@ -3,16 +3,27 @@
   flex-direction: row;
   align-items: center;
   justify-items: space-between;
-  margin: 2rem;
-  gap: 8vw;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1800px;
+  margin: auto;
+}
+
+#management-wheel {
+  width: 50%;
+}
+
+#management-text {
+  width: 50%;
 }
 
 #skills {
-  width: min(64vh, 90vw);
-  height: min(64vh, 90vw);
+  width: min(45vw, 45vh);
+  height: min(45vw, 45vh);
   transform: rotate(0deg);
+  scale: 90%;
 }
-  
+
 .center {
   position: relative;
   align-self: center;
@@ -33,43 +44,43 @@
 }
 
 .animate {
-  -webkit-transition: 0.2s cubic-bezier(.74,1.13,.83,1.2);
-  -moz-transition: 0.2s cubic-bezier(.74,1.13,.83,1.2);
-  -o-transition: 0.2s cubic-bezier(.74,1.13,.83,1.2);
-  transition: 0.2s cubic-bezier(.74,1.13,.83,1.2);
+  -webkit-transition: 0.2s cubic-bezier(0.74, 1.13, 0.83, 1.2);
+  -moz-transition: 0.2s cubic-bezier(0.74, 1.13, 0.83, 1.2);
+  -o-transition: 0.2s cubic-bezier(0.74, 1.13, 0.83, 1.2);
+  transition: 0.2s cubic-bezier(0.74, 1.13, 0.83, 1.2);
 }
 
-.animate:hover {
+.animate:hover, .selected {
   transform: scale(1.1);
   transform-origin: center center;
 }
 
 #slice0 {
-  background-color:  #187DFF;
+  background-color: #187dff;
   clip-path: polygon(50% 50%, 100% 66.25%, 100% 100%, 50% 100%);
   border: 0px;
 }
 
 #slice1 {
-  background-color: #6FCF97;
+  background-color: #6fcf97;
   clip-path: polygon(50% 50%, 88.125% 0, 100% 0, 100% 66.25%);
   border: 0px;
 }
 
 #slice2 {
-    background-color: #FFBF3C;
-    clip-path: polygon(11.875% 0, 50% 50%, 88.125% 0);
-    border: 0px;
-  }
+  background-color: #ffbf3c;
+  clip-path: polygon(11.875% 0, 50% 50%, 88.125% 0);
+  border: 0px;
+}
 
 #slice3 {
-  background-color: #A559EC;
+  background-color: #a559ec;
   clip-path: polygon(50% 50%, 0 66.25%, 0 0, 11.875% 0);
   border: 0px;
 }
 
 #slice4 {
-  background-color: #FF6660;
+  background-color: #ff6660;
   clip-path: polygon(50% 50%, 50% 100%, 0 100%, 0 66.25%);
   border: 0px;
 }
@@ -116,6 +127,11 @@
 @media (max-width: 840px) {
   .wheel-content {
     flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .wheel-content {
+    flex-direction: column;
     align-items: center;
     justify-items: center;
   }
@@ -124,5 +140,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }

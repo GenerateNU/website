@@ -391,6 +391,10 @@
   height: auto;
 }
 
+.mascot-colored {
+  opacity: 100;
+}
+
 .mascot-button:nth-child(odd) {
   transform: translateY(-1rem);
 }
