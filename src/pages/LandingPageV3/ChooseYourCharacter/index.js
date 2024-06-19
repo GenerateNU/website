@@ -49,8 +49,8 @@ const MascotRadioButton = ({
     >
       <ColoredMascot
         style={{
-          opacity: isDisplayed ? 1 : 0.5,
-          filter: isDisplayed ? '' : 'grayscale(100%)'
+          opacity: isDisplayed ? 1 : 0.3,
+          // filter: isDisplayed ? '' : 'grayscale(100%)'
         }}
       />
     </div>

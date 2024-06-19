@@ -11,7 +11,7 @@ export default function WhyGenerate() {
 
   return (
     <div className='bg-row' id='ll4-row'>
-      <div>
+      <div id="why-generate">
         <div className='white-header-text'>Why Generate?</div>
         <div className='why-gen-container'>
           <div className='why-gen-col'>

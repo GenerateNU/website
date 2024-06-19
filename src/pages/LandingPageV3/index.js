@@ -26,7 +26,7 @@ export default function LandingPageV3() {
       <HowWereStrctured />
       <ChooseYourCharacter />
       <CelebrateOurWins />
-      {/* <ParentOrgs /> */}
+      <ParentOrgs />
       <Footer />
     </div>
   )
