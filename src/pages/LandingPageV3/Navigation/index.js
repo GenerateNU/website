@@ -42,7 +42,8 @@ export default function Navigation({ scrollToWhatIsGenerate }) {
           </a> */}
           <button
             onClick={scrollToWhatIsGenerate}
-            className='landing-nav-link button-link'
+            className='landing-nav-link'
+            id="about-button"
           >
             ABOUT <DownArrow id='about-down-arrow' />
           </button>

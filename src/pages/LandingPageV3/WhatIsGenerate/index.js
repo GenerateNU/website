@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSanity } from '../../../services/useSanity'
+import Placeholder from '../../../assets/images/landingpage/weare/landing.jpg'
 
 function WhatIsGenerate(props, ref) {
   const query = `*[_type == "copy" && key == "what-is-generate-landing"]{header, content}`
@@ -15,12 +16,28 @@ function WhatIsGenerate(props, ref) {
           headerCopy[0] &&
           headerCopy[0].content.map((item, index) => (
             <>
-              <div key={index} className='white-p-text'>
+              <p key={index} className='white-p-text'>
                 {item}
-              </div>
+              </p>
               <br />
             </>
           ))}
+      </div>
+      <div id='what-is-img-container' className=' '>
+        <div className='what-is-img-div' id='what-is-img-1'>
+          <img
+            src={Placeholder}
+            alt='generate studnets having fun'
+            className='what-is-img'
+          />
+        </div>
+        <div className='what-is-img-div' id='what-is-img-2'>
+          <img
+            src={Placeholder}
+            alt='generate studnets having fun'
+            className='what-is-img'
+          />
+        </div>
       </div>
       <div className='ll-container'>
         <div id='landing-lines-2' className='landing-lines' />
