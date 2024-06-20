@@ -4,8 +4,8 @@ import useWebsite from '../../../shared/useWebsite'
 import MobileFooter from './MobileFooter'
 
 export const pages = [
+  { name: 'About', link: '/about' },
   { name: 'Projects', link: '/projects' },
-  { name: 'Clients', link: '/about' },
   { name: 'Apply', link: '/apply' },
 ]
 

@@ -10,11 +10,9 @@ import { ReactComponent as LinkedIn } from '../../../assets/icons/socials/Linked
 import UpArrow from '../../../assets/icons/arrows/upArrow.svg'
 
 function WebFooter() {
-  const navigate = useNavigate()
   const currentPageUrl = window.location.href
   const handleOnClick = () => {
     window.scrollTo(0, 0)
-    navigate('/')
   }
 
   const icons = [

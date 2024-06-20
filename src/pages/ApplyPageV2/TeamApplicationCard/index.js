@@ -16,6 +16,7 @@ export default function TeamApplicationCard({ team }) {
 
   return (
     <div
+      key={team.team}
       className={`team-card-container ${expanded ? 'expanded' : ''} ${clientCard ? 'client-border' : ''}`}
       style={{ boxShadow: clientCard ? `-1rem 1rem ${team.color}` : '' }}
     >

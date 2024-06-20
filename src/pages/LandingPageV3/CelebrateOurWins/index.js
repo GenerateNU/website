@@ -36,6 +36,8 @@ export default function CelebrateOurWins() {
     )
     if (currentIndex > 0) {
       setSelectedShowcase(showcases[currentIndex - 1])
+    } else {
+      setSelectedShowcase(showcases[0])
     }
   }
 
@@ -67,12 +69,25 @@ export default function CelebrateOurWins() {
 
         <div id='showcase-carousel'>
           <button className='button-link' onClick={handleLeftButtonClick}>
-            <LeftArrow />
+            <LeftArrow className='showcase-carousel-button' />
           </button>
           <div id='carousel-inner-content'>
             <div id='showcase-carousel-label'>
-              <div className='white-h2-text'>Showcase</div>
-              <div id='showcase-year'>{selectedShowcase.year}</div>
+              <div id='showcase-year-title' className='white-h2-text'>
+                {selectedShowcase.year && (
+                  <>
+                    <span className='showcase-year' id='showcase-year-br'>
+                      <span id="showcase-year-label">SHOWCASE</span>
+                      <br />{selectedShowcase.year[0]}
+                      {selectedShowcase.year[1]}
+                      <br />
+                      {selectedShowcase.year[2]}
+                      {selectedShowcase.year[3]}
+                    </span>
+                    <span id='showcase-year-nobr'>SHOWCASE {selectedShowcase.year}</span>
+                  </>
+                )}
+              </div>
             </div>
             <img
               className='showcase-img'
@@ -81,7 +96,7 @@ export default function CelebrateOurWins() {
             />
           </div>
           <button className='button-link' onClick={handleRightButtonClick}>
-            <RightArrow />
+            <RightArrow className='showcase-carousel-button' />
           </button>
         </div>
       </div>

@@ -2,6 +2,7 @@
   background-image: url('../../assets/images/landingpage-v3/GridBg.svg');
   background-repeat: repeat; /* repeat the bg infinitely down the y-axis*/
   background-size: 64rem;
+  overflow-x: hidden;
 }
 
 .debug {
@@ -118,10 +119,9 @@
 }
 
 #ll7-row {
-  /* min-height: 1400px;
-  max-height: 1400px; */
   padding-left: 4rem;
   padding-right: 4rem;
+  margin-top: -10rem;
 }
 
 #ll8-row {
@@ -362,8 +362,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 8rem;
-  padding-bottom: -4rem;
   width: 100%;
   max-width: 1800px;
   margin: auto;
@@ -391,6 +389,14 @@
   padding-right: 6rem;
 }
 
+#choose-text {
+  text-wrap: nowrap;
+}
+
+.colored-mascot {
+  width: 7vw;
+}
+
 .mascot-button {
   cursor: pointer;
   padding: 1.5rem;
@@ -411,10 +417,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
-  position: absolute;
   top: 0;
-  /* left: 0; */
   right: 0;
   bottom: 0;
   background-size: 100% 100%;
@@ -440,59 +443,8 @@
   z-index: 1;
 }
 
-@media (max-width: 1400px) {
-  .choose-character-row {
-    flex-direction: column-reverse;
-    align-items: center;
-    margin-top: -8rem;
-    margin-bottom: 2rem;
-  }
-
-  .choose-character-col {
-    gap: 0rem;
-  }
-  #choose-text {
-    align-self: center;
-    text-align: center;
-  }
-
-  .dynamic-icon {
-    min-width: 400px;
-    align-self: center;
-  }
-
-  #rainbow-trim {
-    margin-bottom: 50%;
-  }
-
-  .mascot-button {
-    cursor: pointer;
-    height: 4vw;
-    width: 4vw;
-    scale: 0.5;
-    translate: 0 -3rem;
-    padding: 1.5rem;
-    margin: -1rem;
-  }
-
-  .mascot-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-width: 400px;
-    align-self: center;
-    justify-content: space-around;
-    padding-right: 6rem;
-  }
-
-  #arcade-machine {
-    width: min(20rem, 50%);
-    height: fit-content;
-    margin: auto;
-    z-index: 1;
-    margin-bottom: 1rem;
-    padding-left: 3rem;
-  }
+#showcase-year-nobr {
+  display: none;
 }
 
 #showcase-large-stars {
@@ -537,24 +489,29 @@
 }
 
 .showcase-img {
-  width: min(calc(100% - 1rem), 45vw);
+  width: max(18rem, calc(50% - 1rem));
   height: auto;
   object-fit: contain;
+}
+
+#showcase-year-title {
+  margin-top: -2.5rem;
 }
 
 #showcase-carousel {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 #carousel-inner-content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 70vw;
+  justify-content: space-around;
+  padding-left: 4rem;
+  padding-right: 4rem;
   gap: 2rem;
 }
 
@@ -566,11 +523,11 @@
   width: 15rem;
 }
 
-#showcase-year {
+.showcase-year {
   overflow-wrap: break-word;
   color: white;
   font-family: 'Space Mono';
-  font-size: 10rem;
+  font-size: 8rem;
   font-style: normal;
   font-weight: 700;
   line-height: 90%;
@@ -597,6 +554,10 @@
   flex-direction: column;
   gap: 1rem;
   align-items: flex-end;
+}
+
+#showcase-year-label {
+  font-size: 3rem;
 }
 
 .parent-org {
@@ -649,6 +610,10 @@
   margin: auto;
 }
 
+.showcase-carousel-button {
+  height: 12rem;
+}
+
 @media (max-width: 1200px) {
   .why-gen-container {
     flex-direction: column;
@@ -665,6 +630,65 @@
 }
 
 @media (max-width: 850px) {
+  .choose-character-row {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: -8rem;
+    margin-bottom: 2rem;
+  }
+
+  .colored-mascot {
+    width: 7rem;
+  }
+
+  .choose-character-col {
+    gap: 0rem;
+  }
+
+  #choose-text {
+    align-self: center;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  .dynamic-icon {
+    min-width: 400px;
+    align-self: center;
+  }
+
+  #rainbow-trim {
+    margin-bottom: 50%;
+  }
+
+  .mascot-button {
+    cursor: pointer;
+    height: 4vw;
+    width: 4vw;
+    scale: 0.5;
+    translate: 0 -3rem;
+    padding: 1.5rem;
+    margin: -1rem;
+  }
+
+  .mascot-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 400px;
+    align-self: center;
+    justify-content: space-around;
+    padding-right: 6rem;
+  }
+
+  #arcade-machine {
+    width: min(20rem, 50%);
+    height: fit-content;
+    margin: auto;
+    z-index: 1;
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+  }
+
   #what-is-img-container {
     scale: 0;
     width: 0;
@@ -720,7 +744,20 @@
   #carousel-inner-content {
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #showcase-carousel {
+    align-items: end;
+  }
+
+  #showcase-year-title {
+    text-wrap: nowrap;
+  }
+
+  #showcase-year-title {
+    font-size: 2rem;
   }
 
   #showcase-carousel-label {
@@ -728,9 +765,21 @@
     gap: 0.5rem;
   }
 
-  #showcase-year {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  .showcase-year {
+    font-size: 2rem;
+  }
+
+  #showcase-year-br {
+    display: none;
+  }
+
+  .choose-character-container {
+    margin-bottom: 6rem;
+  }
+
+  #showcase-year-nobr {
+    font-size: 2rem;
+    display: block;
   }
 
   .why-gen-col {
@@ -745,6 +794,25 @@
   .why-gen-img {
     width: min(calc(100% - 1rem), 40vw);
     align-self: center;
+  }
+
+  #ll4-row,
+  #ll7-row {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #showcase-header,
+  #showcase-right-col,
+  #why-generate, #we-are {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #how-structured {
+
+    margin: -2rem;
+    margin-bottom: 2rem;
   }
 }
 

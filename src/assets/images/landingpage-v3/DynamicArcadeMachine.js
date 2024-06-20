@@ -42,7 +42,7 @@ const DynamicArcadeMachine = ({
     <path
       d='M37.9282 67.668L75.8568 99.2347H455.143L417.214 67.668H37.9282Z'
       fill='black'
-      fill-opacity='0.2'
+      fillOpacity='0.2'
     />
     <path
       d='M0 604.303L37.9286 635.869H417.214L379.286 604.303H0Z'
@@ -51,7 +51,7 @@ const DynamicArcadeMachine = ({
     <path
       d='M0 604.303L37.9286 635.869H417.214L379.286 604.303H0Z'
       fill='black'
-      fill-opacity='0.2'
+      fillOpacity='0.2'
     />
     <rect
       x='37.9287'
@@ -68,7 +68,7 @@ const DynamicArcadeMachine = ({
     <path
       d='M531 99.2354L417.214 4.53516V67.6686L455.142 99.2353V478.036L379.285 541.17V604.303L417.214 635.87V856.837L531 762.137V99.2354Z'
       fill='black'
-      fill-opacity='0.4'
+      fillOpacity='0.4'
     />
     <path
       d='M0 541.173L75.8572 478.039H455.143L379.286 541.173H0Z'
@@ -77,7 +77,7 @@ const DynamicArcadeMachine = ({
     <path
       d='M0 541.173L75.8572 478.039H455.143L379.286 541.173H0Z'
       fill='black'
-      fill-opacity='0.2'
+      fillOpacity='0.2'
     />
     <rect
       x='104.682'

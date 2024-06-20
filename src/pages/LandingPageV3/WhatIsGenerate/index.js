@@ -15,12 +15,12 @@ function WhatIsGenerate(props, ref) {
         {headerCopy &&
           headerCopy[0] &&
           headerCopy[0].content.map((item, index) => (
-            <>
+            <span key={item}>
               <p key={index} className='white-p-text'>
                 {item}
               </p>
               <br />
-            </>
+            </span>
           ))}
       </div>
       <div id='what-is-img-container' className=' '>
