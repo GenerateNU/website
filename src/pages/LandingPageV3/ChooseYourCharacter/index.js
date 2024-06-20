@@ -35,6 +35,7 @@ const MascotRadioButton = ({
       onMouseLeave={onMouseLeave}
     >
       <Mascot
+      className='colored-mascot'
         style={{
           opacity: isDisplayed ? 1 : 0.3
         }}
