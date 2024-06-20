@@ -504,19 +504,14 @@
   object-fit: contain;
 }
 
-#showcase-carousel-img {
-  width: min(calc(100%, 40vw));
-  align-self: center;
-}
-
 #showcase-year-title {
   margin-top: -2.5rem;
+  width: 100%;
 }
 
 #showcase-carousel {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
   justify-content: space-around;
   align-items: center;
 }
@@ -772,7 +767,6 @@
 
   #showcase-year-title {
     text-wrap: nowrap;
-    padding-top: 2rem;
   }
 
   #showcase-year-title {
