@@ -1,7 +1,10 @@
 import { ReactComponent as ShermLogo } from '../../../assets/images/landingpage-v3/ShermanLogo.svg'
 import { ReactComponent as MosaicLogo } from '../../../assets/images/landingpage-v3/MosaicLogo.svg'
+import { useNavigate } from 'react-router-dom'
 
 export default function ParentOrgs() {
+  const navigate = useNavigate()
+
   return (
     <div className='bg-row' id='ll8-row'>
       <div id='parent-orgs-container'>
@@ -18,7 +21,16 @@ export default function ParentOrgs() {
             >
               Sherman Center
             </a>
-            <ShermLogo />
+            <ShermLogo
+              style={{ cursor: 'pointer' }}
+              onClick={
+                () =>
+                  window
+                    .open('https://sherman.center.northeastern.edu/', '_blank')
+                    .focus()
+                // window.location.replace('https://sherman.center.northeastern.edu/')
+              }
+            />
           </div>
           <div className='parent-org'>
             <a
@@ -29,7 +41,17 @@ export default function ParentOrgs() {
             >
               Mosaic
             </a>
-            <MosaicLogo />
+            <MosaicLogo
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                window
+                  .open(
+                    'https://mosaic.entrepreneurship.northeastern.edu/',
+                    '_blank'
+                  )
+                  .focus()
+              }}
+            />
           </div>
         </div>
       </div>
