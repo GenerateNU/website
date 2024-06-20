@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
+import { BrowserRouter as Router, Navigate, useRoutes } from 'react-router-dom'
 import ExternalRedirect from './component/ExternalRedirect'
 import ApplyPageV2 from './pages/ApplyPageV2'
 import Position from './component/ApplyPage/Position'
@@ -23,7 +23,7 @@ function AppRoutes({ sanityRoutes }) {
     },
     { path: '/positions/:id', element: <Position /> },
     { path: '/positions/:categoryType/:index', element: <Position /> },
-    { path: '/about', element: <AboutPage /> },
+    { path: '/about', element: <Navigate to={"/"} /> /> },
     { path: '/culture', element: <CulturePage /> },
     { path: '/teams', element: <TeamsPage /> },
     { path: '/projects', element: <ProjectsPage /> },
