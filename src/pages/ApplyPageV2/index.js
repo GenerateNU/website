@@ -50,7 +50,7 @@ const mobileContent = (teams) => {
         <div className='join-text'>{quote}</div>
         <div className='mobile-column'>
           {teams.map((team) => (
-            <TeamApplicationCard team={team} />
+            <TeamApplicationCard team={team} key={team.team} />
           ))}
         </div>
       </div>

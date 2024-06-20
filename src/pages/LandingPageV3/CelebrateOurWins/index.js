@@ -28,8 +28,6 @@ export default function CelebrateOurWins() {
     setSelectedShowcase(
       showcases && showcases.length !== 0 ? showcases[showcases.length - 1] : {}
     )
-
-    console.log(showcases)
   }, [showcases])
 
   const handleLeftButtonClick = () => {
