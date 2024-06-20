@@ -31,11 +31,11 @@ export default function Navigation({ scrollToWhatIsGenerate }) {
           GENERATE
         </a>
         <div className='landing-links'>
-          <a href={'/projects'} className='landing-nav-link'>
-            PROJECTS
-          </a>
           <a href={'/apply'} className='landing-nav-link'>
             APPLY
+          </a>
+          <a href={'/projects'} className='landing-nav-link'>
+            PROJECTS
           </a>
           {/* <a href={'/'} className='landing-nav-link'>
             CLIENTS
@@ -43,7 +43,7 @@ export default function Navigation({ scrollToWhatIsGenerate }) {
           <button
             onClick={scrollToWhatIsGenerate}
             className='landing-nav-link'
-            id="about-button"
+            id='about-button'
           >
             ABOUT <DownArrow id='about-down-arrow' />
           </button>
