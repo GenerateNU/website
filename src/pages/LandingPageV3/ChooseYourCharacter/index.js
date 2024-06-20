@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
-import { ReactComponent as MgmtColorMascot } from '../../../assets/icons/mascots/colored/mgmtMascot.svg'
-import { ReactComponent as EngColorMascot } from '../../../assets/icons/mascots/colored/engMascot.svg'
-import { ReactComponent as HwColorMascot } from '../../../assets/icons/mascots/colored/hwMascot.svg'
-import { ReactComponent as OpsColorMascot } from '../../../assets/icons/mascots/colored/opsMascot.svg'
-import { ReactComponent as SwColorMascot } from '../../../assets/icons/mascots/colored/swMascot.svg'
+import { ReactComponent as MngmntMascot } from '../../../assets/icons/mascots/management.svg'
+import { ReactComponent as EngmntMascot } from '../../../assets/icons/mascots/engagement.svg'
+import { ReactComponent as HrdwreMascot } from '../../../assets/icons/mascots/hardware.svg'
+import { ReactComponent as OpratnMascot } from '../../../assets/icons/mascots/operations.svg'
+import { ReactComponent as SftwreMascot } from '../../../assets/icons/mascots/software.svg'
 import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText.js'
 import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine.js'
 import { urlFor } from '../../../client'
 import { useSanity } from '../../../services/useSanity'
 
-const mascotsColor = [
-  MgmtColorMascot,
-  EngColorMascot,
-  SwColorMascot,
-  HwColorMascot,
-  OpsColorMascot
+const mascots = [
+  MngmntMascot,
+  EngmntMascot,
+  SftwreMascot,
+  HrdwreMascot,
+  OpratnMascot
 ]
-const teamAbbreviations = ['MNGMNT', 'ENGMNT', 'SFTWRE', 'HRDWRE', 'OPRATN']
+const abbrvs = ['MNGMNT', 'ENGMNT', 'SFTWRE', 'HRDWRE', 'OPRATN']
 
 const MascotRadioButton = ({
   index,
@@ -25,7 +25,7 @@ const MascotRadioButton = ({
   onMouseEnter,
   onMouseLeave
 }) => {
-  const ColoredMascot = mascotsColor[index]
+  const Mascot = mascots[index]
 
   return (
     <div
@@ -34,11 +34,9 @@ const MascotRadioButton = ({
       onMouseEnter={() => onMouseEnter(index)}
       onMouseLeave={onMouseLeave}
     >
-      <ColoredMascot
-        className='colored-mascot'
+      <Mascot
         style={{
           opacity: isDisplayed ? 1 : 0.3
-          // filter: isDisplayed ? '' : 'grayscale(100%)'
         }}
       />
     </div>
@@ -59,7 +57,7 @@ export default function ChooseYourCharacter() {
 
   const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState(0)
-  const displayedIndex = hovered || selected
+  const coloredIndex = hovered || selected
 
   const handlePress = (index) => {
     setSelected(index)
@@ -85,28 +83,28 @@ export default function ChooseYourCharacter() {
                   <MascotRadioButton
                     key={index}
                     index={index}
-                    isDisplayed={index === displayedIndex}
+                    isDisplayed={index === coloredIndex}
                     onPress={handlePress}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   />
                 ))}
             </div>
-            {directors && directors[displayedIndex] && (
+            {directors && directors[coloredIndex] && (
               <ArcadeText
-                color={directors[displayedIndex].color}
-                director={directors[displayedIndex]}
+                color={directors[coloredIndex].color}
+                director={directors[coloredIndex]}
               />
             )}
           </div>
           <div id='rainbow-trim' />
         </div>
-        {directors && directors[displayedIndex] && (
+        {directors && directors[coloredIndex] && (
           <ArcadeMachine
             id='arcade-machine'
-            color={directors[displayedIndex].color}
-            text={teamAbbreviations[displayedIndex]}
-            imgUrl={directors[displayedIndex].image}
+            color={directors[coloredIndex].color}
+            text={abbrvs[coloredIndex]}
+            imgUrl={directors[coloredIndex].image}
           />
         )}
       </div>
