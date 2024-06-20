@@ -500,7 +500,7 @@
 
 .showcase-img {
   width: max(18rem, calc(50% - 1rem));
-  height: auto;
+  height: fit-content;
   object-fit: contain;
 }
 
