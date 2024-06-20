@@ -28,6 +28,8 @@ export default function CelebrateOurWins() {
     setSelectedShowcase(
       showcases && showcases.length !== 0 ? showcases[showcases.length - 1] : {}
     )
+
+    console.log(showcases)
   }, [showcases])
 
   const handleLeftButtonClick = () => {
@@ -37,7 +39,7 @@ export default function CelebrateOurWins() {
     if (currentIndex > 0) {
       setSelectedShowcase(showcases[currentIndex - 1])
     } else {
-      setSelectedShowcase(showcases[0])
+      setSelectedShowcase(showcases.at(-1))
     }
   }
 
@@ -47,6 +49,8 @@ export default function CelebrateOurWins() {
     )
     if (currentIndex < showcases.length - 1) {
       setSelectedShowcase(showcases[currentIndex + 1])
+    } else {
+      setSelectedShowcase(showcases.at(0))
     }
   }
 
@@ -77,14 +81,17 @@ export default function CelebrateOurWins() {
                 {selectedShowcase.year && (
                   <>
                     <span className='showcase-year' id='showcase-year-br'>
-                      <span id="showcase-year-label">SHOWCASE</span>
-                      <br />{selectedShowcase.year[0]}
+                      <span id='showcase-year-label'>SHOWCASE</span>
+                      <br />
+                      {selectedShowcase.year[0]}
                       {selectedShowcase.year[1]}
                       <br />
                       {selectedShowcase.year[2]}
                       {selectedShowcase.year[3]}
                     </span>
-                    <span id='showcase-year-nobr'>SHOWCASE {selectedShowcase.year}</span>
+                    <span id='showcase-year-nobr'>
+                      SHOWCASE {selectedShowcase.year}
+                    </span>
                   </>
                 )}
               </div>

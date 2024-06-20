@@ -513,6 +513,7 @@
   padding-left: 4rem;
   padding-right: 4rem;
   gap: 2rem;
+  width: 100%;
 }
 
 #showcase-carousel-label {
@@ -746,6 +747,7 @@
     align-items: center;
     padding-left: 0;
     padding-right: 0;
+    width: fit-content;
   }
 
   #showcase-carousel {
@@ -754,6 +756,7 @@
 
   #showcase-year-title {
     text-wrap: nowrap;
+    padding-top: 2rem;
   }
 
   #showcase-year-title {
@@ -804,13 +807,13 @@
 
   #showcase-header,
   #showcase-right-col,
-  #why-generate, #we-are {
+  #why-generate,
+  #we-are {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
   #how-structured {
-
     margin: -2rem;
     margin-bottom: 2rem;
   }
