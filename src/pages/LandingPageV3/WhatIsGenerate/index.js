@@ -28,14 +28,14 @@ function WhatIsGenerate(props, ref) {
           <img
             src={Placeholder}
             alt='generate studnets having fun'
-            className='what-is-img'
+            className='what-is-img image-shadow'
           />
         </div>
         <div className='what-is-img-div' id='what-is-img-2'>
           <img
             src={Placeholder}
             alt='generate studnets having fun'
-            className='what-is-img'
+            className='what-is-img image-shadow'
           />
         </div>
       </div>

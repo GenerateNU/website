@@ -24,7 +24,7 @@ export default function WhyGenerate() {
               </p>
               <img
                 src={Placeholder}
-                className='why-gen-img'
+                className='why-gen-img image-shadow'
                 alt='Placeholder'
               />
             </div>
@@ -36,7 +36,7 @@ export default function WhyGenerate() {
             <div className='why-gen-col-content' id='wgcc-rev'>
               <img
                 src={Placeholder}
-                className='why-gen-img'
+                className='why-gen-img  image-shadow'
                 alt='Placeholder'
               />
               <p className='white-p-text'>
@@ -54,7 +54,7 @@ export default function WhyGenerate() {
               </p>
               <img
                 src={Placeholder}
-                className='why-gen-img'
+                className='why-gen-img image-shadow'
                 alt='Placeholder'
               />
             </div>

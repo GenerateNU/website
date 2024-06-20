@@ -10,6 +10,23 @@ span {
   width: max(250px, 35vmin);
 }
 
+#nav-contents {
+  border: 1px black solid;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+#gen-nav-logo {
+  cursor: pointer;
+}
+
+#nav-all {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+}
+
 .menu-hover {
   cursor: pointer;
   color: black;

@@ -11,7 +11,7 @@ export default function WeAre() {
         <div className='white-header-text'>We Are...</div>
         <div className='we-are-container'>
           <div className='we-are-img-div'>
-            <img className='we-are-img' src={Placeholder} alt='Placeholder' />
+            <img className='we-are-img image-shadow' src={Placeholder} alt='Placeholder' />
           </div>
           <div id='values'>
             <div id='values-container'>

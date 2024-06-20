@@ -62,7 +62,7 @@ export default function CelebrateOurWins() {
           {copy && copy[0] && copy[0].header}
         </div>
         <div id='showcase-top-content'>
-          <img src={Placeholder} className='showcase-img' alt='Placeholder' />
+          <img src={Placeholder} className='showcase-img image-shadow' alt='Placeholder' />
           <div id='showcase-right-col'>
             <div className='white-p-text'>
               {copy && copy[0] && copy[0].content[0]}
@@ -97,7 +97,7 @@ export default function CelebrateOurWins() {
               </div>
             </div>
             <img
-              className='showcase-img'
+              className='showcase-img image-shadow'
               src={selectedShowcase.image}
               alt={selectedShowcase.year}
             />
