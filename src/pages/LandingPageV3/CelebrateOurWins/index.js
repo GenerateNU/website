@@ -10,7 +10,7 @@ import { urlFor } from '../../../client'
 export default function CelebrateOurWins() {
   const copyQuery = `*[_type == "copy" && key == "celebrate-our-wins"]{header, content}`
   const copy = useSanity(copyQuery)
-  const showcaseQuery = `*[_type == "showcase"] {year, image} | order(year asc)`
+  const showcaseQuery = `*[_type == "showcase"] {year, image, semester} | order(year asc)`
   const showcases = useSanity(showcaseQuery, {}, (data) =>
     data
       ? data.map((showcase) => ({
@@ -32,7 +32,9 @@ export default function CelebrateOurWins() {
 
   const handleLeftButtonClick = () => {
     const currentIndex = showcases.findIndex(
-      (showcase) => showcase.year === selectedShowcase.year
+      (showcase) =>
+        showcase.year === selectedShowcase.year &&
+        showcase.semester === selectedShowcase.semester
     )
     if (currentIndex > 0) {
       setSelectedShowcase(showcases[currentIndex - 1])
@@ -43,7 +45,9 @@ export default function CelebrateOurWins() {
 
   const handleRightButtonClick = () => {
     const currentIndex = showcases.findIndex(
-      (showcase) => showcase.year === selectedShowcase.year
+      (showcase) =>
+        showcase.year === selectedShowcase.year &&
+        showcase.semester === selectedShowcase.semester
     )
     if (currentIndex < showcases.length - 1) {
       setSelectedShowcase(showcases[currentIndex + 1])
@@ -60,7 +64,11 @@ export default function CelebrateOurWins() {
           {copy && copy[0] && copy[0].header}
         </div>
         <div id='showcase-top-content'>
-          <img src={Placeholder} className='showcase-img image-shadow' alt='Placeholder' />
+          <img
+            src={Placeholder}
+            className='showcase-img image-shadow'
+            alt='Placeholder'
+          />
           <div id='showcase-right-col'>
             <div className='white-p-text'>
               {copy && copy[0] && copy[0].content[0]}
@@ -76,10 +84,12 @@ export default function CelebrateOurWins() {
           <div id='carousel-inner-content'>
             <div id='showcase-carousel-label'>
               <div id='showcase-year-title' className='white-h2-text'>
-                {selectedShowcase.year && (
+                {selectedShowcase.semester && selectedShowcase.year && (
                   <>
                     <span className='showcase-year' id='showcase-year-br'>
-                      <span id='showcase-year-label'>SHOWCASE</span>
+                      <span id='showcase-year-label'>
+                        {selectedShowcase.semester.toUpperCase()}
+                      </span>
                       <br />
                       {selectedShowcase.year[0]}
                       {selectedShowcase.year[1]}
