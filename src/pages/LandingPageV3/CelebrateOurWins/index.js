@@ -105,7 +105,7 @@ export default function CelebrateOurWins() {
               </div>
             </div>
             <img
-              className='showcase-img image-shadow'
+              className='why-gen-img image-shadow'
               src={selectedShowcase.image}
               alt={selectedShowcase.year}
             />

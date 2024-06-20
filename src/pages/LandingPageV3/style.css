@@ -504,6 +504,11 @@
   object-fit: contain;
 }
 
+#showcase-carousel-img {
+  width: min(calc(100%, 40vw));
+  align-self: center;
+}
+
 #showcase-year-title {
   margin-top: -2.5rem;
 }
