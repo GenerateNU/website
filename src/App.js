@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Navigate, useRoutes } from 'react-router-dom'
 import ExternalRedirect from './component/ExternalRedirect'
 import ApplyPageV2 from './pages/ApplyPageV2'
 import Position from './component/ApplyPage/Position'
-import AboutPage from './component/AboutPage'
 import ScrollToTop from './component/ScrollToTop'
 import LandingPageV3 from './pages/LandingPageV3'
 import CulturePage from './component/CulturePage'
@@ -23,7 +22,7 @@ function AppRoutes({ sanityRoutes }) {
     },
     { path: '/positions/:id', element: <Position /> },
     { path: '/positions/:categoryType/:index', element: <Position /> },
-    { path: '/about', element: <Navigate to={"/"} /> /> },
+    { path: '/about', element: <Navigate to={'/'} /> },
     { path: '/culture', element: <CulturePage /> },
     { path: '/teams', element: <TeamsPage /> },
     { path: '/projects', element: <ProjectsPage /> },
