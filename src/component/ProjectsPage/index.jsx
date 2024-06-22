@@ -3,7 +3,7 @@ import FeaturedProjects from './FeaturedProjects/FeaturedProjects'
 import AllProjects from './AllProjects/AllProjects'
 import Footer from '../Footer'
 import NextPage from '../NextPage'
-import NewDesktopContainer from '../../component/DesktopMobileHandler/NewWebContainer'
+import HorizontalDesktopContainer from '../DesktopMobileHandler/HorizontalDesktopContainer'
 import useWebsite from '../../shared/useWebsite'
 import NewMobileContainer from '../../component/DesktopMobileHandler/NewMobileContainer'
 
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
   ]
 
   return !mobile ? (
-    <NewDesktopContainer children={children} desktopBGColor={'white'} />
+    <HorizontalDesktopContainer children={children} desktopBGColor={'white'} />
   ) : (
     <NewMobileContainer children={children} mobileBGColor={'white'} />
   )

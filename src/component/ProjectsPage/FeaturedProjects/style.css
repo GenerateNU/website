@@ -3,6 +3,14 @@
   max-width: 80vw;
 }
 
+.pp-fp-project {
+  padding-top: 8rem;
+}
+
+.pp-fp-projects-bg {
+  margin-top: 10rem;
+}
+
 @media (max-width: 1500px) {
   .pp-fp-projects-page-container {
     margin-right: 25vw;
@@ -21,7 +29,8 @@
 }
 
 #pp-fp-projects-navbar {
-  padding-top: 2%;
+  padding-top: 0.5rem;
+  padding-right: 9.25rem;
 }
 
 .pp-fp-projects-text {

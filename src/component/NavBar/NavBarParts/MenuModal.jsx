@@ -9,6 +9,7 @@ import Arrow from '../../../assets/images/projectspage/arrowbutton.svg'
 const menuItemsMapper = (menuItems, top, left) => {
   return menuItems.map((item, index) => (
     <a
+      key={item}
       href={item.href}
       className='header-font-style'
       style={{
@@ -54,7 +55,7 @@ export const mobileModalContents = (
         zIndex: 100
       }}
     />
-    <Modal.Body className='overflow-hidden text-black'>
+    {/* <Modal.Body className='overflow-hidden text-black'>
       <div
         className='menu-font-style'
         style={{
@@ -87,7 +88,6 @@ export const mobileModalContents = (
         constants.MOBILE_LEFT_V_LINE,
         100 - constants.BOTTOM_H_LINE
       )}{' '}
-      {/* TODO: Implement newsletter redirect */}{' '}
       {newsletterify(
         constants.BOTTOM_H_LINE + 0.1,
         constants.MOBILE_LEFT_V_LINE,
@@ -100,7 +100,8 @@ export const mobileModalContents = (
         constants.MOBILE_RIGHT_V_LINE,
         100 - constants.BOTTOM_H_LINE
       )}{' '}
-    </Modal.Body>{' '}
+    </Modal.Body> */}
+    {' '}
   </>
 )
 
@@ -141,7 +142,7 @@ export const desktopModalContents = (
         width: `${constants.DESKTOP_RIGHT_V_LINE}%`
       }}
     />
-    <Modal.Header
+    {/* <Modal.Header
       closeButton
       style={{
         fontSize: 'max(1.25vh,1.25vw)',
@@ -154,8 +155,9 @@ export const desktopModalContents = (
         }%`,
         zIndex: 100
       }}
-    />{' '}
-    <Modal.Body className='overflow-hidden text-black'>
+    /> */}
+    {' '}
+    {/* <Modal.Body className='overflow-hidden text-black'>
       <div
         className='menu-font-style'
         style={{
@@ -198,14 +200,12 @@ export const desktopModalContents = (
           3
         )}{' '}
       </div>{' '}
-      {/* TODO: Implement newsletter redirect */}{' '}
       {newsletterify(
         constants.TOP_H_LINE,
         constants.DESKTOP_RIGHT_V_LINE,
         100 - constants.DESKTOP_RIGHT_V_LINE,
         constants.BOTTOM_H_LINE - constants.TOP_H_LINE + 0.2
       )}{' '}
-      {/* TODO: Implement newsletter redirect */}{' '}
       {yellowrectify(
         constants.BOTTOM_H_LINE,
         constants.DESKTOP_RIGHT_V_LINE,
@@ -213,6 +213,7 @@ export const desktopModalContents = (
         100 - constants.BOTTOM_H_LINE,
         <img src={Arrow} style={{ transform: 'rotate(90deg)' }} alt='Arrow' />
       )}{' '}
-    </Modal.Body>{' '}
+    </Modal.Body> */}
+    {' '}
   </>
 )

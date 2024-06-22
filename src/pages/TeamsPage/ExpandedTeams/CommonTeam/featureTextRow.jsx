@@ -1,7 +1,6 @@
 import { React } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import useWebsite from '../../../../shared/useWebsite'
-import buttonIMG from './exploredeeper.png'
 import ShadowedButton from '../../../../component/ShadowedButton'
 import './style.css'
 export default function FeatureTextRow({

@@ -4,11 +4,11 @@ import useWebsite from '../../shared/useWebsite'
 import VerticalFooter from './VerticalFooter'
 
 export const pages = [
-  { name: 'Generate', link: '/' },
+  // { name: 'Generate', link: '/' },
   { name: 'Apply', link: '/apply' },
-  { name: 'About', link: '/about' },
-  { name: 'Culture', link: '/culture' },
-  { name: 'Teams', link: '/teams' },
+  { name: 'About', link: '/' },
+  // { name: 'Culture', link: '/culture' },
+  // { name: 'Teams', link: '/teams' },
   // { name: "People", link: "/", disabled: true },
   { name: 'Projects', link: '/projects' }
 ]

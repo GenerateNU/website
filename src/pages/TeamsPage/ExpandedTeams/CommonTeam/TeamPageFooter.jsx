@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import Arrow from '../../../../assets/images/projectspage/arrowbutton.svg'
 import ShadowedButton from '../../../../component/ShadowedButton'
 import './footerStyle.css'
@@ -34,9 +34,9 @@ const pagesSplit = [
 const FooterLink = ({ page, currentPage }) => {
   const { name, link, disabled } = page
   const currentURI = window.location.pathname.split('/').at(1)
-  var isCurrentPage = `/${currentURI}`.includes(link) && link != '/'
+  var isCurrentPage = `/${currentURI}`.includes(link) && link !== '/'
 
-  if (currentURI == 'case-study' && link == '/projects') {
+  if (currentURI === 'case-study' && link === '/projects') {
     isCurrentPage = true
   }
 

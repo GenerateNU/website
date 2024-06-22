@@ -3,7 +3,7 @@ import './style.css'
 import teamPageDetails from '../../data/teamPageDetails'
 import TeamCard from './TeamCard'
 //import DesktopMobileScrollAndBackgroundHandler from "../../component/DesktopMobileHandler";
-import NewDesktopContainer from '../../component/DesktopMobileHandler/NewWebContainer'
+import HorizontalDesktopContainer from '../../component/DesktopMobileHandler/HorizontalDesktopContainer'
 import useWebsite from '../../shared/useWebsite'
 import NewMobileContainer from '../../component/DesktopMobileHandler/NewMobileContainer'
 import WebTeamContainer from './TeamPageAssets/WebTeamContainer'
@@ -26,7 +26,7 @@ export default function TeamsPage() {
   // todo; possibly rename component
   return !mobile ? (
     <>
-      <NewDesktopContainer
+      <HorizontalDesktopContainer
         children={[<WebTeamContainer>{children}</WebTeamContainer>]}
         desktopBGColor={'white'}
       />
