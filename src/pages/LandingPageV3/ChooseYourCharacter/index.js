@@ -58,7 +58,7 @@ export default function ChooseYourCharacter() {
 
   const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState(0)
-  const coloredIndex = hovered || selected
+  const coloredIndex = hovered !== null ? hovered : selected
 
   const handlePress = (index) => {
     setSelected(index)
