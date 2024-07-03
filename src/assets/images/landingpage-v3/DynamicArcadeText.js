@@ -62,7 +62,10 @@ const DynamicIcon = ({ color = '#187DFF', director = {}, id }) => (
         fontSize={36}
         fontStyle='italic'
       >
-        <a href={'mailto:' + director.email} className='arcade-link'>
+        <a
+          href={`mailto:${director.email}@northeastern.edu`}
+          className='arcade-link'
+        >
           {director.email}@northeastern.edu
         </a>
       </text>
