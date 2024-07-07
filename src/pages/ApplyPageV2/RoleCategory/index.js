@@ -1,22 +1,18 @@
 import './style.css'
 
-export default function RoleCategory(
-  {
-    roleCategory: { name = '', description = '', roles = [], color = '' } = {}
-  },
-  desktopContent
-) {
-  const activeApps = roles.filter(
-    (role) => role.activeApplication === true && role.applicationLink
-  )
-  const halfLength = Math.ceil(activeApps.length / 2)
-  const firstColumn = activeApps.slice(0, halfLength)
-  const secondColumn = activeApps.slice(halfLength)
+export default function RoleCategory({
+  roleCategory: { name = '', description = '', roles = [], color = '' } = {}
+}) {
+  const halfLength = Math.ceil(roles.length / 2)
+  const firstColumn = roles.slice(0, halfLength)
+  const secondColumn = roles.slice(halfLength)
 
   return (
     <div>
       <div className='team-subheader'>{name}</div>
-      <div className='paragraph'>{description}</div>
+      <div className='paragraph' style={{ color: 'white' }}>
+        {description}
+      </div>
       <div className='link-column-container'>
         <div className='link-column'>
           {firstColumn.map((role) => (
