@@ -15,6 +15,24 @@ export default function TeamApplicationCard({ team }) {
   const workWithUs = 'Work with Us'
   const meetTheTeam = 'Meet the team'
 
+  const activeContributors =
+    team.contributorRoles &&
+    team.contributorRoles.filter(
+      (role) => role.activeApplication === true && role.applicationLink
+    )
+
+  const activeLeads =
+    team.leadRoles &&
+    team.leadRoles.filter(
+      (role) => role.activeApplication === true && role.applicationLink
+    )
+
+  const activeChiefs =
+    team.chiefRoles &&
+    team.chiefRoles.filter(
+      (role) => role.activeApplication === true && role.applicationLink
+    )
+
   return (
     <div
       className={`team-card-container ${expanded ? 'expanded' : ''}`}
@@ -44,33 +62,33 @@ export default function TeamApplicationCard({ team }) {
           </button>
           <div className={`expanded-container ${expanded ? 'expanded' : ''}`}>
             {expanded &&
-              team.contributorRoles &&
-              team.contributorRoles.length > 0 && (
+              activeContributors &&
+              activeContributors.length > 0 && (
                 <RoleCategory
                   roleCategory={{
                     name: 'Individual Contributors',
                     description: team.contributorDescription,
-                    roles: team.contributorRoles,
+                    roles: activeContributors,
                     color: team.color
                   }}
                 />
               )}
-            {expanded && team.leadRoles && team.leadRoles.length > 0 && (
+            {expanded && activeLeads && activeLeads.length > 0 && (
               <RoleCategory
                 roleCategory={{
                   name: 'Leaders',
                   description: team.leadDescription,
-                  roles: team.leadRoles,
+                  roles: activeLeads,
                   color: team.color
                 }}
               />
             )}
-            {expanded && team.chiefRoles && team.chiefRoles.length > 0 && (
+            {expanded && activeChiefs && activeChiefs.length > 0 && (
               <RoleCategory
                 roleCategory={{
                   name: 'Chiefs',
                   description: team.chiefDescription,
-                  roles: team.chiefRoles,
+                  roles: activeChiefs,
                   color: team.color
                 }}
               />

@@ -6,12 +6,9 @@ export default function RoleCategory(
   },
   desktopContent
 ) {
-  const activeApps = roles.filter(
-    (role) => role.activeApplication === true && role.applicationLink
-  )
-  const halfLength = Math.ceil(activeApps.length / 2)
-  const firstColumn = activeApps.slice(0, halfLength)
-  const secondColumn = activeApps.slice(halfLength)
+  const halfLength = Math.ceil(roles.length / 2)
+  const firstColumn = roles.slice(0, halfLength)
+  const secondColumn = roles.slice(halfLength)
 
   return (
     <div>
