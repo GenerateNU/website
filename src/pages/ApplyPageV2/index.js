@@ -17,8 +17,8 @@ const desktopContent = (firstColumn, secondColumn) => {
         <div className='navbar-style'>
           <NavBar />
         </div>
-        <div className='join-header'>{header}</div>
-        <div className='join-text'>{quote}</div>
+        <h2 className='join-header'>{header}</h2>
+        <p className='join-text'>{quote}</p>
         <div className='column-container'>
           <div className='left-column'>
             {firstColumn.map((team) => (
@@ -44,7 +44,7 @@ const mobileContent = (teams) => {
         <div className='navbar-style'>
           <NavBar />
         </div>
-        <div className='join-header'>{header}</div>
+        <h2 className='join-header'>{header}</h2>
         <div className='join-text'>{quote}</div>
         <div className='mobile-column'>
           {teams.map((team) => (
