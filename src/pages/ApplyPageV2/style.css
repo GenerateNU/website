@@ -1,4 +1,6 @@
 .join-header {
+    width: 100%;
+    text-align: start;
     color: #FFF;
     font-family: 'Space Mono 700';
     font-size: 10vw;

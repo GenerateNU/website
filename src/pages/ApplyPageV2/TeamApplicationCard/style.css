@@ -66,10 +66,11 @@
 .team-header {
   font-family: 'Space Mono 700';
   color: black;
-  font-size: 4em;
+  font-size: 3rem;
   line-height: 100%;
   text-transform: uppercase;
 }
+
 
 .team-subheader {
   color: white;
