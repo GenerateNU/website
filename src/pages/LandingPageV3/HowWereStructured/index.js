@@ -30,8 +30,6 @@ export default function HowWereStrctured() {
 
   const handleClick = (teamData) => {
     setSelected(teamData)
-    console.log('click', teamData)
-    console.log('selected', selected)
   }
   const handleMouseEnter = (teamData) => {
     setHovered(teamData)
@@ -42,7 +40,7 @@ export default function HowWereStrctured() {
 
   return (
     <div className='grid-bg' id='ll5-row'>
-      <div id="how-structured">
+      <div id='how-structured'>
         <div className='white-header-text'>
           {copy && copy[0] && copy[0].header}
         </div>
@@ -50,7 +48,7 @@ export default function HowWereStrctured() {
           {copy && copy[0] && copy[0].content[0]}
         </div>
         <div className='wheel-content'>
-          <div className='management-wheel'>
+          <div>
             <div id='skills'>
               {teams &&
                 teams[0] &&
@@ -77,12 +75,9 @@ export default function HowWereStrctured() {
                 })}
             </div>
           </div>
-          <div className='management-text'>
+          <div className='wheel-text'>
             <div className='white-h2-text'> {displayedTeam.team} </div>
-            <div className='white-p-text'>
-              {' '}
-              {displayedTeam.teamDescription}{' '}
-            </div>
+            <div className='white-p-text'>{displayedTeam.teamDescription}</div>
             <div
               className='view-pp-fp-project-div'
               style={{ paddingTop: '5vw' }}

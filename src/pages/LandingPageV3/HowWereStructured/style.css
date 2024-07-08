@@ -2,19 +2,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-items: space-between;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1800px;
-  margin: auto;
-}
-
-#management-wheel {
-  width: 50%;
-}
-
-#management-text {
-  width: 50%;
+  justify-content: center;
+  gap: 4rem;
 }
 
 #skills {
@@ -22,6 +11,10 @@
   height: min(45vw, 45vh);
   transform: rotate(0deg);
   scale: 90%;
+}
+
+.wheel-text{
+  max-width: 35em;
 }
 
 .circle {
@@ -127,8 +120,6 @@
   .management-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    align-items: left;
   }
 }
