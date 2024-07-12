@@ -11,12 +11,12 @@ import { useSanity } from '../../../services/useSanity'
 
 const mascots = [
   MngmntMascot,
-  EngmntMascot,
+  OpratnMascot,
   SftwreMascot,
   HrdwreMascot,
-  OpratnMascot
+  EngmntMascot
 ]
-const abbrvs = ['MNGMNT', 'ENGMNT', 'SFTWRE', 'HRDWRE', 'OPRATN']
+const abbrvs = ['MNGMNT', 'OPRATN', 'SFTWRE', 'HRDWRE', 'ENGMNT']
 
 const MascotRadioButton = ({
   index,
@@ -45,7 +45,7 @@ const MascotRadioButton = ({
 }
 
 export default function ChooseYourCharacter() {
-  const query = `*[_type == "director"] | order(zIndex desc)`
+  const query = `*[_type == "director"] | order(zIndex)`
   const directors = useSanity(query, {}, (data) =>
     data
       ? data.map((director) => ({
