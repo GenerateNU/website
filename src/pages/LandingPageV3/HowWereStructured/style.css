@@ -7,8 +7,8 @@
 }
 
 #skills {
-  width: min(45vw, 45vh);
-  height: min(45vw, 45vh);
+  width: min(55vw, 55vh);
+  height: min(55vw, 55vh);
   transform: rotate(0deg);
   scale: 90%;
 }
@@ -109,6 +109,11 @@
   .wheel-content {
     flex-direction: column;
     margin-top: 2rem;
+  }
+
+  #skills {
+    width: min(60vw, 60vh);
+    height: min(60vw, 60vh);
   }
 
   .wheel-content {
