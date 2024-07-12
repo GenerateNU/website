@@ -14,7 +14,7 @@ export default function ParentOrgs() {
               href='https://sherman.center.northeastern.edu/'
               target='_blank'
               rel='noopener noreferrer'
-              className='white-h2-text'
+              className='landing-nav-link'
             >
               Sherman Center
             </a>
@@ -32,7 +32,7 @@ export default function ParentOrgs() {
               href='https://mosaic.entrepreneurship.northeastern.edu/'
               target='_blank'
               rel='noopener noreferrer'
-              className='white-h2-text'
+              className='landing-nav-link'
             >
               Mosaic
             </a>
