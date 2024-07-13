@@ -39,10 +39,11 @@ function WebFooter() {
         fillColor='white'
         yPad={'0.9vh'}
         xPad={'0.5vw'}
+        fontSize = {'1vw'}
         right={false}
         text={
           <img
-            style={{ marginTop: '0.1vh' }}
+            style={{ marginLeft: '0.2vh',  marginTop: '1.2vh', marginBottom: '1.2vh'}}
             width={'90vw'}
             src={GenerateLogo}
             alt='matt was here'
@@ -79,13 +80,14 @@ function WebFooter() {
         <div className='shadow-arrow-container-2'>
           <ShadowedButton
             fillColor='white'
-            yPad={'3vh'}
-            xPad={'2vw'}
+            yPad={'0.5vh'}
+            xPad={'0.5vw'}
             right={false}
+            textColor = {'black'}
             text={
               <img
-                style={{ marginTop: '0.1vh' }}
-                width={'50vw'}
+                style={{ marginTop: '2vh', marginBottom: '2vh'}}
+                width={'90vw'}
                 src={UpArrow}
                 alt='matt was here'
               />

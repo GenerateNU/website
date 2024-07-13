@@ -64,10 +64,8 @@
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   /* Wrap icons if they overflow */
-  flex-basis: auto;
-  /* Allow container to shrink */
 }
 
 .social-link {
@@ -83,6 +81,19 @@
   /* Wrap icons if they overflow */
   flex-basis: auto;
   /* Allow container to shrink */
+}
+
+@media (max-width: 1000px) {
+  .shadow-arrow-container-2 {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 3vw;
+    margin-bottom: 2.5vh;
+    flex-wrap: wrap;
+    /* Wrap icons if they overflow */
+    flex-basis: auto;
+    /* Allow container to shrink */
+  }
 }
 
 .landing-lines {
@@ -329,13 +340,13 @@
 }
 
 .image-shadow {
-  box-shadow: 1px 1px 5px rgba(255,255,255,0.3);
-  outline: 0.1px rgba(255,255,255,0.3) solid;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
+  outline: 0.1px rgba(255, 255, 255, 0.3) solid;
 }
 
 .image-shadow:hover {
-  box-shadow: 2px 2px 10px rgba(255,255,255,0.3);
-  outline: 1px rgba(255,255,255,0.3) solid;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+  outline: 1px rgba(255, 255, 255, 0.3) solid;
 }
 
 .we-are-img {
@@ -425,7 +436,7 @@
 
 #rainbow-trim {
   position: absolute;
-  left: 50%;
+  left: 15%;
   transform: translateX(-50%);
   top: 0;
   right: 0;
@@ -649,6 +660,22 @@
     margin-bottom: 2rem;
   }
 
+  #rainbow-trim {
+    position: absolute;
+    left: 3%;
+    transform: translateX(-60%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -5;
+    width: 100vw;
+    height: 50vh;
+    background-image: url('../../assets/images/landingpage-v3/RainbowTrim.svg');
+    object-fit: fill;
+  }
+
   .colored-mascot {
     width: 7rem;
   }
@@ -839,6 +866,22 @@
     padding-left: 1vw;
     padding-right: 1vw;
     color: white;
+  }
+
+  #rainbow-trim {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -5;
+    height: 10vh;
+    width: 100vw;
+    background-image: url('../../assets/images/landingpage-v3/RainbowTrim.svg');
+    object-fit: fill;
   }
 
   .links-containerr-mobile {
