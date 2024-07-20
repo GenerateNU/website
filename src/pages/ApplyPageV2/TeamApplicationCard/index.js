@@ -68,6 +68,17 @@ export default function TeamApplicationCard({ team }) {
           </button>
           <div className={`expanded-container ${expanded ? 'expanded' : ''}`}>
             {expanded &&
+              (activeContributors ?? []).length === 0 &&
+              (activeLeads ?? []).length === 0 &&
+              (activeChiefs ?? []).length === 0 && (
+                <RoleCategory
+                  roleCategory={{
+                    description:
+                      <>There are not currently any open roles in this branch. New openings are typically posted before each semester. Please check back later, or follow <a style={{textDecoration: 'underline', color: "#55c9ef"}} href="https://instagram.com/generatenu">@generatenu</a> on Instagram to be alerted of new openings.</>,
+                  }}
+                />
+              )}
+            {expanded &&
               activeContributors &&
               activeContributors.length > 0 && (
                 <RoleCategory
