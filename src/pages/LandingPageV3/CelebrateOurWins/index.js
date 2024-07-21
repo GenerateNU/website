@@ -60,6 +60,7 @@ export default function CelebrateOurWins() {
     <div className='bg-row' id='ll7-row'>
       <div id='showcase-content'>
         <LargeStars id='showcase-large-stars' />
+        <SmallStars id='showcase-small-stars-top' />
         <div className='white-header-text' id='showcase-header'>
           {copy && copy[0] && copy[0].header}
         </div>
@@ -73,7 +74,7 @@ export default function CelebrateOurWins() {
             <div className='white-p-text'>
               {copy && copy[0] && copy[0].content[0]}
             </div>
-            <SmallStars id='showcase-small-stars' />
+            <SmallStars id='showcase-small-stars-bottom' />
           </div>
         </div>
 

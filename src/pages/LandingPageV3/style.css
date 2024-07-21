@@ -462,7 +462,11 @@
   height: auto;
 }
 
-#showcase-small-stars {
+#showcase-small-stars-top {
+  display: none;
+}
+
+#showcase-small-stars-bottom {
   width: 100%;
   height: auto;
 }
@@ -746,6 +750,22 @@
 
   .value:nth-child(3) {
     font-size: 2.5rem;
+  }
+
+  #showcase-large-stars {
+    display: none;
+  }
+
+  #showcase-small-stars-top {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 3em;
+  }
+  
+  #showcase-small-stars-bottom {
+    display: none;
   }
 
   #showcase-top-content {
