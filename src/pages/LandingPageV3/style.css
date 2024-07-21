@@ -177,6 +177,7 @@
 
 .half-container {
   width: 50%;
+  margin-left: -3rem
 }
 
 .blue-bg {
@@ -502,6 +503,15 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
+}
+
+#showcase-top-content img{
+    width: 80vw;
+    /* Adjust this value to make the image wider */
+    height: 35vh;
+    /* Adjust this value to make the image shorter */
+    object-fit: cover;
+    /* This will ensure the image maintains its aspect ratio */
 }
 
 #showcase-right-col {
