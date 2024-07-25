@@ -226,12 +226,16 @@
   -webkit-text-stroke: 1.5px white;
 }
 
-.button-link {
+.big-carousel-button {
   background: none;
-  border: none;
   padding: 0;
   cursor: pointer;
-  gap: 1.5vw;
+  border: none;
+}
+
+.big-carousel-button svg {
+  width: 4vw;
+  height: auto;
 }
 
 #what-is-generate {
@@ -508,26 +512,20 @@
   object-fit: contain;
 }
 
-#showcase-year-title {
-  margin-top: -2.5rem;
-  width: 100%;
-}
-
 #showcase-carousel {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
 }
 
 #carousel-inner-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding-left: 4rem;
-  padding-right: 4rem;
   gap: 2rem;
+  padding: 2rem;
   width: 100%;
 }
 
@@ -536,18 +534,42 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 15rem;
+}
+
+#showcase-semester-label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.showcase-semester-text {
+  font-size: 3vw;
+  line-height: 110%;
+}
+
+#showcase-semester-highlight {
+  background-color: white;
+  color: black;
 }
 
 .showcase-year {
   overflow-wrap: break-word;
   color: white;
   font-family: 'Space Mono';
-  font-size: 8rem;
+  font-size: 14vw;
   font-style: normal;
   font-weight: 700;
   line-height: 90%;
   text-transform: uppercase;
+}
+
+.showcase-carousel-img {
+  width: 50vw;
+  height: 35vw;
+}
+
+#small-carousel-nav {
+  display: none;
 }
 
 #parent-orgs-header {
@@ -570,10 +592,6 @@
   flex-direction: column;
   gap: 1rem;
   align-items: flex-end;
-}
-
-#showcase-year-label {
-  font-size: 3rem;
 }
 
 .parent-org {
@@ -624,10 +642,6 @@
 .what-is-img {
   height: min(15rem, 20vw);
   margin: auto;
-}
-
-.showcase-carousel-button {
-  height: 12rem;
 }
 
 @media (max-width: 1200px) {
@@ -782,15 +796,7 @@
   }
 
   #showcase-carousel {
-    align-items: end;
-  }
-
-  #showcase-year-title {
-    text-wrap: nowrap;
-  }
-
-  #showcase-year-title {
-    font-size: 2rem;
+    flex-direction: column;
   }
 
   #showcase-carousel-label {
@@ -798,8 +804,17 @@
     gap: 0.5rem;
   }
 
-  .showcase-year {
-    font-size: 2rem;
+  #showcase-semester-label {
+    text-align: left;
+  }
+
+  .showcase-semester-text {
+    font-size: 5vw;
+  }
+
+  #showcase-semester-highlight {
+    background-color: transparent;
+    color: white;
   }
 
   #showcase-year-br {
@@ -811,8 +826,14 @@
   }
 
   #showcase-year-nobr {
-    font-size: 2rem;
+    font-size: 12vw;
+    line-height: 100%;
     display: block;
+  }
+
+  .showcase-carousel-img {
+    width: 80vw;
+    height: 55vw;
   }
 
   .why-gen-col {
@@ -824,6 +845,7 @@
   #wgcc-rev {
     flex-direction: column-reverse;
   }
+
   .why-gen-img {
     width: min(calc(100% - 1rem), 40vw);
     align-self: center;
@@ -846,6 +868,26 @@
   #how-structured {
     margin: -2rem;
     margin-bottom: 2rem;
+  }
+
+  .big-carousel-button {
+    display: none;
+  }
+
+  #small-carousel-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: bottom;
+    justify-content: space-between;
+    margin-top: -1rem;
+  }
+
+  .sm-carousel-button {
+    background-color: transparent;
+    border: none;
+    width: 18vw;
+    height: auto;
   }
 }
 

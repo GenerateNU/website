@@ -4,6 +4,8 @@ import { ReactComponent as LeftArrow } from '../../../assets/images/landingpage-
 import { ReactComponent as RightArrow } from '../../../assets/images/landingpage-v3/RightTriangleArrow.svg'
 import { ReactComponent as LargeStars } from '../../../assets/images/landingpage-v3/LargeShowcaseStars.svg'
 import { ReactComponent as SmallStars } from '../../../assets/images/landingpage-v3/SmallShowcaseStars.svg'
+import { ReactComponent as PrevArrow } from '../../../assets/icons/arrows/prevArrowLeft.svg'
+import { ReactComponent as NextArrow } from '../../../assets/icons/arrows/nextArrowRight.svg'
 import { useSanity } from '../../../services/useSanity'
 import { urlFor } from '../../../client'
 
@@ -79,40 +81,62 @@ export default function CelebrateOurWins() {
         </div>
 
         <div id='showcase-carousel'>
-          <button className='button-link' onClick={handleLeftButtonClick}>
-            <LeftArrow className='showcase-carousel-button' />
+          <button
+            className='big-carousel-button'
+            onClick={handleLeftButtonClick}
+          >
+            <LeftArrow />
           </button>
           <div id='carousel-inner-content'>
-            <div id='showcase-carousel-label'>
-              <div id='showcase-year-title' className='white-h2-text'>
-                {selectedShowcase.semester && selectedShowcase.year && (
-                  <>
-                    <span className='showcase-year' id='showcase-year-br'>
-                      <span id='showcase-year-label'>
-                        {selectedShowcase.semester.toUpperCase()}
-                      </span>
-                      <br />
-                      {selectedShowcase.year[0]}
-                      {selectedShowcase.year[1]}
-                      <br />
-                      {selectedShowcase.year[2]}
-                      {selectedShowcase.year[3]}
-                    </span>
-                    <span id='showcase-year-nobr'>
-                      SHOWCASE {selectedShowcase.year}
-                    </span>
-                  </>
-                )}
-              </div>
+            <div id='showcase-carousel-label' className='showcase-year'>
+              {selectedShowcase.semester && selectedShowcase.year && (
+                <>
+                  <div id='showcase-semester-label'>
+                    <div
+                      id='showcase-semester-highlight'
+                      className='showcase-semester-text'
+                    >
+                      {selectedShowcase.semester.toUpperCase()}
+                    </div>
+                    <div className='showcase-semester-text'>SHOWCASE</div>
+                  </div>
+
+                  <div id='showcase-year-br'>
+                    {selectedShowcase.year[0]}
+                    {selectedShowcase.year[1]}
+                    <br />
+                    {selectedShowcase.year[2]}
+                    {selectedShowcase.year[3]}
+                  </div>
+                  <div id='showcase-year-nobr'>{selectedShowcase.year}</div>
+                </>
+              )}
             </div>
             <img
-              className='image-shadow why-gen-img'
+              className='image-shadow showcase-carousel-img'
               src={selectedShowcase.image}
               alt={selectedShowcase.year}
             />
+            <div id='small-carousel-nav'>
+              <button
+                className='sm-carousel-button'
+                onClick={handleRightButtonClick}
+              >
+                <PrevArrow />
+              </button>
+              <button
+                className='sm-carousel-button'
+                onClick={handleRightButtonClick}
+              >
+                <NextArrow />
+              </button>
+            </div>
           </div>
-          <button className='button-link' onClick={handleRightButtonClick}>
-            <RightArrow className='showcase-carousel-button' />
+          <button
+            className='big-carousel-button'
+            onClick={handleRightButtonClick}
+          >
+            <RightArrow />
           </button>
         </div>
       </div>
