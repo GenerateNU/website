@@ -15,17 +15,16 @@
 }
 
 .ap_img {
-  background-image: url('/images/ApplyPageImages/applyBg.jpg');
-  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-  filter: brightness(80%);
+    background-image: url('/images/applyBackground.JPG');
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: brightness(50%);
 }
 
 .ap_text {
