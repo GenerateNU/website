@@ -11,33 +11,33 @@ import { useSanity } from '../../../services/useSanity'
 
 const mascots = [
   MngmntMascot,
-  EngmntMascot,
+  OpratnMascot,
   SftwreMascot,
   HrdwreMascot,
-  OpratnMascot
+  EngmntMascot
 ]
-const abbrvs = ['MNGMNT', 'ENGMNT', 'SFTWRE', 'HRDWRE', 'OPRATN']
+const abbrvs = ['MNGMNT', 'OPRATN', 'SFTWRE', 'HRDWRE', 'ENGMNT']
 
 const MascotRadioButton = ({
   index,
-  isDisplayed,
-  onPress,
-  onMouseEnter,
-  onMouseLeave
+  isFullOpacity,
+  handleClick,
+  handleMouseEnter,
+  handleMouseLeave
 }) => {
   const Mascot = mascots[index]
 
   return (
     <div
       className={`mascot-button mascot-button-${index}`}
-      onClick={() => onPress(index)}
-      onMouseEnter={() => onMouseEnter(index)}
-      onMouseLeave={onMouseLeave}
+      onClick={() => handleClick(index)}
+      onMouseEnter={() => handleMouseEnter(index)}
+      onMouseLeave={handleMouseLeave}
     >
       <Mascot
-      className='colored-mascot'
+        className='colored-mascot'
         style={{
-          opacity: isDisplayed ? 1 : 0.3
+          opacity: isFullOpacity ? 1 : 0.3
         }}
       />
     </div>
@@ -45,7 +45,7 @@ const MascotRadioButton = ({
 }
 
 export default function ChooseYourCharacter() {
-  const query = `*[_type == "director"] | order(zIndex desc)`
+  const query = `*[_type == "director"] | order(zIndex)`
   const directors = useSanity(query, {}, (data) =>
     data
       ? data.map((director) => ({
@@ -84,10 +84,10 @@ export default function ChooseYourCharacter() {
                   <MascotRadioButton
                     key={index}
                     index={index}
-                    isDisplayed={index === coloredIndex}
+                    isFullOpacity={index === hovered || index === selected}
                     onPress={handlePress}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
+                    handleMouseEnter={handleMouseEnter}
+                    handleMouseLeave={handleMouseLeave}
                   />
                 ))}
             </div>

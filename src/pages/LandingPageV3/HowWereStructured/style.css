@@ -7,8 +7,8 @@
 }
 
 #skills {
-  width: min(45vw, 45vh);
-  height: min(45vw, 45vh);
+  width: min(55vw, 55vh);
+  height: min(55vw, 55vh);
   transform: rotate(0deg);
   scale: 90%;
 }
@@ -38,7 +38,7 @@
 
 #slice0 {
   background-color: #187dff;
-  clip-path: polygon(50% 50%, 100% 66.25%, 100% 100%, 50% 100%);
+  clip-path: polygon(11.875% 0, 50% 50%, 88.125% 0);
   border: 0px;
 }
 
@@ -50,28 +50,27 @@
 
 #slice2 {
   background-color: #ffbf3c;
-  clip-path: polygon(11.875% 0, 50% 50%, 88.125% 0);
+  clip-path: polygon(50% 50%, 100% 66.25%, 100% 100%, 50% 100%);
   border: 0px;
 }
 
 #slice3 {
-  background-color: #a559ec;
-  clip-path: polygon(50% 50%, 0 66.25%, 0 0, 11.875% 0);
-  border: 0px;
-}
-
-#slice4 {
   background-color: #ff6660;
   clip-path: polygon(50% 50%, 50% 100%, 0 100%, 0 66.25%);
   border: 0px;
 }
 
+#slice4 {
+  background-color: #a559ec;
+  clip-path: polygon(50% 50%, 0 66.25%, 0 0, 11.875% 0);
+  border: 0px;
+}
+
 .image0 {
   width: 20%;
-  height: 18%;
+  height: 20%;
   z-index: 100;
-  margin-left: 39.18%;
-  margin-top: 53.93%;
+  margin-top: -67%;
 }
 
 .image1 {
@@ -84,20 +83,13 @@
 
 .image2 {
   width: 20%;
-  height: 20%;
+  height: 18%;
   z-index: 100;
-  margin-top: -67%;
+  margin-left: 39.18%;
+  margin-top: 53.93%;
 }
 
 .image3 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-left: -63.4%;
-  margin-top: -20.6%;
-}
-
-.image4 {
   width: 20%;
   height: 18%;
   z-index: 100;
@@ -105,10 +97,23 @@
   margin-top: 53.93%;
 }
 
+.image4 {
+  width: 20%;
+  height: 20%;
+  z-index: 100;
+  margin-left: -63.4%;
+  margin-top: -20.6%;
+}
+
 @media (max-width: 840px) {
   .wheel-content {
     flex-direction: column;
     margin-top: 2rem;
+  }
+
+  #skills {
+    width: min(60vw, 60vh);
+    height: min(60vw, 60vh);
   }
 
   .wheel-content {
