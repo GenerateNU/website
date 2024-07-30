@@ -73,6 +73,9 @@ export default function HowWereStrctured() {
                     </button>
                   )
                 })}
+              <div id='wheel-overlay'>
+                <div id='wheel-overlay-fill'></div>
+              </div>
             </div>
           </div>
           <div className='wheel-text'>

@@ -85,7 +85,7 @@ export default function ChooseYourCharacter() {
                     key={index}
                     index={index}
                     isFullOpacity={index === hovered || index === selected}
-                    onPress={handlePress}
+                    handleClick={handlePress}
                     handleMouseEnter={handleMouseEnter}
                     handleMouseLeave={handleMouseLeave}
                   />
