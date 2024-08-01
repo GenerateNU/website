@@ -71,7 +71,7 @@ export default function ChooseYourCharacter() {
   }
 
   return (
-    <div className='bg-row'>
+    <div className='bg-row' id="directors">
       <div id='choose-container'>
         <h2 className='white-header-text' id='choose-text'>
           Choose Your Character

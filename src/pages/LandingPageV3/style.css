@@ -1133,12 +1133,10 @@
   font-size: 10vw;
   width: 100%;
   text-wrap: wrap;
-  border: 1px red solid;
 }
 
 #choose-container {
   width: 100%;
-  border: 1px red solid;
   padding: 0;
 }
 
@@ -1152,7 +1150,6 @@
 
   #choose-container > * > * {
     translate: 0 -30%;
-    border: 1px green solid;
   }
 
   #text-arcade {
