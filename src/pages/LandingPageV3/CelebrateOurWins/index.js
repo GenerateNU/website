@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Placeholder from '../../../assets/images/aboutpage/Community.jpg'
+import celebrate from '../../../assets/images/aboutpage/spirited.jpg'
 import { ReactComponent as LeftArrow } from '../../../assets/images/landingpage-v3/LeftTriangleArrow.svg'
 import { ReactComponent as RightArrow } from '../../../assets/images/landingpage-v3/RightTriangleArrow.svg'
 import { ReactComponent as LargeStars } from '../../../assets/images/landingpage-v3/LargeShowcaseStars.svg'
@@ -68,7 +68,7 @@ export default function CelebrateOurWins() {
         </div>
         <div id='showcase-top-content'>
           <img
-            src={Placeholder}
+            src={celebrate}
             className='showcase-img image-shadow'
             alt='Placeholder'
           />
