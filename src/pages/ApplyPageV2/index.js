@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../../component/NavBar'
 import TeamApplicationCard from './TeamApplicationCard'
+import Footer from '../LandingPageV3/Footer'
 import { useSanity } from '../../services/useSanity'
 import useWebsite from '../../shared/useWebsite'
 import './style.css'
@@ -22,16 +23,17 @@ const desktopContent = (firstColumn, secondColumn) => {
         <div className='column-container'>
           <div className='left-column'>
             {firstColumn.map((team) => (
-              <TeamApplicationCard team={team} />
+              <TeamApplicationCard team={team} key={team.team} />
             ))}
           </div>
           <div className='right-column'>
             {secondColumn.map((team) => (
-              <TeamApplicationCard team={team} />
+              <TeamApplicationCard team={team} key={team.team} />
             ))}
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
@@ -48,10 +50,11 @@ const mobileContent = (teams) => {
         <div className='join-text'>{quote}</div>
         <div className='mobile-column'>
           {teams.map((team) => (
-            <TeamApplicationCard team={team} />
+            <TeamApplicationCard team={team} key={team.team} />
           ))}
         </div>
       </div>
+      <Footer />
     </>
   )
 }

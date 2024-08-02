@@ -14,7 +14,7 @@ import Showcase from './Showcase'
 import './style.css'
 import NextPage from '../NextPage'
 import useWebsite from '../../shared/useWebsite'
-import NewDesktopContainer from '../../component/DesktopMobileHandler/NewWebContainer'
+import HorizontalDesktopContainer from '../DesktopMobileHandler/HorizontalDesktopContainer'
 import NewMobileContainer from '../DesktopMobileHandler/NewMobileContainer'
 
 export default function CulturePage() {
@@ -39,9 +39,9 @@ export default function CulturePage() {
   ]
 
   return !mobile ? (
-    <NewDesktopContainer desktopBGColor={'white'}>
+    <HorizontalDesktopContainer desktopBGColor={'white'}>
       {children}
-    </NewDesktopContainer>
+    </HorizontalDesktopContainer>
   ) : (
     <NewMobileContainer mobileBGColor={'white'}>{children}</NewMobileContainer>
   )

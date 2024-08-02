@@ -28,6 +28,11 @@ export default defineType({
       title: 'Text',
       type: 'text',
     }),
+    defineField({
+      name: 'index',
+      title: 'Index',
+      type: 'number',
+    }),
   ],
   preview: {
     select: {

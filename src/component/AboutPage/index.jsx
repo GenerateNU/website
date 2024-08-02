@@ -12,7 +12,7 @@ import Footer from '../Footer'
 import NextPage from '../NextPage'
 import './style.css'
 import useWebsite from '../../shared/useWebsite'
-import NewDesktopContainer from '../../component/DesktopMobileHandler/NewWebContainer'
+import HorizontalDesktopContainer from '../DesktopMobileHandler/HorizontalDesktopContainer'
 import NewMobileContainer from '../DesktopMobileHandler/NewMobileContainer'
 
 export default function AboutPage() {
@@ -35,9 +35,9 @@ export default function AboutPage() {
   ]
 
   return !mobile ? (
-    <NewDesktopContainer desktopBGColor={'black'}>
+    <HorizontalDesktopContainer desktopBGColor={'black'}>
       {children}
-    </NewDesktopContainer>
+    </HorizontalDesktopContainer>
   ) : (
     <NewMobileContainer mobileBGColor={'black'}>{children}</NewMobileContainer>
   )

@@ -9,7 +9,6 @@ export function useSanity(query, params = {}, modifier = (data) => data) {
       const fetchedData = await client.fetch(query, params)
       const modifiedData = modifier(fetchedData)
       setData(modifiedData)
-      console.log('Set data: ', modifiedData)
     }
 
     fetchData()

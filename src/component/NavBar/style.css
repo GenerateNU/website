@@ -2,12 +2,29 @@ span {
   font-family: 'Space Mono 700';
   font-size: 2.46vh;
   line-height: 3.69vh;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 .bar-size {
   height: max(50px, 7vmin);
   width: max(250px, 35vmin);
+}
+
+#nav-contents {
+  border: 1px black solid;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+#gen-nav-logo {
+  cursor: pointer;
+}
+
+#nav-all {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem;
 }
 
 .menu-hover {
