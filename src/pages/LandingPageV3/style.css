@@ -106,7 +106,7 @@
 }
 
 #ll3-row {
-  margin-top: -6rem;
+  margin-top: -4rem;
   min-height: 683px;
   max-height: 683px;
 }
@@ -202,6 +202,7 @@
 
 #choose-container {
   margin: auto;
+  width: 100%;
   max-width: 1800px;
   padding: 3rem;
 }
@@ -365,7 +366,7 @@
 .white-p-text {
   color: white;
   font-family: Outfit;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 500;
   max-width: 85vw;
@@ -658,6 +659,11 @@
   font-size: 2rem;
 }
 
+#choose-text {
+  text-align: start;
+  width: 100%;
+}
+
 #what-is-img-container {
   width: 50%;
   display: grid;
@@ -845,10 +851,6 @@
     scale: 80%;
   }
 
-  #ll5-row {
-    padding: 2rem;
-  }
-
   #how-structured > .white-header-text {
     font-size: 2.5rem;
   }
@@ -880,6 +882,7 @@
 
   #ll2-row {
     padding-bottom: 6rem;
+    /* margin-top: 6rem; */
   }
 
   .ll-container {
@@ -1129,6 +1132,32 @@
 }
 
 @media (max-width: 480px) {
+
+  #ll8-row {
+    padding: 1rem;
+  }
+
+#parent-orgs-header {
+  font-size: 2rem;
+}
+
+.parent-org > a {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.parent-org > * {
+  max-height: 3rem;
+  min-width: 2rem;
+}
+
+  #parent-orgs-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
 #choose-text {
   font-size: 10vw;
   width: 100%;

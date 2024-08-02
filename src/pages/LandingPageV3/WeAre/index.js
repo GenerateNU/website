@@ -1,4 +1,4 @@
-import Placeholder from '../../../assets/images/landingpage/weare/landing.jpg'
+import weare from '../../../assets/images/landingpage/weare/weare.jpg'
 import { useSanity } from '../../../services/useSanity'
 
 export default function WeAre() {
@@ -11,8 +11,8 @@ export default function WeAre() {
         <div className='white-header-text padded' id="we-are-text">We Are...</div>
         <img
           className='we-are-img image-shadow'
-          src={Placeholder}
-          alt='Placeholder'
+          src={weare}
+          alt='Three Generate members working together.'
         />
       </div>
       <div className='ll-container'>
