@@ -1,4 +1,6 @@
-import Placeholder from '../../../assets/images/landingpage/weare/landing.jpg'
+import members from '../../../assets/images/landingpage/weare/members.JPG'
+import clients from '../../../assets/images/landingpage/weare/cstar.jpg'
+import partners from '../../../assets/images/landingpage/weare/overhead.jpg'
 import { useSanity } from '../../../services/useSanity'
 
 export default function WhyGenerate() {
@@ -23,7 +25,7 @@ export default function WhyGenerate() {
                 {whyGenerate1 && whyGenerate1[0] && whyGenerate1[0].content[0]}
               </p>
               <img
-                src={Placeholder}
+                src={members}
                 className='why-gen-img image-shadow'
                 alt='Placeholder'
               />
@@ -35,7 +37,7 @@ export default function WhyGenerate() {
             </div>
             <div className='why-gen-col-content' id='wgcc-rev'>
               <img
-                src={Placeholder}
+                src={clients}
                 className='why-gen-img  image-shadow'
                 alt='Placeholder'
               />
@@ -53,7 +55,7 @@ export default function WhyGenerate() {
                 {whyGenerate3 && whyGenerate3[0] && whyGenerate3[0].content[0]}
               </p>
               <img
-                src={Placeholder}
+                src={partners}
                 className='why-gen-img image-shadow'
                 alt='Placeholder'
               />
