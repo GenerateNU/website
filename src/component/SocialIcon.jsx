@@ -56,7 +56,7 @@ export function SocialIcon({ href, imgSrc, className }) {
         <SvgIcon
           inheritViewBox
           sx={{
-            fontSize: mobile ? '64px' : '32px',
+            fontSize: mobile ? '32px' : '32px',
             '&:hover': { color: 'black' }
           }}
           component={imgSrc}

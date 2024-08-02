@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSanity } from '../../../services/useSanity'
-import Placeholder from '../../../assets/images/landingpage/weare/landing.jpg'
+import workshop from '../../../assets/images/landingpage/weare/workshop.jpg'
+import showcase from '../../../assets/images/landingpage/weare/showcase.jpg'
 
 function WhatIsGenerate(props, ref) {
   const query = `*[_type == "copy" && key == "what-is-generate-landing"]{header, content}`
@@ -15,25 +16,22 @@ function WhatIsGenerate(props, ref) {
         {headerCopy &&
           headerCopy[0] &&
           headerCopy[0].content.map((item, index) => (
-            <span key={item}>
               <p key={index} className='white-p-text'>
-                {item}
+                {item}<br/><br/>
               </p>
-              <br />
-            </span>
           ))}
       </div>
       <div id='what-is-img-container' className=' '>
         <div className='what-is-img-div' id='what-is-img-1'>
           <img
-            src={Placeholder}
+            src={showcase}
             alt='generate studnets having fun'
             className='what-is-img image-shadow'
           />
         </div>
         <div className='what-is-img-div' id='what-is-img-2'>
           <img
-            src={Placeholder}
+            src={workshop}
             alt='generate studnets having fun'
             className='what-is-img image-shadow'
           />

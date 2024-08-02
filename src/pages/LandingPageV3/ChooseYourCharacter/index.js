@@ -11,33 +11,33 @@ import { useSanity } from '../../../services/useSanity'
 
 const mascots = [
   MngmntMascot,
-  EngmntMascot,
+  OpratnMascot,
   SftwreMascot,
   HrdwreMascot,
-  OpratnMascot
+  EngmntMascot
 ]
-const abbrvs = ['MNGMNT', 'ENGMNT', 'SFTWRE', 'HRDWRE', 'OPRATN']
+const abbrvs = ['MNGMNT', 'OPRATN', 'SFTWRE', 'HRDWRE', 'ENGMNT']
 
 const MascotRadioButton = ({
   index,
-  isDisplayed,
-  onPress,
-  onMouseEnter,
-  onMouseLeave
+  isFullOpacity,
+  handleClick,
+  handleMouseEnter,
+  handleMouseLeave
 }) => {
   const Mascot = mascots[index]
 
   return (
     <div
       className={`mascot-button mascot-button-${index}`}
-      onClick={() => onPress(index)}
-      onMouseEnter={() => onMouseEnter(index)}
-      onMouseLeave={onMouseLeave}
+      onClick={() => handleClick(index)}
+      onMouseEnter={() => handleMouseEnter(index)}
+      onMouseLeave={handleMouseLeave}
     >
       <Mascot
-      className='colored-mascot'
+        className='colored-mascot'
         style={{
-          opacity: isDisplayed ? 1 : 0.3
+          opacity: isFullOpacity ? 1 : 0.3
         }}
       />
     </div>
@@ -45,7 +45,7 @@ const MascotRadioButton = ({
 }
 
 export default function ChooseYourCharacter() {
-  const query = `*[_type == "director"] | order(zIndex desc)`
+  const query = `*[_type == "director"] | order(zIndex)`
   const directors = useSanity(query, {}, (data) =>
     data
       ? data.map((director) => ({
@@ -71,43 +71,42 @@ export default function ChooseYourCharacter() {
   }
 
   return (
-    <div className='bg-row'>
-      <div className='choose-character-row'>
-        <div className='choose-character-col'>
-          <div className='choose-character-container'>
-            <div className='white-h2-text' id='choose-text'>
-              Choose Your Character
-            </div>
-            <div className='mascot-row'>
-              {directors &&
-                directors.map((_, index) => (
-                  <MascotRadioButton
-                    key={index}
-                    index={index}
-                    isDisplayed={index === coloredIndex}
-                    onPress={handlePress}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                  />
-                ))}
-            </div>
-            {directors && directors[coloredIndex] && (
-              <ArcadeText
-                color={directors[coloredIndex].color}
-                director={directors[coloredIndex]}
-              />
-            )}
+    <div className='bg-row' id="directors">
+      <div id='choose-container'>
+        <h2 className='white-header-text' id='choose-text'>
+          Choose Your Character
+        </h2>
+        <div id='choose-grid'>
+          <div className='mascot-row'>
+            {directors &&
+              directors.map((_, index) => (
+                <MascotRadioButton
+                  key={index}
+                  index={index}
+                  isFullOpacity={index === hovered || index === selected}
+                  handleClick={handlePress}
+                  handleMouseEnter={handleMouseEnter}
+                  handleMouseLeave={handleMouseLeave}
+                />
+              ))}
           </div>
-          <div id='rainbow-trim' />
+
+          {directors && directors[coloredIndex] && (
+            <ArcadeMachine
+              color={directors[coloredIndex].color}
+              text={abbrvs[coloredIndex]}
+              imgUrl={directors[coloredIndex].image}
+            />
+          )}
+          {directors && directors[coloredIndex] && (
+            <ArcadeText
+              id='text-arcade'
+              color={directors[coloredIndex].color}
+              director={directors[coloredIndex]}
+            />
+          )}
         </div>
-        {directors && directors[coloredIndex] && (
-          <ArcadeMachine
-            id='arcade-machine'
-            color={directors[coloredIndex].color}
-            text={abbrvs[coloredIndex]}
-            imgUrl={directors[coloredIndex].image}
-          />
-        )}
+        <div id='rainbow-trim' />
       </div>
     </div>
   )

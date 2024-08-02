@@ -1,7 +1,7 @@
 import React from 'react'
 
 const DynamicIcon = ({ color = '#187DFF', director = {}, id }) => (
-  <div className='dynamic-icon'>
+  <div className='dynamic-icon' id='text-arcade'>
     <svg
       viewBox='0 0 835 371'
       fill='none'

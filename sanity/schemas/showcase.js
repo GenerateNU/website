@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'showcase',
-  title: 'Showcase',
+  title: 'Showcase Carousel',
   type: 'document',
   fields: [
     defineField({
@@ -18,6 +18,7 @@ export default defineType({
     defineField({
       name: 'image',
       title: 'Image',
+      description: 'Crop to 4:3 aspect ratio to preserve proportions when rendering.',
       type: 'image',
     }),
   ],
