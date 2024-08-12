@@ -87,7 +87,7 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }) {
             {currentProject.type}
           </h2>
           <div className='pp-fp-desc'>{currentProject.description}</div>
-          <div className='view-pp-fp-project-div' style={{ marginTop: '10vw' }}>
+          {/* <div className='view-pp-fp-project-div' style={{ marginTop: '10vw' }}>
             <ShadowedButton
               fillColor='white'
               xPad={mobile ? '12vw' : '60px'}
@@ -99,7 +99,7 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }) {
                 (window.location.href = `/case-study/${currentProject.name.toLowerCase()}`)
               }
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
