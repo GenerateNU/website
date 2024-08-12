@@ -73,8 +73,23 @@ export default function TeamApplicationCard({ team }) {
               (activeChiefs ?? []).length === 0 && (
                 <RoleCategory
                   roleCategory={{
-                    description:
-                      <>There are not currently any open roles in this branch. New openings are typically posted before each semester. Please check back later, or follow <a style={{textDecoration: 'underline', color: "#55c9ef"}} href="https://instagram.com/generatenu">@generatenu</a> on Instagram to be alerted of new openings.</>,
+                    description: (
+                      <>
+                        There are not currently any open roles in this branch.
+                        New openings are typically posted before each semester.
+                        Please check back later, or follow{' '}
+                        <a
+                          style={{
+                            textDecoration: 'underline',
+                            color: '#55c9ef'
+                          }}
+                          href='https://instagram.com/generatenu'
+                        >
+                          @generatenu
+                        </a>{' '}
+                        on Instagram to be alerted of new openings.
+                      </>
+                    )
                   }}
                 />
               )}
@@ -83,7 +98,10 @@ export default function TeamApplicationCard({ team }) {
               activeContributors.length > 0 && (
                 <RoleCategory
                   roleCategory={{
-                    name: 'Individual Contributors',
+                    name:
+                      team.team === 'Operations' || team.team === 'Engagement'
+                        ? 'Content'
+                        : 'Individual Contributors',
                     description: team.contributorDescription,
                     roles: activeContributors,
                     color: team.color
@@ -93,7 +111,10 @@ export default function TeamApplicationCard({ team }) {
             {expanded && activeLeads && activeLeads.length > 0 && (
               <RoleCategory
                 roleCategory={{
-                  name: 'Leaders',
+                  name:
+                    team.team === 'Operations' || team.team === 'Engagement'
+                      ? 'Events'
+                      : 'Leaders',
                   description: team.leadDescription,
                   roles: activeLeads,
                   color: team.color
@@ -103,7 +124,10 @@ export default function TeamApplicationCard({ team }) {
             {expanded && activeChiefs && activeChiefs.length > 0 && (
               <RoleCategory
                 roleCategory={{
-                  name: 'Chiefs',
+                  name:
+                    team.team === 'Operations' || team.team === 'Engagement'
+                      ? 'Experiences'
+                      : 'Chiefs',
                   description: team.chiefDescription,
                   roles: activeChiefs,
                   color: team.color
