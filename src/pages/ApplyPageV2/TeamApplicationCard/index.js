@@ -99,9 +99,11 @@ export default function TeamApplicationCard({ team }) {
                 <RoleCategory
                   roleCategory={{
                     name:
-                      team.team === 'Operations' || team.team === 'Engagement'
+                      team.team === 'Engagement'
                         ? 'Content'
-                        : 'Individual Contributors',
+                        : team.team === 'Operations'
+                          ? 'Finance'
+                          : 'Individual Contributors',
                     description: team.contributorDescription,
                     roles: activeContributors,
                     color: team.color
@@ -112,9 +114,11 @@ export default function TeamApplicationCard({ team }) {
               <RoleCategory
                 roleCategory={{
                   name:
-                    team.team === 'Operations' || team.team === 'Engagement'
+                    team.team === 'Engagement'
                       ? 'Events'
-                      : 'Leaders',
+                      : team.team === 'Operations'
+                        ? 'Information'
+                        : 'Leaders',
                   description: team.leadDescription,
                   roles: activeLeads,
                   color: team.color
@@ -125,9 +129,11 @@ export default function TeamApplicationCard({ team }) {
               <RoleCategory
                 roleCategory={{
                   name:
-                    team.team === 'Operations' || team.team === 'Engagement'
+                    team.team === 'Engagement'
                       ? 'Experiences'
-                      : 'Chiefs',
+                      : team.team === 'Operations'
+                        ? 'Strategy'
+                        : 'Chiefs',
                   description: team.chiefDescription,
                   roles: activeChiefs,
                   color: team.color
