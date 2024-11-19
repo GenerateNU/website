@@ -12,7 +12,7 @@ import { urlFor } from '../../../client'
 export default function CelebrateOurWins() {
   const copyQuery = `*[_type == "copy" && key == "celebrate-our-wins"]{header, content}`
   const copy = useSanity(copyQuery)
-  const showcaseQuery = `*[_type == "showcase"] {year, image, semester} | order(year asc)`
+  const showcaseQuery = `*[_type == "showcase"] {year, image, semester} | order(year asc, semester asc)`
   const showcases = useSanity(showcaseQuery, {}, (data) =>
     data
       ? data.map((showcase) => ({
@@ -79,7 +79,15 @@ export default function CelebrateOurWins() {
             <SmallStars id='showcase-small-stars-bottom' />
           </div>
         </div>
-
+        {showcases &&
+          showcases.map((showcase) => (
+            <link
+              key={showcase.image}
+              rel="preload"
+              href={showcase.image}
+              as="image"
+            />
+          ))}
         <div id='showcase-carousel'>
           <button
             className='big-carousel-button'
