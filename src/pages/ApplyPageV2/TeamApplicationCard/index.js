@@ -132,7 +132,7 @@ export default function TeamApplicationCard({ team }) {
                     team.team === 'Engagement'
                       ? 'Community'
                       : team.team === 'Operations'
-                        ? 'Strategy'
+                        ? 'Alumni Relations'
                         : 'Chiefs',
                   description: team.chiefDescription,
                   roles: activeChiefs,
