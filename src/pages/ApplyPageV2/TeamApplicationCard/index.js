@@ -130,7 +130,7 @@ export default function TeamApplicationCard({ team }) {
                 roleCategory={{
                   name:
                     team.team === 'Engagement'
-                      ? 'Experiences'
+                      ? 'Community'
                       : team.team === 'Operations'
                         ? 'Strategy'
                         : 'Chiefs',
