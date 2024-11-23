@@ -8,6 +8,7 @@ import ChooseYourCharacter from './ChooseYourCharacter'
 import CelebrateOurWins from './CelebrateOurWins'
 import ParentOrgs from './ParentOrgs'
 import Footer from './Footer'
+import Sponsors from './Sponsors'
 import './style.css'
 
 export default function LandingPageV3() {
@@ -26,6 +27,7 @@ export default function LandingPageV3() {
       <HowWereStrctured />
       <ChooseYourCharacter />
       <CelebrateOurWins />
+      <Sponsors />
       <ParentOrgs />
       <Footer />
     </div>
