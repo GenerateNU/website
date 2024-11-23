@@ -195,7 +195,7 @@
   font-family: 'Space Mono 700';
   font-size: 5vw;
   text-transform: uppercase;
-  height: 30vh;
+  height: min(30vh, 300px);
   gap: 1rem;
   color: #1777f8;
   padding: 1rem;
