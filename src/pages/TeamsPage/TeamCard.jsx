@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.css'
 import useWebsite from '../../shared/useWebsite'
-import { Rotate90DegreesCcw } from '@material-ui/icons'
 
 const TeamCard = ({ color = 'black', name = 'Team', image = null }) => {
   const isWebsite = useWebsite()
@@ -29,7 +28,7 @@ const TeamCard = ({ color = 'black', name = 'Team', image = null }) => {
         style={{ backgroundColor: color }}
       >
         <img className='card-img-mobile' src={image} alt='' />
-        <div
+        {/* <div
           className='title-bkgnd-mobile'
           style={{ transform: Rotate90DegreesCcw }}
         >
@@ -39,7 +38,7 @@ const TeamCard = ({ color = 'black', name = 'Team', image = null }) => {
           >
             {name}
           </div>
-        </div>
+        </div> */}
       </div>
     </a>
   )

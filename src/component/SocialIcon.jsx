@@ -6,7 +6,6 @@ import { ReactComponent as YoutubeIcon } from '../assets/images/socialMediaIcons
 import { ReactComponent as MosaicIcon } from '../assets/images/socialMediaIcons/Mosaic.svg'
 import { ReactComponent as NortheasternIcon } from '../assets/images/socialMediaIcons/Northeaster.svg'
 import { ReactComponent as Sherm } from '../assets/images/socialMediaIcons/Sherm.svg'
-import { SvgIcon } from '@mui/material'
 
 export const socialIcons = [
   [
@@ -53,14 +52,14 @@ export function SocialIcon({ href, imgSrc, className }) {
   return (
     <Col className={className}>
       <a href={href}>
-        <SvgIcon
+        {/* <SvgIcon
           inheritViewBox
           sx={{
             fontSize: mobile ? '32px' : '32px',
             '&:hover': { color: 'black' }
           }}
           component={imgSrc}
-        />
+        /> */}
       </a>
     </Col>
   )

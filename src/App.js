@@ -9,7 +9,6 @@ import CulturePage from './component/CulturePage'
 import TeamsPage from './pages/TeamsPage'
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams'
 import ProjectsPage from './component/ProjectsPage'
-import CaseStudy from './component/CaseStudyPage'
 import { useSanity } from './services/useSanity'
 
 function AppRoutes({ sanityRoutes }) {
@@ -26,7 +25,6 @@ function AppRoutes({ sanityRoutes }) {
     { path: '/culture', element: <CulturePage /> },
     { path: '/teams', element: <TeamsPage /> },
     { path: '/projects', element: <ProjectsPage /> },
-    { path: '/case-study/:project', element: <CaseStudy /> },
     { path: '/teams-expanded/*', element: <ExpandedTeamsPage /> },
     ...sanityRoutes,
     { path: '*', element: <LandingPageV3 /> }

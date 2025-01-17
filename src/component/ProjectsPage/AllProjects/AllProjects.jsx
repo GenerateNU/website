@@ -1,8 +1,6 @@
 import './style.css'
 import Project from './Project/Project'
 import { useState } from 'react'
-import SearchIcon from '@mui/icons-material/Search'
-import TextField from '@mui/material/TextField'
 import Alia from '../../../assets/images/projectspage/alia.svg'
 import Arctic from '../../../assets/images/projectspage/arctic.svg'
 import Jurni from '../../../assets/images/projectspage/jurni.svg'
