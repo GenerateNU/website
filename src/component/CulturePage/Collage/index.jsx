@@ -10,7 +10,6 @@ import sevenimg from '../Collage/website-21.jpg'
 import eightimg from '../Collage/website-23.jpg'
 import nineimg from '../Collage/website-24.jpg'
 import tenimg from '../Collage/website-25.jpg'
-import elevenimg from '../Collage/website-26.JPG'
 
 const desktopContent = (
   <div className='nospacing'>

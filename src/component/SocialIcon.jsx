@@ -47,8 +47,8 @@ export const socialIcons = [
 ]
 
 export function SocialIcon({ href, imgSrc, className }) {
-  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
-  const mobile = !isBigScreen
+  // const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
+  // const mobile = !isBigScreen
   return (
     <Col className={className}>
       <a href={href}>

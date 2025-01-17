@@ -164,7 +164,7 @@ function TeamPageFooter({ color, page }) {
               xPad={mobile ? '3vw' : '2vw'}
               yPad={mobile ? '2vw' : '2vw'}
               textColor='white'
-              text={<img width={'40vh'} src={Arrow} />}
+              text={<img width={'40vh'} src={Arrow} alt="arrow up" />}
               onClick={handleScrollClick}
             />
           ) : (
@@ -189,7 +189,7 @@ function TeamPageFooter({ color, page }) {
               xPad={mobile ? '15vw' : '2vw'}
               yPad={mobile ? '6vw' : '2vw'}
               textColor='white'
-              text={<img width={'40vh'} src={Arrow} />}
+              text={<img width={'40vh'} src={Arrow} alt="arrow-up" />}
               onClick={handleScrollClick}
             />
           )}

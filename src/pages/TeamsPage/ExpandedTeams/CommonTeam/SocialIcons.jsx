@@ -41,9 +41,9 @@ export default function SocialIcons({ mobile }) {
               />
               {icon.href.includes('instagram') ? (
                 <Col className='icon'>
-                  <a>
+                  {/* <a>
                     <div className='social-media' />
-                  </a>
+                  </a> */}
                 </Col>
               ) : null}
             </>

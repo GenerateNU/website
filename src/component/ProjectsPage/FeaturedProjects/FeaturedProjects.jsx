@@ -62,7 +62,7 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }) {
               xPad={mobile ? '15vw' : '2vw'}
               yPad={mobile ? '6vw' : '2vw'}
               textColor='white'
-              text={<img width={'40vh'} src={Arrow} />}
+              text={<img width={'40vh'} src={Arrow} alt='arrow icon' />}
               onClick={() => handleProject(1)}
             />
             <ShadowedButton
@@ -71,7 +71,7 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }) {
               xPad={mobile ? '15vw' : '2vw'}
               yPad={mobile ? '6vw' : '2vw'}
               textColor='white'
-              text={<img width={'40vh'} src={Arrow} />}
+              text={<img width={'40vh'} src={Arrow} alt='arrow icon' />}
               onClick={() => handleProject(-1)}
             />
           </div>
@@ -79,7 +79,11 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }) {
       </div>
       <div className='pp-fp-project'>
         <div className='image-container'>
-          <img className='pp-fp-image' src={currentProject.image}></img>
+          <img
+            className='pp-fp-image'
+            src={currentProject.image}
+            alt='arrow icon'
+          />
         </div>
         <div className='pp-fp-project-text'>
           <h1 className='pp-fp-projects-desktop'>{currentProject.name}</h1>
@@ -139,7 +143,11 @@ function MobileFeaturedProjects({ handleProject, currentProject, mobile }) {
       </div>
       <div className='pp-fp-project'>
         <div className='image-container'>
-          <img className='pp-fp-image' src={currentProject.image}></img>
+          <img
+            className='pp-fp-image'
+            src={currentProject.image}
+            alt='arrow icon'
+          />
         </div>
         <div className='pp-fp-project-text'>
           <p>{currentProject.description}</p>
@@ -151,7 +159,7 @@ function MobileFeaturedProjects({ handleProject, currentProject, mobile }) {
                 xPad={mobile ? '3vw' : '4vw'}
                 yPad={mobile ? '3vw' : '4vw'}
                 textColor='white'
-                text={<img width={'40vh'} src={Arrow} />}
+                text={<img width={'40vh'} src={Arrow} alt='arrow icon' />}
                 onClick={() => handleProject(1)}
               />
               <ShadowedButton
@@ -160,7 +168,7 @@ function MobileFeaturedProjects({ handleProject, currentProject, mobile }) {
                 xPad={mobile ? '3vw' : '4vw'}
                 yPad={mobile ? '3vw' : '4vw'}
                 textColor='white'
-                text={<img width={'40vh'} src={Arrow} />}
+                text={<img width={'40vh'} src={Arrow} alt='arrow icon' />}
                 onClick={() => handleProject(-1)}
               />
             </div>

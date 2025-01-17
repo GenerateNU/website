@@ -16,7 +16,7 @@ export default function Position() {
   const mobile = !isBigScreen || !isWebsite
 
   const { categoryType, index } = useParams()
-  const [position, setPosition] = useState(
+  const [position, ] = useState(
     applicationsByTeams[categoryType][index]
   )
   const [showText, setShowText] = useState('Share')

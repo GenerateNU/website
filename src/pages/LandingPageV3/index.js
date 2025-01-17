@@ -9,12 +9,7 @@ import CelebrateOurWins from './CelebrateOurWins'
 import ParentOrgs from './ParentOrgs'
 import Footer from './Footer'
 import Sponsors from './Sponsors'
-import {
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-  Description
-} from '@headlessui/react'
+import { Dialog } from '@headlessui/react'
 import { useState } from 'react'
 
 import './style.css'
@@ -26,9 +21,11 @@ export default function LandingPageV3() {
   return (
     <div id='page-bg'>
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className='dialog'>
-        <button onClick={() => setIsOpen(false)} id="close">close x</button>
+        <button onClick={() => setIsOpen(false)} id='close'>
+          close x
+        </button>
         <iframe
-        id="luma"
+          id='luma'
           title='luma'
           src='https://lu.ma/embed/event/evt-UaQFBOS5OeEEHwW/simple'
           width='100%'

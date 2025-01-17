@@ -1,7 +1,6 @@
 import React from 'react'
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg' //"../../assets/images/landingpage-v2/footerlogo.svg";
 import { FooterLink } from '.'
-import { useNavigate } from 'react-router-dom'
 import { pages } from '.'
 import ShadowedButton from '../../../component/ShadowedButton'
 import { ReactComponent as Instagram } from '../../../assets/icons/socials/Instagram.svg'
