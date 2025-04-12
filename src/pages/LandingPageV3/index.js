@@ -16,7 +16,7 @@ import './style.css'
 
 export default function LandingPageV3() {
   const whatIsGenerateRef = useRef(null)
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false) // <-- set this to true to show the popup. 
 
   return (
     <div id='page-bg'>
@@ -27,7 +27,7 @@ export default function LandingPageV3() {
         <iframe
           id='luma'
           title='luma'
-          src='https://lu.ma/embed/event/evt-UaQFBOS5OeEEHwW/simple'
+          src='https://lu.ma/embed/event/evt-UaQFBOS5OeEEHwW/simple' {/* <-- edit this link to change the embedded page */}
           width='100%'
           height='434px'
           frameborder='0'
