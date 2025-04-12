@@ -24,10 +24,12 @@ export default function LandingPageV3() {
         <button onClick={() => setIsOpen(false)} id='close'>
           close x
         </button>
+
+         {/* change the src= web page to update which event the popup is for. Use the specific embed- feature in Luma for best results. */}
         <iframe
           id='luma'
           title='luma'
-          src='https://lu.ma/embed/event/evt-UaQFBOS5OeEEHwW/simple' {/* <-- edit this link to change the embedded page */}
+          src='https://lu.ma/embed/event/evt-UaQFBOS5OeEEHwW/simple'
           width='100%'
           height='434px'
           frameborder='0'
