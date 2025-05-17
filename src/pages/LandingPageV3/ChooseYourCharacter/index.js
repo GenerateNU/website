@@ -14,9 +14,19 @@ const mascots = [
   OpratnMascot,
   SftwreMascot,
   HrdwreMascot,
-  EngmntMascot
+  EngmntMascot,
+  HrdwreMascot,
+  HrdwreMascot
 ]
-const abbrvs = ['MNGMNT', 'OPRATN', 'SFTWRE', 'HRDWRE', 'ENGMNT']
+const abbrvs = [
+  'MNGMNT',
+  'OPRATN',
+  'SFTWRE',
+  'HRDWRE',
+  'ENGMNT',
+  'FNANCE',
+  'MRKTNG'
+]
 
 const MascotRadioButton = ({
   index,
@@ -71,40 +81,43 @@ export default function ChooseYourCharacter() {
   }
 
   return (
-    <div className='bg-row' id="directors">
+    <div className='bg-row' id='directors'>
       <div id='choose-container'>
         <h2 className='white-header-text' id='choose-text'>
           Choose Your Character
         </h2>
         <div id='choose-grid'>
-          <div className='mascot-row'>
-            {directors &&
-              directors.map((_, index) => (
-                <MascotRadioButton
-                  key={index}
-                  index={index}
-                  isFullOpacity={index === hovered || index === selected}
-                  handleClick={handlePress}
-                  handleMouseEnter={handleMouseEnter}
-                  handleMouseLeave={handleMouseLeave}
+          <div id='choose-flex-wrapper'>
+            <div id='text-mascots'>
+              <div className='mascot-row'>
+                {directors &&
+                  directors.map((_, index) => (
+                    <MascotRadioButton
+                      key={index}
+                      index={index}
+                      isFullOpacity={index === hovered || index === selected}
+                      handleClick={handlePress}
+                      handleMouseEnter={handleMouseEnter}
+                      handleMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+              </div>
+              {directors && directors[coloredIndex] && (
+                <ArcadeText
+                  id='text-arcade'
+                  color={directors[coloredIndex].color}
+                  director={directors[coloredIndex]}
                 />
-              ))}
+              )}
+            </div>
+            {directors && directors[coloredIndex] && (
+              <ArcadeMachine
+                color={directors[coloredIndex].color}
+                text={abbrvs[coloredIndex]}
+                imgUrl={directors[coloredIndex].image}
+              />
+            )}
           </div>
-
-          {directors && directors[coloredIndex] && (
-            <ArcadeMachine
-              color={directors[coloredIndex].color}
-              text={abbrvs[coloredIndex]}
-              imgUrl={directors[coloredIndex].image}
-            />
-          )}
-          {directors && directors[coloredIndex] && (
-            <ArcadeText
-              id='text-arcade'
-              color={directors[coloredIndex].color}
-              director={directors[coloredIndex]}
-            />
-          )}
         </div>
         <div id='rainbow-trim' />
       </div>
