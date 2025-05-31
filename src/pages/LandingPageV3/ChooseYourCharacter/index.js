@@ -22,7 +22,7 @@ const mascots = [
 ]
 const abbrvs = [
   'MNGMNT',
-  'OPRATN',
+  'DATA',
   'SFTWRE',
   'HRDWRE',
   'ENGMNT',
