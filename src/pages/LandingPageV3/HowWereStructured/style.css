@@ -22,19 +22,19 @@
   pointer-events: none;
 }
 
-
 #wheel-overlay-fill {
   /* pointer-events: none; */
   margin: auto;
   width: 30%;
   height: 30%;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 30%, rgb(0, 0, 0, 0.31) 70%),
-  url("../../../assets/images/landingpage-v3/GridBg.svg");
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.3) 30%, rgb(0, 0, 0, 0.31) 70%),
+    url('../../../assets/images/landingpage-v3/GridBg.svg');
   background-size: 64rem;
   border-radius: 50%;
 }
 
-.wheel-text{
+.wheel-text {
   max-width: 35em;
 }
 
@@ -52,38 +52,51 @@
   transition: 0.2s cubic-bezier(0.74, 1.13, 0.83, 1.2);
 }
 
-.animate:hover, .selected {
+.animate:hover,
+.selected {
   transform: scale(1.1);
   transform-origin: center center;
 }
 
 #slice0 {
   background-color: #187dff;
-  clip-path: polygon(11.875% 0, 50% 50%, 88.125% 0);
+  clip-path: polygon(50% 50%, 70% 0%, 75% 0%, 100% 25%);
   border: 0px;
 }
 
 #slice1 {
   background-color: #6fcf97;
-  clip-path: polygon(50% 50%, 88.125% 0, 100% 0, 100% 66.25%);
+  clip-path: polygon(50% 50%, 100% 25%, 100% 75%);
   border: 0px;
 }
 
 #slice2 {
   background-color: #ffbf3c;
-  clip-path: polygon(50% 50%, 100% 66.25%, 100% 100%, 50% 100%);
+  clip-path: polygon(50% 50%, 100% 75%, 75% 100%, 50% 100%);
   border: 0px;
 }
 
 #slice3 {
   background-color: #ff6660;
-  clip-path: polygon(50% 50%, 50% 100%, 0 100%, 0 66.25%);
+  clip-path: polygon(50% 50%, 50% 100%, 30% 100%, 0% 70%);
   border: 0px;
 }
 
 #slice4 {
   background-color: #a559ec;
-  clip-path: polygon(50% 50%, 0 66.25%, 0 0, 11.875% 0);
+  clip-path: polygon(50% 50%, 0% 70%, 0% 30%);
+  border: 0px;
+}
+
+#slice5 {
+  background-color: #55c8ef;
+  clip-path: polygon(50% 50%, 0% 30%, 25% 0%, 30% 0%);
+  border: 0px;
+}
+
+#slice6 {
+  background-color: #0c346b;
+  clip-path: polygon(50% 50%, 30% 0%, 70% 0%);
   border: 0px;
 }
 
@@ -91,39 +104,56 @@
   width: 20%;
   height: 20%;
   z-index: 100;
-  margin-top: -67%;
+  margin-left: 50%;
+  margin-top: -60%;
 }
 
 .image1 {
   width: 20%;
   height: 20%;
   z-index: 100;
-  margin-left: 63.4%;
-  margin-top: -20.6%;
+  margin-left: 70%;
+  margin-top: 0%;
 }
 
 .image2 {
   width: 20%;
   height: 18%;
   z-index: 100;
-  margin-left: 39.18%;
-  margin-top: 53.93%;
+  margin-left: 35%;
+  margin-top: 50%;
 }
 
 .image3 {
   width: 20%;
   height: 18%;
   z-index: 100;
-  margin-left: -39.18%;
-  margin-top: 53.93%;
+  margin-left: -35%;
+  margin-top: 50%;
 }
 
 .image4 {
   width: 20%;
   height: 20%;
   z-index: 100;
-  margin-left: -63.4%;
-  margin-top: -20.6%;
+  margin-left: -70%;
+  margin-top: 0%;
+}
+
+.image5 {
+  width: 20%;
+  height: 20%;
+  z-index: 100;
+  margin-left: -50%;
+  margin-top: -55%;
+}
+
+.image6 {
+  width: 20%;
+  height: 20%;
+  z-index: 100;
+  margin-left: 0%;
+  margin-top: -70%;
 }
 
 @media (max-width: 840px) {
