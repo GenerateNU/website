@@ -35,13 +35,14 @@ export default function LandingPageV3() {
         <iframe
           id='luma'
           title='luma'
-          src='https://lu.ma/embed/event/evt-o7059rt4/simple'
+          src='https://luma.com/embed/event/evt-qcaL1sDb6Cg68Am/simple'
           width='100%'
-          height='434px'
-          frameborder='0'
-          allowfullscreen=''
+          height='100%'
+          frameBorder='0'
+          style={{ border: 'none' }}
+          allow='fullscreen; payment'
           aria-hidden='false'
-          tabindex='0'
+          tabIndex='0'
         ></iframe>
       </Dialog>
       {isOpen && <div id='background' />}
