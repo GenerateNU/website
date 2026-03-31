@@ -10,13 +10,20 @@ import ParentOrgs from './ParentOrgs'
 import Footer from './Footer'
 import Sponsors from './Sponsors'
 import { Dialog } from '@headlessui/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import './style.css'
 
 export default function LandingPageV3() {
   const whatIsGenerateRef = useRef(null)
-  const [isOpen, setIsOpen] = useState(false) // <-- set this to true to show the popup. 
+  const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOpen(true)
+    }, 2000)
+    return () => clearTimeout(timer)
+  }, []) 
 
   return (
     <div id='page-bg'>
@@ -25,11 +32,10 @@ export default function LandingPageV3() {
           close x
         </button>
 
-         {/* change the src= web page to update which event the popup is for. Use the specific embed- feature in Luma for best results. */}
         <iframe
           id='luma'
           title='luma'
-          src='https://lu.ma/embed/event/evt-UaQFBOS5OeEEHwW/simple'
+          src='https://lu.ma/embed/event/evt-o7059rt4/simple'
           width='100%'
           height='434px'
           frameborder='0'

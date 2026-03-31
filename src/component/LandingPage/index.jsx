@@ -7,6 +7,7 @@ import DirectorsCarousel from './Carousels/DirectorsCarousel/';
 import ShermanCenterIntro from './AffiliateOrgIntros/shermanCenterIntro';
 import MosaicIntro from './AffiliateOrgIntros/mosaicIntro';
 import ApplyButtons from './ApplyButtons';
+import LumaPopup from './LumaPopup';
 
 /**
  * Home page users will first land on upon arriving to the website.
@@ -23,6 +24,7 @@ export class LandingPage extends Component {
                 <ShermanCenterIntro />
                 <MosaicIntro />
                 <ApplyButtons />
+                <LumaPopup />
             </>
         );
     }
