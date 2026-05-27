@@ -26,7 +26,7 @@ const teamData = [
     },
     {
         'team': 'Engagement',
-        'image': Operations,
+        'image': Operations, // placeholder until an Engagement-specific image is added to teamscarousel
         'text': 'Creating a publicly facing voice and developing a brand and persona for the organization, we excite and connect Generate members. Through hosting events, creating and improving our branding, and building interpersonal relationships, we ensure that Generate shows its true colors, and that everyone is excited to be a part of it.',
     },
 ];
