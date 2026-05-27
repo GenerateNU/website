@@ -41,15 +41,15 @@ const TeamPageDetails = [{
     {
         name: "Operations",
         color: "#6FCF97",
-        activeIcon: CommunityActiveIcon,
-        inactiveIcon: CommunityInactiveIcon,
+        activeIcon: OperationsActiveIcon,
+        inactiveIcon: OperationsInactiveIcon,
         largePic: OperationsLargePicture,
     },
     {
         name: "Engagement",
         color: "#A559EC",
-        activeIcon: OperationsActiveIcon,
-        inactiveIcon: OperationsInactiveIcon,
+        activeIcon: CommunityActiveIcon,
+        inactiveIcon: CommunityInactiveIcon,
         largePic: EngagementLargePicture,
     }
 ]
