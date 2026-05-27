@@ -1,5 +1,5 @@
-import EarnzMockUp from "../assets/images/landingpage-v2/Earnz_Mock_Up.png";
-import SmartyPillMockup from "../assets/images/landingpage-v2/SmartyPill Mock Up.png";
+import EarnzMockUp from "../assets/images/landingpage/Earnz_Mock_Up.png";
+import SmartyPillMockup from "../assets/images/landingpage/SmartyPill Mock Up.png";
 
 function Project(
   name,

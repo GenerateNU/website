@@ -1,5 +1,5 @@
 import React from 'react'
-import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg' //"../../assets/images/landingpage-v2/footerlogo.svg";
+import GenerateLogo from '../../../assets/images/landingpage/footerlogo.svg'
 import { FooterLink } from '.'
 import { pages } from '.'
 import ShadowedButton from '../../../component/ShadowedButton'

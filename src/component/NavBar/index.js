@@ -1,5 +1,5 @@
 import React from 'react'
-import GenerateLogo from '../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png'
+import GenerateLogo from '../../assets/images/landingpage/Generate Logo_Nav.png'
 import './style.css'
 import { useNavigate } from 'react-router-dom'
 

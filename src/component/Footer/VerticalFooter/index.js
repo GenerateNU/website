@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style.css'
-import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg'
+import GenerateLogo from '../../../assets/images/landingpage/footerlogo.svg'
 import { useNavigate } from 'react-router-dom'
 import { SocialIcon, socialIcons } from '../../SocialIcon'
 import { pages, FooterLink } from '../index'
