@@ -120,7 +120,7 @@ export default function CelebrateOurWins() {
             <div id='small-carousel-nav'>
               <button
                 className='sm-carousel-button'
-                onClick={handleRightButtonClick}
+                onClick={handleLeftButtonClick}
               >
                 <PrevArrow />
               </button>
