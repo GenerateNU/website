@@ -10,20 +10,13 @@ import ParentOrgs from './ParentOrgs'
 import Footer from './Footer'
 import Sponsors from './Sponsors'
 import { Dialog } from '@headlessui/react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import './style.css'
 
 export default function LandingPageV3() {
   const whatIsGenerateRef = useRef(null)
-  const [isOpen, setIsOpen] = useState(false)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true)
-    }, 2000)
-    return () => clearTimeout(timer)
-  }, []) 
+  const [isOpen, setIsOpen] = useState(false) // <-- Set to true to enable the popup and change the link below
 
   return (
     <div id='page-bg'>
@@ -35,10 +28,9 @@ export default function LandingPageV3() {
         <iframe
           id='luma'
           title='luma'
-          src='https://luma.com/embed/event/evt-qcaL1sDb6Cg68Am/simple'
+          src='https://luma.com/embed/event/..../simple' // <-- Luma embedded link
           width='100%'
           height='100%'
-          frameBorder='0'
           style={{ border: 'none' }}
           allow='fullscreen; payment'
           aria-hidden='false'
