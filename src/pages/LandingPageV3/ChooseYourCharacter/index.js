@@ -27,18 +27,14 @@ const abbrvs = [
 const MascotRadioButton = ({
   index,
   isFullOpacity,
-  handleClick,
   handleMouseEnter,
-  handleMouseLeave
 }) => {
   const Mascot = mascots[index]
 
   return (
     <div
       className={`mascot-button mascot-button-${index}`}
-      onClick={() => handleClick(index)}
       onMouseEnter={() => handleMouseEnter(index)}
-      onMouseLeave={handleMouseLeave}
     >
       <Mascot
         className='colored-mascot'
@@ -62,18 +58,11 @@ export default function ChooseYourCharacter() {
       : []
   )
 
-  const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState(0)
-  const coloredIndex = hovered !== null ? hovered : selected
+  const coloredIndex = selected
 
-  const handlePress = (index) => {
+  const handleSelect = (index) => {
     setSelected(index)
-  }
-  const handleMouseEnter = (index) => {
-    setHovered(index)
-  }
-  const handleMouseLeave = () => {
-    setHovered(null)
   }
 
   return (
@@ -91,10 +80,8 @@ export default function ChooseYourCharacter() {
                     <MascotRadioButton
                       key={index}
                       index={index}
-                      isFullOpacity={index === hovered || index === selected}
-                      handleClick={handlePress}
-                      handleMouseEnter={handleMouseEnter}
-                      handleMouseLeave={handleMouseLeave}
+                      isFullOpacity={index === selected}
+                      handleMouseEnter={handleSelect}
                     />
                   ))}
               </div>

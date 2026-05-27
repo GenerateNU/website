@@ -42,7 +42,12 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  border: 0;
   position: absolute;
+}
+
+.circle img {
+  z-index: 100;
 }
 
 .animate {
@@ -56,75 +61,6 @@
 .selected {
   transform: scale(1.1);
   transform-origin: center center;
-}
-
-#slice0 {
-  background-color: #187dff;
-  clip-path: polygon(11.875% 0, 50% 50%, 88.125% 0);
-  border: 0px;
-}
-
-#slice1 {
-  background-color: #6fcf97;
-  clip-path: polygon(50% 50%, 88.125% 0, 100% 0, 100% 66.25%);
-  border: 0px;
-}
-
-#slice2 {
-  background-color: #ffbf3c;
-  clip-path: polygon(50% 50%, 100% 66.25%, 100% 100%, 50% 100%);
-  border: 0px;
-}
-
-#slice3 {
-  background-color: #ff6660;
-  clip-path: polygon(50% 50%, 50% 100%, 0 100%, 0 66.25%);
-  border: 0px;
-}
-
-#slice4 {
-  background-color: #a559ec;
-  clip-path: polygon(50% 50%, 0 66.25%, 0 0, 11.875% 0);
-  border: 0px;
-}
-
-.image0 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-top: -67%;
-}
-
-.image1 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-left: 63.4%;
-  margin-top: -20.6%;
-}
-
-.image2 {
-  width: 20%;
-  height: 18%;
-  z-index: 100;
-  margin-left: 39.18%;
-  margin-top: 53.93%;
-}
-
-.image3 {
-  width: 20%;
-  height: 18%;
-  z-index: 100;
-  margin-left: -39.18%;
-  margin-top: 53.93%;
-}
-
-.image4 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-left: -63.4%;
-  margin-top: -20.6%;
 }
 
 @media (max-width: 840px) {
