@@ -1,7 +1,7 @@
 #page-bg {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #111 70%),
-    url('../../assets/images/landingpage/GridBg.svg');
+    url('../../assets/images/landingpage-v3/GridBg.svg');
   background-repeat: repeat;
   /* repeat the bg infinitely down the y-axis*/
   background-size: 64rem;
@@ -211,20 +211,20 @@
 }
 
 #landing-lines-1 {
-  background-image: url('../../assets/images/landingpage/LandingLines1.svg');
+  background-image: url('../../assets/images/landingpage-v3/LandingLines1.svg');
 }
 
 #landing-lines-2 {
-  background-image: url('../../assets/images/landingpage/LandingLines2.svg');
+  background-image: url('../../assets/images/landingpage-v3/LandingLines2.svg');
 }
 
 #landing-lines-3 {
-  background-image: url('../../assets/images/landingpage/LandingLines3.svg');
+  background-image: url('../../assets/images/landingpage-v3/LandingLines3.svg');
   z-index: 100;
 }
 
 #landing-lines-4 {
-  background-image: url('../../assets/images/landingpage/LandingLines4.svg');
+  background-image: url('../../assets/images/landingpage-v3/LandingLines4.svg');
 }
 
 .bg-row {
@@ -599,7 +599,7 @@
   background-repeat: no-repeat;
   z-index: -5;
   width: 100vw;
-  background-image: url('../../assets/images/landingpage/RainbowTrim.svg');
+  background-image: url('../../assets/images/landingpage-v3/RainbowTrim.svg');
   object-fit: fill;
 }
 .arcade-link {
@@ -973,7 +973,7 @@
     background-repeat: no-repeat;
     z-index: -5;
     width: 100vw;
-    background-image: url('../../assets/images/landingpage/RainbowTrim.svg');
+    background-image: url('../../assets/images/landingpage-v3/RainbowTrim.svg');
     object-fit: fill;
   }
 
@@ -1568,7 +1568,7 @@
       z-index: -5;
       height: 10vh;
       width: 100vw;
-      background-image: url('../../assets/images/landingpage/RainbowTrim.svg');
+      background-image: url('../../assets/images/landingpage-v3/RainbowTrim.svg');
       object-fit: fill;
     }
 

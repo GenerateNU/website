@@ -1,6 +1,6 @@
-import members from '../../../assets/images/landingpage/we-are/members.JPG'
-import clients from '../../../assets/images/landingpage/we-are/cstar.jpg'
-import partners from '../../../assets/images/landingpage/we-are/overhead.jpg'
+import members from '../../../assets/images/landingpage/weare/members.JPG'
+import clients from '../../../assets/images/landingpage/weare/cstar.jpg'
+import partners from '../../../assets/images/landingpage/weare/overhead.jpg'
 import { useSanity } from '../../../services/useSanity'
 
 export default function WhyGenerate() {

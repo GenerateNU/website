@@ -4,8 +4,8 @@ import { ReactComponent as EngmntMascot } from '../../../assets/icons/mascots/en
 import { ReactComponent as HrdwreMascot } from '../../../assets/icons/mascots/hardware.svg'
 import { ReactComponent as OpratnMascot } from '../../../assets/icons/mascots/operations.svg'
 import { ReactComponent as SftwreMascot } from '../../../assets/icons/mascots/software.svg'
-import ArcadeText from '../../../assets/images/landingpage/DynamicArcadeText.js'
-import ArcadeMachine from '../../../assets/images/landingpage/DynamicArcadeMachine.js'
+import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText.js'
+import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine.js'
 import { urlFor } from '../../../client'
 import { useSanity } from '../../../services/useSanity'
 

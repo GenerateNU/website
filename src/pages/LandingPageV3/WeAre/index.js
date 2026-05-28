@@ -1,4 +1,4 @@
-import weare from '../../../assets/images/landingpage/we-are/weare.jpg'
+import weare from '../../../assets/images/landingpage/weare/weare.jpg'
 import { useSanity } from '../../../services/useSanity'
 
 export default function WeAre() {

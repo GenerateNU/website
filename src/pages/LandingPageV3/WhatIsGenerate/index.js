@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSanity } from '../../../services/useSanity'
-import workshop from '../../../assets/images/landingpage/we-are/workshop.jpg'
-import showcase from '../../../assets/images/landingpage/we-are/showcase.jpg'
+import workshop from '../../../assets/images/landingpage/weare/workshop.jpg'
+import showcase from '../../../assets/images/landingpage/weare/showcase.jpg'
 
 function WhatIsGenerate(props, ref) {
   const query = `*[_type == "copy" && key == "what-is-generate-landing"]{header, content}`
