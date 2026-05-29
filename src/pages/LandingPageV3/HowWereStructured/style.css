@@ -42,7 +42,12 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  border: 0;
   position: absolute;
+}
+
+.circle img {
+  z-index: 100;
 }
 
 .animate {
@@ -56,104 +61,6 @@
 .selected {
   transform: scale(1.1);
   transform-origin: center center;
-}
-
-#slice0 {
-  background-color: #187dff;
-  clip-path: polygon(50% 50%, 70% 0%, 75% 0%, 100% 25%);
-  border: 0px;
-}
-
-#slice1 {
-  background-color: #6fcf97;
-  clip-path: polygon(50% 50%, 100% 25%, 100% 75%);
-  border: 0px;
-}
-
-#slice2 {
-  background-color: #ffbf3c;
-  clip-path: polygon(50% 50%, 100% 75%, 75% 100%, 50% 100%);
-  border: 0px;
-}
-
-#slice3 {
-  background-color: #ff6660;
-  clip-path: polygon(50% 50%, 50% 100%, 30% 100%, 0% 70%);
-  border: 0px;
-}
-
-#slice4 {
-  background-color: #a559ec;
-  clip-path: polygon(50% 50%, 0% 70%, 0% 30%);
-  border: 0px;
-}
-
-#slice5 {
-  background-color: #55c8ef;
-  clip-path: polygon(50% 50%, 0% 30%, 25% 0%, 30% 0%);
-  border: 0px;
-}
-
-#slice6 {
-  background-color: #0c346b;
-  clip-path: polygon(50% 50%, 30% 0%, 70% 0%);
-  border: 0px;
-}
-
-.image0 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-left: 50%;
-  margin-top: -60%;
-}
-
-.image1 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-left: 70%;
-  margin-top: 0%;
-}
-
-.image2 {
-  width: 20%;
-  height: 18%;
-  z-index: 100;
-  margin-left: 35%;
-  margin-top: 50%;
-}
-
-.image3 {
-  width: 20%;
-  height: 18%;
-  z-index: 100;
-  margin-left: -35%;
-  margin-top: 50%;
-}
-
-.image4 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-left: -70%;
-  margin-top: 0%;
-}
-
-.image5 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-left: -50%;
-  margin-top: -55%;
-}
-
-.image6 {
-  width: 20%;
-  height: 20%;
-  z-index: 100;
-  margin-left: 0%;
-  margin-top: -70%;
 }
 
 @media (max-width: 840px) {

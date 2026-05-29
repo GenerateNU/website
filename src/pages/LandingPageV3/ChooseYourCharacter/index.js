@@ -4,8 +4,6 @@ import { ReactComponent as EngmntMascot } from '../../../assets/icons/mascots/en
 import { ReactComponent as HrdwreMascot } from '../../../assets/icons/mascots/hardware.svg'
 import { ReactComponent as OpratnMascot } from '../../../assets/icons/mascots/operations.svg'
 import { ReactComponent as SftwreMascot } from '../../../assets/icons/mascots/software.svg'
-import { ReactComponent as FinanceMascot } from '../../../assets/icons/mascots/finance.svg'
-import { ReactComponent as MarketingMascot } from '../../../assets/icons/mascots/marketing.svg'
 import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText.js'
 import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine.js'
 import { urlFor } from '../../../client'
@@ -16,35 +14,27 @@ const mascots = [
   OpratnMascot,
   SftwreMascot,
   HrdwreMascot,
-  EngmntMascot,
-  FinanceMascot,
-  MarketingMascot
+  EngmntMascot
 ]
 const abbrvs = [
   'MNGMNT',
-  'DATA',
+  'OPRTNS',
   'SFTWRE',
   'HRDWRE',
-  'ENGMNT',
-  'FNANCE',
-  'MRKTNG'
+  'ENGMNT'
 ]
 
 const MascotRadioButton = ({
   index,
   isFullOpacity,
-  handleClick,
   handleMouseEnter,
-  handleMouseLeave
 }) => {
   const Mascot = mascots[index]
 
   return (
     <div
       className={`mascot-button mascot-button-${index}`}
-      onClick={() => handleClick(index)}
       onMouseEnter={() => handleMouseEnter(index)}
-      onMouseLeave={handleMouseLeave}
     >
       <Mascot
         className='colored-mascot'
@@ -68,18 +58,11 @@ export default function ChooseYourCharacter() {
       : []
   )
 
-  const [hovered, setHovered] = useState(null)
   const [selected, setSelected] = useState(0)
-  const coloredIndex = hovered !== null ? hovered : selected
+  const coloredIndex = selected
 
-  const handlePress = (index) => {
+  const handleSelect = (index) => {
     setSelected(index)
-  }
-  const handleMouseEnter = (index) => {
-    setHovered(index)
-  }
-  const handleMouseLeave = () => {
-    setHovered(null)
   }
 
   return (
@@ -97,10 +80,8 @@ export default function ChooseYourCharacter() {
                     <MascotRadioButton
                       key={index}
                       index={index}
-                      isFullOpacity={index === hovered || index === selected}
-                      handleClick={handlePress}
-                      handleMouseEnter={handleMouseEnter}
-                      handleMouseLeave={handleMouseLeave}
+                      isFullOpacity={index === selected}
+                      handleMouseEnter={handleSelect}
                     />
                   ))}
               </div>
