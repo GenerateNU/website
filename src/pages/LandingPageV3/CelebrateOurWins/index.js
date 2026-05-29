@@ -17,8 +17,14 @@ export default function CelebrateOurWins() {
     data
       ? data.map((showcase) => ({
           ...showcase,
+          semester: showcase.semester.toUpperCase(),
           image: urlFor(showcase.image)
-        }))
+        })).sort((a, b) => {
+          if (a.year === b.year){
+            return a.semester == "SPRING" ? -1 : 1
+          } 
+          return a.year - b.year
+        })
       : []
   )
 
