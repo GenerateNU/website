@@ -4,6 +4,7 @@ import { ReactComponent as EngmntMascot } from '../../../assets/icons/mascots/en
 import { ReactComponent as HrdwreMascot } from '../../../assets/icons/mascots/hardware.svg'
 import { ReactComponent as OpratnMascot } from '../../../assets/icons/mascots/operations.svg'
 import { ReactComponent as SftwreMascot } from '../../../assets/icons/mascots/software.svg'
+import { ReactComponent as OptStratMascot } from '../../../assets/icons/mascots/opt-strat.svg'
 import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText.js'
 import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine.js'
 import { urlFor } from '../../../client'
@@ -14,14 +15,16 @@ const mascots = [
   OpratnMascot,
   SftwreMascot,
   HrdwreMascot,
-  EngmntMascot
+  EngmntMascot,
+  OptStratMascot
 ]
 const abbrvs = [
   'MNGMNT',
-  'OPRTNS',
+  'DATA',
   'SFTWRE',
   'HRDWRE',
-  'ENGMNT'
+  'GAMES', 
+  'ORG.STRAT'
 ]
 
 const MascotRadioButton = ({
