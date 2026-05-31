@@ -24,7 +24,7 @@ const abbrvs = [
   'SFTWRE',
   'HRDWRE',
   'GAMES', 
-  'ORG.STRAT'
+  'ORGSTR'
 ]
 
 const MascotRadioButton = ({
