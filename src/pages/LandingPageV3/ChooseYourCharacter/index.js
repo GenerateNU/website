@@ -1,57 +1,36 @@
-import React, { useState } from 'react'
-import { ReactComponent as MngmntMascot } from '../../../assets/icons/mascots/management.svg'
-import { ReactComponent as EngmntMascot } from '../../../assets/icons/mascots/engagement.svg'
-import { ReactComponent as HrdwreMascot } from '../../../assets/icons/mascots/hardware.svg'
-import { ReactComponent as OpratnMascot } from '../../../assets/icons/mascots/operations.svg'
-import { ReactComponent as SftwreMascot } from '../../../assets/icons/mascots/software.svg'
-import { ReactComponent as OptStratMascot } from '../../../assets/icons/mascots/opt-strat.svg'
+import React, { useEffect, useState } from 'react'
 import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText.js'
 import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine.js'
 import { urlFor } from '../../../client'
 import { useSanity } from '../../../services/useSanity'
-
-const mascots = [
-  MngmntMascot,
-  OpratnMascot,
-  SftwreMascot,
-  HrdwreMascot,
-  EngmntMascot,
-  OptStratMascot
-]
-const abbrvs = [
-  'MNGMNT',
-  'DATA',
-  'SFTWRE',
-  'HRDWRE',
-  'GAMES', 
-  'ORGSTR'
-]
+import Mascot from './Mascot.jsx'
 
 const MascotRadioButton = ({
+  color,
   index,
   isFullOpacity,
   handleMouseEnter,
 }) => {
-  const Mascot = mascots[index]
-
   return (
     <div
       className={`mascot-button mascot-button-${index}`}
       onMouseEnter={() => handleMouseEnter(index)}
     >
-      <Mascot
+      <Mascot 
+        color={color}
         className='colored-mascot'
         style={{
           opacity: isFullOpacity ? 1 : 0.3
-        }}
-      />
+        }}/>
     </div>
   )
 }
 
 export default function ChooseYourCharacter() {
-  const query = `*[_type == "director"] | order(zIndex)`
-  const directors = useSanity(query, {}, (data) =>
+  const directorsQuery = `*[_type == "director"] | order(zIndex)`
+  const branchQuery = `*[_type == "team"] {team,team_abbreviation,zIndex} | order(zIndex)`
+
+  const directors = useSanity(directorsQuery, {}, (data) =>
     data
       ? data.map((director) => ({
           ...director,
@@ -61,8 +40,31 @@ export default function ChooseYourCharacter() {
       : []
   )
 
-  const [selected, setSelected] = useState(0)
-  const coloredIndex = selected
+  const branches = useSanity(branchQuery, {}, (data) =>
+    data
+      ? data.map((branch) => ({
+          ...branch,
+          team: branch.team.toUpperCase(),
+          teamAbbreviation: (branch.team_abbreviation || "").toUpperCase(),
+        }))
+      : []
+  )
+
+  useEffect(() => {
+    if (branches.length === 0 || directors.length === 0 )
+    {
+      return
+    } else {
+      setDirectorToAbbrev(new Map(directors.map((director) => {
+        const branch = branches.find((branch) => branch.team.toUpperCase() === director.team.toUpperCase())
+        return [director.name, branch.teamAbbreviation]
+      })))
+    }
+  }, [branches, directors])
+
+  const [coloredIndex, setSelected] = useState(0)
+  let [directorToAbbrev, setDirectorToAbbrev] = useState(new Map());
+
 
   const handleSelect = (index) => {
     setSelected(index)
@@ -79,11 +81,12 @@ export default function ChooseYourCharacter() {
             <div id='text-mascots'>
               <div className='mascot-row'>
                 {directors &&
-                  directors.map((_, index) => (
+                  directors.map((director, index) => (
                     <MascotRadioButton
-                      key={index}
+                      key={director.team}
                       index={index}
-                      isFullOpacity={index === selected}
+                      color={director.color}
+                      isFullOpacity={index === coloredIndex}
                       handleMouseEnter={handleSelect}
                     />
                   ))}
@@ -96,10 +99,10 @@ export default function ChooseYourCharacter() {
                 />
               )}
             </div>
-            {directors && directors[coloredIndex] && (
+            {directors && directorToAbbrev && directors[coloredIndex] && (
               <ArcadeMachine
                 color={directors[coloredIndex].color}
-                text={abbrvs[coloredIndex]}
+                text={directorToAbbrev.get(directors[coloredIndex].name)}
                 imgUrl={directors[coloredIndex].image}
               />
             )}

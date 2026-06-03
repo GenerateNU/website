@@ -21,7 +21,7 @@ export default function CelebrateOurWins() {
           image: urlFor(showcase.image)
         })).sort((a, b) => {
           if (a.year === b.year){
-            return a.semester == "SPRING" ? -1 : 1
+            return a.semester === "SPRING" ? -1 : 1
           } 
           return a.year - b.year
         })

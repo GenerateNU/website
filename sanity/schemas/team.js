@@ -24,6 +24,11 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'team_abbreviation',
+      title: 'Team Abbreviation',
+      type: 'string',
+    }),
+    defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
