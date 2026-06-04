@@ -4,25 +4,42 @@ import { urlFor } from '../../../client'
 import './style.css'
 
 const ARC_STEPS = 16
-const IMAGE_RADIAL_DISTANCE = 32
+const OUTER_RADIUS = 50
+const INNER_RADIUS = 20
+const IMAGE_RADIAL_DISTANCE = (OUTER_RADIUS + INNER_RADIUS) / 2
+const IMAGE_SIZE = 15
+const SELECTED_SHIFT = 7
 
-/** 
- * Dynamically generates a circular "slice" shaped path based on the index of the element
- * and the total number of elements that will be present in the circle
- */ 
+/**
+ * Dynamically generates a circular "slice" shaped path (an annular sector /
+ * donut segment) based on the index of the element and the total number of
+ * elements that will be present in the circle. The inner edge follows a
+ * smaller arc so the center of the wheel reads as a true cutout.
+ */
 function sliceClipPath(index, total) {
   const sliceAngle = 360 / total
   // Rotate the path by the index
   const startAngle = (index - 0.5) * sliceAngle
   const endAngle = (index + 0.5) * sliceAngle
 
-  const points = ['50% 50%']
+  const pointAt = (angle, radius) => {
+    const rad = (angle * Math.PI) / 180
+    const x = 50 + radius * Math.sin(rad)
+    const y = 50 - radius * Math.cos(rad)
+    return `${x.toFixed(3)}% ${y.toFixed(3)}%`
+  }
+
+  const points = []
+  // Outer arc: sweep from the start angle to the end angle.
   for (let s = 0; s <= ARC_STEPS; s++) {
     const angle = startAngle + (endAngle - startAngle) * (s / ARC_STEPS)
-    const rad = (angle * Math.PI) / 180
-    const x = 50 + 50 * Math.sin(rad)
-    const y = 50 - 50 * Math.cos(rad)
-    points.push(`${x.toFixed(3)}% ${y.toFixed(3)}%`)
+    points.push(pointAt(angle, OUTER_RADIUS))
+  }
+  // Inner arc: sweep back from the end angle to the start angle to close the
+  // shape around the center cutout.
+  for (let s = ARC_STEPS; s >= 0; s--) {
+    const angle = startAngle + (endAngle - startAngle) * (s / ARC_STEPS)
+    points.push(pointAt(angle, INNER_RADIUS))
   }
 
   return `polygon(${points.join(', ')})`
@@ -39,10 +56,24 @@ function imagePosition(index, total) {
   const cx = 50 + IMAGE_RADIAL_DISTANCE * Math.sin(rad)
   const cy = 50 - IMAGE_RADIAL_DISTANCE * Math.cos(rad)
 
+  // Offset by half the logo's size so (cx, cy) lands at the logo's center
+  // rather than its top-left corner.
   return {
-    left: `${(cx - 10).toFixed(3)}%`,
-    top: `${(cy - 10).toFixed(3)}%`
+    left: `${(cx - IMAGE_SIZE / 2).toFixed(3)}%`,
+    top: `${(cy - IMAGE_SIZE / 2).toFixed(3)}%`
   }
+}
+
+/**
+ * Computes the radial "slide out" offset (as a CSS translate string) for the
+ * selected slice, pushing it away from the wheel center along its own angle.
+ */
+function sliceOffset(index, total) {
+  const angle = index * (360 / total)
+  const rad = (angle * Math.PI) / 180
+  const x = (SELECTED_SHIFT * Math.sin(rad)).toFixed(3)
+  const y = (-SELECTED_SHIFT * Math.cos(rad)).toFixed(3)
+  return `translate(${x}%, ${y}%)`
 }
 
 export default function HowWereStrctured() {
@@ -60,7 +91,6 @@ export default function HowWereStrctured() {
   )
 
   const [selected, setSelected] = useState({})
-  const displayedTeam =  selected
 
   useEffect(() => {
     if (teams.length > 0) {
@@ -87,17 +117,34 @@ export default function HowWereStrctured() {
             <div id='skills'>
               {teams &&
                 teams[0] &&
+                teams.map((team, index) => (
+                  <div
+                    key={`silhouette${index}`}
+                    className='circle slice-silhouette'
+                    style={{
+                      clipPath: sliceClipPath(index, teams.length),
+                      visibility:
+                        selected.team === team.team ? 'visible' : 'hidden'
+                    }}
+                  />
+                ))}
+              {teams &&
+                teams[0] &&
                 teams.map((team, index) => {
+                  const isSelected = selected.team === team.team
                   return (
                     <button
                       key={`slice${index}`}
                       className={
-                        'circle animate ' +
-                        (selected.team === team.team ? 'selected' : '')
+                        'circle animate ' + (isSelected ? 'selected' : '')
                       }
                       style={{
                         clipPath: sliceClipPath(index, teams.length),
-                        backgroundColor: team.color.hex
+                        backgroundColor: team.color.hex,
+                        transform: isSelected
+                          ? sliceOffset(index, teams.length)
+                          : 'translate(0, 0)',
+                        zIndex: isSelected ? 100 : 1
                       }}
                       onMouseEnter={() => handleSelect(team)}
                     >
@@ -106,22 +153,19 @@ export default function HowWereStrctured() {
                         src={team.image}
                         style={{
                           position: 'absolute',
-                          width: '20%',
-                          height: '20%',
+                          width: `${IMAGE_SIZE}%`,
+                          height: `${IMAGE_SIZE}%`,
                           ...imagePosition(index, teams.length)
                         }}
                       />
                     </button>
                   )
                 })}
-              <div id='wheel-overlay'>
-                <div id='wheel-overlay-fill'></div>
-              </div>
             </div>
           </div>
           <div className='wheel-text'>
-            <div className='white-h2-text'> {displayedTeam.team} </div>
-            <div className='white-p-text'>{displayedTeam.teamDescription}</div>
+            <div className='white-h2-text'> {selected.team} </div>
+            <div className='white-p-text'>{selected.teamDescription}</div>
             <div
               className='view-pp-fp-project-div'
               style={{ paddingTop: '5vw' }}
