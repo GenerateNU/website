@@ -55,10 +55,13 @@ export default function ChooseYourCharacter() {
     {
       return
     } else {
-      setDirectorToAbbrev(new Map(directors.map((director) => {
-        const branch = branches.find((branch) => branch.team.toUpperCase() === director.team.toUpperCase())
-        return [director.name, branch.teamAbbreviation]
-      })))
+      const newDirectorMapping = new Map(
+        directors.map((director) => {
+          const branch = branches.find((branch) => branch.team.toUpperCase() === director.team.toUpperCase())
+          return [director.name, branch.teamAbbreviation]
+      }))
+
+      setDirectorToAbbrev(newDirectorMapping)
     }
   }, [branches, directors])
 
