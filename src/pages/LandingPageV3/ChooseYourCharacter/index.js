@@ -9,26 +9,62 @@ const MascotRadioButton = ({
   color,
   index,
   isFullOpacity,
-  handleMouseEnter,
+  handleMouseEnter
 }) => {
   return (
     <div
       className={`mascot-button mascot-button-${index}`}
       onMouseEnter={() => handleMouseEnter(index)}
     >
-      <Mascot 
+      <Mascot
         color={color}
         className='colored-mascot'
         style={{
           opacity: isFullOpacity ? 1 : 0.3
-        }}/>
+        }}
+      />
     </div>
+  )
+}
+
+const DirectorsList = ({ directors, coloredIndex, handleSelect }) => {
+  return (
+    <div className='mascot-row'>
+      {directors &&
+        directors.map((director, index) => (
+          <MascotRadioButton
+            key={director.team}
+            index={index}
+            color={director.color}
+            isFullOpacity={index === coloredIndex}
+            handleMouseEnter={handleSelect}
+          />
+        ))}
+    </div>
+  )
+}
+
+const ArcadeMachineWrapper = ({ directors, directorToTeam, coloredIndex }) => {
+  if (!directors[coloredIndex]?.name) {
+    return <></>
+  }
+  const currentTeam = directorToTeam.get(directors[coloredIndex].name)
+  return (
+    <>
+      {directors && directorToTeam && directors[coloredIndex] && (
+        <ArcadeMachine
+          color={currentTeam?.color.hex}
+          text={currentTeam?.teamAbbreviation}
+          imgUrl={directors[coloredIndex].image}
+        />
+      )}
+    </>
   )
 }
 
 export default function ChooseYourCharacter() {
   const directorsQuery = `*[_type == "director"] | order(zIndex)`
-  const branchQuery = `*[_type == "team"] {team,team_abbreviation,zIndex} | order(zIndex)`
+  const branchQuery = `*[_type == "team"] {team,team_abbreviation,color,zIndex} | order(zIndex)`
 
   const directors = useSanity(directorsQuery, {}, (data) =>
     data
@@ -45,29 +81,31 @@ export default function ChooseYourCharacter() {
       ? data.map((branch) => ({
           ...branch,
           team: branch.team.toUpperCase(),
-          teamAbbreviation: (branch.team_abbreviation || "").toUpperCase(),
+          teamAbbreviation: (branch.team_abbreviation || '').toUpperCase()
         }))
       : []
   )
 
   useEffect(() => {
-    if (branches.length === 0 || directors.length === 0 )
-    {
+    if (branches.length === 0 || directors.length === 0) {
       return
     } else {
       const newDirectorMapping = new Map(
         directors.map((director) => {
-          const branch = branches.find((branch) => branch.team.toUpperCase() === director.team.toUpperCase())
-          return [director.name, branch.teamAbbreviation]
-      }))
+          const branch = branches.find(
+            (branch) =>
+              branch.team.toUpperCase() === director.team.toUpperCase()
+          )
+          return [director.name, branch]
+        })
+      )
 
-      setDirectorToAbbrev(newDirectorMapping)
+      setDirectorToTeam(newDirectorMapping)
     }
   }, [branches, directors])
 
   const [coloredIndex, setSelected] = useState(0)
-  let [directorToAbbrev, setDirectorToAbbrev] = useState(new Map());
-
+  let [directorToTeam, setDirectorToTeam] = useState(new Map())
 
   const handleSelect = (index) => {
     setSelected(index)
@@ -82,18 +120,11 @@ export default function ChooseYourCharacter() {
         <div id='choose-grid'>
           <div id='choose-flex-wrapper'>
             <div id='text-mascots'>
-              <div className='mascot-row'>
-                {directors &&
-                  directors.map((director, index) => (
-                    <MascotRadioButton
-                      key={director.team}
-                      index={index}
-                      color={director.color}
-                      isFullOpacity={index === coloredIndex}
-                      handleMouseEnter={handleSelect}
-                    />
-                  ))}
-              </div>
+              <DirectorsList
+                coloredIndex={coloredIndex}
+                directors={directors}
+                handleSelect={handleSelect}
+              />
               {directors && directors[coloredIndex] && (
                 <ArcadeText
                   id='text-arcade'
@@ -102,13 +133,11 @@ export default function ChooseYourCharacter() {
                 />
               )}
             </div>
-            {directors && directorToAbbrev && directors[coloredIndex] && (
-              <ArcadeMachine
-                color={directors[coloredIndex].color}
-                text={directorToAbbrev.get(directors[coloredIndex].name)}
-                imgUrl={directors[coloredIndex].image}
-              />
-            )}
+            <ArcadeMachineWrapper
+              coloredIndex={coloredIndex}
+              directors={directors}
+              directorToTeam={directorToTeam}
+            />
           </div>
         </div>
         <div id='rainbow-trim' />

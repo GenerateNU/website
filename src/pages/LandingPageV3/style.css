@@ -1,11 +1,27 @@
 #page-bg {
+  background-color: #111111;
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #111 70%),
-    url('../../assets/images/landingpage-v3/GridBg.svg');
-  background-repeat: repeat;
-  /* repeat the bg infinitely down the y-axis*/
-  background-size: 64rem;
-  overflow-x: hidden;
+    repeating-linear-gradient(
+      to right,
+      #144280 0,
+      #144280 1px,
+      transparent 1px,
+      transparent 2.222rem
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #144280 0,
+      #144280 1px,
+      transparent 1px,
+      transparent 2.222rem
+    );
+  background-size:
+    100% 100%,
+    auto,
+    auto;
+  background-repeat: no-repeat, repeat, repeat;
+  overflow-x: clip;
 }
 
 .debug {
