@@ -2,9 +2,8 @@ import React from 'react'
 
 const DynamicArcadeMachine = ({
   color = '#187DFF',
-  text = 'MNGMNT',
-  imgUrl = '',
-  id
+  text = '',
+  imgUrl = ''
 }) => (
   <svg
     id='arcade-svg'
