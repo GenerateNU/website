@@ -3,6 +3,8 @@
 > Local draft only — not pushed to GitHub. Generated from the architecture review.
 > Each issue is a thin vertical slice that is independently grabbable and verifiable on its own.
 
+> **Note:** The apply-funnel / Position-posting work — the data-source decision, the "position-intake module", and the GROQ-injection fix — is consolidated into **Issue 3**.
+
 ---
 
 ## Issue 1 — Revoke the leaked Sanity write token and remove it from the frontend
@@ -25,7 +27,7 @@ Therefore the browser client should carry **no token** — not a read-only key. 
 
 History handling: revoke only, do **not** rewrite git history (revocation makes every leaked copy inert; history rewriting is disruptive on a shared repo and buys nothing once the token is dead).
 
-> The "why are some images in Sanity and some in the repo?" split is out of scope here — it is a content/asset concern tracked in Issue 11 and downstream of Issue 2.
+> The "why are some images in Sanity and some in the repo?" split is out of scope here — it is a content/asset concern tracked in Issue 8 and downstream of Issue 3.
 
 ### Acceptance criteria
 
@@ -43,58 +45,7 @@ History handling: revoke only, do **not** rewrite git history (revocation makes 
 
 ---
 
-## Issue 2 — Decide and record the authoritative source for position/application content
-
-**Type:** HITL (architectural decision)
-**Labels:** `architecture` `critical`
-**Impact:** 5
-
-### What to build
-
-The "application/position" concept is currently read from three places — Sanity, static seed files under `data/ApplyData/`, and an external axios API. Decide which one is authoritative for open positions and record the decision as an ADR so future reviews don't re-litigate it.
-
-This is a decision-only slice; implementation lands in Issue 3.
-
-### Acceptance criteria
-
-- [ ] A single authoritative source for position/application data is chosen
-- [ ] The role of the other two sources is decided (removed, or demoted to a documented fallback)
-- [ ] An ADR is written capturing the decision and its rationale
-- [ ] The domain term for an open position is named consistently (added to a CONTEXT/glossary doc)
-
-### Blocked by
-
-- None — can start immediately
-
----
-
-## Issue 3 — Build a single position-intake module
-
-**Type:** AFK
-**Labels:** `architecture`
-**Impact:** 5
-
-### What to build
-
-Replace the scattered source-selection logic with one module that owns "what an open position is." Every consumer in the apply funnel (the apply page, the team radio selector, the position detail page) reads positions through this one interface, regardless of where the data physically comes from.
-
-The deletion test should now pass: deleting this module would make position-fetching complexity reappear across all consumers — proving it earns its keep.
-
-### Acceptance criteria
-
-- [ ] One module exposes the position/application read interface
-- [ ] The apply page, team selector, and position detail page all read through it
-- [ ] No component imports `data/ApplyData/*` or calls axios for positions directly anymore
-- [ ] The module is unit-tested through its interface (happy path + empty/missing position)
-- [ ] Apply funnel behaves identically to before in the browser
-
-### Blocked by
-
-- Issue 2
-
----
-
-## Issue 4 — Deepen the Sanity content hook (loading/error/refetch)
+## Issue 2 — Deepen the Sanity content hook (loading/error/refetch)
 
 **Type:** AFK
 **Labels:** `architecture` `fix`
@@ -120,22 +71,44 @@ This makes the hook's interface the test surface for the content layer and lets 
 
 ---
 
-## Issue 5 — Delete dead page generations and orphaned files
+## Issue 3 — Retire the Position posting concept and delete dead code
 
 **Type:** AFK
-**Labels:** `architecture` `chore`
-**Impact:** 4
+**Labels:** `architecture` `security` `chore`
+**Impact:** 5
 
 ### What to build
 
-Remove the unrouted generations of pages and orphan files so searches and refactors stop returning stale matches. Targets confirmed unreferenced: `component/LandingPage/`, `component/LandingPageV2/` (which also has a broken import), `component/ApplyPage/` (the V1 tree, not `ApplyPageV2`), the entire `component/AboutPage/` tree (its route redirects to `/`), and the root orphan `landingPage.jsx`.
+Two jobs that turned out to be one: remove the dead/legacy page generations, **and** retire the orphaned "Position posting" concept so the apply funnel consolidates on Sanity as its single source. _(This consolidates what were originally three separate issues: the position/application data-source decision, a proposed "position-intake module", and the GROQ-injection fix.)_
+
+**Decision captured here (no ADR, by maintainer preference):** Generate recruits via **external application forms**. The live apply funnel is `ApplyPageV2 → Sanity team / Role-opening documents → external application link`. The in-site "Position posting" detail page (`/positions/...`, backed by hand-edited static files) was never linked from the live funnel, and its rich fields (description, responsibilities, requirements, duration, commitment) never existed in Sanity. It is retired, not revived. Sanity is the sole source of truth for **Role openings**; the static seed data and the axios backend are deleted outright, not demoted to fallbacks. See `CONTEXT.md` for the Role opening / Position posting glossary.
+
+**Delete targets — dead page generations (original scope):**
+
+- `component/LandingPage/`
+- `component/LandingPageV2/` (also contains a broken import)
+- `component/AboutPage/` (its route already redirects to `/`)
+- `landingPage.jsx` (root orphan)
+
+**Delete targets — apply funnel consolidation:**
+
+- `component/ApplyPage/` — the entire V1 tree, **including** `Position/` (the orphaned detail page), `Search/`, `TeamsRadioButton/`, `Categories/`, `positions.js`, `index.jsx`
+- `data/ApplyData/*` (static seed data — stale, shown to no one)
+- `services/positionService.js`, `services/categoryService.js`
+- `component/position.jsx`, `component/useFetch.js` (Heroku-backed orphan)
+- `App.js`: remove the `Position` import and both `/positions/:id` and `/positions/:categoryType/:index` routes (they fall through to the existing `*` catch-all → landing page)
+
+Deleting `TeamsRadioButton` also removes the **only** GROQ-injection site. No live query interpolates user/route input, so no separate parameterization fix is needed.
 
 ### Acceptance criteria
 
 - [ ] All listed dead directories/files are deleted
-- [ ] App builds with no broken imports
-- [ ] All live routes (`/`, `/apply`, `/teams`, `/teams-expanded`, `/culture`, `/projects`) still render
-- [ ] No remaining import references the deleted modules
+- [ ] The `/positions/*` routes and the `Position` import are removed from `App.js`
+- [ ] No code imports `data/ApplyData/*`, `positionService`, `categoryService`, `useFetch`, or `position.jsx`
+- [ ] The live apply funnel still works: `/apply` renders team cards from Sanity and role links open the external application forms
+- [ ] All other live routes (`/`, `/teams`, `/teams-expanded`, `/culture`, `/projects`) still render
+- [ ] App builds with no broken imports; no remaining reference to any deleted module
+- [ ] No remaining GROQ query interpolates route/user-derived values into the query string
 
 ### Blocked by
 
@@ -143,29 +116,7 @@ Remove the unrouted generations of pages and orphan files so searches and refact
 
 ---
 
-## Issue 6 — Fix GROQ injection in the team application query
-
-**Type:** AFK
-**Labels:** `security` `fix`
-**Impact:** 4
-
-### What to build
-
-The team application query interpolates the team value directly into the GROQ string. Switch it to a parameterized query (`$team`) so the value is passed as a bound parameter rather than concatenated into the query text.
-
-### Acceptance criteria
-
-- [ ] The team application query uses a bound GROQ parameter, not string interpolation
-- [ ] Team radio selector still returns the correct applications per team
-- [ ] No other query in the codebase interpolates user/route-derived values into the GROQ string
-
-### Blocked by
-
-- None (lighter to do after Issue 4, but not dependent)
-
----
-
-## Issue 7 — Consolidate viewport / mobile detection into one module
+## Issue 4 — Consolidate viewport / mobile detection into one module
 
 **Type:** AFK
 **Labels:** `architecture` `chore`
@@ -184,11 +135,11 @@ Mobile detection is reimplemented ~31 times across three conflicting rules (`max
 
 ### Blocked by
 
-- Issue 5
+- Issue 3
 
 ---
 
-## Issue 8 — Collapse duplicate scroll containers and carousels
+## Issue 5 — Collapse duplicate scroll containers and carousels
 
 **Type:** AFK
 **Labels:** `architecture` `chore`
@@ -207,11 +158,11 @@ After dead code removal, collapse the near-identical desktop scroll containers (
 
 ### Blocked by
 
-- Issue 5
+- Issue 3
 
 ---
 
-## Issue 9 — Introduce design tokens for brand colors
+## Issue 6 — Introduce design tokens for brand colors
 
 **Type:** AFK
 **Labels:** `chore` `architecture`
@@ -234,7 +185,7 @@ Brand colors (e.g. the blue, yellow, green, purple) are hardcoded as raw hex in 
 
 ---
 
-## Issue 10 — Align tooling config across root and Sanity studio
+## Issue 7 — Align tooling config across root and Sanity studio
 
 **Type:** AFK
 **Labels:** `chore` `fix`
@@ -256,7 +207,7 @@ Prettier is configured differently in the root (`printWidth 80`) and the Sanity 
 
 ---
 
-## Issue 11 — Optimize and consolidate image assets
+## Issue 8 — Optimize and consolidate image assets
 
 **Type:** AFK
 **Labels:** `chore`
@@ -264,7 +215,7 @@ Prettier is configured differently in the root (`printWidth 80`) and the Sanity 
 
 ### What to build
 
-570+ MB of unoptimized images are committed and scattered across `src/`, `src/assets/`, and `public/`, with multi-MB JPEGs sitting next to code and some duplicated between locations. Consolidate to a single asset location, compress/convert large images, and remove duplicates. Note candidates that should live in Sanity instead (ties into Issue 2/3).
+570+ MB of unoptimized images are committed and scattered across `src/`, `src/assets/`, and `public/`, with multi-MB JPEGs sitting next to code and some duplicated between locations. Consolidate to a single asset location, compress/convert large images, and remove duplicates. Note candidates that should live in Sanity instead (ties into Issue 3).
 
 ### Acceptance criteria
 
@@ -279,7 +230,7 @@ Prettier is configured differently in the root (`printWidth 80`) and the Sanity 
 
 ---
 
-## Issue 12 — Establish a real test baseline
+## Issue 9 — Establish a real test baseline
 
 **Type:** AFK
 **Labels:** `chore` `fix`
@@ -287,22 +238,22 @@ Prettier is configured differently in the root (`printWidth 80`) and the Sanity 
 
 ### What to build
 
-The only test is the CRA stub that asserts text the app doesn't render. Replace it with a meaningful baseline: smoke-render the live routes and cover the newly deepened content hook and position-intake module through their interfaces.
+The only test is the CRA stub that asserts text the app doesn't render. Replace it with a meaningful baseline: smoke-render the live routes and cover the newly deepened content hook through its interface.
 
 ### Acceptance criteria
 
 - [ ] The stub `learn react` test is removed
 - [ ] Smoke tests render each live route without crashing
-- [ ] The content hook and position-intake module have interface-level tests
+- [ ] The deepened content hook has interface-level tests (loading → success, loading → error)
 - [ ] `npm test` passes in CI-style (non-watch) mode
 
 ### Blocked by
 
-- Issue 3, Issue 4
+- Issue 2, Issue 3
 
 ---
 
-## Issue 13 — Cleanup pass: unused deps, dead utilities, stray logs, duplicate CSS
+## Issue 10 — Cleanup pass: unused deps, stray logs, duplicate CSS
 
 **Type:** AFK
 **Labels:** `nit` `chore`
@@ -310,16 +261,16 @@ The only test is the CRA stub that asserts text the app doesn't render. Replace 
 
 ### What to build
 
-Sweep the small stuff: remove the unused `react-bootstrap-validation` dependency, delete never-imported utilities (`useFetch.js`, `categoryService.js`, the unused mobile-detection hook), remove the stale hardcoded Heroku URL in `position.jsx`, strip leftover `console.log` debug lines, de-duplicate the repeated CSS rules (e.g. footer/navbar), and bump the hardcoded Sanity `apiVersion`.
+Sweep the small stuff that survives the deletions in Issues 3 and 4: remove the unused `react-bootstrap-validation` dependency, strip leftover `console.log` debug lines in surviving files, de-duplicate repeated CSS rules (e.g. footer/navbar), and bump the hardcoded Sanity `apiVersion`. _(Note: `useFetch.js`, `categoryService.js`, and `position.jsx` are deleted by Issue 3, not here.)_
 
 ### Acceptance criteria
 
-- [ ] Unused dependency removed from `package.json`
-- [ ] Never-imported utility files deleted
-- [ ] Stray `console.log` and stale hardcoded URLs removed
+- [ ] Unused `react-bootstrap-validation` removed from `package.json`
+- [ ] Stray `console.log` lines removed from surviving files
 - [ ] Duplicate CSS rules de-duplicated
+- [ ] Sanity `apiVersion` bumped
 - [ ] App builds and behaves identically
 
 ### Blocked by
 
-- Issue 5 (so cleanup doesn't touch files slated for deletion)
+- Issue 3 (so cleanup doesn't touch files slated for deletion)
