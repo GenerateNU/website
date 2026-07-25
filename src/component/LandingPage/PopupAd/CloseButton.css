@@ -1,0 +1,26 @@
+.popup-ad-close {
+  all: unset;
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: -2.5rem;
+  transform: translateX(-50%);
+  background: black;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: -0.25rem 0.25rem white;
+  z-index: 1001;
+}
+
+.popup-ad-close:hover {
+  box-shadow: 0 0 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-ad-close:focus {
+  outline: none;
+}

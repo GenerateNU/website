@@ -13,6 +13,7 @@ import { Dialog } from '@headlessui/react'
 import { useState } from 'react'
 
 import './style.css'
+import MemberInfoSession from '../../component/LandingPage/MemberInfoSession'
 
 export default function LandingPageV3() {
   const whatIsGenerateRef = useRef(null)
@@ -37,6 +38,7 @@ export default function LandingPageV3() {
           tabIndex='0'
         ></iframe>
       </Dialog>
+      <MemberInfoSession rsvpUrl='https://luma.com/47phpbv1' />
       {isOpen && <div id='background' />}
       <Navigation
         scrollToWhatIsGenerate={() =>
