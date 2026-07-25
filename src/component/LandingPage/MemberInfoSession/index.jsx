@@ -36,7 +36,7 @@ export function MemberInfoSession({ rsvpUrl, onClose }) {
           a team of ambitious leaders and leave your mark.
         </p>
 
-        <a className='mis-cta' href={rsvpUrl}>
+        <a className='mis-cta' target='_blank' href={rsvpUrl}>
           <span className='mis-cta-text'>Register Today!</span>
           <span className='mis-cta-arrow' aria-hidden='true'>
             &rarr;
