@@ -1,0 +1,133 @@
+.mis-card {
+  position: relative;
+  width: 90vw;
+  max-width: 34rem;
+  box-sizing: border-box;
+  padding: 2.75rem 2.5rem 2.5rem;
+  background: black;
+  color: white;
+  border: 2px solid white;
+  box-shadow: -0.5rem 0.5rem white;
+  font-family: 'Space Mono', monospace;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.mis-card:hover {
+  box-shadow: 0 0 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.mis-mascot {
+  position: absolute;
+  top: -4.875rem;
+  left: -3.375rem;
+  width: 9.75rem;
+  height: auto;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.mis-eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: 'Space Mono 700', 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: #ffbf3c;
+}
+
+.mis-headline {
+  margin: 0 0 1.25rem;
+  font-family: 'Space Mono 700', 'Space Mono', monospace;
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.mis-strike {
+  color: #888;
+  text-decoration-thickness: 0.15em;
+}
+
+.mis-highlight {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: #187dff;
+}
+
+.mis-body {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+
+.mis-body strong {
+  color: #ffbf3c;
+}
+
+.mis-cta {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+  display: inline-block;
+  font-family: 'Space Mono 700', 'Space Mono', monospace;
+  font-size: 1rem;
+  padding: 0.65rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  background: black;
+  border: 2px solid white;
+  box-shadow: -0.25rem 0.25rem white;
+  transition: all 0.3s ease-in-out;
+}
+
+.mis-cta-text {
+  display: inline-block;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+
+.mis-cta-arrow {
+  position: absolute;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(-1.5rem);
+  opacity: 0;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+
+.mis-cta:hover {
+  box-shadow: 0 0;
+}
+
+.mis-cta:hover .mis-cta-text {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+.mis-cta:hover .mis-cta-arrow {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .mis-card {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .mis-mascot {
+    width: 5rem;
+    top: -2.75rem;
+    left: -1.25rem;
+  }
+}

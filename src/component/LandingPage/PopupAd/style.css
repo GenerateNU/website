@@ -1,0 +1,43 @@
+.popup-ad-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: popup-ad-fade-in 0.3s ease-in-out;
+}
+
+.popup-ad-overlay--transparent {
+  background-color: transparent;
+}
+
+.popup-ad-content {
+  position: relative;
+  overflow: visible;
+  animation: popup-ad-slide-up 0.3s ease-out;
+}
+
+@keyframes popup-ad-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popup-ad-slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
