@@ -6,13 +6,13 @@ import './style.css'
 /**
  * Member Info Session popup.
  */
-export function MemberInfoSession({ rsvpUrl, onClose }) {
+export function ApplyTodayPopup({ url, onClose }) {
   return (
     <PopupAd onClose={onClose} className='mis-popup'>
       <div className='mis-card'>
         <img className='mis-mascot' src={puzzle} alt='' aria-hidden='true' />
 
-        <p className='mis-eyebrow'>MEMBER INFO SESSION</p>
+        <p className='mis-eyebrow'>MEMBER APPLICATIONS OPEN</p>
 
         <h2 className='mis-headline'>
           We want <s className='mis-strike'>Engineers</s>{' '}
@@ -32,12 +32,11 @@ export function MemberInfoSession({ rsvpUrl, onClose }) {
         </p>
 
         <p className='mis-body'>
-          Register for the member information session to learn how you can join
-          a team of ambitious leaders and leave your mark.
+          Applications open now. Come lead, build, and leave your mark.
         </p>
 
-        <a className='mis-cta' target='_blank' href={rsvpUrl}>
-          <span className='mis-cta-text'>Register Today!</span>
+        <a className='mis-cta' href={url}>
+          <span className='mis-cta-text'>Apply Today!</span>
           <span className='mis-cta-arrow' aria-hidden='true'>
             &rarr;
           </span>
@@ -47,4 +46,4 @@ export function MemberInfoSession({ rsvpUrl, onClose }) {
   )
 }
 
-export default MemberInfoSession
+export default ApplyTodayPopup
