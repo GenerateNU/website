@@ -38,7 +38,6 @@ export default function LandingPageV3() {
           tabIndex='0'
         ></iframe>
       </Dialog>
-      <ApplyTodayPopup url='./apply' />
       {isOpen && <div id='background' />}
       <Navigation
         scrollToWhatIsGenerate={() =>
