@@ -1,23 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import NavBar from '../../NavBar'
 import './style.css'
 import Arrow from '../../../assets/images/projectspage/arrowbutton.svg'
 import Projects from '../../../data/featuredProjectData.js'
 import useWebsite from '../../../shared/useWebsite'
 import ShadowedButton from '../../ShadowedButton'
+import FeaturedProjectCard from '../FeaturedProjectCard/FeaturedProjectCard.jsx'
+
+const SLIDE_GAP_PX = 20 // must match the gap set in .pp-fp-carousel-track CSS
 
 export default function FeaturedProjects() {
-  const [currentProject, setCurrentProject] = useState(Projects[0])
+  const [currentIndex, setCurrentIndex] = useState(1)
   const isWebsite = useWebsite()
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
   const mobile = !isBigScreen || !isWebsite
 
   const handleProject = (dir) => {
-    const currentIndex = Projects.indexOf(currentProject)
-    setCurrentProject(
-      Projects[(currentIndex + dir + Projects.length) % Projects.length]
-    )
+    setCurrentIndex((prev) => (prev + dir + Projects.length) % Projects.length)
   }
+
+  const currentProject = Projects[currentIndex]
 
   return (
     <div className='pp-fp-projects-page-container'>
@@ -28,6 +30,7 @@ export default function FeaturedProjects() {
         {!mobile ? (
           <DesktopFeaturedProjects
             handleProject={handleProject}
+            currentIndex={currentIndex}
             currentProject={currentProject}
             mobile={mobile}
           />
@@ -43,70 +46,53 @@ export default function FeaturedProjects() {
   )
 }
 
-function DesktopFeaturedProjects({ handleProject, currentProject, mobile }) {
+function DesktopFeaturedProjects({ handleProject, currentIndex, mobile }) {
   return (
-    <>
+    <div className='w-full'>
       <div className='featured-pp-fp-projects-text'>
         <div className='pp-fp-projects-bg'>
-          <h1 className='pp-fp-projects-title'>Featured Projects</h1>
+          <h1 className='pp-fp-projects-title'>PROJECTS</h1>
           <p className='pp-fp-projects-text'>
             Teams work side-by-side to ensure products and processes are beyond
             expectations
           </p>
+          <h2 className='pp-fp-projects-header'>FEATURED PROJECTS</h2>
         </div>
-        <div className='featured-pp-fp-project-buttons'>
-          <div className='pp-fp-projects-buttons' style={{ marginTop: '10vw' }}>
-            <ShadowedButton
-              fillColor='white'
-              className='pp-fp-projects-forward'
-              xPad={mobile ? '15vw' : '2vw'}
-              yPad={mobile ? '6vw' : '2vw'}
-              textColor='white'
-              text={<img width={'40vh'} src={Arrow} alt='arrow icon' />}
-              onClick={() => handleProject(1)}
-            />
-            <ShadowedButton
-              fillColor='white'
-              className='pp-fp-projects-back'
-              xPad={mobile ? '15vw' : '2vw'}
-              yPad={mobile ? '6vw' : '2vw'}
-              textColor='white'
-              text={<img width={'40vh'} src={Arrow} alt='arrow icon' />}
-              onClick={() => handleProject(-1)}
-            />
+        <div className='pp-fp-carousel'>
+          <div className='pp-fp-carousel-viewport'>
+            <div
+              className='pp-fp-carousel-track'
+              style={{ '--index': currentIndex }}
+            >
+              {Projects.map((project, i) => (
+                <div className='pp-fp-carousel-slide' key={project.name ?? i}>
+                  <FeaturedProjectCard project={project} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='featured-pp-fp-project-buttons'>
+            <div
+              className='pp-fp-projects-buttons'
+              style={{ marginTop: '10vw' }}
+            >
+              <button
+                className='pp-fp-projects-back'
+                onClick={() => handleProject(-1)}
+              >
+                <img width='40vh' src={Arrow} alt='arrow icon' />
+              </button>
+              <button
+                className='pp-fp-projects-forward'
+                onClick={() => handleProject(1)}
+              >
+                <img width='40vh' src={Arrow} alt='arrow icon' />
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <div className='pp-fp-project'>
-        <div className='image-container'>
-          <img
-            className='pp-fp-image'
-            src={currentProject.image}
-            alt='arrow icon'
-          />
-        </div>
-        <div className='pp-fp-project-text'>
-          <h1 className='pp-fp-projects-desktop'>{currentProject.name}</h1>
-          <h2 className='pp-fp-project-team pp-fp-projects-desktop'>
-            {currentProject.type}
-          </h2>
-          <div className='pp-fp-desc'>{currentProject.description}</div>
-          {/* <div className='view-pp-fp-project-div' style={{ marginTop: '10vw' }}>
-            <ShadowedButton
-              fillColor='white'
-              xPad={mobile ? '12vw' : '60px'}
-              yPad={mobile ? '2vw' : '20px'}
-              textColor='black'
-              fontSize='2vh'
-              text='view'
-              onClick={() =>
-                (window.location.href = `/case-study/${currentProject.name.toLowerCase()}`)
-              }
-            />
-          </div> */}
-        </div>
-      </div>
-    </>
+    </div>
   )
 }
 

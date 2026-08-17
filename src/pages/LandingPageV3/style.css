@@ -24,6 +24,30 @@
   overflow-x: clip;
 }
 
+#page-bg.page-bg--lr-vignette {
+  background-image:
+    linear-gradient(90deg, #111 0%, rgba(17, 17, 17, 0) 60%),
+    repeating-linear-gradient(
+      to right,
+      #144280 0,
+      #144280 1px,
+      transparent 1px,
+      transparent 2.222rem
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #144280 0,
+      #144280 1px,
+      transparent 1px,
+      transparent 2.222rem
+    );
+  background-size:
+    100% 100%,
+    auto,
+    auto;
+  background-repeat: no-repeat, repeat, repeat;
+}
+
 .debug {
   border: 1px red solid;
 }

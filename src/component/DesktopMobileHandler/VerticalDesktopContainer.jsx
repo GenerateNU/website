@@ -1,7 +1,7 @@
-import React from "react";
-import { useEffect, useRef } from "react";
-import Col from "react-bootstrap/esm/Col";
-import "./style.css";
+import React from 'react'
+import { useEffect, useRef } from 'react'
+import Col from 'react-bootstrap/esm/Col'
+import './style.css'
 
 /**
  * This component is only designed to handle differences in background color between desktop and mobile views.
@@ -10,42 +10,38 @@ import "./style.css";
  * @param {Object} props - The component props.
  * @param {React.ReactNode} props.children - The child elements to render.
  * @param {string} props.desktopBGColor - The background color for the desktop view.
- * @param {string} props.mobileBGColor - The background color for the mobile view.
+ * @param {string} props.id - Optional id to apply to the outer container (e.g. for shared page background styling).
  * @returns {JSX.Element} The JSX element representing the component.
  */
 export default function VerticalDesktopContainer({
   children,
   desktopBGColor,
+  id,
+  className,
   ...props
 }) {
-  const scrollContainerRef = useRef(null);
+  const scrollContainerRef = useRef(null)
   useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
+    const scrollContainer = scrollContainerRef.current
     const handleWheel = (evt) => {
-      evt.preventDefault();
-      scrollContainer.scrollTop += evt.deltaY;
-    };
-    scrollContainer.addEventListener("wheel", handleWheel);
+      evt.preventDefault()
+      scrollContainer.scrollTop += evt.deltaY
+    }
+    scrollContainer.addEventListener('wheel', handleWheel)
     return () => {
-      scrollContainer.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
+      scrollContainer.removeEventListener('wheel', handleWheel)
+    }
+  }, [])
   return (
-    <>
-      {/* Desktop view */}
-      <div
-        ref={scrollContainerRef}
-        // using dsktop to avoid naming collision...
-        class={`vh-100 dsktop vertical-scroll bg-${desktopBGColor} ${
-          props.containerClassName ?? ""
-        }`}
-        tabIndex="0"
-      >
-        {/* The content is wrapped in a Column component from the react-bootstrap library to ensure proper layout */}
-        <Col className={`${props.rowClassName ?? ""}`}>
-          {children}
-        </Col>
-      </div>
-    </>
-  );
+    <div
+      ref={scrollContainerRef}
+      id={id}
+      class={`vh-100 dsktop vertical-scroll ${className ?? ''} ${
+        desktopBGColor ? `bg-${desktopBGColor}` : ''
+      } ${props.containerClassName ?? ''}`}
+      tabIndex='0'
+    >
+      <Col className={`${props.rowClassName ?? ''}`}>{children}</Col>
+    </div>
+  )
 }
