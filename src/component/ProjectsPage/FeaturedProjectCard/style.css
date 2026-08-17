@@ -1,0 +1,154 @@
+.featured-project-card {
+  background-color: black;
+  min-height: 70vh;
+  width: 100%;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+}
+
+.featured-project-image {
+  width: 100%;
+  background-color: rgb(232, 232, 232);
+  flex: 0 0 auto;
+  height: 44vh;
+  padding: 5px;
+  object-fit: contain;
+  border-bottom: solid 2px white;
+  box-sizing: border-box;
+}
+
+.featured-project-content {
+  color: white;
+  padding: 20px;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.featured-project-card:hover {
+  /* transform: translateY(-10px); */
+}
+
+.featured-project-title {
+  color: #ffffff;
+  font-size: 6vh;
+  font-family: 'Space Mono 700';
+  text-transform: uppercase;
+}
+
+.featured-project-header {
+  color: #ffffff;
+  font-size: 4vh;
+  font-family: 'Space Mono 700';
+  text-transform: uppercase;
+}
+
+.tags {
+  width: full;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.featured-project-tag {
+  text-transform: capitalize;
+  border: solid 0.5px currentColor;
+  width: min-content;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+.featured-project-tag--yellow {
+  color: #ffbf3b;
+}
+.featured-project-tag--pink {
+  color: #ff82c1;
+}
+.featured-project-tag--red {
+  color: #ff6660;
+}
+.featured-project-tag--green {
+  color: #6fcf97;
+}
+.featured-project-tag--purple {
+  color: #ac6be9;
+}
+.featured-project-tag--blue {
+  color: #6d88f5;
+}
+
+.featured-project-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+  font-size: 2vh;
+  word-break: break-word;
+}
+
+.featured-project-description--expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.read-more-button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.featured-project-learn-more {
+  background: none;
+  margin-top: 15px;
+  border: none;
+  color: white;
+  padding: 0px;
+  display: flex;
+  justify-content: end;
+  padding-right: 10px;
+}
+
+.learn-more-button {
+  color: inherit;
+  text-decoration: none;
+  transition: none;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.learn-more-button:visited {
+  color: inherit;
+}
+
+.learn-more-arrow {
+  display: flex;
+  max-height: 4vh;
+}
+
+.learn-more-text {
+  color: white;
+  font-size: 4vh;
+  font-family: 'Space Mono 700';
+  text-transform: uppercase;
+  margin: 0;
+  transition: transform 0.2s ease-out;
+}
+
+.learn-more-button:hover .learn-more-text {
+  transform: translateX(5px);
+}
+
+/* Unset default <a> tag hover styling */
+.learn-more-button:hover {
+  -webkit-text-stroke: unset;
+}
