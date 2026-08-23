@@ -5,7 +5,7 @@ import './style.css'
 /**
  * A generalized popup ad wrapper that composes over arbitrary content.
  */
-export function PopupAd({
+function PopupAd({
   children,
   showOverlay = true,
   closeOnOverlayClick = true,
