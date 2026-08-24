@@ -2,6 +2,19 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --passWithNoTests",
+    "eject": "react-scripts eject",
+    "knip": "knip",
+    "knip:fix": "knip --fix",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt:check": "oxfmt --check",
+    "fmt": "oxfmt",
+    "prepare": "husky"
+  },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
     "@sanity/client": "^8.2.0",
@@ -12,25 +25,20 @@
     "react-router-dom": "^7.18.2",
     "react-scripts": "^5.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --passWithNoTests",
-    "eject": "react-scripts eject",
-    "knip": "knip",
-    "knip:fix": "knip --fix",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "prepare": "husky"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "husky": "^9.1.7",
+    "knip": "^6.32.2",
+    "lint-staged": "^17.3.0",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "bun lint:fix"
+      "bun lint:fix",
+      "bun fmt"
     ]
   },
   "browserslist": {
@@ -45,14 +53,9 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/node": "^26.2.0",
-    "husky": "^9.1.7",
-    "knip": "^6.32.2",
-    "lint-staged": "^17.3.0",
-    "oxfmt": "^0.64.0",
-    "oxlint": "^1.79.0",
-    "prettier": "^3.9.6",
-    "typescript": "^7.0.2"
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
   }
 }
