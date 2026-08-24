@@ -17,14 +17,20 @@
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
-    "format:check": "prettier --check src",
-    "format:fix": "prettier --write src",
     "knip": "knip",
-    "knip:fix": "knip --fix"
+    "knip:fix": "knip --fix",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
       "react-app"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "bun run lint:fix"
     ]
   },
   "browserslist": {
@@ -41,7 +47,11 @@
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
+    "husky": "^9.1.7",
     "knip": "^6.32.2",
+    "lint-staged": "^17.3.0",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
     "prettier": "^3.9.6",
     "typescript": "^7.0.2"
   }
