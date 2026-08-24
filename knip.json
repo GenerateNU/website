@@ -1,7 +1,9 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
-  "entry": ["src/index.js"],
-  "project": ["src/**/*.{js,jsx}"],
+  "entry": ["src/**/index.{js,ts}"],
+  "project": ["src/**/*.{js,jsx,ts,tsx}",
+    "src/component/**/*.{js,jsx,ts,tsx}",
+    "sanity/**"],
   "treatConfigHintsAsErrors": true,
   "treatTagHintsAsErrors": true,
   "includeEntryExports": true
