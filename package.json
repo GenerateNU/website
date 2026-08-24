@@ -30,7 +30,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "bun run lint:fix"
+      "bun lint:fix"
     ]
   },
   "browserslist": {
