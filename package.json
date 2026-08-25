@@ -2,11 +2,12 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --passWithNoTests",
-    "eject": "react-scripts eject",
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest",
     "knip": "knip",
     "knip:fix": "knip --fix",
     "lint": "oxlint",
@@ -22,8 +23,7 @@
     "react": "^19.2.8",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.2",
-    "react-scripts": "^5.0.1"
+    "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
     "@oxlint/plugins": "1.79.0",
@@ -35,7 +35,10 @@
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
     "oxlint-tsgolint": "^7.0.2001",
-    "typescript": "^7.0.2"
+
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
   },
   "lint-staged": {
     "*": "oxfmt --no-error-on-unmatched-pattern"
