@@ -3,9 +3,9 @@ import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg' 
 import { FooterLink } from '.'
 import { pages } from '.'
 import ShadowedButton from '../../../component/ShadowedButton'
-import { ReactComponent as Instagram } from '../../../assets/icons/socials/Instagram.svg'
-import { ReactComponent as Email } from '../../../assets/icons/socials/Email.svg'
-import { ReactComponent as LinkedIn } from '../../../assets/icons/socials/LinkedIn.svg'
+import Instagram from '../../../assets/icons/socials/Instagram.svg?react'
+import Email from '../../../assets/icons/socials/Email.svg?react'
+import LinkedIn from '../../../assets/icons/socials/LinkedIn.svg?react'
 import UpArrow from '../../../assets/icons/arrows/upArrow.svg'
 
 function WebFooter() {
