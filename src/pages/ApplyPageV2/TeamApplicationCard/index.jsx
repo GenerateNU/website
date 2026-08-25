@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import RoleCategory from '../RoleCategory'
-import Tag from '../Tag'
-import { ReactComponent as WhiteDownArrow } from '../../../assets/images/applypage-v2/WhiteDownArrow.svg'
-import { ReactComponent as WhiteUpArrow } from '../../../assets/images/applypage-v2/WhiteUpArrow.svg'
-import RightArrow from '../../../assets/images/applypage-v2/RightArrow.js'
+import RoleCategory from '../RoleCategory/index.jsx'
+import Tag from '../Tag/index.jsx'
+import WhiteDownArrow from '../../../assets/images/applypage-v2/WhiteDownArrow.svg?react'
+import WhiteUpArrow from '../../../assets/images/applypage-v2/WhiteUpArrow.svg?react'
+import RightArrow from '../../../assets/images/applypage-v2/RightArrow.jsx'
 import './style.css'
 
 export default function TeamApplicationCard({ team }) {

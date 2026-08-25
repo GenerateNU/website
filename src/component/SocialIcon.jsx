@@ -1,11 +1,11 @@
 import { Col } from 'react-bootstrap'
-import { ReactComponent as InstaIcon } from '../assets/images/socialMediaIcons/Insta.svg'
-import { ReactComponent as LinkedInIcon } from '../assets/images/socialMediaIcons/Linkedin.svg'
-import { ReactComponent as FbIcon } from '../assets/images/socialMediaIcons/Facebook.svg'
-import { ReactComponent as YoutubeIcon } from '../assets/images/socialMediaIcons/Youtube.svg'
-import { ReactComponent as MosaicIcon } from '../assets/images/socialMediaIcons/Mosaic.svg'
-import { ReactComponent as NortheasternIcon } from '../assets/images/socialMediaIcons/Northeaster.svg'
-import { ReactComponent as Sherm } from '../assets/images/socialMediaIcons/Sherm.svg'
+import InstaIcon from '../assets/images/socialMediaIcons/Insta.svg?react'
+import LinkedInIcon from '../assets/images/socialMediaIcons/Linkedin.svg?react'
+import FbIcon from '../assets/images/socialMediaIcons/Facebook.svg?react'
+import YoutubeIcon from '../assets/images/socialMediaIcons/Youtube.svg?react'
+import MosaicIcon from '../assets/images/socialMediaIcons/Mosaic.svg?react'
+import NortheasternIcon from '../assets/images/socialMediaIcons/Northeaster.svg?react'
+import Sherm from '../assets/images/socialMediaIcons/Sherm.svg?react'
 
 export const socialIcons = [
   [
