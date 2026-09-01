@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
+    "eslint-plugin-react-you-might-not-need-an-effect": "^1.0.2",
     "husky": "^9.1.7",
     "knip": "^6.32.2",
     "lint-staged": "^17.3.0",
@@ -36,10 +37,7 @@
     "typescript": "^7.0.2"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "bun lint:fix",
-      "bun fmt"
-    ]
+    "*": "oxfmt --no-error-on-unmatched-pattern"
   },
   "browserslist": {
     "production": [
@@ -51,11 +49,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
     ]
   }
 }

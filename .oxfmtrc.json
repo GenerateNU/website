@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 120,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "arrowParens": "avoid",
+  "ignorePatterns": [".github/**"],
+  "experimentalSortImports": {
+    "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]]
+  },
+  "experimentalSortPackageJson": true
+}
