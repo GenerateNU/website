@@ -7,8 +7,8 @@
     "jsx": "react-jsx",
     "strict": true,
     "noEmit": true,
-    "allowJs": true,
-    "checkJs": false,
+    "allowJs": true, // the 87 existing .js/.jsx files keep working
+    "checkJs": false, // ...without erroring on day one
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
