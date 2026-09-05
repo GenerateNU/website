@@ -9,11 +9,13 @@ export const valueType = defineType({
       name: 'value',
       title: 'Value',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'color',
       title: 'Color',
       type: 'color',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'image',
@@ -22,16 +24,19 @@ export const valueType = defineType({
       options: {
         hotspot: true,
       },
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'text',
       title: 'Text',
       type: 'text',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'index',
       title: 'Index',
       type: 'number',
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {

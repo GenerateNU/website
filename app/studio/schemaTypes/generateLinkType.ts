@@ -9,6 +9,7 @@ export const generateLinkType = defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -17,11 +18,13 @@ export const generateLinkType = defineType({
       options: {
         source: 'title',
       },
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'url',
       title: 'URL',
       type: 'url',
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
