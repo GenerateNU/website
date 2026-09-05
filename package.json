@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
-    "@sanity/client": "^8.2.0",
+    "@portabletext/react": "^8.0.1",
+    "@sanity/client": "^8.5.0",
     "@sanity/image-url": "^2.1.1",
     "react": "^19.2.8",
     "react-bootstrap": "^2.10.10",
