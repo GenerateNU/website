@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const showcaseType = defineType({
   name: 'showcase',
   title: 'Showcase Carousel',
   type: 'document',
@@ -28,4 +28,4 @@ export default defineType({
       media: 'image',
     },
   },
-})
+});

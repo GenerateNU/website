@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const valueType = defineType({
   name: 'value',
   title: 'Value',
   type: 'document',
@@ -40,4 +40,4 @@ export default defineType({
       media: 'image',
     },
   },
-})
+});

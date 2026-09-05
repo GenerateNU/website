@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const copyType = defineType({
   name: 'copy',
   title: 'Copy',
   type: 'document',
@@ -28,4 +28,4 @@ export default defineType({
       subtitle: 'header',
     },
   },
-})
+});
