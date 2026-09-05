@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { client } from '../sanity/client';
+import { client } from './client';
 
 export function useSanity(query, params = {}, modifier = data => data) {
   const [data, setData] = useState([]);

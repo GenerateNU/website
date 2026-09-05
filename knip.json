@@ -2,12 +2,20 @@
   "$schema": "https://unpkg.com/knip@6/schema.json",
   "workspaces": {
     ".": {
-      "entry": ["src/index.{js,ts}"],
+      "entry": ["src/index.{js,jsx,ts,tsx}"],
       "project": ["src/**/*.{js,jsx,ts,tsx}"]
     },
-    "sanity": {
+    "app/studio": {
       "entry": ["sanity.config.{js,ts}", "sanity.cli.{js,ts}"],
-      "project": ["**/*.{js,ts}"]
+      "project": ["**/*.{js,ts}"],
+      "ignoreDependencies": [
+        "react",
+        "react-dom",
+        "styled-components",
+        "@sanity/eslint-config-studio",
+        "@types/react",
+        "eslint"
+      ]
     }
   },
   "treatTagHintsAsErrors": true,

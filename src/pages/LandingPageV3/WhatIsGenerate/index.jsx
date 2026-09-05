@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSanity } from '../../../services/useSanity'
+import { useSanity } from '../../../sanity/useSanity'
 import workshop from '../../../assets/images/landingpage/weare/workshop.jpg'
 import showcase from '../../../assets/images/landingpage/weare/showcase.jpg'
 
