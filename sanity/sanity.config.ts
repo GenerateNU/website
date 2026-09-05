@@ -1,8 +1,9 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
-import {colorInput} from '@sanity/color-input'
+import { colorInput } from '@sanity/color-input';
+import { visionTool } from '@sanity/vision';
+import { defineConfig } from 'sanity';
+import { structureTool } from 'sanity/structure';
+
+import { schemaTypes } from './schemaTypes';
 
 export default defineConfig({
   name: 'default',
@@ -16,4 +17,4 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-})
+});
