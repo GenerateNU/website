@@ -8,7 +8,6 @@ import { schemaTypes } from './schemaTypes';
 export default defineConfig({
   name: 'default',
   title: 'generate-sanity',
-
   projectId: '4whxapdc',
   dataset: 'generate-schema',
 
@@ -19,8 +18,8 @@ export default defineConfig({
   },
 
   typegen: {
-    path: '../web/src/**/*.{ts,tsx,js,jsx}',
+    path: '../../src/**/*.{ts,tsx,js,jsx}',
     schema: './schema.json',
-    generates: '../web/src/sanity/types.ts',
+    generates: '../../src/sanity/types.ts',
   },
 });
