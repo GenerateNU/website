@@ -1,9 +1,12 @@
 {
   "name": "generate-sanity",
-  "private": true,
   "version": "1.0.0",
-  "main": "package.json",
+  "private": true,
+  "keywords": [
+    "sanity"
+  ],
   "license": "UNLICENSED",
+  "main": "package.json",
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
@@ -11,9 +14,6 @@
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy"
   },
-  "keywords": [
-    "sanity"
-  ],
   "dependencies": {
     "@sanity/cli": "^8.2.1",
     "@sanity/color-input": "^6.1.4",
@@ -30,9 +30,9 @@
     "typescript": "^7.0.2"
   },
   "prettier": {
-    "semi": false,
-    "printWidth": 100,
     "bracketSpacing": false,
+    "printWidth": 100,
+    "semi": false,
     "singleQuote": true
   }
 }
