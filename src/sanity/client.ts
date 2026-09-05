@@ -5,7 +5,7 @@ import type { Image } from '@sanity/types';
 export const client = createClient({
   projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
   dataset: import.meta.env.VITE_SANITY_DATASET,
-  apiVersion: '2026-05-15',
+  apiVersion: '2026-09-05',
   useCdn: true,
 });
 
