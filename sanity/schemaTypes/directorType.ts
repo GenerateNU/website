@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const directorType = defineType({
   name: 'director',
   title: 'Director',
   type: 'document',
@@ -50,4 +50,4 @@ export default defineType({
       media: 'image',
     },
   },
-})
+});

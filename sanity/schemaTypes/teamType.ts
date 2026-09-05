@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const teamType = defineType({
   name: 'team',
   title: 'Team',
   type: 'document',
@@ -32,7 +32,7 @@ export default defineType({
       name: 'tags',
       title: 'Tags',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
     }),
     defineField({
       name: 'teamDescription',
@@ -48,7 +48,7 @@ export default defineType({
       name: 'contributorRoles',
       title: 'Contributor Roles',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'application'}]}],
+      of: [{ type: 'reference', to: [{ type: 'application' }] }],
     }),
     defineField({
       name: 'leadDescription',
@@ -59,7 +59,7 @@ export default defineType({
       name: 'leadRoles',
       title: 'Lead Roles',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'application'}]}],
+      of: [{ type: 'reference', to: [{ type: 'application' }] }],
     }),
     defineField({
       name: 'chiefDescription',
@@ -70,7 +70,7 @@ export default defineType({
       name: 'chiefRoles',
       title: 'Chief Roles',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'application'}]}],
+      of: [{ type: 'reference', to: [{ type: 'application' }] }],
     }),
     defineField({
       name: 'externalLink',
@@ -89,4 +89,4 @@ export default defineType({
       media: 'image',
     },
   },
-})
+});

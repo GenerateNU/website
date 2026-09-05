@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const applicationType = defineType({
   name: 'application',
   title: 'Application',
   type: 'document',
@@ -19,7 +19,7 @@ export default defineType({
       name: 'activeApplication',
       title: 'Active Application',
       type: 'boolean',
-      validation: (rule) => rule.required(),
+      validation: rule => rule.required(),
     }),
     defineField({
       name: 'applicationLink',
@@ -34,4 +34,4 @@ export default defineType({
       applicationLink: 'applicationLink',
     },
   },
-})
+});
