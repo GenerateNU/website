@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../../component/NavBar'
 import TeamApplicationCard from './TeamApplicationCard'
 import Footer from '../LandingPageV3/Footer'
-import { useSanity } from '../../services/useSanity'
+import { useSanity } from '../../sanity/useSanity'
 import useWebsite from '../../shared/useWebsite'
 import './style.css'
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useSanity } from '../../../services/useSanity'
-import { urlFor } from '../../../client'
+import { useSanity } from '../../../sanity/useSanity'
+import { urlFor } from '../../../sanity/client'
 import './style.css'
 
 const ARC_STEPS = 16

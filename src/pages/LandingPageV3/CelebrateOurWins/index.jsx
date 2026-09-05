@@ -6,8 +6,8 @@ import LargeStars from '../../../assets/images/landingpage-v3/LargeShowcaseStars
 import SmallStars from '../../../assets/images/landingpage-v3/SmallShowcaseStars.svg?react'
 import PrevArrow from '../../../assets/icons/arrows/prevArrowLeft.svg?react'
 import NextArrow from '../../../assets/icons/arrows/nextArrowRight.svg?react'
-import { useSanity } from '../../../services/useSanity'
-import { urlFor } from '../../../client'
+import { useSanity } from '../../../sanity/useSanity'
+import { urlFor } from '../../../sanity/client'
 
 export default function CelebrateOurWins() {
   const copyQuery = `*[_type == "copy" && key == "celebrate-our-wins"]{header, content}`

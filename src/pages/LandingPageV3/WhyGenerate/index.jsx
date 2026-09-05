@@ -1,7 +1,7 @@
 import members from '../../../assets/images/landingpage/weare/members.JPG'
 import clients from '../../../assets/images/landingpage/weare/cstar.jpg'
 import partners from '../../../assets/images/landingpage/weare/overhead.jpg'
-import { useSanity } from '../../../services/useSanity'
+import { useSanity } from '../../../sanity/useSanity'
 
 export default function WhyGenerate() {
   const query1 = `*[_type == "copy" && key == "why-generate-1"]{header, content}`
