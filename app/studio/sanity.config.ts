@@ -16,10 +16,4 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-
-  typegen: {
-    path: '../../src/**/*.{ts,tsx,js,jsx}',
-    schema: './schema.json',
-    generates: '../../src/sanity/types.ts',
-  },
 });
