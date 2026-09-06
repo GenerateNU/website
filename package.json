@@ -20,7 +20,6 @@
     "@headlessui/react": "^2.2.10",
     "@sanity/client": "^8.2.0",
     "@sanity/image-url": "^2.1.1",
-    "@vitejs/plugin-react": "^6.1.1",
     "react": "^19.2.8",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.8",
@@ -29,6 +28,7 @@
   "devDependencies": {
     "@oxlint/plugins": "1.79.0",
     "@types/node": "^26.2.0",
+    "@vitejs/plugin-react": "^6.1.1",
     "eslint-plugin-react-you-might-not-need-an-effect": "^1.0.2",
     "husky": "^9.1.7",
     "knip": "^6.32.2",
@@ -36,7 +36,6 @@
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
     "oxlint-tsgolint": "^7.0.2001",
-
     "typescript": "^7.0.2",
     "vite": "^8.2.2",
     "vite-plugin-svgr": "^5.2.0",
