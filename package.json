@@ -28,6 +28,7 @@
   "devDependencies": {
     "@oxlint/plugins": "1.86.0",
     "@types/node": "^26.6.3",
+    "@vitejs/plugin-react": "^6.1.1",
     "eslint-plugin-react-you-might-not-need-an-effect": "^1.0.2",
     "husky": "^9.1.7",
     "knip": "^6.38.0",
@@ -35,7 +36,10 @@
     "oxfmt": "^0.71.0",
     "oxlint": "^1.86.0",
     "oxlint-tsgolint": "^7.0.2003",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vite-plugin-svgr": "^5.2.0",
+    "vitest": "^4.1.11"
   },
   "browserslist": {
     "production": [
