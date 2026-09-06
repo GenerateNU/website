@@ -2,17 +2,17 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "bundler",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "strict": true,
     "noEmit": true,
-    "allowJs": true, // the 87 existing .js/.jsx files keep working
-    "checkJs": false, // ...without erroring on day one
+    "allowJs": true,
+    "checkJs": false,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "types": ["vite/client", "vite-plugin-svgr/client"]
   },
-  "include": ["src", "vite.config.ts", "oxlint.config.ts"]
+  "include": ["src", "vite.config.ts", "oxlint.config.ts", "static"]
 }

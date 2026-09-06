@@ -14,20 +14,29 @@
     "lint:fix": "oxlint --fix",
     "fmt:check": "oxfmt --check",
     "fmt": "oxfmt",
-    "prepare": "husky"
+    "prepare": "husky",
+    "sanity:dev": "sanity dev",
+    "sanity:preview": "sanity preview",
+    "sanity:build": "sanity build",
+    "sanity:deploy": "sanity deploy",
+    "sanity:deploy-graphql": "sanity graphql deploy"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
     "@portabletext/react": "^8.0.1",
+    "@sanity/cli": "^8.2.1",
     "@sanity/client": "^8.5.0",
+    "@sanity/color-input": "^6.1.4",
     "@sanity/image-url": "^2.1.1",
     "react": "^19.2.8",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.2"
+    "react-router-dom": "^7.18.2",
+    "styled-components": "^6.5.3"
   },
   "devDependencies": {
     "@oxlint/plugins": "1.79.0",
+    "@sanity/eslint-config-studio": "^6.0.0",
     "@sanity/types": "^6.12.0",
     "@types/node": "^26.2.0",
     "@vitejs/plugin-react": "^6.1.1",
@@ -38,6 +47,7 @@
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
     "oxlint-tsgolint": "^7.0.2001",
+    "sanity": "^6.12.0",
     "typescript": "^7.0.2",
     "vite": "^8.2.2",
     "vite-plugin-svgr": "^5.2.0",
