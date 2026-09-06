@@ -14,12 +14,19 @@
     "lint:fix": "oxlint --fix",
     "format:check": "oxfmt --check",
     "format": "oxfmt",
-    "prepare": "husky"
+    "prepare": "husky",
+    "sanity:dev": "sanity dev",
+    "sanity:preview": "sanity preview",
+    "sanity:build": "sanity build",
+    "sanity:deploy": "sanity deploy",
+    "sanity:deploy-graphql": "sanity graphql deploy"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
     "@sanity/client": "^8.9.0",
     "@portabletext/react": "^8.0.1",
+    "@sanity/cli": "^8.2.1",
+    "@sanity/color-input": "^6.1.4",
     "@sanity/image-url": "^2.1.1",
     "react": "^19.3.0",
     "react-bootstrap": "^2.10.10",
@@ -38,6 +45,7 @@
     "oxfmt": "^0.71.0",
     "oxlint": "^1.86.0",
     "oxlint-tsgolint": "^7.0.2003",
+    "sanity": "^6.12.0",
     "typescript": "^7.0.2",
     "vite": "^8.2.2",
     "vite-plugin-svgr": "^5.2.0",

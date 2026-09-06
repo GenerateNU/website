@@ -7,8 +7,9 @@ export default defineCliConfig({
   },
 
   typegen: {
-    path: '../../src/**/*.{ts,tsx,js,jsx}',
-    schema: './schema.json',
-    generates: '../../src/sanity/types.ts',
+    path: 'src/sanity/schemaTypes/*.{ts,tsx,js,jsx}',
+    schema: 'src/sanity/schema.json',
+    generates: 'src/sanity/types.ts',
+    formatGeneratedCode: false,
   },
 });

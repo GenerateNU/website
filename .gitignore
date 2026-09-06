@@ -9,7 +9,9 @@
 /coverage
 
 # production
-/build
+**/build
+**/dist
+**/.sanity
 
 # misc
 .DS_Store
@@ -18,13 +20,20 @@
 .env.development.local
 .env.test.local
 .env.production.local
+*.local
 
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .DS_Store
 package-lock.json
 .vscode/settings.json
+/logs
+*.log
+
+# TypeScript
+*.tsbuildinfo
 
 .idea/
 .vscode/
