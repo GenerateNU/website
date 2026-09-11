@@ -1,0 +1,15 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "workspaces": {
+    ".": {
+      "entry": ["src/index.{js,ts}"],
+      "project": ["src/**/*.{js,jsx,ts,tsx}"]
+    },
+    "sanity": {
+      "entry": ["sanity.config.{js,ts}", "sanity.cli.{js,ts}"],
+      "project": ["**/*.{js,ts}"]
+    }
+  },
+  "treatTagHintsAsErrors": true,
+  "includeEntryExports": true
+}

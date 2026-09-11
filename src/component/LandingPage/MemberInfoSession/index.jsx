@@ -6,7 +6,7 @@ import './style.css'
 /**
  * Member Info Session popup.
  */
-export function ApplyTodayPopup({ url, onClose }) {
+function ApplyTodayPopup({ url, onClose }) {
   return (
     <PopupAd onClose={onClose} className='mis-popup'>
       <div className='mis-card'>

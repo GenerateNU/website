@@ -6,7 +6,7 @@ import './CloseButton.css'
  *
  * By default it floats centered just above the popup content
  */
-export function CloseButton({ onClick, className = '', style }) {
+function CloseButton({ onClick, className = '', style }) {
   return (
     <button
       type='button'

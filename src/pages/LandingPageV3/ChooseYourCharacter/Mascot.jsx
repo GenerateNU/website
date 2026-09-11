@@ -5,7 +5,7 @@
  * template). Everything else (hand, legs, shadow) keeps its original styling.
  * Any other svg props (width, height, className, etc.) are forwarded.
  */
-export function Mascot({ color = '#FFFFFF', ...props }) {
+function Mascot({ color = '#FFFFFF', ...props }) {
   return (
     <svg
       width="126"

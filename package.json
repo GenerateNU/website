@@ -4,27 +4,28 @@
   "private": true,
   "dependencies": {
     "@headlessui/react": "^2.2.10",
-    "@mui/icons-material": "^9.3.1",
     "@sanity/client": "^8.2.0",
     "@sanity/image-url": "^2.1.1",
-    "axios": "^1.19.0",
-    "qs": "^6.15.3",
     "react": "^19.2.8",
     "react-bootstrap": "^2.10.10",
-    "react-card-flip": "^1.2.3",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.2",
-    "react-scripts": "^5.0.1",
-    "react-swipeable": "^7.0.2"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format:check": "prettier --check src",
+    "format:fix": "prettier --write src",
+    "knip": "knip",
+    "knip:fix": "knip --fix"
   },
   "eslintConfig": {
-    "extends": ["react-app"]
+    "extends": [
+      "react-app"
+    ]
   },
   "browserslist": {
     "production": [
@@ -39,6 +40,9 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^3.9.6"
+    "@types/node": "^26.2.0",
+    "knip": "^6.32.2",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2"
   }
 }
