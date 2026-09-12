@@ -9,7 +9,7 @@ import CulturePage from './component/CulturePage'
 import TeamsPage from './pages/TeamsPage'
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams'
 import ProjectsPage from './component/ProjectsPage'
-import { useSanity } from './services/useSanity'
+import { useSanity } from './sanity/useSanity'
 
 function AppRoutes({ sanityRoutes }) {
   const routes = [

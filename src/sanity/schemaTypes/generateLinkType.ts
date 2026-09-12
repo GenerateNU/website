@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const generateLinkType = defineType({
   name: 'generateLink',
   title: 'Generate Link',
   type: 'document',
@@ -9,6 +9,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -17,11 +18,13 @@ export default defineType({
       options: {
         source: 'title',
       },
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'url',
       title: 'URL',
       type: 'url',
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
@@ -29,4 +32,4 @@ export default defineType({
       title: 'title',
     },
   },
-})
+});

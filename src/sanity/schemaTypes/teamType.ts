@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const teamType = defineType({
   name: 'team',
   title: 'Team',
   type: 'document',
@@ -9,11 +9,29 @@ export default defineType({
       name: 'team',
       title: 'Team',
       type: 'string',
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
+      name: 'cardVariant',
+      title: 'Card Variant',
+      description:
+        'How this team renders on the apply page. "Client" uses the client styling and the "Work with us" label.',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Default', value: 'default' },
+          { title: 'Client', value: 'client' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'default',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'color',
       title: 'Color',
       type: 'color',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'image',
@@ -32,12 +50,14 @@ export default defineType({
       name: 'tags',
       title: 'Tags',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
+      validation: Rule => Rule.required().min(1),
     }),
     defineField({
       name: 'teamDescription',
       title: 'Description',
       type: 'text',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'contributorDescription',
@@ -48,7 +68,7 @@ export default defineType({
       name: 'contributorRoles',
       title: 'Contributor Roles',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'application'}]}],
+      of: [{ type: 'reference', to: [{ type: 'application' }] }],
     }),
     defineField({
       name: 'leadDescription',
@@ -59,7 +79,7 @@ export default defineType({
       name: 'leadRoles',
       title: 'Lead Roles',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'application'}]}],
+      of: [{ type: 'reference', to: [{ type: 'application' }] }],
     }),
     defineField({
       name: 'chiefDescription',
@@ -70,23 +90,26 @@ export default defineType({
       name: 'chiefRoles',
       title: 'Chief Roles',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'application'}]}],
+      of: [{ type: 'reference', to: [{ type: 'application' }] }],
     }),
     defineField({
       name: 'externalLink',
       title: 'External Link',
+      description: 'When set, the card links out instead of listing open roles.',
       type: 'url',
     }),
     defineField({
       name: 'zIndex',
       title: 'Z Index',
       type: 'number',
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
     select: {
       title: 'team',
+      subtitle: 'cardVariant',
       media: 'image',
     },
   },
-})
+});
