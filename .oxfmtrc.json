@@ -4,7 +4,7 @@
   "singleQuote": true,
   "trailingComma": "es5",
   "arrowParens": "avoid",
-  "ignorePatterns": [".github/**"],
+  "ignorePatterns": [".github/**", "tools/oxlint/anti-slop/**"],
   "experimentalSortImports": {
     "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]]
   },

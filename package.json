@@ -26,6 +26,7 @@
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
+    "@oxlint/plugins": "1.79.0",
     "@types/node": "^26.2.0",
     "eslint-plugin-react-you-might-not-need-an-effect": "^1.0.2",
     "husky": "^9.1.7",
