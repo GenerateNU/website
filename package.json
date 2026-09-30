@@ -11,8 +11,8 @@
     "knip:fix": "knip --fix",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "fmt:check": "oxfmt --check",
-    "fmt": "oxfmt",
+    "format:check": "oxfmt --check",
+    "format": "oxfmt",
     "prepare": "husky"
   },
   "dependencies": {
