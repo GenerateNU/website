@@ -10,8 +10,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  VITE_SANITY_PROJECT_ID: ci-placeholder
-  VITE_SANITY_DATASET: ci-placeholder
+  VITE_SANITY_PROJECT_ID: ${{ vars.VITE_SANITY_PROJECT_ID || 'ci-placeholder' }}
+  VITE_SANITY_DATASET: ${{ vars.VITE_SANITY_DATASET || 'ci-placeholder' }}
 
 jobs:
   check:
