@@ -25,8 +25,8 @@
     "@headlessui/react": "^2.2.10",
     "@sanity/client": "^8.9.0",
     "@portabletext/react": "^8.0.1",
-    "@sanity/cli": "^8.2.1",
-    "@sanity/color-input": "^6.1.4",
+    "@sanity/cli": "^8.13.0",
+    "@sanity/color-input": "^6.1.5",
     "@sanity/image-url": "^2.1.1",
     "react": "^19.3.0",
     "react-bootstrap": "^2.10.10",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "@oxlint/plugins": "1.86.0",
     "@types/node": "^26.6.3",
-    "@sanity/types": "^6.12.0",
+    "@sanity/types": "^6.17.0",
     "@vitejs/plugin-react": "^6.1.1",
     "eslint-plugin-react-you-might-not-need-an-effect": "^1.0.2",
     "husky": "^9.1.7",
@@ -45,9 +45,9 @@
     "oxfmt": "^0.71.0",
     "oxlint": "^1.86.0",
     "oxlint-tsgolint": "^7.0.2003",
-    "sanity": "^6.12.0",
+    "sanity": "^6.17.0",
     "typescript": "^7.0.2",
-    "vite": "^8.2.2",
+    "vite": "^8.3.1",
     "vite-plugin-svgr": "^5.2.0",
     "vitest": "^5.0.2"
   }
