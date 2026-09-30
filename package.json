@@ -2,30 +2,40 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@headlessui/react": "^2.2.10",
-    "@sanity/client": "^8.2.0",
-    "@sanity/image-url": "^2.1.1",
-    "react": "^19.2.8",
-    "react-bootstrap": "^2.10.10",
-    "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.2",
-    "react-scripts": "^5.0.1"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
-    "format:check": "prettier --check src",
-    "format:fix": "prettier --write src",
     "knip": "knip",
-    "knip:fix": "knip --fix"
+    "knip:fix": "knip --fix",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format:check": "oxfmt --check",
+    "format": "oxfmt",
+    "prepare": "husky"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
+  "dependencies": {
+    "@headlessui/react": "^2.2.10",
+    "@sanity/client": "^8.9.0",
+    "@sanity/image-url": "^2.1.1",
+    "react": "^19.3.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@oxlint/plugins": "1.86.0",
+    "@types/node": "^26.6.3",
+    "eslint-plugin-react-you-might-not-need-an-effect": "^1.0.2",
+    "husky": "^9.1.7",
+    "knip": "^6.38.0",
+    "lint-staged": "^17.6.0",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
+    "oxlint-tsgolint": "^7.0.2003",
+    "typescript": "^7.0.2"
   },
   "browserslist": {
     "production": [
@@ -38,11 +48,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/node": "^26.2.0",
-    "knip": "^6.32.2",
-    "prettier": "^3.9.6",
-    "typescript": "^7.0.2"
   }
 }
