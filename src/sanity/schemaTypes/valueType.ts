@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const valueType = defineType({
   name: 'value',
   title: 'Value',
   type: 'document',
@@ -9,11 +9,13 @@ export default defineType({
       name: 'value',
       title: 'Value',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'color',
       title: 'Color',
       type: 'color',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'image',
@@ -22,16 +24,19 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'text',
       title: 'Text',
       type: 'text',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'index',
       title: 'Index',
       type: 'number',
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
@@ -40,4 +45,4 @@ export default defineType({
       media: 'image',
     },
   },
-})
+});

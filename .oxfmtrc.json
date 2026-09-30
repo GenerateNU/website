@@ -4,7 +4,7 @@
   "singleQuote": true,
   "trailingComma": "es5",
   "arrowParens": "avoid",
-  "ignorePatterns": [".github/**", "tools/oxlint/anti-slop/**"],
+  "ignorePatterns": [".github/**", "tools/oxlint/anti-slop/**", "src/sanity/types.ts"],
   "experimentalSortImports": {
     "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]]
   },

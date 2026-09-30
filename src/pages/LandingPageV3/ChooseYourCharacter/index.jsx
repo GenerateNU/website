@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText.jsx'
 import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine.jsx'
-import { urlFor } from '../../../client.js'
-import { useSanity } from '../../../services/useSanity.js'
+import { urlFor } from '../../../sanity/client'
+import { useSanity } from '../../../sanity/useSanity'
 import Mascot from './Mascot.jsx'
 
 const MascotRadioButton = ({

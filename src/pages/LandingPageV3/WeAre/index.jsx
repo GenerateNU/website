@@ -1,5 +1,5 @@
 import weare from '../../../assets/images/landingpage/weare/weare.jpg'
-import { useSanity } from '../../../services/useSanity'
+import { useSanity } from '../../../sanity/useSanity'
 
 export default function WeAre() {
   const query = `*[_type == "value"] {value, index} | order(index asc)`

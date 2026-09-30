@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const pastProjectType = defineType({
   name: 'pastProject',
   title: 'Past Project',
   type: 'document',
@@ -60,4 +60,4 @@ export default defineType({
       media: 'image',
     },
   },
-})
+});

@@ -1,6 +1,6 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
-export default defineType({
+export const showcaseType = defineType({
   name: 'showcase',
   title: 'Showcase Carousel',
   type: 'document',
@@ -9,17 +9,20 @@ export default defineType({
       name: 'year',
       title: 'Year',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'semester',
       title: 'Semester',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'image',
       title: 'Image',
       description: 'Crop to 4:3 aspect ratio to preserve proportions when rendering.',
       type: 'image',
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
@@ -28,4 +31,4 @@ export default defineType({
       media: 'image',
     },
   },
-})
+});

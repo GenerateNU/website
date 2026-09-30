@@ -2,9 +2,9 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "bundler",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "strict": true,
     "noEmit": true,
     "allowJs": true,
@@ -14,5 +14,5 @@
     "isolatedModules": true,
     "types": ["vite/client", "vite-plugin-svgr/client"]
   },
-  "include": ["src", "vite.config.ts", "oxlint.config.ts"]
+  "include": ["src", "vite.config.ts", "oxlint.config.ts", "static"]
 }
