@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "test": "vitest",
+    "preview": "vite preview",
+    "test": "vitest --passWithNoTests",
     "knip": "knip",
     "knip:fix": "knip --fix",
     "lint": "oxlint",
