@@ -1,37 +1,46 @@
-const remarks = "Please note that these positions are in-person, semester-long roles and begin in September with an expected time commitment of 5-8 hours/week. Applications close August 9 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!";
+import type { Position } from './types';
+
+const remarks =
+  'Please note that these positions are in-person, semester-long roles and begin in September with an expected time commitment of 5-8 hours/week. Applications close August 9 at 11:59pm. Please contact me (damato.j@northeastern.edu or @JoJo on the Sherman Center Slack) with any questions or concerns!';
+
 const startDate = '1/1/2024';
+
 const endDate = '4/19/2024';
 
-const Hardware = [
+const Hardware: Position[] = [
   {
     positionTitle: 'Hardware Engineer',
     categoryType: 'Hardware',
     description:
-      "Mechanical Hardware Engineers will focus on designing, testing, and prototyping mechanical concepts such as part design, design for manufacturing, 3D printing, motor integration, etc. with the team. Electrical Hardware Engineers focus on designing, testing, and prototyping electronic concepts such as electromechanical integration, control and sensor systems, PCB design, etc. All engineers focus on greater development of their client project and deliverables.",
+      'Mechanical Hardware Engineers will focus on designing, testing, and prototyping mechanical concepts such as part design, design for manufacturing, 3D printing, motor integration, etc. with the team. Electrical Hardware Engineers focus on designing, testing, and prototyping electronic concepts such as electromechanical integration, control and sensor systems, PCB design, etc. All engineers focus on greater development of their client project and deliverables.',
     responsibilities:
-      "Hardware engineers are key members of the organization who make up the majority of our four unique project teams. The role is an opportunity for growth at all levels, whether starting out your engineering career or developing advanced skills and techniques.",
-    requirements: "Attends all team meetings, communicates well, and completes work outside of meetings. Brings a curious mind and excited attitude to the table regardless of prior experience level. Is interested in the greater Generate community beyond just their project team. They are a strong team-player with positive time management and organizational skills.",
+      'Hardware engineers are key members of the organization who make up the majority of our four unique project teams. The role is an opportunity for growth at all levels, whether starting out your engineering career or developing advanced skills and techniques.',
+    requirements:
+      'Attends all team meetings, communicates well, and completes work outside of meetings. Brings a curious mind and excited attitude to the table regardless of prior experience level. Is interested in the greater Generate community beyond just their project team. They are a strong team-player with positive time management and organizational skills.',
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdrzsBXGnfznjbbThXbH5E_nLZxgpFdKSLcAHia7JvSK4tMJw/viewform?usp=sf_link'
+    applicationLink:
+      'https://docs.google.com/forms/d/e/1FAIpQLSdrzsBXGnfznjbbThXbH5E_nLZxgpFdKSLcAHia7JvSK4tMJw/viewform?usp=sf_link',
   },
   {
     positionTitle: 'Industrial Designer',
     categoryType: 'Hardware',
     description:
-      "Industrial Designers on project teams focus on a variety of design-related things depending on the client and project they are assigned to. Tasks may include but are not limited to branding design, GUI development, material selection, design of a chassis/housing/etc., rendering and animations, and more.",
+      'Industrial Designers on project teams focus on a variety of design-related things depending on the client and project they are assigned to. Tasks may include but are not limited to branding design, GUI development, material selection, design of a chassis/housing/etc., rendering and animations, and more.',
     responsibilities:
       "Industrial Designers are key members of the organization who bring client's aesthetic visions for their products to life in conjunction with the engineering teams. The role is an opportunity for growth at all levels, whether starting out your design career or developing advanced skills and techniques.",
-    requirements: "Attends all team meetings, communicates well, and completes work outside of meetings. Brings a curious mind and excited attitude to the table regardless of prior experience level. Is interested in the greater Generate community beyond just their project team. They are a strong team-player with positive time management and organizational skills.",
+    requirements:
+      'Attends all team meetings, communicates well, and completes work outside of meetings. Brings a curious mind and excited attitude to the table regardless of prior experience level. Is interested in the greater Generate community beyond just their project team. They are a strong team-player with positive time management and organizational skills.',
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSccY9rhVJz9srVMPSKYGsC9xLIr5Jr_mRdgbBoIwM_3l-VeRw/viewform?usp=sf_link'
+    applicationLink:
+      'https://docs.google.com/forms/d/e/1FAIpQLSccY9rhVJz9srVMPSKYGsC9xLIr5Jr_mRdgbBoIwM_3l-VeRw/viewform?usp=sf_link',
   },
   {
     positionTitle: 'Lead Mechanical Engineer',
@@ -47,7 +56,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://forms.gle/W4uxEDTLiZbAPTEn7'
+    applicationLink: 'https://forms.gle/W4uxEDTLiZbAPTEn7',
   },
   {
     positionTitle: 'Lead Electrical Engineer',
@@ -61,7 +70,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://forms.gle/W4uxEDTLiZbAPTEn7'
+    applicationLink: 'https://forms.gle/W4uxEDTLiZbAPTEn7',
   },
   {
     positionTitle: 'Chief Lead',
@@ -77,7 +86,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://forms.gle/d5neFKZZFEMHoYGp6'
+    applicationLink: 'https://forms.gle/d5neFKZZFEMHoYGp6',
   },
   {
     positionTitle: 'Chief Electrical Engineer',
@@ -93,7 +102,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
+    applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16',
   },
   {
     positionTitle: 'Chief Mechanical Engineer',
@@ -109,7 +118,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
+    applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16',
   },
   {
     positionTitle: 'Chief Computer Engineer',
@@ -125,7 +134,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
+    applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16',
   },
   {
     positionTitle: 'Chief Industrial Designer',
@@ -141,7 +150,7 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16'
+    applicationLink: 'https://forms.gle/Ujgvvf4Drj5sCju16',
   },
   {
     positionTitle: 'Project Lead',
@@ -157,8 +166,8 @@ const Hardware = [
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://forms.gle/WoESCr6f9GB7fSky7'
-  }
-]
+    applicationLink: 'https://forms.gle/WoESCr6f9GB7fSky7',
+  },
+];
 
-export default Hardware
+export default Hardware;

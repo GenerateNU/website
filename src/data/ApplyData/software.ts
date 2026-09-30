@@ -1,53 +1,60 @@
-const remarks = "Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of 10 hrs/week.\nApplications close December 13th at 11:59pm";
+import type { Position } from './types';
+
+const remarks =
+  'Please note that these positions are in-person, semester-long roles and begin in early January with an expected time commitment of 10 hrs/week.\nApplications close December 13th at 11:59pm';
+
 const startDate = '1/1/2024';
+
 const endDate = '4/19/2024';
 
-const Software = [
-
+const Software: Position[] = [
   {
     positionTitle: 'UI/UX Designer',
     categoryType: 'Software',
     description:
-      "UI/UX Designers work on a project team to contribute to the completion of high-quality, professional fully prototyped hi-fi wireframes for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. In the past, designers have designed complete UI/UX workflows for apps and websites. Designs created for the team are implemented by the engineers so you can see your work come to life! Designers also work closely with clients and customers to understand user needs & needed functionality",
+      'UI/UX Designers work on a project team to contribute to the completion of high-quality, professional fully prototyped hi-fi wireframes for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. In the past, designers have designed complete UI/UX workflows for apps and websites. Designs created for the team are implemented by the engineers so you can see your work come to life! Designers also work closely with clients and customers to understand user needs & needed functionality',
     responsibilities:
-      "Attend and actively participate in regular team meetings.Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital productHost user testing to get real feedback on designs and support the iterative process.Accept and give feedback to peers, for both soft and hard skills.Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience.Assist the clients in making their product marketable, unique, and appealing.Iterate rapidly on client feedback",
+      'Attend and actively participate in regular team meetings.Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital productHost user testing to get real feedback on designs and support the iterative process.Accept and give feedback to peers, for both soft and hard skills.Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience.Assist the clients in making their product marketable, unique, and appealing.Iterate rapidly on client feedback',
     requirements: '',
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeRm2c1KOjPyytj6NYxhsDiMeu2ewWc1B1oVL7dxaV1PF6h3g/viewform?usp=sf_link'
+    applicationLink:
+      'https://docs.google.com/forms/d/e/1FAIpQLSeRm2c1KOjPyytj6NYxhsDiMeu2ewWc1B1oVL7dxaV1PF6h3g/viewform?usp=sf_link',
   },
   {
     positionTitle: 'Brand Designer',
     categoryType: 'Software',
     description:
-      "Brand Designers work on a project team to contribute to the completion of high-quality, professional brands for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. Brand designers  work closely with clients and customers to produce logos, marketing materials, and branding guidelines.",
+      'Brand Designers work on a project team to contribute to the completion of high-quality, professional brands for Generate clients. They are excellent at working in a team, iterating on their work, and accepting constructive critique. Brand designers  work closely with clients and customers to produce logos, marketing materials, and branding guidelines.',
     responsibilities:
-      "Attend and actively participate in regular team meetings.Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital productHost user testing to get real feedback on designs and support the iterative process.Accept and give feedback to peers, for both soft and hard skills.Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience.Assist the clients in making their product marketable, unique, and appealing.Iterate rapidly on client feedback",
+      'Attend and actively participate in regular team meetings.Fully prototype, iterate, and design Lo-Fi & Hi-Fi wireframes for a mobile app, website, or other digital productHost user testing to get real feedback on designs and support the iterative process.Accept and give feedback to peers, for both soft and hard skills.Help design the visual identity of both the product and the client organization in a way that is cohesive and suitable for the target audience.Assist the clients in making their product marketable, unique, and appealing.Iterate rapidly on client feedback',
     requirements: '',
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeRm2c1KOjPyytj6NYxhsDiMeu2ewWc1B1oVL7dxaV1PF6h3g/viewform?usp=sf_link'
+    applicationLink:
+      'https://docs.google.com/forms/d/e/1FAIpQLSeRm2c1KOjPyytj6NYxhsDiMeu2ewWc1B1oVL7dxaV1PF6h3g/viewform?usp=sf_link',
   },
   {
     positionTitle: 'Software Engineer',
     categoryType: 'Software',
     description:
-      "Generate Software Engineers work on a software project team to contribute to the completion of high-quality, professional work for Generate clients. They are excellent at working in a team and tackling complex technical problems. Past projects have included both front-end and back-end engineering for apps, websites and more!",
+      'Generate Software Engineers work on a software project team to contribute to the completion of high-quality, professional work for Generate clients. They are excellent at working in a team and tackling complex technical problems. Past projects have included both front-end and back-end engineering for apps, websites and more!',
     responsibilities:
-      "Work with a team of talented developers and designers to build a full-stack project for a clien.tAccept and give feedback to peers, both for soft and hard skills to grow as individuals and a team.Attend and actively participate in regular team meetings and code reviews",
+      'Work with a team of talented developers and designers to build a full-stack project for a clien.tAccept and give feedback to peers, both for soft and hard skills to grow as individuals and a team.Attend and actively participate in regular team meetings and code reviews',
     requirements: '',
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
     active: false,
     remarks: remarks,
-    applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeh4uRxgeuDWIRkzFar9yoPfGf3zJ8TygWwQn3woFjyObvoqg/viewform?usp=sf_link'
+    applicationLink:
+      'https://docs.google.com/forms/d/e/1FAIpQLSeh4uRxgeuDWIRkzFar9yoPfGf3zJ8TygWwQn3woFjyObvoqg/viewform?usp=sf_link',
   },
   {
     positionTitle: 'Design Lead',
@@ -62,9 +69,8 @@ const Software = [
     endDate: endDate,
     workCommitment: 10,
     active: false,
-    remarks:
-      remarks,
-    applicationLink: 'https://forms.gle/2D5FNbvU5a7oh5Rs7'
+    remarks: remarks,
+    applicationLink: 'https://forms.gle/2D5FNbvU5a7oh5Rs7',
   },
   {
     positionTitle: 'Technical Lead',
@@ -77,9 +83,8 @@ const Software = [
     endDate: endDate,
     workCommitment: 10,
     active: false,
-    remarks:
-      remarks,
-    applicationLink: 'https://forms.gle/aKHPvDKey7Ksxfts8'
+    remarks: remarks,
+    applicationLink: 'https://forms.gle/aKHPvDKey7Ksxfts8',
   },
   {
     positionTitle: 'Project Lead',
@@ -94,9 +99,8 @@ const Software = [
     endDate: endDate,
     workCommitment: 10,
     active: false,
-    remarks:
-      remarks,
-    applicationLink: 'https://forms.gle/gLtnZU15VixE4hwJ9'
+    remarks: remarks,
+    applicationLink: 'https://forms.gle/gLtnZU15VixE4hwJ9',
   },
   {
     positionTitle: 'Chief Frontend Architect',
@@ -105,15 +109,13 @@ const Software = [
       'New Role for Fall 2023! The Chief Frontend Architect will work as an advisor to all software teams to improve frontend development',
     responsibilities:
       'Oversee frontend development on 5 software teams. Run frontend workshops geared at different expertise levels. Help debug when needed',
-    requirements:
-      'Demonstrated frontend development skills. Debugging skills. Interest in mentoring and teaching.',
+    requirements: 'Demonstrated frontend development skills. Debugging skills. Interest in mentoring and teaching.',
     startDate: startDate,
     endDate: endDate,
     workCommitment: 10,
     active: false,
-    remarks:
-      remarks,
-    applicationLink: ''
+    remarks: remarks,
+    applicationLink: '',
   },
   {
     positionTitle: 'Chief Software Architect',
@@ -128,9 +130,8 @@ const Software = [
     endDate: endDate,
     workCommitment: 10,
     active: false,
-    remarks:
-      remarks,
-    applicationLink: ''
+    remarks: remarks,
+    applicationLink: '',
   },
   {
     positionTitle: 'Chief UX/UI',
@@ -145,9 +146,8 @@ const Software = [
     endDate: endDate,
     workCommitment: 10,
     active: false,
-    remarks:
-      remarks,
-    applicationLink: ''
+    remarks: remarks,
+    applicationLink: '',
   },
   {
     positionTitle: 'Brand Chief',
@@ -162,10 +162,9 @@ const Software = [
     endDate: endDate,
     workCommitment: 10,
     active: false,
-    remarks:
-      remarks,
-    applicationLink: ''
-  }
-]
+    remarks: remarks,
+    applicationLink: '',
+  },
+];
 
-export default Software
+export default Software;
