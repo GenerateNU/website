@@ -1,34 +1,23 @@
-import { React } from 'react'
-import { useNavigate } from 'react-router-dom'
-import useWebsite from '../../../../shared/useWebsite'
-import ShadowedButton from '../../../../component/ShadowedButton'
-import './style.css'
-export default function FeatureTextRow({
-  description,
-  picture,
-  reverse,
-  button
-}) {
-  const isWebsite = useWebsite()
-  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
-  const mobile = !isBigScreen || !isWebsite
-  const navigate = useNavigate()
+import { useNavigate } from 'react-router-dom';
 
-  const handleOnClick = (link) => {
-    navigate(link)
-  }
+import ShadowedButton from '../../../../component/ShadowedButton';
+import useWebsite from '../../../../shared/useWebsite';
+import './style.css';
+export default function FeatureTextRow({ description, picture, reverse, button }) {
+  const isWebsite = useWebsite();
+  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
+  const mobile = !isBigScreen || !isWebsite;
+  const navigate = useNavigate();
+
+  const handleOnClick = link => {
+    navigate(link);
+  };
 
   return (
     <div className={`${mobile ? 'text-row-mobile-feature' : 'text-row'}`}>
-      {(reverse || mobile) && (
-        <img src={picture} className='feature-info-pic' alt=''></img>
-      )}
+      {(reverse || mobile) && <img src={picture} className="feature-info-pic" alt=""></img>}
       <div className={`${mobile ? 'info-section-mobile' : 'info-section'}`}>
-        <div
-          className={` ${mobile ? 'paragraph-text-mobile' : 'paragraph-text'}`}
-        >
-          {description}
-        </div>
+        <div className={` ${mobile ? 'paragraph-text-mobile' : 'paragraph-text'}`}>{description}</div>
 
         <div className={`feature-link`}>
           <ShadowedButton
@@ -36,16 +25,14 @@ export default function FeatureTextRow({
             xPad={mobile ? '4vw' : '5vw'}
             yPad={mobile ? '3vw' : '2vw'}
             fontSize={mobile ? '3vw' : '2vw'}
-            fillColor='white'
+            fillColor="white"
             right={false}
             text={'explore deeper'}
             onClick={() => handleOnClick(button)}
           ></ShadowedButton>
         </div>
       </div>
-      {!reverse && !mobile && (
-        <img src={picture} className='feature-info-pic' alt=''></img>
-      )}
+      {!reverse && !mobile && <img src={picture} className="feature-info-pic" alt=""></img>}
     </div>
-  )
+  );
 }
