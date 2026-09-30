@@ -40,18 +40,6 @@
     "typescript": "^7.0.2",
     "vite": "^8.2.2",
     "vite-plugin-svgr": "^5.2.0",
-    "vitest": "^4.1.11"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "vitest": "^5.0.2"
   }
 }
