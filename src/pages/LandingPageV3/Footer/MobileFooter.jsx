@@ -3,9 +3,9 @@ import { FooterLink } from '.'
 import { useNavigate } from 'react-router-dom'
 import { pages } from '.'
 import ShadowedButton from '../../../component/ShadowedButton'
-import { ReactComponent as Instagram } from '../../../assets/icons/socials/Instagram.svg'
-import { ReactComponent as Email } from '../../../assets/icons/socials/Email.svg'
-import { ReactComponent as LinkedIn } from '../../../assets/icons/socials/LinkedIn.svg'
+import Instagram from '../../../assets/icons/socials/Instagram.svg?react'
+import Email from '../../../assets/icons/socials/Email.svg?react'
+import LinkedIn from '../../../assets/icons/socials/LinkedIn.svg?react'
 import UpArrowMobile from '../../../assets/icons/arrows/upArrowMobile.svg'
 
 function MobileFooter() {

@@ -1,5 +1,5 @@
-import { ReactComponent as ShermLogo } from '../../../assets/images/landingpage-v3/ShermanLogo.svg'
-import { ReactComponent as MosaicLogo } from '../../../assets/images/landingpage-v3/MosaicLogo.svg'
+import ShermLogo from '../../../assets/images/landingpage-v3/ShermanLogo.svg?react'
+import MosaicLogo from '../../../assets/images/landingpage-v3/MosaicLogo.svg?react'
 
 export default function ParentOrgs() {
   return (
