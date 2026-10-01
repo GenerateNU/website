@@ -1,6 +1,15 @@
-import React from "react";
-import Column from "react-bootstrap/esm/Col";
-import "./style.css";
+import React from 'react';
+import type { JSX, ReactNode } from 'react';
+import Column from 'react-bootstrap/esm/Col';
+
+import './style.css';
+
+type NewMobileContainerProps = {
+  children: ReactNode;
+  mobileBGColor: string;
+  containerClassName?: string;
+  rowClassName?: string;
+};
 
 /**
  * A component that handles rendering content differently based on whether the user is on desktop or mobile.
@@ -18,19 +27,13 @@ export default function NewMobileContainer({
   children,
   mobileBGColor,
   ...props
-}) {
+}: NewMobileContainerProps): JSX.Element {
   return (
     <>
       {/* Mobile view */}
-      <div
-        style={{background: mobileBGColor}} class={`w-100 vertical-scroll ${
-          props.containerClassName ?? ""
-        }`}
-      >
+      <div style={{ background: mobileBGColor }} className={`w-100 vertical-scroll ${props.containerClassName ?? ''}`}>
         {/* The content is wrapped in a Column component from the react-bootstrap library to ensure proper layout */}
-        <Column className={`w-100 ${props.rowClassName ?? ""}`}>
-          {children}
-        </Column>
+        <Column className={`w-100 ${props.rowClassName ?? ''}`}>{children}</Column>
       </div>
     </>
   );

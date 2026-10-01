@@ -1,20 +1,36 @@
 import React from 'react';
+import type { JSX, ReactNode } from 'react';
 
 import './style.css';
 import { constants } from '../../assets/constants';
 
-export default function ShadowedButton(props) {
+type ShadowedButtonProps = {
+  text: ReactNode;
+  onClick?: () => void;
+  lnk?: string;
+  fillColor?: string;
+  textColor?: string;
+  xPad?: string;
+  yPad?: string;
+  fontSize?: string;
+  right?: boolean;
+  className?: string;
+};
+
+export default function ShadowedButton(props: ShadowedButtonProps): JSX.Element {
   const ButtonStyle = {
     backgroundColor: props.fillColor,
     padding: `${props.yPad || '1rem'} ${props.xPad}`,
     fontSize: `${props.fontSize || '1.5vw'}`,
   };
 
-  const handleOnClick = () => {
-    const name = props.lnk;
+  const handleOnClick = (): void => {
+    // SAFETY: only runs when onClick is missing, and every caller passes onClick
+    const name = props.lnk as string;
     const key = name.replace(' ', '_');
     const POSITIONS_URL = 'Position_' + key;
-    window.location.assign(constants[POSITIONS_URL]);
+    // SAFETY: same unused fallback path as above
+    window.location.assign(constants[POSITIONS_URL as keyof typeof constants]);
   };
 
   return (
