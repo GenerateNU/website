@@ -1,6 +1,4 @@
 import './style.css';
-import type { JSX } from 'react';
-
 import Arrow from '../../assets/images/nextpage/arrow.svg';
 
 type NextPageProps = {
@@ -8,7 +6,7 @@ type NextPageProps = {
   pageName: string;
 };
 
-export default function NextPage(props: NextPageProps): JSX.Element {
+export default function NextPage(props: NextPageProps) {
   return (
     <div className="nextPage">
       <a className="nextPageButton" href={props.url}>

@@ -1,5 +1,4 @@
 import React from 'react';
-import type { JSX } from 'react';
 
 import useWebsite from '../../shared/useWebsite';
 import HorizontalFooter from './HorizontalFooter';
@@ -26,7 +25,7 @@ export const pages: FooterPage[] = [
   { name: 'Projects', link: '/projects' },
 ];
 
-export const FooterLink = ({ page, currentPage }: FooterLinkProps): JSX.Element => {
+export const FooterLink = ({ page, currentPage }: FooterLinkProps) => {
   const { name, link, disabled } = page;
   const isCurrentPage = currentPage === link;
 
@@ -51,7 +50,7 @@ export const FooterLink = ({ page, currentPage }: FooterLinkProps): JSX.Element 
   );
 };
 
-function Footer(): JSX.Element {
+function Footer() {
   const website = useWebsite();
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
 

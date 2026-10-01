@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CSSProperties, JSX } from 'react';
+import type { CSSProperties } from 'react';
 
 import './CloseButton.css';
 
@@ -14,7 +14,7 @@ type CloseButtonProps = {
  *
  * By default it floats centered just above the popup content
  */
-function CloseButton({ onClick, className = '', style }: CloseButtonProps): JSX.Element {
+function CloseButton({ onClick, className = '', style }: CloseButtonProps) {
   return (
     <button
       type="button"

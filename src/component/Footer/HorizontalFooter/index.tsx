@@ -1,5 +1,4 @@
 import React from 'react';
-import type { JSX } from 'react';
 
 import '../style.css';
 import { useNavigate } from 'react-router-dom';
@@ -10,11 +9,11 @@ import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg';
 import ShadowedButton from '../../ShadowedButton';
 import { SocialIcon, socialIcons } from '../../SocialIcon';
 
-function HorizontalFooter(): JSX.Element {
+function HorizontalFooter() {
   const navigate = useNavigate();
   const currentPageUrl = window.location.href;
 
-  const handleOnClick = (): void => {
+  const handleOnClick = () => {
     window.scrollTo(0, 0);
     navigate('/');
   };

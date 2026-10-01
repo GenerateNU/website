@@ -1,5 +1,5 @@
 import React from 'react';
-import type { JSX, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import Column from 'react-bootstrap/esm/Col';
 
 import './style.css';
@@ -23,11 +23,7 @@ type NewMobileContainerProps = {
  * @param {string} props.mobileBGColor - The background color for the mobile view.
  * @returns {JSX.Element} The JSX element representing the component.
  */
-export default function NewMobileContainer({
-  children,
-  mobileBGColor,
-  ...props
-}: NewMobileContainerProps): JSX.Element {
+export default function NewMobileContainer({ children, mobileBGColor, ...props }: NewMobileContainerProps) {
   return (
     <>
       {/* Mobile view */}

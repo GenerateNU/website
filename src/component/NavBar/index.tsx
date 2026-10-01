@@ -1,11 +1,10 @@
 import React from 'react';
-import type { JSX } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './style.css';
 import GenerateLogo from '../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png';
 
-const NavBar = (): JSX.Element => {
+const NavBar = () => {
   const navigate = useNavigate();
   const currentUrl = window.location.href.split('/').at(-1);
 

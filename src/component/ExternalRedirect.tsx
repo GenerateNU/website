@@ -4,7 +4,7 @@ type ExternalRedirectProps = {
   to: string;
 };
 
-export default function ExternalRedirect({ to }: ExternalRedirectProps): null {
+export default function ExternalRedirect({ to }: ExternalRedirectProps) {
   useEffect(() => {
     window.location.href = to;
   }, [to]);

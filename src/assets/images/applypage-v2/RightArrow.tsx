@@ -1,11 +1,10 @@
 import React from 'react';
-import type { JSX } from 'react';
 
 type RightArrowIconProps = {
   color: string;
 };
 
-const RightArrowIcon = ({ color }: RightArrowIconProps): JSX.Element => {
+const RightArrowIcon = ({ color }: RightArrowIconProps) => {
   return (
     <svg width="26" height="31" viewBox="0 0 26 31" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

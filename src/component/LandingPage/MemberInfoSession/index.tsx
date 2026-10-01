@@ -1,5 +1,4 @@
 import React from 'react';
-import type { JSX } from 'react';
 
 import PopupAd from '../PopupAd';
 import puzzle from './assets/gen-puzzle.svg';
@@ -13,7 +12,7 @@ type ApplyTodayPopupProps = {
 /**
  * Member Info Session popup.
  */
-function ApplyTodayPopup({ url, onClose }: ApplyTodayPopupProps): JSX.Element {
+function ApplyTodayPopup({ url, onClose }: ApplyTodayPopupProps) {
   return (
     <PopupAd onClose={onClose} className="mis-popup">
       <div className="mis-card">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { CSSProperties, JSX, ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
 import CloseButton from './CloseButton';
 import './style.css';
@@ -25,10 +25,10 @@ function PopupAd({
   onClose,
   className = '',
   style,
-}: PopupAdProps): JSX.Element | null {
+}: PopupAdProps) {
   const [isOpen, setIsOpen] = useState(true);
 
-  const closePopup = (): void => {
+  const closePopup = () => {
     setIsOpen(false);
 
     if (onClose) {
@@ -40,7 +40,7 @@ function PopupAd({
     return null;
   }
 
-  const handleOverlayClick = (): void => {
+  const handleOverlayClick = () => {
     if (closeOnOverlayClick) {
       closePopup();
     }

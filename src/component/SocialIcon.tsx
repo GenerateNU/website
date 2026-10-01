@@ -1,4 +1,4 @@
-import type { FunctionComponent, JSX, SVGProps } from 'react';
+import type { FunctionComponent, SVGProps } from 'react';
 import { Col } from 'react-bootstrap';
 
 import FbIcon from '../assets/images/socialMediaIcons/Facebook.svg?react';
@@ -54,7 +54,7 @@ export const socialIcons = [
   ],
 ];
 
-export function SocialIcon({ href, imgSrc, className }: SocialIconProps): JSX.Element {
+export function SocialIcon({ href, imgSrc, className }: SocialIconProps) {
   // const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches
   // const mobile = !isBigScreen
   return (

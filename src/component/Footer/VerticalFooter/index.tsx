@@ -1,5 +1,4 @@
 import React from 'react';
-import type { JSX } from 'react';
 
 import '../style.css';
 import { useNavigate } from 'react-router-dom';
@@ -9,11 +8,11 @@ import ShadowedButton from '../../ShadowedButton';
 import { SocialIcon, socialIcons } from '../../SocialIcon';
 import { pages, FooterLink } from '../index';
 
-function VerticalFooter(): JSX.Element {
+function VerticalFooter() {
   const currentPageUrl = window.location.href;
   const navigate = useNavigate();
 
-  const handleOnClick = (): void => {
+  const handleOnClick = () => {
     window.scrollTo(0, 0);
     navigate('/');
   };

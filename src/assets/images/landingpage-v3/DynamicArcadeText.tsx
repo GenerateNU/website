@@ -1,5 +1,4 @@
 import React from 'react';
-import type { JSX } from 'react';
 
 type Director = {
   title?: string;
@@ -13,7 +12,7 @@ type DynamicIconProps = {
   id?: string;
 };
 
-const DynamicIcon = ({ color = '#187DFF', director = {}, id }: DynamicIconProps): JSX.Element => (
+const DynamicIcon = ({ color = '#187DFF', director = {}, id }: DynamicIconProps) => (
   <div className="dynamic-icon" id="text-arcade">
     <svg viewBox="0 0 835 371" fill="none" xmlns="http://www.w3.org/2000/svg" id={id}>
       <path

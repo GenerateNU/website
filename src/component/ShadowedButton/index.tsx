@@ -1,5 +1,5 @@
 import React from 'react';
-import type { JSX, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 import './style.css';
 import { constants } from '../../assets/constants';
@@ -17,14 +17,14 @@ type ShadowedButtonProps = {
   className?: string;
 };
 
-export default function ShadowedButton(props: ShadowedButtonProps): JSX.Element {
+export default function ShadowedButton(props: ShadowedButtonProps) {
   const ButtonStyle = {
     backgroundColor: props.fillColor,
     padding: `${props.yPad || '1rem'} ${props.xPad}`,
     fontSize: `${props.fontSize || '1.5vw'}`,
   };
 
-  const handleOnClick = (): void => {
+  const handleOnClick = () => {
     // SAFETY: only runs when onClick is missing, and every caller passes onClick
     const name = props.lnk as string;
     const key = name.replace(' ', '_');

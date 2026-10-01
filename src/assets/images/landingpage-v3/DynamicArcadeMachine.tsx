@@ -1,5 +1,4 @@
 import React from 'react';
-import type { JSX } from 'react';
 
 type DynamicArcadeMachineProps = {
   color?: string;
@@ -7,11 +6,7 @@ type DynamicArcadeMachineProps = {
   imgUrl?: string;
 };
 
-const DynamicArcadeMachine = ({
-  color = '#187DFF',
-  text = '',
-  imgUrl = '',
-}: DynamicArcadeMachineProps): JSX.Element => (
+const DynamicArcadeMachine = ({ color = '#187DFF', text = '', imgUrl = '' }: DynamicArcadeMachineProps) => (
   <svg id="arcade-svg" width="531" height="857" viewBox="0 0 531 857" fill="none" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="110.75" cy="573.371" rx="27.3086" ry="22.7281" fill="#A2A2A2" />
     <rect x="75.8574" y="99.2363" width="379.286" height="378.801" fill={color} />

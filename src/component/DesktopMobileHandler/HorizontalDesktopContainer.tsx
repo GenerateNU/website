@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useRef } from 'react';
-import type { JSX, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import Row from 'react-bootstrap/esm/Row';
 
 import './style.css';
@@ -28,7 +28,7 @@ export default function HorizontalDesktopContainer({
   children,
   desktopBGColor,
   ...props
-}: HorizontalDesktopContainerProps): JSX.Element {
+}: HorizontalDesktopContainerProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,14 +38,14 @@ export default function HorizontalDesktopContainer({
       return;
     }
 
-    const handleWheel = (evt: WheelEvent): void => {
+    const handleWheel = (evt: WheelEvent) => {
       evt.preventDefault();
       scrollContainer.scrollLeft += evt.deltaY;
     };
 
     scrollContainer.addEventListener('wheel', handleWheel);
 
-    return (): void => {
+    return () => {
       scrollContainer.removeEventListener('wheel', handleWheel);
     };
   }, []);
