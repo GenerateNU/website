@@ -1,6 +1,8 @@
+type Category = 'Clients' | 'Engagement' | 'Hardware' | 'Operations' | 'Software';
+
 export type Position = {
   positionTitle: string;
-  categoryType: string;
+  categoryType: Category;
   description: string;
   responsibilities: string;
   requirements: string;

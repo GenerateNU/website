@@ -17,11 +17,11 @@ const Operations: Position[] = [
       'Developmenting professional relationships with corporate/external companies. Communicating with recruiters and other professionals. ',
     requirements:
       'The ideal candidate has confident and professional communication skills, and is creative and self-motivated, coming up with new and exciting methods to create meaningful corporate relationships.',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSdRGd12UHhCOdLiDeVSjuSDiDnjv2pkL7UJ-QViYCf0zXp44A/viewform?usp=sf_link',
   },
@@ -33,11 +33,11 @@ const Operations: Position[] = [
     responsibilities:
       'Responsibilities for this role include designing and developing data pipelines, performing data cleansing and validation, and developing/maintaining data documentation. This role is an opportunity to utilize your technical expertise within an entrepreneurial setting.',
     requirements: 'Previous experience using programming languages. Ability to effectively communicate. ',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSfuZjasfFVrp6fuLCMKq-RGRJDro81-HB3GZMvWqiCl1qzdDQ/viewform?usp=sf_link',
   },
@@ -50,11 +50,11 @@ const Operations: Position[] = [
       'Develop initiatives and resources for current and future Generate leaders. Build upon the current system that facilities and encourages the growth of our members.',
     requirements:
       'The ideal candidate has impressive interpersonal skills, a passion for mentorship, and is creative and self-motivated, coming up with new and exciting methods to foster active acknowledgment of member growth.',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSdgWvDtFCb8FDOJJLd62bbnmUhgf6QR1ZdDP3thlq5ljD5CFg/viewform?usp=sf_link',
   },
@@ -67,11 +67,11 @@ const Operations: Position[] = [
       'Order all needed supplies and materials needed for projects, member development, events, etc. Oversee the budget of the organization and maintain the spending habits of each team. ',
     requirements:
       'Must have prior experience managing finances. Will be evaluated and further interviewed by the Sherman Center Director.',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSeAs4ugY3xjaJ_0GdFlwqDsIvzi7vR0mfTKtZq0IByQinSpPQ/viewform?usp=sf_link',
   },
@@ -97,11 +97,11 @@ const Operations: Position[] = [
     responsibilities:
       'Oversee the management of our space booking software, enabling members to maximize its potential. ',
     requirements: 'Flexible and adaptability. Creative thinking ',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLScvNWF5YuMa-IZhIup5V4Y5JJ2zpDi12NtAzakHPurwZHp9TA/viewform?usp=sf_link',
   },
@@ -114,11 +114,11 @@ const Operations: Position[] = [
     responsibilities:
       'Organize and maintain the progress of internal documentation. Centralizing any Generate wide resources and information. ',
     requirements: 'Ability to think creatively and demonstrate organization skills.',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSfnWMqtajHFHbQ43L09KT4QIZ8fiHF4zr_aR_YsekpUXyNdBw/viewform?usp=sf_link',
   },
@@ -131,11 +131,11 @@ const Operations: Position[] = [
       'The Data & Strategy Lead will facilitate weekly meetings and regular check-ins with the members of the Data & Strategy team as well as use their expertise to conceptualize and oversee projects that will provide even greater improvement in Generate as an organization',
     requirements:
       'Previous experience using Tableu, Python, SQL, AWS, or Git.The ideal candidate has a desire to mentor others.They are a strong team-player with the ability to advocate for an inclusive and welcoming team-culture.Has strong time management and organizational skills',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSfZ6sGNtUQr3SkzXx7f1VcJkXNlYUceWZcNk5Vj_2eyQ_Kscw/viewform?usp=sf_link',
   },
@@ -148,11 +148,11 @@ const Operations: Position[] = [
       'Collect and evaluate feedback from previous and current semesters to understand the diversity, equity, and inclusion of the community, as well as determining the needs of the community and where and how as a community we can grow. Maintaining and building initiatives that fosters the belonging, diversity, equity, and inclusion of team members in Generate',
     requirements:
       'The ideal candidate has confident and professional communication skills, and is creative and self-motivated, looking for new ways to further the growth of the organization and members.The ideal candidate has a desire to mentor others.They are a strong team-player with the ability to advocate for an inclusive and welcoming team-culture.Has strong time management and organizational skills',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSdceh_MFnbmaW7XiDY-n2H7uE8NHwuElyjy0tBUafoqCyBZqQ/viewform?usp=sf_link',
   },
@@ -165,11 +165,11 @@ const Operations: Position[] = [
       'Identifying and addressing challenges for Generate that relate to experiences of working within the Build Studio physically and digitally.Maintaining existing processes for the Build Studio, including purchasing, organization, inventory, etc.Coordinating with organizations on campus and other Generate teams to develop internal trainings related to the Build Studio.Empower team members to work to achieve their personal and professional goals',
     requirements:
       'The ideal candidate has a desire to mentor others.They are a strong team-player with the ability to advocate for an inclusive and welcoming team-culture. Has strong time management and organizational skills',
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     workCommitment: 10,
     active: false,
-    remarks: remarks,
+    remarks,
     applicationLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSdtp1IkFRnrOYa-m3smhYo7ss-bNjrvbFNoxhuyrWKKS4zx2A/viewform?usp=sf_link',
   },

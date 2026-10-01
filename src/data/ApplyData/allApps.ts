@@ -5,16 +5,9 @@ import Operations from './operations';
 import Software from './software';
 import type { Position } from './types';
 
-type ApplicationsByTeams = {
-  clients: Position[];
-  hardware: Position[];
-  software: Position[];
-  operations: Position[];
-  management: Position[];
-  engagement: Position[];
-};
+type Team = 'clients' | 'hardware' | 'software' | 'operations' | 'management' | 'engagement';
 
-const applicationsByTeams: ApplicationsByTeams = {
+const applicationsByTeams: Record<Team, Position[]> = {
   clients: Clients,
   hardware: Hardware,
   software: Software,
