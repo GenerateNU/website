@@ -7,7 +7,9 @@ import type { Position } from './types';
 
 type Team = 'clients' | 'hardware' | 'software' | 'operations' | 'management' | 'engagement';
 
-const applicationsByTeams: Record<Team, Position[]> = {
+type ApplicationsByTeams = Record<Team, Position[]>;
+
+const applicationsByTeams: ApplicationsByTeams = {
   clients: Clients,
   hardware: Hardware,
   software: Software,
