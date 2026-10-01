@@ -1,4 +1,8 @@
-type Category = 'Clients' | 'Engagement' | 'Hardware' | 'Operations' | 'Software';
+import type { Team } from '../teams';
+
+export type ApplicationGroup = Team | 'clients';
+
+type Category = Capitalize<ApplicationGroup>;
 
 export type Position = {
   positionTitle: string;
