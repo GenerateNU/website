@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { useLocation, useNavigationType } from 'react-router-dom';
+import { NavigationType, useLocation, useNavigationType } from 'react-router-dom';
 
 export default function ScrollToTop(): null {
   const { pathname } = useLocation();
   const navigationType = useNavigationType();
 
   useEffect(() => {
-    if (navigationType !== 'POP') {
+    if (navigationType !== NavigationType.Pop) {
       window.scrollTo(0, 0);
     }
   }, [pathname, navigationType]);
