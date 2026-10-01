@@ -1,4 +1,6 @@
-const Clients = [
+import type { Position } from './types';
+
+const Clients: Position[] = [
   {
     positionTitle: 'Client',
     categoryType: 'Clients',
@@ -15,8 +17,8 @@ const Clients = [
     remarks:
       'The position begins and ends with the Northeastern academic semester. The last day to apply is November 17th.',
     applicationLink:
-      'https://docs.google.com/forms/d/e/1FAIpQLSd8PPVmILgy92GdVZCn8cYm1sSgsnKZVxnaNDxA8KKL1JxYSg/viewform?usp=sharing'
-  }
+      'https://docs.google.com/forms/d/e/1FAIpQLSd8PPVmILgy92GdVZCn8cYm1sSgsnKZVxnaNDxA8KKL1JxYSg/viewform?usp=sharing',
+  },
   //this is a bogus app for testing purposes, delete later
   // {
   //     positionTitle: 'Client Two',
@@ -31,6 +33,6 @@ const Clients = [
   //     remarks: 'The position begins and ends with the Northeastern academic semester. The last day to apply is November 10th.',
   //     applicationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSd8PPVmILgy92GdVZCn8cYm1sSgsnKZVxnaNDxA8KKL1JxYSg/viewform?usp=sharing'
   // }
-]
+];
 
-export default Clients
+export default Clients;
