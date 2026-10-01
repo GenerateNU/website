@@ -4,9 +4,29 @@ import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMa
 import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText';
 import { urlFor } from '../../../client';
 import { useSanity } from '../../../services/useSanity';
-import Mascot from './Mascot.jsx';
+import type { Branch, Director, SanityBranch, SanityDirector } from '../types';
+import Mascot from './Mascot';
 
-const MascotRadioButton = ({ color, index, isFullOpacity, handleMouseEnter }) => {
+type MascotRadioButtonProps = {
+  color: string;
+  index: number;
+  isFullOpacity: boolean;
+  handleMouseEnter: (index: number) => void;
+};
+
+type DirectorsListProps = {
+  directors: Director[];
+  coloredIndex: number;
+  handleSelect: (index: number) => void;
+};
+
+type ArcadeMachineWrapperProps = {
+  directors: Director[];
+  directorToTeam: Map<string, Branch | undefined>;
+  coloredIndex: number;
+};
+
+const MascotRadioButton = ({ color, index, isFullOpacity, handleMouseEnter }: MascotRadioButtonProps) => {
   return (
     <div className={`mascot-button mascot-button-${index}`} onMouseEnter={() => handleMouseEnter(index)}>
       <Mascot
@@ -20,7 +40,7 @@ const MascotRadioButton = ({ color, index, isFullOpacity, handleMouseEnter }) =>
   );
 };
 
-const DirectorsList = ({ directors, coloredIndex, handleSelect }) => {
+const DirectorsList = ({ directors, coloredIndex, handleSelect }: DirectorsListProps) => {
   return (
     <div className="mascot-row">
       {directors &&
@@ -37,11 +57,13 @@ const DirectorsList = ({ directors, coloredIndex, handleSelect }) => {
   );
 };
 
-const ArcadeMachineWrapper = ({ directors, directorToTeam, coloredIndex }) => {
+const ArcadeMachineWrapper = ({ directors, directorToTeam, coloredIndex }: ArcadeMachineWrapperProps) => {
   if (!directors[coloredIndex]?.name) {
     return <></>;
   }
+
   const currentTeam = directorToTeam.get(directors[coloredIndex].name);
+
   return (
     <>
       {directors && directorToTeam && directors[coloredIndex] && (
@@ -59,17 +81,17 @@ export default function ChooseYourCharacter() {
   const directorsQuery = `*[_type == "director"] | order(zIndex)`;
   const branchQuery = `*[_type == "team"] {team,team_abbreviation,color,zIndex} | order(zIndex)`;
 
-  const directors = useSanity(directorsQuery, {}, data =>
+  const directors = useSanity<SanityDirector, Director>(directorsQuery, {}, data =>
     data
       ? data.map(director => ({
           ...director,
           color: director.color.hex,
-          image: urlFor(director.image),
+          image: urlFor(director.image).url(),
         }))
       : []
   );
 
-  const branches = useSanity(branchQuery, {}, data =>
+  const branches = useSanity<SanityBranch, Branch>(branchQuery, {}, data =>
     data
       ? data.map(branch => ({
           ...branch,
@@ -86,6 +108,7 @@ export default function ChooseYourCharacter() {
       const newDirectorMapping = new Map(
         directors.map(director => {
           const branch = branches.find(branch => branch.team.toUpperCase() === director.team.toUpperCase());
+
           return [director.name, branch];
         })
       );
@@ -95,9 +118,9 @@ export default function ChooseYourCharacter() {
   }, [branches, directors]);
 
   const [coloredIndex, setSelected] = useState(0);
-  let [directorToTeam, setDirectorToTeam] = useState(new Map());
+  let [directorToTeam, setDirectorToTeam] = useState(new Map<string, Branch | undefined>());
 
-  const handleSelect = index => {
+  const handleSelect = (index: number) => {
     setSelected(index);
   };
 

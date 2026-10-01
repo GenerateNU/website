@@ -5,16 +5,15 @@
  * template). Everything else (hand, legs, shadow) keeps its original styling.
  * Any other svg props (width, height, className, etc.) are forwarded.
  */
-function Mascot({ color = '#FFFFFF', ...props }) {
+import type { SVGProps } from 'react';
+
+type MascotProps = SVGProps<SVGSVGElement> & {
+  color?: string;
+};
+
+function Mascot({ color = '#FFFFFF', ...props }: MascotProps) {
   return (
-    <svg
-      width="126"
-      height="126"
-      viewBox="0 0 126 126"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       {/* Body */}
       <path
         d="M83.2781 79.7378V90.224H80.6178V92.8461H75.2982V95.4681H72.6379V98.0902H56.6793V95.4681H51.3597V92.8461H48.6994V90.224H46.0391V87.6019H40.7196V84.9799H35.4V82.3578H30.0805V77.1147H27.4202V74.4926H24.7599V69.2495H22.0996V64.0064L30.0795 32.5468H32.7397V29.9247H35.4V24.6816H38.0603V22.0596H40.7206V19.4375H43.3809V16.8154H46.0412V14.1934H61.9999V24.6796H64.6602V35.1658H67.3204V37.7878H54.0211V40.4099H46.0412V71.8695L48.7015 79.7347H59.3406C59.3406 79.7347 56.6803 79.7347 59.3406 82.3568C62.0009 84.9788 75.2993 82.3568 75.2993 82.3568V79.7347H83.2791L83.2781 79.7378Z"
@@ -184,7 +183,7 @@ function Mascot({ color = '#FFFFFF', ...props }) {
       />
       <path d="M74.887 80.0605H56.2681V85.3036H74.887V80.0605Z" fill={color} />
     </svg>
-  )
+  );
 }
 
-export default Mascot
+export default Mascot;
