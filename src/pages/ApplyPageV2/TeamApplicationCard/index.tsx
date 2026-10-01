@@ -3,11 +3,16 @@ import React, { useState } from 'react';
 import RightArrow from '../../../assets/images/applypage-v2/RightArrow';
 import WhiteDownArrow from '../../../assets/images/applypage-v2/WhiteDownArrow.svg?react';
 import WhiteUpArrow from '../../../assets/images/applypage-v2/WhiteUpArrow.svg?react';
-import RoleCategory from '../RoleCategory/index.jsx';
-import Tag from '../Tag/index.jsx';
+import RoleCategory from '../RoleCategory';
+import Tag from '../Tag';
 import './style.css';
+import type { ApplyTeam } from '../types';
 
-export default function TeamApplicationCard({ team }) {
+type TeamApplicationCardProps = {
+  team: ApplyTeam;
+};
+
+export default function TeamApplicationCard({ team }: TeamApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
   const expand = team.externalLink === undefined;
   const clientCard = team.team === 'Clients';
