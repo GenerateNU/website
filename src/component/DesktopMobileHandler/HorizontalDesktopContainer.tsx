@@ -52,7 +52,6 @@ export default function HorizontalDesktopContainer({
 
   return (
     <>
-      {/* Desktop view */}
       <section
         ref={scrollContainerRef}
         // using dsktop to avoid naming collision...
@@ -62,7 +61,6 @@ export default function HorizontalDesktopContainer({
         tabIndex={0}
         aria-label="Page content"
       >
-        {/* The content is wrapped in a Row component from the react-bootstrap library to ensure proper layout */}
         <Row className={`flex-nowrap vh-100 ${props.rowClassName ?? ''}`}>{children}</Row>
       </section>
     </>

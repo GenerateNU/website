@@ -26,9 +26,7 @@ type NewMobileContainerProps = {
 export default function NewMobileContainer({ children, mobileBGColor, ...props }: NewMobileContainerProps) {
   return (
     <>
-      {/* Mobile view */}
       <div style={{ background: mobileBGColor }} className={`w-100 vertical-scroll ${props.containerClassName ?? ''}`}>
-        {/* The content is wrapped in a Column component from the react-bootstrap library to ensure proper layout */}
         <Column className={`w-100 ${props.rowClassName ?? ''}`}>{children}</Column>
       </div>
     </>

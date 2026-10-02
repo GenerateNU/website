@@ -73,15 +73,12 @@ function DesktopPositionSummary({ position, showText, onApply, onShare }: Positi
 function DesktopPositionDetails({ position, routeIndex }: PositionViewProps) {
   return (
     <Col xs={6} className="h-100 p-0 py-5 px-5 overflow-auto position-info">
-      {/* Link back to list of positions */}
       <a className="blue-text" href="/apply">
         &lt; -- <u> positions</u>
       </a>
 
-      {/* Position summary */}
       <p className="position-summary my-5">{position.description}</p>
 
-      {/* Position responsibilities */}
       {position.responsibilities && <h3 className="py-3 fw-500">What you’ll do</h3>}
       <ul className="pb-0 mb-0">
         {parseList(position.responsibilities).map((info, itemIndex) => (
@@ -91,7 +88,6 @@ function DesktopPositionDetails({ position, routeIndex }: PositionViewProps) {
         ))}
       </ul>
 
-      {/* Position qualifications */}
       {position.requirements && <h3 className="pt-5 pb-3">Requirements</h3>}
       <ul>
         {parseList(position.requirements).map((info, itemIndex) => (
@@ -99,7 +95,6 @@ function DesktopPositionDetails({ position, routeIndex }: PositionViewProps) {
         ))}
       </ul>
 
-      {/* Position timeline */}
       <Row className="py-4">
         <Col className="date">
           <h5>Duration</h5>
@@ -119,7 +114,6 @@ function DesktopPositionDetails({ position, routeIndex }: PositionViewProps) {
       </h4>
       <div className="pt-4"></div>
 
-      {/* Link to information about position type */}
       <a className="blue-text" href="/about">
         <u>learn more</u> -- &gt;
       </a>
@@ -131,10 +125,8 @@ function DesktopPosition(props: PositionViewProps) {
   return (
     <Container fluid className="position-relative p-0">
       <Row className="vh-100 m-0">
-        {/* Left */}
         <DesktopPositionSummary {...props} />
 
-        {/* Right */}
         <DesktopPositionDetails {...props} />
       </Row>
     </Container>
