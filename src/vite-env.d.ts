@@ -5,3 +5,8 @@ type ImportMetaEnv = {
 };
 
 type ImportMeta = { readonly env: ImportMetaEnv };
+
+declare module '*.JPG' {
+  const src: string;
+  export default src;
+}
