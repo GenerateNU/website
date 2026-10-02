@@ -11,7 +11,7 @@ Built with React, TypeScript and Vite. Content such as directors, teams, showcas
 ### Prerequisites
 
 - [Bun](https://bun.sh) 1.4.2 or newer
-- [Node.js](https://nodejs.org) 22.18 or newer (used by the lint and test tools)
+- [Node.js](https://nodejs.org) 22.18 or newer (used by the lint and test tools). With [nvm](https://github.com/nvm-sh/nvm), run `nvm install` in the repo to install and switch to the right version.
 - [just](https://github.com/casey/just) (optional, for the shortcuts below): `brew install just`
 
 ### Setup
@@ -19,6 +19,7 @@ Built with React, TypeScript and Vite. Content such as directors, teams, showcas
 ```sh
 git clone https://github.com/GenerateNU/website.git
 cd website
+nvm install            # install and switch to the Node version in .nvmrc
 cp .env.example .env   # then fill in the values
 just install
 just dev
