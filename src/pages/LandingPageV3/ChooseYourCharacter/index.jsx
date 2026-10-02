@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine.jsx';
-import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText.jsx';
+import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine';
+import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText';
 import { urlFor } from '../../../client';
 import { useSanity } from '../../../services/useSanity';
 import Mascot from './Mascot.jsx';

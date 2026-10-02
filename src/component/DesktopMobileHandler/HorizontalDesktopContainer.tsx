@@ -1,7 +1,16 @@
-import React from "react";
-import { useEffect, useRef } from "react";
-import Row from "react-bootstrap/esm/Row";
-import "./style.css";
+import React from 'react';
+import { useEffect, useRef } from 'react';
+import type { ReactNode } from 'react';
+import Row from 'react-bootstrap/esm/Row';
+
+import './style.css';
+
+type HorizontalDesktopContainerProps = {
+  children: ReactNode;
+  desktopBGColor: string;
+  containerClassName?: string;
+  rowClassName?: string;
+};
 
 /**
  * A component that handles rendering content differently based on whether the user is on desktop or mobile.
@@ -19,18 +28,25 @@ export default function HorizontalDesktopContainer({
   children,
   desktopBGColor,
   ...props
-}) {
-  const scrollContainerRef = useRef(null);
+}: HorizontalDesktopContainerProps) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
-    const handleWheel = (evt) => {
+
+    if (!scrollContainer) {
+      return;
+    }
+
+    const handleWheel = (evt: WheelEvent) => {
       evt.preventDefault();
       scrollContainer.scrollLeft += evt.deltaY;
     };
-    scrollContainer.addEventListener("wheel", handleWheel);
+
+    scrollContainer.addEventListener('wheel', handleWheel);
+
     return () => {
-      scrollContainer.removeEventListener("wheel", handleWheel);
+      scrollContainer.removeEventListener('wheel', handleWheel);
     };
   }, []);
 
@@ -40,15 +56,13 @@ export default function HorizontalDesktopContainer({
       <div
         ref={scrollContainerRef}
         // using dsktop to avoid naming collision...
-        class={`vh-100 dsktop horizontal-scroll bg-${desktopBGColor} container-fluid ${
-          props.containerClassName ?? ""
+        className={`vh-100 dsktop horizontal-scroll bg-${desktopBGColor} container-fluid ${
+          props.containerClassName ?? ''
         }`}
-        tabIndex="0"
+        tabIndex={0}
       >
         {/* The content is wrapped in a Row component from the react-bootstrap library to ensure proper layout */}
-        <Row className={`flex-nowrap vh-100 ${props.rowClassName ?? ""}`}>
-          {children}
-        </Row>
+        <Row className={`flex-nowrap vh-100 ${props.rowClassName ?? ''}`}>{children}</Row>
       </div>
     </>
   );

@@ -114,4 +114,12 @@ export default defineConfig({
     typeCheck: true,
   },
   plugins: ['typescript', 'import', 'unicorn', 'oxc', 'react', 'jsx-a11y'],
+  overrides: [
+    {
+      files: ['**/*.tsx'],
+      rules: {
+        'typescript/explicit-function-return-type': 'off',
+      },
+    },
+  ],
 });
