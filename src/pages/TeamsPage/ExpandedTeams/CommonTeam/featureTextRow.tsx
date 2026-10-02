@@ -11,28 +11,47 @@ type FeatureTextRowProps = {
   button: string;
 };
 
+const desktopLayout = {
+  rowClassName: 'text-row',
+  sectionClassName: 'info-section',
+  textClassName: ' paragraph-text',
+  xPad: '5vw',
+  yPad: '2vw',
+  fontSize: '2vw',
+};
+
+const mobileLayout = {
+  rowClassName: 'text-row-mobile-feature',
+  sectionClassName: 'info-section-mobile',
+  textClassName: ' paragraph-text-mobile',
+  xPad: '4vw',
+  yPad: '3vw',
+  fontSize: '3vw',
+};
+
 export default function FeatureTextRow({ description, picture, reverse, button }: FeatureTextRowProps) {
   const isWebsite = useWebsite();
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
   const navigate = useNavigate();
+  const layout = mobile ? mobileLayout : desktopLayout;
 
   const handleOnClick = (link: string) => {
-    navigate(link);
+    void navigate(link);
   };
 
   return (
-    <div className={`${mobile ? 'text-row-mobile-feature' : 'text-row'}`}>
+    <div className={layout.rowClassName}>
       {(reverse || mobile) && <img src={picture} className="feature-info-pic" alt=""></img>}
-      <div className={`${mobile ? 'info-section-mobile' : 'info-section'}`}>
-        <div className={` ${mobile ? 'paragraph-text-mobile' : 'paragraph-text'}`}>{description}</div>
+      <div className={layout.sectionClassName}>
+        <div className={layout.textClassName}>{description}</div>
 
         <div className={`feature-link`}>
           <ShadowedButton
             className={`feature-button ${reverse ? 'ml-5 me-0' : ''}`}
-            xPad={mobile ? '4vw' : '5vw'}
-            yPad={mobile ? '3vw' : '2vw'}
-            fontSize={mobile ? '3vw' : '2vw'}
+            xPad={layout.xPad}
+            yPad={layout.yPad}
+            fontSize={layout.fontSize}
             fillColor="white"
             right={false}
             text={'explore deeper'}

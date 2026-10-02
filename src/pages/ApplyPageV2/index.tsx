@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import NavBar from '../../component/NavBar';
 import { useSanity } from '../../services/useSanity';
@@ -82,13 +82,15 @@ export default function ApplyPage() {
     }
   }| order(zIndex desc)`;
 
-  const teams = useSanity<SanityApplyTeam, ApplyTeam>(query, {}, data =>
-    data
-      ? data.map(team => ({
-          ...team,
-          color: team.color.hex,
-        }))
-      : []
+  const sanityTeams = useSanity<SanityApplyTeam>(query);
+
+  const teams: ApplyTeam[] = useMemo(
+    () =>
+      sanityTeams.map(team => ({
+        ...team,
+        color: team.color.hex,
+      })),
+    [sanityTeams]
   );
 
   const halfLength = Math.ceil(teams.length / 2);

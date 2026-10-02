@@ -8,7 +8,6 @@ import NavBar from '../../../component/NavBar';
 import { TEAMS, isTeam } from '../../../data/teams';
 import type { Team } from '../../../data/teams';
 import useWebsite from '../../../shared/useWebsite';
-import FeatureTextRow from './CommonTeam/featureTextRow';
 import { ExpandedTeamsJSON } from './CommonTeam/JSONFiles/ExpandedTeamsJSON';
 import TeamPageFooter from './CommonTeam/TeamPageFooter';
 import TextRow from './CommonTeam/textRow';
@@ -110,36 +109,5 @@ function ExpandedTeamsMobileHeader({ team }: TeamProps) {
         </div>
       </div>
     </div>
-  );
-}
-
-export function Featured({ team }: TeamProps) {
-  const isWebsite = useWebsite();
-  const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
-  const mobile = !isBigScreen || !isWebsite;
-  const featured = ExpandedTeamsJSON[team].featured;
-
-  if (!featured) {
-    return null;
-  }
-
-  return (
-    <>
-      <div className={mobile ? 'paragraph-title-mobile' : 'paragraph-title'}>{featured.header}</div>
-      {featured.items.map((value, index) => (
-        <div
-          className={`role-desc ${mobile ? 'paragraph-text-mobile' : 'paragraph-text'}`}
-          style={{ marginBottom: '4vh' }}
-        >
-          <FeatureTextRow
-            key={index}
-            description={value.description}
-            picture={value.image}
-            reverse={value.invert}
-            button={value.button}
-          />
-        </div>
-      ))}
-    </>
   );
 }

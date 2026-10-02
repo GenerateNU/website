@@ -3,11 +3,12 @@ import React from 'react';
 import '../style.css';
 import { useNavigate } from 'react-router-dom';
 
-import { FooterLink } from '..';
-import { pages } from '..';
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg'; //"../../assets/images/landingpage-v2/footerlogo.svg";
 import ShadowedButton from '../../ShadowedButton';
-import { SocialIcon, socialIcons } from '../../SocialIcon';
+import { SocialIcon } from '../../SocialIcon';
+import { socialIcons } from '../../socialIcons';
+import FooterLink from '../FooterLink';
+import { pages } from '../pages';
 
 function HorizontalFooter() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ function HorizontalFooter() {
 
   const handleOnClick = () => {
     window.scrollTo(0, 0);
-    navigate('/');
+    void navigate('/');
   };
 
   return (

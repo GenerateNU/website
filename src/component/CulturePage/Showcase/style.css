@@ -1,10 +1,10 @@
 .showcase-div {
-    width: 400px;
-    margin: 0 50px 0 50px;
-  }
+  width: 400px;
+  margin: 0 50px 0 50px;
+}
 
-  .showcase-title {
-  font-family: "Space Mono 700";
+.showcase-title {
+  font-family: 'Space Mono 700';
   font-style: normal;
   font-size: 48px;
   margin-top: 335px;
@@ -16,14 +16,13 @@
 .showcase-text {
   width: 400px;
   color: black;
-  font-size: 20px; 
+  font-size: 20px;
   line-height: 30px;
   text-align: left;
   font-style: normal;
   font-weight: 300;
   column-gap: 100px;
 }
-  .showcase {
-    margin-right:5%;
-  }
-  
+.showcase {
+  margin-right: 5%;
+}

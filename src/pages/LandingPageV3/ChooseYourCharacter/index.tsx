@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine';
 import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText';
@@ -43,82 +43,70 @@ const MascotRadioButton = ({ color, index, isFullOpacity, handleMouseEnter }: Ma
 const DirectorsList = ({ directors, coloredIndex, handleSelect }: DirectorsListProps) => {
   return (
     <div className="mascot-row">
-      {directors &&
-        directors.map((director, index) => (
-          <MascotRadioButton
-            key={director.team}
-            index={index}
-            color={director.color}
-            isFullOpacity={index === coloredIndex}
-            handleMouseEnter={handleSelect}
-          />
-        ))}
+      {directors.map((director, index) => (
+        <MascotRadioButton
+          key={director.team}
+          index={index}
+          color={director.color}
+          isFullOpacity={index === coloredIndex}
+          handleMouseEnter={handleSelect}
+        />
+      ))}
     </div>
   );
 };
 
 const ArcadeMachineWrapper = ({ directors, directorToTeam, coloredIndex }: ArcadeMachineWrapperProps) => {
-  if (!directors[coloredIndex]?.name) {
+  const director = directors[coloredIndex];
+
+  if (!director?.name) {
     return <></>;
   }
 
-  const currentTeam = directorToTeam.get(directors[coloredIndex].name);
+  const currentTeam = directorToTeam.get(director.name);
 
-  return (
-    <>
-      {directors && directorToTeam && directors[coloredIndex] && (
-        <ArcadeMachine
-          color={currentTeam?.color.hex}
-          text={currentTeam?.teamAbbreviation}
-          imgUrl={directors[coloredIndex].image}
-        />
-      )}
-    </>
-  );
+  return <ArcadeMachine color={currentTeam?.color.hex} text={currentTeam?.teamAbbreviation} imgUrl={director.image} />;
 };
 
 export default function ChooseYourCharacter() {
   const directorsQuery = `*[_type == "director"] | order(zIndex)`;
   const branchQuery = `*[_type == "team"] {team,team_abbreviation,color,zIndex} | order(zIndex)`;
 
-  const directors = useSanity<SanityDirector, Director>(directorsQuery, {}, data =>
-    data
-      ? data.map(director => ({
-          ...director,
-          color: director.color.hex,
-          image: urlFor(director.image).url(),
-        }))
-      : []
+  const sanityDirectors = useSanity<SanityDirector>(directorsQuery);
+
+  const directors: Director[] = useMemo(
+    () =>
+      sanityDirectors.map(director => ({
+        ...director,
+        color: director.color.hex,
+        image: urlFor(director.image).url(),
+      })),
+    [sanityDirectors]
   );
 
-  const branches = useSanity<SanityBranch, Branch>(branchQuery, {}, data =>
-    data
-      ? data.map(branch => ({
-          ...branch,
-          team: branch.team.toUpperCase(),
-          teamAbbreviation: (branch.team_abbreviation || '').toUpperCase(),
-        }))
-      : []
+  const sanityBranches = useSanity<SanityBranch>(branchQuery);
+
+  const branches: Branch[] = useMemo(
+    () =>
+      sanityBranches.map(branch => ({
+        ...branch,
+        team: branch.team.toUpperCase(),
+        teamAbbreviation: (branch.team_abbreviation || '').toUpperCase(),
+      })),
+    [sanityBranches]
   );
-
-  useEffect(() => {
-    if (branches.length === 0 || directors.length === 0) {
-      return;
-    } else {
-      const newDirectorMapping = new Map(
-        directors.map(director => {
-          const branch = branches.find(branch => branch.team.toUpperCase() === director.team.toUpperCase());
-
-          return [director.name, branch];
-        })
-      );
-
-      setDirectorToTeam(newDirectorMapping);
-    }
-  }, [branches, directors]);
 
   const [coloredIndex, setSelected] = useState(0);
-  let [directorToTeam, setDirectorToTeam] = useState(new Map<string, Branch | undefined>());
+
+  const directorToTeam = new Map(
+    directors.map(director => {
+      const branch = branches.find(candidate => candidate.team.toUpperCase() === director.team.toUpperCase());
+
+      return [director.name, branch];
+    })
+  );
+
+  const selectedDirector = directors[coloredIndex];
 
   const handleSelect = (index: number) => {
     setSelected(index);
@@ -134,8 +122,8 @@ export default function ChooseYourCharacter() {
           <div id="choose-flex-wrapper">
             <div id="text-mascots">
               <DirectorsList coloredIndex={coloredIndex} directors={directors} handleSelect={handleSelect} />
-              {directors && directors[coloredIndex] && (
-                <ArcadeText id="text-arcade" color={directors[coloredIndex].color} director={directors[coloredIndex]} />
+              {selectedDirector && (
+                <ArcadeText id="text-arcade" color={selectedDirector.color} director={selectedDirector} />
               )}
             </div>
             <ArcadeMachineWrapper coloredIndex={coloredIndex} directors={directors} directorToTeam={directorToTeam} />

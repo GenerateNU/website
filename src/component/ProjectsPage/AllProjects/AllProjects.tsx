@@ -1,6 +1,5 @@
 import './style.css';
 import { useState } from 'react';
-import type { JSX } from 'react';
 
 import Alia from '../../../assets/images/projectspage/alia.svg';
 import Arctic from '../../../assets/images/projectspage/arctic.svg';
@@ -8,6 +7,7 @@ import AutoPasser from '../../../assets/images/projectspage/autopasser.svg';
 import HotDate from '../../../assets/images/projectspage/hotdate.svg';
 import Jurni from '../../../assets/images/projectspage/jurni.svg';
 import ShowNxt from '../../../assets/images/projectspage/shownxt.svg';
+import toPairs from '../../../shared/toPairs';
 import Project from './Project/Project';
 import type { ProjectTeam } from './Project/Project';
 
@@ -82,31 +82,14 @@ export default function AllProjects() {
   );
 
   const generateGrid = () => {
-    const grid: JSX.Element[] = [];
     const filteredProjects = projects.filter(p => dataFiltered.includes(p.name));
 
-    for (let i = 0; i < filteredProjects.length; i += 2) {
-      grid.push(
-        <div className="project-col">
-          <Project
-            name={filteredProjects[i].name}
-            image={filteredProjects[i].image}
-            teams={filteredProjects[i].teams}
-          />
-          {i + 1 < filteredProjects.length ? (
-            <Project
-              name={filteredProjects[i + 1].name}
-              image={filteredProjects[i + 1].image}
-              teams={filteredProjects[i + 1].teams}
-            />
-          ) : (
-            <div></div>
-          )}
-        </div>
-      );
-    }
-
-    return grid;
+    return toPairs(filteredProjects).map(([first, second]) => (
+      <div key={first.name} className="project-col">
+        <Project name={first.name} image={first.image} teams={first.teams} />
+        {second ? <Project name={second.name} image={second.image} teams={second.teams} /> : <div></div>}
+      </div>
+    ));
   };
 
   return (

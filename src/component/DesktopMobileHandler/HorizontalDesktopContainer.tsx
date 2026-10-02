@@ -29,7 +29,7 @@ export default function HorizontalDesktopContainer({
   desktopBGColor,
   ...props
 }: HorizontalDesktopContainerProps) {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -52,18 +52,17 @@ export default function HorizontalDesktopContainer({
 
   return (
     <>
-      {/* Desktop view */}
-      <div
+      <section
         ref={scrollContainerRef}
         // using dsktop to avoid naming collision...
         className={`vh-100 dsktop horizontal-scroll bg-${desktopBGColor} container-fluid ${
           props.containerClassName ?? ''
         }`}
         tabIndex={0}
+        aria-label="Page content"
       >
-        {/* The content is wrapped in a Row component from the react-bootstrap library to ensure proper layout */}
         <Row className={`flex-nowrap vh-100 ${props.rowClassName ?? ''}`}>{children}</Row>
-      </div>
+      </section>
     </>
   );
 }

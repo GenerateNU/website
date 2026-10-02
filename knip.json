@@ -2,12 +2,12 @@
   "$schema": "https://unpkg.com/knip@6/schema.json",
   "workspaces": {
     ".": {
-      "entry": ["src/index.{js,jsx,ts,tsx}"],
-      "project": ["src/**/*.{js,jsx,ts,tsx}"]
+      "entry": ["src/index.tsx"],
+      "project": ["src/**/*.{ts,tsx}"]
     },
     "sanity": {
-      "entry": ["sanity.config.{js,ts}", "sanity.cli.{js,ts}"],
-      "project": ["**/*.{js,ts}"]
+      "entry": ["sanity.config.ts", "sanity.cli.ts"],
+      "project": ["**/*.ts"]
     }
   },
   "treatTagHintsAsErrors": true,

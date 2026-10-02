@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import { urlFor } from '../../../client';
 import { useSanity } from '../../../services/useSanity';
@@ -17,6 +17,14 @@ const IMAGE_SIZE = 15;
 
 const SELECTED_SHIFT = 7;
 
+function pointAt(angle: number, radius: number) {
+  const rad = (angle * Math.PI) / 180;
+  const x = 50 + radius * Math.sin(rad);
+  const y = 50 - radius * Math.cos(rad);
+
+  return `${x.toFixed(3)}% ${y.toFixed(3)}%`;
+}
+
 /**
  * Dynamically generates a circular "slice" shaped path (an annular sector /
  * donut segment) based on the index of the element and the total number of
@@ -28,14 +36,6 @@ function sliceClipPath(index: number, total: number) {
   // Rotate the path by the index
   const startAngle = (index - 0.5) * sliceAngle;
   const endAngle = (index + 0.5) * sliceAngle;
-
-  const pointAt = (angle: number, radius: number) => {
-    const rad = (angle * Math.PI) / 180;
-    const x = 50 + radius * Math.sin(rad);
-    const y = 50 - radius * Math.cos(rad);
-
-    return `${x.toFixed(3)}% ${y.toFixed(3)}%`;
-  };
 
   const points: string[] = [];
   // Outer arc: sweep from the start angle to the end angle.
@@ -93,83 +93,77 @@ export default function HowWereStrctured() {
 
   const teamQuery = `*[_type == "team" && team != "Clients"] {team, image, teamDescription, zIndex, color} | order(zIndex)`;
 
-  const teams = useSanity<SanityStructuredTeam, StructuredTeam>(teamQuery, {}, data =>
-    data
-      ? data.map(value => ({
-          ...value,
-          image: urlFor(value.image).url(),
-        }))
-      : []
+  const sanityTeams = useSanity<SanityStructuredTeam>(teamQuery);
+
+  const teams: StructuredTeam[] = useMemo(
+    () =>
+      sanityTeams.map(value => ({
+        ...value,
+        image: urlFor(value.image).url(),
+      })),
+    [sanityTeams]
   );
 
-  const [selected, setSelected] = useState<Partial<StructuredTeam>>({});
-
-  useEffect(() => {
-    if (teams.length > 0) {
-      const randomIndex = Math.floor(Math.random() * teams.length);
-      setSelected(teams[randomIndex]);
-    }
-  }, [teams]);
+  const [randomSeed] = useState(() => Math.random());
+  const [hovered, setHovered] = useState<StructuredTeam | null>(null);
+  const randomTeam = teams[Math.floor(randomSeed * teams.length)];
+  const selected = hovered ?? randomTeam;
 
   const handleSelect = (teamData: StructuredTeam) => {
-    setSelected(teamData);
+    setHovered(teamData);
   };
 
   return (
     <div className="grid-bg" id="ll5-row">
       <div id="how-structured">
-        <div className="white-header-text">{copy && copy[0] && copy[0].header}</div>
-        <div className="white-p-text">{copy && copy[0] && copy[0].content[0]}</div>
+        <div className="white-header-text">{copy[0]?.header}</div>
+        <div className="white-p-text">{copy[0]?.content[0]}</div>
         <div className="wheel-content">
           <div>
             <div id="skills">
-              {teams &&
-                teams[0] &&
-                teams.map((team, index) => (
-                  <div
-                    key={`silhouette${index}`}
-                    className="circle slice-silhouette"
+              {teams.map((team, index) => (
+                <div
+                  key={`silhouette${index}`}
+                  className="circle slice-silhouette"
+                  style={{
+                    clipPath: sliceClipPath(index, teams.length),
+                    visibility: selected?.team === team.team ? 'visible' : 'hidden',
+                  }}
+                />
+              ))}
+              {teams.map((team, index) => {
+                const isSelected = selected?.team === team.team;
+
+                return (
+                  <button
+                    key={`slice${index}`}
+                    className={'circle animate ' + (isSelected ? 'selected' : '')}
                     style={{
                       clipPath: sliceClipPath(index, teams.length),
-                      visibility: selected.team === team.team ? 'visible' : 'hidden',
+                      backgroundColor: team.color.hex,
+                      transform: isSelected ? sliceOffset(index, teams.length) : 'translate(0, 0)',
+                      zIndex: isSelected ? 100 : 1,
                     }}
-                  />
-                ))}
-              {teams &&
-                teams[0] &&
-                teams.map((team, index) => {
-                  const isSelected = selected.team === team.team;
-
-                  return (
-                    <button
-                      key={`slice${index}`}
-                      className={'circle animate ' + (isSelected ? 'selected' : '')}
+                    onMouseEnter={() => handleSelect(team)}
+                  >
+                    <img
+                      alt={team.team}
+                      src={team.image}
                       style={{
-                        clipPath: sliceClipPath(index, teams.length),
-                        backgroundColor: team.color.hex,
-                        transform: isSelected ? sliceOffset(index, teams.length) : 'translate(0, 0)',
-                        zIndex: isSelected ? 100 : 1,
+                        position: 'absolute',
+                        width: `${IMAGE_SIZE}%`,
+                        height: `${IMAGE_SIZE}%`,
+                        ...imagePosition(index, teams.length),
                       }}
-                      onMouseEnter={() => handleSelect(team)}
-                    >
-                      <img
-                        alt={team.team}
-                        src={team.image}
-                        style={{
-                          position: 'absolute',
-                          width: `${IMAGE_SIZE}%`,
-                          height: `${IMAGE_SIZE}%`,
-                          ...imagePosition(index, teams.length),
-                        }}
-                      />
-                    </button>
-                  );
-                })}
+                    />
+                  </button>
+                );
+              })}
             </div>
           </div>
           <div className="wheel-text">
-            <div className="white-h2-text"> {selected.team} </div>
-            <div className="white-p-text">{selected.teamDescription}</div>
+            <div className="white-h2-text"> {selected?.team} </div>
+            <div className="white-p-text">{selected?.teamDescription}</div>
             <div className="view-pp-fp-project-div" style={{ paddingTop: '5vw' }}></div>
           </div>
         </div>

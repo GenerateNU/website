@@ -26,7 +26,7 @@ export default function Project({ name, image, teams }: ProjectProps) {
         </a>
         <div className="project-teams">
           {teams.map(team => {
-            return <img alt={team} src={teamImages[team]}></img>;
+            return <img key={team} alt={team} src={teamImages[team]}></img>;
           })}
         </div>
       </div>

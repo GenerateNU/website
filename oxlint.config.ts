@@ -26,6 +26,7 @@ export default defineConfig({
     '.roo/**',
     '.windsurf/**',
     'tools/oxlint/anti-slop/**',
+    'sanity/**',
   ],
   jsPlugins: [
     {
@@ -90,7 +91,10 @@ export default defineConfig({
     'unicorn/prefer-spread': 'warn',
     'react/rules-of-hooks': 'error',
     'react/require-render-return': 'error',
-    'react/no-multi-comp': 'error',
+    'react/no-multi-comp': 'off',
+    'react/jsx-key': ['error', { checkFragmentShorthand: true }],
+    'import/no-unassigned-import': ['warn', { allow: ['**/*.css'] }],
+    'jsx-a11y/no-noninteractive-tabindex': ['error', { tags: ['section'] }],
     'react/no-unstable-nested-components': 'error',
     'react/only-export-components': ['error', { allowConstantExport: true }],
     'react-you-might-not-need-an-effect/no-adjust-state-on-prop-change': 'error',
@@ -119,6 +123,12 @@ export default defineConfig({
       files: ['**/*.tsx'],
       rules: {
         'typescript/explicit-function-return-type': 'off',
+      },
+    },
+    {
+      files: ['src/assets/**/*.tsx', 'src/pages/LandingPageV3/ChooseYourCharacter/Mascot.tsx'],
+      rules: {
+        'eslint/max-lines-per-function': 'off',
       },
     },
   ],

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import NextArrow from '../../../assets/icons/arrows/nextArrowRight.svg?react';
 import PrevArrow from '../../../assets/icons/arrows/prevArrowLeft.svg?react';
@@ -11,59 +11,69 @@ import { urlFor } from '../../../client';
 import { useSanity } from '../../../services/useSanity';
 import type { Copy, SanityShowcase, Showcase } from '../types';
 
+type ShowcaseLabelProps = {
+  showcase: Showcase;
+};
+
+const compareShowcases = (a: Showcase, b: Showcase) => {
+  if (a.year === b.year) {
+    return a.semester === 'SPRING' ? -1 : 1;
+  }
+
+  return Number(a.year) - Number(b.year);
+};
+
+function ShowcaseLabel({ showcase }: ShowcaseLabelProps) {
+  return (
+    <>
+      <div id="showcase-semester-label">
+        <div id="showcase-semester-highlight" className="showcase-semester-text">
+          {showcase.semester.toUpperCase()}
+        </div>
+        <div className="showcase-semester-text">SHOWCASE</div>
+      </div>
+
+      <div id="showcase-year-br">
+        {showcase.year[0]}
+        {showcase.year[1]}
+        <br />
+        {showcase.year[2]}
+        {showcase.year[3]}
+      </div>
+      <div id="showcase-year-nobr">{showcase.year}</div>
+    </>
+  );
+}
+
 export default function CelebrateOurWins() {
   const copyQuery = `*[_type == "copy" && key == "celebrate-our-wins"]{header, content}`;
   const copy = useSanity<Copy>(copyQuery);
   const showcaseQuery = `*[_type == "showcase"] {year, image, semester} | order(year asc)`;
 
-  const showcases = useSanity<SanityShowcase, Showcase>(showcaseQuery, {}, data =>
-    data
-      ? data
-          .map(showcase => ({
-            ...showcase,
-            semester: showcase.semester.toUpperCase(),
-            image: urlFor(showcase.image).url(),
-          }))
-          .sort((a, b) => {
-            if (a.year === b.year) {
-              return a.semester === 'SPRING' ? -1 : 1;
-            }
+  const sanityShowcases = useSanity<SanityShowcase>(showcaseQuery);
 
-            return Number(a.year) - Number(b.year);
-          })
-      : []
-  );
+  const showcases: Showcase[] = useMemo(() => {
+    const sortedShowcases = sanityShowcases.map(showcase => ({
+      ...showcase,
+      semester: showcase.semester.toUpperCase(),
+      image: urlFor(showcase.image).url(),
+    }));
 
-  const [selectedShowcase, setSelectedShowcase] = useState<Partial<Showcase>>(
-    showcases && showcases.length !== 0 ? showcases[showcases.length - 1] : {}
-  );
+    sortedShowcases.sort(compareShowcases);
 
-  useEffect(() => {
-    setSelectedShowcase(showcases && showcases.length !== 0 ? showcases[showcases.length - 1] : {});
-  }, [showcases]);
+    return sortedShowcases;
+  }, [sanityShowcases]);
+
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const currentIndex = selectedIndex ?? showcases.length - 1;
+  const selectedShowcase = showcases[currentIndex];
 
   const handleLeftButtonClick = () => {
-    const currentIndex = showcases.findIndex(
-      showcase => showcase.year === selectedShowcase.year && showcase.semester === selectedShowcase.semester
-    );
-
-    if (currentIndex > 0) {
-      setSelectedShowcase(showcases[currentIndex - 1]);
-    } else {
-      setSelectedShowcase(showcases.at(-1) ?? {});
-    }
+    setSelectedIndex(currentIndex > 0 ? currentIndex - 1 : showcases.length - 1);
   };
 
   const handleRightButtonClick = () => {
-    const currentIndex = showcases.findIndex(
-      showcase => showcase.year === selectedShowcase.year && showcase.semester === selectedShowcase.semester
-    );
-
-    if (currentIndex < showcases.length - 1) {
-      setSelectedShowcase(showcases[currentIndex + 1]);
-    } else {
-      setSelectedShowcase(showcases.at(0) ?? {});
-    }
+    setSelectedIndex(currentIndex < showcases.length - 1 ? currentIndex + 1 : 0);
   };
 
   return (
@@ -72,12 +82,12 @@ export default function CelebrateOurWins() {
         <LargeStars id="showcase-large-stars" />
         <SmallStars id="showcase-small-stars-top" />
         <div className="white-header-text" id="showcase-header">
-          {copy && copy[0] && copy[0].header}
+          {copy[0]?.header}
         </div>
         <div id="showcase-top-content">
           <img src={celebrate} className="showcase-img image-shadow" alt="Placeholder" />
           <div id="showcase-right-col">
-            <div className="white-p-text">{copy && copy[0] && copy[0].content[0]}</div>
+            <div className="white-p-text">{copy[0]?.content[0]}</div>
             <SmallStars id="showcase-small-stars-bottom" />
           </div>
         </div>
@@ -88,30 +98,12 @@ export default function CelebrateOurWins() {
           </button>
           <div id="carousel-inner-content">
             <div id="showcase-carousel-label" className="showcase-year">
-              {selectedShowcase.semester && selectedShowcase.year && (
-                <>
-                  <div id="showcase-semester-label">
-                    <div id="showcase-semester-highlight" className="showcase-semester-text">
-                      {selectedShowcase.semester.toUpperCase()}
-                    </div>
-                    <div className="showcase-semester-text">SHOWCASE</div>
-                  </div>
-
-                  <div id="showcase-year-br">
-                    {selectedShowcase.year[0]}
-                    {selectedShowcase.year[1]}
-                    <br />
-                    {selectedShowcase.year[2]}
-                    {selectedShowcase.year[3]}
-                  </div>
-                  <div id="showcase-year-nobr">{selectedShowcase.year}</div>
-                </>
-              )}
+              {selectedShowcase && <ShowcaseLabel showcase={selectedShowcase} />}
             </div>
             <img
               className="image-shadow showcase-carousel-img"
-              src={selectedShowcase.image}
-              alt={selectedShowcase.year}
+              src={selectedShowcase?.image}
+              alt={selectedShowcase?.year}
             />
             <div id="small-carousel-nav">
               <button className="sm-carousel-button" onClick={handleLeftButtonClick}>

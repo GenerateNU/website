@@ -71,7 +71,6 @@
   text-transform: uppercase;
 }
 
-
 .team-subheader {
   color: white;
   font-family: 'Space Mono 700';
@@ -84,5 +83,5 @@
 .paragraph {
   color: black;
   font-size: 1em;
-  font-family: "Outfit";
+  font-family: 'Outfit';
 }

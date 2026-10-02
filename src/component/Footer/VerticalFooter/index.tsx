@@ -5,8 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg';
 import ShadowedButton from '../../ShadowedButton';
-import { SocialIcon, socialIcons } from '../../SocialIcon';
-import { pages, FooterLink } from '../index';
+import { SocialIcon } from '../../SocialIcon';
+import { socialIcons } from '../../socialIcons';
+import FooterLink from '../FooterLink';
+import { pages } from '../pages';
 
 function VerticalFooter() {
   const currentPageUrl = window.location.href;
@@ -14,7 +16,7 @@ function VerticalFooter() {
 
   const handleOnClick = () => {
     window.scrollTo(0, 0);
-    navigate('/');
+    void navigate('/');
   };
 
   return (
@@ -48,9 +50,9 @@ function VerticalFooter() {
         </div>
         <div className="social-icons-align">
           {socialIcons.map((si, index) => (
-            <div className="social-icon-row">
+            <div key={index} className="social-icon-row">
               {si.map(s => (
-                <SocialIcon key={index} href={s.href} imgSrc={s.imgSrc} />
+                <SocialIcon key={s.href} href={s.href} imgSrc={s.imgSrc} />
               ))}
             </div>
           ))}

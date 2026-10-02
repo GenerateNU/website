@@ -43,6 +43,7 @@
     color: white;
     font-size: 9.25vw;
     font-family: 'Space Mono 700';
+    line-height: inherit;
     transform: rotate(90deg);
     margin-top: 55%;
     margin-left: 16%;

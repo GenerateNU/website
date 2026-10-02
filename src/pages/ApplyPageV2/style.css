@@ -1,55 +1,55 @@
 .join-header {
-    margin-top: 4rem;
-    color: #FFF;
-    font-family: 'Space Mono 700';
-    font-size: 10vw;
-    line-height: 80%;
-    text-transform: uppercase;
-    margin-left: 2vw;
-    margin-bottom: 2vh;
+  margin-top: 4rem;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 10vw;
+  line-height: 80%;
+  text-transform: uppercase;
+  margin-left: 2vw;
+  margin-bottom: 2vh;
 }
 
 .join-text {
-    color: #FFF;
-    font-family: "Outfit";
-    font-size: 1.25em;
-    width: 90vw;
-    margin-left: 2vw;
-    margin-bottom: 1vh;
+  color: #fff;
+  font-family: 'Outfit';
+  font-size: 1.25em;
+  width: 90vw;
+  margin-left: 2vw;
+  margin-bottom: 1vh;
 }
 
 .column-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 3vw;
-    padding-bottom: 10vh;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 3vw;
+  padding-bottom: 10vh;
+  justify-content: center;
 }
 
 @media (min-width: 900px) {
-    .column-container {
-        grid-template-columns: 1fr 1fr;
-    }
+  .column-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .left-column {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-right: 3vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-right: 3vh;
 }
 
 .right-column {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-left: 3vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 3vh;
 }
 
 .mobile-column {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-left: 5vw;
-    margin-right: 2vw;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 5vw;
+  margin-right: 2vw;
 }

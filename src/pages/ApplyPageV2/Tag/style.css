@@ -1,14 +1,14 @@
 .tag-container {
-    display: flex;
-    height: 2rem;
-    padding: 4px 7px;
-    max-width: fit-content;
-    align-items: center;
-    background: #FFF;
+  display: flex;
+  height: 2rem;
+  padding: 4px 7px;
+  max-width: fit-content;
+  align-items: center;
+  background: #fff;
 }
 
 .tag-text {
-    color: black;
-    font-size: 1em;
-    font-family: "Outfit";
+  color: black;
+  font-size: 1em;
+  font-family: 'Outfit';
 }

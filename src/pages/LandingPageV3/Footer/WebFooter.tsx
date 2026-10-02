@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { FooterLink } from '.';
-import { pages } from '.';
 import UpArrow from '../../../assets/icons/arrows/upArrow.svg';
 import Email from '../../../assets/icons/socials/Email.svg?react';
 import Instagram from '../../../assets/icons/socials/Instagram.svg?react';
 import LinkedIn from '../../../assets/icons/socials/LinkedIn.svg?react';
 import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg'; //"../../assets/images/landingpage-v2/footerlogo.svg";
 import ShadowedButton from '../../../component/ShadowedButton';
+import FooterLink from './FooterLink';
+import { pages } from './pages';
+
+const handleOnClick = () => {
+  window.scrollTo(0, 0);
+};
 
 function WebFooter() {
   const currentPageUrl = window.location.href;
-
-  const handleOnClick = () => {
-    window.scrollTo(0, 0);
-  };
 
   const icons = [
     {
