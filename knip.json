@@ -6,8 +6,8 @@
       "project": ["src/**/*.{ts,tsx}"]
     },
     "sanity": {
-      "entry": ["sanity.config.{js,ts}", "sanity.cli.{js,ts}"],
-      "project": ["**/*.{js,ts}"]
+      "entry": ["sanity.config.ts", "sanity.cli.ts"],
+      "project": ["**/*.ts"]
     }
   },
   "treatTagHintsAsErrors": true,
