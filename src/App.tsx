@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Navigate, useRoutes } from 'react-router-dom';
 import type { RouteObject } from 'react-router-dom';
 
@@ -49,18 +49,11 @@ function AppRoutes({ sanityRoutes }: AppRoutesProps) {
 export default function App() {
   const query = `*[_type == "generateLink"]`;
   const links = useSanity<GenerateLink>(query);
-  const [sanityRoutes, setSanityRoutes] = useState<RouteObject[]>([]);
 
-  useEffect(() => {
-    if (links.length > 0) {
-      const newRoutes = links.map(link => ({
-        path: `/${link.slug.current}`,
-        element: <ExternalRedirect to={link.url} />,
-      }));
-
-      setSanityRoutes(newRoutes);
-    }
-  }, [links]);
+  const sanityRoutes: RouteObject[] = links.map(link => ({
+    path: `/${link.slug.current}`,
+    element: <ExternalRedirect to={link.url} />,
+  }));
 
   return (
     <div className="App">
