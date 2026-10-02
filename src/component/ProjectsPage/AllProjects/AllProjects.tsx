@@ -1,0 +1,123 @@
+import './style.css';
+import { useState } from 'react';
+import type { JSX } from 'react';
+
+import Alia from '../../../assets/images/projectspage/alia.svg';
+import Arctic from '../../../assets/images/projectspage/arctic.svg';
+import AutoPasser from '../../../assets/images/projectspage/autopasser.svg';
+import HotDate from '../../../assets/images/projectspage/hotdate.svg';
+import Jurni from '../../../assets/images/projectspage/jurni.svg';
+import ShowNxt from '../../../assets/images/projectspage/shownxt.svg';
+import Project from './Project/Project';
+import type { ProjectTeam } from './Project/Project';
+
+type SearchBarProps = {
+  setSearchQuery: (query: string) => void;
+};
+
+type ProjectSummary = {
+  name: string;
+  image: string;
+  teams: ProjectTeam[];
+};
+
+const SearchBar = ({ setSearchQuery }: SearchBarProps) => (
+  <input
+    className="search-bar search-icon"
+    placeholder="Search..."
+    style={{
+      border: '1px #D9D9D9 solid',
+    }}
+    onChange={e => setSearchQuery(e.target.value)}
+  />
+);
+
+const filterData = (query: string, data: string[]): string[] => {
+  if (!query) {
+    return data;
+  } else {
+    return data.filter(d => d.toLowerCase().includes(query));
+  }
+};
+
+const projects: ProjectSummary[] = [
+  {
+    name: 'Jurni',
+    image: Jurni,
+    teams: ['software'],
+  },
+  {
+    name: 'Alia',
+    image: Alia,
+    teams: ['software'],
+  },
+  {
+    name: 'Arctic Vision',
+    image: Arctic,
+    teams: ['software', 'hardware'],
+  },
+  {
+    name: 'ShowNxt',
+    image: ShowNxt,
+    teams: ['software'],
+  },
+  {
+    name: 'Hot Date',
+    image: HotDate,
+    teams: ['hardware'],
+  },
+  {
+    name: 'Autopasser',
+    image: AutoPasser,
+    teams: ['hardware'],
+  },
+];
+
+export default function AllProjects() {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const dataFiltered = filterData(
+    searchQuery,
+    projects.map(p => p.name)
+  );
+
+  const generateGrid = () => {
+    const grid: JSX.Element[] = [];
+    const filteredProjects = projects.filter(p => dataFiltered.includes(p.name));
+
+    for (let i = 0; i < filteredProjects.length; i += 2) {
+      grid.push(
+        <div className="project-col">
+          <Project
+            name={filteredProjects[i].name}
+            image={filteredProjects[i].image}
+            teams={filteredProjects[i].teams}
+          />
+          {i + 1 < filteredProjects.length ? (
+            <Project
+              name={filteredProjects[i + 1].name}
+              image={filteredProjects[i + 1].image}
+              teams={filteredProjects[i + 1].teams}
+            />
+          ) : (
+            <div></div>
+          )}
+        </div>
+      );
+    }
+
+    return grid;
+  };
+
+  return (
+    <div className="all-projects-container" style={{ width: Math.ceil(projects.length / 2) * 500 + 200 }}>
+      <div className="all-projects-header">
+        <h1 className="projects-title">All Projects</h1>
+      </div>
+      <div className="search-bar">
+        <SearchBar setSearchQuery={setSearchQuery} />
+      </div>
+      <div className="all-projects">{generateGrid()}</div>
+    </div>
+  );
+}
