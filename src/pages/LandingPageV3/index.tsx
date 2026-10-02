@@ -33,6 +33,7 @@ export default function LandingPageV3() {
           height="100%"
           style={{ border: 'none' }}
           allow="fullscreen; payment"
+          sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
           aria-hidden="false"
         ></iframe>
       </Dialog>
