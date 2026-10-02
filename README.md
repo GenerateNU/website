@@ -36,7 +36,7 @@ The site runs at http://localhost:5173.
 | `SANITY_STUDIO_PROJECT_ID` | Sanity Studio | Sanity project the Studio edits    |
 | `SANITY_STUDIO_DATASET`    | Sanity Studio | Sanity dataset the Studio edits    |
 
-Ask the infra team for the values.
+Ask the [infra team](https://github.com/orgs/GenerateNU/teams/infra) for the values.
 
 ## Commands
 
@@ -93,4 +93,10 @@ e2e/           Playwright smoke tests
 
 Every pull request runs type checking, lint, a format check, a production build and the Playwright smoke tests ([workflow](.github/workflows/ci.yml)). All of them must pass before merging.
 
-The site is deployed on Netlify.
+The site is deployed on Netlify. Every pull request also gets a deploy preview, so you can check your changes on a live URL before merging:
+
+```
+https://deploy-preview-<PR number>--sprightly-manatee-243873.netlify.app
+```
+
+Netlify posts the link as a comment on the pull request once the preview is ready.
