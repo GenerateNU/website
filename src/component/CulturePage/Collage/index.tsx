@@ -1,17 +1,18 @@
 import React from 'react';
 
-import firstimg from '../Collage/website-8.jpg';
+import firstimg from '@/component/CulturePage/Collage/website-8.jpg';
+
 import './style.css';
-import secondimg from '../Collage/website-9.jpg';
-import thirdimg from '../Collage/website-12.jpg';
-import fourimg from '../Collage/website-14.jpg';
-import fiveimg from '../Collage/website-15.jpg';
-import siximg from '../Collage/website-16.jpg';
-import sevenimg from '../Collage/website-21.jpg';
-import eightimg from '../Collage/website-23.jpg';
-import nineimg from '../Collage/website-24.jpg';
-import tenimg from '../Collage/website-25.jpg';
-import type { SectionProps } from '../types';
+import secondimg from '@/component/CulturePage/Collage/website-9.jpg';
+import thirdimg from '@/component/CulturePage/Collage/website-12.jpg';
+import fourimg from '@/component/CulturePage/Collage/website-14.jpg';
+import fiveimg from '@/component/CulturePage/Collage/website-15.jpg';
+import siximg from '@/component/CulturePage/Collage/website-16.jpg';
+import sevenimg from '@/component/CulturePage/Collage/website-21.jpg';
+import eightimg from '@/component/CulturePage/Collage/website-23.jpg';
+import nineimg from '@/component/CulturePage/Collage/website-24.jpg';
+import tenimg from '@/component/CulturePage/Collage/website-25.jpg';
+import type { SectionProps } from '@/component/CulturePage/types';
 
 const desktopContent = (
   <div className="nospacing">

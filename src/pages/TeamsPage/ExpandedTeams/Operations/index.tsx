@@ -1,6 +1,7 @@
-import Members from '../CommonTeam/Members';
-import OurRoles from '../CommonTeam/OurRoles';
-import Roles from '../CommonTeam/Roles';
+import Members from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/Members';
+import OurRoles from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/OurRoles';
+import Roles from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/Roles';
+
 import './style.css';
 
 export default function OperationsContainer() {

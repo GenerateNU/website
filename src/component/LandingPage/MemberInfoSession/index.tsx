@@ -1,6 +1,7 @@
 import React from 'react';
 
-import PopupAd from '../PopupAd';
+import PopupAd from '@/component/LandingPage/PopupAd';
+
 import puzzle from './assets/gen-puzzle.svg';
 import './style.css';
 

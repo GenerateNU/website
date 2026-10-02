@@ -1,5 +1,5 @@
-import EarnzMockUp from '../assets/images/landingpage-v2/Earnz_Mock_Up.png';
-import SmartyPillMockup from '../assets/images/landingpage-v2/SmartyPill Mock Up.png';
+import EarnzMockUp from '@/assets/images/landingpage-v2/Earnz_Mock_Up.png';
+import SmartyPillMockup from '@/assets/images/landingpage-v2/SmartyPill Mock Up.png';
 
 export type FeaturedProject = {
   name: string;

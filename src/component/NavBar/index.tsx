@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './style.css';
-import GenerateLogo from '../../assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png';
+import GenerateLogo from '@/assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png';
 
 const NavBar = () => {
   const currentUrl = window.location.href.split('/').at(-1);

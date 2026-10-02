@@ -1,13 +1,13 @@
 import React from 'react';
 import type { ReactNode } from 'react';
 
-import '../style.css';
+import '@/pages/TeamsPage/style.css';
 
 import Row from 'react-bootstrap/esm/Row';
 
-import Footer from '../../../component/Footer';
-import NavBar from '../../../component/NavBar';
-import NextPage from '../../../component/NextPage';
+import Footer from '@/component/Footer';
+import NavBar from '@/component/NavBar';
+import NextPage from '@/component/NextPage';
 
 type WebTeamContainerProps = {
   children: ReactNode;

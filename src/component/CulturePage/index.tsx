@@ -1,10 +1,11 @@
 import React from 'react';
 
-import useWebsite from '../../shared/useWebsite';
-import HorizontalDesktopContainer from '../DesktopMobileHandler/HorizontalDesktopContainer';
-import NewMobileContainer from '../DesktopMobileHandler/NewMobileContainer';
-import Footer from '../Footer';
-import NextPage from '../NextPage';
+import HorizontalDesktopContainer from '@/component/DesktopMobileHandler/HorizontalDesktopContainer';
+import NewMobileContainer from '@/component/DesktopMobileHandler/NewMobileContainer';
+import Footer from '@/component/Footer';
+import NextPage from '@/component/NextPage';
+import useWebsite from '@/shared/useWebsite';
+
 import BelongHere from './BelongHere';
 import CollageSection from './Collage';
 import Diversity from './Diversity';

@@ -1,15 +1,15 @@
 import React, { useMemo, useState } from 'react';
 
-import NextArrow from '../../../assets/icons/arrows/nextArrowRight.svg?react';
-import PrevArrow from '../../../assets/icons/arrows/prevArrowLeft.svg?react';
-import celebrate from '../../../assets/images/aboutpage/spirited.jpg';
-import LargeStars from '../../../assets/images/landingpage-v3/LargeShowcaseStars.svg?react';
-import LeftArrow from '../../../assets/images/landingpage-v3/LeftTriangleArrow.svg?react';
-import RightArrow from '../../../assets/images/landingpage-v3/RightTriangleArrow.svg?react';
-import SmallStars from '../../../assets/images/landingpage-v3/SmallShowcaseStars.svg?react';
-import { urlFor } from '../../../client';
-import { useSanity } from '../../../services/useSanity';
-import type { Copy, SanityShowcase, Showcase } from '../types';
+import NextArrow from '@/assets/icons/arrows/nextArrowRight.svg?react';
+import PrevArrow from '@/assets/icons/arrows/prevArrowLeft.svg?react';
+import celebrate from '@/assets/images/aboutpage/spirited.jpg';
+import LargeStars from '@/assets/images/landingpage-v3/LargeShowcaseStars.svg?react';
+import LeftArrow from '@/assets/images/landingpage-v3/LeftTriangleArrow.svg?react';
+import RightArrow from '@/assets/images/landingpage-v3/RightTriangleArrow.svg?react';
+import SmallStars from '@/assets/images/landingpage-v3/SmallShowcaseStars.svg?react';
+import { urlFor } from '@/client';
+import type { Copy, SanityShowcase, Showcase } from '@/pages/LandingPageV3/types';
+import { useSanity } from '@/services/useSanity';
 
 type ShowcaseLabelProps = {
   showcase: Showcase;

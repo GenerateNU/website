@@ -1,5 +1,5 @@
-import MosaicLogo from '../../../assets/images/landingpage-v3/MosaicLogo.svg?react';
-import ShermLogo from '../../../assets/images/landingpage-v3/ShermanLogo.svg?react';
+import MosaicLogo from '@/assets/images/landingpage-v3/MosaicLogo.svg?react';
+import ShermLogo from '@/assets/images/landingpage-v3/ShermanLogo.svg?react';
 
 export default function ParentOrgs() {
   return (

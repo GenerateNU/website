@@ -1,8 +1,9 @@
 import { Fragment } from 'react';
 
-import type { Team } from '../../../../data/teams';
-import toPairs from '../../../../shared/toPairs';
-import useWebsite from '../../../../shared/useWebsite';
+import type { Team } from '@/data/teams';
+import toPairs from '@/shared/toPairs';
+import useWebsite from '@/shared/useWebsite';
+
 import { RolesJSON } from './JSONFiles/RolesJSON';
 import type { RoleGroup } from './JSONFiles/types';
 import './style.css';

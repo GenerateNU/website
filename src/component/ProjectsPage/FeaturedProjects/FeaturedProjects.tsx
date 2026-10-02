@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-import Arrow from '../../../assets/images/projectspage/arrowbutton.svg';
+import Arrow from '@/assets/images/projectspage/arrowbutton.svg';
+
 import './style.css';
-import Projects from '../../../data/featuredProjectData';
-import type { FeaturedProject } from '../../../data/featuredProjectData';
-import useWebsite from '../../../shared/useWebsite';
-import NavBar from '../../NavBar';
-import ShadowedButton from '../../ShadowedButton';
+import NavBar from '@/component/NavBar';
+import ShadowedButton from '@/component/ShadowedButton';
+import Projects from '@/data/featuredProjectData';
+import type { FeaturedProject } from '@/data/featuredProjectData';
+import useWebsite from '@/shared/useWebsite';
 
 type FeaturedProjectsViewProps = {
   handleProject: (dir: number) => void;

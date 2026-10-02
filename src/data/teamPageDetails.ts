@@ -1,18 +1,19 @@
-import CommunityActiveIcon from '../assets/icons/teams/colored/Community.png';
-import HardwareActiveIcon from '../assets/icons/teams/colored/Hardware.png';
-import ManagementActiveIcon from '../assets/icons/teams/colored/Management.png';
-import OperationsActiveIcon from '../assets/icons/teams/colored/Operations.png';
-import SoftwareActiveIcon from '../assets/icons/teams/colored/Software.png';
-import CommunityInactiveIcon from '../assets/icons/teams/gray/Community.png';
-import HardwareInactiveIcon from '../assets/icons/teams/gray/Hardware.png';
-import ManagementInactiveIcon from '../assets/icons/teams/gray/Management.png';
-import OperationsInactiveIcon from '../assets/icons/teams/gray/Operations.png';
-import SoftwareInactiveIcon from '../assets/icons/teams/gray/Software.png';
-import ManagementLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH1.png';
-import OperationsLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH2.png';
-import SoftwareLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH3.png';
-import HardwareLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH4.png';
-import EngagementLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH5.png';
+import CommunityActiveIcon from '@/assets/icons/teams/colored/Community.png';
+import HardwareActiveIcon from '@/assets/icons/teams/colored/Hardware.png';
+import ManagementActiveIcon from '@/assets/icons/teams/colored/Management.png';
+import OperationsActiveIcon from '@/assets/icons/teams/colored/Operations.png';
+import SoftwareActiveIcon from '@/assets/icons/teams/colored/Software.png';
+import CommunityInactiveIcon from '@/assets/icons/teams/gray/Community.png';
+import HardwareInactiveIcon from '@/assets/icons/teams/gray/Hardware.png';
+import ManagementInactiveIcon from '@/assets/icons/teams/gray/Management.png';
+import OperationsInactiveIcon from '@/assets/icons/teams/gray/Operations.png';
+import SoftwareInactiveIcon from '@/assets/icons/teams/gray/Software.png';
+import ManagementLargePicture from '@/assets/images/TeamsPageImages/TeamsPagePH1.png';
+import OperationsLargePicture from '@/assets/images/TeamsPageImages/TeamsPagePH2.png';
+import SoftwareLargePicture from '@/assets/images/TeamsPageImages/TeamsPagePH3.png';
+import HardwareLargePicture from '@/assets/images/TeamsPageImages/TeamsPagePH4.png';
+import EngagementLargePicture from '@/assets/images/TeamsPageImages/TeamsPagePH5.png';
+
 import type { Team } from './teams';
 
 // yellow - "#FFBF3C"

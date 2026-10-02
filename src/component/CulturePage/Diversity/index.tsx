@@ -1,6 +1,7 @@
 import React from 'react';
 
-import type { SectionProps } from '../types';
+import type { SectionProps } from '@/component/CulturePage/types';
+
 import './style.css';
 
 const desktopContent = () => (

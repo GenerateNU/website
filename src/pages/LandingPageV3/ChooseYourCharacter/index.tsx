@@ -1,10 +1,11 @@
 import React, { useMemo, useState } from 'react';
 
-import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine';
-import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText';
-import { urlFor } from '../../../client';
-import { useSanity } from '../../../services/useSanity';
-import type { Branch, Director, SanityBranch, SanityDirector } from '../types';
+import ArcadeMachine from '@/assets/images/landingpage-v3/DynamicArcadeMachine';
+import ArcadeText from '@/assets/images/landingpage-v3/DynamicArcadeText';
+import { urlFor } from '@/client';
+import type { Branch, Director, SanityBranch, SanityDirector } from '@/pages/LandingPageV3/types';
+import { useSanity } from '@/services/useSanity';
+
 import Mascot from './Mascot';
 
 type MascotRadioButtonProps = {

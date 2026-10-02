@@ -4,12 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { useParams } from 'react-router-dom';
 
-import applicationsByTeams from '../../../data/ApplyData/allApps';
-import type { Position as PositionData } from '../../../data/ApplyData/types';
+import NavBar from '@/component/NavBar';
+import ShadowedButton from '@/component/ShadowedButton';
+
 import './style.css';
-import useWebsite from '../../../shared/useWebsite';
-import NavBar from '../../NavBar';
-import ShadowedButton from '../../ShadowedButton';
+import applicationsByTeams from '@/data/ApplyData/allApps';
+import type { Position as PositionData } from '@/data/ApplyData/types';
+import useWebsite from '@/shared/useWebsite';
 
 type ApplicationGroup = keyof typeof applicationsByTeams;
 

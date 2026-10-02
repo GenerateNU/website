@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './style.css';
-import useWebsite from '../../../../shared/useWebsite';
+import useWebsite from '@/shared/useWebsite';
 
 type TextRowProps = {
   title: string;

@@ -1,4 +1,5 @@
-import type { Team } from '../../../../../data/teams';
+import type { Team } from '@/data/teams';
+
 import type { TeamRoles } from './types';
 
 export const RolesJSON: Record<Team, TeamRoles> = {

@@ -1,8 +1,9 @@
 import React from 'react';
 
-import NavBar from '../../NavBar';
-import logo from '../IntroSection/GeneratePeaceLogo.png';
-import type { SectionProps } from '../types';
+import logo from '@/component/CulturePage/IntroSection/GeneratePeaceLogo.png';
+import type { SectionProps } from '@/component/CulturePage/types';
+import NavBar from '@/component/NavBar';
+
 import './style.css';
 
 const desktopContent = () => (

@@ -1,6 +1,6 @@
 import './style.css';
-import Hardware from '../../../../assets/images/projectspage/hardware.svg';
-import Software from '../../../../assets/images/projectspage/software.svg';
+import Hardware from '@/assets/images/projectspage/hardware.svg';
+import Software from '@/assets/images/projectspage/software.svg';
 
 export type ProjectTeam = 'hardware' | 'software';
 

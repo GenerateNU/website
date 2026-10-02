@@ -1,7 +1,8 @@
 import React from 'react';
 
 import './style.css';
-import type { Team } from '../../../../data/teams';
+import type { Team } from '@/data/teams';
+
 import { WhatYouLearnJSON } from './JSONFiles/WhatYouLearnJSON';
 import WhatYouLearn from './WhatYouLearn';
 

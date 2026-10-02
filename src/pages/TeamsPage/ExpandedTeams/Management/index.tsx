@@ -1,9 +1,9 @@
 import React from 'react';
 
 import './style.css';
-import { TEAMS } from '../../../../data/teams';
-import OurRoles from '../CommonTeam/OurRoles';
-import Roles from '../CommonTeam/Roles';
+import { TEAMS } from '@/data/teams';
+import OurRoles from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/OurRoles';
+import Roles from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/Roles';
 
 export default function ManagementContainer() {
   return (

@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
-import ShadowedButton from '../../../../component/ShadowedButton';
-import useWebsite from '../../../../shared/useWebsite';
+import ShadowedButton from '@/component/ShadowedButton';
+import useWebsite from '@/shared/useWebsite';
+
 import './style.css';
 
 type FeatureTextRowProps = {

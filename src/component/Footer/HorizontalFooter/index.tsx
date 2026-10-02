@@ -1,14 +1,14 @@
 import React from 'react';
 
-import '../style.css';
+import '@/component/Footer/style.css';
 import { useNavigate } from 'react-router-dom';
 
-import GenerateLogo from '../../../assets/images/landingpage-v2/footerlogo.svg'; //"../../assets/images/landingpage-v2/footerlogo.svg";
-import ShadowedButton from '../../ShadowedButton';
-import { SocialIcon } from '../../SocialIcon';
-import { socialIcons } from '../../socialIcons';
-import FooterLink from '../FooterLink';
-import { pages } from '../pages';
+import GenerateLogo from '@/assets/images/landingpage-v2/footerlogo.svg'; //"../../assets/images/landingpage-v2/footerlogo.svg";
+import FooterLink from '@/component/Footer/FooterLink';
+import { pages } from '@/component/Footer/pages';
+import ShadowedButton from '@/component/ShadowedButton';
+import { SocialIcon } from '@/component/SocialIcon';
+import { socialIcons } from '@/component/socialIcons';
 
 function HorizontalFooter() {
   const navigate = useNavigate();

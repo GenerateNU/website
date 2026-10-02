@@ -1,11 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import UpArrowMobile from '../../../assets/icons/arrows/upArrowMobile.svg';
-import Email from '../../../assets/icons/socials/Email.svg?react';
-import Instagram from '../../../assets/icons/socials/Instagram.svg?react';
-import LinkedIn from '../../../assets/icons/socials/LinkedIn.svg?react';
-import ShadowedButton from '../../../component/ShadowedButton';
+import UpArrowMobile from '@/assets/icons/arrows/upArrowMobile.svg';
+import Email from '@/assets/icons/socials/Email.svg?react';
+import Instagram from '@/assets/icons/socials/Instagram.svg?react';
+import LinkedIn from '@/assets/icons/socials/LinkedIn.svg?react';
+import ShadowedButton from '@/component/ShadowedButton';
+
 import FooterLink from './FooterLink';
 import { pages } from './pages';
 
