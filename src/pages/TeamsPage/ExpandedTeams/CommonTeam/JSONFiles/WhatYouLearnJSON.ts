@@ -1,6 +1,8 @@
 import TeamsStock from '../../../../../assets/images/TeamsPageImages/TeamsStockPhoto.svg';
+import type { Team } from '../../../../../data/teams';
+import type { WhatYouLearnTeam } from './types';
 
-export const WhatYouLearnJSON = {
+export const WhatYouLearnJSON: Partial<Record<Team, WhatYouLearnTeam>> = {
   software: {
     about: [
       {

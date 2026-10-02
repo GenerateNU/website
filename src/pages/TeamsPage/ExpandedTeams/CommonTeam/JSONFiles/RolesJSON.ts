@@ -1,7 +1,7 @@
-// The Order of these is how it will appear on the management expanded teams page
-export const Teams = ['management', 'hardware', 'software', 'operations', 'engagement'] as const;
+import type { Team } from '../../../../../data/teams';
+import type { TeamRoles } from './types';
 
-export const RolesJSON = {
+export const RolesJSON: Record<Team, TeamRoles> = {
   management: {
     Director: {
       header: 'Executive Director',

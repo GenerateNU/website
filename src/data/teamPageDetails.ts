@@ -13,9 +13,18 @@ import OperationsLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH
 import SoftwareLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH3.png';
 import HardwareLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH4.png';
 import EngagementLargePicture from '../assets/images/TeamsPageImages/TeamsPagePH5.png';
+import type { Team } from './teams';
 
 // yellow - "#FFBF3C"
-const TeamPageDetails = [
+type TeamPageDetail = {
+  name: Capitalize<Team>;
+  color: string;
+  activeIcon: string;
+  inactiveIcon: string;
+  largePic: string;
+};
+
+const TeamPageDetails: TeamPageDetail[] = [
   {
     name: 'Management',
     color: '#187DFF',

@@ -3,11 +3,9 @@ import Engagement from './engagement';
 import Hardware from './hardware';
 import Operations from './operations';
 import Software from './software';
-import type { Position } from './types';
+import type { ApplicationGroup, Position } from './types';
 
-type Team = 'clients' | 'hardware' | 'software' | 'operations' | 'management' | 'engagement';
-
-type ApplicationsByTeams = Record<Team, Position[]>;
+type ApplicationsByTeams = Record<ApplicationGroup, Position[]>;
 
 const applicationsByTeams: ApplicationsByTeams = {
   clients: Clients,
