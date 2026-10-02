@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'director',
@@ -50,4 +50,4 @@ export default defineType({
       media: 'image',
     },
   },
-})
+});

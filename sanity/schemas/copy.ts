@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'copy',
@@ -28,4 +28,4 @@ export default defineType({
       subtitle: 'header',
     },
   },
-})
+});
