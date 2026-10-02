@@ -9,8 +9,8 @@ export default defineConfig({
   name: 'default',
   title: 'generate-sanity',
 
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID,
-  dataset: process.env.SANITY_STUDIO_DATASET,
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID!,
+  dataset: process.env.SANITY_STUDIO_DATASET!,
 
   plugins: [structureTool(), visionTool(), colorInput()],
 

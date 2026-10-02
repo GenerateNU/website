@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'generateLink',
@@ -29,4 +29,4 @@ export default defineType({
       title: 'title',
     },
   },
-})
+});
