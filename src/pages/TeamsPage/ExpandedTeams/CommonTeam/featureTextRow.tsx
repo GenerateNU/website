@@ -3,13 +3,21 @@ import { useNavigate } from 'react-router-dom';
 import ShadowedButton from '../../../../component/ShadowedButton';
 import useWebsite from '../../../../shared/useWebsite';
 import './style.css';
-export default function FeatureTextRow({ description, picture, reverse, button }) {
+
+type FeatureTextRowProps = {
+  description: string;
+  picture: string;
+  reverse: boolean;
+  button: string;
+};
+
+export default function FeatureTextRow({ description, picture, reverse, button }: FeatureTextRowProps) {
   const isWebsite = useWebsite();
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
   const navigate = useNavigate();
 
-  const handleOnClick = link => {
+  const handleOnClick = (link: string) => {
     navigate(link);
   };
 

@@ -9,9 +9,11 @@ import Management2 from '../../../../../assets/images/TeamsPageImages/management
 import Operations1 from '../../../../../assets/images/TeamsPageImages/operations1.jpg';
 import Operations2 from '../../../../../assets/images/TeamsPageImages/operations2.jpg';
 import TeamsStock from '../../../../../assets/images/TeamsPageImages/TeamsStockPhoto.svg';
+import type { Team } from '../../../../../data/teams';
+import type { ExpandedTeam } from './types';
 
 // What Youll learn could probably be added here?
-export const ExpandedTeamsJSON = {
+export const ExpandedTeamsJSON: Record<Team, ExpandedTeam> = {
   management: {
     abbv: 'MNGMNT',
     color: '#187DFF',
