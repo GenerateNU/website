@@ -99,4 +99,4 @@ The site is deployed on Netlify. Every pull request also gets a deploy preview, 
 https://deploy-preview-<PR number>--sprightly-manatee-243873.netlify.app
 ```
 
-Netlify posts the link as a comment on the pull request once the preview is ready.
+Replace `<PR number>` with your pull request's number. For example, PR #268's preview is at https://deploy-preview-268--sprightly-manatee-243873.netlify.app.
