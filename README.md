@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Generate Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![CI](https://github.com/GenerateNU/website/actions/workflows/ci.yml/badge.svg)](https://github.com/GenerateNU/website/actions/workflows/ci.yml)
 
-## Available Scripts
+The website for [Generate](https://generatenu.com), Northeastern's student-led product development studio.
 
-In the project directory, you can run:
+Built with React, TypeScript and Vite. Content such as directors, teams, showcases and copy comes from [Sanity](https://www.sanity.io).
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Bun](https://bun.sh) 1.4.2 or newer
+- [Node.js](https://nodejs.org) 22.18 or newer (used by the lint and test tools)
+- [just](https://github.com/casey/just) (optional, for the shortcuts below): `brew install just`
 
-### `npm test`
+### Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+git clone https://github.com/GenerateNU/website.git
+cd website
+cp .env.example .env   # then fill in the values
+just install
+just dev
+```
 
-### `npm run build`
+The site runs at http://localhost:5173.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Environment variables
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Variable                   | Used by       | Description                        |
+| -------------------------- | ------------- | ---------------------------------- |
+| `VITE_SANITY_PROJECT_ID`   | Website       | Sanity project the site reads from |
+| `VITE_SANITY_DATASET`      | Website       | Sanity dataset the site reads from |
+| `VITE_API_URI`             | Website       | Not currently used                 |
+| `SANITY_STUDIO_PROJECT_ID` | Sanity Studio | Sanity project the Studio edits    |
+| `SANITY_STUDIO_DATASET`    | Sanity Studio | Sanity dataset the Studio edits    |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ask the infra team for the values.
 
-### `npm run eject`
+## Commands
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Run `just` to list every command. Each one is a shortcut for a `bun run` script, so you can use either.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Command                 | What it does                                          |
+| ----------------------- | ----------------------------------------------------- |
+| `just dev`              | Start the dev server                                  |
+| `just build`            | Build the site for production into `build/`           |
+| `just preview`          | Serve the production build locally                    |
+| `just check`            | Type-check, lint and check formatting                 |
+| `just ci`               | Run everything CI runs: checks, build and smoke tests |
+| `just typecheck`        | Type-check with TypeScript                            |
+| `just lint`             | Lint with oxlint                                      |
+| `just lint-fix`         | Lint and apply safe auto-fixes                        |
+| `just format`           | Format all files with oxfmt                           |
+| `just format-check`     | Check formatting without changing files               |
+| `just knip`             | Find unused files, exports and dependencies           |
+| `just test-e2e`         | Run the Playwright smoke tests                        |
+| `just install-browsers` | Install the browser the smoke tests use               |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Sanity Studio
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The content editor lives in [`sanity/`](sanity) and has its own dependencies.
 
-## Learn More
+| Command                 | What it does                |
+| ----------------------- | --------------------------- |
+| `just studio`           | Start the Studio locally    |
+| `just studio-typecheck` | Type-check the Studio       |
+| `just studio-build`     | Build the Studio            |
+| `just studio-deploy`    | Deploy the Studio to Sanity |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+src/
+  component/   Shared components (NavBar, Footer, buttons) and some pages
+  pages/       Page components (landing, apply, teams)
+  data/        Static content and types
+  services/    Data fetching (useSanity)
+  shared/      Small hooks and helpers
+  assets/      Images, icons and SVG components
+sanity/        Sanity Studio and content schemas
+e2e/           Playwright smoke tests
+```
 
-### Code Splitting
+## Conventions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Imports:** use the `@/` alias for anything outside the current folder (`@/shared/useWebsite`), and `./` for files in the same folder.
+- **Components:** one exported component per file. Small private helper components can live in the same file.
+- **Before you push:** run `just check`. A pre-commit hook formats staged files automatically.
 
-### Analyzing the Bundle Size
+## CI and deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Every pull request runs type checking, lint, a format check, a production build and the Playwright smoke tests ([workflow](.github/workflows/ci.yml)). All of them must pass before merging.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The site is deployed on Netlify.
