@@ -17,20 +17,21 @@ type ShadowedButtonProps = {
   className?: string;
 };
 
+const isConstantKey = (key: string): key is keyof typeof constants => Object.hasOwn(constants, key);
+
 export default function ShadowedButton(props: ShadowedButtonProps) {
   const ButtonStyle = {
     backgroundColor: props.fillColor,
     padding: `${props.yPad || '1rem'} ${props.xPad}`,
-    fontSize: `${props.fontSize || '1.5vw'}`,
+    fontSize: props.fontSize || '1.5vw',
   };
 
   const handleOnClick = () => {
-    // SAFETY: only runs when onClick is missing, and every caller passes onClick
-    const name = props.lnk as string;
-    const key = name.replace(' ', '_');
-    const POSITIONS_URL = 'Position_' + key;
-    // SAFETY: same unused fallback path as above
-    window.location.assign(constants[POSITIONS_URL as keyof typeof constants]);
+    const positionKey = `Position_${(props.lnk ?? '').replace(' ', '_')}`;
+
+    if (isConstantKey(positionKey)) {
+      window.location.assign(constants[positionKey]);
+    }
   };
 
   return (

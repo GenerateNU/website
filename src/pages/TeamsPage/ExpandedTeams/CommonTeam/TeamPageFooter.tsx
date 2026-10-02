@@ -112,10 +112,92 @@ function FooterLinks() {
 
 function TitleCard({ title, color, mobile }: TitleCardProps) {
   return (
-    <div style={{ marginTop: '6vw' }} className={`${mobile ? 'spacing' : ''}`}>
+    <div style={{ marginTop: '6vw' }} className={mobile ? 'spacing' : ''}>
       <div className="title">
         <div style={{ marginTop: '-10%', marginBottom: '-10%', color: color }}>{title}</div>
       </div>
+    </div>
+  );
+}
+
+type FooterStartProps = {
+  mobile: boolean;
+  isBigScreen: boolean;
+  onLogoClick: () => void;
+};
+
+type FooterEndProps = {
+  mobile: boolean;
+};
+
+const handleScrollClick = () => {
+  window.scrollTo(0, 0);
+};
+
+function FooterStart({ mobile, isBigScreen, onLogoClick }: FooterStartProps) {
+  return (
+    <div className={mobile ? 'top-bar-mobile' : 'left-bar'}>
+      <div
+        className={
+          mobile ? 'd-flex flex-column flex-direction-start' : 'w-100 d-flex flex-column justify-content-between'
+        }
+      >
+        <div className="sherm">
+          <ShadowedButton
+            fillColor="white"
+            right={true}
+            text={
+              <img
+                style={{ marginTop: '10px' }}
+                width={!isBigScreen ? '200vw' : '100vw'}
+                src={GenerateLogo}
+                alt="matt was here"
+              />
+            }
+            onClick={onLogoClick}
+          />
+        </div>
+      </div>
+      {mobile ? (
+        <ShadowedButton
+          className="up-icon-mobile"
+          xPad="3vw"
+          yPad="2vw"
+          textColor="white"
+          text={<img width={'40vh'} src={Arrow} alt="arrow up" />}
+          onClick={handleScrollClick}
+        />
+      ) : (
+        <span className="footer-links">
+          <FooterLinks />
+        </span>
+      )}
+    </div>
+  );
+}
+
+function FooterEnd({ mobile }: FooterEndProps) {
+  return (
+    <div className={mobile ? 'bot-box-mobile' : 'right-box'}>
+      {mobile ? (
+        <span className="footer-links">
+          <FooterLinks />
+        </span>
+      ) : (
+        <SocialIcons mobile={mobile} />
+      )}
+      {mobile ? (
+        <SocialIcons mobile={mobile} />
+      ) : (
+        <ShadowedButton
+          className="up-icon"
+          xPad="2vw"
+          yPad="2vw"
+          textColor="white"
+          text={<img width={'40vh'} src={Arrow} alt="arrow-up" />}
+          onClick={handleScrollClick}
+        />
+      )}
     </div>
   );
 }
@@ -128,75 +210,15 @@ function TeamPageFooter({ color, page }: TeamPageFooterProps) {
     void navigate('/');
   };
 
-  const handleScrollClick = () => {
-    window.scrollTo(0, 0);
-  };
-
   const isWebsite = useWebsite();
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
 
   return (
     <Container className="footer-container" style={{ backgroundColor: color }}>
-      <div className={`${mobile ? 'divider-col' : 'divider-row'}`}>
-        <div className={`${mobile ? 'top-bar-mobile' : 'left-bar'}`}>
-          <div
-            className={`${
-              mobile ? 'd-flex flex-column flex-direction-start' : 'w-100 d-flex flex-column justify-content-between'
-            }`}
-          >
-            <div className="sherm">
-              <ShadowedButton
-                fillColor="white"
-                right={true}
-                text={
-                  <img
-                    style={{ marginTop: '10px' }}
-                    width={!isBigScreen ? '200vw' : '100vw'}
-                    src={GenerateLogo}
-                    alt="matt was here"
-                  />
-                }
-                onClick={handleOnClick}
-              />
-            </div>
-          </div>
-          {mobile ? (
-            <ShadowedButton
-              className="up-icon-mobile"
-              xPad="3vw"
-              yPad="2vw"
-              textColor="white"
-              text={<img width={'40vh'} src={Arrow} alt="arrow up" />}
-              onClick={handleScrollClick}
-            />
-          ) : (
-            <span className="footer-links">
-              <FooterLinks />
-            </span>
-          )}
-        </div>
-        <div className={`${mobile ? 'bot-box-mobile' : 'right-box'}`}>
-          {mobile ? (
-            <span className="footer-links">
-              <FooterLinks />
-            </span>
-          ) : (
-            <SocialIcons mobile={mobile} />
-          )}
-          {mobile ? (
-            <SocialIcons mobile={mobile} />
-          ) : (
-            <ShadowedButton
-              className="up-icon"
-              xPad="2vw"
-              yPad="2vw"
-              textColor="white"
-              text={<img width={'40vh'} src={Arrow} alt="arrow-up" />}
-              onClick={handleScrollClick}
-            />
-          )}
-        </div>
+      <div className={mobile ? 'divider-col' : 'divider-row'}>
+        <FooterStart mobile={mobile} isBigScreen={isBigScreen} onLogoClick={handleOnClick} />
+        <FooterEnd mobile={mobile} />
       </div>
       {page && <TitleCard color={color} title={page} mobile={mobile} />}
     </Container>

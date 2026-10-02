@@ -47,7 +47,7 @@ function MembersContainer({ role, mobile }: MembersContainerProps) {
           <div
             key={pairIndex}
             style={{
-              display: `${mobile ? '' : 'flex'}`,
+              display: mobile ? '' : 'flex',
               flexDirection: 'row',
             }}
           >

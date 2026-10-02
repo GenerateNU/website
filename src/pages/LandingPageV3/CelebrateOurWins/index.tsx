@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import NextArrow from '../../../assets/icons/arrows/nextArrowRight.svg?react';
 import PrevArrow from '../../../assets/icons/arrows/prevArrowLeft.svg?react';
@@ -11,26 +11,58 @@ import { urlFor } from '../../../client';
 import { useSanity } from '../../../services/useSanity';
 import type { Copy, SanityShowcase, Showcase } from '../types';
 
+type ShowcaseLabelProps = {
+  showcase: Showcase;
+};
+
+const compareShowcases = (a: Showcase, b: Showcase) => {
+  if (a.year === b.year) {
+    return a.semester === 'SPRING' ? -1 : 1;
+  }
+
+  return Number(a.year) - Number(b.year);
+};
+
+function ShowcaseLabel({ showcase }: ShowcaseLabelProps) {
+  return (
+    <>
+      <div id="showcase-semester-label">
+        <div id="showcase-semester-highlight" className="showcase-semester-text">
+          {showcase.semester.toUpperCase()}
+        </div>
+        <div className="showcase-semester-text">SHOWCASE</div>
+      </div>
+
+      <div id="showcase-year-br">
+        {showcase.year[0]}
+        {showcase.year[1]}
+        <br />
+        {showcase.year[2]}
+        {showcase.year[3]}
+      </div>
+      <div id="showcase-year-nobr">{showcase.year}</div>
+    </>
+  );
+}
+
 export default function CelebrateOurWins() {
   const copyQuery = `*[_type == "copy" && key == "celebrate-our-wins"]{header, content}`;
   const copy = useSanity<Copy>(copyQuery);
   const showcaseQuery = `*[_type == "showcase"] {year, image, semester} | order(year asc)`;
 
-  const showcases = useSanity<SanityShowcase, Showcase>(showcaseQuery, {}, data =>
-    data
-      .map(showcase => ({
-        ...showcase,
-        semester: showcase.semester.toUpperCase(),
-        image: urlFor(showcase.image).url(),
-      }))
-      .sort((a, b) => {
-        if (a.year === b.year) {
-          return a.semester === 'SPRING' ? -1 : 1;
-        }
+  const sanityShowcases = useSanity<SanityShowcase>(showcaseQuery);
 
-        return Number(a.year) - Number(b.year);
-      })
-  );
+  const showcases: Showcase[] = useMemo(() => {
+    const sortedShowcases = sanityShowcases.map(showcase => ({
+      ...showcase,
+      semester: showcase.semester.toUpperCase(),
+      image: urlFor(showcase.image).url(),
+    }));
+
+    sortedShowcases.sort(compareShowcases);
+
+    return sortedShowcases;
+  }, [sanityShowcases]);
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const currentIndex = selectedIndex ?? showcases.length - 1;
@@ -66,25 +98,7 @@ export default function CelebrateOurWins() {
           </button>
           <div id="carousel-inner-content">
             <div id="showcase-carousel-label" className="showcase-year">
-              {selectedShowcase && (
-                <>
-                  <div id="showcase-semester-label">
-                    <div id="showcase-semester-highlight" className="showcase-semester-text">
-                      {selectedShowcase.semester.toUpperCase()}
-                    </div>
-                    <div className="showcase-semester-text">SHOWCASE</div>
-                  </div>
-
-                  <div id="showcase-year-br">
-                    {selectedShowcase.year[0]}
-                    {selectedShowcase.year[1]}
-                    <br />
-                    {selectedShowcase.year[2]}
-                    {selectedShowcase.year[3]}
-                  </div>
-                  <div id="showcase-year-nobr">{selectedShowcase.year}</div>
-                </>
-              )}
+              {selectedShowcase && <ShowcaseLabel showcase={selectedShowcase} />}
             </div>
             <img
               className="image-shadow showcase-carousel-img"

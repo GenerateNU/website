@@ -16,11 +16,11 @@ export default function TextRow({ title, description, picture, reverse }: TextRo
   const mobile = !isBigScreen || !isWebsite;
 
   return (
-    <div className={`${mobile ? 'text-row-mobile' : 'text-row'}`}>
+    <div className={mobile ? 'text-row-mobile' : 'text-row'}>
       {(reverse || mobile) && <img src={picture} className="common-info-pic" alt=""></img>}
-      <div className={`${mobile ? 'info-section-mobile' : 'info-section'}`}>
-        <div className={`${mobile ? 'paragraph-title-mobile' : 'paragraph-title'}`}>{title}</div>
-        <div className={`${mobile ? 'paragraph-text-mobile' : 'paragraph-text'}`}>{description}</div>
+      <div className={mobile ? 'info-section-mobile' : 'info-section'}>
+        <div className={mobile ? 'paragraph-title-mobile' : 'paragraph-title'}>{title}</div>
+        <div className={mobile ? 'paragraph-text-mobile' : 'paragraph-text'}>{description}</div>
       </div>
       {!reverse && !mobile && <img src={picture} className="common-info-pic " alt=""></img>}
     </div>

@@ -9,12 +9,12 @@ import ShadowedButton from '../../../component/ShadowedButton';
 import FooterLink from './FooterLink';
 import { pages } from './pages';
 
+const handleOnClick = () => {
+  window.scrollTo(0, 0);
+};
+
 function WebFooter() {
   const currentPageUrl = window.location.href;
-
-  const handleOnClick = () => {
-    window.scrollTo(0, 0);
-  };
 
   const icons = [
     {

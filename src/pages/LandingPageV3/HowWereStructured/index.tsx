@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import { urlFor } from '../../../client';
 import { useSanity } from '../../../services/useSanity';
@@ -17,6 +17,14 @@ const IMAGE_SIZE = 15;
 
 const SELECTED_SHIFT = 7;
 
+function pointAt(angle: number, radius: number) {
+  const rad = (angle * Math.PI) / 180;
+  const x = 50 + radius * Math.sin(rad);
+  const y = 50 - radius * Math.cos(rad);
+
+  return `${x.toFixed(3)}% ${y.toFixed(3)}%`;
+}
+
 /**
  * Dynamically generates a circular "slice" shaped path (an annular sector /
  * donut segment) based on the index of the element and the total number of
@@ -28,14 +36,6 @@ function sliceClipPath(index: number, total: number) {
   // Rotate the path by the index
   const startAngle = (index - 0.5) * sliceAngle;
   const endAngle = (index + 0.5) * sliceAngle;
-
-  const pointAt = (angle: number, radius: number) => {
-    const rad = (angle * Math.PI) / 180;
-    const x = 50 + radius * Math.sin(rad);
-    const y = 50 - radius * Math.cos(rad);
-
-    return `${x.toFixed(3)}% ${y.toFixed(3)}%`;
-  };
 
   const points: string[] = [];
   // Outer arc: sweep from the start angle to the end angle.
@@ -93,11 +93,15 @@ export default function HowWereStrctured() {
 
   const teamQuery = `*[_type == "team" && team != "Clients"] {team, image, teamDescription, zIndex, color} | order(zIndex)`;
 
-  const teams = useSanity<SanityStructuredTeam, StructuredTeam>(teamQuery, {}, data =>
-    data.map(value => ({
-      ...value,
-      image: urlFor(value.image).url(),
-    }))
+  const sanityTeams = useSanity<SanityStructuredTeam>(teamQuery);
+
+  const teams: StructuredTeam[] = useMemo(
+    () =>
+      sanityTeams.map(value => ({
+        ...value,
+        image: urlFor(value.image).url(),
+      })),
+    [sanityTeams]
   );
 
   const [randomSeed] = useState(() => Math.random());

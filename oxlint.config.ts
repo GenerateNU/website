@@ -93,6 +93,7 @@ export default defineConfig({
     'react/require-render-return': 'error',
     'react/no-multi-comp': 'off',
     'react/jsx-key': ['error', { checkFragmentShorthand: true }],
+    'import/no-unassigned-import': ['warn', { allow: ['**/*.css'] }],
     'jsx-a11y/no-noninteractive-tabindex': ['error', { tags: ['section'] }],
     'react/no-unstable-nested-components': 'error',
     'react/only-export-components': ['error', { allowConstantExport: true }],
@@ -122,6 +123,12 @@ export default defineConfig({
       files: ['**/*.tsx'],
       rules: {
         'typescript/explicit-function-return-type': 'off',
+      },
+    },
+    {
+      files: ['src/assets/**/*.tsx', 'src/pages/LandingPageV3/ChooseYourCharacter/Mascot.tsx'],
+      rules: {
+        'eslint/max-lines-per-function': 'off',
       },
     },
   ],

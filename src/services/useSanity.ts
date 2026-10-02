@@ -1,22 +1,16 @@
 import type { QueryParams } from '@sanity/client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useEffectEvent } from 'react';
 
 import { client } from '../client';
 
-export function useSanity<T>(query: string): T[];
-export function useSanity<Raw, T>(query: string, params: QueryParams, modifier: (data: Raw[]) => T[]): T[];
-export function useSanity<Raw, T>(
-  query: string,
-  params: QueryParams = {},
-  modifier: (data: Raw[]) => (Raw | T)[] = data => data
-): (Raw | T)[] {
-  const [data, setData] = useState<(Raw | T)[]>([]);
+export function useSanity<T>(query: string, params: QueryParams = {}): T[] {
+  const [data, setData] = useState<T[]>([]);
+
+  const fetchData = useEffectEvent(() => client.fetch<T[]>(query, params).then(setData));
 
   useEffect(() => {
-    void client.fetch<Raw[]>(query, params).then(fetchedData => {
-      setData(modifier(fetchedData));
-    });
-  }, [] /*, [modifier, params, query]*/);
+    void fetchData();
+  }, []);
 
   return data;
 }

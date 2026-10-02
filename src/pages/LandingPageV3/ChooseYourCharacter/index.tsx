@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import ArcadeMachine from '../../../assets/images/landingpage-v3/DynamicArcadeMachine';
 import ArcadeText from '../../../assets/images/landingpage-v3/DynamicArcadeText';
@@ -72,27 +72,35 @@ export default function ChooseYourCharacter() {
   const directorsQuery = `*[_type == "director"] | order(zIndex)`;
   const branchQuery = `*[_type == "team"] {team,team_abbreviation,color,zIndex} | order(zIndex)`;
 
-  const directors = useSanity<SanityDirector, Director>(directorsQuery, {}, data =>
-    data.map(director => ({
-      ...director,
-      color: director.color.hex,
-      image: urlFor(director.image).url(),
-    }))
+  const sanityDirectors = useSanity<SanityDirector>(directorsQuery);
+
+  const directors: Director[] = useMemo(
+    () =>
+      sanityDirectors.map(director => ({
+        ...director,
+        color: director.color.hex,
+        image: urlFor(director.image).url(),
+      })),
+    [sanityDirectors]
   );
 
-  const branches = useSanity<SanityBranch, Branch>(branchQuery, {}, data =>
-    data.map(branch => ({
-      ...branch,
-      team: branch.team.toUpperCase(),
-      teamAbbreviation: (branch.team_abbreviation || '').toUpperCase(),
-    }))
+  const sanityBranches = useSanity<SanityBranch>(branchQuery);
+
+  const branches: Branch[] = useMemo(
+    () =>
+      sanityBranches.map(branch => ({
+        ...branch,
+        team: branch.team.toUpperCase(),
+        teamAbbreviation: (branch.team_abbreviation || '').toUpperCase(),
+      })),
+    [sanityBranches]
   );
 
   const [coloredIndex, setSelected] = useState(0);
 
   const directorToTeam = new Map(
     directors.map(director => {
-      const branch = branches.find(branch => branch.team.toUpperCase() === director.team.toUpperCase());
+      const branch = branches.find(candidate => candidate.team.toUpperCase() === director.team.toUpperCase());
 
       return [director.name, branch];
     })
