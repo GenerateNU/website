@@ -1,5 +1,7 @@
-import { Featured } from '..';
-import { Members, OurRoles, Roles } from '../CommonTeam/OurRoles';
+import Featured from '../CommonTeam/Featured';
+import Members from '../CommonTeam/Members';
+import OurRoles from '../CommonTeam/OurRoles';
+import Roles from '../CommonTeam/Roles';
 import './style.css';
 
 export default function EngagementContainer() {

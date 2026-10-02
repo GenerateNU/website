@@ -25,7 +25,7 @@ const desktopContent = () => {
 const mobileContent = () => {
   return (
     <div className="intro-images">
-      <text className="fun-text"> HAVE SOME FUN WITH US </text>
+      <span className="fun-text"> HAVE SOME FUN WITH US </span>
       <img className="img-formatting" src={IntroImg1} alt="IntroImage1" />
       <img className="img-formatting" src={IntroImg2} alt="IntroImage2" />
       <img className="img-formatting" src={IntroImg3} alt="IntroImage3" />

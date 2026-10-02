@@ -83,12 +83,10 @@ export default function ApplyPage() {
   }| order(zIndex desc)`;
 
   const teams = useSanity<SanityApplyTeam, ApplyTeam>(query, {}, data =>
-    data
-      ? data.map(team => ({
-          ...team,
-          color: team.color.hex,
-        }))
-      : []
+    data.map(team => ({
+      ...team,
+      color: team.color.hex,
+    }))
   );
 
   const halfLength = Math.ceil(teams.length / 2);

@@ -2,7 +2,6 @@ import { Dialog } from '@headlessui/react';
 import React, { useRef } from 'react';
 import { useState } from 'react';
 
-import ApplyTodayPopup from '../../component/LandingPage/MemberInfoSession';
 import CelebrateOurWins from './CelebrateOurWins';
 import ChooseYourCharacter from './ChooseYourCharacter';
 import Footer from './Footer';
@@ -35,7 +34,6 @@ export default function LandingPageV3() {
           style={{ border: 'none' }}
           allow="fullscreen; payment"
           aria-hidden="false"
-          tabIndex={0}
         ></iframe>
       </Dialog>
       {isOpen && <div id="background" />}

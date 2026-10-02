@@ -37,9 +37,10 @@ export default function Position() {
   };
 
   const copyShareLink = () => {
-    console.log(window.location.href);
-    navigator.clipboard.writeText(window.location.href);
-    setShowText('Copied!');
+    navigator.clipboard.writeText(window.location.href).then(
+      () => setShowText('Copied!'),
+      () => setShowText('Copy failed')
+    );
   };
 
   const handleApply = () => {
@@ -78,7 +79,7 @@ export default function Position() {
                       text="notify me"
                       xPad="4rem"
                       className="me-5"
-                      onClick={() => console.log('not implemented')}
+                      onClick={() => undefined}
                     />
                   ))}
 

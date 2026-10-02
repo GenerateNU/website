@@ -13,11 +13,18 @@ export default function ProjectsPage() {
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
 
-  const children = [<FeaturedProjects />, <AllProjects />, <Footer />, <NextPage pageName="Apply" url="/apply" />];
+  const children = (
+    <>
+      <FeaturedProjects />
+      <AllProjects />
+      <Footer />
+      <NextPage pageName="Apply" url="/apply" />
+    </>
+  );
 
   return !mobile ? (
-    <HorizontalDesktopContainer children={children} desktopBGColor={'white'} />
+    <HorizontalDesktopContainer desktopBGColor={'white'}>{children}</HorizontalDesktopContainer>
   ) : (
-    <NewMobileContainer children={children} mobileBGColor={'white'} />
+    <NewMobileContainer mobileBGColor={'white'}>{children}</NewMobileContainer>
   );
 }

@@ -18,7 +18,7 @@ export default function FeatureTextRow({ description, picture, reverse, button }
   const navigate = useNavigate();
 
   const handleOnClick = (link: string) => {
-    navigate(link);
+    void navigate(link);
   };
 
   return (

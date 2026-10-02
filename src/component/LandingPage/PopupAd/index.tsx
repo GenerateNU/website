@@ -49,9 +49,15 @@ function PopupAd({
   return (
     <div
       className={`popup-ad-overlay${showOverlay ? '' : ' popup-ad-overlay--transparent'}`}
+      role="presentation"
       onClick={handleOverlayClick}
     >
-      <div className={`popup-ad-content ${className}`.trim()} style={style} onClick={e => e.stopPropagation()}>
+      <div
+        className={`popup-ad-content ${className}`.trim()}
+        style={style}
+        role="presentation"
+        onClick={e => e.stopPropagation()}
+      >
         {showCloseButton && <CloseButton onClick={closePopup} />}
         {children}
       </div>

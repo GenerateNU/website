@@ -15,26 +15,18 @@ export default function TeamsPage() {
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
 
-  const children = [
-    teamPageDetails.map(team => {
-      return <TeamCard {...{ color: team.color, name: team.name, image: team.largePic }} />;
-    }),
-  ];
+  const teamCards = teamPageDetails.map(team => (
+    <TeamCard key={team.name} color={team.color} name={team.name} image={team.largePic} />
+  ));
   // todo; possibly rename component
 
   return !mobile ? (
-    <>
-      <HorizontalDesktopContainer
-        children={[<WebTeamContainer>{children}</WebTeamContainer>]}
-        desktopBGColor={'white'}
-      />
-    </>
+    <HorizontalDesktopContainer desktopBGColor={'white'}>
+      <WebTeamContainer>{teamCards}</WebTeamContainer>
+    </HorizontalDesktopContainer>
   ) : (
-    <>
-      <NewMobileContainer
-        children={[<MobileTeamContainer>{[children]}</MobileTeamContainer>]}
-        mobileBGColor={'black'}
-      />
-    </>
+    <NewMobileContainer mobileBGColor={'black'}>
+      <MobileTeamContainer>{teamCards}</MobileTeamContainer>
+    </NewMobileContainer>
   );
 }

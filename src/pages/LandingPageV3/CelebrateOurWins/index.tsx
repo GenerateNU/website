@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import NextArrow from '../../../assets/icons/arrows/nextArrowRight.svg?react';
 import PrevArrow from '../../../assets/icons/arrows/prevArrowLeft.svg?react';
@@ -18,52 +18,30 @@ export default function CelebrateOurWins() {
 
   const showcases = useSanity<SanityShowcase, Showcase>(showcaseQuery, {}, data =>
     data
-      ? data
-          .map(showcase => ({
-            ...showcase,
-            semester: showcase.semester.toUpperCase(),
-            image: urlFor(showcase.image).url(),
-          }))
-          .sort((a, b) => {
-            if (a.year === b.year) {
-              return a.semester === 'SPRING' ? -1 : 1;
-            }
+      .map(showcase => ({
+        ...showcase,
+        semester: showcase.semester.toUpperCase(),
+        image: urlFor(showcase.image).url(),
+      }))
+      .sort((a, b) => {
+        if (a.year === b.year) {
+          return a.semester === 'SPRING' ? -1 : 1;
+        }
 
-            return Number(a.year) - Number(b.year);
-          })
-      : []
+        return Number(a.year) - Number(b.year);
+      })
   );
 
-  const [selectedShowcase, setSelectedShowcase] = useState<Partial<Showcase>>(
-    showcases && showcases.length !== 0 ? showcases[showcases.length - 1] : {}
-  );
-
-  useEffect(() => {
-    setSelectedShowcase(showcases && showcases.length !== 0 ? showcases[showcases.length - 1] : {});
-  }, [showcases]);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const currentIndex = selectedIndex ?? showcases.length - 1;
+  const selectedShowcase = showcases[currentIndex];
 
   const handleLeftButtonClick = () => {
-    const currentIndex = showcases.findIndex(
-      showcase => showcase.year === selectedShowcase.year && showcase.semester === selectedShowcase.semester
-    );
-
-    if (currentIndex > 0) {
-      setSelectedShowcase(showcases[currentIndex - 1]);
-    } else {
-      setSelectedShowcase(showcases.at(-1) ?? {});
-    }
+    setSelectedIndex(currentIndex > 0 ? currentIndex - 1 : showcases.length - 1);
   };
 
   const handleRightButtonClick = () => {
-    const currentIndex = showcases.findIndex(
-      showcase => showcase.year === selectedShowcase.year && showcase.semester === selectedShowcase.semester
-    );
-
-    if (currentIndex < showcases.length - 1) {
-      setSelectedShowcase(showcases[currentIndex + 1]);
-    } else {
-      setSelectedShowcase(showcases.at(0) ?? {});
-    }
+    setSelectedIndex(currentIndex < showcases.length - 1 ? currentIndex + 1 : 0);
   };
 
   return (
@@ -72,12 +50,12 @@ export default function CelebrateOurWins() {
         <LargeStars id="showcase-large-stars" />
         <SmallStars id="showcase-small-stars-top" />
         <div className="white-header-text" id="showcase-header">
-          {copy && copy[0] && copy[0].header}
+          {copy[0]?.header}
         </div>
         <div id="showcase-top-content">
           <img src={celebrate} className="showcase-img image-shadow" alt="Placeholder" />
           <div id="showcase-right-col">
-            <div className="white-p-text">{copy && copy[0] && copy[0].content[0]}</div>
+            <div className="white-p-text">{copy[0]?.content[0]}</div>
             <SmallStars id="showcase-small-stars-bottom" />
           </div>
         </div>
@@ -88,7 +66,7 @@ export default function CelebrateOurWins() {
           </button>
           <div id="carousel-inner-content">
             <div id="showcase-carousel-label" className="showcase-year">
-              {selectedShowcase.semester && selectedShowcase.year && (
+              {selectedShowcase && (
                 <>
                   <div id="showcase-semester-label">
                     <div id="showcase-semester-highlight" className="showcase-semester-text">
@@ -110,8 +88,8 @@ export default function CelebrateOurWins() {
             </div>
             <img
               className="image-shadow showcase-carousel-img"
-              src={selectedShowcase.image}
-              alt={selectedShowcase.year}
+              src={selectedShowcase?.image}
+              alt={selectedShowcase?.year}
             />
             <div id="small-carousel-nav">
               <button className="sm-carousel-button" onClick={handleLeftButtonClick}>

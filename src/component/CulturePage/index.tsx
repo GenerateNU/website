@@ -23,21 +23,23 @@ export default function CulturePage() {
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
 
-  const children = [
-    <IntroSection disp={mobile} />,
-    <IntroImages disp={mobile} />,
-    <BelongHere disp={mobile} />,
-    <Diversity disp={mobile} />,
-    <Equity disp={mobile} />,
-    <Inclusion disp={mobile} />,
-    <Events disp={mobile} />,
-    <Events2 disp={mobile} />,
-    mobile ? undefined : <Events3 />,
-    mobile ? undefined : <Showcase />,
-    <CollageSection disp={mobile} />,
-    <Footer />,
-    <NextPage pageName="teams" url="/teams" />,
-  ];
+  const children = (
+    <>
+      <IntroSection disp={mobile} />
+      <IntroImages disp={mobile} />
+      <BelongHere disp={mobile} />
+      <Diversity disp={mobile} />
+      <Equity disp={mobile} />
+      <Inclusion disp={mobile} />
+      <Events disp={mobile} />
+      <Events2 disp={mobile} />
+      {!mobile && <Events3 />}
+      {!mobile && <Showcase />}
+      <CollageSection disp={mobile} />
+      <Footer />
+      <NextPage pageName="teams" url="/teams" />
+    </>
+  );
 
   return !mobile ? (
     <HorizontalDesktopContainer desktopBGColor={'white'}>{children}</HorizontalDesktopContainer>

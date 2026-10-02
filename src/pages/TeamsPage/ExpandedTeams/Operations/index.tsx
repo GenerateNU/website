@@ -1,4 +1,6 @@
-import { Members, OurRoles, Roles } from '../CommonTeam/OurRoles';
+import Members from '../CommonTeam/Members';
+import OurRoles from '../CommonTeam/OurRoles';
+import Roles from '../CommonTeam/Roles';
 import './style.css';
 
 export default function OperationsContainer() {

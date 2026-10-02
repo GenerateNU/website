@@ -15,15 +15,19 @@ type FeaturedProjectsViewProps = {
 };
 
 export default function FeaturedProjects() {
-  const [currentProject, setCurrentProject] = useState(Projects[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentProject = Projects[currentIndex];
   const isWebsite = useWebsite();
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
 
   const handleProject = (dir: number) => {
-    const currentIndex = Projects.indexOf(currentProject);
-    setCurrentProject(Projects[(currentIndex + dir + Projects.length) % Projects.length]);
+    setCurrentIndex((currentIndex + dir + Projects.length) % Projects.length);
   };
+
+  if (!currentProject) {
+    return null;
+  }
 
   return (
     <div className="pp-fp-projects-page-container">

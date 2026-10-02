@@ -1,7 +1,7 @@
 # What was the ticket?
 
 WT-65 UI Design: Construct JSX page to match the UI of Teams landing page.
- [Link to Ticket](https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-65)
+[Link to Ticket](https://generatenu.atlassian.net/jira/software/projects/WT/boards/2?selectedIssue=WT-65)
 
 # What did I do?
 
@@ -16,7 +16,7 @@ Key Parts
 Compared the figma and current page to ensure it correctly reflected what the design should be. Ran tests for resizing the window to ensure page
 did not ahve any scaling issues.
 
- Required checks:
+Required checks:
 
 - [Y] Did you conduct a self-review?
 - [NA] Have you written unit or integration tests?

@@ -15,16 +15,16 @@
 }
 
 .ap_img {
-    background-image: url('/images/applyBackground.JPG');
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-    filter: brightness(50%);
+  background-image: url('/images/applyBackground.JPG');
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(50%);
 }
 
 .ap_text {

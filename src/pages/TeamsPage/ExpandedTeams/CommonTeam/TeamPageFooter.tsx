@@ -17,7 +17,6 @@ type FooterPage = {
 
 type FooterLinkProps = {
   page: FooterPage;
-  currentPage: string;
 };
 
 type TitleCardProps = {
@@ -41,21 +40,20 @@ const pages: FooterPage[] = [
   { name: 'Projects', link: '/projects' },
 ];
 
-const pagesSplit: FooterPage[][] = [
-  [
-    { name: 'Generate', link: '/' },
-    { name: 'Apply', link: '/apply' },
-    { name: 'About', link: '/about' },
-  ],
-  [
-    { name: 'Culture', link: '/culture' },
-    { name: 'Teams', link: '/teams' },
-    // { name: "People", link: "/", disabled: true },
-    { name: 'Projects', link: '/projects' },
-  ],
+const leftColumnPages: FooterPage[] = [
+  { name: 'Generate', link: '/' },
+  { name: 'Apply', link: '/apply' },
+  { name: 'About', link: '/about' },
 ];
 
-const FooterLink = ({ page, currentPage }: FooterLinkProps) => {
+const rightColumnPages: FooterPage[] = [
+  { name: 'Culture', link: '/culture' },
+  { name: 'Teams', link: '/teams' },
+  // { name: "People", link: "/", disabled: true },
+  { name: 'Projects', link: '/projects' },
+];
+
+const FooterLink = ({ page }: FooterLinkProps) => {
   const { name, link, disabled } = page;
   const currentURI = window.location.pathname.split('/').at(1);
   var isCurrentPage = `/${currentURI}`.includes(link) && link !== '/';
@@ -86,7 +84,6 @@ const FooterLink = ({ page, currentPage }: FooterLinkProps) => {
 };
 
 function FooterLinks() {
-  const currentPageUrl = window.location.href;
   const isWebsite = useWebsite();
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
@@ -94,19 +91,19 @@ function FooterLinks() {
   return mobile ? (
     <span className="footer-pages">
       {pages.map((page, index) => (
-        <FooterLink key={index} page={page} currentPage={currentPageUrl.substring(currentPageUrl.indexOf('/'))} />
+        <FooterLink key={index} page={page} />
       ))}
     </span>
   ) : (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       <span className="footer-pages">
-        {pagesSplit[0].map((page, index) => (
-          <FooterLink key={index} page={page} currentPage={currentPageUrl.substring(currentPageUrl.lastIndexOf('/'))} />
+        {leftColumnPages.map((page, index) => (
+          <FooterLink key={index} page={page} />
         ))}
       </span>
       <span className="footer-pages">
-        {pagesSplit[1].map((page, index) => (
-          <FooterLink key={index} page={page} currentPage={currentPageUrl.substring(currentPageUrl.lastIndexOf('/'))} />
+        {rightColumnPages.map((page, index) => (
+          <FooterLink key={index} page={page} />
         ))}
       </span>
     </div>
@@ -128,7 +125,7 @@ function TeamPageFooter({ color, page }: TeamPageFooterProps) {
 
   const handleOnClick = () => {
     window.scrollTo(0, 0);
-    navigate('/');
+    void navigate('/');
   };
 
   const handleScrollClick = () => {
@@ -167,8 +164,8 @@ function TeamPageFooter({ color, page }: TeamPageFooterProps) {
           {mobile ? (
             <ShadowedButton
               className="up-icon-mobile"
-              xPad={mobile ? '3vw' : '2vw'}
-              yPad={mobile ? '2vw' : '2vw'}
+              xPad="3vw"
+              yPad="2vw"
               textColor="white"
               text={<img width={'40vh'} src={Arrow} alt="arrow up" />}
               onClick={handleScrollClick}
@@ -192,8 +189,8 @@ function TeamPageFooter({ color, page }: TeamPageFooterProps) {
           ) : (
             <ShadowedButton
               className="up-icon"
-              xPad={mobile ? '15vw' : '2vw'}
-              yPad={mobile ? '6vw' : '2vw'}
+              xPad="2vw"
+              yPad="2vw"
               textColor="white"
               text={<img width={'40vh'} src={Arrow} alt="arrow-up" />}
               onClick={handleScrollClick}

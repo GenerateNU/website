@@ -13,13 +13,9 @@ export function useSanity<Raw, T>(
   const [data, setData] = useState<(Raw | T)[]>([]);
 
   useEffect(() => {
-    const fetchData = async (): Promise<void> => {
-      const fetchedData = await client.fetch<Raw[]>(query, params);
-      const modifiedData = modifier(fetchedData);
-      setData(modifiedData);
-    };
-
-    fetchData();
+    void client.fetch<Raw[]>(query, params).then(fetchedData => {
+      setData(modifier(fetchedData));
+    });
   }, [] /*, [modifier, params, query]*/);
 
   return data;

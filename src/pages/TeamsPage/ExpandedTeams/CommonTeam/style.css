@@ -121,14 +121,7 @@
   margin-bottom: 10px;
   /* left: 100px;
     top: 1480px; */
-  background: linear-gradient(
-    180deg,
-    #ffbf3c 8.33%,
-    #7b61ff 28.13%,
-    #6fcf97 50.52%,
-    #ff0000 72.92%,
-    #1477f8 90.62%
-  );
+  background: linear-gradient(180deg, #ffbf3c 8.33%, #7b61ff 28.13%, #6fcf97 50.52%, #ff0000 72.92%, #1477f8 90.62%);
 }
 
 .roles-banner-color {

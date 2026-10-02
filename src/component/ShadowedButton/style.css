@@ -1,11 +1,11 @@
 .button-style {
-    font-family: 'Space Mono';
-    color: black;
-    box-shadow: -0.5rem 0.6rem black;
+  font-family: 'Space Mono';
+  color: black;
+  box-shadow: -0.5rem 0.6rem black;
 }
 
 .button-style-right {
-    font-family: 'Space Mono';
-    color: black;
-    box-shadow: 1rem 1rem black;
+  font-family: 'Space Mono';
+  color: black;
+  box-shadow: 1rem 1rem black;
 }
