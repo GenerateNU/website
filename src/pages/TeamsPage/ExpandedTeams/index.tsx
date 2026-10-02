@@ -4,10 +4,11 @@ import type { ComponentType } from 'react';
 import './style.css';
 import { Routes, Route } from 'react-router-dom';
 
-import NavBar from '../../../component/NavBar';
-import { TEAMS, isTeam } from '../../../data/teams';
-import type { Team } from '../../../data/teams';
-import useWebsite from '../../../shared/useWebsite';
+import NavBar from '@/component/NavBar';
+import { TEAMS, isTeam } from '@/data/teams';
+import type { Team } from '@/data/teams';
+import useWebsite from '@/shared/useWebsite';
+
 import { ExpandedTeamsJSON } from './CommonTeam/JSONFiles/ExpandedTeamsJSON';
 import TeamPageFooter from './CommonTeam/TeamPageFooter';
 import TextRow from './CommonTeam/textRow';

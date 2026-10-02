@@ -1,8 +1,8 @@
-import Email from '../../../assets/icons/socials/Email.svg?react';
-import Instagram from '../../../assets/icons/socials/Instagram.svg?react';
-import LinkedIn from '../../../assets/icons/socials/LinkedIn.svg?react';
-import DownArrow from '../../../assets/images/landingpage-v3/DownArrow.svg?react';
-import GenerateLogo from '../../../assets/images/landingpage-v3/GenerateLogo.svg?react';
+import Email from '@/assets/icons/socials/Email.svg?react';
+import Instagram from '@/assets/icons/socials/Instagram.svg?react';
+import LinkedIn from '@/assets/icons/socials/LinkedIn.svg?react';
+import DownArrow from '@/assets/images/landingpage-v3/DownArrow.svg?react';
+import GenerateLogo from '@/assets/images/landingpage-v3/GenerateLogo.svg?react';
 
 type NavigationProps = {
   scrollToWhatIsGenerate: () => void;

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-import RightArrow from '../../../assets/images/applypage-v2/RightArrow';
-import WhiteDownArrow from '../../../assets/images/applypage-v2/WhiteDownArrow.svg?react';
-import WhiteUpArrow from '../../../assets/images/applypage-v2/WhiteUpArrow.svg?react';
-import RoleCategory from '../RoleCategory';
-import Tag from '../Tag';
+import RightArrow from '@/assets/images/applypage-v2/RightArrow';
+import WhiteDownArrow from '@/assets/images/applypage-v2/WhiteDownArrow.svg?react';
+import WhiteUpArrow from '@/assets/images/applypage-v2/WhiteUpArrow.svg?react';
+import RoleCategory from '@/pages/ApplyPageV2/RoleCategory';
+import Tag from '@/pages/ApplyPageV2/Tag';
+
 import './style.css';
-import type { ApplicationRole, ApplyTeam } from '../types';
+import type { ApplicationRole, ApplyTeam } from '@/pages/ApplyPageV2/types';
 
 type TeamApplicationCardProps = {
   team: ApplyTeam;

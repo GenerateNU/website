@@ -1,6 +1,6 @@
-import weare from '../../../assets/images/landingpage/weare/weare.jpg';
-import { useSanity } from '../../../services/useSanity';
-import type { Value } from '../types';
+import weare from '@/assets/images/landingpage/weare/weare.jpg';
+import type { Value } from '@/pages/LandingPageV3/types';
+import { useSanity } from '@/services/useSanity';
 
 export default function WeAre() {
   const query = `*[_type == "value"] {value, index} | order(index asc)`;

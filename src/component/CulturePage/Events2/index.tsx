@@ -1,8 +1,9 @@
 import React from 'react';
 
-import CelebrateRepresent from '../Events2/CelebrateRepresent.png';
+import CelebrateRepresent from '@/component/CulturePage/Events2/CelebrateRepresent.png';
+
 import './style.css';
-import type { SectionProps } from '../types';
+import type { SectionProps } from '@/component/CulturePage/types';
 
 const desktopContent = (
   <>

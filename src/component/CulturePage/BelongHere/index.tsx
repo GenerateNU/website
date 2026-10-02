@@ -1,8 +1,9 @@
 import React from 'react';
 
-import ColorBlock from '../../../assets/images/culturepage/Color block.png';
+import ColorBlock from '@/assets/images/culturepage/Color block.png';
+
 import './style.css';
-import type { SectionProps } from '../types';
+import type { SectionProps } from '@/component/CulturePage/types';
 
 const desktopContent = () => (
   // <div className="container">

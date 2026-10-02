@@ -1,5 +1,6 @@
-import type { Team } from '../../../../data/teams';
-import useWebsite from '../../../../shared/useWebsite';
+import type { Team } from '@/data/teams';
+import useWebsite from '@/shared/useWebsite';
+
 import FeatureTextRow from './featureTextRow';
 import { ExpandedTeamsJSON } from './JSONFiles/ExpandedTeamsJSON';
 

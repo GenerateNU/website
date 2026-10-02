@@ -1,15 +1,16 @@
-import Engagement1 from '../../../../../assets/images/TeamsPageImages/engagement1.jpg';
-import Engagement2 from '../../../../../assets/images/TeamsPageImages/engagement2.jpg';
-import Hardware2 from '../../../../../assets/images/TeamsPageImages/fallshowcase-43.jpg';
-import Hardware1 from '../../../../../assets/images/TeamsPageImages/hardware1.jpg';
-import Leads from '../../../../../assets/images/TeamsPageImages/leads.jpg';
-import Legacy from '../../../../../assets/images/TeamsPageImages/legacy.jpg';
-import Management1 from '../../../../../assets/images/TeamsPageImages/management1.jpg';
-import Management2 from '../../../../../assets/images/TeamsPageImages/management2.jpg';
-import Operations1 from '../../../../../assets/images/TeamsPageImages/operations1.jpg';
-import Operations2 from '../../../../../assets/images/TeamsPageImages/operations2.jpg';
-import TeamsStock from '../../../../../assets/images/TeamsPageImages/TeamsStockPhoto.svg';
-import type { Team } from '../../../../../data/teams';
+import Engagement1 from '@/assets/images/TeamsPageImages/engagement1.jpg';
+import Engagement2 from '@/assets/images/TeamsPageImages/engagement2.jpg';
+import Hardware2 from '@/assets/images/TeamsPageImages/fallshowcase-43.jpg';
+import Hardware1 from '@/assets/images/TeamsPageImages/hardware1.jpg';
+import Leads from '@/assets/images/TeamsPageImages/leads.jpg';
+import Legacy from '@/assets/images/TeamsPageImages/legacy.jpg';
+import Management1 from '@/assets/images/TeamsPageImages/management1.jpg';
+import Management2 from '@/assets/images/TeamsPageImages/management2.jpg';
+import Operations1 from '@/assets/images/TeamsPageImages/operations1.jpg';
+import Operations2 from '@/assets/images/TeamsPageImages/operations2.jpg';
+import TeamsStock from '@/assets/images/TeamsPageImages/TeamsStockPhoto.svg';
+import type { Team } from '@/data/teams';
+
 import type { ExpandedTeam } from './types';
 
 // What Youll learn could probably be added here?

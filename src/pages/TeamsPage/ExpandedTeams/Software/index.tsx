@@ -1,11 +1,12 @@
 import React from 'react';
 
-import Featured from '../CommonTeam/Featured';
-import Members from '../CommonTeam/Members';
-import OurRoles from '../CommonTeam/OurRoles';
-import Roles from '../CommonTeam/Roles';
+import Featured from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/Featured';
+import Members from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/Members';
+import OurRoles from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/OurRoles';
+import Roles from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/Roles';
+
 import './style.css';
-import { WhatYouLearnContainer } from '../CommonTeam/WhatYouLearnContainer';
+import { WhatYouLearnContainer } from '@/pages/TeamsPage/ExpandedTeams/CommonTeam/WhatYouLearnContainer';
 
 export default function SoftwareContainer() {
   return (

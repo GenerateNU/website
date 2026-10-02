@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 
-import type { Team } from '../../../../data/teams';
-import useWebsite from '../../../../shared/useWebsite';
+import type { Team } from '@/data/teams';
+import useWebsite from '@/shared/useWebsite';
+
 import { ExpandedTeamsJSON } from './JSONFiles/ExpandedTeamsJSON';
 import { RolesJSON } from './JSONFiles/RolesJSON';
 import RoleContainer from './RoleContainer';

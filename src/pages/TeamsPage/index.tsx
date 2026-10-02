@@ -1,11 +1,12 @@
 import React from 'react';
 
 import './style.css';
-//import DesktopMobileScrollAndBackgroundHandler from "../../component/DesktopMobileHandler";
-import HorizontalDesktopContainer from '../../component/DesktopMobileHandler/HorizontalDesktopContainer';
-import NewMobileContainer from '../../component/DesktopMobileHandler/NewMobileContainer';
-import teamPageDetails from '../../data/teamPageDetails';
-import useWebsite from '../../shared/useWebsite';
+//import DesktopMobileScrollAndBackgroundHandler from "@/component/DesktopMobileHandler";
+import HorizontalDesktopContainer from '@/component/DesktopMobileHandler/HorizontalDesktopContainer';
+import NewMobileContainer from '@/component/DesktopMobileHandler/NewMobileContainer';
+import teamPageDetails from '@/data/teamPageDetails';
+import useWebsite from '@/shared/useWebsite';
+
 import TeamCard from './TeamCard';
 import MobileTeamContainer from './TeamPageAssets/MobileTeamContainer';
 import WebTeamContainer from './TeamPageAssets/WebTeamContainer';

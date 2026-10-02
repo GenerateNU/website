@@ -2,11 +2,13 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-import GenerateLogo from '../../../../assets/images/landingpage-v2/footerlogo.svg';
+import GenerateLogo from '@/assets/images/landingpage-v2/footerlogo.svg';
+
 import './footerStyle.css';
-import Arrow from '../../../../assets/images/projectspage/arrowbutton.svg';
-import ShadowedButton from '../../../../component/ShadowedButton';
-import useWebsite from '../../../../shared/useWebsite';
+import Arrow from '@/assets/images/projectspage/arrowbutton.svg';
+import ShadowedButton from '@/component/ShadowedButton';
+import useWebsite from '@/shared/useWebsite';
+
 import SocialIcons from './SocialIcons';
 
 type FooterPage = {

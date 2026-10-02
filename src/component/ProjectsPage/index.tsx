@@ -1,10 +1,11 @@
 import React from 'react';
 
-import NewMobileContainer from '../../component/DesktopMobileHandler/NewMobileContainer';
-import useWebsite from '../../shared/useWebsite';
-import HorizontalDesktopContainer from '../DesktopMobileHandler/HorizontalDesktopContainer';
-import Footer from '../Footer';
-import NextPage from '../NextPage';
+import HorizontalDesktopContainer from '@/component/DesktopMobileHandler/HorizontalDesktopContainer';
+import NewMobileContainer from '@/component/DesktopMobileHandler/NewMobileContainer';
+import Footer from '@/component/Footer';
+import NextPage from '@/component/NextPage';
+import useWebsite from '@/shared/useWebsite';
+
 import AllProjects from './AllProjects/AllProjects';
 import FeaturedProjects from './FeaturedProjects/FeaturedProjects';
 

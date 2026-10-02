@@ -1,10 +1,11 @@
 import React from 'react';
 
-import IntroImg1 from '../../../component/CulturePage/IntroImages/website-2.jpg';
+import IntroImg1 from '@/component/CulturePage/IntroImages/website-2.jpg';
+
 import './style.css';
-import IntroImg2 from '../../../component/CulturePage/IntroImages/website-3.jpg';
-import IntroImg3 from '../../../component/CulturePage/IntroImages/website-4.jpg';
-import type { SectionProps } from '../types';
+import IntroImg2 from '@/component/CulturePage/IntroImages/website-3.jpg';
+import IntroImg3 from '@/component/CulturePage/IntroImages/website-4.jpg';
+import type { SectionProps } from '@/component/CulturePage/types';
 
 const desktopContent = () => {
   return (

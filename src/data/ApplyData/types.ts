@@ -1,4 +1,4 @@
-import type { Team } from '../teams';
+import type { Team } from '@/data/teams';
 
 export type ApplicationGroup = Team | 'clients';
 

@@ -1,5 +1,5 @@
 import './style.css';
-import Arrow from '../../assets/images/nextpage/arrow.svg';
+import Arrow from '@/assets/images/nextpage/arrow.svg';
 
 type NextPageProps = {
   url: string;

@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Ref } from 'react';
 
-import showcase from '../../../assets/images/landingpage/weare/showcase.jpg';
-import workshop from '../../../assets/images/landingpage/weare/workshop.jpg';
-import { useSanity } from '../../../services/useSanity';
-import type { Copy } from '../types';
+import showcase from '@/assets/images/landingpage/weare/showcase.jpg';
+import workshop from '@/assets/images/landingpage/weare/workshop.jpg';
+import type { Copy } from '@/pages/LandingPageV3/types';
+import { useSanity } from '@/services/useSanity';
 
 type WhatIsGenerateProps = {
   ref?: Ref<HTMLDivElement>;

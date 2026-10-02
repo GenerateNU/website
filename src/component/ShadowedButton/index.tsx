@@ -2,7 +2,7 @@ import React from 'react';
 import type { ReactNode } from 'react';
 
 import './style.css';
-import { constants } from '../../assets/constants';
+import { constants } from '@/assets/constants';
 
 type ShadowedButtonProps = {
   text: ReactNode;

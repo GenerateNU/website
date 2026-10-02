@@ -1,13 +1,14 @@
 import './style.css';
 import { useState } from 'react';
 
-import Alia from '../../../assets/images/projectspage/alia.svg';
-import Arctic from '../../../assets/images/projectspage/arctic.svg';
-import AutoPasser from '../../../assets/images/projectspage/autopasser.svg';
-import HotDate from '../../../assets/images/projectspage/hotdate.svg';
-import Jurni from '../../../assets/images/projectspage/jurni.svg';
-import ShowNxt from '../../../assets/images/projectspage/shownxt.svg';
-import toPairs from '../../../shared/toPairs';
+import Alia from '@/assets/images/projectspage/alia.svg';
+import Arctic from '@/assets/images/projectspage/arctic.svg';
+import AutoPasser from '@/assets/images/projectspage/autopasser.svg';
+import HotDate from '@/assets/images/projectspage/hotdate.svg';
+import Jurni from '@/assets/images/projectspage/jurni.svg';
+import ShowNxt from '@/assets/images/projectspage/shownxt.svg';
+import toPairs from '@/shared/toPairs';
+
 import Project from './Project/Project';
 import type { ProjectTeam } from './Project/Project';
 

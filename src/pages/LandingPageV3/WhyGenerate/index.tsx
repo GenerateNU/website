@@ -1,8 +1,8 @@
-import clients from '../../../assets/images/landingpage/weare/cstar.jpg';
-import members from '../../../assets/images/landingpage/weare/members.JPG';
-import partners from '../../../assets/images/landingpage/weare/overhead.jpg';
-import { useSanity } from '../../../services/useSanity';
-import type { Copy } from '../types';
+import clients from '@/assets/images/landingpage/weare/cstar.jpg';
+import members from '@/assets/images/landingpage/weare/members.JPG';
+import partners from '@/assets/images/landingpage/weare/overhead.jpg';
+import type { Copy } from '@/pages/LandingPageV3/types';
+import { useSanity } from '@/services/useSanity';
 
 export default function WhyGenerate() {
   const query1 = `*[_type == "copy" && key == "why-generate-1"]{header, content}`;

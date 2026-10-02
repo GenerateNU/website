@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
 import './footerStyle.css';
-import { SocialIcon } from '../../../../component/SocialIcon';
-import { socialIcons } from '../../../../component/socialIcons';
+import { SocialIcon } from '@/component/SocialIcon';
+import { socialIcons } from '@/component/socialIcons';
 
 type SocialIconsProps = {
   mobile: boolean;

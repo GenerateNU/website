@@ -1,6 +1,7 @@
 import React from 'react';
 
-import type { SectionProps } from '../types';
+import type { SectionProps } from '@/component/CulturePage/types';
+
 import './style.css';
 import RectImg1 from './website-5.jpg';
 import RectImg2 from './website-6.jpg';

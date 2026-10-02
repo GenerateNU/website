@@ -1,6 +1,7 @@
 import React from 'react';
 
-import useWebsite from '../../shared/useWebsite';
+import useWebsite from '@/shared/useWebsite';
+
 import HorizontalFooter from './HorizontalFooter';
 import VerticalFooter from './VerticalFooter';
 

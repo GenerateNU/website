@@ -1,9 +1,10 @@
 import React, { useMemo } from 'react';
 
-import NavBar from '../../component/NavBar';
-import { useSanity } from '../../services/useSanity';
-import useWebsite from '../../shared/useWebsite';
-import Footer from '../LandingPageV3/Footer';
+import NavBar from '@/component/NavBar';
+import Footer from '@/pages/LandingPageV3/Footer';
+import { useSanity } from '@/services/useSanity';
+import useWebsite from '@/shared/useWebsite';
+
 import TeamApplicationCard from './TeamApplicationCard';
 import './style.css';
 import type { ApplyTeam, SanityApplyTeam } from './types';

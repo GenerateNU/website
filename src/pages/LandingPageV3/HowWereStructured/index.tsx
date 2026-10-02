@@ -1,9 +1,10 @@
 import React, { useMemo, useState } from 'react';
 
-import { urlFor } from '../../../client';
-import { useSanity } from '../../../services/useSanity';
+import { urlFor } from '@/client';
+import type { Copy, SanityStructuredTeam, StructuredTeam } from '@/pages/LandingPageV3/types';
+
 import './style.css';
-import type { Copy, SanityStructuredTeam, StructuredTeam } from '../types';
+import { useSanity } from '@/services/useSanity';
 
 const ARC_STEPS = 16;
 
