@@ -1,5 +1,5 @@
 # Large tooling/style commits to skip in `git blame`.
-# GitHub applies this file automatically. Locally, running `just install` sets:
+# GitHub applies this file automatically. Locally, running `mise run install` sets:
 #   git config blame.ignoreRevsFile .git-blame-ignore-revs
 #
 

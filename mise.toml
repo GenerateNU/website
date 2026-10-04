@@ -1,0 +1,84 @@
+# Tool versions and tasks for this repo. Run `mise install` to install the tools
+# and `mise tasks` to list the tasks.
+# Keep node in sync with .nvmrc, and bun with packageManager in package.json and
+# BUN_VERSION in netlify.toml. Netlify reads those files, not this one.
+[tools]
+node = "24"
+bun = "1.4.4"
+
+[tasks.install]
+description = "Install dependencies for the website and the Sanity Studio, and configure git blame"
+run = ["bun install", "cd sanity && bun install", "git config blame.ignoreRevsFile .git-blame-ignore-revs"]
+
+[tasks.dev]
+description = "Start the website dev server (http://localhost:5173)"
+run = "bun run dev"
+
+[tasks.build]
+description = "Build the website for production into build/"
+run = "bun run build"
+
+[tasks.preview]
+description = "Preview the production build locally"
+run = "bun run preview"
+
+[tasks.typecheck]
+description = "Type-check the website"
+run = "bun run typecheck"
+
+[tasks.lint]
+description = "Lint the website"
+run = "bun run lint"
+
+[tasks.lint-fix]
+description = "Lint and apply safe auto-fixes"
+run = "bun run lint:fix"
+
+[tasks.format]
+description = "Format all files"
+run = "bun run format"
+
+[tasks.format-check]
+description = "Check formatting without changing files"
+run = "bun run format:check"
+
+[tasks.knip]
+description = "Find unused files, exports and dependencies"
+run = "bun run knip"
+
+[tasks.test-e2e]
+description = "Run the Playwright smoke tests (builds the site first)"
+run = "bun run test:e2e"
+
+[tasks.install-browsers]
+description = "Install the Playwright browser used by the smoke tests"
+run = "bunx playwright install chromium"
+
+[tasks.check]
+description = "Run the fast checks: types, lint and formatting"
+depends = ["typecheck", "lint", "format-check"]
+
+# build and test-e2e both write to build/, so run these one after another
+[tasks.ci]
+description = "Run everything CI runs"
+run = [{ task = "check" }, { task = "build" }, { task = "test-e2e" }]
+
+[tasks.studio]
+description = "Start the Sanity Studio locally"
+dir = "sanity"
+run = "bun run dev"
+
+[tasks.studio-typecheck]
+description = "Type-check the Sanity Studio"
+dir = "sanity"
+run = "bun run typecheck"
+
+[tasks.studio-build]
+description = "Build the Sanity Studio"
+dir = "sanity"
+run = "bun run build"
+
+[tasks.studio-deploy]
+description = "Deploy the Sanity Studio"
+dir = "sanity"
+run = "bun run deploy"
