@@ -2,10 +2,11 @@
 default:
     @just --list
 
-# Install dependencies for the website and the Sanity Studio
+# Install dependencies for the website and the Sanity Studio, and configure git blame
 install:
     bun install
     cd sanity && bun install
+    git config blame.ignoreRevsFile .git-blame-ignore-revs
 
 # Start the website dev server (http://localhost:5173)
 dev:
