@@ -1,0 +1,13 @@
+# Large tooling/style commits to skip in `git blame`.
+# GitHub applies this file automatically. Locally, running `just install` sets:
+#   git config blame.ignoreRevsFile .git-blame-ignore-revs
+#
+
+# chore(knip): add `knip` config and more cleanup (#246)
+e025d6fc364fd515a17a949e54854ba88cc90125
+
+# style: migrate to oxlint/oxfmt (#250)
+23633847df0a23f1e18aedb5264af94607458da1
+
+# refactor: require CI checks and cleanup (#267) — repo-wide oxfmt/oxlint fixes
+815e735ad287d0e88f3fb514dcb868792499778b
