@@ -4,9 +4,11 @@ import { useState } from 'react';
 import Alia from '@/assets/images/projectspage/alia.svg';
 import Arctic from '@/assets/images/projectspage/arctic.svg';
 import AutoPasser from '@/assets/images/projectspage/autopasser.svg';
+import Earnz from '@/assets/images/projectspage/earnz.svg';
 import HotDate from '@/assets/images/projectspage/hotdate.svg';
 import Jurni from '@/assets/images/projectspage/jurni.svg';
 import ShowNxt from '@/assets/images/projectspage/shownxt.svg';
+import SmartyPill from '@/assets/images/projectspage/smartypill.svg';
 import toPairs from '@/shared/toPairs';
 
 import Project from './Project/Project';
@@ -42,6 +44,16 @@ const filterData = (query: string, data: string[]): string[] => {
 };
 
 const projects: ProjectSummary[] = [
+  {
+    name: 'Earnz',
+    image: Earnz,
+    teams: ['software'],
+  },
+  {
+    name: 'SmartyPill',
+    image: SmartyPill,
+    teams: ['software', 'hardware'],
+  },
   {
     name: 'Jurni',
     image: Jurni,
