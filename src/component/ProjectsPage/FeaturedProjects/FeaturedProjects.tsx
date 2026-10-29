@@ -64,19 +64,6 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }: Feat
             <h1 className="pp-fp-projects-desktop">{currentProject.name}</h1>
             <h2 className="pp-fp-project-team pp-fp-projects-desktop">{currentProject.type}</h2>
             <div className="pp-fp-desc">{currentProject.description}</div>
-            {/* <div className='view-pp-fp-project-div' style={{ marginTop: '10vw' }}>
-            <ShadowedButton
-              fillColor='white'
-              xPad={mobile ? '12vw' : '60px'}
-              yPad={mobile ? '2vw' : '20px'}
-              textColor='black'
-              fontSize='2vh'
-              text='view'
-              onClick={() =>
-                (window.location.href = `/case-study/${currentProject.name.toLowerCase()}`)
-              }
-            />
-          </div> */}
           </div>
           <div className="pp-fp-projects-buttons pp-fp-desktop-nav">
             <ShadowedButton
