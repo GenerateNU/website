@@ -48,16 +48,24 @@ export default function FeaturedProjects() {
 
 function DesktopFeaturedProjects({ handleProject, currentProject, mobile }: FeaturedProjectsViewProps) {
   return (
-    <>
-      <div className="featured-pp-fp-projects-text">
-        <div className="pp-fp-projects-bg">
-          <h1 className="pp-fp-projects-title">Featured Projects</h1>
-          <p className="pp-fp-projects-text">
-            Teams work side-by-side to ensure products and processes are beyond expectations
-          </p>
+    <div className="pp-fp-desktop">
+      <div className="pp-fp-desktop-header">
+        <h1 className="pp-fp-projects-title">Featured Projects</h1>
+        <p className="pp-fp-projects-text">
+          Teams work side-by-side to ensure products and processes are beyond expectations
+        </p>
+      </div>
+      <div className="pp-fp-desktop-body">
+        <div className="pp-fp-desktop-image">
+          <img className="pp-fp-image" src={currentProject.image} alt={`${currentProject.name} mockup`} />
         </div>
-        <div className="featured-pp-fp-project-buttons">
-          <div className="pp-fp-projects-buttons" style={{ marginTop: '10vw' }}>
+        <div className="pp-fp-desktop-info">
+          <div className="pp-fp-project-text">
+            <h1 className="pp-fp-projects-desktop">{currentProject.name}</h1>
+            <h2 className="pp-fp-project-team pp-fp-projects-desktop">{currentProject.type}</h2>
+            <div className="pp-fp-desc">{currentProject.description}</div>
+          </div>
+          <div className="pp-fp-projects-buttons pp-fp-desktop-nav">
             <ShadowedButton
               fillColor="white"
               className="pp-fp-projects-forward"
@@ -65,7 +73,7 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }: Feat
               yPad={mobile ? '6vw' : '2vw'}
               textColor="white"
               text={<img width={'40vh'} src={Arrow} alt="arrow icon" />}
-              onClick={() => handleProject(1)}
+              onClick={() => handleProject(-1)}
             />
             <ShadowedButton
               fillColor="white"
@@ -74,35 +82,12 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }: Feat
               yPad={mobile ? '6vw' : '2vw'}
               textColor="white"
               text={<img width={'40vh'} src={Arrow} alt="arrow icon" />}
-              onClick={() => handleProject(-1)}
+              onClick={() => handleProject(1)}
             />
           </div>
         </div>
       </div>
-      <div className="pp-fp-project">
-        <div className="image-container">
-          <img className="pp-fp-image" src={currentProject.image} alt="arrow icon" />
-        </div>
-        <div className="pp-fp-project-text">
-          <h1 className="pp-fp-projects-desktop">{currentProject.name}</h1>
-          <h2 className="pp-fp-project-team pp-fp-projects-desktop">{currentProject.type}</h2>
-          <div className="pp-fp-desc">{currentProject.description}</div>
-          {/* <div className='view-pp-fp-project-div' style={{ marginTop: '10vw' }}>
-            <ShadowedButton
-              fillColor='white'
-              xPad={mobile ? '12vw' : '60px'}
-              yPad={mobile ? '2vw' : '20px'}
-              textColor='black'
-              fontSize='2vh'
-              text='view'
-              onClick={() =>
-                (window.location.href = `/case-study/${currentProject.name.toLowerCase()}`)
-              }
-            />
-          </div> */}
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
 
@@ -149,7 +134,7 @@ function MobileFeaturedProjects({ handleProject, currentProject, mobile }: Featu
                 yPad={mobile ? '3vw' : '4vw'}
                 textColor="white"
                 text={<img width={'40vh'} src={Arrow} alt="arrow icon" />}
-                onClick={() => handleProject(1)}
+                onClick={() => handleProject(-1)}
               />
               <ShadowedButton
                 fillColor="white"
@@ -158,7 +143,7 @@ function MobileFeaturedProjects({ handleProject, currentProject, mobile }: Featu
                 yPad={mobile ? '3vw' : '4vw'}
                 textColor="white"
                 text={<img width={'40vh'} src={Arrow} alt="arrow icon" />}
-                onClick={() => handleProject(-1)}
+                onClick={() => handleProject(1)}
               />
             </div>
           </div>
