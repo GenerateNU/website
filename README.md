@@ -1,5 +1,6 @@
 # Generate Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/71cf79a8-2297-413e-809a-5dc4a9dcca0a/deploy-status)](https://app.netlify.com/projects/sprightly-manatee-243873/deploys)
 [![CI](https://github.com/GenerateNU/website/actions/workflows/ci.yml/badge.svg)](https://github.com/GenerateNU/website/actions/workflows/ci.yml)
 
 The website for [Generate](https://generatenu.com), Northeastern's student-led product development studio.
