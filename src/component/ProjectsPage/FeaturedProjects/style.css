@@ -17,6 +17,13 @@
   }
 }
 
+/* .featured-pp-fp-projects overflows this 80vw container, so keep All Projects clear of it */
+@media (min-width: 1501px) {
+  .pp-fp-projects-page-container {
+    margin-right: 12vw;
+  }
+}
+
 .featured-pp-fp-projects {
   display: flex;
   width: 90vw;
@@ -72,6 +79,7 @@
 .pp-fp-project-text h1 {
   font-family: 'Space Mono 700';
   font-size: 7vh;
+  max-width: 11ch;
 }
 
 .pp-fp-project-team {
@@ -87,12 +95,69 @@
   font-family: 'Outfit';
   font-size: 2vh;
   font-weight: 300;
-  line-height: 2vh;
+  line-height: 1.5;
   letter-spacing: 0em;
   text-align: left;
-  width: fit-content;
-  margin-right: 80vw;
+  max-width: 420px;
   margin-top: 3vh;
+}
+
+.pp-fp-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  width: 100%;
+  height: 100vh;
+  padding: 7rem 2vw 2rem 4%;
+}
+
+.pp-fp-desktop-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.pp-fp-desktop-header .pp-fp-projects-title {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.pp-fp-desktop-header .pp-fp-projects-text {
+  max-width: 44ch;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pp-fp-desktop-nav {
+  display: flex;
+  margin-top: auto;
+}
+
+.pp-fp-desktop-body {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 3vw;
+  min-height: 0;
+}
+
+/* Top-aligned text and bottom-pinned arrows so a two-line project name doesn't shift anything */
+.pp-fp-desktop-info {
+  display: flex;
+  flex: 0 0 28vw;
+  flex-direction: column;
+  align-self: stretch;
+  min-width: 340px;
+  padding: 4vh 0 2vh;
+}
+
+.pp-fp-desktop-image {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 100%;
 }
 
 .pp-fp-project-text p {
@@ -222,6 +287,7 @@
   .pp-fp-project {
     flex-direction: column;
     height: auto;
+    padding-top: 2rem;
   }
 
   .featured-pp-fp-projects-text {
@@ -304,7 +370,7 @@
 
   .image-container {
     width: 100vw;
-    height: 25vh;
+    height: 45vh;
     object-fit: contain;
   }
 

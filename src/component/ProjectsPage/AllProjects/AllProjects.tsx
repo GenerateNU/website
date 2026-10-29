@@ -6,9 +6,13 @@ import Arctic from '@/assets/images/projectspage/arctic.svg';
 import AutoPasser from '@/assets/images/projectspage/autopasser.svg';
 import Earnz from '@/assets/images/projectspage/earnz.svg';
 import HotDate from '@/assets/images/projectspage/hotdate.svg';
+import InsideAthletics from '@/assets/images/projectspage/insideathletics.png';
 import Jurni from '@/assets/images/projectspage/jurni.svg';
+import SelfServe from '@/assets/images/projectspage/selfserve.png';
 import ShowNxt from '@/assets/images/projectspage/shownxt.svg';
+import SkillSpark from '@/assets/images/projectspage/skillspark.png';
 import SmartyPill from '@/assets/images/projectspage/smartypill.svg';
+import Toggo from '@/assets/images/projectspage/toggo.svg';
 import toPairs from '@/shared/toPairs';
 
 import Project from './Project/Project';
@@ -44,6 +48,26 @@ const filterData = (query: string, data: string[]): string[] => {
 };
 
 const projects: ProjectSummary[] = [
+  {
+    name: 'SkillSpark',
+    image: SkillSpark,
+    teams: ['software'],
+  },
+  {
+    name: 'Toggo',
+    image: Toggo,
+    teams: ['software'],
+  },
+  {
+    name: 'SelfServe',
+    image: SelfServe,
+    teams: ['software'],
+  },
+  {
+    name: 'Inside Athletics',
+    image: InsideAthletics,
+    teams: ['software'],
+  },
   {
     name: 'Earnz',
     image: Earnz,
