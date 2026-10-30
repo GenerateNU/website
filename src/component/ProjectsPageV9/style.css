@@ -1,0 +1,632 @@
+.pp9-page {
+  --pp9-bg: #08081a;
+  --pp9-panel: #13132e;
+  --pp9-panel-lit: #1c1c46;
+  --pp9-line: #34346e;
+  --pp9-yellow: #ffbf3c;
+  --pp9-yellow-dark: #b5801a;
+  --pp9-blue: #187dff;
+  --pp9-red: #ff4d6d;
+  --pp9-text: #f4f4ff;
+  --pp9-dim: rgba(244, 244, 255, 0.75);
+  /* The pixel font is for labels and headings only; anything people read at length stays in the site's fonts. */
+  --pp9-pixel: 'Press Start 2P', 'Space Mono 700', monospace;
+  /* The shared footer pokes past the edge on phones; clip (not hidden) keeps the sticky monitor working. */
+  overflow-x: clip;
+  min-height: 100vh;
+  background: var(--pp9-bg);
+}
+
+.pp9-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- The cabinet screen ---------- */
+
+.pp9-arcade {
+  position: relative;
+  padding: calc(max(50px, 7vmin) + 3rem) clamp(1rem, 5vw, 4rem) clamp(2rem, 4vw, 3rem);
+  background-color: var(--pp9-bg);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 6px 6px;
+  color: var(--pp9-text);
+}
+
+/* Faint scanlines across the screen's background; they sit behind the content so no picture is dimmed. */
+.pp9-arcade::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 4px);
+  pointer-events: none;
+}
+
+/* The shared NavBar is fixed; here it scrolls away with the screen. Its wrapper is much taller than
+   the bar it holds, so clicks pass through that empty space. */
+.pp9-arcade #nav-all {
+  position: absolute;
+  pointer-events: none;
+}
+
+.pp9-arcade #nav-all > * {
+  pointer-events: auto;
+}
+
+.pp9-screen {
+  position: relative;
+  z-index: 1;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp9-label {
+  margin: 0;
+  color: var(--pp9-dim);
+  font-family: var(--pp9-pixel);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pp9-label--yellow {
+  color: var(--pp9-yellow);
+}
+
+/* ---------- HUD and title ---------- */
+
+.pp9-hud-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.pp9-hud-item {
+  margin: 0;
+  color: var(--pp9-text);
+  font-family: var(--pp9-pixel);
+  font-size: clamp(0.6rem, 1.1vw, 0.75rem);
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.pp9-hud-item:nth-child(2) {
+  text-align: center;
+}
+
+.pp9-hud-item--end {
+  text-align: right;
+}
+
+.pp9-hud-key {
+  display: block;
+  color: var(--pp9-blue);
+}
+
+.pp9-hud-key--red {
+  color: var(--pp9-red);
+}
+
+.pp9-eyebrow {
+  margin: 0 0 1rem;
+  color: var(--pp9-yellow);
+  font-family: var(--pp9-pixel);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.pp9-title {
+  margin: 0;
+  color: var(--pp9-text);
+  font-family: var(--pp9-pixel);
+  font-size: clamp(2.1rem, 7vw, 4.5rem);
+  line-height: 1.1;
+  text-shadow:
+    4px 4px 0 var(--pp9-blue),
+    8px 8px 0 #0a2a66;
+  text-transform: uppercase;
+}
+
+/* ---------- Monitor + select grid ---------- */
+
+.pp9-stage {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+/* Notched "pixel" corners: four flat shadows instead of a border. */
+.pp9-monitor,
+.pp9-tile,
+.pp9-mode {
+  --pp9-edge: var(--pp9-line);
+  box-shadow:
+    0 -4px 0 var(--pp9-edge),
+    0 4px 0 var(--pp9-edge),
+    -4px 0 0 var(--pp9-edge),
+    4px 0 0 var(--pp9-edge);
+}
+
+.pp9-monitor {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 4px;
+  padding: clamp(0.9rem, 2vw, 1.25rem);
+  background: var(--pp9-panel);
+}
+
+.pp9-crt {
+  position: relative;
+  overflow: hidden;
+  border: 4px solid #000;
+  border-radius: 0.9rem;
+  background: #000;
+}
+
+/* Scanlines and a curved-glass vignette, kept light so the project still reads clearly. */
+.pp9-crt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at center, transparent 72%, rgba(0, 0, 0, 0.3) 100%);
+  pointer-events: none;
+}
+
+.pp9-crt-media {
+  animation: pp9-tune 0.35s steps(4, end);
+}
+
+.pp9-monitor-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.pp9-monitor-name {
+  margin: 0;
+  color: var(--pp9-text);
+  font-family: var(--pp9-pixel);
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.pp9-stats {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.6rem 1.25rem;
+  margin: 0;
+}
+
+.pp9-stats dt {
+  color: var(--pp9-blue);
+  font-family: var(--pp9-pixel);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.pp9-stats dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  color: var(--pp9-text);
+  font-family: 'Space Mono';
+  font-size: 1rem;
+}
+
+/* One block per crew member, like a health bar. */
+.pp9-meter {
+  height: 0.85rem;
+  background: repeating-linear-gradient(to right, var(--pp9-yellow) 0 0.65rem, transparent 0.65rem 0.85rem);
+}
+
+/* Clamped so the monitor stays the same height as the cursor moves. */
+.pp9-monitor-desc {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: var(--pp9-dim);
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+/* A chunky arcade button: it sits on its own shadow and presses down into it. */
+.pp9-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+  padding: 1rem 1.4rem;
+  background: var(--pp9-yellow);
+  color: #111;
+  font-family: var(--pp9-pixel);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow:
+    0 6px 0 var(--pp9-yellow-dark),
+    0 6px 0 4px #000;
+  transition:
+    transform 0.08s steps(2, end),
+    box-shadow 0.08s steps(2, end);
+}
+
+.pp9-start span {
+  animation: pp9-blink 1s steps(1, end) 4;
+}
+
+.pp9-start:hover {
+  color: #111;
+  background: #ffd36e;
+}
+
+.pp9-start:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 var(--pp9-yellow-dark),
+    0 2px 0 4px #000;
+}
+
+.pp9-start:focus-visible {
+  outline: 3px solid var(--pp9-blue);
+  outline-offset: 6px;
+}
+
+.pp9-select-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pp9-select-head .pp9-label {
+  color: var(--pp9-text);
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+}
+
+.pp9-modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 4px;
+  border: 0;
+}
+
+.pp9-mode {
+  padding: 0.7rem 0.85rem;
+  background: transparent;
+  border: 0;
+  color: var(--pp9-text);
+  font-family: var(--pp9-pixel);
+  font-size: 0.65rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.pp9-mode:hover {
+  --pp9-edge: var(--pp9-blue);
+}
+
+.pp9-mode[aria-pressed='true'] {
+  --pp9-edge: var(--pp9-blue);
+  background: var(--pp9-blue);
+}
+
+.pp9-mode:focus-visible {
+  outline: 3px solid var(--pp9-yellow);
+  outline-offset: 6px;
+}
+
+.pp9-mode-count {
+  color: var(--pp9-yellow);
+}
+
+.pp9-mode[aria-pressed='true'] .pp9-mode-count {
+  color: #fff;
+}
+
+/* The padding leaves room for the cursor brackets around the edge tiles. */
+.pp9-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.25rem 1.5rem;
+  margin: 1.5rem 0 0;
+  padding: 1.75rem 0.75rem 0.75rem;
+  list-style: none;
+}
+
+.pp9-slot {
+  display: flex;
+}
+
+.pp9-tile {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 0;
+  padding: 0.6rem 0.6rem 0.85rem;
+  background: var(--pp9-panel);
+  color: var(--pp9-text);
+  text-decoration: none;
+}
+
+.pp9-tile:hover {
+  color: var(--pp9-text);
+}
+
+.pp9-tile[data-selected] {
+  --pp9-edge: var(--pp9-yellow);
+  background: var(--pp9-panel-lit);
+}
+
+.pp9-tile:active {
+  transform: translate(2px, 2px);
+}
+
+.pp9-tile:focus-visible {
+  outline: 3px dashed var(--pp9-blue);
+  outline-offset: 1rem;
+}
+
+/* Corner brackets that snap onto the selected tile, like a character-select cursor. */
+.pp9-tile[data-selected]::after {
+  --pp9-c: var(--pp9-yellow);
+  --pp9-l: 1.1rem;
+  --pp9-t: 4px;
+  content: '';
+  position: absolute;
+  inset: -0.75rem;
+  background:
+    linear-gradient(var(--pp9-c) 0 0) top left / var(--pp9-l) var(--pp9-t),
+    linear-gradient(var(--pp9-c) 0 0) top left / var(--pp9-t) var(--pp9-l),
+    linear-gradient(var(--pp9-c) 0 0) top right / var(--pp9-l) var(--pp9-t),
+    linear-gradient(var(--pp9-c) 0 0) top right / var(--pp9-t) var(--pp9-l),
+    linear-gradient(var(--pp9-c) 0 0) bottom left / var(--pp9-l) var(--pp9-t),
+    linear-gradient(var(--pp9-c) 0 0) bottom left / var(--pp9-t) var(--pp9-l),
+    linear-gradient(var(--pp9-c) 0 0) bottom right / var(--pp9-l) var(--pp9-t),
+    linear-gradient(var(--pp9-c) 0 0) bottom right / var(--pp9-t) var(--pp9-l);
+  background-repeat: no-repeat;
+  pointer-events: none;
+  animation: pp9-lock 0.18s steps(3, end);
+}
+
+.pp9-cursor {
+  position: absolute;
+  z-index: 1;
+  top: -1.9rem;
+  left: -0.75rem;
+  padding: 0.3rem 0.45rem;
+  background: var(--pp9-yellow);
+  color: #111;
+  font-family: var(--pp9-pixel);
+  font-size: 0.55rem;
+  line-height: 1;
+}
+
+.pp9-tile-media {
+  border: 2px solid #000;
+}
+
+.pp9-tile-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: #000;
+  color: var(--pp9-yellow);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.pp9-tile-name {
+  font-family: var(--pp9-pixel);
+  font-size: clamp(0.7rem, 1.1vw, 0.85rem);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.pp9-tile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: auto;
+}
+
+.pp9-tile-tags .pp5-tag {
+  padding: 0.1rem 0.35rem;
+  font-size: 0.65rem;
+}
+
+/* Phones open a project with one tap, so the monitor only needs the picture, the name and the button,
+   and the grid starts on the first screen. */
+@media (max-width: 599px) {
+  .pp9-monitor .pp9-stats,
+  .pp9-monitor-desc {
+    display: none;
+  }
+
+  .pp9-monitor .pp9-start {
+    align-self: stretch;
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .pp9-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Side by side: the monitor stays in view while the cursor moves down the grid. */
+@media (min-width: 900px) {
+  .pp9-stage {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+
+  .pp9-monitor {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+/* ---------- Controls legend ---------- */
+
+.pp9-controls {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-top: 1.25rem;
+  border-top: 3px dashed var(--pp9-line);
+}
+
+.pp9-controls-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 2rem;
+  margin: 0;
+  color: var(--pp9-dim);
+  font-family: var(--pp9-pixel);
+  font-size: 0.65rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.pp9-controls-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.pp9-controls kbd {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2rem;
+  height: 2rem;
+  margin-right: 0.15rem;
+  padding: 0 0.45rem;
+  border-radius: 0;
+  background: var(--pp9-text);
+  color: #111;
+  font-family: var(--pp9-pixel);
+  font-size: 0.6rem;
+  box-shadow: 0 4px 0 #8a8aae;
+}
+
+.pp9-controls-line--touch {
+  display: none;
+}
+
+@media (hover: none) {
+  .pp9-controls-line--pointer {
+    display: none;
+  }
+
+  .pp9-controls-line--touch {
+    display: flex;
+  }
+}
+
+/* ---------- Continue? (apply) ---------- */
+
+.pp9-continue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: clamp(3rem, 7vw, 5rem) clamp(1rem, 5vw, 4rem);
+  border-top: 4px solid var(--pp9-blue);
+  background: var(--pp9-bg);
+  color: var(--pp9-text);
+  text-align: center;
+}
+
+.pp9-continue-heading {
+  margin: 0;
+  font-family: var(--pp9-pixel);
+  font-size: clamp(1.1rem, 3vw, 1.9rem);
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* ---------- Motion ---------- */
+
+/* The monitor flickers on like an old tube each time it changes channel. */
+@keyframes pp9-tune {
+  0% {
+    filter: brightness(3);
+    transform: scaleY(0.04);
+  }
+
+  50% {
+    filter: brightness(1.8);
+    transform: scaleY(1);
+  }
+
+  100% {
+    filter: none;
+    transform: none;
+  }
+}
+
+@keyframes pp9-lock {
+  from {
+    inset: -1.5rem;
+    opacity: 0.4;
+  }
+
+  to {
+    inset: -0.75rem;
+    opacity: 1;
+  }
+}
+
+/* Blinks a few times after each move, then holds still, so nothing flashes indefinitely. */
+@keyframes pp9-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp9-crt-media,
+  .pp9-tile[data-selected]::after,
+  .pp9-start span {
+    animation: none;
+  }
+
+  .pp9-start {
+    transition: none;
+  }
+}

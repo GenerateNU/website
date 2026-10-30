@@ -1,0 +1,188 @@
+.pp4-spotlight {
+  padding: clamp(3rem, 7vw, 5.5rem) clamp(1rem, 5vw, 4rem);
+  border-bottom: 2px solid #111;
+}
+
+.pp4-spotlight:nth-of-type(even) {
+  background: #f4f8ff;
+}
+
+.pp4-spotlight-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp4-spotlight--flipped .pp4-spotlight-frame {
+  order: 2;
+}
+
+.pp4-spotlight-frame {
+  min-width: 0;
+  border: 2px solid #111;
+  background: #fff;
+  box-shadow: -0.75rem 0.75rem 0 #111;
+}
+
+.pp4-spotlight--flipped .pp4-spotlight-frame {
+  box-shadow: 0.75rem 0.75rem 0 #111;
+}
+
+.pp4-spotlight-visual {
+  aspect-ratio: 306 / 165;
+  overflow: hidden;
+}
+
+.pp4-spotlight-visual--mockup {
+  background-color: #eef5ff;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(24, 125, 255, 0.18) 0,
+      rgba(24, 125, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 1.5rem
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(24, 125, 255, 0.18) 0,
+      rgba(24, 125, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 1.5rem
+    );
+}
+
+.pp4-spotlight-cover {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.pp4-spotlight-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent;
+}
+
+.pp4-spotlight-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.pp4-spotlight-index {
+  color: #187dff;
+  font-family: 'Space Mono 700';
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.9;
+}
+
+.pp4-spotlight-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pp4-spotlight-semester {
+  color: #555;
+  font-family: 'Space Mono';
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pp4-spotlight-name {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.pp4-spotlight-description {
+  margin: 0;
+  color: #2b2b2b;
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.pp4-spotlight-quote {
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+  background: #fff;
+  border-left: 4px solid #ffbf3c;
+}
+
+.pp4-spotlight-quote blockquote {
+  display: -webkit-box;
+  margin: 0 0 0.6rem;
+  overflow: hidden;
+  color: #111;
+  font-family: 'Outfit';
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.pp4-spotlight-quote figcaption {
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  font-family: 'Outfit';
+  font-size: 0.85rem;
+}
+
+.pp4-spotlight-quote-name {
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.95rem;
+}
+
+@keyframes pp4-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .pp4-spotlight-inner {
+      animation: pp4-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .pp4-spotlight-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pp4-spotlight--flipped .pp4-spotlight-frame {
+    order: 0;
+    box-shadow: -0.75rem 0.75rem 0 #111;
+  }
+
+  .pp4-spotlight-frame {
+    margin-right: 0.75rem;
+  }
+}

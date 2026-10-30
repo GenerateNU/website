@@ -1,0 +1,72 @@
+.pp2-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
+.pp2-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pp2-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease-out,
+    color 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp2-chip:hover {
+  box-shadow: -0.25rem 0.25rem 0 #111;
+}
+
+.pp2-chip.is-active {
+  background: #111;
+  color: #fff;
+  box-shadow: none;
+}
+
+.pp2-chip:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+.pp2-chip-count {
+  min-width: 1.5rem;
+  padding: 0 0.35rem;
+  background: rgba(17, 17, 17, 0.08);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.pp2-chip.is-active .pp2-chip-count {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 650px) {
+  .pp2-chips {
+    gap: 0.5rem;
+  }
+
+  .pp2-chip {
+    gap: 0.4rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.8rem;
+  }
+}

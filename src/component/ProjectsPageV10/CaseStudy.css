@@ -1,0 +1,279 @@
+/* The shared project page (ProjectsPageV3/CaseStudy) restyled in the claw machine's candy colors.
+   Every rule is scoped to .pp10-case so the other prototypes keep their look. */
+
+.pp3-page.pp10-case {
+  background: var(--pp10-cream);
+  color: var(--pp10-ink);
+}
+
+/* ---------- Header on the confetti carpet ---------- */
+
+.pp10-case .pp3-hero {
+  padding-top: calc(max(50px, 7vmin) + 3.5rem);
+  background-color: var(--pp10-cream);
+  background-image:
+    radial-gradient(circle, rgba(255, 95, 162, 0.35) 0 3px, transparent 4px),
+    radial-gradient(circle, rgba(24, 125, 255, 0.3) 0 3px, transparent 4px),
+    radial-gradient(circle, rgba(255, 191, 60, 0.45) 0 3px, transparent 4px);
+  background-position:
+    0 0,
+    1.6rem 2.1rem,
+    3.1rem 0.9rem;
+  background-size: 4.2rem 4.2rem;
+  color: var(--pp10-ink);
+}
+
+.pp10-case .pp3-back,
+.pp10-case .pp3-eyebrow {
+  color: var(--pp10-pink-dark);
+}
+
+.pp10-case .pp3-back:focus-visible {
+  outline-color: var(--pp10-blue);
+}
+
+.pp10-case .pp3-meta-semester {
+  color: #444;
+}
+
+.pp10-case .pp3-case-title {
+  color: var(--pp10-ink);
+  font-family: var(--pp10-sign);
+  font-size: clamp(2.5rem, 9vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+  text-shadow: 5px 5px 0 var(--pp10-pink);
+}
+
+.pp10-case .pp3-lede,
+.pp10-case .pp3-intro {
+  color: #333;
+}
+
+/* ---------- The prize in its window ---------- */
+
+.pp10-case .pp3-hero-media-wrap {
+  padding-top: 0.5rem;
+}
+
+.pp10-case .pp3-hero-media {
+  overflow: hidden;
+  border: 4px solid var(--pp10-ink);
+  border-radius: 1rem;
+  box-shadow: 10px 10px 0 var(--pp10-blue);
+}
+
+.pp10-case .pp3-stage-caption {
+  color: #444;
+}
+
+.pp10-case .pp3-thumbs {
+  gap: 1.1rem;
+  padding: 0.6rem 0.75rem 1rem 0.5rem;
+}
+
+/* The other pictures sit like prizes in the pile: tilted until picked. */
+.pp10-case .pp3-thumb {
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 0 var(--pp10-ink);
+  transform: rotate(-2deg);
+}
+
+.pp10-case .pp3-thumb:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.pp10-case .pp3-thumb:hover {
+  border-color: var(--pp10-ink);
+  box-shadow: 4px 4px 0 var(--pp10-pink);
+}
+
+.pp10-case .pp3-thumb[aria-pressed='true'] {
+  border-color: var(--pp10-ink);
+  box-shadow: 5px 5px 0 var(--pp10-pink);
+  transform: none;
+}
+
+.pp10-case .pp3-thumb:focus-visible {
+  outline-color: var(--pp10-blue);
+  outline-offset: 4px;
+}
+
+.pp10-case .pp3-thumb-play,
+.pp10-case .pp3-youtube-play {
+  border-color: var(--pp10-ink);
+  border-radius: 50%;
+  background: var(--pp10-yellow);
+}
+
+/* ---------- About the prize ---------- */
+
+.pp10-case .pp3-section-title {
+  border-top: 4px solid var(--pp10-ink);
+  color: var(--pp10-ink);
+  font-family: var(--pp10-sign);
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: none;
+}
+
+/* Room between the quote box and the Team divider below it. */
+.pp10-case .pp3-overview {
+  margin-bottom: 3.5rem;
+}
+
+.pp10-case .pp3-prose {
+  color: var(--pp10-ink);
+}
+
+.pp10-case .pp3-quote {
+  border: 4px solid var(--pp10-ink);
+  border-radius: 1rem;
+  background: var(--pp10-yellow);
+  box-shadow: 8px 8px 0 var(--pp10-pink);
+}
+
+/* The facts box is the prize's swing tag. */
+.pp10-case .pp3-facts {
+  border: 4px solid var(--pp10-ink);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 8px 8px 0 var(--pp10-mint);
+}
+
+.pp10-case .pp3-facts dt {
+  color: var(--pp10-pink-dark);
+  font-family: 'Space Mono 700';
+}
+
+.pp10-case .pp3-members {
+  gap: 1.25rem;
+  padding: 0 0.5rem 0.5rem 0;
+}
+
+.pp10-case .pp3-member {
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 5px 5px 0 var(--pp10-pink);
+}
+
+.pp10-case .pp3-member:nth-child(3n + 2) {
+  box-shadow: 5px 5px 0 var(--pp10-blue);
+}
+
+.pp10-case .pp3-member:nth-child(3n) {
+  box-shadow: 5px 5px 0 var(--pp10-yellow);
+}
+
+.pp10-case .pp3-member-role {
+  color: #444;
+}
+
+/* Links look like the cabinet's arcade buttons. */
+.pp10-case .pp3-links .pp3-button {
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.6rem;
+  background: var(--pp10-yellow);
+  box-shadow: 0 5px 0 var(--pp10-ink);
+}
+
+.pp10-case .pp3-links .pp3-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 var(--pp10-ink);
+}
+
+.pp10-case .pp3-links .pp3-button:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 0 var(--pp10-ink);
+}
+
+.pp10-case .pp3-links .pp3-button:focus-visible {
+  outline-color: var(--pp10-blue);
+}
+
+/* ---------- Next prize ---------- */
+
+.pp10-case .pp3-adjacent,
+.pp10-case .pp3-adjacent-link {
+  border-color: var(--pp10-ink);
+  border-width: 4px;
+}
+
+.pp10-case .pp3-adjacent-link {
+  color: var(--pp10-ink);
+}
+
+.pp10-case .pp3-adjacent-label {
+  color: var(--pp10-pink-dark);
+  font-family: 'Space Mono 700';
+}
+
+.pp10-case .pp3-adjacent-name {
+  font-family: var(--pp10-sign);
+  font-weight: 400;
+}
+
+@media (min-width: 56.25rem) {
+  .pp10-case .pp3-adjacent-link--next {
+    border-left-color: var(--pp10-ink);
+    border-left-width: 4px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp10-case .pp3-adjacent-link:hover {
+    background: var(--pp10-yellow);
+    color: var(--pp10-ink);
+  }
+}
+
+/* ---------- Apply, like the list page's closing banner ---------- */
+
+.pp10-case .pp3-apply {
+  border-top: 4px solid var(--pp10-ink);
+  background: var(--pp10-pink);
+}
+
+.pp10-case .pp3-apply-heading {
+  color: #fff;
+  font-family: var(--pp10-sign);
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: 3px 3px 0 var(--pp10-ink);
+}
+
+.pp10-case .pp3-apply-link {
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.6rem;
+  background: var(--pp10-yellow);
+  color: var(--pp10-ink);
+  box-shadow: 0 5px 0 var(--pp10-ink);
+}
+
+.pp10-case .pp3-apply-link:hover {
+  color: var(--pp10-ink);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 var(--pp10-ink);
+}
+
+.pp10-case .pp3-apply-link:active {
+  color: var(--pp10-ink);
+  transform: translateY(5px);
+  box-shadow: 0 0 0 var(--pp10-ink);
+}
+
+.pp10-case .pp3-apply-link:focus-visible {
+  outline-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp10-case .pp3-links .pp3-button:hover,
+  .pp10-case .pp3-links .pp3-button:active,
+  .pp10-case .pp3-apply-link:hover,
+  .pp10-case .pp3-apply-link:active {
+    transform: none;
+  }
+}

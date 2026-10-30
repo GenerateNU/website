@@ -1,0 +1,39 @@
+.pps-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pps-link {
+  font-family: 'Space Mono 700';
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.25rem 0.4rem;
+  border: 2px solid #111;
+  color: #111;
+  background: #fff;
+  text-decoration: none;
+}
+
+.pps-link:hover {
+  background: #eee;
+}
+
+.pps-link-active,
+.pps-link-active:hover {
+  background: #111;
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  /* Eight versions don't fit beside the nav links on a phone, so they wrap under "Projects". */
+  .pps-group {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .pps-link {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.3rem;
+  }
+}

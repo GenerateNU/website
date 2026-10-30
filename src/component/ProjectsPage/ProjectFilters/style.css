@@ -1,0 +1,118 @@
+.pp-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+}
+
+.pp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease-out,
+    color 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp-chip:hover {
+  box-shadow: -0.25rem 0.25rem 0 #111;
+}
+
+.pp-chip.is-active {
+  background: #111;
+  color: #fff;
+  box-shadow: none;
+}
+
+.pp-chip:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+.pp-chip-count {
+  min-width: 1.5rem;
+  padding: 0 0.35rem;
+  background: rgba(17, 17, 17, 0.08);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.pp-chip.is-active .pp-chip-count {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pp-search {
+  position: relative;
+  display: flex;
+  flex: 0 1 20rem;
+  align-items: center;
+}
+
+.pp-search-icon {
+  position: absolute;
+  left: 0.85rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: #111;
+  stroke-width: 2.25;
+  stroke-linecap: square;
+  pointer-events: none;
+}
+
+.pp-search input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 2.6rem;
+  background: #fff;
+  border: 2px solid #111;
+  border-radius: 0;
+  color: #111;
+  font-family: 'Outfit';
+  font-size: 1rem;
+  transition: box-shadow 0.15s ease-out;
+}
+
+.pp-search input::placeholder {
+  color: #6b6b6b;
+}
+
+.pp-search input:focus {
+  outline: none;
+  box-shadow: -0.25rem 0.25rem 0 #187dff;
+}
+
+@media (max-width: 650px) {
+  .pp-chips {
+    gap: 0.5rem;
+  }
+
+  .pp-chip {
+    gap: 0.4rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .pp-search {
+    flex-basis: 100%;
+  }
+}

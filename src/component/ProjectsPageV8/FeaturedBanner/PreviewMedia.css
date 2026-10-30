@@ -1,0 +1,16 @@
+.pp8-video-media {
+  display: block;
+}
+
+.pp8-video-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Matches the padding ProjectMedia gives mockup images, so the poster doesn't shift when it starts playing. */
+.pp8-video-media.pp5-media--mockup video {
+  object-fit: contain;
+  padding: 6% 8%;
+}

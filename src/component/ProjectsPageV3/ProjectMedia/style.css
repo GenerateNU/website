@@ -1,0 +1,44 @@
+.pp3-media {
+  position: relative;
+  overflow: hidden;
+  /* Matches the 306x165 artboard of the project logo SVGs. */
+  aspect-ratio: 306 / 165;
+  background: #fff;
+}
+
+.pp3-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Crops the 2px frame baked into each logo SVG so it doesn't double up with the card border. */
+.pp3-media--logo img {
+  object-fit: cover;
+  transform: scale(1.014, 1.025);
+}
+
+/* Transparent device mockups sit on the blueprint grid used across the site. */
+.pp3-media--mockup {
+  background-color: #eef5ff;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(24, 125, 255, 0.18) 0,
+      rgba(24, 125, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 1.5rem
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(24, 125, 255, 0.18) 0,
+      rgba(24, 125, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 1.5rem
+    );
+}
+
+.pp3-media--mockup img {
+  object-fit: contain;
+  padding: 6% 8%;
+}

@@ -1,0 +1,342 @@
+.pp2-carousel {
+  padding: 3rem 0 1rem;
+}
+
+.pp2-carousel-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.pp2-carousel-heading {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pp2-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pp2-carousel-counter {
+  min-width: 4rem;
+  margin-right: 0.25rem;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.pp2-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: -0.3rem 0.3rem 0 #111;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp2-arrow span {
+  font-size: inherit;
+  line-height: 1;
+}
+
+.pp2-arrow:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+.pp2-arrow:active:not(:disabled) {
+  transform: translate(-0.3rem, 0.3rem);
+  box-shadow: 0 0 0 #111;
+}
+
+.pp2-arrow:disabled {
+  color: #999;
+  border-color: #999;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp2-arrow:hover:not(:disabled) {
+    transform: translate(0.15rem, -0.15rem);
+    box-shadow: -0.45rem 0.45rem 0 #111;
+  }
+}
+
+.pp2-carousel-toggle {
+  gap: 0.5rem;
+  width: auto;
+  padding: 0 0.9rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.pp2-carousel-toggle span[aria-hidden='true'] {
+  font-size: 0.7rem;
+}
+
+/*
+ * Full-bleed: the track spans the viewport so peeking slides run off the screen edge instead of being
+ * cut off mid-page. The gutter matches .pp2-main's column (80rem max, clamp() side padding), keeping the
+ * active slide aligned with the rest of the page. It is in vw rather than % because scroll-padding
+ * percentages resolve against the track itself.
+ */
+.pp2-carousel-track {
+  --pp2-gutter: max(clamp(1rem, 5vw, 4rem), calc((100vw - 80rem) / 2));
+
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.25rem var(--pp2-gutter) 1rem;
+  margin: 0 calc(-1 * var(--pp2-gutter));
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--pp2-gutter);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Snapping would fight the pointer, so it is off until the drag is released and settles on a slide. */
+.pp2-carousel-track.is-dragging {
+  scroll-snap-type: none;
+  cursor: grabbing;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp2-carousel-track {
+    cursor: grab;
+    user-select: none;
+  }
+
+  .pp2-carousel-track .pp2-button {
+    cursor: pointer;
+  }
+}
+
+.pp2-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.pp2-carousel-track:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 2px;
+}
+
+/* ~88% wide so the next slide peeks in from the right. */
+.pp2-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  flex: 0 0 88%;
+  min-width: 0;
+  background: #fff;
+  border: 2px solid #111;
+  box-shadow: -0.5rem 0.5rem 0 #111;
+  scroll-snap-align: start;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Dims the peeking neighbours so the slide in focus reads as the one that matters. */
+.pp2-slide:not(.is-active) {
+  opacity: 0.45;
+}
+
+.pp2-media.pp2-slide-media {
+  height: 100%;
+  min-height: 20rem;
+  aspect-ratio: auto;
+  border-right: 2px solid #111;
+}
+
+.pp2-slide-media img,
+.pp2-slide-video {
+  position: absolute;
+  inset: 0;
+}
+
+.pp2-slide-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #111;
+}
+
+.pp2-slide-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.pp2-slide-semester {
+  margin: 0;
+  color: #555;
+  font-family: 'Space Mono';
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pp2-slide-title {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.75rem, 3.4vw, 3rem);
+  line-height: 1;
+}
+
+.pp2-slide-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pp2-slide-description {
+  margin: 0;
+  color: #2b2b2b;
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.pp2-slide-cta {
+  margin-top: auto;
+}
+
+.pp2-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* The visible segment is 0.5rem tall; padding keeps a 44px-tall hit area. */
+.pp2-dot {
+  position: relative;
+  flex: 1;
+  max-width: 4rem;
+  height: 2.75rem;
+  padding: 1.1rem 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.pp2-dot::before {
+  content: '';
+  display: block;
+  height: 0.5rem;
+  background: #fff;
+  border: 2px solid #111;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease-out;
+}
+
+.pp2-dot.is-active::before {
+  background: #111;
+}
+
+/* While rotating, the active dot starts empty and the progress bar fills it. */
+.pp2-carousel.is-rotating .pp2-dot.is-active::before {
+  background: #fff;
+}
+
+/* The 6s fill is the rotation interval: CarouselDots advances on animationend. */
+.pp2-dot-progress {
+  position: absolute;
+  top: 1.1rem;
+  right: 0;
+  left: 0;
+  height: 0.5rem;
+  background: #111;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: pp2-dot-progress 6s linear forwards;
+}
+
+@keyframes pp2-dot-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Rotation holds while a keyboard user is inside the carousel or the project sheet covers it. */
+.pp2-carousel.is-suspended .pp2-dot-progress,
+.pp2-carousel:has(:focus-visible) .pp2-dot-progress {
+  animation-play-state: paused;
+}
+
+/* Hover pausing is limited to mice; on touch screens :hover sticks after a tap. */
+@media (hover: hover) and (pointer: fine) {
+  .pp2-carousel:hover .pp2-dot-progress {
+    animation-play-state: paused;
+  }
+}
+
+.pp2-dot:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 650px) {
+  .pp2-carousel {
+    padding-top: 2rem;
+  }
+
+  .pp2-slide {
+    grid-template-columns: minmax(0, 1fr);
+    flex-basis: 88%;
+  }
+
+  .pp2-media.pp2-slide-media {
+    min-height: 0;
+    aspect-ratio: 306 / 165;
+    border-right: 0;
+    border-bottom: 2px solid #111;
+  }
+
+  .pp2-slide-body {
+    padding: 1.25rem;
+  }
+
+  .pp2-carousel-track {
+    gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp2-arrow,
+  .pp2-dot::before,
+  .pp2-slide {
+    transition: none;
+  }
+
+  .pp2-dot-progress {
+    animation: none;
+  }
+
+  .pp2-carousel-track {
+    scroll-behavior: auto;
+  }
+}

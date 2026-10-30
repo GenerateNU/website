@@ -1,0 +1,29 @@
+.pp3-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  border: 1.5px solid #111;
+  background: #fff;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Team colors match the legacy SFTWRE / HRDWRE tags. */
+.pp3-team-swatch {
+  width: 0.6rem;
+  height: 0.6rem;
+  flex-shrink: 0;
+}
+
+.pp3-team-swatch--software {
+  background: #187dff;
+}
+
+.pp3-team-swatch--hardware {
+  background: #ff6660;
+}

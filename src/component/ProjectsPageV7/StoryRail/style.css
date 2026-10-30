@@ -1,0 +1,190 @@
+.pp7-rail {
+  --pp7-gutter: clamp(1rem, 5vw, 4rem);
+}
+
+/* Bleeds to the right edge of the window, so the next card visibly peeks in. */
+.pp7-track {
+  display: flex;
+  gap: 1.75rem;
+  margin-right: calc(50% - 50vw);
+  padding: 0.75rem var(--pp7-gutter) 1.25rem 0.75rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline-start: 0.75rem;
+  scrollbar-width: none;
+}
+
+.pp7-track::-webkit-scrollbar {
+  display: none;
+}
+
+.pp7-track.is-dragging {
+  scroll-snap-type: none;
+  cursor: grabbing;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp7-track {
+    cursor: grab;
+    user-select: none;
+  }
+}
+
+.pp7-slide {
+  display: flex;
+  flex: 0 0 clamp(17rem, 42vw, 34rem);
+  scroll-snap-align: start;
+}
+
+.pp7-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  text-decoration: none;
+  box-shadow: -0.5rem 0.5rem 0 #111;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp7-card:hover {
+  color: #111;
+}
+
+.pp7-track:not(.is-dragging) .pp7-card {
+  cursor: pointer;
+}
+
+.pp7-card:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp7-track:not(.is-dragging) .pp7-card:hover {
+    transform: translate(0.25rem, -0.25rem);
+    box-shadow: -0.75rem 0.75rem 0 #111;
+  }
+}
+
+/* Story first, like an App Store "Today" card; the picture sits at the bottom so the cards line up. */
+.pp7-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+
+.pp7-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pp7-card-semester {
+  margin-left: auto;
+  color: #444;
+  font-family: 'Space Mono';
+  font-size: 0.9rem;
+}
+
+.pp7-card-name {
+  font-family: 'Space Mono 700';
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.pp7-card-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #2b2b2b;
+  font-family: 'Outfit';
+  font-size: 1.1rem;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.pp7-card-cta {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: #187dff;
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.pp7-card-cta span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.pp7-card-media {
+  border-top: 2px solid #111;
+}
+
+.pp7-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pp7-count {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+}
+
+.pp7-arrows {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.pp7-arrow {
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: -0.3rem 0.3rem 0 #111;
+}
+
+.pp7-arrow:hover:not(:disabled) {
+  background: #111;
+  color: #fff;
+}
+
+.pp7-arrow:disabled {
+  border-color: #aaa;
+  color: #aaa;
+  box-shadow: -0.3rem 0.3rem 0 #ccc;
+  cursor: not-allowed;
+}
+
+.pp7-arrow:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp7-card {
+    transition: none;
+  }
+}

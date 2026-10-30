@@ -1,0 +1,309 @@
+/* The shared project page (ProjectsPageV3/CaseStudy) restyled as the arcade screen. Every rule is
+   scoped to .pp9-case so the other prototypes keep their look. */
+
+.pp3-page.pp9-case {
+  background: var(--pp9-bg);
+  color: var(--pp9-text);
+}
+
+/* ---------- Title screen ---------- */
+
+.pp9-case .pp3-hero {
+  padding-top: calc(max(50px, 7vmin) + 3.5rem);
+  background-color: var(--pp9-bg);
+  background-image:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 4px),
+    radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size:
+    auto,
+    6px 6px;
+}
+
+.pp9-case .pp3-back,
+.pp9-case .pp3-eyebrow {
+  color: var(--pp9-yellow);
+  font-family: var(--pp9-pixel);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.pp9-case .pp3-meta-semester {
+  color: var(--pp9-dim);
+}
+
+.pp9-case .pp3-case-title {
+  font-family: var(--pp9-pixel);
+  font-size: clamp(1.8rem, 6vw, 4rem);
+  line-height: 1.2;
+  text-shadow:
+    4px 4px 0 var(--pp9-blue),
+    8px 8px 0 #0a2a66;
+}
+
+.pp9-case .pp3-lede,
+.pp9-case .pp3-intro {
+  color: var(--pp9-dim);
+}
+
+/* ---------- The monitor and its channel buttons ---------- */
+
+.pp9-case .pp3-hero-media {
+  overflow: hidden;
+  border: 4px solid #000;
+  border-radius: 0.9rem;
+  background: #000;
+  box-shadow:
+    0 0 0 4px var(--pp9-line),
+    0 0 0 8px #000;
+}
+
+.pp9-case .pp3-stage--mockup {
+  background-color: #eef5ff;
+}
+
+.pp9-case .pp3-stage-caption {
+  margin-top: 1.25rem;
+  color: var(--pp9-dim);
+}
+
+.pp9-case .pp3-thumbs {
+  padding: 0.5rem;
+}
+
+/* Notched "pixel" corners, like the tiles on the select screen. */
+.pp9-case .pp3-thumb,
+.pp9-case .pp3-facts,
+.pp9-case .pp3-member {
+  --pp9-edge: var(--pp9-line);
+  border: 0;
+  box-shadow:
+    0 -4px 0 var(--pp9-edge),
+    0 4px 0 var(--pp9-edge),
+    -4px 0 0 var(--pp9-edge),
+    4px 0 0 var(--pp9-edge);
+}
+
+.pp9-case .pp3-thumb {
+  margin: 4px;
+}
+
+.pp9-case .pp3-thumb:hover {
+  --pp9-edge: var(--pp9-blue);
+}
+
+.pp9-case .pp3-thumb[aria-pressed='true'] {
+  --pp9-edge: var(--pp9-yellow);
+  box-shadow:
+    0 -4px 0 var(--pp9-edge),
+    0 4px 0 var(--pp9-edge),
+    -4px 0 0 var(--pp9-edge),
+    4px 0 0 var(--pp9-edge);
+}
+
+.pp9-case .pp3-thumb:focus-visible {
+  outline-offset: 7px;
+}
+
+.pp9-case .pp3-thumb-play,
+.pp9-case .pp3-youtube-play {
+  border-color: #000;
+  background: var(--pp9-yellow);
+  box-shadow: none;
+}
+
+/* ---------- Stats ---------- */
+
+.pp9-case .pp3-section-title {
+  padding-top: 1rem;
+  border-top: 4px solid var(--pp9-line);
+  color: var(--pp9-yellow);
+  font-family: var(--pp9-pixel);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Room between the quote box and the Team divider below it. */
+.pp9-case .pp3-overview {
+  margin-bottom: 3.5rem;
+}
+
+.pp9-case .pp3-prose {
+  color: var(--pp9-text);
+}
+
+.pp9-case .pp3-quote {
+  margin: 4px;
+  border: 0;
+  background: var(--pp9-panel-lit);
+  color: var(--pp9-text);
+  box-shadow:
+    0 -4px 0 var(--pp9-blue),
+    0 4px 0 var(--pp9-blue),
+    -4px 0 0 var(--pp9-blue),
+    4px 0 0 var(--pp9-blue);
+}
+
+.pp9-case .pp3-quote figcaption {
+  color: var(--pp9-yellow);
+}
+
+.pp9-case .pp3-facts {
+  margin: 4px;
+  background: var(--pp9-panel);
+}
+
+.pp9-case .pp3-facts dt {
+  color: var(--pp9-blue);
+  font-family: var(--pp9-pixel);
+  font-size: 0.6rem;
+  line-height: 1.6;
+}
+
+.pp9-case .pp3-facts dd {
+  color: var(--pp9-text);
+}
+
+/* The roster: each member is a player card. */
+.pp9-case .pp3-members {
+  gap: 1.5rem;
+  padding: 4px;
+}
+
+.pp9-case .pp3-member {
+  background: var(--pp9-panel);
+}
+
+.pp9-case .pp3-member-name {
+  color: var(--pp9-text);
+}
+
+.pp9-case .pp3-member-role {
+  color: var(--pp9-dim);
+}
+
+/* Links look like the select screen's Start button. */
+.pp9-case .pp3-links .pp3-button {
+  border: 0;
+  background: var(--pp9-yellow);
+  color: #111;
+  font-family: var(--pp9-pixel);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  box-shadow:
+    0 6px 0 var(--pp9-yellow-dark),
+    0 6px 0 4px #000;
+  transition:
+    transform 0.08s steps(2, end),
+    box-shadow 0.08s steps(2, end);
+}
+
+.pp9-case .pp3-links .pp3-button:hover {
+  background: #ffd36e;
+  transform: none;
+}
+
+.pp9-case .pp3-links .pp3-button:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 var(--pp9-yellow-dark),
+    0 2px 0 4px #000;
+}
+
+.pp9-case .pp3-links .pp3-button:focus-visible {
+  outline-offset: 8px;
+}
+
+/* ---------- Previous / next stage ---------- */
+
+.pp9-case .pp3-adjacent,
+.pp9-case .pp3-adjacent-link {
+  border-color: var(--pp9-line);
+  border-width: 4px;
+}
+
+.pp9-case .pp3-adjacent-link {
+  color: var(--pp9-text);
+}
+
+.pp9-case .pp3-adjacent-label {
+  color: var(--pp9-yellow);
+  font-family: var(--pp9-pixel);
+  font-size: 0.7rem;
+}
+
+.pp9-case .pp3-adjacent-name {
+  font-family: var(--pp9-pixel);
+  font-size: clamp(1.1rem, 3.5vw, 2.25rem);
+  line-height: 1.3;
+}
+
+@media (min-width: 56.25rem) {
+  .pp9-case .pp3-adjacent-link--next {
+    border-left-color: var(--pp9-line);
+    border-left-width: 4px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp9-case .pp3-adjacent-link:hover {
+    background: var(--pp9-panel-lit);
+    color: var(--pp9-text);
+  }
+}
+
+/* ---------- Continue? ---------- */
+
+.pp9-case .pp3-apply {
+  border-top: 4px solid var(--pp9-blue);
+  background: var(--pp9-bg);
+}
+
+.pp9-case .pp3-apply-heading {
+  color: var(--pp9-text);
+  font-family: var(--pp9-pixel);
+  font-size: clamp(1.1rem, 3vw, 1.9rem);
+  line-height: 1.5;
+}
+
+.pp9-case .pp3-apply-link {
+  border: 0;
+  background: var(--pp9-yellow);
+  color: #111;
+  font-family: var(--pp9-pixel);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  box-shadow:
+    0 6px 0 var(--pp9-yellow-dark),
+    0 6px 0 4px #000;
+}
+
+.pp9-case .pp3-apply-link:hover {
+  background: #ffd36e;
+  color: #111;
+  transform: none;
+}
+
+.pp9-case .pp3-apply-link:active {
+  color: #111;
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 var(--pp9-yellow-dark),
+    0 2px 0 4px #000;
+}
+
+.pp9-case .pp3-apply-link:focus-visible {
+  outline-color: var(--pp9-blue);
+  outline-offset: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp9-case .pp3-links .pp3-button,
+  .pp9-case .pp3-apply-link {
+    transition: none;
+  }
+
+  .pp9-case .pp3-links .pp3-button:active,
+  .pp9-case .pp3-apply-link:active {
+    transform: none;
+  }
+}

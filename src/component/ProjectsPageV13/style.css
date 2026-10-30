@@ -1,0 +1,443 @@
+/* Builds on ProjectsPageV9/style.css and ProjectsPageV12/style.css: the same cabinet, told as a scroll story. */
+
+/* The NavBar's stylesheet sets a font on every span on the site; these keep their own. */
+.pp13-page .pp13-channel span,
+.pp13-page .pp13-rail span,
+.pp13-page .pp13-hint span {
+  font: inherit;
+}
+
+/* ---------- The story: scenes beside a monitor that holds still ---------- */
+
+.pp13-story {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: start;
+  column-gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.pp13-stage {
+  position: sticky;
+  top: max(1.5rem, 50svh - 17rem);
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.pp13-scenes {
+  grid-row: 1;
+  grid-column: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A screen's worth of scroll per project, with its story in the middle. */
+.pp13-scene {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+/* The first story starts right under the title, so the first screen already shows a project. */
+.pp13-scene:first-child {
+  justify-content: flex-start;
+  min-height: 85svh;
+}
+
+.pp13-scene-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block: 1rem 2.5rem;
+}
+
+.pp13-scene-name {
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+}
+
+/* The whole description: a story has room for it. */
+.pp13-scene-desc {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--pp9-dim);
+  font-family: 'Outfit';
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.pp13-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.25rem 0 0;
+  color: var(--pp9-dim);
+  font-family: var(--pp9-pixel);
+  font-size: 0.65rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.pp13-hint-arrow {
+  display: inline-block;
+  color: var(--pp9-yellow);
+}
+
+.pp13-channel {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  color: var(--pp9-text);
+  font-family: var(--pp9-pixel);
+  font-size: 0.7rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.pp13-page .pp13-channel .pp13-channel-number {
+  color: var(--pp9-red);
+}
+
+.pp13-crt {
+  display: block;
+  box-shadow:
+    0 0 0 4px var(--pp9-line),
+    0 0 0 8px #000;
+}
+
+/* Notched "pixel" corners, the same four flat shadows V9 gives its panels. */
+.pp13-rail-button {
+  --pp9-edge: var(--pp9-line);
+  box-shadow:
+    0 -4px 0 var(--pp9-edge),
+    0 4px 0 var(--pp9-edge),
+    -4px 0 0 var(--pp9-edge),
+    4px 0 0 var(--pp9-edge);
+}
+
+.pp13-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 4px;
+}
+
+.pp13-rail-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0.6rem 0.7rem;
+  background: var(--pp9-panel);
+  border: 0;
+  color: var(--pp9-dim);
+  font-family: var(--pp9-pixel);
+  text-align: left;
+  cursor: pointer;
+}
+
+.pp13-rail-button:hover {
+  --pp9-edge: var(--pp9-blue);
+  color: var(--pp9-text);
+}
+
+.pp13-rail-button[aria-current='true'] {
+  --pp9-edge: var(--pp9-yellow);
+  background: var(--pp9-panel-lit);
+  color: var(--pp9-text);
+}
+
+.pp13-rail-button:focus-visible {
+  outline: 3px dashed var(--pp9-blue);
+  outline-offset: 8px;
+}
+
+.pp13-page .pp13-rail .pp13-rail-number {
+  color: var(--pp9-yellow);
+  font-family: var(--pp9-pixel);
+  font-size: 0.6rem;
+}
+
+.pp13-page .pp13-rail .pp13-rail-name {
+  font-family: var(--pp9-pixel);
+  font-size: clamp(0.55rem, 0.8vw, 0.7rem);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+/* Short laptop screens: cap the monitor so it and its buttons fit beside the story. */
+@media (min-width: 900px) and (max-height: 860px) {
+  .pp13-crt {
+    width: min(100%, 48svh * 306 / 165);
+    margin-inline: auto;
+  }
+}
+
+/* ---------- Narrow screens: the monitor pins to the top, the stories scroll up under it ---------- */
+
+@media (max-width: 899px) {
+  .pp13-story {
+    display: block;
+  }
+
+  /* Opaque and edge to edge, so the stories pass cleanly underneath. */
+  .pp13-stage {
+    z-index: 2;
+    top: 0;
+    margin-inline: calc(-1 * var(--pp12-gutter));
+    padding: 0.75rem var(--pp12-gutter) 0.5rem;
+    border-bottom: 3px dashed var(--pp9-line);
+    background: var(--pp9-bg);
+  }
+
+  .pp13-channel {
+    display: none;
+  }
+
+  /* Capped by height too, so a phone on its side still has room for the story. */
+  .pp13-crt {
+    width: min(100%, 30svh * 306 / 165);
+    margin-inline: auto;
+  }
+
+  .pp13-rail {
+    gap: 0.75rem;
+    margin-top: 0.85rem;
+  }
+
+  .pp13-scene,
+  .pp13-scene:first-child {
+    justify-content: flex-start;
+    min-height: 75svh;
+  }
+
+  .pp13-scene-copy {
+    padding-block: 1.5rem 3rem;
+  }
+
+  /* Tabbing to a story's button scrolls it into view below the pinned monitor, not behind it. */
+  .pp13-scene-copy a {
+    scroll-margin-top: 45svh;
+  }
+}
+
+/* Phones: numbers only on the buttons (each still announces the project's name). */
+@media (max-width: 599px) {
+  .pp13-page .pp13-rail .pp13-rail-name {
+    display: none;
+  }
+
+  .pp13-rail-button {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ---------- Level 2: the title card before the full grid ---------- */
+
+.pp13-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  min-height: 55svh;
+  text-align: center;
+}
+
+.pp13-level-title {
+  margin: 0;
+  color: var(--pp9-yellow);
+  font-family: var(--pp9-pixel);
+  font-size: clamp(2.5rem, 9vw, 6rem);
+  line-height: 1.1;
+  text-shadow:
+    4px 4px 0 var(--pp9-red),
+    8px 8px 0 #4a0f1c;
+  text-transform: uppercase;
+}
+
+/* The grid's own divider would double up with the title card. */
+.pp13-page .pp12-select {
+  margin-top: 0;
+  border-top: 0;
+}
+
+/* ---------- Motion ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .pp12-booting .pp13-crt {
+    animation: pp12-power 0.8s steps(8, end) both;
+  }
+
+  .pp13-hint-arrow {
+    animation: pp13-bob 0.8s steps(2, end) 4;
+  }
+
+  /* A different name, so the bobbing starts over when the visitor sits still. */
+  .pp13-hint--nudge .pp13-hint-arrow {
+    animation: pp13-bob-again 0.8s steps(2, end) 4;
+  }
+}
+
+/* Scroll-linked, so these move only as the visitor scrolls. Without scroll timelines they simply don't. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* The monitor switches off to a bright line as the last story scrolls away. */
+    .pp13-crt {
+      animation: pp13-power-off linear both;
+      animation-timeline: view();
+      animation-range: exit 10% exit 80%;
+    }
+
+    .pp12-booting .pp13-crt {
+      animation: pp12-power 0.8s steps(8, end) both;
+    }
+
+    .pp13-level-title {
+      animation: pp13-zoom steps(6, end) both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 45%;
+    }
+  }
+}
+
+@keyframes pp13-power-off {
+  from {
+    clip-path: inset(0);
+    filter: none;
+  }
+
+  to {
+    clip-path: inset(50% 0);
+    filter: brightness(4);
+  }
+}
+
+@keyframes pp13-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pp13-bob {
+  50% {
+    transform: translateY(0.35em);
+  }
+}
+
+@keyframes pp13-bob-again {
+  50% {
+    transform: translateY(0.35em);
+  }
+}
+
+/* ---------- The leading line: a flight path with a rocket on it ---------- */
+
+/* The page is the line's coordinate space; it spans the page so the line can run from the first project
+   down to Apply. Above the backgrounds, in the margin, never over text. */
+.pp13-page {
+  position: relative;
+}
+
+.pp13-flight {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* public/css gives every element on the site a 0.4s transition. The rocket is moved on every scrolled frame,
+   so easing would leave it trailing far behind the page. */
+.pp13-flight,
+.pp13-flight * {
+  transition: none;
+}
+
+.pp13-flight path {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+}
+
+/* The way ahead: dashed, like a dotted route on a map. */
+.pp13-flight-ahead {
+  stroke: rgba(244, 244, 255, 0.28);
+  stroke-dasharray: 6 8;
+}
+
+/* The way already flown, revealed up to the rocket. */
+.pp13-flight-trail {
+  stroke: var(--pp9-yellow);
+  stroke-dasharray: 0 1;
+}
+
+.pp13-waypoint {
+  fill: var(--pp9-bg);
+  stroke: rgba(244, 244, 255, 0.45);
+  stroke-width: 2;
+}
+
+.pp13-waypoint[data-lit] {
+  fill: var(--pp9-yellow);
+  stroke: var(--pp9-yellow);
+}
+
+.pp13-px-red {
+  fill: var(--pp9-red);
+}
+
+.pp13-px-body {
+  fill: #f4f4ff;
+}
+
+.pp13-px-window {
+  fill: var(--pp9-blue);
+}
+
+/* The flame only burns while the visitor is scrolling. */
+.pp13-px-flame {
+  fill: var(--pp9-yellow);
+  opacity: 0;
+}
+
+.pp13-rocket.is-thrusting .pp13-px-flame {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pp13-rocket.is-thrusting .pp13-px-flame {
+    animation: pp13-flicker 0.16s steps(2, end) infinite;
+  }
+
+  /* Sitting still for a while, the rocket hovers in place (Pause or any input stops it). */
+  .pp13-rocket-body.is-idle {
+    animation: pp13-hover 1.2s steps(2, end) infinite;
+  }
+}
+
+@keyframes pp13-flicker {
+  50% {
+    fill: #ff8a3c;
+  }
+}
+
+@keyframes pp13-hover {
+  50% {
+    transform: translateY(-3px);
+  }
+}

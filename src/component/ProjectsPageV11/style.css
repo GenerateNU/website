@@ -1,0 +1,430 @@
+/* Builds on ProjectsPageV9/style.css: same cabinet, palette and pixel pieces, plus V8's featured billboard. */
+
+.pp11-page {
+  --pp11-gutter: clamp(1rem, 5vw, 4rem);
+}
+
+/* A smaller title than V9's, on the same row as the featured projects' controls (V8's layout). */
+.pp11-page .pp11-title {
+  font-size: clamp(1.9rem, 5vw, 3.25rem);
+  text-shadow:
+    3px 3px 0 var(--pp9-blue),
+    6px 6px 0 #0a2a66;
+}
+
+/* Notched "pixel" corners, the same four flat shadows V9 gives its panels. */
+.pp11-tab,
+.pp11-card,
+.pp11-pause {
+  --pp9-edge: var(--pp9-line);
+  box-shadow:
+    0 -4px 0 var(--pp9-edge),
+    0 4px 0 var(--pp9-edge),
+    -4px 0 0 var(--pp9-edge),
+    4px 0 0 var(--pp9-edge);
+}
+
+/* ---------- Attract mode: the featured projects ---------- */
+
+.pp11-attract-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+}
+
+.pp11-pause {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 4px;
+  padding: 0.7rem 0.95rem;
+  background: var(--pp9-panel);
+  border: 0;
+  color: var(--pp9-text);
+  font-family: var(--pp9-pixel);
+  font-size: 0.65rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.pp11-pause:hover {
+  --pp9-edge: var(--pp9-blue);
+}
+
+.pp11-pause:focus-visible {
+  outline: 3px solid var(--pp9-yellow);
+  outline-offset: 6px;
+}
+
+/* Wide screens: the copy on the left, the monitor on the right, like V8's billboard. */
+.pp11-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.pp11-slide:focus-visible {
+  outline: 3px dashed var(--pp9-blue);
+  outline-offset: 1rem;
+}
+
+.pp11-slide-crt {
+  display: block;
+  order: 2;
+  box-shadow:
+    0 0 0 4px var(--pp9-line),
+    0 0 0 8px #000;
+}
+
+.pp11-slide-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.pp11-slide-name {
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+}
+
+/* Every project is always listed below the monitor, so none hides behind a slide. */
+.pp11-tabs {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  gap: 1.25rem;
+  margin-top: clamp(2rem, 4vw, 2.75rem);
+  padding: 4px;
+}
+
+.pp11-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.7rem 0.7rem 0.95rem;
+  background: var(--pp9-panel);
+  border: 0;
+  color: var(--pp9-dim);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pp11-tab:hover {
+  --pp9-edge: var(--pp9-blue);
+  color: var(--pp9-text);
+}
+
+.pp11-tab[data-selected] {
+  --pp9-edge: var(--pp9-yellow);
+  background: var(--pp9-panel-lit);
+  color: var(--pp9-text);
+}
+
+.pp11-tab:focus-visible {
+  outline: 3px dashed var(--pp9-blue);
+  outline-offset: 8px;
+}
+
+.pp11-tab-media {
+  flex: 0 0 4.5rem;
+  border: 2px solid #000;
+}
+
+.pp11-tab-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.pp11-tab-number {
+  color: var(--pp9-yellow);
+  font-family: var(--pp9-pixel);
+  font-size: 0.6rem;
+}
+
+.pp11-tab-name {
+  font-family: var(--pp9-pixel);
+  font-size: clamp(0.6rem, 0.9vw, 0.75rem);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+/* The countdown fills in blocks along the bottom of the selected tab; when it's full the monitor
+   changes channel. */
+.pp11-tab-progress {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.35rem;
+  left: 0.7rem;
+  height: 4px;
+  background: repeating-linear-gradient(to right, var(--pp9-yellow) 0 0.6rem, transparent 0.6rem 0.8rem);
+  clip-path: inset(0 100% 0 0);
+  animation: pp11-countdown 7s steps(20, end) forwards;
+  animation-play-state: paused;
+}
+
+.pp11-tab-progress.is-running {
+  animation-play-state: running;
+}
+
+/* Laptop-height screens: tighten up so the tabs stay on the first screen. */
+@media (min-width: 900px) and (max-height: 960px) {
+  .pp11-page .pp11-title {
+    font-size: 2.25rem;
+  }
+
+  .pp11-attract-head {
+    margin-bottom: 1rem;
+  }
+
+  .pp11-slide-copy {
+    gap: 0.75rem;
+  }
+
+  .pp11-slide .pp9-monitor-desc {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  /* Caps the monitor's height to a share of the screen; its width follows from the artwork ratio. */
+  .pp11-slide-crt {
+    justify-self: end;
+    width: min(100%, 38vh * 306 / 165);
+  }
+
+  .pp11-tabs {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) and (max-height: 780px) {
+  .pp11-slide-crt {
+    width: min(100%, 34vh * 306 / 165);
+  }
+
+  .pp11-slide .pp9-stats {
+    display: none;
+  }
+}
+
+/* ---------- Touch and narrow screens: swipeable cards ---------- */
+
+/* Bleeds to the right edge of the screen, so the next card visibly peeks in. The padding leaves room
+   for the pixel corners, which the scroll box would otherwise clip. */
+.pp11-track {
+  display: flex;
+  gap: 1.25rem;
+  margin-right: calc(50% - 50vw);
+  padding: 6px var(--pp11-gutter) 0.75rem 6px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline-start: 6px;
+  scrollbar-width: none;
+}
+
+.pp11-track::-webkit-scrollbar {
+  display: none;
+}
+
+.pp11-track-slide {
+  display: flex;
+  flex: 0 0 min(25rem, 100% - 3rem);
+  scroll-snap-align: start;
+}
+
+.pp11-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  padding: 0.75rem;
+  background: var(--pp9-panel);
+  color: var(--pp9-text);
+  text-decoration: none;
+}
+
+.pp11-card:hover {
+  color: var(--pp9-text);
+}
+
+.pp11-card:focus-visible {
+  outline: 3px dashed var(--pp9-blue);
+  outline-offset: 8px;
+}
+
+.pp11-card .pp9-crt {
+  display: block;
+}
+
+.pp11-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.pp11-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pp11-card-semester {
+  color: var(--pp9-dim);
+  font-family: 'Space Mono';
+  font-size: 0.95rem;
+}
+
+.pp11-card-name {
+  display: block;
+  font-size: clamp(1.1rem, 5vw, 1.6rem);
+}
+
+.pp11-card-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--pp9-dim);
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+/* Very narrow phones: two lines of description is plenty. */
+@media (max-width: 380px) {
+  .pp11-card-desc {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+
+/* Full width and pinned to the bottom, so every card's button lines up. */
+.pp11-card-start {
+  align-self: stretch;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+}
+
+.pp11-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.pp11-dots-count {
+  min-width: 4.5rem;
+  color: var(--pp9-text);
+  font-family: var(--pp9-pixel);
+  font-size: 0.7rem;
+}
+
+/* Small blocks to look at, but each button is a full 44px-tall tap target. */
+.pp11-dot {
+  flex: 1;
+  height: 2.75rem;
+  padding: 0;
+  background: linear-gradient(var(--pp9-line), var(--pp9-line)) center / 100% 8px no-repeat;
+  border: 0;
+  cursor: pointer;
+}
+
+.pp11-dot[aria-current='true'] {
+  background-image: linear-gradient(var(--pp9-yellow), var(--pp9-yellow));
+  background-size: 100% 12px;
+}
+
+.pp11-dot:focus-visible {
+  outline: 3px solid var(--pp9-yellow);
+  outline-offset: 2px;
+}
+
+.pp11-picker {
+  display: none;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding: 4px;
+}
+
+.pp11-picker .pp11-tab {
+  align-items: flex-start;
+}
+
+/* Tablets in portrait have room for bigger cards and one row of named buttons. */
+@media (min-width: 600px) {
+  .pp11-track-slide {
+    flex-basis: min(36rem, 78%);
+  }
+
+  .pp11-dots {
+    display: none;
+  }
+
+  .pp11-picker {
+    display: grid;
+  }
+}
+
+/* ---------- Select screen: every project ---------- */
+
+.pp11-select {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 3px dashed var(--pp9-line);
+}
+
+/* No monitor beside the grid any more, so the tiles get the full width. */
+.pp11-grid {
+  gap: 2.5rem 1.75rem;
+}
+
+.pp11-tile-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--pp9-dim);
+  font-family: 'Outfit';
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* Phones: one tile per row, so the picture and the blurb stay readable. */
+@media (max-width: 479px) {
+  .pp11-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 599px) {
+  .pp11-tile-desc {
+    display: none;
+  }
+}
+
+@keyframes pp11-countdown {
+  to {
+    clip-path: inset(0);
+  }
+}

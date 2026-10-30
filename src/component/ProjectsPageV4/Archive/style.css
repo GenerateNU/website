@@ -1,0 +1,169 @@
+.pp4-archive {
+  padding: clamp(3rem, 7vw, 5rem) clamp(1rem, 5vw, 4rem);
+}
+
+.pp4-archive-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp4-archive-heading {
+  margin: 0 0 2rem;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pp4-archive-group {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 1rem 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 2px solid #111;
+}
+
+.pp4-archive-year {
+  margin: 0;
+  color: #187dff;
+  font-family: 'Space Mono 700';
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.pp4-archive-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 1rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp4-archive-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: -0.3rem 0.3rem 0 #111;
+}
+
+.pp4-archive-row:active {
+  transform: translate(-0.3rem, 0.3rem);
+  box-shadow: 0 0 0 #111;
+}
+
+.pp4-archive-row:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+.pp4-archive-thumb {
+  flex-shrink: 0;
+  width: 5.5rem;
+  aspect-ratio: 306 / 165;
+  overflow: hidden;
+  border: 1.5px solid #111;
+  background: #fff;
+}
+
+.pp4-archive-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pp4-archive-thumb--mockup {
+  background: #eef5ff;
+}
+
+.pp4-archive-thumb--mockup img {
+  object-fit: contain;
+}
+
+.pp4-archive-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.pp4-archive-name {
+  font-family: 'Space Mono 700';
+  font-size: 1.05rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.pp4-archive-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #555;
+  font-family: 'Space Mono';
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.pp4-archive-swatch {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+.pp4-archive-swatch--software {
+  background: #187dff;
+}
+
+.pp4-archive-swatch--hardware {
+  background: #ff6660;
+}
+
+.pp4-archive-arrow {
+  font-family: 'Space Mono 700';
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp4-archive-row {
+    transition:
+      transform 0.15s ease-out,
+      box-shadow 0.15s ease-out;
+  }
+
+  .pp4-archive-row:hover {
+    transform: translate(0.15rem, -0.15rem);
+    box-shadow: -0.45rem 0.45rem 0 #187dff;
+  }
+
+  .pp4-archive-row:active {
+    transform: translate(-0.3rem, 0.3rem);
+    box-shadow: 0 0 0 #111;
+  }
+}
+
+@media (max-width: 650px) {
+  .pp4-archive-group {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pp4-archive-row {
+    margin-left: 0.3rem;
+    width: calc(100% - 0.3rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp4-archive-row {
+    transition: none;
+  }
+}

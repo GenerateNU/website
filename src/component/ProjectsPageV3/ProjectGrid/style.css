@@ -1,0 +1,116 @@
+/* Two large tiles per row: big enough that every product image reads at a glance. */
+.pp3-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr));
+  gap: 2.5rem 2rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp3-tile-item {
+  display: flex;
+}
+
+.pp3-tile {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  text-decoration: none;
+  box-shadow: -0.5rem 0.5rem 0 #111;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp3-tile:hover {
+  color: #111;
+}
+
+.pp3-tile:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 4px;
+}
+
+.pp3-tile-media {
+  border-bottom: 2px solid #111;
+}
+
+.pp3-tile-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+
+.pp3-tile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pp3-tile-semester {
+  margin-left: auto;
+  color: #444;
+  font-family: 'Space Mono';
+  font-size: 0.9rem;
+}
+
+.pp3-tile-name {
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.1;
+}
+
+/* Larger, high-contrast body text for easy reading. */
+.pp3-tile-desc {
+  color: #2b2b2b;
+  font-family: 'Outfit';
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* A visible, worded call to action, so it is obvious the tile opens the project. */
+.pp3-tile-cta {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  color: #187dff;
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.pp3-tile-cta span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp3-tile:hover {
+    transform: translate(0.25rem, -0.25rem);
+    box-shadow: -0.75rem 0.75rem 0 #111;
+  }
+}
+
+.pp3-tile:active {
+  transform: translate(-0.5rem, 0.5rem);
+  box-shadow: 0 0 0 #111;
+}
+
+@media (max-width: 650px) {
+  .pp3-tile-body {
+    padding: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp3-tile {
+    transition: none;
+  }
+}

@@ -1,0 +1,428 @@
+.pp3-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #ffbf3c;
+  font-family: 'Space Mono 700';
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pp3-back:hover {
+  text-decoration: underline;
+}
+
+.pp3-back:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 4px;
+}
+
+.pp3-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.pp3-meta-semester {
+  color: rgba(255, 255, 255, 0.82);
+  font-family: 'Space Mono';
+  font-size: 0.9rem;
+}
+
+.pp3-case-title {
+  font-size: clamp(2.75rem, 11vw, 8rem);
+}
+
+.pp3-lede {
+  max-width: 48rem;
+  margin: 1.75rem 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'Outfit';
+  font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+  line-height: 1.5;
+}
+
+.pp3-hero-media-wrap {
+  box-sizing: content-box;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2.5rem clamp(1rem, 5vw, 4rem) 0;
+}
+
+.pp3-hero-media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px solid #111;
+  box-shadow: -0.6rem 0.6rem 0 #111;
+}
+
+/* ---------- Media carousel at the top (later prototypes) ---------- */
+
+.pp3-stage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pp3-stage--mockup {
+  background-color: #eef5ff;
+}
+
+.pp3-stage--mockup img {
+  box-sizing: border-box;
+  object-fit: contain;
+  padding: 4% 6%;
+}
+
+.pp3-stage-caption {
+  margin: 1rem 0 0;
+  color: #555;
+  font-family: 'Space Mono';
+  font-size: 0.85rem;
+}
+
+/* Scrolls sideways once there are more thumbnails than fit; the padding keeps the shadows from clipping. */
+.pp3-thumbs {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+  padding: 0.25rem 0.25rem 0.6rem 0.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+}
+
+.pp3-thumb {
+  position: relative;
+  flex: 0 0 clamp(7.5rem, 16vw, 11rem);
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid #111;
+  background: #111;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.pp3-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pp3-thumb--mockup {
+  background: #eef5ff;
+}
+
+.pp3-thumb--mockup img {
+  box-sizing: border-box;
+  object-fit: contain;
+  padding: 4% 6%;
+}
+
+.pp3-thumb:hover {
+  border-color: #187dff;
+}
+
+.pp3-thumb[aria-pressed='true'] {
+  border-color: #187dff;
+  box-shadow: -0.35rem 0.35rem 0 #ffbf3c;
+}
+
+.pp3-thumb:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+.pp3-thumb-play {
+  position: absolute;
+  bottom: 0.4rem;
+  left: 0.4rem;
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 2px solid #111;
+  background: #ffbf3c;
+  color: #111;
+  font-size: 0.7rem;
+}
+
+.pp3-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  object-fit: contain;
+}
+
+.pp3-overview {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.pp3-section {
+  margin-bottom: 3.5rem;
+}
+
+.pp3-section-title {
+  margin: 0 0 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 2px solid #111;
+  font-family: 'Space Mono 700';
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.pp3-prose {
+  max-width: 44rem;
+  margin: 0;
+  font-family: 'Outfit';
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.pp3-quote {
+  margin: 0;
+  padding: 1.5rem;
+  border: 2px solid #111;
+  background: #ffbf3c;
+  box-shadow: -0.5rem 0.5rem 0 #111;
+}
+
+.pp3-quote blockquote {
+  margin: 0;
+}
+
+.pp3-quote p {
+  margin: 0;
+  font-family: 'Outfit 600';
+  font-size: clamp(1.2rem, 2.4vw, 1.75rem);
+  line-height: 1.35;
+}
+
+.pp3-quote figcaption {
+  margin-top: 1rem;
+  font-family: 'Space Mono 700';
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.pp3-facts {
+  align-self: start;
+  padding: 1.25rem;
+  border: 2px solid #111;
+}
+
+.pp3-facts dl {
+  display: grid;
+  gap: 1.1rem;
+  margin: 0;
+}
+
+.pp3-facts dt {
+  color: #555;
+  font-family: 'Space Mono';
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.pp3-facts dd {
+  margin: 0.2rem 0 0;
+  font-family: 'Outfit 600';
+  font-size: 1.1rem;
+}
+
+.pp3-capitalize {
+  text-transform: capitalize;
+}
+
+.pp3-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: 2rem;
+}
+
+.pp3-gallery-item {
+  margin: 0;
+}
+
+.pp3-gallery-item figcaption {
+  margin-top: 0.6rem;
+  color: #555;
+  font-family: 'Space Mono';
+  font-size: 0.85rem;
+}
+
+.pp3-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 2px solid #111;
+  background: #111;
+  box-shadow: -0.4rem 0.4rem 0 #111;
+}
+
+.pp3-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pp3-frame--mockup {
+  background-color: #eef5ff;
+}
+
+.pp3-frame--mockup img {
+  object-fit: contain;
+  padding: 4% 6%;
+  box-sizing: border-box;
+}
+
+.pp3-frame--logo img {
+  object-fit: cover;
+}
+
+.pp3-youtube {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pp3-youtube-facade {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: #111 center / cover no-repeat;
+  cursor: pointer;
+}
+
+.pp3-youtube-play {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 2px solid #111;
+  background: #ffbf3c;
+  color: #111;
+  font-size: 1.5rem;
+  box-shadow: -0.3rem 0.3rem 0 #111;
+}
+
+.pp3-youtube-facade:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: -6px;
+}
+
+.pp3-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp3-member {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 2px solid #111;
+}
+
+.pp3-member-name {
+  font-family: 'Space Mono 700';
+  font-size: 1.05rem;
+}
+
+.pp3-member-role {
+  color: #555;
+  font-family: 'Outfit';
+  font-size: 1rem;
+}
+
+.pp3-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp3-links .pp3-button {
+  display: inline-block;
+}
+
+.pp3-adjacent {
+  display: grid;
+  border-top: 2px solid #111;
+}
+
+.pp3-adjacent-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 5vw, 4rem);
+  border-bottom: 2px solid #111;
+  color: #111;
+  text-decoration: none;
+}
+
+.pp3-adjacent-link:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: -6px;
+}
+
+.pp3-adjacent-label {
+  font-family: 'Space Mono';
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.pp3-adjacent-name {
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 56.25rem) {
+  .pp3-overview {
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    gap: 3rem;
+  }
+
+  .pp3-adjacent {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pp3-adjacent-link--next {
+    border-left: 2px solid #111;
+    text-align: right;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp3-adjacent-link {
+    transition:
+      background-color 0.2s ease-out,
+      color 0.2s ease-out;
+  }
+
+  .pp3-adjacent-link:hover {
+    background: #111;
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp3-adjacent-link {
+    transition: none;
+  }
+}

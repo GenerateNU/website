@@ -1,0 +1,522 @@
+/* Reuses the dark blueprint hero, but it carries the featured projects instead of a page title. */
+.pp5-hero.pp8-banner {
+  --pp8-gutter: clamp(1rem, 5vw, 4rem);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.pp8-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp8-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.pp8-topline .pp5-eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.pp8-heading {
+  margin: 0;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pp8-pause {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.pp8-pause span {
+  font-size: 0.75rem;
+}
+
+.pp8-pause:hover {
+  background: #fff;
+  color: #111;
+}
+
+.pp8-pause:focus-visible {
+  outline: 3px solid #ffbf3c;
+  outline-offset: 3px;
+}
+
+.pp8-slide-position {
+  margin: 0;
+  color: #ffbf3c;
+  font-family: 'Space Mono 700';
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pp8-slide-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pp8-slide-semester {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Space Mono';
+  font-size: 0.9rem;
+}
+
+.pp8-cta {
+  margin-top: 0.5rem;
+  padding: 0.9rem 1.75rem;
+  background: #ffbf3c;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1.05rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: -0.4rem 0.4rem 0 #fff;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp8-cta span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.pp8-cta:hover {
+  color: #111;
+  transform: translate(0.2rem, -0.2rem);
+  box-shadow: -0.6rem 0.6rem 0 #fff;
+}
+
+.pp8-cta:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Project buttons: every featured project is always listed, so none hides behind a slide. */
+.pp8-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0;
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pp8-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.pp8-tab[data-selected] {
+  background: rgba(255, 255, 255, 0.12);
+  border-top-color: #fff;
+  color: #fff;
+}
+
+.pp8-tab:focus-visible {
+  outline: 3px solid #ffbf3c;
+  outline-offset: 2px;
+}
+
+.pp8-tab-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.pp8-tab-number {
+  color: #ffbf3c;
+  font-family: 'Space Mono 700';
+  font-size: 0.75rem;
+}
+
+.pp8-tab-name {
+  font-family: 'Space Mono 700';
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.pp8-tab-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+/* Smaller than the slide's tags, so the pills don't outweigh the project name. */
+.pp8-tab-tags .pp5-tag {
+  padding: 0.1rem 0.35rem;
+  font-size: 0.65rem;
+}
+
+/* ---------- Wide screens: billboard with tabs ---------- */
+
+.pp8-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+  animation: pp8-fade 0.4s ease-out;
+}
+
+.pp8-slide:focus-visible {
+  outline: 3px solid #ffbf3c;
+  outline-offset: 6px;
+}
+
+.pp8-slide-visual {
+  display: block;
+  order: 2;
+  margin-left: 0.6rem;
+  border: 2px solid #fff;
+  box-shadow: -0.6rem 0.6rem 0 #ffbf3c;
+}
+
+.pp8-slide-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.pp8-slide-name {
+  margin: 0;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+}
+
+/* Clamped so every slide is about the same height and the tabs below don't jump. */
+.pp8-slide-desc {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'Outfit';
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.pp8-tabs {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+/* Fills across the top of the active tab; when it reaches the end the banner moves to the next project. */
+.pp8-tab-progress {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ffbf3c;
+  transform-origin: left;
+  animation: pp8-progress 7s linear forwards;
+  animation-play-state: paused;
+}
+
+.pp8-tab-progress.is-running {
+  animation-play-state: running;
+}
+
+.pp8-tab-media {
+  flex: 0 0 4.5rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Short wide screens (landscape tablets, a spanned Duo, small laptops): tighten up so the tabs stay on screen. */
+@media (max-height: 820px) {
+  .pp8-banner--wide .pp8-topline {
+    margin-bottom: 1rem;
+  }
+
+  .pp8-banner--wide .pp8-heading {
+    font-size: 2rem;
+  }
+
+  .pp8-banner--wide .pp8-slide-copy {
+    gap: 0.75rem;
+  }
+
+  .pp8-banner--wide .pp8-slide-name {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .pp8-banner--wide .pp8-slide-desc {
+    font-size: 1.05rem;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  /* Caps the picture's height to a share of the screen; its width follows from the artwork ratio. */
+  .pp8-banner--wide .pp8-slide-visual {
+    justify-self: end;
+    width: min(100% - 0.6rem, 40vh * 306 / 165);
+  }
+
+  .pp8-banner--wide .pp8-tabs {
+    margin-top: 1.5rem;
+  }
+
+  .pp8-banner--wide .pp8-tab {
+    padding: 0.6rem;
+  }
+}
+
+/* A spanned Surface Duo: the story on the left screen, the picture on the right, nothing under the hinge. */
+@media (horizontal-viewport-segments: 2) {
+  .pp8-banner--wide .pp8-inner {
+    max-width: none;
+  }
+
+  .pp8-banner--wide .pp8-slide,
+  .pp8-banner--wide .pp8-tabs {
+    grid-template-columns:
+      calc(env(viewport-segment-width 0 0) - 2 * var(--pp8-gutter))
+      calc(env(viewport-segment-width 1 0) - 2 * var(--pp8-gutter));
+    column-gap: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0) + 2 * var(--pp8-gutter));
+  }
+
+  /* Two tabs per screen, in reading order down each one. */
+  .pp8-banner--wide .pp8-tabs {
+    grid-template-rows: repeat(2, auto);
+    grid-auto-columns: auto;
+    row-gap: 0.6rem;
+  }
+}
+
+/* ---------- Touch and narrow screens: swipeable cards ---------- */
+
+/* Bleeds to the right edge of the screen, so the next card visibly peeks in. */
+.pp8-track {
+  display: flex;
+  gap: 1rem;
+  margin-right: calc(50% - 50vw);
+  padding: 0 var(--pp8-gutter) 0.75rem 0.6rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline-start: 0.6rem;
+  scrollbar-width: none;
+}
+
+.pp8-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Touch layouts sit a little closer to the nav, so the cards and their position bar fit on one screen. */
+.pp5-hero.pp8-banner--compact {
+  padding-top: calc(max(50px, 7vmin) + 2.5rem);
+}
+
+.pp8-banner--compact .pp8-topline {
+  margin-bottom: 1rem;
+}
+
+/* Capped so a wide phone or a single Duo screen still shows a peek and keeps the picture's height in check. */
+.pp8-track-slide {
+  display: flex;
+  flex: 0 0 min(25rem, 100% - 3rem);
+  scroll-snap-align: start;
+}
+
+.pp8-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  background: #1b1b1b;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: -0.5rem 0.5rem 0 #ffbf3c;
+}
+
+.pp8-card:hover {
+  color: #fff;
+}
+
+.pp8-card:focus-visible {
+  outline: 3px solid #ffbf3c;
+  outline-offset: 3px;
+}
+
+.pp8-card-media {
+  border-bottom: 2px solid #fff;
+}
+
+.pp8-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 1.1rem 1.1rem 1.25rem;
+}
+
+.pp8-card-name {
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.9rem, 8vw, 2.75rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.pp8-card-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+/* Very narrow phones (folded Galaxy Fold, small Androids): two lines of description is plenty. */
+@media (max-width: 380px) {
+  .pp8-card-desc {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+
+/* A full-width, button-looking label pinned to the bottom, so every card's button lines up. */
+.pp8-card-cta {
+  align-self: stretch;
+  margin-top: auto;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: none;
+}
+
+.pp8-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.pp8-dots-count {
+  min-width: 4.5rem;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 0.95rem;
+}
+
+/* Thin bars to look at, but each button is a full 44px-tall tap target. */
+.pp8-dot {
+  flex: 1;
+  height: 2.75rem;
+  padding: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)) center / 100% 4px no-repeat;
+  border: 0;
+  cursor: pointer;
+}
+
+.pp8-dot[aria-current='true'] {
+  background-image: linear-gradient(#ffbf3c, #ffbf3c);
+  background-size: 100% 6px;
+}
+
+.pp8-dot:focus-visible {
+  outline: 3px solid #ffbf3c;
+  outline-offset: 2px;
+}
+
+.pp8-picker {
+  display: none;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.pp8-picker .pp8-tab {
+  align-items: flex-start;
+  padding: 0.7rem;
+}
+
+/* Tablets in portrait and an unfolded single Duo screen have room for bigger cards and one row of buttons. */
+@media (min-width: 600px) {
+  .pp8-track-slide {
+    flex-basis: min(36rem, 78%);
+  }
+
+  .pp8-dots {
+    display: none;
+  }
+
+  .pp8-picker {
+    display: grid;
+  }
+}
+
+@keyframes pp8-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pp8-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp8-slide {
+    animation: none;
+  }
+
+  .pp8-cta {
+    transition: none;
+  }
+}

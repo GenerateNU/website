@@ -1,0 +1,248 @@
+.pp6-hint {
+  margin: 0 0 1rem;
+  color: #444;
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+}
+
+/* Large picker tiles: every featured image is visible at once, side by side. */
+.pp6-thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: 1.25rem;
+}
+
+.pp6-thumb {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: -0.3rem 0.3rem 0 #111;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp6-thumb:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+.pp6-thumb-media {
+  border-bottom: 2px solid #111;
+}
+
+.pp6-thumb-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 0.9rem 0.9rem;
+}
+
+.pp6-thumb-name {
+  font-family: 'Space Mono 700';
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.pp6-thumb-state {
+  color: #187dff;
+  font-family: 'Space Mono 700';
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* The chosen tile turns dark and lifts, with a yellow shadow pointing at the stage below. */
+.pp6-thumb[data-selected] {
+  background: #111;
+  color: #fff;
+  box-shadow: -0.3rem 0.3rem 0 #ffbf3c;
+}
+
+.pp6-thumb[data-selected] .pp6-thumb-state {
+  color: #ffbf3c;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pp6-thumb:not([data-selected]):hover {
+    transform: translate(0.2rem, -0.2rem);
+    box-shadow: -0.5rem 0.5rem 0 #111;
+  }
+}
+
+.pp6-stage {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  background: #111;
+  border: 2px solid #111;
+  box-shadow: -0.5rem 0.5rem 0 #111;
+  animation: pp6-fade 0.3s ease-out;
+}
+
+.pp6-stage:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 4px;
+}
+
+.pp6-stage-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 2px solid #111;
+}
+
+.pp6-stage-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: clamp(1.25rem, 3vw, 2.75rem);
+  color: #fff;
+}
+
+.pp6-stage-position {
+  color: #ffbf3c;
+  font-family: 'Space Mono 700';
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.pp6-stage-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.pp6-stage-semester {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Space Mono';
+  font-size: 0.9rem;
+}
+
+.pp6-stage-name {
+  margin: 0;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.pp6-stage-desc {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'Outfit';
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.pp6-stage-quote {
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 4px solid #ffbf3c;
+}
+
+.pp6-stage-quote blockquote {
+  display: -webkit-box;
+  margin: 0 0 0.5rem;
+  overflow: hidden;
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.pp6-stage-quote figcaption {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Outfit';
+  font-size: 0.95rem;
+}
+
+.pp6-stage-cta {
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #ffbf3c;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: -0.4rem 0.4rem 0 #fff;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp6-stage-cta span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.pp6-stage-cta:hover {
+  color: #111;
+  transform: translate(0.2rem, -0.2rem);
+  box-shadow: -0.6rem 0.6rem 0 #fff;
+}
+
+.pp6-stage-cta:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+/* Side by side on wide screens: the picture gets most of the row. */
+@media (min-width: 900px) {
+  .pp6-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .pp6-stage-visual {
+    border-bottom: 0;
+    border-right: 2px solid #111;
+  }
+
+  .pp6-stage-body {
+    justify-content: center;
+  }
+
+  .pp6-stage .pp5-media--mockup {
+    min-height: 100%;
+  }
+}
+
+@keyframes pp6-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp6-thumb,
+  .pp6-stage-cta {
+    transition: none;
+  }
+
+  .pp6-stage {
+    animation: none;
+  }
+}

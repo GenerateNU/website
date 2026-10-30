@@ -132,4 +132,20 @@ span {
     height: 5vh;
     width: 5vh;
   }
+  /* The nav now holds the Projects prototype switcher, so let it size to its content. */
+  #nav-all {
+    padding: 1rem;
+  }
+  #nav-contents.bar-size {
+    width: auto;
+    max-width: calc(100vw - 2rem);
+    min-height: 50px;
+    gap: 0.75rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  #nav-contents span {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
 }

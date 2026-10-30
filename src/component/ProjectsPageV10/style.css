@@ -1,0 +1,696 @@
+.pp10-page {
+  --pp10-cream: #fff6e9;
+  --pp10-ink: #111;
+  --pp10-pink: #ff5fa2;
+  --pp10-pink-dark: #b8165c;
+  --pp10-mint: #3ddc97;
+  --pp10-yellow: #ffbf3c;
+  --pp10-blue: #187dff;
+  --pp10-blue-dark: #0d4fb3;
+  --pp10-sign: 'Bungee', 'Space Mono 700', sans-serif;
+  /* The claw's parts, so the drop distance can be worked out from them. */
+  --pp10-carriage-h: 1.4rem;
+  --pp10-rope-idle: 1.25rem;
+  --pp10-head-h: 4.5rem;
+  /* The shared footer pokes past the edge on phones; clip (not hidden) keeps the sticky tag working. */
+  overflow-x: clip;
+  min-height: 100vh;
+  background: var(--pp10-cream);
+  color: var(--pp10-ink);
+}
+
+/* ---------- Header ---------- */
+
+.pp10-hero {
+  position: relative;
+  padding: calc(max(50px, 7vmin) + 3rem) clamp(1rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
+  /* Confetti on the arcade carpet. */
+  background-color: var(--pp10-cream);
+  background-image:
+    radial-gradient(circle, rgba(255, 95, 162, 0.35) 0 3px, transparent 4px),
+    radial-gradient(circle, rgba(24, 125, 255, 0.3) 0 3px, transparent 4px),
+    radial-gradient(circle, rgba(255, 191, 60, 0.45) 0 3px, transparent 4px);
+  background-position:
+    0 0,
+    1.6rem 2.1rem,
+    3.1rem 0.9rem;
+  background-size: 4.2rem 4.2rem;
+}
+
+/* The shared NavBar is fixed; here it scrolls away with the header. Its wrapper is much taller than
+   the bar it holds, so clicks pass through that empty space. */
+.pp10-hero #nav-all {
+  position: absolute;
+  pointer-events: none;
+}
+
+.pp10-hero #nav-all > * {
+  pointer-events: auto;
+}
+
+.pp10-hero-inner,
+.pp10-main {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp10-eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--pp10-pink-dark);
+  font-family: 'Space Mono 700';
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pp10-title {
+  margin: 0;
+  color: var(--pp10-ink);
+  font-family: var(--pp10-sign);
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+  text-shadow: 5px 5px 0 var(--pp10-pink);
+}
+
+.pp10-intro {
+  max-width: 40rem;
+  margin: 1.25rem 0 0;
+  font-family: 'Outfit';
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.pp10-main {
+  padding: 0 clamp(1rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+  box-sizing: content-box;
+}
+
+.pp10-arcade {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+@media (min-width: 900px) {
+  .pp10-arcade {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    align-items: start;
+  }
+
+  .pp10-tag {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+/* ---------- The machine ---------- */
+
+.pp10-machine {
+  padding-right: 10px;
+}
+
+/* A light-up sign: a row of bulbs along the top and bottom edges. */
+.pp10-marquee {
+  position: relative;
+  margin: 0 1.25rem;
+  padding: 1.4rem 1rem;
+  background:
+    radial-gradient(circle, #fff6b0 0 0.22rem, transparent 0.27rem) 0.3rem 0.25rem / 1.25rem 0.8rem repeat-x,
+    radial-gradient(circle, #fff6b0 0 0.22rem, transparent 0.27rem) 0.3rem calc(100% - 0.25rem) / 1.25rem 0.8rem
+      repeat-x,
+    var(--pp10-pink);
+  border: 4px solid var(--pp10-ink);
+  border-bottom: 0;
+  border-radius: 1.25rem 1.25rem 0 0;
+  text-align: center;
+}
+
+.pp10-marquee-text {
+  margin: 0;
+  color: #fff;
+  font-family: var(--pp10-sign);
+  font-size: clamp(1.3rem, 3.4vw, 2.3rem);
+  line-height: 1.1;
+  text-shadow: 3px 3px 0 var(--pp10-ink);
+}
+
+.pp10-cabinet {
+  padding: clamp(0.75rem, 2vw, 1.1rem);
+  background: var(--pp10-blue);
+  border: 4px solid var(--pp10-ink);
+  border-radius: 1rem;
+  box-shadow: 10px 10px 0 var(--pp10-ink);
+}
+
+.pp10-glass {
+  position: relative;
+  /* Headroom for the claw to hang in above the pile. */
+  padding: calc(var(--pp10-carriage-h) + var(--pp10-rope-idle) + var(--pp10-head-h) + 2rem) clamp(0.75rem, 2vw, 1.25rem)
+    clamp(1rem, 2vw, 1.5rem);
+  overflow: hidden;
+  background: linear-gradient(180deg, #cfeaff 0%, #e8f5ff 50%, #fff 100%);
+  border: 4px solid var(--pp10-ink);
+  border-radius: 0.75rem;
+}
+
+/* The rail the claw runs along. */
+.pp10-glass::before {
+  content: '';
+  position: absolute;
+  top: 0.55rem;
+  right: 0.75rem;
+  left: 0.75rem;
+  height: 0.55rem;
+  background: #9aa6b8;
+  border: 3px solid var(--pp10-ink);
+  border-radius: 999px;
+}
+
+/* A thin glint across the glass, kept faint so the prizes stay easy to see. */
+.pp10-glass::after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 0 20%,
+    rgba(255, 255, 255, 0.35) 20% 23%,
+    transparent 23% 26%,
+    rgba(255, 255, 255, 0.25) 26% 27%,
+    transparent 27%
+  );
+  pointer-events: none;
+}
+
+.pp10-claw {
+  position: absolute;
+  z-index: 2;
+  top: 0.2rem;
+  left: var(--pp10-claw-x, 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5rem;
+  transform: translateX(-50%);
+  transition: left 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.pp10-carriage {
+  width: 2.6rem;
+  height: var(--pp10-carriage-h);
+  background: #c9d2e3;
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.4rem;
+}
+
+.pp10-rope {
+  width: 4px;
+  height: var(--pp10-rope-idle);
+  background: var(--pp10-ink);
+  transition: height 0.45s ease-out;
+}
+
+.pp10-machine[data-phase='drop'] .pp10-rope,
+.pp10-machine[data-phase='grab'] .pp10-rope {
+  height: max(
+    var(--pp10-rope-idle),
+    calc(var(--pp10-claw-reach, 0px) - 0.2rem - var(--pp10-carriage-h) - var(--pp10-head-h))
+  );
+  transition-timing-function: ease-in;
+}
+
+.pp10-claw-head {
+  position: relative;
+  z-index: 1;
+  width: 5rem;
+  height: var(--pp10-head-h);
+  overflow: visible;
+}
+
+.pp10-claw-hub {
+  fill: #c9d2e3;
+  stroke: var(--pp10-ink);
+  stroke-width: 4;
+}
+
+.pp10-prong {
+  fill: none;
+  stroke: var(--pp10-ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 7;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Open while hunting, closed once it has hold of a prize. */
+.pp10-prong--left {
+  transform: rotate(14deg);
+  transform-origin: 32px 18px;
+}
+
+.pp10-prong--right {
+  transform: rotate(-14deg);
+  transform-origin: 48px 18px;
+}
+
+.pp10-machine[data-phase='grab'] .pp10-prong--left,
+.pp10-machine[data-phase='lift'] .pp10-prong--left {
+  transform: rotate(-6deg);
+}
+
+.pp10-machine[data-phase='grab'] .pp10-prong--right,
+.pp10-machine[data-phase='lift'] .pp10-prong--right {
+  transform: rotate(6deg);
+}
+
+/* The grabbed prize, tucked up between the prongs. */
+.pp10-carried {
+  width: 5.5rem;
+  margin-top: -2.4rem;
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.6rem;
+  rotate: -5deg;
+}
+
+.pp10-win {
+  position: absolute;
+  z-index: 4;
+  /* Up in the claw's headroom, on the side the claw isn't, so it covers neither the claw nor the pile. */
+  top: 2.25rem;
+  right: 1.25rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background: var(--pp10-yellow);
+  border: 4px solid var(--pp10-ink);
+  border-radius: 0.6rem;
+  color: var(--pp10-ink);
+  font-family: var(--pp10-sign);
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+  white-space: nowrap;
+  box-shadow: 5px 5px 0 var(--pp10-ink);
+  transform: rotate(-4deg);
+  animation: pp10-pop 0.3s ease-out;
+}
+
+.pp10-glass[data-claw-side='right'] .pp10-win {
+  right: auto;
+  left: 1.25rem;
+}
+
+/* ---------- Prizes ---------- */
+
+.pp10-pile {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 700px) {
+  .pp10-pile {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.pp10-slot {
+  display: flex;
+  justify-content: center;
+}
+
+.pp10-prize {
+  --pp10-prize-color: var(--pp10-pink);
+  --pp10-tilt: 0deg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  color: var(--pp10-ink);
+  text-decoration: none;
+  rotate: var(--pp10-tilt);
+  transition:
+    rotate 0.2s ease-out,
+    translate 0.2s ease-out;
+}
+
+/* A jumble of colours and angles, like a real pile of prizes. */
+.pp10-slot:nth-child(4n + 2) .pp10-prize {
+  --pp10-prize-color: var(--pp10-mint);
+  --pp10-tilt: 3deg;
+}
+
+.pp10-slot:nth-child(4n + 3) .pp10-prize {
+  --pp10-prize-color: var(--pp10-yellow);
+  --pp10-tilt: -2deg;
+}
+
+.pp10-slot:nth-child(4n + 4) .pp10-prize {
+  --pp10-prize-color: #8fc2ff;
+  --pp10-tilt: 4deg;
+}
+
+.pp10-slot:nth-child(4n + 1) .pp10-prize {
+  --pp10-tilt: -4deg;
+}
+
+.pp10-prize:hover {
+  color: var(--pp10-ink);
+}
+
+.pp10-prize[data-selected] {
+  rotate: 0deg;
+  translate: 0 -0.4rem;
+}
+
+/* Opacity rather than visibility: shared image styles elsewhere set the picture itself visible. */
+.pp10-prize[data-grabbed] {
+  opacity: 0;
+}
+
+.pp10-prize:focus-visible {
+  outline: 3px dashed var(--pp10-blue-dark);
+  outline-offset: 6px;
+}
+
+.pp10-prize-box {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.45rem;
+  background: var(--pp10-prize-color);
+  border: 3px solid var(--pp10-ink);
+  border-radius: 1rem;
+  box-shadow: 0 5px 0 var(--pp10-ink);
+}
+
+.pp10-prize[data-selected] .pp10-prize-box {
+  box-shadow:
+    0 5px 0 var(--pp10-ink),
+    0 0 0 5px #fff,
+    0 0 0 8px var(--pp10-pink-dark);
+}
+
+.pp10-prize-media {
+  border: 2px solid var(--pp10-ink);
+  border-radius: 0.6rem;
+}
+
+/* A little price tag hanging off the prize. */
+.pp10-prize-name {
+  max-width: 100%;
+  padding: 0.3rem 0.65rem;
+  background: #fff;
+  border: 2px solid var(--pp10-ink);
+  border-radius: 0.4rem;
+  font-family: 'Space Mono 700';
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Control panel ---------- */
+
+.pp10-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: clamp(0.75rem, 2vw, 1.1rem);
+  padding: 0.9rem clamp(0.9rem, 2vw, 1.5rem);
+  background: var(--pp10-blue-dark);
+  border: 4px solid var(--pp10-ink);
+  border-radius: 0.75rem;
+}
+
+.pp10-stick {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pp10-nudge {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  background: #fff;
+  border: 3px solid var(--pp10-ink);
+  border-radius: 50%;
+  color: var(--pp10-ink);
+  font-size: 1rem;
+  box-shadow: 0 4px 0 var(--pp10-ink);
+  cursor: pointer;
+}
+
+.pp10-nudge:active:not(:disabled) {
+  translate: 0 3px;
+  box-shadow: 0 1px 0 var(--pp10-ink);
+}
+
+/* A ball-top joystick between the two arrows. */
+.pp10-joystick {
+  position: relative;
+  width: 2.6rem;
+  height: 3rem;
+  background:
+    radial-gradient(circle at 50% 35%, #ff8fc0 0 0.25rem, transparent 0.3rem),
+    radial-gradient(circle at 50% 40%, var(--pp10-pink) 0 0.85rem, transparent 0.9rem),
+    linear-gradient(var(--pp10-ink), var(--pp10-ink)) 50% 100% / 0.35rem 55% no-repeat;
+}
+
+.pp10-coin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.pp10-coin-slot {
+  width: 0.5rem;
+  height: 1.75rem;
+  background: var(--pp10-ink);
+  border: 3px solid var(--pp10-yellow);
+  border-radius: 0.3rem;
+}
+
+.pp10-drop {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  background: radial-gradient(circle at 35% 30%, #ff8a8a 0 18%, #e8283c 50%);
+  border: 4px solid var(--pp10-ink);
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--pp10-sign);
+  font-size: 1rem;
+  text-shadow: 2px 2px 0 var(--pp10-ink);
+  box-shadow: 0 6px 0 #7d0f1c;
+  cursor: pointer;
+}
+
+.pp10-drop:active:not(:disabled) {
+  translate: 0 4px;
+  box-shadow: 0 2px 0 #7d0f1c;
+}
+
+.pp10-nudge:disabled,
+.pp10-drop:disabled {
+  cursor: progress;
+}
+
+.pp10-nudge:focus-visible,
+.pp10-drop:focus-visible {
+  outline: 3px solid var(--pp10-yellow);
+  outline-offset: 4px;
+}
+
+@media (max-width: 420px) {
+  .pp10-coin {
+    display: none;
+  }
+}
+
+/* ---------- Prize tag ---------- */
+
+.pp10-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  background: #fff;
+  border: 4px solid var(--pp10-ink);
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0 var(--pp10-pink);
+}
+
+.pp10-tag-label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  font-family: 'Space Mono 700';
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.pp10-tag-featured {
+  padding: 0 0.4rem;
+  background: var(--pp10-yellow);
+  border: 2px solid var(--pp10-ink);
+}
+
+.pp10-tag-media {
+  width: 100%;
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.75rem;
+}
+
+.pp10-tag-name {
+  margin: 0;
+  color: var(--pp10-ink);
+  font-family: var(--pp10-sign);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.pp10-tag-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pp10-tag-semester {
+  font-family: 'Space Mono';
+  font-size: 0.95rem;
+}
+
+/* Clamped so the tag stays about the same height as the claw moves. */
+.pp10-tag-desc {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.pp10-tag-link {
+  padding: 0.8rem 1.25rem;
+  background: var(--pp10-yellow);
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.6rem;
+  color: var(--pp10-ink);
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 4px 0 var(--pp10-ink);
+}
+
+.pp10-tag-link:hover {
+  color: var(--pp10-ink);
+  background: #ffd36e;
+}
+
+.pp10-tag-link:focus-visible {
+  outline: 3px solid var(--pp10-blue-dark);
+  outline-offset: 4px;
+}
+
+/* Phones grab with one tap, so the tag beside the machine would only repeat the pile. */
+@media (max-width: 599px) {
+  .pp10-tag {
+    display: none;
+  }
+}
+
+/* ---------- Apply ---------- */
+
+.pp10-again {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem 2rem;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1rem, 5vw, 4rem);
+  background: var(--pp10-pink);
+  border-top: 4px solid var(--pp10-ink);
+  text-align: center;
+}
+
+.pp10-again-heading {
+  margin: 0;
+  color: #fff;
+  font-family: var(--pp10-sign);
+  font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  text-shadow: 3px 3px 0 var(--pp10-ink);
+}
+
+.pp10-again-link {
+  padding: 0.9rem 1.75rem;
+  background: var(--pp10-yellow);
+  border: 3px solid var(--pp10-ink);
+  border-radius: 0.6rem;
+  color: var(--pp10-ink);
+  font-family: 'Space Mono 700';
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 5px 0 var(--pp10-ink);
+}
+
+.pp10-again-link:hover {
+  color: var(--pp10-ink);
+}
+
+.pp10-again-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+@keyframes pp10-pop {
+  from {
+    opacity: 0;
+    transform: rotate(-4deg) scale(0.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(-4deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp10-claw,
+  .pp10-rope,
+  .pp10-prong,
+  .pp10-prize {
+    transition: none;
+  }
+
+  .pp10-win {
+    animation: none;
+  }
+}

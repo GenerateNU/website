@@ -1,0 +1,96 @@
+/* The year list sits flush under the hero, on the same dark background, so it reads as part of it. */
+.pp14-years {
+  padding: 0 clamp(1rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
+  background: #111;
+}
+
+.pp14-years-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.pp14-year-link {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition:
+    background 0.15s ease-out,
+    color 0.15s ease-out;
+}
+
+.pp14-year-link:hover,
+.pp14-year-link:focus-visible {
+  background: #ffbf3c;
+  border-color: #ffbf3c;
+  color: #111;
+}
+
+.pp14-year-link:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+/* Jumping to a year leaves a little room above it instead of pinning it to the window edge. */
+.pp14-class {
+  scroll-margin-top: 2rem;
+}
+
+.pp14-class + .pp14-class {
+  margin-top: clamp(4rem, 8vw, 6rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 2px solid #111;
+}
+
+.pp14-class-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.pp14-class-year {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  line-height: 0.85;
+}
+
+.pp14-class-count {
+  margin: 0;
+  color: #444;
+  font-family: 'Outfit';
+  font-size: 1.15rem;
+}
+
+/* On wide screens the year stays in view beside its projects while they scroll past. */
+@media (min-width: 64rem) {
+  .pp14-class {
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .pp14-class-header {
+    position: sticky;
+    top: 2rem;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  /* Sized so four digits fit the 12rem column. */
+  .pp14-class-year {
+    font-size: 4.25rem;
+  }
+}

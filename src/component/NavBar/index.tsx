@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './style.css';
 import GenerateLogo from '@/assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png';
+import ProjectsPrototypeSwitcher from '@/component/ProjectsPrototypeSwitcher';
 
 const NavBar = () => {
   const currentUrl = window.location.href.split('/').at(-1);
@@ -35,13 +36,7 @@ const NavBar = () => {
             </span>
           </Link>
         )}
-        {currentUrl !== 'projects' && (
-          <Link to="/projects" className="text-decoration-none">
-            <span className="font-size bg-transparent shadow-none border-0 text-decoration-none text-uppercase cursor-pointer menu-hover align-item-center">
-              Projects
-            </span>
-          </Link>
-        )}
+        <ProjectsPrototypeSwitcher />
       </div>
     </div>
   );
