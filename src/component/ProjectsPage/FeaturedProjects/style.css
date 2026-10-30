@@ -128,9 +128,30 @@
   line-height: 1.5;
 }
 
+/* Offsets the -0.5rem button shadow so it lines up with the text */
 .pp-fp-desktop-nav {
   display: flex;
-  margin-top: auto;
+  margin-top: 5vh;
+  padding-left: calc(5px + 0.5rem);
+}
+
+.pp-fp-desktop-info .pp-fp-project-text {
+  display: grid;
+}
+
+/* Every project's text shares one cell so the tallest sets the height and the arrows never move */
+.pp-fp-project-slot {
+  grid-area: 1 / 1;
+}
+
+/* The global * transition would otherwise fade visibility and overlap two projects' text */
+.pp-fp-project-slot,
+.pp-fp-project-slot * {
+  transition: none;
+}
+
+.pp-fp-project-slot-hidden {
+  visibility: hidden;
 }
 
 .pp-fp-desktop-body {
@@ -141,14 +162,12 @@
   min-height: 0;
 }
 
-/* Top-aligned text and bottom-pinned arrows so a two-line project name doesn't shift anything */
 .pp-fp-desktop-info {
   display: flex;
   flex: 0 0 28vw;
   flex-direction: column;
-  align-self: stretch;
+  align-self: flex-start;
   min-width: 340px;
-  padding: 4vh 0 2vh;
 }
 
 .pp-fp-desktop-image {

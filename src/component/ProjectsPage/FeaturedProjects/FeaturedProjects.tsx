@@ -61,9 +61,16 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }: Feat
         </div>
         <div className="pp-fp-desktop-info">
           <div className="pp-fp-project-text">
-            <h1 className="pp-fp-projects-desktop">{currentProject.name}</h1>
-            <h2 className="pp-fp-project-team pp-fp-projects-desktop">{currentProject.type}</h2>
-            <div className="pp-fp-desc">{currentProject.description}</div>
+            {Projects.map(project => (
+              <div
+                key={project.name}
+                className={`pp-fp-project-slot${project === currentProject ? '' : ' pp-fp-project-slot-hidden'}`}
+              >
+                <h1 className="pp-fp-projects-desktop">{project.name}</h1>
+                <h2 className="pp-fp-project-team pp-fp-projects-desktop">{project.type}</h2>
+                <div className="pp-fp-desc">{project.description}</div>
+              </div>
+            ))}
           </div>
           <div className="pp-fp-projects-buttons pp-fp-desktop-nav">
             <ShadowedButton
