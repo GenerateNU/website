@@ -28,6 +28,11 @@ type ProjectSummary = {
   teams: ProjectTeam[];
 };
 
+type ProjectSection = {
+  label: string;
+  projects: ProjectSummary[];
+};
+
 const SearchBar = ({ setSearchQuery }: SearchBarProps) => (
   <input
     className="search-bar search-icon"
@@ -39,105 +44,112 @@ const SearchBar = ({ setSearchQuery }: SearchBarProps) => (
   />
 );
 
-const filterData = (query: string, data: string[]): string[] => {
-  if (!query) {
-    return data;
-  } else {
-    return data.filter(d => d.toLowerCase().includes(query));
-  }
-};
-
-const projects: ProjectSummary[] = [
+const sections: ProjectSection[] = [
   {
-    name: 'SkillSpark',
-    image: SkillSpark,
-    teams: ['software'],
+    label: 'Spring 2026',
+    projects: [
+      {
+        name: 'SkillSpark',
+        image: SkillSpark,
+        teams: ['software'],
+      },
+      {
+        name: 'Toggo',
+        image: Toggo,
+        teams: ['software'],
+      },
+      {
+        name: 'SelfServe',
+        image: SelfServe,
+        teams: ['software'],
+      },
+      {
+        name: 'Inside Athletics',
+        image: InsideAthletics,
+        teams: ['software'],
+      },
+    ],
   },
   {
-    name: 'Toggo',
-    image: Toggo,
-    teams: ['software'],
-  },
-  {
-    name: 'SelfServe',
-    image: SelfServe,
-    teams: ['software'],
-  },
-  {
-    name: 'Inside Athletics',
-    image: InsideAthletics,
-    teams: ['software'],
-  },
-  {
-    name: 'Earnz',
-    image: Earnz,
-    teams: ['software'],
-  },
-  {
-    name: 'SmartyPill',
-    image: SmartyPill,
-    teams: ['software', 'hardware'],
-  },
-  {
-    name: 'Jurni',
-    image: Jurni,
-    teams: ['software'],
-  },
-  {
-    name: 'Alia',
-    image: Alia,
-    teams: ['software'],
-  },
-  {
-    name: 'Arctic Vision',
-    image: Arctic,
-    teams: ['software', 'hardware'],
-  },
-  {
-    name: 'ShowNxt',
-    image: ShowNxt,
-    teams: ['software'],
-  },
-  {
-    name: 'Hot Date',
-    image: HotDate,
-    teams: ['hardware'],
-  },
-  {
-    name: 'Autopasser',
-    image: AutoPasser,
-    teams: ['hardware'],
+    label: '',
+    projects: [
+      {
+        name: 'Earnz',
+        image: Earnz,
+        teams: ['software'],
+      },
+      {
+        name: 'SmartyPill',
+        image: SmartyPill,
+        teams: ['software', 'hardware'],
+      },
+      {
+        name: 'Jurni',
+        image: Jurni,
+        teams: ['software'],
+      },
+      {
+        name: 'Alia',
+        image: Alia,
+        teams: ['software'],
+      },
+      {
+        name: 'Arctic Vision',
+        image: Arctic,
+        teams: ['software', 'hardware'],
+      },
+      {
+        name: 'ShowNxt',
+        image: ShowNxt,
+        teams: ['software'],
+      },
+      {
+        name: 'Hot Date',
+        image: HotDate,
+        teams: ['hardware'],
+      },
+      {
+        name: 'Autopasser',
+        image: AutoPasser,
+        teams: ['hardware'],
+      },
+    ],
   },
 ];
+
+const generateGrid = (projects: ProjectSummary[]) =>
+  toPairs(projects).map(([first, second]) => (
+    <div key={first.name} className="project-col">
+      <Project name={first.name} image={first.image} teams={first.teams} />
+      {second ? <Project name={second.name} image={second.image} teams={second.teams} /> : <div></div>}
+    </div>
+  ));
 
 export default function AllProjects() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const dataFiltered = filterData(
-    searchQuery,
-    projects.map(p => p.name)
-  );
+  const matchesSearch = (project: ProjectSummary) => project.name.toLowerCase().includes(searchQuery.toLowerCase());
 
-  const generateGrid = () => {
-    const filteredProjects = projects.filter(p => dataFiltered.includes(p.name));
+  const visibleSections = sections.flatMap(section => {
+    const projects = section.projects.filter(matchesSearch);
 
-    return toPairs(filteredProjects).map(([first, second]) => (
-      <div key={first.name} className="project-col">
-        <Project name={first.name} image={first.image} teams={first.teams} />
-        {second ? <Project name={second.name} image={second.image} teams={second.teams} /> : <div></div>}
-      </div>
-    ));
-  };
+    return projects.length > 0 ? [{ ...section, projects }] : [];
+  });
 
   return (
-    <div className="all-projects-container" style={{ width: Math.ceil(projects.length / 2) * 500 + 200 }}>
+    <div className="all-projects-container">
       <div className="all-projects-header">
         <h1 className="projects-title">All Projects</h1>
       </div>
       <div className="search-bar">
         <SearchBar setSearchQuery={setSearchQuery} />
       </div>
-      <div className="all-projects">{generateGrid()}</div>
+      {visibleSections.map(section => (
+        <div key={section.label} className="projects-section">
+          <p className="projects-section-label">{section.label}</p>
+          <div className="all-projects">{generateGrid(section.projects)}</div>
+        </div>
+      ))}
     </div>
   );
 }

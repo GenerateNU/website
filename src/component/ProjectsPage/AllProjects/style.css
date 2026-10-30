@@ -2,7 +2,35 @@
   position: relative;
   display: flex;
   max-width: unset;
+  width: max-content;
   align-items: center;
+  column-gap: 6vw;
+  padding-right: 6vw;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-section-label {
+  align-self: flex-start;
+  margin-bottom: 4vh;
+  padding: 4px 10px;
+  font-family: 'Space Mono 700';
+  font-size: 2.2vh;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
+  background-color: #3b82f6;
+}
+
+.projects-section-label:empty {
+  background-color: transparent;
+}
+
+.projects-section-label:empty::before {
+  content: '\200b';
 }
 
 .all-projects-header {
@@ -22,15 +50,13 @@
 
 .all-projects {
   display: flex;
-  height: 80vh;
-  width: 100%;
-  justify-content: space-evenly;
+  column-gap: 8vw;
 }
 
 .project-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  row-gap: 14vh;
 }
 
 .search-bar {
@@ -67,6 +93,7 @@
 
   .project-col {
     align-items: center;
+    row-gap: 0;
   }
 
   .search-bar {
