@@ -45,8 +45,8 @@
 }
 
 .project-link:not(:disabled):active {
-  translate: -2vh 2vh;
-  box-shadow: 0 0 black;
+  translate: -0.25vh 0.25vh;
+  box-shadow: -1.75vh 1.75vh black;
   transition-duration: 0.1s;
 }
 

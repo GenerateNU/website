@@ -113,8 +113,8 @@
 }
 
 .mis-cta:active {
-  translate: -0.25rem 0.25rem;
-  box-shadow: 0 0 white;
+  translate: -0.125rem 0.125rem;
+  box-shadow: -0.125rem 0.125rem white;
   transition-duration: 0.1s;
 }
 
