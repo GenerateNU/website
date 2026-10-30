@@ -13,8 +13,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* Lift the card and grow the shadow by the same amount so the shadow stays put */
 .mis-card:hover {
-  box-shadow: 0 0 !important;
+  transform: translate(0.25rem, -0.25rem);
+  box-shadow: -0.75rem 0.75rem white !important;
   transition: all 0.3s ease-in-out;
 }
 

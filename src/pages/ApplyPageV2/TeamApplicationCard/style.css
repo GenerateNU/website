@@ -11,8 +11,10 @@
   border: 2px solid white;
 }
 
+/* Lift the card and grow the shadow by the same amount so the shadow stays put */
 .team-card-container:hover:not(.expanded) {
-  box-shadow: 0 0 !important;
+  transform: translate(0.25rem, -0.25rem);
+  box-shadow: -1.25rem 1.25rem white !important;
   transition: all 0.3s ease-in-out;
 }
 
