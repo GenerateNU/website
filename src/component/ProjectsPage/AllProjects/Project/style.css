@@ -44,6 +44,12 @@
   box-shadow: -2.5vh 2.5vh black;
 }
 
+.project-link:not(:disabled):active {
+  translate: -2vh 2vh;
+  box-shadow: 0 0 black;
+  transition-duration: 0.1s;
+}
+
 .project-images {
   display: flex;
 }

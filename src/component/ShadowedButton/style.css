@@ -28,3 +28,15 @@
     box-shadow: 1.25rem 1.25rem black;
   }
 }
+
+.button-style.hoverButton:active {
+  translate: -0.5rem 0.6rem;
+  box-shadow: 0 0 black;
+  transition-duration: 0.1s;
+}
+
+.button-style-right.hoverButton:active {
+  translate: 1rem 1rem;
+  box-shadow: 0 0 black;
+  transition-duration: 0.1s;
+}

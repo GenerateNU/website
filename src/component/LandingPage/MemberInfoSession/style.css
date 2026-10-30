@@ -112,6 +112,12 @@
   box-shadow: -0.5rem 0.5rem white;
 }
 
+.mis-cta:active {
+  translate: -0.25rem 0.25rem;
+  box-shadow: 0 0 white;
+  transition-duration: 0.1s;
+}
+
 .mis-cta:hover .mis-cta-text {
   transform: translateX(120%);
   opacity: 0;
