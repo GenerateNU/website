@@ -31,7 +31,7 @@
   background: none;
   cursor: pointer;
   transition:
-    transform 0.3s ease-in-out,
+    translate 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
 }
 
@@ -39,9 +39,8 @@
   cursor: default;
 }
 
-/* Lift the card and grow the shadow by the same amount so the shadow stays put */
 .project-link:not(:disabled):hover {
-  transform: translate(0.5vh, -0.5vh);
+  translate: 0.5vh -0.5vh;
   box-shadow: -2.5vh 2.5vh black;
 }
 
