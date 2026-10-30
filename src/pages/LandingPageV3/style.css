@@ -582,7 +582,6 @@
   line-height: 0;
 }
 
-/* Stagger with margins, not padding, so hover areas don't overlap neighbors */
 .mascot-button:nth-child(odd) {
   margin-top: 2rem;
 }
