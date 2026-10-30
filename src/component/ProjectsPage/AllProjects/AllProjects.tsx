@@ -17,7 +17,7 @@ import SkillSpark from '@/assets/images/projectspage/skillspark.png';
 import SmartyPill from '@/assets/images/projectspage/smartypill.svg';
 import SpecialStandard from '@/assets/images/projectspage/specialstandard.png';
 import Toggo from '@/assets/images/projectspage/toggo.svg';
-import featuredProjects from '@/data/featuredProjectData';
+import featuredProjects, { popupOnlyProjects } from '@/data/featuredProjectData';
 import type { FeaturedProject } from '@/data/featuredProjectData';
 import toPairs from '@/shared/toPairs';
 
@@ -149,7 +149,7 @@ const sections: ProjectSection[] = [
   },
 ];
 
-const featuredByName = new Map(featuredProjects.map(project => [project.name, project]));
+const featuredByName = new Map([...featuredProjects, ...popupOnlyProjects].map(project => [project.name, project]));
 
 const renderProject = (project: ProjectSummary, onSelect: (featured: FeaturedProject) => void) => {
   const featured = featuredByName.get(project.name);
