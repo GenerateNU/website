@@ -1,10 +1,11 @@
-# Tool versions and tasks for this repo. Run `mise install` to install the tools
-# and `mise tasks` to list the tasks.
-# Keep node in sync with .nvmrc, and bun with packageManager in package.json and
-# BUN_VERSION in netlify.toml. Netlify reads those files, not this one.
+# Run `mise install` to install the tools and `mise tasks` to list the tasks.
+
+[settings]
+lockfile = true
+
 [tools]
 node = "24"
-bun = "1.4.4"
+bun = "1.4"
 
 [tasks.install]
 description = "Install dependencies for the website and the Sanity Studio, and configure git blame"
