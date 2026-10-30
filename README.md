@@ -1,5 +1,6 @@
 # Generate Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/71cf79a8-2297-413e-809a-5dc4a9dcca0a/deploy-status)](https://app.netlify.com/projects/sprightly-manatee-243873/deploys)
 [![CI](https://github.com/GenerateNU/website/actions/workflows/ci.yml/badge.svg)](https://github.com/GenerateNU/website/actions/workflows/ci.yml)
 
 The website for [Generate](https://generatenu.com), Northeastern's student-led product development studio.
@@ -10,19 +11,20 @@ Built with React, TypeScript and Vite. Content such as directors, teams, showcas
 
 ### Prerequisites
 
+The easiest way to get the right versions of everything is [mise](https://mise.jdx.dev) (`brew install mise`): run `mise install` in the repo and it installs the Bun and Node.js versions pinned in [`mise.toml`](mise.toml). Otherwise, install them yourself:
+
 - [Bun](https://bun.sh) 1.4.4 or newer
-- [Node.js](https://nodejs.org) 22.18 or newer (used by the lint and test tools). With [nvm](https://github.com/nvm-sh/nvm), run `nvm install` in the repo to install and switch to the right version.
-- [just](https://github.com/casey/just) (optional, for the shortcuts below): `brew install just`
+- [Node.js](https://nodejs.org) 24 or newer (used by the lint and test tools). With [nvm](https://github.com/nvm-sh/nvm), run `nvm install` in the repo to install and switch to the right version.
 
 ### Setup
 
 ```sh
 git clone https://github.com/GenerateNU/website.git
 cd website
-nvm install            # install and switch to the Node version in .nvmrc
+mise install           # or `nvm install` if you don't use mise
 cp .env.example .env   # then fill in the values
-just install
-just dev
+mise run install
+mise run dev
 ```
 
 The site runs at http://localhost:5173.
@@ -41,34 +43,34 @@ Ask the [infra team](https://github.com/orgs/GenerateNU/teams/infra) for the val
 
 ## Commands
 
-Run `just` to list every command. Each one is a shortcut for a `bun run` script, so you can use either.
+Run `mise tasks` to list every command. Most are shortcuts for a `bun run` script, so you can use either if you don't use mise.
 
-| Command                 | What it does                                          |
-| ----------------------- | ----------------------------------------------------- |
-| `just dev`              | Start the dev server                                  |
-| `just build`            | Build the site for production into `build/`           |
-| `just preview`          | Serve the production build locally                    |
-| `just check`            | Type-check, lint and check formatting                 |
-| `just ci`               | Run everything CI runs: checks, build and smoke tests |
-| `just typecheck`        | Type-check with TypeScript                            |
-| `just lint`             | Lint with oxlint                                      |
-| `just lint-fix`         | Lint and apply safe auto-fixes                        |
-| `just format`           | Format all files with oxfmt                           |
-| `just format-check`     | Check formatting without changing files               |
-| `just knip`             | Find unused files, exports and dependencies           |
-| `just test-e2e`         | Run the Playwright smoke tests                        |
-| `just install-browsers` | Install the browser the smoke tests use               |
+| Command                     | What it does                                          |
+| --------------------------- | ----------------------------------------------------- |
+| `mise run dev`              | Start the dev server                                  |
+| `mise run build`            | Build the site for production into `build/`           |
+| `mise run preview`          | Serve the production build locally                    |
+| `mise run check`            | Type-check, lint and check formatting                 |
+| `mise run ci`               | Run everything CI runs: checks, build and smoke tests |
+| `mise run typecheck`        | Type-check with TypeScript                            |
+| `mise run lint`             | Lint with oxlint                                      |
+| `mise run lint-fix`         | Lint and apply safe auto-fixes                        |
+| `mise run format`           | Format all files with oxfmt                           |
+| `mise run format-check`     | Check formatting without changing files               |
+| `mise run knip`             | Find unused files, exports and dependencies           |
+| `mise run test-e2e`         | Run the Playwright smoke tests                        |
+| `mise run install-browsers` | Install the browser the smoke tests use               |
 
 ### Sanity Studio
 
 The content editor lives in [`sanity/`](sanity) and has its own dependencies.
 
-| Command                 | What it does                |
-| ----------------------- | --------------------------- |
-| `just studio`           | Start the Studio locally    |
-| `just studio-typecheck` | Type-check the Studio       |
-| `just studio-build`     | Build the Studio            |
-| `just studio-deploy`    | Deploy the Studio to Sanity |
+| Command                     | What it does                |
+| --------------------------- | --------------------------- |
+| `mise run studio`           | Start the Studio locally    |
+| `mise run studio-typecheck` | Type-check the Studio       |
+| `mise run studio-build`     | Build the Studio            |
+| `mise run studio-deploy`    | Deploy the Studio to Sanity |
 
 ## Project structure
 
@@ -88,7 +90,7 @@ e2e/           Playwright smoke tests
 
 - **Imports:** use the `@/` alias for anything outside the current folder (`@/shared/useWebsite`), and `./` for files in the same folder.
 - **Components:** one exported component per file. Small private helper components can live in the same file.
-- **Before you push:** run `just check`. A pre-commit hook formats staged files automatically.
+- **Before you push:** run `mise run check`. A pre-commit hook formats staged files automatically.
 
 ## CI and deployment
 
