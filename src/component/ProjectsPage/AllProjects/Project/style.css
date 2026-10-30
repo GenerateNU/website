@@ -1,6 +1,7 @@
 .project-card {
   display: flex;
   flex-direction: column;
+  width: min-content;
 }
 
 .project-teams {
@@ -16,6 +17,10 @@
 }
 
 .project-card .project-name {
+  display: flex;
+  align-items: flex-end;
+  /* One line tall so wrapped names grow upward without shifting the banner */
+  height: 1lh;
   font-family: 'Space Mono 700';
   font-size: 5vh;
   color: black;
@@ -51,6 +56,7 @@
 
 @media only screen and (max-device-width: 650px), (max-width: 650px) {
   .project-card {
+    width: auto;
     margin-bottom: 100px;
   }
 
@@ -61,6 +67,8 @@
   }
 
   .project-card .project-name {
+    display: block;
+    height: auto;
     text-align: center;
   }
 
