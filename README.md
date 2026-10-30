@@ -12,7 +12,7 @@ Built with React, TypeScript and Vite. Content such as directors, teams, showcas
 ### Prerequisites
 
 - [Bun](https://bun.sh) 1.4.4 or newer
-- [Node.js](https://nodejs.org) 22.18 or newer (used by the lint and test tools). With [nvm](https://github.com/nvm-sh/nvm), run `nvm install` in the repo to install and switch to the right version.
+- [Node.js](https://nodejs.org) 24 or newer (used by the lint and test tools). With [nvm](https://github.com/nvm-sh/nvm), run `nvm install` in the repo to install and switch to the right version.
 - [just](https://github.com/casey/just) (optional, for the shortcuts below): `brew install just`
 
 ### Setup
