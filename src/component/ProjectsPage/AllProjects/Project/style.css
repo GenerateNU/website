@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 5px;
-  height: min(215px, 30vh);
+  height: min(180px, 25vh);
   justify-content: space-between;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .project-link img {
-  height: min(215px, 30vh);
+  height: min(180px, 25vh);
   width: auto;
 }
 
