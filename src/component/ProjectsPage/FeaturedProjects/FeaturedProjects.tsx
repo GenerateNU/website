@@ -67,7 +67,7 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }: Feat
                 className={`pp-fp-project-slot${project === currentProject ? '' : ' pp-fp-project-slot-hidden'}`}
               >
                 <h1 className="pp-fp-projects-desktop">{project.name}</h1>
-                <h2 className="pp-fp-project-team pp-fp-projects-desktop">{project.type}</h2>
+                <h2 className="pp-fp-project-team pp-fp-projects-desktop">{project.teams.join(' + ')}</h2>
                 <div className="pp-fp-desc">{project.description}</div>
               </div>
             ))}
@@ -111,7 +111,7 @@ function MobileFeaturedProjects({ handleProject, currentProject, mobile }: Featu
         <div className="featured-pp-fp-project-buttons">
           <div className="pp-fp-projects-mobile">
             <h1 className="pp-fp-project-name">{currentProject.name}</h1>
-            <h2 className="pp-fp-project-team">{currentProject.type}</h2>
+            <h2 className="pp-fp-project-team">{currentProject.teams.join(' + ')}</h2>
           </div>
           <div className="mobile-view-pt">
             <ShadowedButton

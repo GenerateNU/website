@@ -13,10 +13,13 @@ import ShowNxt from '@/assets/images/projectspage/shownxt.svg';
 import SkillSpark from '@/assets/images/projectspage/skillspark.png';
 import SmartyPill from '@/assets/images/projectspage/smartypill.svg';
 import Toggo from '@/assets/images/projectspage/toggo.svg';
+import featuredProjects from '@/data/featuredProjectData';
+import type { FeaturedProject } from '@/data/featuredProjectData';
 import toPairs from '@/shared/toPairs';
 
 import Project from './Project/Project';
 import type { ProjectTeam } from './Project/Project';
+import ProjectPopup from './ProjectPopup';
 
 type SearchBarProps = {
   setSearchQuery: (query: string) => void;
@@ -117,16 +120,32 @@ const sections: ProjectSection[] = [
   },
 ];
 
-const generateGrid = (projects: ProjectSummary[]) =>
+const featuredByName = new Map(featuredProjects.map(project => [project.name, project]));
+
+const renderProject = (project: ProjectSummary, onSelect: (featured: FeaturedProject) => void) => {
+  const featured = featuredByName.get(project.name);
+
+  return (
+    <Project
+      name={project.name}
+      image={project.image}
+      teams={project.teams}
+      onSelect={featured && (() => onSelect(featured))}
+    />
+  );
+};
+
+const generateGrid = (projects: ProjectSummary[], onSelect: (featured: FeaturedProject) => void) =>
   toPairs(projects).map(([first, second]) => (
     <div key={first.name} className="project-col">
-      <Project name={first.name} image={first.image} teams={first.teams} />
-      {second ? <Project name={second.name} image={second.image} teams={second.teams} /> : <div></div>}
+      {renderProject(first, onSelect)}
+      {second ? renderProject(second, onSelect) : <div></div>}
     </div>
   ));
 
 export default function AllProjects() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedProject, setSelectedProject] = useState<FeaturedProject | null>(null);
 
   const matchesSearch = (project: ProjectSummary) => project.name.toLowerCase().includes(searchQuery.toLowerCase());
 
@@ -147,9 +166,10 @@ export default function AllProjects() {
       {visibleSections.map(section => (
         <div key={section.label} className="projects-section">
           <p className="projects-section-label">{section.label}</p>
-          <div className="all-projects">{generateGrid(section.projects)}</div>
+          <div className="all-projects">{generateGrid(section.projects, setSelectedProject)}</div>
         </div>
       ))}
+      {selectedProject && <ProjectPopup project={selectedProject} onClose={() => setSelectedProject(null)} />}
     </div>
   );
 }

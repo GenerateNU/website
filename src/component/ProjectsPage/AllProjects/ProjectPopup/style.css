@@ -1,0 +1,80 @@
+.project-popup {
+  width: min(88vw, 1200px);
+  height: 70vh;
+  padding: 4vh 3vw;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: -2vh 2vh black;
+}
+
+.project-popup-body {
+  display: flex;
+  height: 100%;
+  gap: 3vw;
+}
+
+.project-popup-image {
+  flex-shrink: 0;
+  width: 55%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* The tag SVG is 24x81; rotating it leaves a vertical layout box, so the margins give it the rotated footprint */
+.project-popup-tag {
+  --tag-height: 10vh;
+  --tag-width: calc(var(--tag-height) * 24 / 81);
+  width: var(--tag-width);
+  height: var(--tag-height);
+  margin: calc((var(--tag-width) - var(--tag-height)) / 2) calc((var(--tag-height) - var(--tag-width)) / 2);
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+}
+
+.project-popup-tags {
+  display: flex;
+  gap: 0.5vw;
+}
+
+.project-popup-info {
+  flex: 1;
+  min-width: 0;
+  align-self: center;
+}
+
+.project-popup-name {
+  font-family: 'Space Mono 700';
+  font-size: 5vh;
+  color: black;
+}
+
+.project-popup-desc {
+  margin-top: 3vh;
+  font-family: 'Outfit';
+  font-size: 2vh;
+  font-weight: 300;
+  line-height: 1.5;
+  color: black;
+}
+
+@media only screen and (max-width: 650px), (max-device-width: 650px) {
+  .project-popup {
+    width: 90vw;
+    height: auto;
+    padding: 4vh 5vw;
+  }
+
+  .project-popup-body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-popup-image {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .project-popup-name {
+    font-size: 4vh;
+  }
+}

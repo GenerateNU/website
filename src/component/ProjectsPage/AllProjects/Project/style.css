@@ -26,6 +26,18 @@
   box-shadow: -2vh 2vh black;
   height: -moz-fit-content;
   height: fit-content;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.project-link:disabled {
+  cursor: default;
+}
+
+.project-link:not(:disabled):hover {
+  box-shadow: 0 0;
 }
 
 .project-images {
