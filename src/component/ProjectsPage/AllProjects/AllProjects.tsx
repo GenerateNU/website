@@ -4,14 +4,18 @@ import { useState } from 'react';
 import Alia from '@/assets/images/projectspage/alia.svg';
 import Arctic from '@/assets/images/projectspage/arctic.svg';
 import AutoPasser from '@/assets/images/projectspage/autopasser.svg';
+import CineCircle from '@/assets/images/projectspage/cinecircle.png';
 import Earnz from '@/assets/images/projectspage/earnz.svg';
 import HotDate from '@/assets/images/projectspage/hotdate.svg';
 import InsideAthletics from '@/assets/images/projectspage/insideathletics.png';
 import Jurni from '@/assets/images/projectspage/jurni.svg';
+import Karp from '@/assets/images/projectspage/karp.png';
+import Prisere from '@/assets/images/projectspage/prisere.png';
 import SelfServe from '@/assets/images/projectspage/selfserve.png';
 import ShowNxt from '@/assets/images/projectspage/shownxt.svg';
 import SkillSpark from '@/assets/images/projectspage/skillspark.png';
 import SmartyPill from '@/assets/images/projectspage/smartypill.svg';
+import SpecialStandard from '@/assets/images/projectspage/specialstandard.png';
 import Toggo from '@/assets/images/projectspage/toggo.svg';
 import featuredProjects from '@/data/featuredProjectData';
 import type { FeaturedProject } from '@/data/featuredProjectData';
@@ -69,6 +73,31 @@ const sections: ProjectSection[] = [
       {
         name: 'Inside Athletics',
         image: InsideAthletics,
+        teams: ['software'],
+      },
+    ],
+  },
+  {
+    label: 'Fall 2025',
+    projects: [
+      {
+        name: 'Prisere',
+        image: Prisere,
+        teams: ['software'],
+      },
+      {
+        name: 'The Special Standard',
+        image: SpecialStandard,
+        teams: ['software'],
+      },
+      {
+        name: 'CineCircle',
+        image: CineCircle,
+        teams: ['software'],
+      },
+      {
+        name: 'Karp',
+        image: Karp,
         teams: ['software'],
       },
     ],
