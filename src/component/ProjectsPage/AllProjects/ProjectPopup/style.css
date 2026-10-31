@@ -20,6 +20,16 @@
   object-fit: contain;
 }
 
+/* Sized to the image itself so the corners round the picture, not the letterboxed box */
+.project-popup-image.project-popup-image-rounded {
+  align-self: center;
+  width: auto;
+  height: auto;
+  max-width: 55%;
+  max-height: 100%;
+  border-radius: 12px;
+}
+
 /* The tag SVG is 24x81; rotating it leaves a vertical layout box, so the margins give it the rotated footprint */
 .project-popup-tag {
   --tag-height: 10vh;
@@ -72,6 +82,11 @@
   .project-popup-image {
     width: 100%;
     height: 40vh;
+  }
+
+  .project-popup-image.project-popup-image-rounded {
+    max-width: 100%;
+    max-height: 40vh;
   }
 
   .project-popup-name {

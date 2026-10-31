@@ -13,7 +13,11 @@ export default function ProjectPopup({ project, onClose }: ProjectPopupProps) {
   return (
     <PopupAd className="project-popup" onClose={onClose}>
       <div className="project-popup-body">
-        <img className="project-popup-image" src={project.image} alt={`${project.name} mockup`} />
+        <img
+          className={`project-popup-image${project.rounded ? ' project-popup-image-rounded' : ''}`}
+          src={project.image}
+          alt={`${project.name} mockup`}
+        />
         <div className="project-popup-info">
           <div className="project-popup-tags">
             {project.teams.map(team => (
