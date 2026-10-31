@@ -9,3 +9,34 @@
   color: black;
   box-shadow: 1rem 1rem black;
 }
+
+.hoverButton {
+  transition:
+    translate 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect will only effect mouse devices */
+@media (hover: hover), (-moz-touch-enabled: 0) {
+  .button-style.hoverButton:hover {
+    translate: 0.25rem -0.25rem;
+    box-shadow: -0.75rem 0.85rem black;
+  }
+
+  .button-style-right.hoverButton:hover {
+    translate: -0.25rem -0.25rem;
+    box-shadow: 1.25rem 1.25rem black;
+  }
+}
+
+.button-style.hoverButton:active {
+  translate: -0.125rem 0.125rem;
+  box-shadow: -0.375rem 0.475rem black;
+  transition-duration: 0.1s;
+}
+
+.button-style-right.hoverButton:active {
+  translate: 0.125rem 0.125rem;
+  box-shadow: 0.875rem 0.875rem black;
+  transition-duration: 0.1s;
+}
