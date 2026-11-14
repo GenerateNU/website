@@ -79,6 +79,8 @@ const framedImageStyle = (padding: number): CSSProperties => {
     left: `${padding}px`,
     width: `calc(100% - ${padding * 2}px)`,
     height: `calc(100% - ${padding * 2}px)`,
+    // The frame is a hair wider in proportion than the 334x180 images, so fill it rather than leave slivers.
+    objectFit: 'cover',
   };
 
   return style;
