@@ -401,7 +401,7 @@ export type GenerateLinksQueryResult = Array<{
 
 // Source: ../src/sanity/queries/showcasesQuery.ts
 // Variable: showcasesQuery
-// Query: *[_type == "showcase" && defined(image.asset)]{  "year": coalesce(year, ""),  "semester": coalesce(semester, ""),  image} | order(year asc)
+// Query: *[_type == "showcase" && defined(image.asset)]{  "year": coalesce(year, ""),  "semester": coalesce(semester, ""),  image}
 export type ShowcasesQueryResult = Array<{
   year: string | "";
   semester: string | "";
@@ -435,7 +435,7 @@ export type LandingTeamsQueryResult = Array<{
 
 // Source: ../src/sanity/queries/teamsQuery.ts
 // Variable: applyTeamsQuery
-// Query: *[_type == "team"] | order(zIndex desc) {  "team": coalesce(team, ""),  color{hex},  tags,  teamDescription,  contributorDescription,  leadDescription,  chiefDescription,  externalLink,  "contributorRoles": contributorRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},  "leadRoles": leadRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},  "chiefRoles": chiefRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication}}
+// Query: *[_type == "team"] | order(zIndex desc) {  "team": coalesce(team, ""),  color{hex},  tags,  teamDescription,  contributorDescription,  leadDescription,  chiefDescription,  externalLink,  "contributorRoles": contributorRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication},  "leadRoles": leadRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication},  "chiefRoles": chiefRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication}}
 export type ApplyTeamsQueryResult = Array<{
   team: string | "";
   color: {
@@ -478,9 +478,9 @@ declare global {
     '*[_type == "copy"]{\n  "key": coalesce(key, ""),\n  "header": coalesce(header, ""),\n  "content": coalesce(content, [])\n}': AllCopyQueryResult;
     '*[_type == "director" && defined(image.asset)] | order(zIndex) {\n  "team": coalesce(team, ""),\n  "title": coalesce(title, ""),\n  "name": coalesce(name, ""),\n  "email": coalesce(email, ""),\n  color{hex},\n  image\n}': DirectorsQueryResult;
     '*[_type == "generateLink" && defined(slug.current) && defined(url)]{\n  "slug": coalesce(slug.current, ""),\n  "url": coalesce(url, "")\n}': GenerateLinksQueryResult;
-    '*[_type == "showcase" && defined(image.asset)]{\n  "year": coalesce(year, ""),\n  "semester": coalesce(semester, ""),\n  image\n} | order(year asc)': ShowcasesQueryResult;
+    '*[_type == "showcase" && defined(image.asset)]{\n  "year": coalesce(year, ""),\n  "semester": coalesce(semester, ""),\n  image\n}': ShowcasesQueryResult;
     '*[_type == "team"] | order(zIndex) {\n  "team": coalesce(team, ""),\n  "teamAbbreviation": coalesce(team_abbreviation, ""),\n  "teamDescription": coalesce(teamDescription, ""),\n  image,\n  color{hex}\n}': LandingTeamsQueryResult;
-    '*[_type == "team"] | order(zIndex desc) {\n  "team": coalesce(team, ""),\n  color{hex},\n  tags,\n  teamDescription,\n  contributorDescription,\n  leadDescription,\n  chiefDescription,\n  externalLink,\n  "contributorRoles": contributorRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},\n  "leadRoles": leadRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},\n  "chiefRoles": chiefRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication}\n}': ApplyTeamsQueryResult;
+    '*[_type == "team"] | order(zIndex desc) {\n  "team": coalesce(team, ""),\n  color{hex},\n  tags,\n  teamDescription,\n  contributorDescription,\n  leadDescription,\n  chiefDescription,\n  externalLink,\n  "contributorRoles": contributorRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication},\n  "leadRoles": leadRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication},\n  "chiefRoles": chiefRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication}\n}': ApplyTeamsQueryResult;
     '*[_type == "value"]{\n  "value": coalesce(value, ""),\n  "index": coalesce(index, 0)\n} | order(index asc)': ValuesQueryResult;
   }
 }

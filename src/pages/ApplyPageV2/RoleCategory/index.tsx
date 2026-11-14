@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 import './style.css';
-import type { ApplicationRole } from '@/pages/ApplyPageV2/types';
+import type { ApplicationRole } from '@/sanity/queries/teamsQuery';
 
 type RoleCategoryProps = {
   roleCategory?: {

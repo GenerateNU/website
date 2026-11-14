@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
+import { preload } from 'react-dom';
 
 import NextArrow from '@/assets/icons/arrows/nextArrowRight.svg?react';
 import PrevArrow from '@/assets/icons/arrows/prevArrowLeft.svg?react';
@@ -45,6 +46,15 @@ export default function CelebrateOurWins() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const currentIndex = selectedIndex ?? showcases.length - 1;
   const selectedShowcase = showcases[currentIndex];
+
+  // Warm the neighbours so arrow clicks swap instantly; React dedupes repeat preloads.
+  for (const offset of [-1, 1]) {
+    const neighbour = showcases.at((currentIndex + offset) % showcases.length);
+
+    if (neighbour) {
+      preload(neighbour.image, { as: 'image', fetchPriority: 'low' });
+    }
+  }
 
   const handleLeftButtonClick = () => {
     setSelectedIndex(currentIndex > 0 ? currentIndex - 1 : showcases.length - 1);

@@ -23,7 +23,8 @@ const selectDirectors = (directors: DirectorsQueryResult): Director[] =>
   directors.map(director => ({
     ...director,
     color: director.color?.hex ?? '',
-    image: urlFor(director.image).url(),
+    // Arcade screen is ~321 SVG units wide; 650px covers 2x density.
+    image: urlFor(director.image).width(650).url(),
   }));
 
 export const directorsOptions = () =>

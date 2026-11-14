@@ -7,7 +7,7 @@ import RoleCategory from '@/pages/ApplyPageV2/RoleCategory';
 import Tag from '@/pages/ApplyPageV2/Tag';
 
 import './style.css';
-import type { ApplicationRole, ApplyTeam } from '@/pages/ApplyPageV2/types';
+import type { ApplicationRole, ApplyTeam } from '@/sanity/queries/teamsQuery';
 
 type TeamApplicationCardProps = {
   team: ApplyTeam;

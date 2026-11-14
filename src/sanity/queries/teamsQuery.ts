@@ -1,8 +1,6 @@
 import { queryOptions } from '@tanstack/react-query';
 import { defineQuery } from 'groq';
 
-import type { ApplicationRole, ApplyTeam } from '@/pages/ApplyPageV2/types';
-
 import { client } from '../client';
 import { urlFor } from '../image';
 import type { ApplyTeamsQueryResult, LandingTeamsQueryResult } from '../types.gen';
@@ -24,12 +22,32 @@ const applyTeamsQuery = defineQuery(`*[_type == "team"] | order(zIndex desc) {
   leadDescription,
   chiefDescription,
   externalLink,
-  "contributorRoles": contributorRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},
-  "leadRoles": leadRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},
-  "chiefRoles": chiefRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication}
+  "contributorRoles": contributorRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication},
+  "leadRoles": leadRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication},
+  "chiefRoles": chiefRoles[defined(@->_id)]->{"role": coalesce(role, ""), applicationLink, activeApplication}
 }`);
 
 type LandingTeam = LandingTeamsQueryResult[number];
+
+export type ApplicationRole = {
+  role: string;
+  applicationLink?: string;
+  activeApplication?: boolean;
+};
+
+export type ApplyTeam = {
+  team: string;
+  color: string;
+  tags?: string[];
+  teamDescription?: string;
+  contributorDescription?: string;
+  leadDescription?: string;
+  chiefDescription?: string;
+  contributorRoles?: ApplicationRole[];
+  leadRoles?: ApplicationRole[];
+  chiefRoles?: ApplicationRole[];
+  externalLink?: string;
+};
 
 export type Branch = Pick<LandingTeam, 'team' | 'teamAbbreviation'> & {
   color: string;
