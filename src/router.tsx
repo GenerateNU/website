@@ -14,7 +14,6 @@ import RootHydrateFallback from './routes/RootHydrateFallback';
 import { generateLinksOptions } from './sanity/queries/linksQuery';
 import { queryClient } from './sanity/queryClient';
 
-/** Finds the Sanity short link for a path, ignoring case and trailing slashes. Undefined if none or Sanity is down. */
 async function findShortLink(path: string): Promise<string | undefined> {
   const slug = path.replace(/\/+$/, '').toLowerCase();
 
@@ -23,7 +22,6 @@ async function findShortLink(path: string): Promise<string | undefined> {
 
     return links.find(link => link.slug.toLowerCase() === slug)?.url;
   } catch {
-    // A failed lookup shouldn't break unknown paths: fall through to the landing page like main did.
     return undefined;
   }
 }
@@ -44,7 +42,6 @@ export const router = createBrowserRouter([
       { path: 'projects', element: <ProjectsPage /> },
       { path: 'teams-expanded/:team', element: <ExpandedTeamsPage /> },
       {
-        // Sanity short links (any depth), otherwise the landing page. Static routes above always win.
         path: '*',
         element: <LandingPageV3 />,
         loader: async ({ params }) => {

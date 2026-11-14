@@ -53,7 +53,6 @@ for (const path of ['/test-link', '/TEST-Link/']) {
       route.fulfill({ contentType: 'text/html', body: '<html><body>target</body></html>' })
     );
 
-    // The loader redirects before the app page finishes loading, so only wait for the first commit.
     await page.goto(path, { waitUntil: 'commit' });
 
     await expect(page).toHaveURL('https://example.com/target');
