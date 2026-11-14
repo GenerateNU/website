@@ -33,6 +33,7 @@
   "devDependencies": {
     "@oxlint/plugins": "1.91.0",
     "@playwright/test": "^1.64.1",
+    "@tanstack/eslint-plugin-query": "^5.107.1",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

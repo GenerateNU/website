@@ -38,6 +38,10 @@ export default defineConfig({
       name: 'anti-slop',
       specifier: './tools/oxlint/anti-slop/index.ts',
     },
+    {
+      name: '@tanstack/query',
+      specifier: '@tanstack/eslint-plugin-query',
+    },
   ],
   rules: {
     'oxc/no-accumulating-spread': 'error',
@@ -107,6 +111,13 @@ export default defineConfig({
     'react-you-might-not-need-an-effect/no-pass-data-to-parent': 'error',
     'react-you-might-not-need-an-effect/no-pass-live-state-to-parent': 'error',
     'react-you-might-not-need-an-effect/no-reset-all-state-on-prop-change': 'error',
+    '@tanstack/query/exhaustive-deps': 'error',
+    '@tanstack/query/no-rest-destructuring': 'error',
+    '@tanstack/query/stable-query-client': 'error',
+    '@tanstack/query/no-unstable-deps': 'error',
+    '@tanstack/query/infinite-query-property-order': 'error',
+    '@tanstack/query/no-void-query-fn': 'error',
+    '@tanstack/query/mutation-property-order': 'error',
   },
   env: {
     builtin: true,
