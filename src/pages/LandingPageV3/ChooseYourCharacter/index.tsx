@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { preload } from 'react-dom';
 
 import ArcadeMachine from '@/assets/images/landingpage-v3/DynamicArcadeMachine';
 import ArcadeText from '@/assets/images/landingpage-v3/DynamicArcadeText';
@@ -73,12 +74,11 @@ export default function ChooseYourCharacter() {
   const { data: directors = [] } = useQuery(directorsOptions());
   const { data: branches = [] } = useQuery(branchesOptions());
 
-  // Warm the cache with every director image (already sized for the arcade screen) so hovering is instant.
-  useEffect(() => {
-    for (const director of directors) {
-      new Image().src = director.image;
-    }
-  }, [directors]);
+  // Hint every director image (already sized for the arcade screen) so hovering a mascot swaps instantly.
+  // React dedupes repeat calls, so this is safe to run on every render.
+  for (const { image } of directors) {
+    preload(image, { as: 'image', fetchPriority: 'low' });
+  }
 
   const [coloredIndex, setSelected] = useState(0);
 
