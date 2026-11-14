@@ -17,7 +17,6 @@ export type Showcase = Omit<ShowcasesQueryResult[number], 'image'> & {
 
 const semesterRank = (showcase: Showcase): number => (showcase.semester === 'SPRING' ? 0 : 1);
 
-// Oldest first; within a year, spring before fall.
 const compareShowcases = (a: Showcase, b: Showcase): number =>
   Number(a.year) - Number(b.year) || semesterRank(a) - semesterRank(b);
 
@@ -25,7 +24,6 @@ const selectShowcases = (showcases: ShowcasesQueryResult): Showcase[] => {
   const sorted = showcases.map(showcase => ({
     ...showcase,
     semester: showcase.semester.toUpperCase(),
-    // Carousel renders at ~50vw; 1440px covers 2x density on screens up to 1440px wide.
     image: urlFor(showcase.image).width(1440).url(),
   }));
 
