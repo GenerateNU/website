@@ -11,7 +11,12 @@ import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams';
 import Root from './routes/Root';
 import RootError from './routes/RootError';
 import RootHydrateFallback from './routes/RootHydrateFallback';
+import { copyOptions } from './sanity/queries/copyQuery';
+import { directorsOptions } from './sanity/queries/directorsQuery';
 import { generateLinksOptions } from './sanity/queries/linksQuery';
+import { showcasesOptions } from './sanity/queries/showcasesQuery';
+import { applyTeamsOptions, branchesOptions, structuredTeamsOptions } from './sanity/queries/teamsQuery';
+import { valuesOptions } from './sanity/queries/valuesQuery';
 import { queryClient } from './sanity/queryClient';
 
 async function findShortLink(path: string): Promise<string | undefined> {
@@ -25,6 +30,24 @@ async function findShortLink(path: string): Promise<string | undefined> {
     return undefined;
   }
 }
+const landingLoader = async () => {
+  await Promise.all([
+    queryClient.ensureQueryData(copyOptions()),
+    queryClient.ensureQueryData(valuesOptions()),
+    queryClient.ensureQueryData(branchesOptions()),
+    queryClient.ensureQueryData(structuredTeamsOptions()),
+    queryClient.ensureQueryData(showcasesOptions()),
+    queryClient.ensureQueryData(directorsOptions()),
+  ]);
+
+  return null;
+};
+
+const applyLoader = async () => {
+  await queryClient.ensureQueryData(applyTeamsOptions());
+
+  return null;
+};
 
 export const router = createBrowserRouter([
   {
@@ -33,8 +56,8 @@ export const router = createBrowserRouter([
     errorElement: <RootError />,
     HydrateFallback: RootHydrateFallback,
     children: [
-      { index: true, element: <LandingPageV3 /> },
-      { path: 'apply/:team?', element: <ApplyPageV2 /> },
+      { index: true, element: <LandingPageV3 />, loader: landingLoader },
+      { path: 'apply/:team?', element: <ApplyPageV2 />, loader: applyLoader },
       { path: 'positions/:categoryType/:index', element: <Position /> },
       { path: 'about', loader: () => redirect('/') },
       { path: 'culture', element: <CulturePage /> },
@@ -51,7 +74,7 @@ export const router = createBrowserRouter([
             throw redirect(url);
           }
 
-          return null;
+          return landingLoader();
         },
       },
     ],

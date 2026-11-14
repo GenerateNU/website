@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import React from 'react';
 
 import NavBar from '@/component/NavBar';
@@ -65,7 +65,7 @@ const mobileContent = (teams: ApplyTeam[]) => {
 };
 
 export default function ApplyPage() {
-  const { data: teams = [] } = useQuery(applyTeamsOptions());
+  const { data: teams } = useSuspenseQuery(applyTeamsOptions());
 
   const halfLength = Math.ceil(teams.length / 2);
   const leftCol = teams.slice(0, halfLength);

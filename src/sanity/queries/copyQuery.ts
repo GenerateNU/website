@@ -1,4 +1,4 @@
-import { queryOptions, useQuery } from '@tanstack/react-query';
+import { queryOptions, useSuspenseQuery } from '@tanstack/react-query';
 import { defineQuery } from 'groq';
 import { useCallback } from 'react';
 
@@ -15,7 +15,7 @@ export type Copy = AllCopyQueryResult[number];
 
 const EMPTY_COPY: Copy = { key: '', header: '', content: [] };
 
-const allCopyOptions = () =>
+export const copyOptions = () =>
   queryOptions({
     queryKey: ['copy'],
     queryFn: () => client.fetch(allCopyQuery),
@@ -27,7 +27,7 @@ export function useCopy(key: string): Copy {
     [key]
   );
 
-  const { data } = useQuery({ ...allCopyOptions(), select: selectCopy });
+  const { data } = useSuspenseQuery({ ...copyOptions(), select: selectCopy });
 
-  return data ?? EMPTY_COPY;
+  return data;
 }

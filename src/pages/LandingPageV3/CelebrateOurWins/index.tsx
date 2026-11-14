@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 
 import NextArrow from '@/assets/icons/arrows/nextArrowRight.svg?react';
@@ -40,7 +40,7 @@ function ShowcaseLabel({ showcase }: ShowcaseLabelProps) {
 
 export default function CelebrateOurWins() {
   const copy = useCopy('celebrate-our-wins');
-  const { data: showcases = [] } = useQuery(showcasesOptions());
+  const { data: showcases } = useSuspenseQuery(showcasesOptions());
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [visited, setVisited] = useState<ReadonlySet<number>>(() => new Set());

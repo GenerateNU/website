@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { preload } from 'react-dom';
 
@@ -73,8 +73,8 @@ const ArcadeMachineWrapper = ({ directors, directorToTeam, coloredIndex }: Arcad
 };
 
 export default function ChooseYourCharacter() {
-  const { data: directors = [] } = useQuery(directorsOptions());
-  const { data: branches = [] } = useQuery(branchesOptions());
+  const { data: directors } = useSuspenseQuery(directorsOptions());
+  const { data: branches } = useSuspenseQuery(branchesOptions());
 
   for (const { image } of directors) {
     preload(image, { as: 'image', fetchPriority: 'low' });
