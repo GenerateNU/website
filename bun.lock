@@ -13,6 +13,7 @@
         "react": "^19.3.1",
         "react-bootstrap": "^2.10.10",
         "react-dom": "^19.3.1",
+        "react-error-boundary": "^6.1.6",
         "react-router": "^8.5.1",
       },
       "devDependencies": {
@@ -789,6 +790,8 @@
     "react-bootstrap": ["react-bootstrap@2.10.10", "", { "dependencies": { "@babel/runtime": "^7.24.7", "@restart/hooks": "^0.4.9", "@restart/ui": "^1.9.4", "@types/prop-types": "^15.7.12", "@types/react-transition-group": "^4.4.6", "classnames": "^2.3.2", "dom-helpers": "^5.2.1", "invariant": "^2.2.4", "prop-types": "^15.8.1", "prop-types-extra": "^1.1.0", "react-transition-group": "^4.4.5", "uncontrollable": "^7.2.1", "warning": "^4.0.3" }, "peerDependencies": { "@types/react": ">=16.14.8", "react": ">=16.14.0", "react-dom": ">=16.14.0" }, "optionalPeers": ["@types/react"] }, "sha512-gMckKUqn8aK/vCnfwoBpBVFUGT9SVQxwsYrp9yDHt0arXMamxALerliKBxr1TPbntirK/HGrUAHYbAeQTa9GHQ=="],
 
     "react-dom": ["react-dom@19.3.1", "", { "dependencies": { "scheduler": "^0.28.0" }, "peerDependencies": { "react": "^19.3.1" } }, "sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ=="],
+
+    "react-error-boundary": ["react-error-boundary@6.1.6", "", { "peerDependencies": { "@types/react": "^18.0.0 || ^19.0.0", "react": "^18.0.0 || ^19.0.0" }, "optionalPeers": ["@types/react"] }, "sha512-CDXPnXDGyFIbkwaaJ6u+xgsRmJhSi6YdgUDW1vnyKHfXp1a9pfAlM+ZET2CDu80/A+8iRcmXN0NSY9BCCoWP5A=="],
 
     "react-is": ["react-is@16.13.1", "", {}, "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="],
 
