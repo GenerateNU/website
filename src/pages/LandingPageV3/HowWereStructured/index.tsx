@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 
 import { useCopy } from '@/sanity/queries/copyQuery';
@@ -91,7 +91,7 @@ function sliceOffset(index: number, total: number) {
 
 export default function HowWereStrctured() {
   const copy = useCopy('how-were-structured');
-  const { data: teams = [] } = useQuery(structuredTeamsOptions());
+  const { data: teams } = useSuspenseQuery(structuredTeamsOptions());
 
   const [randomSeed] = useState(() => Math.random());
   const [hovered, setHovered] = useState<StructuredTeam | null>(null);

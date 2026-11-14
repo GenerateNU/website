@@ -11,7 +11,12 @@ import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams';
 import Root from './routes/Root';
 import RootError from './routes/RootError';
 import RootHydrateFallback from './routes/RootHydrateFallback';
+import { copyOptions } from './sanity/queries/copyQuery';
+import { directorsOptions } from './sanity/queries/directorsQuery';
 import { generateLinksOptions } from './sanity/queries/linksQuery';
+import { showcasesOptions } from './sanity/queries/showcasesQuery';
+import { applyTeamsOptions, branchesOptions, structuredTeamsOptions } from './sanity/queries/teamsQuery';
+import { valuesOptions } from './sanity/queries/valuesQuery';
 import { queryClient } from './sanity/queryClient';
 
 async function findShortLink(path: string): Promise<string | undefined> {
@@ -26,6 +31,23 @@ async function findShortLink(path: string): Promise<string | undefined> {
   }
 }
 
+const prefetchLanding = (): null => {
+  void queryClient.prefetchQuery(copyOptions());
+  void queryClient.prefetchQuery(valuesOptions());
+  void queryClient.prefetchQuery(branchesOptions());
+  void queryClient.prefetchQuery(structuredTeamsOptions());
+  void queryClient.prefetchQuery(showcasesOptions());
+  void queryClient.prefetchQuery(directorsOptions());
+
+  return null;
+};
+
+const prefetchApply = (): null => {
+  void queryClient.prefetchQuery(applyTeamsOptions());
+
+  return null;
+};
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -33,8 +55,8 @@ export const router = createBrowserRouter([
     errorElement: <RootError />,
     HydrateFallback: RootHydrateFallback,
     children: [
-      { index: true, element: <LandingPageV3 /> },
-      { path: 'apply/:team?', element: <ApplyPageV2 /> },
+      { index: true, element: <LandingPageV3 />, loader: prefetchLanding },
+      { path: 'apply/:team?', element: <ApplyPageV2 />, loader: prefetchApply },
       { path: 'positions/:categoryType/:index', element: <Position /> },
       { path: 'about', loader: () => redirect('/') },
       { path: 'culture', element: <CulturePage /> },
@@ -45,6 +67,8 @@ export const router = createBrowserRouter([
         path: '*',
         element: <LandingPageV3 />,
         loader: async ({ params }) => {
+          prefetchLanding();
+
           const url = await findShortLink(params['*'] ?? '');
 
           if (url) {

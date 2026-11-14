@@ -2,6 +2,8 @@ import { Dialog } from '@headlessui/react';
 import React, { useRef } from 'react';
 import { useState } from 'react';
 
+import SectionBoundary from '@/component/SectionBoundary';
+
 import CelebrateOurWins from './CelebrateOurWins';
 import ChooseYourCharacter from './ChooseYourCharacter';
 import Footer from './Footer';
@@ -39,12 +41,24 @@ export default function LandingPageV3() {
       </Dialog>
       {isOpen && <div id="background" />}
       <Navigation scrollToWhatIsGenerate={() => whatIsGenerateRef.current?.scrollIntoView({ behavior: 'smooth' })} />
-      <WhatIsGenerate ref={whatIsGenerateRef} />
-      <WeAre />
-      <WhyGenerate />
-      <HowWereStrctured />
-      <ChooseYourCharacter />
-      <CelebrateOurWins />
+      <SectionBoundary>
+        <WhatIsGenerate ref={whatIsGenerateRef} />
+      </SectionBoundary>
+      <SectionBoundary>
+        <WeAre />
+      </SectionBoundary>
+      <SectionBoundary>
+        <WhyGenerate />
+      </SectionBoundary>
+      <SectionBoundary>
+        <HowWereStrctured />
+      </SectionBoundary>
+      <SectionBoundary>
+        <ChooseYourCharacter />
+      </SectionBoundary>
+      <SectionBoundary>
+        <CelebrateOurWins />
+      </SectionBoundary>
       <Sponsors />
       <ParentOrgs />
       <Footer />
