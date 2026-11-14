@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 import NavBar from '@/component/NavBar';
 import ShadowedButton from '@/component/ShadowedButton';

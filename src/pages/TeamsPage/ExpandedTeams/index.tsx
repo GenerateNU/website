@@ -2,7 +2,7 @@ import React from 'react';
 import type { ComponentType } from 'react';
 
 import './style.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router';
 
 import NavBar from '@/component/NavBar';
 import { TEAMS, isTeam } from '@/data/teams';

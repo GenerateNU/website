@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { NavigationType, useLocation, useNavigationType } from 'react-router-dom';
+import { NavigationType, useLocation, useNavigationType } from 'react-router';
 
 function ScrollOnNavigation() {
   const navigationType = useNavigationType();
