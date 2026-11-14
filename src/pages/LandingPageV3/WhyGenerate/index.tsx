@@ -1,7 +1,7 @@
 import clients from '@/assets/images/landingpage/weare/cstar.jpg';
 import members from '@/assets/images/landingpage/weare/members.JPG';
 import partners from '@/assets/images/landingpage/weare/overhead.jpg';
-import { useCopy } from '@/sanity/queries/copy';
+import { useCopy } from '@/sanity/queries/copyQuery';
 
 export default function WhyGenerate() {
   const whyGenerate1 = useCopy('why-generate-1');

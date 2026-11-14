@@ -3,7 +3,7 @@ import React from 'react';
 
 import NavBar from '@/component/NavBar';
 import Footer from '@/pages/LandingPageV3/Footer';
-import { applyTeamsOptions } from '@/sanity/queries/teams';
+import { applyTeamsOptions } from '@/sanity/queries/teamsQuery';
 import useWebsite from '@/shared/useWebsite';
 
 import TeamApplicationCard from './TeamApplicationCard';

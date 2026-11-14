@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import weare from '@/assets/images/landingpage/weare/weare.jpg';
-import { valuesOptions } from '@/sanity/queries/values';
+import { valuesOptions } from '@/sanity/queries/valuesQuery';
 
 export default function WeAre() {
   const { data: values = [] } = useQuery(valuesOptions());

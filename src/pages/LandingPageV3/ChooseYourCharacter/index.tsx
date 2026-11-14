@@ -4,10 +4,10 @@ import { preload } from 'react-dom';
 
 import ArcadeMachine from '@/assets/images/landingpage-v3/DynamicArcadeMachine';
 import ArcadeText from '@/assets/images/landingpage-v3/DynamicArcadeText';
-import { directorsOptions } from '@/sanity/queries/directors';
-import type { Director } from '@/sanity/queries/directors';
-import { branchesOptions } from '@/sanity/queries/teams';
-import type { Branch } from '@/sanity/queries/teams';
+import { directorsOptions } from '@/sanity/queries/directorsQuery';
+import type { Director } from '@/sanity/queries/directorsQuery';
+import { branchesOptions } from '@/sanity/queries/teamsQuery';
+import type { Branch } from '@/sanity/queries/teamsQuery';
 
 import Mascot from './Mascot';
 

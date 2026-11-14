@@ -8,9 +8,9 @@ import LargeStars from '@/assets/images/landingpage-v3/LargeShowcaseStars.svg?re
 import LeftArrow from '@/assets/images/landingpage-v3/LeftTriangleArrow.svg?react';
 import RightArrow from '@/assets/images/landingpage-v3/RightTriangleArrow.svg?react';
 import SmallStars from '@/assets/images/landingpage-v3/SmallShowcaseStars.svg?react';
-import { useCopy } from '@/sanity/queries/copy';
-import { showcasesOptions } from '@/sanity/queries/showcases';
-import type { Showcase } from '@/sanity/queries/showcases';
+import { useCopy } from '@/sanity/queries/copyQuery';
+import { showcasesOptions } from '@/sanity/queries/showcasesQuery';
+import type { Showcase } from '@/sanity/queries/showcasesQuery';
 
 type ShowcaseLabelProps = {
   showcase: Showcase;

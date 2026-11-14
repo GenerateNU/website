@@ -4,7 +4,7 @@ import { defineQuery } from 'groq';
 import type { ApplicationRole, ApplyTeam } from '@/pages/ApplyPageV2/types';
 
 import { client } from '../client';
-import { imageUrl, TEAM_ICON_WIDTH } from '../image';
+import { urlFor } from '../image';
 import type { ApplyTeamsQueryResult, BranchesQueryResult, StructuredTeamsQueryResult } from '../types.gen';
 
 const branchesQuery = defineQuery(`*[_type == "team"]{
@@ -55,7 +55,7 @@ const selectBranches = (branches: BranchesQueryResult): Branch[] =>
 
 const selectStructuredTeams = (teams: StructuredTeamsQueryResult): StructuredTeam[] =>
   teams.flatMap(({ image, color, ...team }) =>
-    image ? [{ ...team, color: color?.hex ?? '', image: imageUrl(image, TEAM_ICON_WIDTH) }] : []
+    image ? [{ ...team, color: color?.hex ?? '', image: urlFor(image).url() }] : []
   );
 
 const selectRoles = (

@@ -2,7 +2,7 @@ import { queryOptions } from '@tanstack/react-query';
 import { defineQuery } from 'groq';
 
 import { client } from '../client';
-import { imageUrl, SHOWCASE_IMAGE_WIDTH } from '../image';
+import { urlFor } from '../image';
 import type { ShowcasesQueryResult } from '../types.gen';
 
 const showcasesQuery = defineQuery(`*[_type == "showcase" && defined(image.asset)]{
@@ -27,7 +27,7 @@ const selectShowcases = (showcases: ShowcasesQueryResult): Showcase[] => {
   const sorted = showcases.map(showcase => ({
     ...showcase,
     semester: showcase.semester.toUpperCase(),
-    image: imageUrl(showcase.image, SHOWCASE_IMAGE_WIDTH),
+    image: urlFor(showcase.image).url(),
   }));
 
   sorted.sort(compareShowcases);

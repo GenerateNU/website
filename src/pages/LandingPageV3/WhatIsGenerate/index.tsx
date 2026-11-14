@@ -3,7 +3,7 @@ import type { Ref } from 'react';
 
 import showcase from '@/assets/images/landingpage/weare/showcase.jpg';
 import workshop from '@/assets/images/landingpage/weare/workshop.jpg';
-import { useCopy } from '@/sanity/queries/copy';
+import { useCopy } from '@/sanity/queries/copyQuery';
 
 type WhatIsGenerateProps = {
   ref?: Ref<HTMLDivElement>;

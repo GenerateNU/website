@@ -2,7 +2,7 @@ import { queryOptions } from '@tanstack/react-query';
 import { defineQuery } from 'groq';
 
 import { client } from '../client';
-import { DIRECTOR_IMAGE_WIDTH, imageUrl } from '../image';
+import { urlFor } from '../image';
 import type { DirectorsQueryResult } from '../types.gen';
 
 const directorsQuery = defineQuery(`*[_type == "director" && defined(image.asset)]{
@@ -24,7 +24,7 @@ const selectDirectors = (directors: DirectorsQueryResult): Director[] =>
   directors.map(director => ({
     ...director,
     color: director.color?.hex ?? '',
-    image: imageUrl(director.image, DIRECTOR_IMAGE_WIDTH),
+    image: urlFor(director.image).url(),
   }));
 
 export const directorsOptions = () =>
