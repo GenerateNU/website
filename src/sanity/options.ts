@@ -14,8 +14,8 @@ import {
   structuredTeamsQuery,
   valuesQuery,
 } from './queries';
+import type { Branch, Copy, Director, Showcase, StructuredTeam } from './types';
 import type {
-  AllCopyQueryResult,
   ApplyTeamsQueryResult,
   BranchesQueryResult,
   DirectorsQueryResult,
@@ -32,26 +32,6 @@ const SHOWCASE_IMAGE_WIDTH = 1200;
 
 // Wheel icon is 15% of a <=600px wheel.
 const TEAM_ICON_WIDTH = 200;
-
-export type Copy = AllCopyQueryResult[number];
-
-export type Director = Omit<DirectorsQueryResult[number], 'color' | 'image'> & {
-  color: string;
-  image: string;
-};
-
-export type Branch = Omit<BranchesQueryResult[number], 'color'> & {
-  color: string;
-};
-
-export type Showcase = Omit<ShowcasesQueryResult[number], 'image'> & {
-  image: string;
-};
-
-export type StructuredTeam = Omit<StructuredTeamsQueryResult[number], 'color' | 'image'> & {
-  color: string;
-  image: string;
-};
 
 const EMPTY_COPY: Copy = { key: '', header: '', content: [] };
 

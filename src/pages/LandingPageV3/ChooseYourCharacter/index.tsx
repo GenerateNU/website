@@ -5,7 +5,7 @@ import { preload } from 'react-dom';
 import ArcadeMachine from '@/assets/images/landingpage-v3/DynamicArcadeMachine';
 import ArcadeText from '@/assets/images/landingpage-v3/DynamicArcadeText';
 import { branchesOptions, directorsOptions } from '@/sanity/options';
-import type { Branch, Director } from '@/sanity/options';
+import type { Branch, Director } from '@/sanity/types';
 
 import Mascot from './Mascot';
 

@@ -9,7 +9,7 @@ import LeftArrow from '@/assets/images/landingpage-v3/LeftTriangleArrow.svg?reac
 import RightArrow from '@/assets/images/landingpage-v3/RightTriangleArrow.svg?react';
 import SmallStars from '@/assets/images/landingpage-v3/SmallShowcaseStars.svg?react';
 import { useCopy, showcasesOptions } from '@/sanity/options';
-import type { Showcase } from '@/sanity/options';
+import type { Showcase } from '@/sanity/types';
 
 type ShowcaseLabelProps = {
   showcase: Showcase;
