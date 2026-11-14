@@ -76,8 +76,6 @@ export default function ChooseYourCharacter() {
   const { data: directors = [] } = useQuery(directorsOptions());
   const { data: branches = [] } = useQuery(branchesOptions());
 
-  // Hint every director image (already sized for the arcade screen) so hovering a mascot swaps instantly.
-  // React dedupes repeat calls, so this is safe to run on every render.
   for (const { image } of directors) {
     preload(image, { as: 'image', fetchPriority: 'low' });
   }
@@ -86,7 +84,7 @@ export default function ChooseYourCharacter() {
 
   const directorToTeam = new Map(
     directors.map(director => {
-      const branch = branches.find(candidate => candidate.team.toUpperCase() === director.team.toUpperCase());
+      const branch = branches.find(candidate => candidate.team === director.team.toUpperCase());
 
       return [director.name, branch];
     })

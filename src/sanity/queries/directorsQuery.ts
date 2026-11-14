@@ -5,15 +5,14 @@ import { client } from '../client';
 import { urlFor } from '../image';
 import type { DirectorsQueryResult } from '../types.gen';
 
-const directorsQuery = defineQuery(`*[_type == "director" && defined(image.asset)]{
+const directorsQuery = defineQuery(`*[_type == "director" && defined(image.asset)] | order(zIndex) {
   "team": coalesce(team, ""),
   "title": coalesce(title, ""),
   "name": coalesce(name, ""),
   "email": coalesce(email, ""),
   color{hex},
-  image,
-  "zIndex": coalesce(zIndex, 0)
-} | order(zIndex)`);
+  image
+}`);
 
 export type Director = Omit<DirectorsQueryResult[number], 'color' | 'image'> & {
   color: string;

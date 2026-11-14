@@ -1,5 +1,6 @@
 import { queryOptions, useQuery } from '@tanstack/react-query';
 import { defineQuery } from 'groq';
+import { useCallback } from 'react';
 
 import { client } from '../client';
 import type { AllCopyQueryResult } from '../types.gen';
@@ -20,12 +21,13 @@ const allCopyOptions = () =>
     queryFn: () => client.fetch(allCopyQuery),
   });
 
-/** Reads one copy doc out of the shared all-copy query. Empty copy while loading or if the key is missing. */
 export function useCopy(key: string): Copy {
-  const { data } = useQuery({
-    ...allCopyOptions(),
-    select: copies => copies.find(copy => copy.key === key) ?? EMPTY_COPY,
-  });
+  const selectCopy = useCallback(
+    (copies: AllCopyQueryResult) => copies.find(copy => copy.key === key) ?? EMPTY_COPY,
+    [key]
+  );
+
+  const { data } = useQuery({ ...allCopyOptions(), select: selectCopy });
 
   return data ?? EMPTY_COPY;
 }

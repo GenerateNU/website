@@ -5,24 +5,17 @@ import type { ApplicationRole, ApplyTeam } from '@/pages/ApplyPageV2/types';
 
 import { client } from '../client';
 import { urlFor } from '../image';
-import type { ApplyTeamsQueryResult, BranchesQueryResult, StructuredTeamsQueryResult } from '../types.gen';
+import type { ApplyTeamsQueryResult, LandingTeamsQueryResult } from '../types.gen';
 
-const branchesQuery = defineQuery(`*[_type == "team"]{
+const landingTeamsQuery = defineQuery(`*[_type == "team"] | order(zIndex) {
   "team": coalesce(team, ""),
   "teamAbbreviation": coalesce(team_abbreviation, ""),
-  color{hex},
-  "zIndex": coalesce(zIndex, 0)
-} | order(zIndex)`);
-
-const structuredTeamsQuery = defineQuery(`*[_type == "team" && team != "Clients" && defined(image.asset)]{
-  "team": coalesce(team, ""),
-  image,
   "teamDescription": coalesce(teamDescription, ""),
-  "zIndex": coalesce(zIndex, 0),
+  image,
   color{hex}
-} | order(zIndex)`);
+}`);
 
-const applyTeamsQuery = defineQuery(`*[_type == "team"]{
+const applyTeamsQuery = defineQuery(`*[_type == "team"] | order(zIndex desc) {
   "team": coalesce(team, ""),
   color{hex},
   tags,
@@ -34,28 +27,31 @@ const applyTeamsQuery = defineQuery(`*[_type == "team"]{
   "contributorRoles": contributorRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},
   "leadRoles": leadRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},
   "chiefRoles": chiefRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication}
-} | order(zIndex desc)`);
+}`);
 
-export type Branch = Omit<BranchesQueryResult[number], 'color'> & {
+type LandingTeam = LandingTeamsQueryResult[number];
+
+export type Branch = Pick<LandingTeam, 'team' | 'teamAbbreviation'> & {
   color: string;
 };
 
-export type StructuredTeam = Omit<StructuredTeamsQueryResult[number], 'color' | 'image'> & {
+export type StructuredTeam = Pick<LandingTeam, 'team' | 'teamDescription'> & {
   color: string;
   image: string;
 };
 
-const selectBranches = (branches: BranchesQueryResult): Branch[] =>
-  branches.map(({ color, ...branch }) => ({
-    ...branch,
-    team: branch.team.toUpperCase(),
-    teamAbbreviation: branch.teamAbbreviation.toUpperCase(),
+const selectBranches = (teams: LandingTeamsQueryResult): Branch[] =>
+  teams.map(({ team, teamAbbreviation, color }) => ({
+    team: team.toUpperCase(),
+    teamAbbreviation: teamAbbreviation.toUpperCase(),
     color: color?.hex ?? '',
   }));
 
-const selectStructuredTeams = (teams: StructuredTeamsQueryResult): StructuredTeam[] =>
-  teams.flatMap(({ image, color, ...team }) =>
-    image ? [{ ...team, color: color?.hex ?? '', image: urlFor(image).url() }] : []
+const selectStructuredTeams = (teams: LandingTeamsQueryResult): StructuredTeam[] =>
+  teams.flatMap(({ team, teamDescription, color, image }) =>
+    team !== 'Clients' && image?.asset
+      ? [{ team, teamDescription, color: color?.hex ?? '', image: urlFor(image).url() }]
+      : []
   );
 
 const selectRoles = (
@@ -84,15 +80,15 @@ const selectApplyTeams = (teams: ApplyTeamsQueryResult): ApplyTeam[] =>
 
 export const branchesOptions = () =>
   queryOptions({
-    queryKey: ['branches'],
-    queryFn: () => client.fetch(branchesQuery),
+    queryKey: ['landingTeams'],
+    queryFn: () => client.fetch(landingTeamsQuery),
     select: selectBranches,
   });
 
 export const structuredTeamsOptions = () =>
   queryOptions({
-    queryKey: ['structuredTeams'],
-    queryFn: () => client.fetch(structuredTeamsQuery),
+    queryKey: ['landingTeams'],
+    queryFn: () => client.fetch(landingTeamsQuery),
     select: selectStructuredTeams,
   });
 

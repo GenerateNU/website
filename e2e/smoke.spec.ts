@@ -16,13 +16,7 @@ const routes = [
 ];
 
 test.beforeEach(async ({ page }) => {
-  // Match each query's result shape: single-document queries end in `[0]` and resolve to null, lists to [].
-  await page.route(/\.sanity\.io\//, route => {
-    const query = new URL(route.request().url()).searchParams.get('query') ?? '';
-    const result = query.trim().endsWith('[0]') ? null : [];
-
-    return route.fulfill({ json: { query, result } });
-  });
+  await page.route(/\.sanity\.io\//, route => route.fulfill({ json: { result: [] } }));
 });
 
 for (const path of routes) {
