@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { BrowserRouter as Router, Navigate, useRoutes } from 'react-router-dom';
-import type { RouteObject } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, useRoutes } from 'react-router';
+import type { RouteObject } from 'react-router';
 
 import Position from './component/ApplyPage/Position';
 import CulturePage from './component/CulturePage';

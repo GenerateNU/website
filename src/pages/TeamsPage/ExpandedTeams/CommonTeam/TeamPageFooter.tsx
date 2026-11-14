@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import GenerateLogo from '@/assets/images/landingpage-v2/footerlogo.svg';
 

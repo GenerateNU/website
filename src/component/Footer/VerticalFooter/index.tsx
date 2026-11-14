@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '@/component/Footer/style.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import GenerateLogo from '@/assets/images/landingpage-v2/footerlogo.svg';
 import FooterLink from '@/component/Footer/FooterLink';

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import ShadowedButton from '@/component/ShadowedButton';
 import useWebsite from '@/shared/useWebsite';

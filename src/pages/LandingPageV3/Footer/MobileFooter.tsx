@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import UpArrowMobile from '@/assets/icons/arrows/upArrowMobile.svg';
 import Email from '@/assets/icons/socials/Email.svg?react';
