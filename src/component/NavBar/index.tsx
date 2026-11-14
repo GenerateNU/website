@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 
 import './style.css';
 import GenerateLogo from '@/assets/images/landingpage/affiliateorgintros/Generate Logo_Nav.png';
 
 const NavBar = () => {
-  const currentUrl = window.location.href.split('/').at(-1);
+  const { pathname } = useLocation();
+  const currentUrl = pathname.split('/').at(-1);
 
   return (
     <div id="nav-all">

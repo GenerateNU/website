@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 
 import NavBar from '@/component/NavBar';
 import ShadowedButton from '@/component/ShadowedButton';
@@ -74,9 +74,9 @@ function DesktopPositionSummary({ position, showText, onApply, onShare }: Positi
 function DesktopPositionDetails({ position, routeIndex }: PositionViewProps) {
   return (
     <Col xs={6} className="h-100 p-0 py-5 px-5 overflow-auto position-info">
-      <a className="blue-text" href="/apply">
+      <Link className="blue-text" to="/apply">
         &lt; -- <u> positions</u>
-      </a>
+      </Link>
 
       <p className="position-summary my-5">{position.description}</p>
 
@@ -115,9 +115,9 @@ function DesktopPositionDetails({ position, routeIndex }: PositionViewProps) {
       </h4>
       <div className="pt-4"></div>
 
-      <a className="blue-text" href="/about">
+      <Link className="blue-text" to="/">
         <u>learn more</u> -- &gt;
-      </a>
+      </Link>
     </Col>
   );
 }
@@ -153,9 +153,9 @@ function MobilePosition({ position, onApply, onShare }: PositionViewProps) {
         </div>
       </div>
       <div className="info-container">
-        <a className="blue-text" href="/apply">
+        <Link className="blue-text" to="/apply">
           &lt; -- <u> positions</u>
-        </a>
+        </Link>
         <div className="info-section-text"> {position.description} </div>
         <div className="info-section-header"> What you'll do </div>
         <ul>
@@ -186,9 +186,9 @@ function MobilePosition({ position, onApply, onShare }: PositionViewProps) {
           </div>
         </div>
         <div className="info-section-text"> {position.remarks} </div>
-        <a className="blue-text" href="/about">
+        <Link className="blue-text" to="/">
           <u>learn more</u> -- &gt;
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import './style.css';
 import useWebsite from '@/shared/useWebsite';
@@ -15,7 +16,7 @@ const TeamCard = ({ color = 'black', name = 'Team', image }: TeamCardProps) => {
   const mobile = !isBigScreen || !isWebsite;
 
   return !mobile ? (
-    <a href={'/teams-expanded/' + name.toLowerCase()} className="link-wrapper" aria-label={name}>
+    <Link to={`/teams-expanded/${name.toLowerCase()}`} className="link-wrapper" aria-label={name}>
       <div className="card-container-flex" style={{ backgroundColor: color }}>
         <img className="card-img" src={image} alt="" />
         <div className="title-bkgnd">
@@ -24,9 +25,9 @@ const TeamCard = ({ color = 'black', name = 'Team', image }: TeamCardProps) => {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   ) : (
-    <a href={'/teams-expanded/' + name.toLowerCase()} className="link-wrapper-mobile" aria-label={name}>
+    <Link to={`/teams-expanded/${name.toLowerCase()}`} className="link-wrapper-mobile" aria-label={name}>
       <div
         className="d-flex flex-row-reverse align-items-center justify-content-around w-100"
         style={{ backgroundColor: color }}
@@ -44,7 +45,7 @@ const TeamCard = ({ color = 'black', name = 'Team', image }: TeamCardProps) => {
           </div>
         </div> */}
       </div>
-    </a>
+    </Link>
   );
 };
 

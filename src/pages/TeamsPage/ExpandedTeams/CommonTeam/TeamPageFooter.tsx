@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 import GenerateLogo from '@/assets/images/landingpage-v2/footerlogo.svg';
 
@@ -57,7 +57,8 @@ const rightColumnPages: FooterPage[] = [
 
 const FooterLink = ({ page }: FooterLinkProps) => {
   const { name, link, disabled } = page;
-  const currentURI = window.location.pathname.split('/').at(1);
+  const { pathname } = useLocation();
+  const currentURI = pathname.split('/').at(1);
   var isCurrentPage = `/${currentURI}`.includes(link) && link !== '/';
 
   if (currentURI === 'case-study' && link === '/projects') {

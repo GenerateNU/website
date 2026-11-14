@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 import type { FooterPage } from './pages';
 
 type FooterLinkProps = {
@@ -12,19 +14,19 @@ const FooterLink = ({ page, currentPage }: FooterLinkProps) => {
   return (
     <div className="footer-padding">
       {disabled ? (
-        <a className="footer-link-text disabled-footer-text" href={link}>
+        <Link className="footer-link-text disabled-footer-text" to={link}>
           {name}
-        </a>
+        </Link>
       ) : isCurrentPage ? (
         <b>
-          <a href={link} className="footer-link-bold">
+          <Link to={link} className="footer-link-bold">
             {name} {''}
-          </a>
+          </Link>
         </b>
       ) : (
-        <a className="footer-link-text" href={link}>
+        <Link className="footer-link-text" to={link}>
           {name}
-        </a>
+        </Link>
       )}
     </div>
   );

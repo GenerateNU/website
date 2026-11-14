@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 import Email from '@/assets/icons/socials/Email.svg?react';
 import Instagram from '@/assets/icons/socials/Instagram.svg?react';
 import LinkedIn from '@/assets/icons/socials/LinkedIn.svg?react';
@@ -30,17 +32,17 @@ export default function Navigation({ scrollToWhatIsGenerate }: NavigationProps) 
   return (
     <div className="bg-row" id="ll1-row">
       <div className="half-container blue-bg">
-        <a href={'/'} className="landing-header">
+        <Link to="/" className="landing-header">
           <GenerateLogo id="generate-logo" />
           GENERATE
-        </a>
+        </Link>
         <div className="landing-links">
-          <a href={'/apply'} className="landing-nav-link">
+          <Link to="/apply" className="landing-nav-link">
             APPLY
-          </a>
-          <a href={'/projects'} className="landing-nav-link">
+          </Link>
+          <Link to="/projects" className="landing-nav-link">
             PROJECTS
-          </a>
+          </Link>
           {/* <a href={'/'} className='landing-nav-link'>
             CLIENTS
           </a> */}
