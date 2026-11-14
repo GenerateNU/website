@@ -33,6 +33,7 @@ for (const path of routes) {
     await page.goto(path, { waitUntil: 'networkidle' });
 
     await expect(page.locator('#root')).not.toBeEmpty();
+    await expect(page.getByRole('alert')).toHaveCount(0);
     expect(errors).toEqual([]);
   });
 }
@@ -43,15 +44,26 @@ test('/about redirects to /', async ({ page }) => {
   await expect(page).toHaveURL(/\/$/);
 });
 
-test('short links redirect to their external url', async ({ page }) => {
-  await page.route(/\.sanity\.io\//, route =>
-    route.fulfill({ json: { result: [{ slug: 'test-link', url: 'https://example.com/target' }] } })
-  );
-  await page.route('https://example.com/**', route =>
-    route.fulfill({ contentType: 'text/html', body: '<html><body>target</body></html>' })
-  );
+for (const path of ['/test-link', '/TEST-Link/']) {
+  test(`short link ${path} redirects to its external url`, async ({ page }) => {
+    await page.route(/\.sanity\.io\//, route =>
+      route.fulfill({ json: { result: [{ slug: 'test-link', url: 'https://example.com/target' }] } })
+    );
+    await page.route('https://example.com/**', route =>
+      route.fulfill({ contentType: 'text/html', body: '<html><body>target</body></html>' })
+    );
 
-  await page.goto('/test-link');
+    // The loader redirects before the app page finishes loading, so only wait for the first commit.
+    await page.goto(path, { waitUntil: 'commit' });
 
-  await expect(page).toHaveURL('https://example.com/target');
+    await expect(page).toHaveURL('https://example.com/target');
+  });
+}
+
+test('unknown paths fall back to the landing page when Sanity is down', async ({ page }) => {
+  await page.route(/\.sanity\.io\//, route => route.abort());
+
+  await page.goto('/not-a-real-page', { waitUntil: 'networkidle' });
+
+  await expect(page.getByRole('alert')).toHaveCount(0);
 });

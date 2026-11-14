@@ -10,14 +10,30 @@ import TeamsPage from './pages/TeamsPage';
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams';
 import Root from './routes/Root';
 import RootError from './routes/RootError';
+import RootHydrateFallback from './routes/RootHydrateFallback';
 import { generateLinksOptions } from './sanity/queries/linksQuery';
 import { queryClient } from './sanity/queryClient';
+
+/** Finds the Sanity short link for a path, ignoring case and trailing slashes. Undefined if none or Sanity is down. */
+async function findShortLink(path: string): Promise<string | undefined> {
+  const slug = path.replace(/\/+$/, '').toLowerCase();
+
+  try {
+    const links = await queryClient.ensureQueryData(generateLinksOptions());
+
+    return links.find(link => link.slug.toLowerCase() === slug)?.url;
+  } catch {
+    // A failed lookup shouldn't break unknown paths: fall through to the landing page like main did.
+    return undefined;
+  }
+}
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
     errorElement: <RootError />,
+    HydrateFallback: RootHydrateFallback,
     children: [
       { index: true, element: <LandingPageV3 /> },
       { path: 'apply/:team?', element: <ApplyPageV2 /> },
@@ -28,20 +44,19 @@ export const router = createBrowserRouter([
       { path: 'projects', element: <ProjectsPage /> },
       { path: 'teams-expanded/:team', element: <ExpandedTeamsPage /> },
       {
-        path: ':slug',
+        // Sanity short links (any depth), otherwise the landing page. Static routes above always win.
+        path: '*',
         element: <LandingPageV3 />,
         loader: async ({ params }) => {
-          const links = await queryClient.ensureQueryData(generateLinksOptions());
-          const link = links.find(candidate => candidate.slug === params.slug);
+          const url = await findShortLink(params['*'] ?? '');
 
-          if (link) {
-            throw redirect(link.url);
+          if (url) {
+            throw redirect(url);
           }
 
           return null;
         },
       },
-      { path: '*', element: <LandingPageV3 /> },
     ],
   },
 ]);
