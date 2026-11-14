@@ -27,7 +27,8 @@ const selectShowcases = (showcases: ShowcasesQueryResult): Showcase[] => {
   const sorted = showcases.map(showcase => ({
     ...showcase,
     semester: showcase.semester.toUpperCase(),
-    image: urlFor(showcase.image).url(),
+    // Carousel renders at ~50vw; 1200px covers 2x density on typical laptops.
+    image: urlFor(showcase.image).width(1200).url(),
   }));
 
   sorted.sort(compareShowcases);
