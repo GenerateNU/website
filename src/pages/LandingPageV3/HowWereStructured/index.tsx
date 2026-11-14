@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 
-import { structuredTeamsOptions, useCopy } from '@/sanity/options';
-import type { StructuredTeam } from '@/sanity/types';
+import { useCopy } from '@/sanity/queries/copy';
+import { structuredTeamsOptions } from '@/sanity/queries/teams';
+import type { StructuredTeam } from '@/sanity/queries/teams';
 
 import './style.css';
 

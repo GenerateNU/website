@@ -139,7 +139,7 @@ export default defineConfig({
     },
     {
       // queryOptions() return types are inferred from the generated GROQ result types on purpose.
-      files: ['src/sanity/options.ts'],
+      files: ['src/sanity/queries/*.ts'],
       rules: {
         'typescript/explicit-function-return-type': 'off',
       },

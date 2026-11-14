@@ -362,15 +362,7 @@ export type AllSanitySchemaTypes =
   | SanityImageAsset
   | Geopoint;
 
-// Source: ../src/sanity/queries.ts
-// Variable: generateLinksQuery
-// Query: *[_type == "generateLink" && defined(slug.current) && defined(url)]{  "slug": coalesce(slug.current, ""),  "url": coalesce(url, "")}
-export type GenerateLinksQueryResult = Array<{
-  slug: string | "";
-  url: string | "";
-}>;
-
-// Source: ../src/sanity/queries.ts
+// Source: ../src/sanity/queries/copy.ts
 // Variable: allCopyQuery
 // Query: *[_type == "copy"]{  "key": coalesce(key, ""),  "header": coalesce(header, ""),  "content": coalesce(content, [])}
 export type AllCopyQueryResult = Array<{
@@ -379,22 +371,7 @@ export type AllCopyQueryResult = Array<{
   content: Array<string> | Array<never>;
 }>;
 
-// Source: ../src/sanity/queries.ts
-// Variable: showcasesQuery
-// Query: *[_type == "showcase" && defined(image.asset)]{  "year": coalesce(year, ""),  "semester": coalesce(semester, ""),  image} | order(year asc)
-export type ShowcasesQueryResult = Array<{
-  year: string | "";
-  semester: string | "";
-  image: {
-    asset: SanityImageAssetReference;
-    media?: unknown;
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    _type: "image";
-  };
-}>;
-
-// Source: ../src/sanity/queries.ts
+// Source: ../src/sanity/queries/directors.ts
 // Variable: directorsQuery
 // Query: *[_type == "director" && defined(image.asset)]{  "team": coalesce(team, ""),  "title": coalesce(title, ""),  "name": coalesce(name, ""),  "email": coalesce(email, ""),  color{hex},  image,  "zIndex": coalesce(zIndex, 0)} | order(zIndex)
 export type DirectorsQueryResult = Array<{
@@ -415,7 +392,30 @@ export type DirectorsQueryResult = Array<{
   zIndex: number | 0;
 }>;
 
-// Source: ../src/sanity/queries.ts
+// Source: ../src/sanity/queries/links.ts
+// Variable: generateLinksQuery
+// Query: *[_type == "generateLink" && defined(slug.current) && defined(url)]{  "slug": coalesce(slug.current, ""),  "url": coalesce(url, "")}
+export type GenerateLinksQueryResult = Array<{
+  slug: string | "";
+  url: string | "";
+}>;
+
+// Source: ../src/sanity/queries/showcases.ts
+// Variable: showcasesQuery
+// Query: *[_type == "showcase" && defined(image.asset)]{  "year": coalesce(year, ""),  "semester": coalesce(semester, ""),  image} | order(year asc)
+export type ShowcasesQueryResult = Array<{
+  year: string | "";
+  semester: string | "";
+  image: {
+    asset: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+}>;
+
+// Source: ../src/sanity/queries/teams.ts
 // Variable: branchesQuery
 // Query: *[_type == "team"]{  "team": coalesce(team, ""),  "teamAbbreviation": coalesce(team_abbreviation, ""),  color{hex},  "zIndex": coalesce(zIndex, 0)} | order(zIndex)
 export type BranchesQueryResult = Array<{
@@ -427,7 +427,7 @@ export type BranchesQueryResult = Array<{
   zIndex: number | 0;
 }>;
 
-// Source: ../src/sanity/queries.ts
+// Source: ../src/sanity/queries/teams.ts
 // Variable: structuredTeamsQuery
 // Query: *[_type == "team" && team != "Clients" && defined(image.asset)]{  "team": coalesce(team, ""),  image,  "teamDescription": coalesce(teamDescription, ""),  "zIndex": coalesce(zIndex, 0),  color{hex}} | order(zIndex)
 export type StructuredTeamsQueryResult = Array<{
@@ -446,15 +446,7 @@ export type StructuredTeamsQueryResult = Array<{
   } | null;
 }>;
 
-// Source: ../src/sanity/queries.ts
-// Variable: valuesQuery
-// Query: *[_type == "value"]{  "value": coalesce(value, ""),  "index": coalesce(index, 0)} | order(index asc)
-export type ValuesQueryResult = Array<{
-  value: string | "";
-  index: number | 0;
-}>;
-
-// Source: ../src/sanity/queries.ts
+// Source: ../src/sanity/queries/teams.ts
 // Variable: applyTeamsQuery
 // Query: *[_type == "team"]{  "team": coalesce(team, ""),  color{hex},  tags,  teamDescription,  contributorDescription,  leadDescription,  chiefDescription,  externalLink,  "contributorRoles": contributorRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},  "leadRoles": leadRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},  "chiefRoles": chiefRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication}} | order(zIndex desc)
 export type ApplyTeamsQueryResult = Array<{
@@ -485,17 +477,25 @@ export type ApplyTeamsQueryResult = Array<{
   }> | null;
 }>;
 
+// Source: ../src/sanity/queries/values.ts
+// Variable: valuesQuery
+// Query: *[_type == "value"]{  "value": coalesce(value, ""),  "index": coalesce(index, 0)} | order(index asc)
+export type ValuesQueryResult = Array<{
+  value: string | "";
+  index: number | 0;
+}>;
+
 // Query TypeMap
 declare global {
   interface SanityQueries {
-    '*[_type == "generateLink" && defined(slug.current) && defined(url)]{\n  "slug": coalesce(slug.current, ""),\n  "url": coalesce(url, "")\n}': GenerateLinksQueryResult;
     '*[_type == "copy"]{\n  "key": coalesce(key, ""),\n  "header": coalesce(header, ""),\n  "content": coalesce(content, [])\n}': AllCopyQueryResult;
-    '*[_type == "showcase" && defined(image.asset)]{\n  "year": coalesce(year, ""),\n  "semester": coalesce(semester, ""),\n  image\n} | order(year asc)': ShowcasesQueryResult;
     '*[_type == "director" && defined(image.asset)]{\n  "team": coalesce(team, ""),\n  "title": coalesce(title, ""),\n  "name": coalesce(name, ""),\n  "email": coalesce(email, ""),\n  color{hex},\n  image,\n  "zIndex": coalesce(zIndex, 0)\n} | order(zIndex)': DirectorsQueryResult;
+    '*[_type == "generateLink" && defined(slug.current) && defined(url)]{\n  "slug": coalesce(slug.current, ""),\n  "url": coalesce(url, "")\n}': GenerateLinksQueryResult;
+    '*[_type == "showcase" && defined(image.asset)]{\n  "year": coalesce(year, ""),\n  "semester": coalesce(semester, ""),\n  image\n} | order(year asc)': ShowcasesQueryResult;
     '*[_type == "team"]{\n  "team": coalesce(team, ""),\n  "teamAbbreviation": coalesce(team_abbreviation, ""),\n  color{hex},\n  "zIndex": coalesce(zIndex, 0)\n} | order(zIndex)': BranchesQueryResult;
     '*[_type == "team" && team != "Clients" && defined(image.asset)]{\n  "team": coalesce(team, ""),\n  image,\n  "teamDescription": coalesce(teamDescription, ""),\n  "zIndex": coalesce(zIndex, 0),\n  color{hex}\n} | order(zIndex)': StructuredTeamsQueryResult;
-    '*[_type == "value"]{\n  "value": coalesce(value, ""),\n  "index": coalesce(index, 0)\n} | order(index asc)': ValuesQueryResult;
     '*[_type == "team"]{\n  "team": coalesce(team, ""),\n  color{hex},\n  tags,\n  teamDescription,\n  contributorDescription,\n  leadDescription,\n  chiefDescription,\n  externalLink,\n  "contributorRoles": contributorRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},\n  "leadRoles": leadRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication},\n  "chiefRoles": chiefRoles[]->{"role": coalesce(role, ""), applicationLink, activeApplication}\n} | order(zIndex desc)': ApplyTeamsQueryResult;
+    '*[_type == "value"]{\n  "value": coalesce(value, ""),\n  "index": coalesce(index, 0)\n} | order(index asc)': ValuesQueryResult;
   }
 }
 // Lets @sanity/client releases that predate the global registry read it too

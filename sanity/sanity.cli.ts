@@ -6,7 +6,7 @@ export default defineCliConfig({
     dataset: process.env.SANITY_STUDIO_DATASET!,
   },
   typegen: {
-    path: '../src/sanity/queries.ts',
+    path: '../src/sanity/queries/*.ts',
     schema: './schema.json',
     generates: '../src/sanity/types.gen.ts',
   },

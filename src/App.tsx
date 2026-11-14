@@ -12,7 +12,7 @@ import ApplyPageV2 from './pages/ApplyPageV2';
 import LandingPageV3 from './pages/LandingPageV3';
 import TeamsPage from './pages/TeamsPage';
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams';
-import { generateLinksOptions } from './sanity/options';
+import { generateLinksOptions } from './sanity/queries/links';
 
 type AppRoutesProps = {
   sanityRoutes: RouteObject[];
