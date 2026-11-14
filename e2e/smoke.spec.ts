@@ -36,3 +36,22 @@ for (const path of routes) {
     expect(errors).toEqual([]);
   });
 }
+
+test('/about redirects to /', async ({ page }) => {
+  await page.goto('/about', { waitUntil: 'networkidle' });
+
+  await expect(page).toHaveURL(/\/$/);
+});
+
+test('short links redirect to their external url', async ({ page }) => {
+  await page.route(/\.sanity\.io\//, route =>
+    route.fulfill({ json: { result: [{ slug: 'test-link', url: 'https://example.com/target' }] } })
+  );
+  await page.route('https://example.com/**', route =>
+    route.fulfill({ contentType: 'text/html', body: '<html><body>target</body></html>' })
+  );
+
+  await page.goto('/test-link');
+
+  await expect(page).toHaveURL('https://example.com/target');
+});
