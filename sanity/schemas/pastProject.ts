@@ -11,24 +11,23 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'clientName',
-      title: 'Client Name',
-      type: 'string',
-    }),
-    defineField({
-      name: 'clientTitle',
-      title: 'Client Title',
-      type: 'string',
-    }),
-    defineField({
       name: 'semester',
       title: 'Semester',
       type: 'string',
     }),
     defineField({
-      name: 'teamResponsible',
-      title: 'Team Responsible',
-      type: 'string', // revisit - team as in 'software' or as in 'Care-Wallet'?
+      name: 'teams',
+      title: 'Teams',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Hardware', value: 'hardware' },
+          { title: 'Software', value: 'software' },
+          { title: 'Data', value: 'data' },
+          { title: 'Games', value: 'games' },
+        ],
+      },
     }),
     defineField({
       name: 'image',
@@ -41,22 +40,23 @@ export default defineType({
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'string',
-    }),
-    defineField({
-      name: 'quote',
-      title: 'Quote',
-      type: 'string',
+      type: 'text',
     }),
     defineField({
       name: 'featured',
       title: 'Featured',
       type: 'boolean',
     }),
+    defineField({
+      name: 'roundedPopupImage',
+      title: 'Rounded popup image',
+      type: 'boolean',
+    }),
   ],
   preview: {
     select: {
       title: 'name',
+      subtitle: 'semester',
       media: 'image',
     },
   },

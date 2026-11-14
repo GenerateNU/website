@@ -12,7 +12,6 @@ type ProjectProps = {
   teams: ProjectTeam[];
   padding?: number;
   background?: string;
-  fit?: 'cover';
   onSelect?: () => void;
 };
 
@@ -74,7 +73,7 @@ function useOverflowMarquee(ref: React.RefObject<HTMLHeadingElement | null>) {
   }, [ref]);
 }
 
-const framedImageStyle = (padding: number, fit?: 'cover'): CSSProperties => {
+const framedImageStyle = (padding: number): CSSProperties => {
   const style: CSSProperties = {
     top: `${padding}px`,
     left: `${padding}px`,
@@ -82,14 +81,10 @@ const framedImageStyle = (padding: number, fit?: 'cover'): CSSProperties => {
     height: `calc(100% - ${padding * 2}px)`,
   };
 
-  if (fit === 'cover') {
-    style.objectFit = 'cover';
-  }
-
   return style;
 };
 
-export default function Project({ name, image, teams, padding, background, fit, onSelect }: ProjectProps) {
+export default function Project({ name, image, teams, padding, background, onSelect }: ProjectProps) {
   const nameRef = useRef<HTMLHeadingElement>(null);
 
   useOverflowMarquee(nameRef);
@@ -110,7 +105,7 @@ export default function Project({ name, image, teams, padding, background, fit, 
           {padding === undefined ? (
             <img alt={name} src={image}></img>
           ) : (
-            <img alt={name} src={image} style={framedImageStyle(padding, fit)}></img>
+            <img alt={name} src={image} style={framedImageStyle(padding)}></img>
           )}
         </button>
         <div className="project-teams">

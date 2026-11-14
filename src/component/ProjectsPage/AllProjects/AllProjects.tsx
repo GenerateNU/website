@@ -1,26 +1,13 @@
 import './style.css';
 import { useState } from 'react';
 
-import Alia from '@/assets/images/projectspage/alia.svg';
-import Arctic from '@/assets/images/projectspage/arctic.svg';
-import AutoPasser from '@/assets/images/projectspage/autopasser.svg';
-import CineCircle from '@/assets/images/projectspage/cinecircle.png';
-import Earnz from '@/assets/images/projectspage/earnz.svg';
-import HotDate from '@/assets/images/projectspage/hotdate.svg';
-import InsideAthletics from '@/assets/images/projectspage/insideathletics.png';
-import Jurni from '@/assets/images/projectspage/jurni.svg';
-import Karp from '@/assets/images/projectspage/karp.png';
-import Prisere from '@/assets/images/projectspage/prisere.png';
-import SelfServe from '@/assets/images/projectspage/selfserve.png';
-import ShowNxt from '@/assets/images/projectspage/shownxt.svg';
-import SkillSpark from '@/assets/images/projectspage/skillspark.png';
-import SmartyPill from '@/assets/images/projectspage/smartypill.svg';
-import SpecialStandard from '@/assets/images/projectspage/specialstandard.png';
-import Toggo from '@/assets/images/projectspage/toggo.svg';
+import placeholderData from '@/assets/images/projectspage/archive/baked/placeholderData.svg';
+import placeholderHardware from '@/assets/images/projectspage/archive/baked/placeholderHardware.svg';
+import placeholderSoftware from '@/assets/images/projectspage/archive/baked/placeholderSoftware.svg';
 import featuredProjects, { popupOnlyProjects } from '@/data/featuredProjectData';
 import type { FeaturedProject } from '@/data/featuredProjectData';
+import { type ProjectData, useProjects } from '@/services/projects';
 
-import { archiveSections, placeholderImages } from './archiveSections';
 import Project from './Project/Project';
 import type { ProjectTeam } from './Project/Project';
 import ProjectPopup from './ProjectPopup';
@@ -31,11 +18,10 @@ type SearchBarProps = {
 
 type ProjectSummary = {
   name: string;
+  // The project's logo, or the branch placeholder when it has none.
   image: string;
+  hasLogo: boolean;
   teams: ProjectTeam[];
-  padding?: number;
-  background?: string;
-  fit?: 'cover';
 };
 
 type ProjectSection = {
@@ -54,132 +40,7 @@ const SearchBar = ({ setSearchQuery }: SearchBarProps) => (
   />
 );
 
-const sections: ProjectSection[] = [
-  {
-    label: 'Spring 2026',
-    projects: [
-      {
-        name: 'SkillSpark',
-        image: SkillSpark,
-        teams: ['software'],
-      },
-      {
-        name: 'Toggo',
-        image: Toggo,
-        teams: ['software'],
-      },
-      {
-        name: 'SelfServe',
-        image: SelfServe,
-        teams: ['software'],
-      },
-      {
-        name: 'Inside Athletics',
-        image: InsideAthletics,
-        teams: ['software'],
-      },
-    ],
-  },
-  {
-    label: 'Fall 2025',
-    projects: [
-      {
-        name: 'Prisere',
-        image: Prisere,
-        teams: ['software'],
-      },
-      {
-        name: 'The Special Standard',
-        image: SpecialStandard,
-        teams: ['software'],
-      },
-      {
-        name: 'CineCircle',
-        image: CineCircle,
-        teams: ['software'],
-      },
-      {
-        name: 'Karp',
-        image: Karp,
-        teams: ['software'],
-      },
-    ],
-  },
-  {
-    label: 'Spring 2022',
-    projects: [
-      {
-        name: 'ShowNxt',
-        image: ShowNxt,
-        teams: ['software'],
-      },
-      {
-        name: 'Arctic Vision',
-        image: Arctic,
-        teams: ['software', 'hardware'],
-      },
-    ],
-  },
-  {
-    label: 'Fall 2022',
-    projects: [
-      {
-        name: 'Alia',
-        image: Alia,
-        teams: ['software'],
-      },
-      {
-        name: 'Jurni',
-        image: Jurni,
-        teams: ['software'],
-      },
-      {
-        name: 'Hot Date',
-        image: HotDate,
-        teams: ['hardware'],
-      },
-      {
-        name: 'Autopasser',
-        image: AutoPasser,
-        teams: ['hardware'],
-      },
-    ],
-  },
-  {
-    label: 'PREVIOUS',
-    projects: [
-      {
-        name: 'Earnz',
-        image: Earnz,
-        teams: ['software'],
-      },
-      {
-        name: 'SmartyPill',
-        image: SmartyPill,
-        teams: ['software', 'hardware'],
-      },
-    ],
-  },
-];
-
-// Merge sections with the same label, keeping the first-seen order.
-const mergeSections = (list: ProjectSection[]): ProjectSection[] => {
-  const byLabel = new Map<string, ProjectSection>();
-
-  for (const section of list) {
-    const existing = byLabel.get(section.label);
-
-    if (existing) {
-      existing.projects = [...existing.projects, ...section.projects];
-    } else {
-      byLabel.set(section.label, { label: section.label, projects: [...section.projects] });
-    }
-  }
-
-  return [...byLabel.values()];
-};
-
-// Newest first. PREVIOUS is for projects without a confirmed semester.
+// Newest first. Projects without a semester go under PREVIOUS.
 const LABEL_ORDER = [
   'Spring 2026',
   'Fall 2025',
@@ -193,20 +54,45 @@ const LABEL_ORDER = [
   'PREVIOUS',
 ];
 
-const mergedSections = mergeSections([
-  ...sections.filter(section => section.label !== ''),
-  ...archiveSections,
-  ...sections.filter(section => section.label === ''),
-]);
-
-const allSections = LABEL_ORDER.flatMap(label => mergedSections.filter(section => section.label === label));
-
-// Each project goes under one branch in its semester: Software, then Hardware, then Data.
+// Each project goes under one branch in its semester: Software, then Hardware, then Data, then Games.
 // A project tagged with both Software and Hardware is grouped under Software.
 const BRANCH_ORDER: ProjectTeam[] = ['software', 'hardware', 'data', 'games'];
 
 const branchOf = (teams: ProjectTeam[]): ProjectTeam =>
   BRANCH_ORDER.find(branch => teams.includes(branch)) ?? 'software';
+
+const placeholderFor: Record<ProjectTeam, string> = {
+  software: placeholderSoftware,
+  hardware: placeholderHardware,
+  data: placeholderData,
+  games: placeholderSoftware,
+};
+
+const toSummary = (project: ProjectData): ProjectSummary => {
+  const teams: ProjectTeam[] = project.teams.length > 0 ? project.teams : ['software'];
+
+  return {
+    name: project.name,
+    image: project.image ?? placeholderFor[branchOf(teams)],
+    hasLogo: project.image !== undefined,
+    teams,
+  };
+};
+
+const buildSections = (projects: ProjectData[]): ProjectSection[] => {
+  const byLabel = new Map<string, ProjectSummary[]>();
+
+  for (const project of projects) {
+    const label = project.semester && LABEL_ORDER.includes(project.semester) ? project.semester : 'PREVIOUS';
+    byLabel.set(label, [...(byLabel.get(label) ?? []), toSummary(project)]);
+  }
+
+  return LABEL_ORDER.flatMap(label => {
+    const summaries = byLabel.get(label);
+
+    return summaries ? [{ label, projects: summaries }] : [];
+  });
+};
 
 const featuredByName = new Map([...featuredProjects, ...popupOnlyProjects].map(project => [project.name, project]));
 
@@ -219,9 +105,7 @@ const renderProject = (project: ProjectSummary, onSelect: (featured: FeaturedPro
       name={project.name}
       image={project.image}
       teams={project.teams}
-      padding={project.padding}
-      background={project.background}
-      fit={project.fit}
+      padding={0}
       onSelect={featured && (() => onSelect(featured))}
     />
   );
@@ -229,11 +113,11 @@ const renderProject = (project: ProjectSummary, onSelect: (featured: FeaturedPro
 
 // Filter chips. Hardware and Software match the team SVG colours in the repo.
 // Games and Data colours are provisional, and no project is tagged with them yet.
-const BRANCH_CHIPS: { key: ProjectTeam | 'games' | 'data'; label: string; color: string; on: string }[] = [
-  { key: 'hardware', label: 'Hardware', color: '#FF6660', on: '#FFFFFF' },
-  { key: 'software', label: 'Software', color: '#187DFF', on: '#FFFFFF' },
-  { key: 'games', label: 'Games', color: '#FFBF3C', on: '#111111' },
-  { key: 'data', label: 'Data', color: '#6FCF97', on: '#111111' },
+const BRANCH_CHIPS: { key: ProjectTeam; label: string }[] = [
+  { key: 'hardware', label: 'Hardware' },
+  { key: 'software', label: 'Software' },
+  { key: 'games', label: 'Games' },
+  { key: 'data', label: 'Data' },
 ];
 
 type BranchChipKey = (typeof BRANCH_CHIPS)[number]['key'];
@@ -242,6 +126,7 @@ export default function AllProjects() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeBranches, setActiveBranches] = useState<BranchChipKey[]>([]);
   const [selectedProject, setSelectedProject] = useState<FeaturedProject | null>(null);
+  const allSections = buildSections(useProjects());
 
   const toggleBranch = (key: BranchChipKey) =>
     setActiveBranches(current => (current.includes(key) ? current.filter(k => k !== key) : [...current, key]));
@@ -290,8 +175,8 @@ export default function AllProjects() {
           <div className="all-projects">
             {BRANCH_ORDER.flatMap(branch => {
               const inBranch = section.projects.filter(project => branchOf(project.teams) === branch);
-              const withLogo = inBranch.filter(project => !placeholderImages.includes(project.image));
-              const withPlaceholder = inBranch.filter(project => placeholderImages.includes(project.image));
+              const withLogo = inBranch.filter(project => project.hasLogo);
+              const withPlaceholder = inBranch.filter(project => !project.hasLogo);
 
               return [...withLogo, ...withPlaceholder].map(project => renderProject(project, setSelectedProject));
             })}
