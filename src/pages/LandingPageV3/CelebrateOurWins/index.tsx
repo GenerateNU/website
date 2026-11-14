@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
-import { preload } from 'react-dom';
 
 import NextArrow from '@/assets/icons/arrows/nextArrowRight.svg?react';
 import PrevArrow from '@/assets/icons/arrows/prevArrowLeft.svg?react';
@@ -44,24 +43,26 @@ export default function CelebrateOurWins() {
   const { data: showcases = [] } = useQuery(showcasesOptions());
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const currentIndex = selectedIndex ?? showcases.length - 1;
+  const [visited, setVisited] = useState<ReadonlySet<number>>(() => new Set());
+  const total = showcases.length;
+  const currentIndex = selectedIndex ?? total - 1;
   const selectedShowcase = showcases[currentIndex];
 
-  // Warm the neighbours so arrow clicks swap instantly; React dedupes repeat preloads.
-  for (const offset of [-1, 1]) {
-    const neighbour = showcases.at((currentIndex + offset) % showcases.length);
+  const neighborOf = (index: number): number[] => [index, (index + 1) % total, (index - 1 + total) % total];
 
-    if (neighbour) {
-      preload(neighbour.image, { as: 'image', fetchPriority: 'low' });
-    }
-  }
+  const isMounted = (index: number): boolean => visited.has(index) || neighborOf(currentIndex).includes(index);
+
+  const goTo = (index: number) => {
+    setSelectedIndex(index);
+    setVisited(previous => new Set([...previous, ...neighborOf(currentIndex), ...neighborOf(index)]));
+  };
 
   const handleLeftButtonClick = () => {
-    setSelectedIndex(currentIndex > 0 ? currentIndex - 1 : showcases.length - 1);
+    goTo(currentIndex > 0 ? currentIndex - 1 : total - 1);
   };
 
   const handleRightButtonClick = () => {
-    setSelectedIndex(currentIndex < showcases.length - 1 ? currentIndex + 1 : 0);
+    goTo(currentIndex < total - 1 ? currentIndex + 1 : 0);
   };
 
   return (
@@ -88,11 +89,18 @@ export default function CelebrateOurWins() {
             <div id="showcase-carousel-label" className="showcase-year">
               {selectedShowcase && <ShowcaseLabel showcase={selectedShowcase} />}
             </div>
-            <img
-              className="image-shadow showcase-carousel-img"
-              src={selectedShowcase?.image}
-              alt={selectedShowcase?.year}
-            />
+            {showcases.map((showcase, index) =>
+              isMounted(index) ? (
+                <img
+                  key={showcase.image}
+                  className="image-shadow showcase-carousel-img"
+                  src={showcase.image}
+                  alt={showcase.year}
+                  decoding="async"
+                  hidden={index !== currentIndex}
+                />
+              ) : null
+            )}
             <div id="small-carousel-nav">
               <button className="sm-carousel-button" onClick={handleLeftButtonClick}>
                 <PrevArrow />
