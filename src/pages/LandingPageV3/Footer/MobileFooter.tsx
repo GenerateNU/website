@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 import UpArrowMobile from '@/assets/icons/arrows/upArrowMobile.svg';
 import Email from '@/assets/icons/socials/Email.svg?react';
@@ -12,7 +12,7 @@ import { pages } from './pages';
 
 function MobileFooter() {
   const navigate = useNavigate();
-  const currentPageUrl = window.location.href;
+  const { pathname: currentPageUrl } = useLocation();
 
   const handleOnClick = () => {
     window.scrollTo(0, 0);

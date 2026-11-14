@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router';
 
 import UpArrow from '@/assets/icons/arrows/upArrow.svg';
 import Email from '@/assets/icons/socials/Email.svg?react';
@@ -15,7 +16,7 @@ const handleOnClick = () => {
 };
 
 function WebFooter() {
-  const currentPageUrl = window.location.href;
+  const { pathname: currentPageUrl } = useLocation();
 
   const icons = [
     {

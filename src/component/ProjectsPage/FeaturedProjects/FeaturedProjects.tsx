@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import Arrow from '@/assets/images/projectspage/arrowbutton.svg';
 
@@ -99,6 +100,8 @@ function DesktopFeaturedProjects({ handleProject, currentProject, mobile }: Feat
 }
 
 function MobileFeaturedProjects({ handleProject, currentProject, mobile }: FeaturedProjectsViewProps) {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="featured-pp-fp-projects-text">
@@ -121,7 +124,7 @@ function MobileFeaturedProjects({ handleProject, currentProject, mobile }: Featu
               textColor="black"
               fontSize="2vh"
               text="view"
-              onClick={() => (window.location.href = `/case-study/${currentProject.name.toLowerCase()}`)}
+              onClick={() => void navigate(`/case-study/${currentProject.name.toLowerCase()}`)}
             />
           </div>
         </div>

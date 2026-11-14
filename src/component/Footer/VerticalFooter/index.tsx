@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '@/component/Footer/style.css';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 import GenerateLogo from '@/assets/images/landingpage-v2/footerlogo.svg';
 import FooterLink from '@/component/Footer/FooterLink';
@@ -11,7 +11,7 @@ import { SocialIcon } from '@/component/SocialIcon';
 import { socialIcons } from '@/component/socialIcons';
 
 function VerticalFooter() {
-  const currentPageUrl = window.location.href;
+  const { pathname: currentPageUrl } = useLocation();
   const navigate = useNavigate();
 
   const handleOnClick = () => {

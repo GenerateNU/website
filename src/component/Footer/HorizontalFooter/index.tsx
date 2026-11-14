@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '@/component/Footer/style.css';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 import GenerateLogo from '@/assets/images/landingpage-v2/footerlogo.svg'; //"../../assets/images/landingpage-v2/footerlogo.svg";
 import FooterLink from '@/component/Footer/FooterLink';
@@ -12,7 +12,7 @@ import { socialIcons } from '@/component/socialIcons';
 
 function HorizontalFooter() {
   const navigate = useNavigate();
-  const currentPageUrl = window.location.href;
+  const { pathname: currentPageUrl } = useLocation();
 
   const handleOnClick = () => {
     window.scrollTo(0, 0);
