@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React, { useState } from 'react';
 
 import NextArrow from '@/assets/icons/arrows/nextArrowRight.svg?react';
 import PrevArrow from '@/assets/icons/arrows/prevArrowLeft.svg?react';
@@ -7,20 +8,11 @@ import LargeStars from '@/assets/images/landingpage-v3/LargeShowcaseStars.svg?re
 import LeftArrow from '@/assets/images/landingpage-v3/LeftTriangleArrow.svg?react';
 import RightArrow from '@/assets/images/landingpage-v3/RightTriangleArrow.svg?react';
 import SmallStars from '@/assets/images/landingpage-v3/SmallShowcaseStars.svg?react';
-import { urlFor } from '@/client';
-import type { Copy, SanityShowcase, Showcase } from '@/pages/LandingPageV3/types';
-import { useSanity } from '@/services/useSanity';
+import { useCopy, showcasesOptions } from '@/sanity/options';
+import type { Showcase } from '@/sanity/options';
 
 type ShowcaseLabelProps = {
   showcase: Showcase;
-};
-
-const compareShowcases = (a: Showcase, b: Showcase) => {
-  if (a.year === b.year) {
-    return a.semester === 'SPRING' ? -1 : 1;
-  }
-
-  return Number(a.year) - Number(b.year);
 };
 
 function ShowcaseLabel({ showcase }: ShowcaseLabelProps) {
@@ -46,23 +38,8 @@ function ShowcaseLabel({ showcase }: ShowcaseLabelProps) {
 }
 
 export default function CelebrateOurWins() {
-  const copyQuery = `*[_type == "copy" && key == "celebrate-our-wins"]{header, content}`;
-  const copy = useSanity<Copy>(copyQuery);
-  const showcaseQuery = `*[_type == "showcase"] {year, image, semester} | order(year asc)`;
-
-  const sanityShowcases = useSanity<SanityShowcase>(showcaseQuery);
-
-  const showcases: Showcase[] = useMemo(() => {
-    const sortedShowcases = sanityShowcases.map(showcase => ({
-      ...showcase,
-      semester: showcase.semester.toUpperCase(),
-      image: urlFor(showcase.image).url(),
-    }));
-
-    sortedShowcases.sort(compareShowcases);
-
-    return sortedShowcases;
-  }, [sanityShowcases]);
+  const copy = useCopy('celebrate-our-wins');
+  const { data: showcases = [] } = useQuery(showcasesOptions());
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const currentIndex = selectedIndex ?? showcases.length - 1;
@@ -82,12 +59,12 @@ export default function CelebrateOurWins() {
         <LargeStars id="showcase-large-stars" />
         <SmallStars id="showcase-small-stars-top" />
         <div className="white-header-text" id="showcase-header">
-          {copy[0]?.header}
+          {copy.header}
         </div>
         <div id="showcase-top-content">
           <img src={celebrate} className="showcase-img image-shadow" alt="Placeholder" />
           <div id="showcase-right-col">
-            <div className="white-p-text">{copy[0]?.content[0]}</div>
+            <div className="white-p-text">{copy.content[0]}</div>
             <SmallStars id="showcase-small-stars-bottom" />
           </div>
         </div>

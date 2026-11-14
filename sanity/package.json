@@ -13,7 +13,8 @@
     "build": "sanity build",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "typegen": "sanity schema extract --force && sanity typegen generate"
   },
   "dependencies": {
     "@sanity/cli": "^8.27.0",

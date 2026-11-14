@@ -4,20 +4,16 @@ export type ApplicationRole = {
   activeApplication?: boolean;
 };
 
-export type SanityApplyTeam = {
+export type ApplyTeam = {
   team: string;
-  color: { hex: string };
+  color: string;
   tags?: string[];
   teamDescription?: string;
   contributorDescription?: string;
   leadDescription?: string;
   chiefDescription?: string;
-  contributorRoles?: ApplicationRole[] | null;
-  leadRoles?: ApplicationRole[] | null;
-  chiefRoles?: ApplicationRole[] | null;
+  contributorRoles?: ApplicationRole[];
+  leadRoles?: ApplicationRole[];
+  chiefRoles?: ApplicationRole[];
   externalLink?: string;
-};
-
-export type ApplyTeam = Omit<SanityApplyTeam, 'color'> & {
-  color: string;
 };

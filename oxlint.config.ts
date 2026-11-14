@@ -27,6 +27,7 @@ export default defineConfig({
     '.windsurf/**',
     'tools/oxlint/anti-slop/**',
     'sanity/**',
+    'src/sanity/types.gen.ts',
   ],
   jsPlugins: [
     {
@@ -121,6 +122,13 @@ export default defineConfig({
   overrides: [
     {
       files: ['**/*.tsx'],
+      rules: {
+        'typescript/explicit-function-return-type': 'off',
+      },
+    },
+    {
+      // queryOptions() return types are inferred from the generated GROQ result types on purpose.
+      files: ['src/sanity/options.ts'],
       rules: {
         'typescript/explicit-function-return-type': 'off',
       },

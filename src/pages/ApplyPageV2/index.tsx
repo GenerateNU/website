@@ -1,13 +1,14 @@
-import React, { useMemo } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 
 import NavBar from '@/component/NavBar';
 import Footer from '@/pages/LandingPageV3/Footer';
-import { useSanity } from '@/services/useSanity';
+import { applyTeamsOptions } from '@/sanity/options';
 import useWebsite from '@/shared/useWebsite';
 
 import TeamApplicationCard from './TeamApplicationCard';
 import './style.css';
-import type { ApplyTeam, SanityApplyTeam } from './types';
+import type { ApplyTeam } from './types';
 
 const header = 'join generate';
 
@@ -64,35 +65,7 @@ const mobileContent = (teams: ApplyTeam[]) => {
 };
 
 export default function ApplyPage() {
-  const query = `*[_type == "team"] {
-    ...,
-    "contributorRoles": contributorRoles[]-> {
-      role,
-      applicationLink,
-      activeApplication
-    },
-    "leadRoles": leadRoles[]-> {
-      role,
-      applicationLink,
-      activeApplication
-    },
-    "chiefRoles": chiefRoles[]-> {
-      role,
-      applicationLink,
-      activeApplication
-    }
-  }| order(zIndex desc)`;
-
-  const sanityTeams = useSanity<SanityApplyTeam>(query);
-
-  const teams: ApplyTeam[] = useMemo(
-    () =>
-      sanityTeams.map(team => ({
-        ...team,
-        color: team.color.hex,
-      })),
-    [sanityTeams]
-  );
+  const { data: teams = [] } = useQuery(applyTeamsOptions());
 
   const halfLength = Math.ceil(teams.length / 2);
   const leftCol = teams.slice(0, halfLength);

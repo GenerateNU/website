@@ -1,10 +1,10 @@
-import React, { useMemo, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React, { useState } from 'react';
 
-import { urlFor } from '@/client';
-import type { Copy, SanityStructuredTeam, StructuredTeam } from '@/pages/LandingPageV3/types';
+import { structuredTeamsOptions, useCopy } from '@/sanity/options';
+import type { StructuredTeam } from '@/sanity/options';
 
 import './style.css';
-import { useSanity } from '@/services/useSanity';
 
 const ARC_STEPS = 16;
 
@@ -89,21 +89,8 @@ function sliceOffset(index: number, total: number) {
 }
 
 export default function HowWereStrctured() {
-  const copyQuery = `*[_type == "copy" && key == "how-were-structured"]{header, content}`;
-  const copy = useSanity<Copy>(copyQuery);
-
-  const teamQuery = `*[_type == "team" && team != "Clients"] {team, image, teamDescription, zIndex, color} | order(zIndex)`;
-
-  const sanityTeams = useSanity<SanityStructuredTeam>(teamQuery);
-
-  const teams: StructuredTeam[] = useMemo(
-    () =>
-      sanityTeams.map(value => ({
-        ...value,
-        image: urlFor(value.image).url(),
-      })),
-    [sanityTeams]
-  );
+  const copy = useCopy('how-were-structured');
+  const { data: teams = [] } = useQuery(structuredTeamsOptions());
 
   const [randomSeed] = useState(() => Math.random());
   const [hovered, setHovered] = useState<StructuredTeam | null>(null);
@@ -117,8 +104,8 @@ export default function HowWereStrctured() {
   return (
     <div className="grid-bg" id="ll5-row">
       <div id="how-structured">
-        <div className="white-header-text">{copy[0]?.header}</div>
-        <div className="white-p-text">{copy[0]?.content[0]}</div>
+        <div className="white-header-text">{copy.header}</div>
+        <div className="white-p-text">{copy.content[0]}</div>
         <div className="wheel-content">
           <div>
             <div id="skills">
@@ -141,7 +128,7 @@ export default function HowWereStrctured() {
                     className={'circle animate ' + (isSelected ? 'selected' : '')}
                     style={{
                       clipPath: sliceClipPath(index, teams.length),
-                      backgroundColor: team.color.hex,
+                      backgroundColor: team.color,
                       transform: isSelected ? sliceOffset(index, teams.length) : 'translate(0, 0)',
                       zIndex: isSelected ? 100 : 1,
                     }}
