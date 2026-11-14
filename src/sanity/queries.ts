@@ -1,7 +1,5 @@
 import { defineQuery } from 'groq';
 
-// Schema fields are all optional, so projections `coalesce` the ones the UI always needs to keep result types non-null.
-
 export const generateLinksQuery = defineQuery(`*[_type == "generateLink" && defined(slug.current) && defined(url)]{
   "slug": coalesce(slug.current, ""),
   "url": coalesce(url, "")

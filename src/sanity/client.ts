@@ -10,7 +10,6 @@ export const client = createClient({
 
 const builder = createImageUrlBuilder(client);
 
-/** Image URL builder with defaults applied; chain `.width(n)` etc. before `.url()`. */
 export const urlFor = (source: SanityImageSource): ImageUrlBuilder => {
   return builder.image(source).auto('format').fit('max').quality(75);
 };
