@@ -3,7 +3,8 @@
   "workspaces": {
     ".": {
       "entry": ["src/index.tsx"],
-      "project": ["src/**/*.{ts,tsx}"]
+      "project": ["src/**/*.{ts,tsx}"],
+      "ignore": ["src/sanity/types.gen.ts"]
     },
     "sanity": {
       "entry": ["sanity.config.ts", "sanity.cli.ts"],

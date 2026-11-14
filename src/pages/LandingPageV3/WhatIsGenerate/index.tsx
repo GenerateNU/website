@@ -3,22 +3,20 @@ import type { Ref } from 'react';
 
 import showcase from '@/assets/images/landingpage/weare/showcase.jpg';
 import workshop from '@/assets/images/landingpage/weare/workshop.jpg';
-import type { Copy } from '@/pages/LandingPageV3/types';
-import { useSanity } from '@/services/useSanity';
+import { useCopy } from '@/sanity/queries/copyQuery';
 
 type WhatIsGenerateProps = {
   ref?: Ref<HTMLDivElement>;
 };
 
 export default function WhatIsGenerate({ ref }: WhatIsGenerateProps) {
-  const query = `*[_type == "copy" && key == "what-is-generate-landing"]{header, content}`;
-  const headerCopy = useSanity<Copy>(query);
+  const copy = useCopy('what-is-generate-landing');
 
   return (
     <div ref={ref} className="grid-bg bg-row" id="ll2-row">
       <div className="half-container blue-bg" id="what-is-generate">
-        <div className="white-header-text">{headerCopy[0]?.header}</div>
-        {headerCopy[0]?.content.map((item, index) => (
+        <div className="white-header-text">{copy.header}</div>
+        {copy.content.map((item, index) => (
           <p key={index} className="white-p-text">
             {item}
             <br />

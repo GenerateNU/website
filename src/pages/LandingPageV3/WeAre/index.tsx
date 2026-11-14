@@ -1,10 +1,10 @@
+import { useQuery } from '@tanstack/react-query';
+
 import weare from '@/assets/images/landingpage/weare/weare.jpg';
-import type { Value } from '@/pages/LandingPageV3/types';
-import { useSanity } from '@/services/useSanity';
+import { valuesOptions } from '@/sanity/queries/valuesQuery';
 
 export default function WeAre() {
-  const query = `*[_type == "value"] {value, index} | order(index asc)`;
-  const values = useSanity<Value>(query);
+  const { data: values = [] } = useQuery(valuesOptions());
 
   return (
     <div id="ll3-row" className="bg-row">

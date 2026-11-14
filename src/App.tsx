@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { BrowserRouter as Router, Navigate, useRoutes } from 'react-router-dom';
 import type { RouteObject } from 'react-router-dom';
@@ -11,12 +12,7 @@ import ApplyPageV2 from './pages/ApplyPageV2';
 import LandingPageV3 from './pages/LandingPageV3';
 import TeamsPage from './pages/TeamsPage';
 import ExpandedTeamsPage from './pages/TeamsPage/ExpandedTeams';
-import { useSanity } from './services/useSanity';
-
-type GenerateLink = {
-  slug: { current: string };
-  url: string;
-};
+import { generateLinksOptions } from './sanity/queries/linksQuery';
 
 type AppRoutesProps = {
   sanityRoutes: RouteObject[];
@@ -47,11 +43,10 @@ function AppRoutes({ sanityRoutes }: AppRoutesProps) {
 }
 
 export default function App() {
-  const query = `*[_type == "generateLink"]`;
-  const links = useSanity<GenerateLink>(query);
+  const { data: links = [] } = useQuery(generateLinksOptions());
 
   const sanityRoutes: RouteObject[] = links.map(link => ({
-    path: `/${link.slug.current}`,
+    path: `/${link.slug}`,
     element: <ExternalRedirect to={link.url} />,
   }));
 

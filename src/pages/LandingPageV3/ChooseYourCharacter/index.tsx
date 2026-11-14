@@ -1,10 +1,13 @@
-import React, { useMemo, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React, { useState } from 'react';
+import { preload } from 'react-dom';
 
 import ArcadeMachine from '@/assets/images/landingpage-v3/DynamicArcadeMachine';
 import ArcadeText from '@/assets/images/landingpage-v3/DynamicArcadeText';
-import { urlFor } from '@/client';
-import type { Branch, Director, SanityBranch, SanityDirector } from '@/pages/LandingPageV3/types';
-import { useSanity } from '@/services/useSanity';
+import { directorsOptions } from '@/sanity/queries/directorsQuery';
+import type { Director } from '@/sanity/queries/directorsQuery';
+import { branchesOptions } from '@/sanity/queries/teamsQuery';
+import type { Branch } from '@/sanity/queries/teamsQuery';
 
 import Mascot from './Mascot';
 
@@ -66,42 +69,22 @@ const ArcadeMachineWrapper = ({ directors, directorToTeam, coloredIndex }: Arcad
 
   const currentTeam = directorToTeam.get(director.name);
 
-  return <ArcadeMachine color={currentTeam?.color.hex} text={currentTeam?.teamAbbreviation} imgUrl={director.image} />;
+  return <ArcadeMachine color={currentTeam?.color} text={currentTeam?.teamAbbreviation} imgUrl={director.image} />;
 };
 
 export default function ChooseYourCharacter() {
-  const directorsQuery = `*[_type == "director"] | order(zIndex)`;
-  const branchQuery = `*[_type == "team"] {team,team_abbreviation,color,zIndex} | order(zIndex)`;
+  const { data: directors = [] } = useQuery(directorsOptions());
+  const { data: branches = [] } = useQuery(branchesOptions());
 
-  const sanityDirectors = useSanity<SanityDirector>(directorsQuery);
-
-  const directors: Director[] = useMemo(
-    () =>
-      sanityDirectors.map(director => ({
-        ...director,
-        color: director.color.hex,
-        image: urlFor(director.image).url(),
-      })),
-    [sanityDirectors]
-  );
-
-  const sanityBranches = useSanity<SanityBranch>(branchQuery);
-
-  const branches: Branch[] = useMemo(
-    () =>
-      sanityBranches.map(branch => ({
-        ...branch,
-        team: branch.team.toUpperCase(),
-        teamAbbreviation: (branch.team_abbreviation || '').toUpperCase(),
-      })),
-    [sanityBranches]
-  );
+  for (const { image } of directors) {
+    preload(image, { as: 'image', fetchPriority: 'low' });
+  }
 
   const [coloredIndex, setSelected] = useState(0);
 
   const directorToTeam = new Map(
     directors.map(director => {
-      const branch = branches.find(candidate => candidate.team.toUpperCase() === director.team.toUpperCase());
+      const branch = branches.find(candidate => candidate.team === director.team.toUpperCase());
 
       return [director.name, branch];
     })
