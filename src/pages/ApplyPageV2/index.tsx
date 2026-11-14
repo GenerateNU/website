@@ -64,7 +64,6 @@ export default function ApplyPage() {
         </div>
         <h2 className="join-header">{header}</h2>
         {mobile ? <div className="join-text">{quote}</div> : <p className="join-text">{quote}</p>}
-        {/* The header and nav render immediately; only the team list waits on (or fails with) Sanity. */}
         <SectionBoundary>
           <TeamColumns mobile={mobile} />
         </SectionBoundary>

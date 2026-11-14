@@ -15,7 +15,6 @@ const progressBarStyle: React.CSSProperties = {
 };
 
 export default function Root() {
-  // Loaders only block on the short-link lookup, but show feedback while any navigation is pending.
   const isNavigating = useNavigation().state === 'loading';
 
   return (

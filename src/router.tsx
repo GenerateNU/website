@@ -31,10 +31,6 @@ async function findShortLink(path: string): Promise<string | undefined> {
   }
 }
 
-/**
- * Starts every landing-page query without waiting for it. Sections suspend on their own data inside a
- * SectionBoundary, so the page paints immediately and a slow or failed query only affects its section.
- */
 const prefetchLanding = (): null => {
   void queryClient.prefetchQuery(copyOptions());
   void queryClient.prefetchQuery(valuesOptions());
@@ -71,7 +67,6 @@ export const router = createBrowserRouter([
         path: '*',
         element: <LandingPageV3 />,
         loader: async ({ params }) => {
-          // Start the landing data in parallel with the short-link lookup; it's needed if no link matches.
           prefetchLanding();
 
           const url = await findShortLink(params['*'] ?? '');

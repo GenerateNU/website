@@ -6,10 +6,6 @@ type SectionBoundaryProps = {
   children: ReactNode;
 };
 
-/**
- * Isolates a Sanity-backed section: it renders nothing while its data loads or if the fetch fails,
- * so one slow or failed query never blanks the rest of the page.
- */
 export default function SectionBoundary({ children }: SectionBoundaryProps) {
   return (
     <ErrorBoundary fallback={null}>
