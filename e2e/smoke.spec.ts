@@ -33,6 +33,7 @@ for (const path of routes) {
     await page.goto(path, { waitUntil: 'networkidle' });
 
     await expect(page.locator('#root')).not.toBeEmpty();
+    await expect(page.getByRole('alert')).toHaveCount(0);
     expect(errors).toEqual([]);
   });
 }

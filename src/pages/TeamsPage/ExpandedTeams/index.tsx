@@ -2,10 +2,10 @@ import React from 'react';
 import type { ComponentType } from 'react';
 
 import './style.css';
-import { Routes, Route } from 'react-router';
+import { useParams } from 'react-router';
 
 import NavBar from '@/component/NavBar';
-import { TEAMS, isTeam } from '@/data/teams';
+import { isTeam } from '@/data/teams';
 import type { Team } from '@/data/teams';
 import useWebsite from '@/shared/useWebsite';
 
@@ -34,11 +34,13 @@ export default function ExpandedTeamsPage() {
   const isWebsite = useWebsite();
   const isBigScreen = !window.matchMedia('(max-device-width: 650px)').matches;
   const mobile = !isBigScreen || !isWebsite;
-  const team = window.location.pathname.split('/').pop();
+  const { team } = useParams();
 
   if (!isTeam(team)) {
     return null;
   }
+
+  const Container = teamContainers[team];
 
   return (
     <div className="expanded-wrapper">
@@ -49,13 +51,7 @@ export default function ExpandedTeamsPage() {
         {!mobile ? <ExpandedTeamsHeader team={team} /> : <ExpandedTeamsMobileHeader team={team} />}
         <div className="expanded-team-page-margins">
           <WhatWeDoHowWeWork team={team} />
-          <Routes>
-            {TEAMS.map(teamName => {
-              const Container = teamContainers[teamName];
-
-              return <Route key={teamName} path={`/${teamName}`} element={<Container />} />;
-            })}
-          </Routes>
+          <Container />
         </div>
         <TeamPageFooter color={ExpandedTeamsJSON[team].color} page={ExpandedTeamsJSON[team].abbv} />
       </div>
