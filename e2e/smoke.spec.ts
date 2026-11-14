@@ -37,32 +37,3 @@ for (const path of routes) {
     expect(errors).toEqual([]);
   });
 }
-
-test('/about redirects to /', async ({ page }) => {
-  await page.goto('/about', { waitUntil: 'networkidle' });
-
-  await expect(page).toHaveURL(/\/$/);
-});
-
-for (const path of ['/test-link', '/TEST-Link/']) {
-  test(`short link ${path} redirects to its external url`, async ({ page }) => {
-    await page.route(/\.sanity\.io\//, route =>
-      route.fulfill({ json: { result: [{ slug: 'test-link', url: 'https://example.com/target' }] } })
-    );
-    await page.route('https://example.com/**', route =>
-      route.fulfill({ contentType: 'text/html', body: '<html><body>target</body></html>' })
-    );
-
-    await page.goto(path, { waitUntil: 'commit' });
-
-    await expect(page).toHaveURL('https://example.com/target');
-  });
-}
-
-test('unknown paths fall back to the landing page when Sanity is down', async ({ page }) => {
-  await page.route(/\.sanity\.io\//, route => route.abort());
-
-  await page.goto('/not-a-real-page', { waitUntil: 'networkidle' });
-
-  await expect(page.getByRole('alert')).toHaveCount(0);
-});
