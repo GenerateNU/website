@@ -17,8 +17,15 @@
 }
 
 .popup-ad-close:hover {
-  box-shadow: 0 0 !important;
+  translate: 0.25rem -0.25rem;
+  box-shadow: -0.5rem 0.5rem white !important;
   transition: all 0.3s ease-in-out;
+}
+
+.popup-ad-close:active {
+  translate: -0.125rem 0.125rem;
+  box-shadow: -0.125rem 0.125rem white !important;
+  transition-duration: 0.1s;
 }
 
 .popup-ad-close:focus {

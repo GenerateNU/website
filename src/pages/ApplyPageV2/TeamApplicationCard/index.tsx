@@ -165,7 +165,11 @@ export default function TeamApplicationCard({ team }: TeamApplicationCardProps) 
     <div
       key={team.team}
       className={`team-card-container ${expanded ? 'expanded' : ''} ${clientCard ? 'client-border' : ''}`}
-      style={{ boxShadow: clientCard ? `-1rem 1rem ${team.color}` : '' }}
+      ref={element => {
+        if (clientCard) {
+          element?.style.setProperty('--card-shadow-color', team.color);
+        }
+      }}
     >
       <TeamCardHeader team={team} clientCard={clientCard} />
       {expand ? (

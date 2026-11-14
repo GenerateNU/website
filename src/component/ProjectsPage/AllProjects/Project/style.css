@@ -35,6 +35,9 @@
   border: 0;
   background: none;
   cursor: pointer;
+  transition:
+    translate 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .project-link:disabled {
@@ -42,7 +45,14 @@
 }
 
 .project-link:not(:disabled):hover {
-  box-shadow: 0 0;
+  translate: 0.5vh -0.5vh;
+  box-shadow: -2.5vh 2.5vh black;
+}
+
+.project-link:not(:disabled):active {
+  translate: -0.25vh 0.25vh;
+  box-shadow: -1.75vh 1.75vh black;
+  transition-duration: 0.1s;
 }
 
 .project-images {
