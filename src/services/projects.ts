@@ -10,6 +10,8 @@ export type ProjectData = {
   description: string;
   // Undefined when the project has no logo yet; the page shows a branch placeholder instead.
   image?: string;
+  // Card-sized images (334×180) get the framed look; other images show at their natural size.
+  framed: boolean;
   semester?: string;
   featured: boolean;
   rounded: boolean;
@@ -24,6 +26,8 @@ type SanityProject = {
   teams?: ProjectTeam[];
   roundedPopupImage?: boolean;
   imageUrl?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 const projectsQuery = `*[_type == "pastProject" && defined(name)] | order(name asc) {
@@ -34,14 +38,17 @@ const projectsQuery = `*[_type == "pastProject" && defined(name)] | order(name a
   featured,
   teams,
   roundedPopupImage,
-  "imageUrl": image.asset->url
+  "imageUrl": image.asset->url,
+  "imageWidth": image.asset->metadata.dimensions.width,
+  "imageHeight": image.asset->metadata.dimensions.height
 }`;
 
 const toProjectData = (doc: SanityProject): ProjectData => ({
   name: doc.name,
   teams: doc.teams ?? [],
   description: doc.description ?? '',
-  image: doc.imageUrl,
+  image: doc.imageUrl ?? undefined,
+  framed: doc.imageWidth === 334 && doc.imageHeight === 180,
   semester: doc.semester,
   featured: doc.featured ?? false,
   rounded: doc.roundedPopupImage ?? false,

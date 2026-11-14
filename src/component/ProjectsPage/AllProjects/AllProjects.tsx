@@ -21,6 +21,7 @@ type ProjectSummary = {
   // The project's logo, or the branch placeholder when it has none.
   image: string;
   hasLogo: boolean;
+  framed: boolean;
   teams: ProjectTeam[];
 };
 
@@ -75,6 +76,7 @@ const toSummary = (project: ProjectData): ProjectSummary => {
     name: project.name,
     image: project.image ?? placeholderFor[branchOf(teams)],
     hasLogo: project.image !== undefined,
+    framed: project.image === undefined || project.framed,
     teams,
   };
 };
@@ -105,7 +107,7 @@ const renderProject = (project: ProjectSummary, onSelect: (featured: FeaturedPro
       name={project.name}
       image={project.image}
       teams={project.teams}
-      padding={0}
+      padding={project.framed ? 0 : undefined}
       onSelect={featured && (() => onSelect(featured))}
     />
   );
