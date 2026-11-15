@@ -1,0 +1,237 @@
+/* Filter chips: outlined by default, filled with the branch colour when active. */
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Branch colours. Hardware and Software match the team SVGs. Games and Data are provisional. */
+.filter-chip-hardware {
+  --chip-color: #ff6660;
+  --chip-on: #ffffff;
+}
+
+.filter-chip-software {
+  --chip-color: #ffbf3c;
+  --chip-on: #111111;
+}
+
+.filter-chip-games {
+  --chip-color: #a559ec;
+  --chip-on: #ffffff;
+}
+
+.filter-chip-data {
+  --chip-color: #6fcf97;
+  --chip-on: #111111;
+}
+
+.filter-chip {
+  border: 1.5px solid var(--chip-color);
+  border-radius: 0;
+  background: #ffffff;
+  color: var(--chip-color);
+  padding: 10px 20px;
+  font-family: 'Space Mono 700';
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.filter-chip.is-active {
+  background: var(--chip-color);
+  color: var(--chip-on);
+}
+
+/* Desktop only: the page scrolls top to bottom, like the Figma layout. Mobile is unchanged. */
+@media (min-width: 651px) {
+  .projects-vertical .all-projects-container {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: unset;
+    column-gap: 0;
+    padding: 96px clamp(24px, 6vw, 96px) 0;
+  }
+
+  .projects-vertical .all-projects-header {
+    display: block;
+    height: auto;
+    width: auto;
+  }
+
+  .projects-vertical .all-projects-header .projects-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: left;
+    font-size: 48px;
+    margin: 0 0 40px;
+  }
+
+  .projects-vertical .search-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .projects-vertical .search-row > .search-bar {
+    display: block;
+    width: 400px;
+    margin: 0;
+  }
+
+  .projects-vertical .search-row input.search-bar {
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .projects-vertical .projects-section {
+    margin-bottom: 64px;
+  }
+
+  .projects-vertical .projects-section-label {
+    align-self: stretch;
+    margin-bottom: 24px;
+  }
+
+  .projects-vertical .all-projects {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: space-between;
+    column-gap: 48px;
+    row-gap: 24px;
+    height: auto;
+  }
+
+  /* Archive thumbnails: fixed 334:180 frame like the blank placeholder. The logo is absolutely placed inside it, and its padding is an inset set in Project.tsx. */
+  .projects-vertical .project-link.is-framed {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 334 / 180;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #ffffff;
+    border: 2px solid #000000;
+  }
+
+  .projects-vertical .project-link.is-framed img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  /* Hover: the existing rule clears the shadow, so it appears to go into the thumbnail. The transition keeps it fast. */
+  .projects-vertical .project-link {
+    box-shadow: -1vh 1vh black;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  /* Hover: thumbnails drop slightly and their shadow clears, on every card. Only cards with a popup get the pointer cursor. */
+  .projects-vertical .project-link:hover {
+    transform: translateY(0.5vh);
+    box-shadow: 0 0 0 0 #000000;
+  }
+
+  /* Team tags sit under the thumbnail, horizontal, left-aligned. */
+  .projects-vertical .project-images {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-vertical .project-teams {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    height: auto;
+    margin: 12px 0 0;
+  }
+
+  /* The team SVGs are drawn vertically. Rotate them and use negative margins so the layout box is 16px tall. */
+  .projects-vertical .project-teams img {
+    width: 24px;
+    height: 81px;
+    margin: -28.5px 28.5px;
+    transform: rotate(-90deg);
+  }
+
+  .projects-vertical .project-card {
+    width: auto;
+  }
+
+  /* Below 1024px, wrap to as many columns as fit. */
+  @media (max-width: 1023px) {
+    .projects-vertical .all-projects {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+  }
+
+  /* Thumbnails fill their column and keep their natural ratio, so four fit across at desktop widths. */
+  .projects-vertical .project-link img {
+    width: 100%;
+    height: auto;
+  }
+
+  .projects-vertical .project-card .project-name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    height: auto;
+    font-size: 22px;
+    text-align: left;
+    margin: 12px 0 4px;
+  }
+
+  .projects-vertical .nextPage {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    background: #ffffff;
+    padding: 48px;
+  }
+
+  .projects-vertical .nextPage a {
+    width: auto;
+    height: auto;
+  }
+
+  .projects-vertical .nextPageButton {
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+    gap: 16px;
+    color: #111111;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .projects-vertical .nextPageName {
+    transform: none;
+    font-family: 'Outfit';
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  .projects-vertical .nextPageArrow {
+    transform: none;
+    width: 32px;
+    margin: 0;
+  }
+}

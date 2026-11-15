@@ -54,8 +54,13 @@
   margin-top: -3%;
 }
 
+/* The arrow asset points up. Desktop shows left (forward) and right (back). */
+.pp-fp-projects-forward img {
+  transform: rotate(270deg);
+}
+
 .pp-fp-projects-back img {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 .pp-fp-projects-button {
