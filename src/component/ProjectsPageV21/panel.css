@@ -1,0 +1,435 @@
+/* ---------- The open project, under its row ---------- */
+
+.pp21-panel-slot {
+  grid-column: 1 / -1;
+}
+
+/* It grows open: its single row goes from 0fr to 1fr in about 250ms, and the rows below slide down. */
+.pp21-panel {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pp21-panel {
+    transition: grid-template-rows 0.25s ease-out;
+  }
+
+  @starting-style {
+    .pp21-panel {
+      grid-template-rows: 0fr;
+    }
+  }
+}
+
+/* The padding leaves room inside the clip for the body's hard shadow. */
+.pp21-panel-clip {
+  min-height: 0;
+  overflow: hidden;
+  margin-left: -0.5rem;
+  padding: 0 0 0.5rem 0.5rem;
+}
+
+/* The notch on the panel's top edge points up at the opened tile; its left is set per column. */
+.pp21-notch {
+  position: absolute;
+  z-index: 1;
+  top: -0.55rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: -0.55rem;
+  border-top: 2px solid var(--pp21-paper);
+  border-left: 2px solid var(--pp21-paper);
+  background: var(--pp21-ink);
+  transform: rotate(45deg);
+  transition: left 0.15s ease-out;
+}
+
+/* A #111 panel with a 2px white edge and the hard blue shadow, so the grid stops behind the reading. */
+.pp21-panel-body {
+  position: relative;
+  display: grid;
+  border: 2px solid var(--pp21-paper);
+  background: var(--pp21-ink);
+  box-shadow: -0.5rem 0.5rem 0 var(--pp21-blue);
+}
+
+@media (min-width: 900px) {
+  /* Pictures large on the left; the facts and the story beside them. */
+  .pp21-panel-body {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: start;
+  }
+
+  .pp21-panel-info {
+    align-self: stretch;
+    border-left: 2px solid var(--pp21-paper);
+  }
+}
+
+.pp21-close {
+  position: absolute;
+  z-index: 1;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.pp21-close span {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.pp21-panel-info .pp21-band {
+  padding: 0.85rem 7.5rem 0.85rem clamp(1rem, 2.5vw, 1.75rem);
+  border-top: 0;
+}
+
+.pp21-panel-name {
+  margin: 0;
+  color: inherit;
+  font-family: 'Space Mono 700', monospace;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+/* The heading only receives focus so screen readers start there; it isn't something to press. */
+.pp21-panel-name:focus {
+  outline: none;
+}
+
+.pp21-panel-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  padding: 1.25rem clamp(1rem, 2.5vw, 1.75rem) clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.pp21-panel-text > .pp21-label {
+  margin-bottom: -0.85rem;
+}
+
+/* Cells on a white ground, so the 2px gaps between them draw the lines however many fit per row. */
+.pp21-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 2px;
+  margin: 0;
+  border: 2px solid var(--pp21-paper);
+  background: var(--pp21-paper);
+}
+
+.pp21-facts div {
+  padding: 0.7rem 0.9rem;
+  background: var(--pp21-ink);
+}
+
+.pp21-facts dt {
+  color: var(--pp21-yellow);
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.pp21-facts dd {
+  margin: 0.35rem 0 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+}
+
+.pp21-facts-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pp21-desc {
+  margin: 0;
+  color: var(--pp21-paper);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* The client's words in a white box with a solid blue bar, like the site's flat colour blocks. */
+.pp21-quote {
+  margin: 0;
+  padding: 1.15rem 1.35rem;
+  border: 2px solid var(--pp21-paper);
+  border-left: 0.75rem solid var(--pp21-blue);
+  background: var(--pp21-paper);
+  color: var(--pp21-ink);
+}
+
+.pp21-quote blockquote {
+  margin: 0;
+}
+
+.pp21-quote p {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.pp21-quote figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-top: 0.8rem;
+}
+
+.pp21-quote-name {
+  font-family: 'Space Mono 700', monospace;
+  text-transform: uppercase;
+}
+
+.pp21-quote-school {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+}
+
+.pp21-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.pp21-roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp21-role {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid var(--pp21-paper);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+}
+
+.pp21-role-count {
+  font-family: 'Space Mono 700', monospace;
+  white-space: nowrap;
+}
+
+.pp21-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp21-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  font-family: 'Space Mono 700', monospace;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pp21-link:hover {
+  color: var(--pp21-ink);
+}
+
+/* ---------- Media viewer ---------- */
+
+.pp21-viewer {
+  padding: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.pp21-viewer-screen {
+  position: relative;
+}
+
+/* Top corner, clear of the video's own controls along the bottom. */
+.pp21-pause {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.7rem;
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.pp21-viewer-stage {
+  overflow: hidden;
+  aspect-ratio: 306 / 165;
+  border: 2px solid var(--pp21-paper);
+}
+
+.pp21-viewer-stage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pp21-viewer-stage.pp21-media--logo img {
+  object-fit: cover;
+}
+
+.pp21-viewer-stage.pp21-media--mockup img {
+  object-fit: contain;
+  padding: 5% 8%;
+}
+
+.pp21-viewer-stage--video {
+  background: #000;
+}
+
+.pp21-video,
+.pp21-viewer .pp3-youtube {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: contain;
+}
+
+.pp21-viewer .pp3-youtube-facade {
+  display: grid;
+  place-items: center;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.pp21-viewer .pp3-youtube-play {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid var(--pp21-paper);
+  background: var(--pp21-ink);
+  color: var(--pp21-paper);
+}
+
+.pp21-viewer .pp3-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pp21-viewer-caption {
+  margin: 0.6rem 0 0;
+  color: var(--pp21-dim);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+}
+
+.pp21-viewer-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.pp21-arrow {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.15rem;
+}
+
+.pp21-viewer-count {
+  margin: 0;
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.pp21-viewer-thumbs {
+  display: flex;
+  gap: 0.6rem;
+  margin-left: auto;
+}
+
+.pp21-viewer-thumb {
+  position: relative;
+  overflow: hidden;
+  width: 5.25rem;
+  aspect-ratio: 306 / 165;
+  padding: 0;
+  border: 2px solid var(--pp21-paper);
+  border-radius: 0;
+  background: #eef5ff;
+  cursor: pointer;
+}
+
+.pp21-viewer-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pp21-viewer-thumb[aria-pressed='true'] {
+  outline: 3px solid var(--pp21-yellow);
+  outline-offset: 0;
+}
+
+.pp21-viewer-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--pp21-ink);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 899px) {
+  /* Stacked on phones, so the Close button sits over the media's corner instead of the name band. */
+  .pp21-panel-info .pp21-band {
+    padding-right: clamp(1rem, 2.5vw, 1.75rem);
+  }
+
+  .pp21-panel-media {
+    padding-top: 2.75rem;
+  }
+}
+
+@media (max-width: 599px) {
+  /* One fact per row, so no empty cell shows the white ground. */
+  .pp21-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pp21-viewer-thumbs {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp21-notch {
+    transition: none;
+  }
+}

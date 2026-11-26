@@ -1,0 +1,543 @@
+/* ---------- The chosen project ---------- */
+
+/* #111 behind everything read at length, so the grid stops there; the wide panel draws the edge. */
+.pp20-detail {
+  min-width: 0;
+  background: var(--pp20-ink);
+}
+
+.pp20-detail-bar {
+  padding: 0.85rem;
+  border-bottom: 2px solid var(--pp20-paper);
+}
+
+.pp20-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.pp20-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 50rem;
+  padding: 1.25rem clamp(1rem, 2.5vw, 1.75rem) clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.pp20-detail-body > .pp20-label {
+  margin-bottom: -1rem;
+}
+
+.pp20-detail-name {
+  margin: 0;
+  color: inherit;
+  font-family: 'Space Mono 700', monospace;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+/* The heading only receives focus so screen readers start there; it isn't something to press. */
+.pp20-detail-name:focus {
+  outline: none;
+}
+
+/* Cells on a white ground, so the 2px gaps between them draw the lines however many fit per row. */
+.pp20-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 2px;
+  margin: 0;
+  border: 2px solid var(--pp20-paper);
+  background: var(--pp20-paper);
+}
+
+.pp20-facts div {
+  padding: 0.7rem 0.9rem;
+  background: var(--pp20-ink);
+}
+
+.pp20-facts dt {
+  color: var(--pp20-yellow);
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.pp20-facts dd {
+  margin: 0.35rem 0 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+}
+
+.pp20-facts-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pp20-detail-desc {
+  margin: 0;
+  color: var(--pp20-paper);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* The client's words in a white box with a solid blue bar, like the site's flat colour blocks. */
+.pp20-quote {
+  margin: 0;
+  padding: 1.15rem 1.35rem;
+  border: 2px solid var(--pp20-paper);
+  border-left: 0.75rem solid var(--pp20-blue);
+  background: var(--pp20-paper);
+  color: var(--pp20-ink);
+}
+
+.pp20-quote blockquote {
+  margin: 0;
+}
+
+.pp20-quote p {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.pp20-quote figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-top: 0.8rem;
+}
+
+.pp20-quote-name {
+  font-family: 'Space Mono 700', monospace;
+  text-transform: uppercase;
+}
+
+.pp20-quote-school {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+}
+
+.pp20-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.pp20-roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp20-role {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid var(--pp20-paper);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+}
+
+.pp20-role-count {
+  font-family: 'Space Mono 700', monospace;
+  white-space: nowrap;
+}
+
+.pp20-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp20-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  font-family: 'Space Mono 700', monospace;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pp20-link:hover {
+  color: var(--pp20-ink);
+}
+
+.pp20-adjacent {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--pp20-paper);
+}
+
+.pp20-adjacent-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+.pp20-adjacent-link--next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.pp20-adjacent-link:hover .pp20-label {
+  color: var(--pp20-ink);
+}
+
+.pp20-adjacent-name {
+  font-family: 'Space Mono 700', monospace;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+/* ---------- Media viewer ---------- */
+
+.pp20-viewer {
+  padding: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.pp20-viewer-screen {
+  position: relative;
+}
+
+/* Top corner, clear of the video's own controls along the bottom. */
+.pp20-pause {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.7rem;
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.pp20-viewer-stage {
+  overflow: hidden;
+  aspect-ratio: 306 / 165;
+  border: 2px solid var(--pp20-paper);
+}
+
+.pp20-viewer-stage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pp20-viewer-stage.pp20-thumb--logo img {
+  object-fit: cover;
+}
+
+.pp20-viewer-stage.pp20-thumb--mockup img {
+  object-fit: contain;
+  padding: 5% 8%;
+}
+
+.pp20-viewer-stage--video {
+  background: #000;
+}
+
+.pp20-video,
+.pp20-viewer .pp3-youtube {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: contain;
+}
+
+.pp20-viewer .pp3-youtube-facade {
+  display: grid;
+  place-items: center;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.pp20-viewer .pp3-youtube-play {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid var(--pp20-paper);
+  background: var(--pp20-ink);
+  color: var(--pp20-paper);
+}
+
+.pp20-viewer .pp3-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pp20-viewer-caption {
+  margin: 0.6rem 0 0;
+  color: var(--pp20-dim);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+}
+
+.pp20-viewer-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.pp20-arrow {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.15rem;
+}
+
+.pp20-viewer-count {
+  margin: 0;
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.pp20-viewer-thumbs {
+  display: flex;
+  gap: 0.6rem;
+  margin-left: auto;
+}
+
+.pp20-viewer-thumb {
+  position: relative;
+  overflow: hidden;
+  width: 5.25rem;
+  aspect-ratio: 306 / 165;
+  padding: 0;
+  border: 2px solid var(--pp20-paper);
+  border-radius: 0;
+  background: #eef5ff;
+  cursor: pointer;
+}
+
+.pp20-viewer-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pp20-viewer-thumb[aria-pressed='true'] {
+  outline: 3px solid var(--pp20-yellow);
+  outline-offset: 0;
+}
+
+.pp20-viewer-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--pp20-ink);
+  font-size: 0.9rem;
+}
+
+/* ---------- Full width (wide screens) ---------- */
+
+/* The preview panel, grown: the same edge and shadow, now across the whole content width. */
+.pp20-stage--open .pp20-detail {
+  margin-left: 0.5rem;
+  border: 2px solid var(--pp20-paper);
+  box-shadow: -0.5rem 0.5rem 0 var(--pp20-blue);
+}
+
+.pp20-stage--open .pp20-detail-bar {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  /* Pictures large on the left; the facts and the story beside them. */
+  .pp20-stage--open .pp20-detail-main {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: start;
+  }
+
+  .pp20-stage--open .pp20-detail-media {
+    position: sticky;
+    top: 0;
+  }
+
+  .pp20-stage--open .pp20-detail-info {
+    border-left: 2px solid var(--pp20-paper);
+  }
+
+  .pp20-stage--open .pp20-detail-info .pp20-band {
+    border-top: 0;
+  }
+}
+
+.pp20-detail-foot {
+  padding: 0 clamp(1rem, 2.5vw, 1.75rem) clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.pp20-stage--open .pp20-detail-foot {
+  border-top: 2px solid var(--pp20-paper);
+}
+
+.pp20-stage--open .pp20-adjacent {
+  border-top: 0;
+}
+
+/* The strip of every project at the top of the detail: small white cards, the open one yellow. */
+.pp20-strip-wrap {
+  border-bottom: 2px solid var(--pp20-paper);
+}
+
+.pp20-strip {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0.85rem;
+  overflow-x: auto;
+  list-style: none;
+  scrollbar-color: var(--pp20-paper) var(--pp20-ink);
+}
+
+.pp20-strip-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 7.5rem;
+  padding: 0 0 0.35rem;
+  border: 2px solid var(--pp20-ink);
+  border-radius: 0;
+  background: var(--pp20-paper);
+  color: var(--pp20-ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.pp20-strip-item:hover {
+  box-shadow: -0.25rem 0.25rem 0 var(--pp20-blue);
+}
+
+.pp20-strip-item[aria-current='true'] {
+  outline: 3px solid var(--pp20-yellow);
+  outline-offset: 0;
+  background: var(--pp20-yellow);
+}
+
+.pp20-strip-media {
+  border-bottom: 2px solid var(--pp20-ink);
+}
+
+.pp20-strip-name {
+  overflow: hidden;
+  padding: 0 0.4rem;
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.7rem;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------- Phone panel ---------- */
+
+.pp20-sheet {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+}
+
+.pp20-sheet-panel {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-top: 2px solid var(--pp20-paper);
+  background-color: var(--pp20-ink);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pp20-sheet-panel[data-closed] {
+  transform: translateY(100%);
+}
+
+.pp20-sheet .pp20-detail {
+  border: 0;
+}
+
+/* "Back to all projects" stays at the top of the panel while it scrolls. */
+.pp20-sheet .pp20-detail-bar {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 0.75rem 1rem;
+  background: var(--pp20-ink);
+}
+
+.pp20-sheet .pp20-back {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 599px) {
+  .pp20-adjacent {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pp20-adjacent-link--next {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .pp20-viewer-thumbs {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp20-sheet-panel {
+    transition: none;
+  }
+}
+
+/* The name band lines up with the text below it. */
+.pp20-detail .pp20-band {
+  padding: 0.85rem clamp(1rem, 2.5vw, 1.75rem);
+}
+
+/* The gap left above the detail when the viewport locks onto it. */
+.pp20-detail {
+  scroll-margin-top: 1rem;
+}

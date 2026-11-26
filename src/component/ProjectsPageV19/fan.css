@@ -1,0 +1,187 @@
+/* An opened pack's cards fanned out on the table. The front card's width sets everything else. */
+.pp19-fan {
+  --pp19-card-w: clamp(15rem, 23vw, 21rem);
+  --pp19-spread: calc(var(--pp19-card-w) * 0.62);
+}
+
+.pp19-stage {
+  position: relative;
+  height: calc(var(--pp19-card-w) * 1.4 + 3.5rem);
+  /* Vertical swipes still scroll the page; sideways ones pull the fan. */
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+
+.pp19-fan.is-dragging .pp19-stage {
+  cursor: grabbing;
+}
+
+.pp19-slot {
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  width: var(--pp19-card-w);
+  transform-origin: 50% 100%;
+  transition:
+    transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.35s ease;
+}
+
+/* The card turning round the back of the fan fades out on its way, instead of sweeping across the front. */
+.pp19-slot.is-tucked {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.35s ease,
+    visibility 0s linear 0.35s;
+}
+
+/* While dragging, the cards follow the pointer exactly. */
+.pp19-fan.is-dragging .pp19-slot {
+  transition: none;
+}
+
+/* A side card rises a little when pointed at, to say it can be picked up. */
+.pp19-slot:has(.pp19-slot-pick:hover) .pp19-card {
+  transform: translateY(-0.75rem);
+}
+
+.pp19-slot-pick {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0.9rem;
+  cursor: pointer;
+}
+
+.pp19-slot-pick:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 5px;
+}
+
+/* Opening: the pack's strip tears off, the cards rise out of it, back cards first, then it slides away. */
+.pp19-fan.is-dealing .pp19-slot {
+  animation: pp19-deal 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+}
+
+.pp19-fan-pack {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--pp19-card-w) * 1.12);
+  height: calc(var(--pp19-card-w) * 0.8);
+  background: #ffbf3c;
+  border: 2px solid #111;
+  border-radius: 0.3rem 0.3rem 0.9rem 0.9rem;
+  box-shadow: 0.35rem 0.35rem 0 #111;
+  transform: translateX(-50%);
+  animation: pp19-pack-away 1.9s ease-in forwards;
+  pointer-events: none;
+}
+
+.pp19-fan-pack-strip {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  left: -2px;
+  height: 1.4rem;
+  background: #ffbf3c;
+  border: 2px solid #111;
+  border-bottom-style: dashed;
+  border-radius: 0.3rem 0.3rem 0 0;
+  transform-origin: 100% 100%;
+  animation: pp19-strip-off 0.5s ease-in 0.1s forwards;
+}
+
+.pp19-fan-pack-name {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+}
+
+/* The fan's buttons. */
+.pp19-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem 2rem;
+  margin-top: 0.75rem;
+}
+
+.pp19-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pp19-count {
+  min-width: 7.5rem;
+  margin: 0;
+  font-family: 'Space Mono 700';
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* No "to" frame: each card ends wherever its own place in the fan is. */
+@keyframes pp19-deal {
+  from {
+    transform: translateX(-50%) translateY(38%) scale(0.86);
+  }
+
+  45% {
+    transform: translateX(-50%) translateY(-6%) scale(0.9);
+  }
+}
+
+@keyframes pp19-strip-off {
+  to {
+    opacity: 0;
+    transform: translate(1.5rem, -3rem) rotate(14deg);
+  }
+}
+
+@keyframes pp19-pack-away {
+  0%,
+  62% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(70%);
+  }
+}
+
+@keyframes pp19-fan-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp19-fan {
+    animation: pp19-fan-fade 0.3s ease;
+  }
+
+  .pp19-slot,
+  .pp19-slot.is-tucked {
+    transition: none;
+  }
+
+  .pp19-slot:has(.pp19-slot-pick:hover) .pp19-card {
+    transform: none;
+  }
+}

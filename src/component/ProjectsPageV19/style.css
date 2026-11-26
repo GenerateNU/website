@@ -1,0 +1,252 @@
+.pp19-page {
+  overflow-x: clip;
+  min-height: 100vh;
+  background: #f3dfb8;
+  color: #111;
+}
+
+/* A warm felt tabletop under the whole page: a soft light in the middle, a faint weave over it. */
+.pp19-table {
+  position: relative;
+  padding: calc(max(50px, 7vmin) + 3rem) clamp(1rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
+  background-color: #f3dfb8;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(120, 80, 20, 0.035) 0 2px, transparent 2px 6px),
+    radial-gradient(ellipse 70% 45% at 50% 22%, #fff3da 0%, rgba(255, 243, 218, 0) 100%),
+    linear-gradient(180deg, #f6e4c0 0%, #eed6a8 100%);
+}
+
+/* The shared NavBar is fixed; here it scrolls away with the table. Its wrapper is much taller than
+   the bar it holds, so clicks pass through that empty space to the cards underneath. */
+.pp19-table #nav-all {
+  position: absolute;
+  pointer-events: none;
+}
+
+.pp19-table #nav-all > * {
+  pointer-events: auto;
+}
+
+.pp19-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1.5rem;
+  max-width: 82rem;
+  margin: 0 auto 0.5rem;
+}
+
+.pp19-title {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.pp19-lede {
+  max-width: 40rem;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* The call to action: an empty card outline beside the question. */
+.pp19-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+  max-width: 82rem;
+  margin: clamp(3.5rem, 7vw, 6rem) auto 0;
+}
+
+.pp19-cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  aspect-ratio: 5 / 7;
+  background: rgba(255, 253, 246, 0.45);
+  border: 3px dashed #111;
+  border-radius: 1rem;
+  transform: rotate(-5deg);
+}
+
+.pp19-cta-card p {
+  margin: 0;
+  padding: 0 0.75rem;
+  font-family: 'Space Mono 700';
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.pp19-cta-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.pp19-cta-heading {
+  margin: 0;
+  /* The site's global heading styles would otherwise recolour it. */
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.pp19-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.6rem 1.5rem;
+  background: #ffbf3c;
+  border: 2px solid #111;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 0 #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.pp19-cta-link:hover {
+  background: #ffcd66;
+  color: #111;
+}
+
+.pp19-cta-link:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+
+/* Buttons shared by the shelf and the fan: plain words, a pressed-in feel. */
+.pp19-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 1rem;
+  background: #fffdf6;
+  border: 2px solid #111;
+  border-radius: 0.6rem;
+  box-shadow: 0 3px 0 #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.pp19-control span {
+  font-size: 0.8rem;
+}
+
+.pp19-control:hover {
+  background: #fff;
+}
+
+.pp19-control:active {
+  box-shadow: 0 1px 0 #111;
+  transform: translateY(2px);
+}
+
+.pp19-control:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+
+.pp19-control--main {
+  background: #ffbf3c;
+}
+
+.pp19-control--main:hover {
+  background: #ffcd66;
+}
+
+.pp19-hint {
+  margin: 0.9rem 0 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp19-control {
+    transition: none;
+  }
+
+  .pp19-control:active {
+    transform: none;
+  }
+}
+
+/* An opened pack's heading row: its name on the left, the way back on the right. */
+.pp19-opened-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  max-width: 82rem;
+  margin: 1rem auto 0;
+}
+
+.pp19-opened-head .pp19-legend {
+  margin-left: auto;
+}
+
+.pp19-opened-heading {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+}
+
+.pp19-opened-heading:focus {
+  outline: none;
+}
+
+.pp19-opened-count {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* The key to the card colours. */
+.pp19-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  list-style: none;
+}
+
+.pp19-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pp19-swatch {
+  width: 0.95rem;
+  height: 0.95rem;
+  background: #187dff;
+  border: 1.5px solid #111;
+  border-radius: 0.2rem;
+}
+
+.pp19-swatch--hardware {
+  background: #ff6660;
+}
+
+.pp19-swatch--both {
+  background: linear-gradient(135deg, #187dff 50%, #ff6660 50%);
+}

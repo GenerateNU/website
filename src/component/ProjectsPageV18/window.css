@@ -1,0 +1,414 @@
+/* Sizes inside the window are shares of its own width (cqw) and height (cqh), so it scales as one view. */
+.pp18-window {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 14rem;
+  overflow: hidden;
+  container-type: size;
+  border: 1px solid var(--pp18-line);
+  background: radial-gradient(ellipse at 70% 40%, #121a3a 0%, #070b18 60%, #04060d 100%);
+}
+
+.pp18-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* The keyboard's way to fly: a range input over the whole window, invisible but for the focus ring. */
+.pp18-flight-control {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pp18-window:has(.pp18-flight-control:focus-visible) {
+  outline: 2px solid var(--pp18-amber);
+  outline-offset: 2px;
+}
+
+/* Each layer is one repeat wider than the window, so sliding it by up to a repeat never shows an edge. */
+.pp18-layer--far,
+.pp18-layer--far::after {
+  background-size: 520px 320px;
+}
+
+.pp18-layer--far {
+  width: calc(100% + 520px);
+  background-image:
+    radial-gradient(circle at 30px 40px, rgba(255, 255, 255, 0.8) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 140px 210px, rgba(255, 255, 255, 0.55) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 230px 90px, rgba(255, 255, 255, 0.7) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 320px 280px, rgba(255, 255, 255, 0.5) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 410px 150px, rgba(255, 255, 255, 0.75) 0 1.2px, transparent 1.8px),
+    radial-gradient(circle at 480px 30px, rgba(255, 255, 255, 0.45) 0 0.8px, transparent 1.4px),
+    radial-gradient(circle at 90px 300px, rgba(255, 220, 160, 0.6) 0 1px, transparent 1.6px);
+}
+
+/* A second set of stars that slowly brightens and fades: the only twinkle on the page. */
+.pp18-layer--far::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 80px 130px, rgba(255, 255, 255, 0.9) 0 1.2px, transparent 2px),
+    radial-gradient(circle at 270px 20px, rgba(200, 220, 255, 0.9) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 370px 230px, rgba(255, 255, 255, 0.85) 0 1.1px, transparent 1.9px),
+    radial-gradient(circle at 500px 260px, rgba(255, 240, 200, 0.8) 0 1px, transparent 1.8px);
+}
+
+.pp18-layer--mid {
+  width: calc(100% + 1600px);
+  background-image:
+    radial-gradient(ellipse 380px 150px at 300px 35%, rgba(24, 125, 255, 0.16), transparent 70%),
+    radial-gradient(ellipse 320px 190px at 1150px 72%, rgba(255, 102, 96, 0.1), transparent 70%),
+    radial-gradient(circle 14px at 760px 16%, rgba(70, 82, 130, 0.45) 0 92%, transparent 100%),
+    radial-gradient(circle 9px at 1420px 84%, #3a3150 0 90%, transparent 100%);
+  background-size: 1600px 100%;
+}
+
+.pp18-layer--near {
+  z-index: 3;
+  width: calc(100% + 900px);
+  background-image:
+    radial-gradient(circle at 120px 18%, rgba(255, 255, 255, 0.35) 0 1.6px, transparent 2.4px),
+    radial-gradient(circle at 520px 88%, rgba(255, 255, 255, 0.28) 0 2px, transparent 3px),
+    radial-gradient(circle at 760px 52%, rgba(255, 220, 160, 0.25) 0 1.4px, transparent 2.2px);
+  background-size: 900px 100%;
+}
+
+.pp18-world {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  will-change: transform;
+}
+
+.pp18-year-mark {
+  position: absolute;
+  top: 6%;
+  bottom: 6%;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 0.4rem;
+  border-left: 1px dashed rgba(143, 220, 168, 0.35);
+  color: var(--pp18-green);
+  font-family: 'Space Mono 700';
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.pp18-site {
+  --station: min(44cqh, 17cqw);
+  --sphere: min(32cqh, 13cqw);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--station);
+  translate: -50% 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pp18-site--featured {
+  --station: min(60cqh, 24cqw);
+  --sphere: min(54cqh, 21cqw);
+}
+
+.pp18-site:hover {
+  color: #fff;
+}
+
+.pp18-planet {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: var(--sphere);
+  aspect-ratio: 1;
+  overflow: hidden;
+  translate: -50% -50%;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(120, 160, 255, 0.14);
+}
+
+/* Shading over the surface, so the drifting markings below read as a turning sphere. */
+.pp18-planet::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 7%, transparent 7% 15%),
+    radial-gradient(circle at 32% 30%, transparent 40%, rgba(0, 0, 0, 0.6) 88%);
+}
+
+/* Markings twice the planet's width, repeating every half, so sliding by half loops seamlessly. */
+.pp18-planet-bands {
+  position: absolute;
+  inset: 0;
+  width: 200%;
+  background-image:
+    radial-gradient(ellipse 16% 9% at 28% 34%, rgba(255, 255, 255, 0.16), transparent 100%),
+    radial-gradient(ellipse 12% 7% at 70% 62%, rgba(0, 0, 0, 0.22), transparent 100%),
+    radial-gradient(ellipse 9% 5% at 48% 78%, rgba(255, 255, 255, 0.1), transparent 100%);
+  background-size: 50% 100%;
+}
+
+.pp18-planet-ring {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: calc(var(--sphere) * 1.55);
+  height: calc(var(--sphere) * 0.4);
+  translate: -50% -50%;
+  rotate: -14deg;
+  border: 1.5px solid rgba(255, 191, 60, 0.55);
+  border-radius: 50%;
+}
+
+.pp18-station {
+  position: absolute;
+  top: 63%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  translate: 0 -50%;
+}
+
+/* Logos are station panels; device mockups float free in front of their planet. */
+.pp18-station .pp5-media--logo {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+}
+
+.pp18-station .pp5-media--mockup {
+  background: none;
+  overflow: visible;
+}
+
+.pp18-station .pp5-media--mockup img {
+  padding: 0;
+  scale: 1.3;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.65));
+}
+
+.pp18-site-name {
+  position: absolute;
+  top: calc(63% + var(--station) * 0.27 + 0.6rem);
+  left: 50%;
+  padding: 0.1rem 0.45rem;
+  z-index: 2;
+  translate: -50% 0;
+  border: 1px solid var(--pp18-line);
+  background: rgba(4, 6, 13, 0.78);
+  font-family: 'Space Mono 700';
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Mockups are drawn larger than their box (see above), so their names sit a little lower. */
+.pp18-site:has(.pp5-media--mockup) .pp18-site-name {
+  top: calc(63% + var(--station) * 0.36 + 0.4rem);
+}
+
+.pp18-site-semester {
+  color: var(--pp18-muted);
+  font-family: 'Space Mono';
+}
+
+.pp18-ship-mount {
+  position: absolute;
+  top: 22%;
+  left: 21%;
+  z-index: 4;
+  width: min(13cqw, 30cqh);
+  translate: -50% -50%;
+  pointer-events: none;
+}
+
+.pp18-ship {
+  transform-origin: 60% 50%;
+  transition: transform 0.3s ease-out;
+}
+
+.pp18-ship svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+/* Dim at rest, lit while the visitor scrolls. */
+.pp18-ship-flame {
+  opacity: 0.35;
+  scale: 0.5 0.8;
+  transform-box: view-box;
+  transform-origin: 34px 40px;
+  transition:
+    opacity 0.25s ease-out,
+    scale 0.25s ease-out;
+}
+
+.pp18-ship.is-thrusting .pp18-ship-flame {
+  opacity: 1;
+  scale: 1 1;
+}
+
+.pp18-window-corners {
+  position: absolute;
+  inset: 0.6rem;
+  z-index: 5;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--pp18-amber), var(--pp18-amber)) top left / 1.2rem 2px no-repeat,
+    linear-gradient(var(--pp18-amber), var(--pp18-amber)) top left / 2px 1.2rem no-repeat,
+    linear-gradient(var(--pp18-amber), var(--pp18-amber)) top right / 1.2rem 2px no-repeat,
+    linear-gradient(var(--pp18-amber), var(--pp18-amber)) top right / 2px 1.2rem no-repeat,
+    linear-gradient(var(--pp18-amber), var(--pp18-amber)) bottom left / 1.2rem 2px no-repeat,
+    linear-gradient(var(--pp18-amber), var(--pp18-amber)) bottom left / 2px 1.2rem no-repeat,
+    linear-gradient(var(--pp18-amber), var(--pp18-amber)) bottom right / 1.2rem 2px no-repeat,
+    linear-gradient(var(--pp18-amber), var(--pp18-amber)) bottom right / 2px 1.2rem no-repeat;
+}
+
+.pp18-window-hint {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1rem;
+  z-index: 5;
+  margin: 0;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--pp18-line);
+  background: rgba(4, 6, 13, 0.75);
+  color: var(--pp18-amber);
+  font-family: 'Space Mono 700';
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  transition: opacity 0.4s ease-out;
+}
+
+.pp18-window-hint.is-gone {
+  opacity: 0;
+}
+
+/* The ambient motion: twinkle, planet spin, a gentle hover and engine flicker. Pause stops all of it. */
+@media (prefers-reduced-motion: no-preference) {
+  .pp18-layer--far::after {
+    animation: pp18-twinkle 5s ease-in-out infinite alternate;
+  }
+
+  .pp18-planet-bands {
+    animation: pp18-spin 50s linear infinite;
+  }
+
+  .pp18-ship-mount {
+    animation: pp18-hover 4.5s ease-in-out infinite alternate;
+  }
+
+  .pp18-ship.is-thrusting .pp18-ship-flame {
+    animation: pp18-flicker 0.12s linear infinite alternate;
+  }
+
+  .pp18-console.is-paused .pp18-layer--far::after,
+  .pp18-console.is-paused .pp18-planet-bands,
+  .pp18-console.is-paused .pp18-ship-mount,
+  .pp18-console.is-paused .pp18-ship-flame {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp18-ship,
+  .pp18-ship-flame,
+  .pp18-window-hint {
+    transition: none;
+  }
+}
+
+/* Phones: the window takes the top part of the screen and the docking panel the rest. */
+@media (max-width: 899.98px) {
+  .pp18-window {
+    flex: 0 1 44svh;
+    min-height: 12rem;
+  }
+
+  .pp18-site {
+    --station: min(46cqh, 46cqw);
+    --sphere: min(34cqh, 34cqw);
+  }
+
+  .pp18-site--featured {
+    --station: min(58cqh, 60cqw);
+    --sphere: min(50cqh, 50cqw);
+  }
+
+  .pp18-site-name {
+    font-size: 0.7rem;
+  }
+
+  /* Mockups are drawn larger than their box (see above), so their names sit a little lower. */
+  .pp18-site:has(.pp5-media--mockup) .pp18-site-name {
+    top: calc(63% + var(--station) * 0.36 + 0.4rem);
+  }
+
+  .pp18-site-semester {
+    display: none;
+  }
+
+  .pp18-ship-mount {
+    top: 18%;
+    left: 15%;
+    width: min(24cqw, 28cqh);
+  }
+
+  .pp18-year-mark {
+    font-size: 0.65rem;
+  }
+
+  /* At the top on phones, where it can't cover the docked project's name. */
+  .pp18-window-hint {
+    top: 0.9rem;
+    right: 1.4rem;
+    bottom: auto;
+    font-size: 0.7rem;
+  }
+}
+
+@keyframes pp18-twinkle {
+  from {
+    opacity: 0.25;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pp18-spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pp18-hover {
+  from {
+    transform: translateY(-3px);
+  }
+
+  to {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes pp18-flicker {
+  to {
+    opacity: 0.78;
+    scale: 0.88 0.95;
+  }
+}

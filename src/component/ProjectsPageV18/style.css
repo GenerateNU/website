@@ -1,0 +1,240 @@
+/* Mission control at night: dark panels, thin linework, amber and green readouts. */
+.pp18-page {
+  --pp18-ink: #070b16;
+  --pp18-panel: #0d1424;
+  --pp18-line: rgba(255, 255, 255, 0.16);
+  --pp18-muted: rgba(255, 255, 255, 0.74);
+  --pp18-amber: #ffbf3c;
+  --pp18-green: #8fdca8;
+  --pp18-gutter: clamp(1rem, 3vw, 3rem);
+  /* The room the shared NavBar takes at the top of the page. */
+  --pp18-nav: calc(max(50px, 7vmin) + 2.25rem);
+  /* Clips the shared mobile footer's overflowing arrow button, like #page-bg on the landing page. */
+  overflow-x: clip;
+  min-height: 100vh;
+  background: var(--pp18-ink);
+  color: #fff;
+}
+
+/* The shared NavBar styles every span on the page; inside this page's own content, spans inherit
+   (team tags keep their own type). */
+.pp18-journey :where(span:not(.pp5-tag)),
+.pp18-main :where(span:not(.pp5-tag)) {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* The site eases every property on every element; here the journey moves things on every scrolled
+   frame, so it opts out and sets its own few transitions. */
+.pp18-journey *,
+.pp18-journey *::before,
+.pp18-journey *::after {
+  transition: none;
+}
+
+.pp18-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pp18-head {
+  position: relative;
+  height: var(--pp18-nav);
+}
+
+/* The shared NavBar is fixed; here it scrolls away with the page. Its wrapper is much taller than
+   the bar it holds, so clicks pass through that empty space to the console underneath. */
+.pp18-head #nav-all {
+  position: absolute;
+  pointer-events: none;
+}
+
+.pp18-head #nav-all > * {
+  pointer-events: auto;
+}
+
+.pp18-main {
+  padding: clamp(3rem, 6vw, 5rem) var(--pp18-gutter) 0;
+}
+
+.pp18-catalogue,
+.pp18-cta {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp18-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--pp18-line);
+}
+
+.pp18-section-title {
+  margin: 0;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.pp18-section-intro {
+  margin: 0;
+  color: var(--pp18-muted);
+  font-family: 'Outfit';
+  font-size: 1.05rem;
+}
+
+.pp18-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp18-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--pp18-line);
+  background: var(--pp18-panel);
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.pp18-card:hover {
+  border-color: var(--pp18-amber);
+  color: #fff;
+}
+
+.pp18-card:focus-visible {
+  outline: 3px solid var(--pp18-amber);
+  outline-offset: 3px;
+}
+
+.pp18-card-media {
+  border-bottom: 1px solid var(--pp18-line);
+}
+
+.pp18-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.pp18-card-number {
+  color: var(--pp18-amber);
+  font-family: 'Space Mono';
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pp18-card-name {
+  margin: 0;
+  font-family: 'Space Mono 700';
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.pp18-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+  color: var(--pp18-muted);
+  font-family: 'Outfit';
+  font-size: 0.95rem;
+}
+
+/* Transparent device mockups sit on a lit patch of night sky instead of the site's blueprint grid. */
+.pp18-page .pp5-media--mockup {
+  background-color: #16203f;
+  background-image: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.14), transparent 70%);
+}
+
+.pp18-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: clamp(2rem, 4vw, 3rem) 0 clamp(3rem, 6vw, 5rem);
+  border-top: 1px solid var(--pp18-line);
+}
+
+.pp18-cta-rings {
+  flex-shrink: 0;
+  width: 5.5rem;
+}
+
+.pp18-cta-rings circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 1;
+}
+
+.pp18-cta-rings .pp18-cta-empty {
+  stroke: var(--pp18-amber);
+  stroke-dasharray: 3 3;
+}
+
+.pp18-cta-copy {
+  flex: 1 1 18rem;
+}
+
+.pp18-cta-title {
+  margin: 0;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.pp18-cta-text {
+  margin: 0.5rem 0 0;
+  color: var(--pp18-muted);
+  font-family: 'Outfit';
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.pp18-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.75rem;
+  border: 2px solid var(--pp18-amber);
+  background: var(--pp18-amber);
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1.05rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pp18-cta-link:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #111;
+}
+
+.pp18-cta-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}

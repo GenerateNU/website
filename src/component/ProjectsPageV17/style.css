@@ -1,0 +1,352 @@
+/* Drafting paper with blue ink: the paper is warm off-white, blue is only ever the lines and small labels. */
+.pp17-page {
+  --pp17-paper: #f7f4ec;
+  --pp17-sheet: #fcfaf5;
+  --pp17-ink: #187dff;
+  /* Brand blue is too light for small text on paper; this darker ink keeps labels above 4.5:1. */
+  --pp17-ink-text: #145fc4;
+  --pp17-text: #222;
+  --pp17-gutter: clamp(1rem, 4vw, 4rem);
+
+  overflow-x: clip;
+  min-height: 100vh;
+  background-color: var(--pp17-paper);
+  /* A faint square grid with a heavier line every five squares. */
+  background-image:
+    linear-gradient(rgba(24, 125, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 125, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(rgba(24, 125, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 125, 255, 0.08) 1px, transparent 1px);
+  background-size:
+    6rem 6rem,
+    6rem 6rem,
+    1.2rem 1.2rem,
+    1.2rem 1.2rem;
+  color: var(--pp17-text);
+}
+
+.pp17-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The shared NavBar is fixed; here it scrolls away with the hero. Its wrapper is much taller than
+   the bar it holds, so clicks pass through that empty space to the stack underneath. */
+.pp17-hero {
+  position: relative;
+  /* A sheet dragged or flying off the side must not widen the page. */
+  overflow-x: clip;
+  padding: calc(max(50px, 7vmin) + 3rem) var(--pp17-gutter) clamp(2rem, 4vw, 3rem);
+}
+
+.pp17-hero #nav-all {
+  position: absolute;
+  pointer-events: none;
+}
+
+.pp17-hero #nav-all > * {
+  pointer-events: auto;
+}
+
+.pp17-stack-region {
+  max-width: 82rem;
+  margin: 0 auto;
+}
+
+.pp17-stack-region:focus-visible {
+  outline: 3px solid var(--pp17-ink);
+  outline-offset: 0.75rem;
+}
+
+.pp17-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.pp17-intro {
+  min-width: 0;
+  max-width: 40rem;
+}
+
+.pp17-title {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pp17-lede {
+  margin: 0.4rem 0 0;
+  color: var(--pp17-text);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.pp17-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Buttons are inked outlines on paper; the yellow highlighter marks the one that matters most. */
+.pp17-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.95rem;
+  background: var(--pp17-sheet);
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease-out,
+    box-shadow 0.12s ease-out;
+}
+
+.pp17-button:hover {
+  color: #111;
+  box-shadow: 0.2rem 0.2rem 0 var(--pp17-ink);
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+/* Pressing pushes the button into the paper. */
+.pp17-button:active {
+  box-shadow: none;
+  transform: translate(0.05rem, 0.05rem);
+}
+
+.pp17-button:focus-visible {
+  outline: 3px solid var(--pp17-ink);
+  outline-offset: 2px;
+}
+
+.pp17-button--primary {
+  background: #ffbf3c;
+}
+
+.pp17-main {
+  padding: 0 var(--pp17-gutter) clamp(3rem, 6vw, 5rem);
+}
+
+/* On the board: every project pinned up as a slightly crooked print. */
+.pp17-board {
+  max-width: 82rem;
+  margin: 0 auto;
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+}
+
+.pp17-board-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1.5px solid var(--pp17-ink);
+  margin-bottom: 2.5rem;
+}
+
+.pp17-board-title {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.pp17-board-caption {
+  margin: 0;
+  color: var(--pp17-ink-text);
+  font-family: 'Space Mono';
+  font-size: 0.9rem;
+}
+
+.pp17-pins {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr));
+  gap: 2.75rem 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pp17-pin {
+  --pp17-angle: -1.2deg;
+  min-width: 0;
+}
+
+.pp17-pin:nth-child(3n + 2) {
+  --pp17-angle: 0.9deg;
+}
+
+.pp17-pin:nth-child(3n) {
+  --pp17-angle: -0.5deg;
+}
+
+.pp17-pin:nth-child(4n) {
+  --pp17-angle: 1.4deg;
+}
+
+.pp17-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  height: 100%;
+  padding: 0.75rem 0.75rem 1rem;
+  background: var(--pp17-sheet);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  box-shadow:
+    0 1px 2px rgba(17, 17, 17, 0.08),
+    0 6px 14px rgba(17, 17, 17, 0.08);
+  color: #111;
+  text-decoration: none;
+  transform: rotate(var(--pp17-angle));
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out;
+}
+
+/* A strip of drafting tape holding the print to the board. */
+.pp17-card::before {
+  position: absolute;
+  top: -0.7rem;
+  left: 50%;
+  width: 5.5rem;
+  height: 1.4rem;
+  background: rgba(233, 223, 196, 0.85);
+  border-left: 1px dashed rgba(17, 17, 17, 0.12);
+  border-right: 1px dashed rgba(17, 17, 17, 0.12);
+  box-shadow: 0 1px 2px rgba(17, 17, 17, 0.1);
+  content: '';
+  transform: translateX(-50%) rotate(calc(var(--pp17-angle) * -2));
+}
+
+.pp17-card:hover,
+.pp17-card:focus-visible {
+  color: #111;
+  box-shadow:
+    0 2px 4px rgba(17, 17, 17, 0.1),
+    0 16px 30px rgba(17, 17, 17, 0.16);
+  transform: translateY(-0.4rem);
+}
+
+.pp17-card:focus-visible {
+  outline: 3px solid var(--pp17-ink);
+  outline-offset: 4px;
+}
+
+.pp17-card-media {
+  margin-bottom: 0.4rem;
+  border: 1px solid var(--pp17-ink);
+}
+
+/* On paper the mockups sit on the sheet itself, not on a second blue grid. */
+.pp17-card-media.pp5-media--mockup {
+  background: #fff;
+}
+
+.pp17-card-number {
+  color: var(--pp17-ink-text);
+  font-family: 'Space Mono 700';
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pp17-card-name {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1.15rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.pp17-card-semester {
+  color: var(--pp17-text);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+}
+
+.pp17-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+/* The closing note, written in the margin like the notes on a drawing. */
+.pp17-note {
+  position: relative;
+  max-width: 36rem;
+  margin: clamp(3rem, 7vw, 5rem) auto 0;
+  padding: 1.5rem 1.5rem 1.75rem;
+  background: var(--pp17-sheet);
+  border: 1.5px solid var(--pp17-ink);
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
+  text-align: left;
+}
+
+.pp17-note-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  color: var(--pp17-ink-text);
+  font-family: 'Space Mono 700';
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pp17-note-title {
+  margin: 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1.2;
+}
+
+/* A highlighter stroke, not a filled box: it stops short of the line's top. */
+.pp17-highlight {
+  padding: 0 0.15em;
+  background: linear-gradient(transparent 45%, #ffbf3c 45%, #ffbf3c 90%, transparent 90%);
+  color: inherit;
+}
+
+.pp17-note-text {
+  margin: 0.6rem 0 1.25rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp17-button,
+  .pp17-card {
+    transition: none;
+  }
+}

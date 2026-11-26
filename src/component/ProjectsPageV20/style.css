@@ -1,0 +1,363 @@
+/* Tokens live on the page and on the phone panel, which the dialog portals outside the page.
+   The palette is the site's: #111, white, and the brand and team colours as flat fills. */
+.pp20-page,
+.pp20-sheet {
+  --pp20-ink: #111;
+  --pp20-paper: #fff;
+  --pp20-dim: #cfcfcf;
+  --pp20-blue: #187dff;
+  --pp20-red: #ff6660;
+  --pp20-yellow: #ffbf3c;
+  /* The landing page's blueprint grid (#page-bg), behind everything. */
+  --pp20-grid:
+    repeating-linear-gradient(to right, #144280 0, #144280 1px, transparent 1px, transparent 2.222rem),
+    repeating-linear-gradient(to bottom, #144280 0, #144280 1px, transparent 1px, transparent 2.222rem);
+  color: var(--pp20-paper);
+}
+
+.pp20-page {
+  /* The shared footer pokes past the edge on phones; clip (not hidden) keeps the sticky monitor working. */
+  overflow-x: clip;
+  min-height: 100vh;
+  background-color: var(--pp20-ink);
+  background-image: var(--pp20-grid);
+}
+
+/* The shared NavBar styles every span site-wide (mono, viewport-sized); spans in this page's own
+   content inherit from the element around them instead. Two type selectors outrank that rule but
+   not any class below. */
+body :where(.pp20-inner, .pp20-cta, .pp20-sheet) span {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.pp20-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Top of the page ---------- */
+
+.pp20-top {
+  position: relative;
+  padding: calc(max(50px, 7vmin) + 3rem) clamp(1rem, 5vw, 4rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+/* The shared NavBar is fixed; here it scrolls away with the page. Its wrapper is much taller than
+   the bar it holds, so clicks pass through that empty space. */
+.pp20-top #nav-all {
+  position: absolute;
+  pointer-events: none;
+}
+
+.pp20-top #nav-all > * {
+  pointer-events: auto;
+}
+
+.pp20-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp20-header {
+  padding-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* The site's display headings: big, uppercase, Space Mono 700 (the landing page's "WE ARE..."). */
+.pp20-title {
+  margin: 0;
+  color: var(--pp20-paper);
+  font-family: 'Space Mono 700', monospace;
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pp20-intro {
+  display: inline-block;
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  padding: 0.35rem 0.6rem 0.35rem 0;
+  /* A solid strip behind the words, so the grid lines never cross them. */
+  background: var(--pp20-ink);
+  color: var(--pp20-paper);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.pp20-label {
+  margin: 0;
+  color: var(--pp20-yellow);
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.8rem;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pp20-label--bright {
+  color: var(--pp20-paper);
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Shared pieces ---------- */
+
+/* Discipline swatches, as on the site's team tags. */
+.pp20-swatch {
+  flex-shrink: 0;
+  width: 0.65rem;
+  height: 0.65rem;
+  border: 1.5px solid var(--pp20-ink);
+}
+
+.pp20-swatch--software {
+  background: var(--pp20-blue);
+}
+
+.pp20-swatch--hardware {
+  background: var(--pp20-red);
+}
+
+/* A solid colour band carrying the project's name: blue for software, red for hardware,
+   and two flat halves for a project that is both. */
+.pp20-band {
+  padding: 0.7rem 1rem;
+  border-top: 2px solid var(--pp20-ink);
+  border-bottom: 2px solid var(--pp20-ink);
+  background: var(--pp20-blue);
+  color: var(--pp20-ink);
+}
+
+.pp20-band--hardware {
+  background: var(--pp20-red);
+}
+
+.pp20-band--both {
+  background: linear-gradient(to right, var(--pp20-blue) 50%, var(--pp20-red) 50%);
+}
+
+/* Project pictures as phrasing content, framed the way the site frames them: logos full bleed,
+   transparent mockups on the pale blueprint grid. */
+.pp20-thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 306 / 165;
+  background: var(--pp20-paper);
+}
+
+.pp20-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pp20-thumb--logo img {
+  object-fit: cover;
+  /* Crops the 2px frame baked into each logo SVG. */
+  transform: scale(1.014, 1.025);
+}
+
+.pp20-thumb--mockup {
+  background-color: #eef5ff;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(24, 125, 255, 0.18) 0,
+      rgba(24, 125, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 1.5rem
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(24, 125, 255, 0.18) 0,
+      rgba(24, 125, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 1.5rem
+    );
+}
+
+.pp20-thumb--mockup img {
+  object-fit: contain;
+  padding: 6% 8%;
+}
+
+/* The primary action, like the site's ShadowedButton and the V5 Apply link: a flat yellow block on a
+   hard offset shadow. It lifts toward the pointer and presses flat into its shadow. */
+.pp20-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.3rem;
+  border: 2px solid var(--pp20-ink);
+  border-radius: 0;
+  background: var(--pp20-yellow);
+  color: var(--pp20-ink);
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: -0.5rem 0.5rem 0 var(--pp20-paper);
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp20-primary:hover {
+  color: var(--pp20-ink);
+  transform: translate(0.25rem, -0.25rem);
+  box-shadow: -0.75rem 0.75rem 0 var(--pp20-paper);
+}
+
+.pp20-primary:active {
+  transform: translate(-0.5rem, 0.5rem);
+  box-shadow: 0 0 0 var(--pp20-paper);
+}
+
+/* Outlined square buttons for everything secondary. */
+.pp20-back,
+.pp20-link,
+.pp20-arrow,
+.pp20-adjacent-link,
+.pp20-pause {
+  border: 2px solid var(--pp20-paper);
+  border-radius: 0;
+  background: var(--pp20-ink);
+  color: var(--pp20-paper);
+  cursor: pointer;
+}
+
+.pp20-back:hover,
+.pp20-link:hover,
+.pp20-arrow:hover,
+.pp20-adjacent-link:hover,
+.pp20-pause:hover {
+  background: var(--pp20-paper);
+  color: var(--pp20-ink);
+}
+
+.pp20-page :focus-visible,
+.pp20-sheet :focus-visible {
+  outline: 3px solid var(--pp20-blue);
+  outline-offset: 3px;
+}
+
+/* ---------- Call to action ---------- */
+
+/* A flat colour block, like the Teams page's columns. Red rather than blue, so it doesn't run into
+   the blue footer below it. */
+.pp20-cta {
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem);
+  border-top: 2px solid var(--pp20-ink);
+  border-bottom: 2px solid var(--pp20-ink);
+  background: var(--pp20-red);
+  color: var(--pp20-ink);
+}
+
+.pp20-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp20-cta-inner .pp20-label {
+  flex-basis: 100%;
+  margin-bottom: -1rem;
+  color: var(--pp20-ink);
+}
+
+.pp20-cta-heading {
+  margin: 0;
+  color: inherit;
+  font-family: 'Space Mono 700', monospace;
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.pp20-cta .pp20-primary {
+  box-shadow: -0.5rem 0.5rem 0 var(--pp20-ink);
+}
+
+.pp20-cta .pp20-primary:hover {
+  box-shadow: -0.75rem 0.75rem 0 var(--pp20-ink);
+}
+
+.pp20-cta .pp20-primary:active {
+  box-shadow: 0 0 0 var(--pp20-ink);
+}
+
+.pp20-cta :focus-visible {
+  outline-color: var(--pp20-ink);
+}
+
+/* ---------- Opening and closing ---------- */
+
+/* Opening grows the preview panel into the full-width detail while the grid fades out; closing
+   shrinks it back. Only wide screens do this, and never under reduced motion. */
+@media (min-width: 900px) {
+  .pp20-preview,
+  .pp20-stage--open .pp20-detail {
+    view-transition-name: pp20-panel;
+  }
+
+  .pp20-select {
+    view-transition-name: pp20-roster;
+  }
+}
+
+::view-transition-group(pp20-panel) {
+  animation-duration: 0.45s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* The rest of the page swaps at once; crossfading the whole page would flash through black. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-old(pp20-roster):only-child {
+  animation: pp20-fade-out 0.2s ease-out both;
+}
+
+::view-transition-new(pp20-roster):only-child {
+  animation: pp20-fade-in 0.3s ease-out 0.15s both;
+}
+
+@keyframes pp20-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes pp20-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp20-primary {
+    transition: none;
+  }
+
+  .pp20-primary:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,444 @@
+/* Lets the countdown animate whole numbers and a fill amount, so one CSS animation is both the
+   visible readout and the timer, and pausing it freezes both exactly where they are. */
+@property --pp16-t {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 10;
+}
+
+@property --pp16-p {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+/* ---------- Ground and horizon ---------- */
+
+/* Above the horizon line the ground is see-through, so the sky shows behind the rockets;
+   it is drawn above the stage so a rocket lifting off flies over the payload card. */
+.pp16-ground {
+  --pp16-horizon: 5.25rem;
+
+  position: relative;
+  z-index: 2;
+  margin-top: 0.75rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 191, 60, 0) 0,
+    #ffbf3c var(--pp16-horizon),
+    #2f2445 var(--pp16-horizon)
+  );
+}
+
+.pp16-skyline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--pp16-horizon);
+}
+
+.pp16-pads {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.2vw, 1rem);
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 4rem) 1rem;
+  box-sizing: content-box;
+  list-style: none;
+}
+
+.pp16-pad-item {
+  min-width: 0;
+}
+
+/* ---------- One pad ---------- */
+
+.pp16-pad {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pp16-pad:focus-visible {
+  outline: none;
+}
+
+.pp16-pad:focus-visible .pp16-placard {
+  outline: 3px solid #ffbf3c;
+  outline-offset: 3px;
+}
+
+.pp16-pad-scene {
+  position: relative;
+  display: block;
+  height: var(--pp16-horizon);
+}
+
+/* The service tower beside each rocket: two rails with cross bracing and an arm reaching across. */
+.pp16-gantry {
+  position: absolute;
+  bottom: 0.3rem;
+  left: calc(50% - 2.6rem);
+  width: 0.7rem;
+  height: 4.2rem;
+  border-inline: 2px solid #3f2f57;
+  background: repeating-linear-gradient(45deg, transparent 0, transparent 0.45rem, #3f2f57 0.45rem, #3f2f57 0.6rem);
+}
+
+.pp16-gantry::after {
+  content: '';
+  position: absolute;
+  top: 0.8rem;
+  left: 100%;
+  width: 0.9rem;
+  height: 3px;
+  background: #3f2f57;
+}
+
+.pp16-pad-base {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 2.4rem);
+  width: 4.8rem;
+  height: 0.4rem;
+  background: #3f2f57;
+  clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
+}
+
+.pp16-rocket-wrap {
+  position: absolute;
+  bottom: 0.15rem;
+  left: calc(50% - 0.9rem);
+  z-index: 1;
+  display: block;
+  width: 1.8rem;
+  height: 4.5rem;
+  transition: translate 0.25s ease-out;
+}
+
+.pp16-rocket {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.pp16-rocket-band--software {
+  fill: #187dff;
+}
+
+.pp16-rocket-band--hardware {
+  fill: #ff6660;
+}
+
+.pp16-flame,
+.pp16-flame-core {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+}
+
+.pp16-flame {
+  fill: #ff6660;
+}
+
+.pp16-flame-core {
+  fill: #ffd77a;
+}
+
+/* The rocket that is on stage has already flown. */
+.pp16-rocket-wrap.is-gone {
+  visibility: hidden;
+}
+
+/* ---------- Placard ---------- */
+
+.pp16-placard {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    'patch'
+    'name'
+    'semester';
+  gap: 0.15rem;
+  padding: 0.4rem 0.4rem 0.55rem;
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  transition:
+    background-color 0.15s ease-out,
+    translate 0.15s ease-out;
+}
+
+.pp16-patch {
+  grid-area: patch;
+  display: block;
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+  /* A touch wider than the artwork, so six placards and the stage share one screen. */
+  aspect-ratio: 2 / 1;
+  border: 1.5px solid #111;
+  background: #fff;
+}
+
+.pp16-patch img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Crops the 2px frame baked into each logo SVG, as ProjectMedia does. */
+.pp16-patch--logo img {
+  object-fit: cover;
+  transform: scale(1.014, 1.025);
+}
+
+.pp16-patch--mockup {
+  background: #eef5ff;
+}
+
+.pp16-patch--mockup img {
+  object-fit: contain;
+  padding: 6% 8%;
+}
+
+.pp16-placard-name {
+  grid-area: name;
+  font-family: 'Space Mono 700';
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.pp16-placard-semester {
+  grid-area: semester;
+  font-family: 'Space Mono';
+  font-size: 0.75rem;
+}
+
+/* The status badge sits on the picture's corner, so it costs the placard no height. */
+.pp16-placard-status {
+  grid-area: patch;
+  align-self: start;
+  justify-self: start;
+  z-index: 1;
+  margin: 0.3rem;
+  padding: 0.15rem 0.4rem;
+  background: #111;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pp16-placard-status:empty {
+  display: none;
+}
+
+.pp16-pad.is-active .pp16-placard {
+  background: #ffbf3c;
+}
+
+/* ---------- Countdown: T− digits on the badge, a fill bar along the placard's top edge ---------- */
+
+.pp16-countdown {
+  color: #ffbf3c;
+  counter-reset: pp16-t var(--pp16-t);
+  animation: pp16-count-digits 10s steps(10, jump-end) forwards;
+  animation-play-state: paused;
+}
+
+.pp16-countdown::before {
+  content: 'T\2212' counter(pp16-t, decimal-leading-zero);
+}
+
+.pp16-countdown-bar {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: 5px;
+  background: #ffbf3c;
+  transform: scaleX(var(--pp16-p));
+  transform-origin: left;
+  animation: pp16-count-fill 10s linear forwards;
+  animation-play-state: paused;
+}
+
+.pp16-countdown.is-running,
+.pp16-countdown-bar.is-running {
+  animation-play-state: running;
+}
+
+@keyframes pp16-count-digits {
+  from {
+    --pp16-t: 10;
+  }
+
+  to {
+    --pp16-t: 0;
+  }
+}
+
+@keyframes pp16-count-fill {
+  from {
+    --pp16-p: 0;
+  }
+
+  to {
+    --pp16-p: 1;
+  }
+}
+
+/* ---------- Pointing and liftoff, only where the page runs its own sequence ---------- */
+
+@media (hover: hover) {
+  .pp16-pad:hover .pp16-rocket-wrap {
+    translate: 0 -0.6rem;
+  }
+
+  .pp16-pad:hover .pp16-placard {
+    translate: 0 -0.2rem;
+    background: #fff4d9;
+  }
+
+  .pp16-pad.is-active:hover .pp16-placard {
+    background: #ffbf3c;
+  }
+}
+
+/* Pressing a pad pushes its placard down, so it feels like a physical button. */
+.pp16-pad:active .pp16-placard {
+  translate: 0 0.15rem;
+}
+
+/* Rockets only roll out and lift off where the page runs its own sequence (canSequence in LaunchComplex);
+   with touch or reduced motion the pads simply swap the stage. */
+.pp16-complex.is-animated .pp16-rocket-wrap.is-standing {
+  animation: pp16-rollout 0.5s ease-out both;
+}
+
+.pp16-complex.is-animated .pp16-rocket-wrap.is-lifting {
+  animation: pp16-liftoff 1.1s cubic-bezier(0.55, 0, 0.85, 0.35) forwards;
+}
+
+.pp16-complex.is-animated .pp16-rocket-wrap.is-lifting .pp16-flame,
+.pp16-complex.is-animated .pp16-rocket-wrap.is-lifting .pp16-flame-core {
+  opacity: 1;
+  animation: pp16-flicker 0.12s steps(2) infinite;
+}
+
+.pp16-complex.is-animated .pp16-smoke {
+  position: absolute;
+  bottom: -0.4rem;
+  left: calc(50% - 3rem);
+  width: 6rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, #fff 0%, rgba(255, 255, 255, 0.7) 55%, rgba(255, 255, 255, 0) 100%);
+  animation: pp16-smoke 1.4s ease-out forwards;
+}
+
+.pp16-complex.is-paused .pp16-rocket-wrap,
+.pp16-complex.is-paused .pp16-flame,
+.pp16-complex.is-paused .pp16-flame-core,
+.pp16-complex.is-paused .pp16-smoke {
+  animation-play-state: paused;
+}
+
+@keyframes pp16-rollout {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* A short shudder on the pad, then a climb that speeds up until it leaves the top of the screen. */
+@keyframes pp16-liftoff {
+  0% {
+    transform: none;
+  }
+
+  8% {
+    transform: translate(1px, 1px);
+  }
+
+  14% {
+    transform: translate(-1px, 0);
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
+    visibility: hidden;
+  }
+}
+
+@keyframes pp16-flicker {
+  from {
+    transform: scaleY(0.8);
+  }
+
+  to {
+    transform: scaleY(1.15);
+  }
+}
+
+@keyframes pp16-smoke {
+  from {
+    opacity: 0.95;
+    transform: scale(0.3, 0.5);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.7, 1.3);
+  }
+}
+
+/* ---------- Phones and narrow windows: a swipeable strip of pads under the stage ---------- */
+
+@media (max-width: 899px) {
+  .pp16-pads {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 1.25rem;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: clamp(1rem, 5vw, 4rem);
+    overscroll-behavior-x: contain;
+  }
+
+  .pp16-pad-item {
+    flex: 0 0 9.5rem;
+    scroll-snap-align: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp16-rocket-wrap,
+  .pp16-placard {
+    transition: none;
+  }
+}

@@ -1,0 +1,323 @@
+/* A collectible card: one frame for every card (black border, the site's offset shadow), fixed to the
+   5:7 shape of a real one. The card stock is coloured by branch: blue software, red hardware, and a flat
+   diagonal split for both. Text and pictures always sit on light panels, so contrast never depends on it. Sizes inside follow the card's own width (cqi), so the same card
+   reads right in the fan, the phone row and the binder. */
+.pp19-card {
+  --stock: #187dff;
+  position: relative;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  container-type: inline-size;
+  perspective: 1400px;
+  color: #111;
+  transition: transform 0.12s ease-out;
+}
+
+.pp19-card--hardware {
+  --stock: #ff6660;
+}
+
+/* Two flat halves with a hard edge, never a blend. */
+.pp19-card--both {
+  --stock: linear-gradient(135deg, #187dff 50%, #ff6660 50%);
+}
+
+/* Press feedback, so a click on the card visibly lands. */
+.pp19-card:has(.pp19-stretch:active) {
+  transform: scale(0.985);
+}
+
+.pp19-card-inner {
+  display: grid;
+  grid-area: 1 / 1;
+  grid-template: 1fr / 1fr;
+  min-height: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+.pp19-card.is-flipped .pp19-card-inner {
+  transform: rotateY(180deg);
+}
+
+.pp19-face {
+  display: flex;
+  grid-area: 1 / 1;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding: 4cqi;
+  background: var(--stock);
+  border: 2px solid #111;
+  border-radius: 0.9rem;
+  box-shadow: 0.35rem 0.35rem 0 #111;
+  backface-visibility: hidden;
+}
+
+.pp19-back {
+  transform: rotateY(180deg);
+}
+
+/* The light panels every word sits on. */
+.pp19-label,
+.pp19-back-panel {
+  background: #fffdf6;
+  border: 2px solid #111;
+  border-radius: 0.45rem;
+}
+
+.pp19-label {
+  margin-top: 3cqi;
+  padding: 2.5cqi 3.5cqi 3cqi;
+}
+
+.pp19-back-panel {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding: 3.5cqi;
+  /* Leaves room for "Open project", which sits on top of the back face. */
+  padding-bottom: calc(2.75rem + 7cqi);
+}
+
+/* The project picture fills most of the front, in a plain window. */
+.pp19-art.pp5-media {
+  flex: 1 1 auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  background: #fbf7ee;
+  border: 2px solid #111;
+  border-radius: 0.45rem;
+}
+
+.pp19-art.pp5-media--logo img {
+  object-fit: contain;
+  padding: 4%;
+  transform: none;
+}
+
+.pp19-art.pp5-media--mockup img {
+  padding: 4% 6%;
+}
+
+.pp19-name,
+.pp19-back-name {
+  margin: 0;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.05rem, 7.5cqi, 1.6rem);
+  line-height: 1.1;
+  color: #111;
+  overflow-wrap: anywhere;
+}
+
+.pp19-semester {
+  margin: 1cqi 0 0;
+  color: #444;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.9rem, 5cqi, 1.1rem);
+  line-height: 1.2;
+}
+
+/* The stat side. */
+.pp19-back-name {
+  padding-bottom: 3cqi;
+  border-bottom: 2px solid #111;
+}
+
+.pp19-stats {
+  display: grid;
+  margin: 0;
+  padding-top: 1cqi;
+}
+
+.pp19-stats div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 1.8cqi 0;
+  border-bottom: 1px dashed rgba(17, 17, 17, 0.3);
+}
+
+.pp19-stats dt {
+  flex-shrink: 0;
+  font-family: 'Space Mono 700';
+  font-size: clamp(0.68rem, 3.8cqi, 0.8rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pp19-stats dd {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.85rem, 4.6cqi, 1rem);
+  line-height: 1.25;
+  text-align: right;
+}
+
+.pp19-blurb {
+  display: -webkit-box;
+  margin: 0;
+  padding-top: 3cqi;
+  overflow: hidden;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.85rem, 4.6cqi, 1rem);
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}
+
+/* The client line takes room from the description, so it gets fewer lines; smaller cards fewer still. */
+.pp19-back-panel.has-client .pp19-blurb {
+  -webkit-line-clamp: 4;
+}
+
+@container (max-width: 18rem) {
+  .pp19-blurb {
+    -webkit-line-clamp: 5;
+  }
+
+  .pp19-back-panel.has-client .pp19-blurb {
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* The one mark a featured card gets. */
+.pp19-star {
+  position: absolute;
+  top: calc(6.5cqi + 4px);
+  right: calc(6.5cqi + 4px);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: #fffdf6;
+  border: 2px solid #111;
+  border-radius: 50%;
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+  line-height: 1;
+  transition: opacity 0.3s;
+}
+
+.pp19-card.is-flipped .pp19-star {
+  opacity: 0;
+}
+
+/* The card's one button covers all of it. */
+.pp19-stretch {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0.9rem;
+  cursor: pointer;
+}
+
+.pp19-stretch:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 5px;
+}
+
+.pp19-card-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  grid-area: 1 / 1;
+  align-self: end;
+  /* Lines the button up inside the back's light panel: face border and padding, then the panel's. */
+  padding: 0 calc(7.5cqi + 4px) calc(7.5cqi + 4px);
+  /* Waits for the card to finish turning over before it shows. */
+  animation: pp19-fade-in 0.25s ease 0.3s backwards;
+}
+
+/* The page's main action, and the only yellow on a card. */
+.pp19-open {
+  flex: 1 1 auto;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.8rem;
+  background: #ffbf3c;
+  border: 2px solid #111;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 0 #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(0.85rem, 4.8cqi, 1rem);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pp19-open:hover {
+  background: #ffcd66;
+}
+
+.pp19-open:active {
+  box-shadow: 0 1px 0 #111;
+  transform: translateY(2px);
+}
+
+.pp19-open:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+
+.pp19-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes pp19-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Reduced motion: the card crossfades between its sides instead of turning over. */
+@media (prefers-reduced-motion: reduce) {
+  .pp19-card {
+    transition: none;
+  }
+
+  .pp19-card:has(.pp19-stretch:active) {
+    transform: none;
+  }
+
+  .pp19-card-inner,
+  .pp19-card.is-flipped .pp19-card-inner,
+  .pp19-back {
+    transform: none;
+    transition: none;
+  }
+
+  .pp19-face {
+    backface-visibility: visible;
+    transition: opacity 0.25s ease;
+  }
+
+  .pp19-back,
+  .pp19-card.is-flipped .pp19-front {
+    opacity: 0;
+  }
+
+  .pp19-card.is-flipped .pp19-back {
+    opacity: 1;
+  }
+
+  .pp19-card-actions {
+    animation-delay: 0s;
+  }
+}

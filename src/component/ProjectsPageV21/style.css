@@ -1,0 +1,312 @@
+/* The palette is the site's: #111, white, and the brand and team colours as flat fills. */
+.pp21-page {
+  --pp21-ink: #111;
+  --pp21-paper: #fff;
+  --pp21-dim: #cfcfcf;
+  --pp21-blue: #187dff;
+  --pp21-red: #ff6660;
+  --pp21-yellow: #ffbf3c;
+  /* The landing page's blueprint grid (#page-bg), behind everything. */
+  --pp21-grid:
+    repeating-linear-gradient(to right, #144280 0, #144280 1px, transparent 1px, transparent 2.222rem),
+    repeating-linear-gradient(to bottom, #144280 0, #144280 1px, transparent 1px, transparent 2.222rem);
+  color: var(--pp21-paper);
+}
+
+.pp21-page {
+  /* The shared footer pokes past the edge on phones; clip (not hidden) keeps the sticky monitor working. */
+  overflow-x: clip;
+  min-height: 100vh;
+  background-color: var(--pp21-ink);
+  background-image: var(--pp21-grid);
+}
+
+/* The shared NavBar styles every span site-wide (mono, viewport-sized); spans in this page's own
+   content inherit from the element around them instead. Two type selectors outrank that rule but
+   not any class below. */
+body :where(.pp21-inner, .pp21-cta) span {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.pp21-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- Top of the page ---------- */
+
+.pp21-top {
+  position: relative;
+  padding: calc(max(50px, 7vmin) + 3rem) clamp(1rem, 5vw, 4rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+/* The shared NavBar is fixed; here it scrolls away with the page. Its wrapper is much taller than
+   the bar it holds, so clicks pass through that empty space. */
+.pp21-top #nav-all {
+  position: absolute;
+  pointer-events: none;
+}
+
+.pp21-top #nav-all > * {
+  pointer-events: auto;
+}
+
+.pp21-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp21-header {
+  padding-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* The site's display headings: big, uppercase, Space Mono 700 (the landing page's "WE ARE..."). */
+.pp21-title {
+  margin: 0;
+  color: var(--pp21-paper);
+  font-family: 'Space Mono 700', monospace;
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pp21-intro {
+  display: inline-block;
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  padding: 0.35rem 0.6rem 0.35rem 0;
+  /* A solid strip behind the words, so the grid lines never cross them. */
+  background: var(--pp21-ink);
+  color: var(--pp21-paper);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.pp21-label {
+  margin: 0;
+  color: var(--pp21-yellow);
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.8rem;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pp21-label--bright {
+  color: var(--pp21-paper);
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Shared pieces ---------- */
+
+/* Discipline swatches, as on the site's team tags. */
+.pp21-swatch {
+  flex-shrink: 0;
+  width: 0.65rem;
+  height: 0.65rem;
+  border: 1.5px solid var(--pp21-ink);
+}
+
+.pp21-swatch--software {
+  background: var(--pp21-blue);
+}
+
+.pp21-swatch--hardware {
+  background: var(--pp21-red);
+}
+
+/* A solid colour band carrying the project's name: blue for software, red for hardware,
+   and two flat halves for a project that is both. */
+.pp21-band {
+  padding: 0.7rem 1rem;
+  border-top: 2px solid var(--pp21-ink);
+  border-bottom: 2px solid var(--pp21-ink);
+  background: var(--pp21-blue);
+  color: var(--pp21-ink);
+}
+
+.pp21-band--hardware {
+  background: var(--pp21-red);
+}
+
+.pp21-band--both {
+  background: linear-gradient(to right, var(--pp21-blue) 50%, var(--pp21-red) 50%);
+}
+
+/* Project pictures as phrasing content, framed the way the site frames them: logos full bleed,
+   transparent mockups on the pale blueprint grid. */
+.pp21-media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 306 / 165;
+  background: var(--pp21-paper);
+}
+
+.pp21-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pp21-media--logo img {
+  object-fit: cover;
+  /* Crops the 2px frame baked into each logo SVG. */
+  transform: scale(1.014, 1.025);
+}
+
+.pp21-media--mockup {
+  background-color: #eef5ff;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(24, 125, 255, 0.18) 0,
+      rgba(24, 125, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 1.5rem
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(24, 125, 255, 0.18) 0,
+      rgba(24, 125, 255, 0.18) 1px,
+      transparent 1px,
+      transparent 1.5rem
+    );
+}
+
+.pp21-media--mockup img {
+  object-fit: contain;
+  padding: 6% 8%;
+}
+
+/* The primary action, like the site's ShadowedButton and the V5 Apply link: a flat yellow block on a
+   hard offset shadow. It lifts toward the pointer and presses flat into its shadow. */
+.pp21-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.3rem;
+  border: 2px solid var(--pp21-ink);
+  border-radius: 0;
+  background: var(--pp21-yellow);
+  color: var(--pp21-ink);
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: -0.5rem 0.5rem 0 var(--pp21-paper);
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp21-primary:hover {
+  color: var(--pp21-ink);
+  transform: translate(0.25rem, -0.25rem);
+  box-shadow: -0.75rem 0.75rem 0 var(--pp21-paper);
+}
+
+.pp21-primary:active {
+  transform: translate(-0.5rem, 0.5rem);
+  box-shadow: 0 0 0 var(--pp21-paper);
+}
+
+/* Outlined square buttons for everything secondary. */
+.pp21-close,
+.pp21-link,
+.pp21-arrow,
+.pp21-pause {
+  border: 2px solid var(--pp21-paper);
+  border-radius: 0;
+  background: var(--pp21-ink);
+  color: var(--pp21-paper);
+  cursor: pointer;
+}
+
+.pp21-close:hover,
+.pp21-link:hover,
+.pp21-arrow:hover,
+.pp21-pause:hover {
+  background: var(--pp21-paper);
+  color: var(--pp21-ink);
+}
+
+.pp21-page :focus-visible {
+  outline: 3px solid var(--pp21-blue);
+  outline-offset: 3px;
+}
+
+/* ---------- Call to action ---------- */
+
+/* A flat colour block, like the Teams page's columns. Red rather than blue, so it doesn't run into
+   the blue footer below it. */
+.pp21-cta {
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem);
+  border-top: 2px solid var(--pp21-ink);
+  border-bottom: 2px solid var(--pp21-ink);
+  background: var(--pp21-red);
+  color: var(--pp21-ink);
+}
+
+.pp21-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp21-cta-inner .pp21-label {
+  flex-basis: 100%;
+  margin-bottom: -1rem;
+  color: var(--pp21-ink);
+}
+
+.pp21-cta-heading {
+  margin: 0;
+  color: inherit;
+  font-family: 'Space Mono 700', monospace;
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.pp21-cta .pp21-primary {
+  box-shadow: -0.5rem 0.5rem 0 var(--pp21-ink);
+}
+
+.pp21-cta .pp21-primary:hover {
+  box-shadow: -0.75rem 0.75rem 0 var(--pp21-ink);
+}
+
+.pp21-cta .pp21-primary:active {
+  box-shadow: 0 0 0 var(--pp21-ink);
+}
+
+.pp21-cta :focus-visible {
+  outline-color: var(--pp21-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp21-primary {
+    transition: none;
+  }
+
+  .pp21-primary:hover {
+    transform: none;
+  }
+}

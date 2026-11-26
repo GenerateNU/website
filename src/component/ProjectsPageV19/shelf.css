@@ -1,0 +1,214 @@
+/* The shelf of sealed packs. Packs are yellow because opening one is the first screen's main action. */
+.pp19-shelf-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin: 0;
+  padding: 2rem 0 1.5rem;
+  list-style: none;
+}
+
+/* The newest pack sits a little forward until the visitor has opened one. */
+.pp19-shelf-item.is-forward {
+  z-index: 1;
+  transform: translateY(-0.75rem) scale(1.06);
+}
+
+.pp19-pack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: clamp(13rem, 21vw, 18rem);
+  aspect-ratio: 5 / 7.2;
+  padding: 2.4rem 1rem 1.1rem;
+  background: #ffbf3c;
+  border: 2px solid #111;
+  border-radius: 0.3rem 0.3rem 0.9rem 0.9rem;
+  box-shadow: 0.4rem 0.4rem 0 #111;
+  color: #111;
+  text-align: left;
+  cursor: pointer;
+  touch-action: pan-y;
+  user-select: none;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp19-pack:hover {
+  box-shadow: 0.6rem 0.6rem 0 #111;
+  transform: translate(-0.15rem, -0.25rem);
+}
+
+.pp19-pack:active {
+  box-shadow: 0.15rem 0.15rem 0 #111;
+  transform: translate(0.15rem, 0.15rem);
+}
+
+.pp19-pack:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 5px;
+}
+
+/* The tear strip along the top, perforated where it comes away. */
+.pp19-pack-strip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1.5rem;
+  overflow: hidden;
+  border-bottom: 2px dashed #111;
+}
+
+/* Where the strip has been torn away the table shows through, with a ragged edge. */
+.pp19-pack-gap {
+  position: absolute;
+  inset: -2px -2px 0;
+  background: #f3dfb8;
+  transform-origin: left;
+  /* Follows the pointer exactly; the site gives every element a default transition otherwise. */
+  transition: none;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 25%, 100% 50%, calc(100% - 6px) 75%, 100% 100%, 0 100%);
+}
+
+.pp19-pack-window {
+  position: relative;
+  display: block;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  background: #fffdf6;
+  border: 2px solid #111;
+  border-radius: 0.45rem;
+}
+
+.pp19-pack-window img {
+  /* Out of flow, so the picture's own size never stretches the pack past its shape. */
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6%;
+}
+
+.pp19-pack-window--logo img {
+  padding: 4%;
+}
+
+.pp19-pack-name {
+  margin-top: 0.9rem;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.2rem, 1.9vw, 1.5rem);
+  line-height: 1.1;
+}
+
+.pp19-pack-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.pp19-pack-count {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+}
+
+.pp19-pack-opened {
+  padding: 0.15rem 0.55rem;
+  background: #111;
+  border-radius: 0.35rem;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* An opened pack looks spent: the strip is gone and the wrapper has lost its shine. */
+.pp19-pack.is-opened {
+  background: #f5d58e;
+}
+
+/* "Open me": mostly still, then a short wiggle. */
+.pp19-pack.is-nudging {
+  animation: pp19-nudge 4.8s ease-in-out infinite;
+}
+
+.pp19-shelf-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+}
+
+.pp19-shelf-foot .pp19-hint {
+  margin: 0;
+}
+
+@keyframes pp19-nudge {
+  0%,
+  80%,
+  100% {
+    transform: none;
+  }
+
+  84% {
+    transform: translateY(-0.5rem) rotate(-2.5deg);
+  }
+
+  88% {
+    transform: translateY(-0.5rem) rotate(2.5deg);
+  }
+
+  92% {
+    transform: translateY(-0.25rem) rotate(-1.25deg);
+  }
+}
+
+/* Phones: the packs lie in a row to swipe through. */
+@media (max-width: 47.99rem) {
+  .pp19-shelf-list {
+    justify-content: flex-start;
+    margin: 0 -1rem;
+    padding: 2rem 1.5rem 1.5rem 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1rem;
+    scrollbar-width: none;
+  }
+
+  .pp19-shelf-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pp19-shelf-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .pp19-shelf-item.is-forward {
+    transform: none;
+  }
+
+  .pp19-pack {
+    width: min(70vw, 16rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp19-pack {
+    transition: none;
+  }
+
+  .pp19-pack:hover,
+  .pp19-pack:active {
+    transform: none;
+  }
+}

@@ -14,7 +14,7 @@ type ProjectsLayoutProps = {
   featured: ReactNode;
 };
 
-// Shared by the V5-V7 and V15 prototypes: hero, featured slot and the filterable grid.
+// Shared by the V15 prototype (V5-V7, which also used it, were cut): hero, featured slot and the filterable grid.
 export default function ProjectsLayout({ basePath, featured }: ProjectsLayoutProps) {
   return (
     <div className="pp5-page">

@@ -1,0 +1,351 @@
+/* Clips the shared mobile footer's overflowing arrow button, like #page-bg on the landing page. */
+.pp16-page {
+  overflow-x: clip;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+}
+
+.pp16-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pp16-eyebrow {
+  margin: 0 0 0.5rem;
+  color: #187dff;
+  font-family: 'Space Mono 700';
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- The launch complex: a dusk sky over the pads ---------- */
+
+.pp16-complex {
+  position: relative;
+  padding-top: calc(max(50px, 7vmin) + 2.25rem);
+  background: linear-gradient(180deg, #1c2550 0%, #3f3f7c 34%, #9a5b88 64%, #e7806a 100%);
+  color: #fff;
+}
+
+/* The shared NavBar is fixed; here it scrolls away with the complex. Its wrapper is much taller than
+   the bar it holds, so clicks pass through that empty space to the heading underneath. */
+.pp16-complex #nav-all {
+  position: absolute;
+  pointer-events: none;
+}
+
+.pp16-complex #nav-all > * {
+  pointer-events: auto;
+}
+
+.pp16-topline,
+.pp16-stage {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp16-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 0 clamp(1rem, 5vw, 4rem) 0.75rem;
+  box-sizing: content-box;
+}
+
+.pp16-title {
+  margin: 0;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.1;
+}
+
+.pp16-intro {
+  margin: 0.25rem 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+}
+
+.pp16-pause {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.pp16-pause span {
+  font-size: 0.75rem;
+}
+
+.pp16-pause:hover {
+  background: #fff;
+  color: #111;
+}
+
+.pp16-pause:focus-visible {
+  outline: 3px solid #ffbf3c;
+  outline-offset: 3px;
+}
+
+/* ---------- The payload stage ---------- */
+
+.pp16-flight {
+  position: relative;
+}
+
+.pp16-stage {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  /* Inset by the page gutter, then the card's own padding. */
+  width: calc(100% - 2 * clamp(1rem, 5vw, 4rem));
+  padding: clamp(0.9rem, 1.4vw, 1.1rem);
+  box-sizing: border-box;
+  background: #fff;
+  border: 2px solid #111;
+  box-shadow: -0.5rem 0.5rem 0 #111;
+  color: #111;
+}
+
+/* The picture shrinks on short screens so the pads below still make the first screen. */
+.pp16-stage-visual {
+  display: block;
+  justify-self: center;
+  width: min(100%, calc((100svh - 32rem) * 306 / 165));
+  min-width: min(100%, 18rem);
+  border: 2px solid #111;
+}
+
+.pp16-stage-media {
+  width: 100%;
+}
+
+.pp16-stage-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.pp16-stage-label {
+  margin: 0;
+  color: #187dff;
+  font-family: 'Space Mono 700';
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pp16-stage-name {
+  margin: 0;
+  /* Set outright: a site-wide h2 rule elsewhere makes every h2 white. */
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.pp16-stage-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pp16-stage-semester {
+  font-family: 'Space Mono';
+  font-size: 0.95rem;
+}
+
+.pp16-stage-desc {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.pp16-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  padding: 0.8rem 1.5rem;
+  background: #ffbf3c;
+  border: 2px solid #111;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: -0.35rem 0.35rem 0 #111;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp16-button:hover {
+  color: #111;
+  transform: translate(0.15rem, -0.15rem);
+  box-shadow: -0.5rem 0.5rem 0 #111;
+}
+
+/* Pressing pushes the button into its shadow, so it feels like a physical switch. */
+.pp16-button:active {
+  transform: translate(-0.35rem, 0.35rem);
+  box-shadow: 0 0 0 #111;
+}
+
+.pp16-button:focus-visible {
+  outline: 3px solid #187dff;
+  outline-offset: 3px;
+}
+
+/* The payload arrives as its rocket climbs away. */
+.pp16-stage.is-deploying .pp16-stage-visual {
+  animation: pp16-deploy 0.7s 0.35s cubic-bezier(0.2, 0.8, 0.3, 1.15) both;
+}
+
+.pp16-stage.is-deploying .pp16-stage-copy {
+  animation: pp16-fade 0.4s 0.2s ease-out both;
+}
+
+.pp16-complex.is-paused .pp16-stage-visual,
+.pp16-complex.is-paused .pp16-stage-copy {
+  animation-play-state: paused;
+}
+
+@keyframes pp16-deploy {
+  from {
+    opacity: 0;
+    transform: translateY(2rem) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pp16-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- Closing call to action ---------- */
+
+.pp16-next {
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1rem, 5vw, 4rem);
+  background: linear-gradient(180deg, #1c2550 0%, #3f3f7c 60%, #9a5b88 100%);
+  color: #fff;
+}
+
+.pp16-next-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pp16-next-rocket {
+  display: block;
+  flex: 0 0 auto;
+  width: 3.2rem;
+}
+
+.pp16-next-rocket .pp16-rocket {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pp16-next-copy {
+  flex: 1 1 20rem;
+  min-width: 0;
+}
+
+.pp16-next .pp16-eyebrow {
+  color: #ffbf3c;
+}
+
+.pp16-next-heading {
+  margin: 0;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.pp16-next-text {
+  margin: 0.5rem 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+}
+
+.pp16-next .pp16-button {
+  box-shadow: -0.35rem 0.35rem 0 #fff;
+}
+
+.pp16-next .pp16-button:hover {
+  box-shadow: -0.5rem 0.5rem 0 #fff;
+}
+
+.pp16-next .pp16-button:focus-visible {
+  outline-color: #ffbf3c;
+}
+
+/* ---------- Phones and narrow windows: the stage stacks ---------- */
+
+@media (max-width: 899px) {
+  .pp16-stage {
+    grid-template-columns: minmax(0, 1fr);
+    box-shadow: -0.35rem 0.35rem 0 #111;
+  }
+
+  .pp16-stage-visual {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp16-button {
+    transition: none;
+  }
+}

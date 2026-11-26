@@ -1,0 +1,186 @@
+/* The binder lying on the table: index tabs on top, a page of clear pockets with ring holes down its edge. */
+.pp19-binder {
+  max-width: 82rem;
+  margin: clamp(3rem, 6vw, 5rem) auto 0;
+}
+
+.pp19-binder-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 0.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.pp19-binder-heading {
+  margin: 0;
+  /* The site's global heading styles would otherwise recolour it. */
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.pp19-binder-intro {
+  max-width: 34rem;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+
+.pp19-binder-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.75rem 1.5rem;
+}
+
+.pp19-binder-bar .pp19-legend {
+  padding-bottom: 0.6rem;
+}
+
+.pp19-binder-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding-left: clamp(0.75rem, 4vw, 3.5rem);
+}
+
+.pp19-binder-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.1rem;
+  background: #fffdf6;
+  border: 2px solid #111;
+  border-bottom: 0;
+  border-radius: 0.6rem 0.6rem 0 0;
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.pp19-binder-tab:hover {
+  background: #fff;
+}
+
+.pp19-binder-tab[aria-pressed='true'] {
+  background: #111;
+  color: #fff;
+}
+
+.pp19-binder-tab:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 2px;
+}
+
+.pp19-binder-tab-count {
+  padding: 0 0.4rem;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 999px;
+  font-family: 'Space Mono 700';
+  font-size: 0.8rem;
+}
+
+.pp19-binder-tab[aria-pressed='true'] .pp19-binder-tab-count {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pp19-binder-page {
+  position: relative;
+  padding: clamp(1rem, 2.5vw, 1.75rem) clamp(1rem, 2.5vw, 1.75rem) clamp(1rem, 2.5vw, 1.75rem) 4rem;
+  background: #f4f6f7;
+  border: 2px solid #111;
+  border-radius: 0.5rem 1rem 1rem 0.5rem;
+  box-shadow: 0 1.25rem 2.5rem rgba(70, 40, 0, 0.22);
+}
+
+/* Ring holes along the spine, purely for the look of a binder page. */
+.pp19-binder-rings {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pp19-binder-rings span {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #f3dfb8;
+  border: 2px solid #111;
+  border-radius: 50%;
+  box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pp19-pockets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14.5rem), 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A clear plastic sleeve: a faint edge, and a glare across the top that never blocks a click. */
+.pp19-pocket {
+  position: relative;
+  padding: 0.8rem 1.1rem 1.1rem 0.8rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1.5px solid rgba(17, 17, 17, 0.18);
+  border-radius: 0.6rem;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.pp19-pocket::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: linear-gradient(200deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 24%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* "New": the card came from a pack opened this visit. */
+.pp19-new {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  z-index: 5;
+  padding: 0.2rem 0.6rem;
+  background: #111;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transform: rotate(-6deg);
+  pointer-events: none;
+}
+
+@media (max-width: 40rem) {
+  .pp19-binder-page {
+    padding: 1rem;
+  }
+
+  .pp19-binder-rings {
+    display: none;
+  }
+
+  .pp19-binder-tabs {
+    padding-left: 0.5rem;
+  }
+}

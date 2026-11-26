@@ -1,0 +1,50 @@
+/* The phone row: one card at a time, snapping into place, the next one peeking in. */
+.pp19-row {
+  display: flex;
+  gap: 1rem;
+  margin: 0 -1rem;
+  padding: 0.75rem 1.5rem 1.5rem 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 1rem;
+  scrollbar-width: none;
+  list-style: none;
+}
+
+.pp19-row::-webkit-scrollbar {
+  display: none;
+}
+
+.pp19-row-item {
+  flex: 0 0 min(76%, 20rem);
+  scroll-snap-align: start;
+  /* Cards come out of the pack one after another. */
+  animation: pp19-row-rise 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+}
+
+.pp19-row-hint {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@keyframes pp19-row-rise {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp19-row-item {
+    animation-name: pp19-row-fade;
+  }
+}
+
+@keyframes pp19-row-fade {
+  from {
+    opacity: 0;
+  }
+}

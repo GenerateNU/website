@@ -1,0 +1,556 @@
+.pp18-journey {
+  position: relative;
+  padding: 0 var(--pp18-gutter);
+}
+
+/* One screen tall less the NavBar's room, so all of it fits on the first screen; while flying it pins
+   halfway into that room, leaving an even margin above and below. */
+.pp18-console {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-sizing: border-box;
+  height: calc(100svh - var(--pp18-nav));
+  min-height: 34rem;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0.6rem;
+  border: 1px solid var(--pp18-line);
+  background: #0a0f1c;
+}
+
+.pp18-console.is-flying {
+  position: sticky;
+  top: calc(var(--pp18-nav) / 2);
+}
+
+.pp18-telemetry,
+.pp18-map,
+.pp18-dock,
+.pp18-comms {
+  border: 1px solid var(--pp18-line);
+  background: var(--pp18-panel);
+}
+
+.pp18-telemetry {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.pp18-console-title {
+  flex-shrink: 0;
+  padding-right: 1.25rem;
+  border-right: 1px solid var(--pp18-line);
+}
+
+.pp18-kicker {
+  margin: 0;
+  color: var(--pp18-green);
+  font-family: 'Space Mono';
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pp18-title {
+  margin: 0;
+  font-family: 'Space Mono 700';
+  font-size: 1.5rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.pp18-readouts {
+  display: flex;
+  flex: 1;
+  gap: 0.5rem 2rem;
+  min-width: 0;
+  margin: 0;
+}
+
+.pp18-readout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.pp18-readout dt {
+  color: var(--pp18-muted);
+  font-family: 'Space Mono';
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pp18-readout dd {
+  margin: 0;
+  color: var(--pp18-amber);
+  font-family: 'Space Mono 700';
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.pp18-readout:nth-child(3) dd {
+  color: var(--pp18-green);
+}
+
+.pp18-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  background: transparent;
+  color: #fff;
+  font-family: 'Space Mono 700';
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.pp18-button:hover {
+  background: #fff;
+  color: #111;
+}
+
+.pp18-button:focus-visible {
+  outline: 3px solid var(--pp18-amber);
+  outline-offset: 2px;
+}
+
+.pp18-button[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.pp18-button[aria-disabled='true']:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.pp18-pause {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.pp18-deck {
+  display: grid;
+  flex-shrink: 0;
+  grid-template-areas:
+    'map dock comms'
+    'steps dock comms';
+  grid-template-columns: 14rem minmax(0, 1fr) 15rem;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0.6rem;
+  height: 17rem;
+}
+
+.pp18-panel-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--pp18-green);
+  font-family: 'Space Mono 700';
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pp18-map {
+  display: flex;
+  grid-area: map;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-height: 0;
+  padding: 0.5rem 0.6rem;
+}
+
+.pp18-map-years {
+  margin-left: auto;
+  color: var(--pp18-muted);
+  font-family: 'Space Mono';
+  letter-spacing: 0.04em;
+}
+
+.pp18-map-chart {
+  position: relative;
+  flex: 1 1 auto;
+  align-self: center;
+  aspect-ratio: 1;
+  min-height: 0;
+  max-width: 100%;
+}
+
+.pp18-map-chart svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.pp18-map-ring {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.16);
+  stroke-width: 0.4;
+}
+
+.pp18-map-route {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 0.5;
+  stroke-dasharray: 1 1.5;
+}
+
+.pp18-map-trail {
+  fill: none;
+  stroke: var(--pp18-amber);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-dasharray: 0 1000;
+}
+
+.pp18-map-body {
+  position: absolute;
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  translate: -50% -50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  background: var(--pp18-panel);
+  cursor: pointer;
+}
+
+/* A bigger target than the dot itself. */
+.pp18-map-body::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+}
+
+.pp18-map-body--featured {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-color: var(--pp18-amber);
+}
+
+.pp18-map-body:hover {
+  background: #fff;
+}
+
+.pp18-map-body[aria-current] {
+  background: var(--pp18-amber);
+  box-shadow: 0 0 0 3px rgba(255, 191, 60, 0.3);
+}
+
+.pp18-map-body:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.pp18-map-ship {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: -0.3rem 0 0 -0.3rem;
+  background: var(--pp18-green);
+  pointer-events: none;
+}
+
+.pp18-steps {
+  display: flex;
+  grid-area: steps;
+  gap: 0.5rem;
+}
+
+.pp18-steps .pp18-button {
+  flex: 1;
+}
+
+.pp18-dock {
+  display: flex;
+  grid-area: dock;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0.6rem 0.75rem;
+}
+
+.pp18-dock-light {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--pp18-amber);
+}
+
+.is-docked .pp18-dock-light {
+  background: var(--pp18-green);
+}
+
+.pp18-dock-body {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(0, 20rem) minmax(13rem, 1fr);
+  align-items: start;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.pp18-dock-scope {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Device mockups carry a lot of empty margin; bring them forward so the screens can be read. */
+.pp18-dock-scope .pp5-media--mockup img {
+  scale: 1.3;
+}
+
+.pp18-dock-body--transit .pp18-dock-scope {
+  opacity: 0.45;
+}
+
+.pp18-dock-name {
+  margin: 0;
+  font-family: 'Space Mono 700';
+  font-size: clamp(1.25rem, 1.8vw, 1.8rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.pp18-dock-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--pp18-muted);
+  font-family: 'Outfit';
+  font-size: 0.95rem;
+}
+
+.pp18-dock-desc {
+  display: -webkit-box;
+  margin: 0.5rem 0 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.86);
+  font-family: 'Outfit';
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.pp18-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid var(--pp18-amber);
+  background: var(--pp18-amber);
+  color: #111;
+  font-family: 'Space Mono 700';
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pp18-cta-button:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #111;
+}
+
+.pp18-cta-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.pp18-comms {
+  grid-area: comms;
+  min-width: 0;
+  padding: 0.6rem 0.75rem;
+}
+
+.pp18-comms-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  color: var(--pp18-muted);
+  font-family: 'Space Mono';
+  font-size: 0.78rem;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.pp18-comms-lines li::before {
+  content: '› ';
+  color: var(--pp18-green);
+}
+
+.pp18-comms-lines li:last-child {
+  color: #fff;
+}
+
+.pp18-comms-lines li:last-child::after {
+  content: ' ▍';
+  color: var(--pp18-green);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pp18-dock-body {
+    animation: pp18-acquire 0.3s ease-out;
+  }
+
+  .pp18-comms-lines li:last-child::after {
+    animation: pp18-blink 1.1s steps(1) infinite;
+  }
+
+  .pp18-console.is-paused .pp18-comms-lines li::after {
+    animation-play-state: paused;
+  }
+}
+
+/* Mid-size screens: the comms log makes way for the docking panel. */
+@media (max-width: 1149.98px) {
+  .pp18-deck {
+    grid-template-areas:
+      'map dock'
+      'steps dock';
+    grid-template-columns: 13rem minmax(0, 1fr);
+  }
+
+  .pp18-comms,
+  .pp18-readout--wide {
+    display: none;
+  }
+}
+
+/* Phones: one row of telemetry, the window, then the docking panel and the step buttons. */
+@media (max-width: 899.98px) {
+  .pp18-journey {
+    padding: 0 0.5rem;
+  }
+
+  .pp18-console {
+    gap: 0.4rem;
+    min-height: 30rem;
+    padding: 0.4rem;
+  }
+
+  .pp18-telemetry {
+    gap: 0.5rem 0.9rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  /* The NavBar already says where we are; the title stays for screen readers. */
+  .pp18-console-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .pp18-readouts {
+    gap: 0.9rem;
+  }
+
+  .pp18-readout dt {
+    font-size: 0.55rem;
+  }
+
+  .pp18-dt-extra {
+    display: none;
+  }
+
+  .pp18-readout dd {
+    font-size: 0.85rem;
+  }
+
+  .pp18-pause {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.72rem;
+  }
+
+  .pp18-deck {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 0.4rem;
+    height: auto;
+    min-height: 0;
+  }
+
+  .pp18-dock {
+    flex: 1 1 auto;
+  }
+
+  .pp18-map {
+    display: none;
+  }
+
+  .pp18-steps {
+    order: 1;
+  }
+
+  .pp18-dock {
+    padding: 0.5rem;
+  }
+
+  .pp18-dock-body {
+    grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
+    gap: 0.7rem;
+  }
+
+  .pp18-dock-name {
+    font-size: 1.1rem;
+  }
+
+  .pp18-dock-meta {
+    gap: 0.3rem 0.6rem;
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+  }
+
+  .pp18-dock-desc {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .pp18-cta-button {
+    margin-top: 0.5rem;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.78rem;
+  }
+}
+
+@keyframes pp18-acquire {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pp18-blink {
+  50% {
+    opacity: 0;
+  }
+}

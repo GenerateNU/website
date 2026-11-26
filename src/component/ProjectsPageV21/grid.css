@@ -1,0 +1,233 @@
+/* ---------- The grid ---------- */
+
+/* ---------- Filter ---------- */
+
+.pp21-browse-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+
+.pp21-browse-head .pp21-label {
+  padding: 0.2rem 0.5rem;
+  background: var(--pp21-ink);
+}
+
+/* Square segmented buttons; the chosen one is a solid white block, like the NavBar. */
+.pp21-filter {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.pp21-filter-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: -2px;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid var(--pp21-paper);
+  border-radius: 0;
+  background: var(--pp21-ink);
+  color: var(--pp21-paper);
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.pp21-filter-option .pp21-swatch {
+  border-color: var(--pp21-paper);
+}
+
+.pp21-filter-option:hover {
+  background: #2a2a2a;
+}
+
+.pp21-filter-option[aria-pressed='true'] {
+  background: var(--pp21-paper);
+  color: var(--pp21-ink);
+}
+
+.pp21-filter-option[aria-pressed='true'] .pp21-swatch {
+  border-color: var(--pp21-ink);
+}
+
+.pp21-filter-count {
+  margin-left: 0.15rem;
+}
+
+/* ---------- Grid ---------- */
+
+/* 2 per row on phones, 3 from tablets up, 4 on wide desktops; useColumnCount.ts mirrors these widths. */
+.pp21-grid {
+  --pp21-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem var(--pp21-gap);
+  margin: 1.25rem 0 0;
+  padding: 0 0 0 0.5rem;
+  list-style: none;
+}
+
+@media (min-width: 600px) {
+  .pp21-grid {
+    --pp21-gap: 1.25rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .pp21-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.pp21-slot {
+  display: flex;
+}
+
+/* White cards with #111 borders, like the NavBar box, sitting on the grid. */
+.pp21-tile {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 0;
+  padding: 0 0 0.75rem;
+  border: 2px solid var(--pp21-ink);
+  border-radius: 0;
+  background: var(--pp21-paper);
+  color: var(--pp21-ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.pp21-tile-screen {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-bottom: 2px solid var(--pp21-ink);
+}
+
+/* The preview video sits over the picture and only shows while the tile previews. */
+.pp21-media-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.pp21-media--logo .pp21-media-video {
+  object-fit: cover;
+}
+
+/* A solid strip that slides up over the foot of the picture with the semester and a line about the project. */
+.pp21-tile-strip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.45rem 0.6rem 0.5rem;
+  background: var(--pp21-ink);
+  color: var(--pp21-paper);
+  transform: translateY(101%);
+  transition: transform 0.18s ease-out;
+}
+
+.pp21-tile-strip-semester {
+  color: var(--pp21-yellow);
+  font-family: 'Space Mono 700', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.pp21-tile-strip-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+/* Previewing (resting on it, or keyboard focus): a light lift on a hard blue shadow, the strip, the video.
+   Only transforms change, so the tile's size and the grid never move. */
+.pp21-tile[data-previewing] {
+  box-shadow: -0.4rem 0.4rem 0 var(--pp21-blue);
+  transform: translate(0.15rem, -0.15rem);
+}
+
+.pp21-tile[data-previewing] .pp21-tile-strip {
+  transform: none;
+}
+
+.pp21-tile[data-previewing] .pp21-media-video {
+  opacity: 1;
+}
+
+/* Open: its details are showing below. A solid yellow edge on a hard blue shadow, both drawn as
+   shadows so the outline stays free for the keyboard focus ring. */
+.pp21-tile[aria-expanded='true'] {
+  box-shadow:
+    0 0 0 3px var(--pp21-yellow),
+    -0.6rem 0.6rem 0 3px var(--pp21-blue);
+  transform: translate(0.15rem, -0.15rem);
+}
+
+.pp21-tile:active {
+  transform: translate(-0.35rem, 0.35rem);
+  box-shadow: 0 0 0 var(--pp21-blue);
+}
+
+.pp21-tile-name {
+  padding: 0 0.6rem;
+  font-family: 'Space Mono 700', monospace;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.pp21-tile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding: 0 0.6rem;
+}
+
+.pp21-tile-meta .pp5-tag {
+  padding: 0.1rem 0.35rem;
+  font-size: 0.65rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pp21-tile,
+  .pp21-tile-strip {
+    transition: none;
+  }
+
+  .pp21-tile[data-previewing],
+  .pp21-tile[aria-expanded='true'],
+  .pp21-tile:active {
+    transform: none;
+  }
+}
